@@ -1,0 +1,74 @@
+{
+menuDef { name "multiplayermenu" rect 0 0 640 480 visible 0 fullscreen 1
+ focusColor 1 1 1 1 disableColor .35 .42 .47 1
+ onOpen { setfocus joinserver_button ; } onESC { close multiplayermenu ; open mainMenu ; }
+itemDef { name "arena" rect 0 0 640 480 style 3 background "ui/assets/sabertrials/arena.tga" forecolor 1 1 1 1 visible 1 decoration  }
+itemDef { name "shade" rect 0 0 640 480 style 1 backcolor .005 .018 .032 .27 visible 1 decoration  }
+itemDef { name "brand_line" rect 155 24 425 1 style 1 backcolor .22 .64 .93 .8 visible 1 decoration  }
+itemDef { name "starwars" type 0 rect 135 34 460 22 text "STAR WARS" font 3 textscale 2.3 textalign 1 textalignx 230.0 textaligny 0 forecolor .85 .93 1 1 visible 1 decoration  }
+itemDef { name "brand" type 0 rect 135 98 460 22 text "S A B E R   T R I A L S" font 3 textscale 0.97 textalign 1 textalignx 230.0 textaligny 0 forecolor .30 .78 1 1 visible 1 decoration  }
+itemDef { name "multiplayer" type 0 rect 135 135 460 22 text "M U L T I P L A Y E R" font 4 textscale 0.66 textalign 1 textalignx 230.0 textaligny 0 forecolor .76 .86 .93 1 visible 1 decoration  }
+itemDef { name "rail" rect 18 172 195 269 style 3 background "ui/assets/sabertrials/rail" forecolor 1 1 1 1 visible 1 decoration  }
+itemDef { name "rail_edge" rect 18 172 1 269 style 1 backcolor .30 .78 1 1 visible 1 decoration  }
+itemDef { name "section" type 0 rect 242 190 350 22 text "PLAY" font 3 textscale 1.3 textalign 0 textalignx 0 textaligny 0 forecolor .30 .78 1 1 visible 1 decoration  }
+itemDef { name "subtitle" type 0 rect 242 225 350 22 text "Choose your arena." font 2 textscale 0.95 textalign 0 textalignx 0 textaligny 0 forecolor .76 .86 .93 1 visible 1 decoration  }
+itemDef { name "rank_note" type 0 rect 242 401 350 22 text "Ranked services are coming soon." font 2 textscale 0.76 textalign 0 textalignx 0 textaligny 0 forecolor .76 .86 .93 1 visible 1 decoration  }
+itemDef { name "focus_glow" rect 0 0 1 1 style 3 background "ui/assets/sabertrials/focus" forecolor 1 1 1 1 visible 0 decoration group focus }
+itemDef { name "joinserver_button_line" rect 20 215 192 0.5 style 1 backcolor .38 .64 .78 .28 visible 1 decoration  }
+itemDef { name "joinserver_button_icon" rect 32 188.0 20 20 style 3 background "ui/assets/sabertrials/join" forecolor 1 1 1 1 visible 1 decoration  }
+itemDef { name "joinserver_button" rect 20 180 192 36 type 1 style 0 text "Find a server"
+ font 2 textscale .85 textalignx 48 textaligny 8.0
+ forecolor .76 .86 .93 1 visible 1
+ onFocus { show focus_glow ; setitemrect focus_glow 20 180 192 36 ; }
+ leaveFocus { hide focus_glow ; }
+ action { play "sound/interface/button1.wav" ; close multiplayermenu ; open joinserver ; }  }
+itemDef { name "startserver_button_line" rect 20 253 192 0.5 style 1 backcolor .38 .64 .78 .28 visible 1 decoration  }
+itemDef { name "startserver_button_icon" rect 32 226.0 20 20 style 3 background "ui/assets/sabertrials/settings" forecolor 1 1 1 1 visible 1 decoration  }
+itemDef { name "startserver_button" rect 20 218 192 36 type 1 style 0 text "Host a match"
+ font 2 textscale .85 textalignx 48 textaligny 8.0
+ forecolor .76 .86 .93 1 visible 1
+ onFocus { show focus_glow ; setitemrect focus_glow 20 218 192 36 ; }
+ leaveFocus { hide focus_glow ; }
+ action { play "sound/interface/button1.wav" ; close multiplayermenu ; open createserver ; }  }
+itemDef { name "quickserver_button_line" rect 20 291 192 0.5 style 1 backcolor .38 .64 .78 .28 visible 1 decoration  }
+itemDef { name "quickserver_button_icon" rect 32 264.0 20 20 style 3 background "ui/assets/sabertrials/play" forecolor 1 1 1 1 visible 1 decoration  }
+itemDef { name "quickserver_button" rect 20 256 192 36 type 1 style 0 text "Solo match"
+ font 2 textscale .85 textalignx 48 textaligny 8.0
+ forecolor .76 .86 .93 1 visible 1
+ onFocus { show focus_glow ; setitemrect focus_glow 20 256 192 36 ; }
+ leaveFocus { hide focus_glow ; }
+ action { play "sound/interface/button1.wav" ; close multiplayermenu ; open quickgame ; }  }
+itemDef { name "playdemo_button_line" rect 20 329 192 0.5 style 1 backcolor .38 .64 .78 .28 visible 1 decoration  }
+itemDef { name "playdemo_button_icon" rect 32 302.0 20 20 style 3 background "ui/assets/sabertrials/camera" forecolor 1 1 1 1 visible 1 decoration  }
+itemDef { name "playdemo_button" rect 20 294 192 36 type 1 style 0 text "Recordings"
+ font 2 textscale .85 textalignx 48 textaligny 8.0
+ forecolor .76 .86 .93 1 visible 1
+ onFocus { show focus_glow ; setitemrect focus_glow 20 294 192 36 ; }
+ leaveFocus { hide focus_glow ; }
+ action { play "sound/interface/button1.wav" ; close multiplayermenu ; open demo ; }  }
+itemDef { name "ranked_line" rect 20 367 192 0.5 style 1 backcolor .38 .64 .78 .28 visible 1 decoration  }
+itemDef { name "ranked_icon" rect 32 340.0 20 20 style 3 background "ui/assets/sabertrials/rank" forecolor 1 1 1 1 visible 1 decoration  }
+itemDef { name "ranked" rect 20 332 192 36 type 1 style 0 text "Ranked Play"
+ font 2 textscale .85 textalignx 48 textaligny 8.0
+ forecolor .76 .86 .93 1 visible 1
+ onFocus { show focus_glow ; setitemrect focus_glow 20 332 192 36 ; }
+ leaveFocus { hide focus_glow ; }
+ action { play "sound/interface/button1.wav" ; close multiplayermenu ; open st_main_ranked ; }  }
+itemDef { name "rules_button_line" rect 20 405 192 0.5 style 1 backcolor .38 .64 .78 .28 visible 1 decoration  }
+itemDef { name "rules_button_icon" rect 32 378.0 20 20 style 3 background "ui/assets/sabertrials/info" forecolor 1 1 1 1 visible 1 decoration  }
+itemDef { name "rules_button" rect 20 370 192 36 type 1 style 0 text "Game rules"
+ font 2 textscale .85 textalignx 48 textaligny 8.0
+ forecolor .76 .86 .93 1 visible 1
+ onFocus { show focus_glow ; setitemrect focus_glow 20 370 192 36 ; }
+ leaveFocus { hide focus_glow ; }
+ action { play "sound/interface/button1.wav" ; close multiplayermenu ; open rulesMenu ; }  }
+itemDef { name "back_line" rect 20 447 192 0.5 style 1 backcolor .38 .64 .78 .28 visible 1 decoration  }
+itemDef { name "back" rect 20 420 192 28 type 1 style 0 text "Back"
+ font 2 textscale .85 textalignx 14 textaligny 4.0
+ forecolor .76 .86 .93 1 visible 1
+ onFocus { show focus_glow ; setitemrect focus_glow 20 420 192 28 ; }
+ leaveFocus { hide focus_glow ; }
+ action { play "sound/interface/button1.wav" ; close multiplayermenu ; open mainMenu ; } textscale .8 }
+
+}
+}

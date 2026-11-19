@@ -1,0 +1,19 @@
+[
+  {"id":1,"code":"en","name":"English","locale":"en-US"},
+  {"id":2,"code":"es","name":"Spanish","locale":"es-ES"},
+  {"id":3,"code":"ru","name":"Russian","locale":"ru-RU"},
+  {"id":4,"code":"ja","name":"Japanese","locale":"ja-JP"},
+  {"id":5,"code":"zh","name":"Chinese (Simplified)","locale":"zh-CN"},
+  {"id":6,"code":"zt","name":"Chinese (Traditional)","locale":"zh-TW"},
+  {"id":7,"code":"ar","name":"Arabic","locale":"ar-SA"},
+  {"id":8,"code":"de","name":"German","locale":"de-DE"},
+  {"id":9,"code":"fr","name":"French","locale":"fr-FR"},
+  {"id":10,"code":"it","name":"Italian","locale":"it-IT"},
+  {"id":11,"code":"pt","name":"Portuguese","locale":"pt-PT"},
+  {"id":12,"code":"pb","name":"Portuguese (Brazil)","locale":"pt-BR"},
+  {"id":13,"code":"ko","name":"Korean","locale":"ko-KR"},
+  {"id":14,"code":"hi","name":"Hindi","locale":"hi-IN"},
+  {"id":15,"code":"pl","name":"Polish","locale":"pl-PL"},
+  {"id":16,"code":"tr","name":"Turkish","locale":"tr-TR"},
+  {"id":17,"code":"uk","name":"Ukrainian","locale":"uk-UA"}
+]

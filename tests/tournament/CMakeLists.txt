@@ -1,0 +1,38 @@
+cmake_minimum_required(VERSION 3.21)
+project(SaberTrialsTournamentTests LANGUAGES C)
+enable_testing()
+add_executable(tournament_test controller_test.c
+ ../../development-source/bot-roles/codemp/game/st_event.c)
+target_include_directories(tournament_test PRIVATE ../../development-source/bot-roles/codemp/game)
+if(MSVC)
+ target_compile_options(tournament_test PRIVATE /W4 /WX)
+endif()
+foreach(case limits ready individual teams disconnect substitution bracket staff identity)
+ add_test(NAME tournament_${case} COMMAND tournament_test ${case})
+endforeach()
+get_filename_component(ST_ROOT "../.." ABSOLUTE)
+set(ST_OPENJK "${ST_ROOT}/dist/staff-work/OpenJK-1a6a643427aa347553e9073dac5570b33337c4d9")
+configure_file("${ST_OPENJK}/shared/qcommon/q_version.h.in" "game-unit/qcommon/q_version.h")
+foreach(name g_event.c g_event.h g_event_ui.inc st_event_ui.h st_event.h st_event_account_api.h g_staff.h g_local.h)
+ configure_file("${ST_ROOT}/development-source/bot-roles/codemp/game/${name}" "game-unit/game/${name}" COPYONLY)
+endforeach()
+foreach(name st_staff_game_api.h st_staff_movement.h)
+ configure_file("${ST_ROOT}/development-source/staff/codemp/staff/${name}" "game-unit/staff/${name}" COPYONLY)
+endforeach()
+add_executable(tournament_adapter_test adapter_test.c "${CMAKE_CURRENT_BINARY_DIR}/game-unit/game/g_event.c"
+ "${ST_ROOT}/development-source/bot-roles/codemp/game/st_event.c"
+ "${ST_OPENJK}/codemp/qcommon/q_shared.c" "${ST_OPENJK}/shared/qcommon/q_math.c" "${ST_OPENJK}/shared/qcommon/q_string.c")
+target_include_directories(tournament_adapter_test PRIVATE "${CMAKE_CURRENT_BINARY_DIR}/game-unit/game"
+ "${ST_OPENJK}/codemp/game" "${ST_OPENJK}/codemp" "${ST_OPENJK}/shared" "${CMAKE_CURRENT_BINARY_DIR}/game-unit")
+target_compile_definitions(tournament_adapter_test PRIVATE _GAME)
+if(UNIX)
+ target_link_libraries(tournament_adapter_test PRIVATE m)
+ target_compile_definitions(tournament_adapter_test PRIVATE ARCH_STRING="x86_64")
+endif()
+add_test(NAME tournament_native_adapter COMMAND tournament_adapter_test)
+add_test(NAME tournament_player_presentation COMMAND tournament_adapter_test presentation)
+add_executable(tournament_ui_protocol_test ui_protocol_test.c)
+target_include_directories(tournament_ui_protocol_test PRIVATE
+ "${ST_ROOT}/development-source/client-game/codemp/cgame"
+ "${ST_ROOT}/development-source/bot-roles/codemp")
+add_test(NAME tournament_client_ui_protocol COMMAND tournament_ui_protocol_test)

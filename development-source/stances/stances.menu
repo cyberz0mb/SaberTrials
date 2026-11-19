@@ -1,0 +1,38 @@
+// @PAGE@ becomes a unique main-menu or in-server page name when staged.
+menuDef {
+ name @PAGE@
+ fullScreen 1 rect 0 0 640 480 visible 1
+ focusColor 1 1 1 1
+ onESC { uiScript stStanceCancel; }
+ itemDef { name arena rect 0 0 640 480 style 3 background "ui/assets/sabertrials/arena.tga" forecolor 1 1 1 1 visible 1 decoration }
+ itemDef { name bg rect 0 0 640 480 style 1 backcolor .004 .014 .025 .91 visible 1 decoration }
+ itemDef { name title text "SABER TRIALS / STANCES" rect 28 20 590 32 font 2 textscale .9 forecolor .30 .78 1 1 visible 1 decoration }
+ itemDef { name divider rect 28 61 584 1 style 1 backcolor .20 .55 .70 .65 visible 1 decoration }
+ itemDef { name family text "Weapon:" rect 34 91 242 28 type ITEM_TYPE_MULTI cvar ui_stanceFamily
+  cvarFloatList { "Single" 0 "Dual" 1 "Staff" 2 } font 4 textscale .85 forecolor .76 .86 .93 1 visible 1 }
+ itemDef { name style text "Style:" rect 34 130 242 28 type ITEM_TYPE_MULTI cvar ui_stanceStyle
+  cvarFloatList { "Blue" 0 "Yellow" 1 "Red" 2 } font 4 textscale .85 forecolor .76 .86 .93 1 visible 1 cvarTest ui_stanceFamily showCvar { "0" } }
+ itemDef { name variant text "Current style" rect 34 130 242 28 font 4 textscale .85 forecolor .76 .86 .93 1 visible 1 decoration cvarTest ui_stanceFamily hideCvar { "0" } }
+ itemDef { name caption text "READY STANCE" rect 34 180 242 22 font 2 textscale .65 forecolor .30 .78 1 1 visible 1 decoration }
+ itemDef { name previous text "<" rect 34 212 32 32 type ITEM_TYPE_BUTTON font 2 textscale .9 forecolor .30 .78 1 1 visible 1 action { uiScript stStancePrevious; } }
+ itemDef { name next text ">" rect 258 212 32 32 type ITEM_TYPE_BUTTON font 2 textscale .9 forecolor .30 .78 1 1 visible 1 action { uiScript stStanceNext; } }
+ itemDef { name st_stance_name text "Stock" rect 68 214 184 24 font 4 textscale .69 textalign 1 textalignx 92 forecolor .90 .95 1 1 visible 1 decoration }
+ itemDef { name st_stance_credit text "Raven Software" rect 34 246 252 19 font 4 textscale .55 textalign 1 textalignx 126 forecolor .55 .72 .83 1 visible 1 decoration }
+ itemDef { name experimental text "Backhand preview:" rect 34 286 260 22 type ITEM_TYPE_MULTI cvar ui_stanceExperimental
+  cvarFloatList { "Off" 0 "On" 1 } font 4 textscale .65 forecolor .76 .86 .93 1 visible 1 cvarTest ui_stanceFamily showCvar { "0" } }
+ itemDef { name reset text "Reset all to Stock" rect 34 338 250 24 type ITEM_TYPE_BUTTON font 4 textscale .75 forecolor .76 .86 .93 1 visible 1 action { uiScript stStanceReset; } }
+ itemDef { name st_stance_preview type ITEM_TYPE_MODEL rect 302 70 310 292
+  model_g2anim BOTH_STAND2 model_angle 180 model_g2mins -42 -42 -26 model_g2maxs 42 42 60
+  model_fovx 50 model_fovy 42 isCharacter 1 isSaber 1 visible 1 decoration }
+ itemDef { name hand text "Preview hand:" rect 320 362 278 22 type ITEM_TYPE_MULTI cvar ui_stanceHand
+  cvarFloatList { "Right" 0 "Left" 1 } font 4 textscale .65 forecolor .76 .86 .93 1 visible 1 }
+ itemDef { name motion text "Motion:" rect 320 387 278 22 type ITEM_TYPE_MULTI cvar ui_stanceMotion
+  cvarFloatList { "Idle" 0 "Swing / return" 1 } font 4 textscale .65 forecolor .76 .86 .93 1 visible 1 }
+ itemDef { name rotate text "Rotate:" rect 34 387 250 22 type ITEM_TYPE_MULTI cvar ui_stanceRotate
+  cvarFloatList { "Off" 0 "On" 1 } font 4 textscale .65 forecolor .76 .86 .93 1 visible 1 }
+ itemDef { name st_stance_family_note text "" rect 34 415 570 16 font 4 textscale .5 textalign 1 textalignx 285 forecolor .55 .72 .83 1 visible 1 decoration }
+ itemDef { name st_stance_note text "" rect 34 430 570 16 font 4 textscale .5 textalign 1 textalignx 285 forecolor .55 .72 .83 1 visible 1 decoration }
+ itemDef { name unsupported text "Model preview unavailable" rect 312 334 290 20 font 4 textscale .6 textalign 1 textalignx 145 forecolor 1 .75 .4 1 visible 1 decoration cvarTest ui_stanceSupported showCvar { "0" } }
+ itemDef { name back text "Cancel" rect 34 451 110 23 font 2 textscale .7 forecolor .76 .86 .93 1 type ITEM_TYPE_BUTTON visible 1 action { uiScript stStanceCancel; } }
+ itemDef { name apply text "Apply" rect 500 451 110 23 font 2 textscale .7 forecolor .76 .86 .93 1 type ITEM_TYPE_BUTTON visible 1 action { uiScript stStanceApply; } }
+}

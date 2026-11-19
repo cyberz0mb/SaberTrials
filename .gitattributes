@@ -1,0 +1,22 @@
+* text=auto
+
+*.c text eol=lf
+*.h text eol=lf
+*.md text eol=lf
+*.txt text eol=lf
+*.cfg text eol=lf
+*.menu text eol=lf
+*.ps1 text eol=crlf
+*.cmd text eol=crlf
+*.patch text eol=lf whitespace=-blank-at-eol,-space-before-tab
+
+*.dll binary
+*.so binary
+*.dylib binary
+*.pk3 binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.tga binary
+*.wav binary
+*.mp3 binary

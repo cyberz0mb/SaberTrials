@@ -1,0 +1,8 @@
+{
+  "repository": "https://github.com/JKSunny/EternalJK",
+  "reference": "https://github.com/JACoders/OpenJK/pull/1330",
+  "revision": "c78118a5812cd67dea24276fa07258e94b9172d8",
+  "url": "https://codeload.github.com/JKSunny/EternalJK/zip/c78118a5812cd67dea24276fa07258e94b9172d8",
+  "sha256": "bd7ab53ea80520c991767b63326868eab9b6a4738784a25c2e395d07c512139d",
+  "license": "GPL-2.0-only, with separately licensed Khronos headers and stb_dxt"
+}

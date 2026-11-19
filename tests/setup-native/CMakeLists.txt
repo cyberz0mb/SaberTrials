@@ -1,0 +1,7 @@
+cmake_minimum_required(VERSION 3.20)
+project(st_setup_native LANGUAGES CXX)
+set(CMAKE_CXX_STANDARD 14)
+add_executable(setup_core core.cpp)
+target_include_directories(setup_core PRIVATE ../../development-source/setup ../../development-source/controls)
+enable_testing()
+add_test(NAME setup_core COMMAND setup_core)

@@ -1,0 +1,19 @@
+--- a/codemp/ui/ui_main.c
++++ b/codemp/ui/ui_main.c
+@@ -5900,6 +5900,8 @@
+ 	}
+ }
+ 
++#include "ui_sabertrials_menu.inc"
++
+ static void UI_RunMenuScript(char **args)
+ {
+ 	const char *name, *name2;
+@@ -5907,6 +5909,7 @@
+ 
+ 	if (String_Parse(args, &name))
+ 	{
++		if ( ST_UIMenuScript( name ) ) { return; }
+ 		if (Q_stricmp(name, "StartServer") == 0)
+ 		{
+ 			int i, added = 0;

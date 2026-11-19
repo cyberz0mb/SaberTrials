@@ -1,0 +1,613 @@
+--- a/codemp/rd-vulkan/G2_API.cpp
++++ b/codemp/rd-vulkan/G2_API.cpp
+@@ -238,6 +238,7 @@
+ 	return qfalse;
+ #else
+ 	CGhoul2Info *serverInstance = &ghoul2[modelIndex];
++	if(serverInstance->mSTLockActive)return qfalse;
+ 	CGhoul2Info *clientInstance;
+ 
+ 	if (ri.Cvar_VariableIntegerValue( "dedicated" ))
+@@ -252,6 +253,7 @@
+ 
+ 	CGhoul2Info_v &g2Ref = *g2ClientAttachments[serverInstance->entityNum];
+ 	clientInstance = &g2Ref[0];
++	if(clientInstance->mSTLockActive)return qfalse;
+ 
+ 	int frameNum = G2API_GetTime(0);
+ 
+@@ -294,8 +296,8 @@
+ }
+ 
+ // must be a power of two
+-#define MAX_G2_MODELS (1024)
+-#define G2_MODEL_BITS (10)
++#define MAX_G2_MODELS (8192)
++#define G2_MODEL_BITS (13)
+ 
+ #define G2_INDEX_MASK (MAX_G2_MODELS-1)
+ 
+@@ -1274,6 +1276,8 @@
+ 
+ #define _PLEASE_SHUT_THE_HELL_UP
+ 
++#include "../ghoul2/st_mirror_gla.h"
++
+ qboolean G2API_SetBoneAnim(CGhoul2Info_v &ghoul2, const int modelIndex, const char *boneName, const int AstartFrame, const int AendFrame, const int flags, const float animSpeed, const int currentTime, const float AsetFrame, const int blendTime)
+ {
+ 	int endFrame=AendFrame;
+@@ -1342,7 +1346,18 @@
+ 		{
+ 			// ensure we flush the cache
+ 			ghlInfo->mSkelFrameNum = 0;
+- 			return G2_Set_Bone_Anim(ghlInfo, ghlInfo->mBlist, boneName, startFrame, endFrame, flags, animSpeed, currentTime, setFrame, blendTime);
++ 			if(flags & BONE_ANIM_MIRROR) {
++                int map[53];
++                if(!ST_MirrorGLAMap((const mdxaHeader_t*)ghlInfo->aHeader,map))return qfalse;
++            }
++            int appliedFlags=flags,appliedBlend=blendTime,oldFirst=0,oldEnd=0,oldFlags=0;
++            float oldFrame=0,oldSpeed=0;
++            if(G2_Get_Bone_Anim(ghlInfo,ghlInfo->mBlist,boneName,currentTime,
++                &oldFrame,&oldFirst,&oldEnd,&oldFlags,&oldSpeed,NULL,modelIndex) &&
++                ((oldFlags^flags)&BONE_ANIM_MIRROR)) {
++                appliedFlags &= ~BONE_ANIM_BLEND;appliedBlend=0;
++            }
++            return G2_Set_Bone_Anim(ghlInfo, ghlInfo->mBlist, boneName, startFrame, endFrame, appliedFlags, animSpeed, currentTime, setFrame, appliedBlend);
+ 		}
+ 	}
+ 	return qfalse;
+@@ -2525,6 +2540,12 @@
+ 			}
+ 		}
+ 		ghoul2To[modelTo] = ghoul2From[modelFrom];
++		ghoul2To[modelTo].mBoneCache=0;
++		ghoul2To[modelTo].mTransformedVertsArray=0;
++		ghoul2To[modelTo].mSkelFrameNum=-1;
++		ghoul2To[modelTo].mMeshFrameNum=-1;
++		ghoul2To[modelTo].mSTLockActive=false;
++		ghoul2To[modelTo].mSTLockOwner=-1;
+ 
+ #if 0
+ 		if (forceReconstruct)
+@@ -2563,7 +2584,23 @@
+ #endif
+ 	CGhoul2Info_v &ghoul2 = *(*g2To);
+ 
++
+ 	/*ignore = */G2API_CopyGhoul2Instance(g2From, ghoul2, -1);
++#ifdef _G2_LISTEN_SERVER_OPT
++    // The local server may borrow a constructed client skeleton. DeepCopy
++    // discards that cache, so its clone needs the overrides that produced it.
++    // Change only the owned clone; never alter the live combat skeleton.
++    if (ri.Cvar_VariableIntegerValue("st_mvpPrototype") && g2From.size() > 0) {
++        const int entity = g2From[0].entityNum;
++        if (entity >= 0 && entity < MAX_GENTITIES) {
++            CGhoul2Info_v *rendered = g2ClientAttachments[entity];
++            if (rendered && rendered != &g2From && rendered->IsValid() && rendered->size() > 0 &&
++                g2From[0].mSkelFrameNum == (*rendered)[0].mSkelFrameNum &&
++                g2From[0].currentModel == (*rendered)[0].currentModel)
++                ghoul2[0].mBlist = (*rendered)[0].mBlist;
++        }
++    }
++#endif
+ 
+ 	return;
+ }
+@@ -3032,3 +3069,6 @@
+ {
+ 	return ghoul2[modelIndex].mFileName;
+ }
++
++#define ST_MVP_MODEL_HEADER(model) ((model)->data.glm->header)
++#include "renderer_st_mvp_pose.inc"
+--- a/codemp/rd-vulkan/tr_bsp.cpp
++++ b/codemp/rd-vulkan/tr_bsp.cpp
+@@ -26,6 +26,8 @@
+ #include "tr_cache.h"
+ 
+ static const imgFlags_t lightmapFlags = IMGFLAG_NOLIGHTSCALE | IMGFLAG_NO_COMPRESSION | IMGFLAG_LIGHTMAP | IMGFLAG_NOSCALE | IMGFLAG_CLAMPTOEDGE;
++#include "../qcommon/st_bsp_validate.h"
++#include "../rd-common/st_bsp_read.h"
+ 
+ /*
+ 
+@@ -604,11 +606,6 @@
+ 	}
+ 
+ 	numPoints = LittleLong( ds->numVerts );
+-	if (numPoints > MAX_FACE_POINTS) {
+-		vk_debug("WARNING: MAX_FACE_POINTS exceeded: %i\n", numPoints);
+-		numPoints = MAX_FACE_POINTS;
+-		surf->shader = tr.defaultShader;
+-	}
+ 
+ 	numIndexes = LittleLong( ds->numIndexes );
+ 
+@@ -651,6 +648,12 @@
+ 	indexes += LittleLong( ds->firstIndex );
+ 	for ( i = 0 ; i < numIndexes ; i++ ) {
+ 		((int *)((byte *)cv + cv->ofsIndices ))[i] = LittleLong( indexes[ i ] );
++	}
++
++	if (worldData.enhancedMap) {
++		ClearBounds(cv->bounds[0], cv->bounds[1]);
++		for (int point = 0; point < numPoints; ++point)
++			AddPointToBounds(cv->points[point], cv->bounds[0], cv->bounds[1]);
+ 	}
+ 
+ 	// take the plane information from the lightmap vector
+@@ -2111,24 +2114,14 @@
+ */
+ static void R_LoadLightGrid( const lump_t *l, world_t &worldData ) {
+ 	int		i, j;
+-	vec3_t	maxs;
+-	world_t	*w;
+-	float	*wMins, *wMaxs;
++	world_t *w;
+ 
+ 	w = &worldData;
+ 
+-	w->lightGridInverseSize[0] = 1.0 / w->lightGridSize[0];
+-	w->lightGridInverseSize[1] = 1.0 / w->lightGridSize[1];
+-	w->lightGridInverseSize[2] = 1.0 / w->lightGridSize[2];
+-
+-	wMins = w->bmodels[0].bounds[0];
+-	wMaxs = w->bmodels[0].bounds[1];
+-
+-	for ( i = 0 ; i < 3 ; i++ ) {
+-		w->lightGridOrigin[i] = w->lightGridSize[i] * ceil( wMins[i] / w->lightGridSize[i] );
+-		maxs[i] = w->lightGridSize[i] * floor( wMaxs[i] / w->lightGridSize[i] );
+-		w->lightGridBounds[i] = (maxs[i] - w->lightGridOrigin[i])/w->lightGridSize[i] + 1;
+-	}
++	if (!st_bsp::GridLayout(w->bmodels[0].bounds[0], w->bmodels[0].bounds[1],
++	                        w->lightGridSize, w->lightGridOrigin,
++	                        w->lightGridInverseSize, w->lightGridBounds))
++		ri.Error(ERR_DROP, "%s: invalid BSP light grid dimensions", w->name);
+ 
+ 	int numGridDataElements = l->filelen / sizeof(*w->lightGridData);
+ 
+@@ -2342,18 +2335,16 @@
+ 
+ 	// check for cached disk file from the server first...
+ 	//
+-	if (ri.CM_GetCachedMapDiskImage())
+-	{
+-		buffer = (byte *)ri.CM_GetCachedMapDiskImage();
+-	}
+-	else
+-	{
+-		// still needs loading...
+-		//
+-		ri.FS_ReadFile( name, (void **)&buffer );
+-		if ( !buffer ) {
+-			Com_Error (ERR_DROP, "RE_LoadWorldMap: %s not found", name);
+-		}
++	// The engine publishes its main-world cache only after validation.
++	const bool cached = !index && ri.CM_GetCachedMapDiskImage();
++	int version = 0;
++	if (cached) {
++		buffer = static_cast<byte *>(ri.CM_GetCachedMapDiskImage());
++		version = LittleLong(st_bsp::Record<dheader_t>(buffer, 0).version);
++	} else {
++		buffer = ST_ReadBSP(name, version);
++		if (!buffer)
++			ri.Error(ERR_DROP, "RE_LoadWorldMap: %s not found", name);
+ 	}
+ 
+ 	memset( &worldData, 0, sizeof( worldData ) );
+@@ -2366,15 +2357,10 @@
+ 
+ 	startMarker = (byte *)Hunk_Alloc(0, h_low);
+ 	c_gridVerts = 0;
++	worldData.enhancedMap = version == ST_BSP_VERSION;
+ 
+ 	header = (dheader_t *)buffer;
+ 	fileBase = (byte *)header;
+-
+-	int i = LittleLong (header->version);
+-	if ( i != BSP_VERSION ) {
+-		Com_Error (ERR_DROP, "RE_LoadWorldMap: %s has wrong version number (%i should be %i)",
+-			name, i, BSP_VERSION);
+-	}
+ 
+ 	// swap all the lumps
+ 	for (size_t i=0 ; i<sizeof(dheader_t)/4 ; i++) {
+@@ -2406,6 +2392,7 @@
+ 		R_LoadLightGridArray( &header->lumps[LUMP_LIGHTARRAY], worldData );
+ 
+ 		// only set tr.world now that we know the entire level has loaded properly
++		R_ReserveMapDrawSurfaces(version == ST_BSP_VERSION ? worldData.numsurfaces : 0);
+ 		tr.world = &worldData;
+ 
+ 		tr.mapLoading = qfalse;
+@@ -2415,14 +2402,14 @@
+ 	R_BuildSurfaceSpritesVBO( worldData, index );
+ #endif
+ 
+-	if (ri.CM_GetCachedMapDiskImage())
++	if (cached)
+ 	{
+ 		Z_Free( ri.CM_GetCachedMapDiskImage() );
+ 		ri.CM_SetCachedMapDiskImage( NULL );
+ 	}
+ 	else
+ 	{
+-		ri.FS_FreeFile( buffer );
++		ri.Hunk_FreeTempMemory(buffer);
+ 	}
+ }
+ 
+--- a/codemp/rd-vulkan/tr_cache.cpp
++++ b/codemp/rd-vulkan/tr_cache.cpp
+@@ -82,6 +82,10 @@
+ 	0x00, 0x80, 0x00, 0x80, 0x00, 0x80
+ };
+ 
++#define ST_GLA_COMPAT_ENGINE
++#include "../ghoul2/st_gla_compat.h"
++#include "../rd-common/st_glm_read.h"
++
+ qboolean CModelCacheManager::LoadFile( const char *pFileName, void **ppFileBuffer, qboolean *pbAlreadyCached )
+ {
+ 	char path[MAX_QPATH];
+@@ -111,6 +115,8 @@
+ 	}
+ 
+ 	int len = ri.FS_ReadFile(path, ppFileBuffer);
++	ST_GLM_Preflight(path, ppFileBuffer, len, MAX_G2_BONES);
++	ST_GLA_CompatRead(path, ppFileBuffer, len);
+ 	if ( len == -1 || *ppFileBuffer == NULL )
+ 	{
+ 		return qfalse;
+--- a/codemp/rd-vulkan/tr_ghoul2.cpp
++++ b/codemp/rd-vulkan/tr_ghoul2.cpp
+@@ -213,8 +213,13 @@
+ 
+ };
+ 
++#include "../ghoul2/st_mirror_gla.h"
++#include <memory>
++struct STLockRuntime;
++
+ struct SBoneCalc
+ {
++ bool mirrored;
+ 	int				newFrame;
+ 	int				currentFrame;
+ 	float			backlerp;
+@@ -250,6 +255,7 @@
+ 				mBones[index].blendOldFrame=par.blendOldFrame;
+ 				mBones[index].blendMode=par.blendMode;
+ 				mBones[index].blendLerp=par.blendLerp;
++ mBones[index].mirrored=par.mirrored;
+ 			}
+ 			G2_TransformBone(index,*this);
+ 			mFinalBones[index].touch=mCurrentTouch;
+@@ -345,6 +351,12 @@
+ 
+ 	// these are split for better cpu cache behavior
+ 	std::vector<SBoneCalc> mBones;
++ const mdxaBone_t *stLockLocal;
++ float stLockWeight;
++ std::shared_ptr<STLockRuntime> stLockRuntime;
++ std::shared_ptr<STLockRuntime> stLockValidatedRuntime;
++ int mirrorMap[53];
++ bool mirrorValid;
+ 	std::vector<CTransformBone> mFinalBones;
+ 
+ 	std::vector<CTransformBone> mSmoothBones; // for render smoothing
+@@ -381,6 +393,7 @@
+ 		uboOffset = ~0U;
+ 
+ 		mSmoothingActive=false;
++        stLockLocal=NULL;stLockWeight=0;
+ 		mUnsquash=false;
+ 		mSmoothFactor=0.0f;
+ 
+@@ -402,6 +415,8 @@
+ 			//ditto
+ 			mFinalBones[i].parent=skel->parent;
+ 		}
++
++        mirrorValid=ST_MirrorGLAMap(header,mirrorMap);
+ 		mCurrentTouch=3;
+ //rww - RAGDOLL_BEGIN
+ 		mLastTouch=2;
+@@ -537,7 +552,7 @@
+ #ifdef _G2_LISTEN_SERVER_OPT
+ void CopyBoneCache(CBoneCache *to, CBoneCache *from)
+ {
+-	memcpy(to, from, sizeof(CBoneCache));
++	*to = *from;
+ }
+ #endif
+ 
+@@ -1512,7 +1527,15 @@
+ 	matrix = bone.animFrameMatrix;
+ }
+ 
+-void G2_TransformBone (int child,CBoneCache &BC)
++
++static void ST_SampleBone(float matrix[3][4],int bone,CBoneCache& cache,int frame,bool mirror) {
++    const bool enabled=mirror && cache.mirrorValid;
++    UnCompressBone(matrix,enabled?cache.mirrorMap[bone]:bone,cache.header,frame);
++    if(enabled) ST_MirrorMatrix(matrix,matrix);
++}
++
++static void ST_LockApplyFinal(int child,CBoneCache& cache);
++void G2_TransformBoneNormal (int child,CBoneCache &BC)
+ {
+ 	SBoneCalc &TB=BC.mBones[child];
+ 	static mdxaBone_t		tbone[6];
+@@ -1567,6 +1590,7 @@
+ 		// should this animation be overridden by an animation in the bone list?
+ 		if ((boneList[boneListIndex].flags) & (BONE_ANIM_OVERRIDE_LOOP | BONE_ANIM_OVERRIDE))
+ 		{
++			TB.mirrored=(boneList[boneListIndex].flags & BONE_ANIM_MIRROR)!=0;
+ 			G2_TimingModel(boneList[boneListIndex],BC.incomingTime,BC.header->numFrames,TB.currentFrame,TB.newFrame,TB.backlerp);
+ 		}
+ #if DEBUG_G2_TIMING
+@@ -1678,8 +1702,8 @@
+ 
+ // 		MC_UnCompress(tbone[3].matrix,compBonePointer[bFrame->boneIndexes[child]].Comp);
+ // 		MC_UnCompress(tbone[4].matrix,compBonePointer[boldFrame->boneIndexes[child]].Comp);
+-		UnCompressBone(tbone[3].matrix, child, BC.header, TB.blendFrame);
+-		UnCompressBone(tbone[4].matrix, child, BC.header, TB.blendOldFrame);
++		ST_SampleBone(tbone[3].matrix, child, BC, TB.blendFrame, TB.mirrored);
++		ST_SampleBone(tbone[4].matrix, child, BC, TB.blendOldFrame, TB.mirrored);
+ 
+ 		for ( j = 0 ; j < 12 ; j++ )
+ 		{
+@@ -1694,7 +1718,7 @@
+   	if (!TB.backlerp)
+   	{
+ // 		MC_UnCompress(tbone[2].matrix,compBonePointer[aoldFrame->boneIndexes[child]].Comp);
+-		UnCompressBone(tbone[2].matrix, child, BC.header, TB.currentFrame);
++		ST_SampleBone(tbone[2].matrix, child, BC, TB.currentFrame, TB.mirrored);
+ 
+ 		// blend in the other frame if we need to
+ 		if (TB.blendMode)
+@@ -1718,8 +1742,8 @@
+ 		float frontlerp = 1.0 - TB.backlerp;
+ // 		MC_UnCompress(tbone[0].matrix,compBonePointer[aFrame->boneIndexes[child]].Comp);
+ //		MC_UnCompress(tbone[1].matrix,compBonePointer[aoldFrame->boneIndexes[child]].Comp);
+-		UnCompressBone(tbone[0].matrix, child, BC.header, TB.newFrame);
+-		UnCompressBone(tbone[1].matrix, child, BC.header, TB.currentFrame);
++		ST_SampleBone(tbone[0].matrix, child, BC, TB.newFrame, TB.mirrored);
++		ST_SampleBone(tbone[1].matrix, child, BC, TB.currentFrame, TB.mirrored);
+ 
+ 		for ( j = 0 ; j < 12 ; j++ )
+ 		{
+@@ -2025,6 +2049,11 @@
+ 	//rwwFIXMEFIXME: Care?
+ 
+ }
++void G2_TransformBone (int child,CBoneCache &BC) {
++    if(!BC.stLockLocal || BC.stLockWeight<1.0f)G2_TransformBoneNormal(child,BC);
++    ST_LockApplyFinal(child,BC);
++}
++
+ 
+ void G2_SetUpBolts( mdxaHeader_t *header, CGhoul2Info &ghoul2, mdxaBone_v &bonePtr, boltInfo_v &boltList)
+ {
+@@ -2195,7 +2224,11 @@
+ 	ghoul2.mBoneCache->rootMatrix=rootMatrix;
+ 	ghoul2.mBoneCache->incomingTime=time;
+ 
+-	SBoneCalc &TB=ghoul2.mBoneCache->Root();
++	ghoul2.mBoneCache->stLockLocal=ghoul2.mSTLockActive?ghoul2.mSTLockLocal:NULL;
++    ghoul2.mBoneCache->stLockWeight=ghoul2.mSTLockActive?ghoul2.mSTLockParams.weight:0;
++    if(ghoul2.mSTLockActive)ghoul2.mBoneCache->mSmoothingActive=false;
++    SBoneCalc &TB=ghoul2.mBoneCache->Root();
++ TB.mirrored=false;
+ 	TB.newFrame=0;
+ 	TB.currentFrame=0;
+ 	TB.backlerp=0.0f;
+@@ -3307,6 +3340,8 @@
+ R_AddGHOULSurfaces
+ ==============
+ */
++#include "st_cosmetic_render.inc"
++
+ void R_AddGhoulSurfaces( trRefEntity_t *ent ) {
+ #ifdef G2_PERFORMANCE_ANALYSIS
+ 	G2PerformanceTimer_R_AddGHOULSurfaces.Start();
+@@ -3448,7 +3483,7 @@
+ 			{
+ 				RS.renderfx |= RF_NOSHADOW;
+ 			}
+-			RenderSurfaces(RS);
++			if (!ST_RenderCosmetic(RS,ghoul2[i],ent)) RenderSurfaces(RS);
+ 		}
+ 	}
+ 	HackadelicOnClient=false;
+@@ -3897,7 +3932,7 @@
+ #endif
+ 
+ 	// first up, sanity check our numbers
+-	RB_CheckOverflow(surface->numVerts, surface->numTriangles);
++	RB_CheckOverflow( surface->numVerts, surface->numTriangles * 3 );
+ 
+ 	//
+ 	// deform the vertexes by the lerped bones
+@@ -4520,7 +4555,7 @@
+ 		LL(surfInfo->parentIndex);
+ 
+ 		Q_strlwr(surfInfo->name);	//just in case
+-		if ( !strcmp( &surfInfo->name[strlen(surfInfo->name)-4],"_off") )
++		if ( strlen(surfInfo->name) >= 4 && !strcmp( &surfInfo->name[strlen(surfInfo->name)-4],"_off") )
+ 		{
+ 			surfInfo->name[strlen(surfInfo->name)-4]=0;	//remove "_off" from name
+ 		}
+@@ -5132,3 +5167,7 @@
+ 
+ 
+ 
++
++#define ST_LOCK_MODEL_HEADER(m) ((m)->data.glm->header)
++#include "../ghoul2/st_lock_renderer.inc"
++#undef ST_LOCK_MODEL_HEADER
+--- a/codemp/rd-vulkan/tr_local.h
++++ b/codemp/rd-vulkan/tr_local.h
+@@ -1054,7 +1054,8 @@
+ 
+ typedef struct srfSurfaceFace_s {
+ 	surfaceType_t	surfaceType;
+-	cplane_t		plane;
++	vec3_t bounds[2];
++	cplane_t	plane;
+ 
+ #ifdef USE_VBO
+ 	int				vboItemIndex;
+@@ -1161,6 +1162,7 @@
+ } mgrid_t;
+ 
+ typedef struct world_s {
++	bool enhancedMap;
+ 	char		name[MAX_QPATH];		// ie: maps/tim_dm2.bsp
+ 	char		baseName[MAX_QPATH];	// ie: tim_dm2
+ 
+@@ -1396,6 +1398,7 @@
+ 
+ #define	MAX_DRAWSURFS			0x10000
+ #define	DRAWSURF_MASK			( MAX_DRAWSURFS - 1 )
++#define	ST_MAX_DRAWSURFS	(8 * MAX_DRAWSURFS)
+ 
+ /*
+ 
+@@ -2520,6 +2523,10 @@
+ // contained in a backEndData_t.
+ typedef struct backEndData_s {
+ 	drawSurf_t			drawSurfs[MAX_DRAWSURFS];
++	drawSurf_t *mapDrawSurfs;
++	drawSurf_t *mapSortScratch;
++	int mapDrawCapacity;
++	bool mapDrawOverflow;
+ #ifdef USE_PMLIGHT
+ 	litSurf_t			litSurfs[MAX_LITSURFS];
+ 	dlight_t			dlights[MAX_REAL_DLIGHTS];
+@@ -2534,6 +2541,9 @@
+ 
+ extern int max_polys;
+ extern int max_polyverts;
++
++void R_ReserveMapDrawSurfaces(int surfaces);
++drawSurf_t *R_MapDrawSurfaces();
+ 
+ extern backEndData_t *backEndData;
+ 
+@@ -2677,4 +2687,5 @@
+ IBO_t *R_CreateIBO( const char *name, const byte *vbo_data, int vbo_size );
+ VBO_t *R_CreateVBO( const char *name, const byte *vbo_data, int vbo_size );
+ #endif
+-#endif
+\ No newline at end of file
++#endif
++qhandle_t RE_STChatUpload(int,int,int,const byte *);
+--- a/codemp/rd-vulkan/tr_main.cpp
++++ b/codemp/rd-vulkan/tr_main.cpp
+@@ -1180,9 +1180,27 @@
+ Radix sort with 4 byte size buckets
+ ===============
+ */
++void R_ReserveMapDrawSurfaces(int surfaces) {
++	backEndData->mapDrawSurfs = nullptr;
++	backEndData->mapSortScratch = nullptr;
++	backEndData->mapDrawCapacity = MAX_DRAWSURFS;
++	backEndData->mapDrawOverflow = false;
++	if (surfaces > MAX_DRAWSURFS / 2) {
++		const int capacity = Q_min(ST_MAX_DRAWSURFS, MAX_DRAWSURFS + 2 * surfaces);
++		backEndData->mapDrawSurfs = static_cast<drawSurf_t *>(ri.Hunk_Alloc(capacity * sizeof(drawSurf_t), h_low));
++		backEndData->mapSortScratch = static_cast<drawSurf_t *>(ri.Hunk_Alloc(capacity * sizeof(drawSurf_t), h_low));
++		backEndData->mapDrawCapacity = capacity;
++	}
++}
++
++drawSurf_t *R_MapDrawSurfaces() {
++	return backEndData->mapDrawSurfs ? backEndData->mapDrawSurfs : backEndData->drawSurfs;
++}
++
+ static void R_RadixSort( drawSurf_t *source, int size )
+ {
+-	static drawSurf_t scratch[MAX_DRAWSURFS];
++  static drawSurf_t classicScratch[MAX_DRAWSURFS];
++  drawSurf_t *scratch = backEndData->mapSortScratch ? backEndData->mapSortScratch : classicScratch;
+ #ifdef Q3_LITTLE_ENDIAN
+ 	R_Radix(0, size, source, scratch);
+ 	R_Radix(1, size, scratch, source);
+@@ -1364,9 +1382,15 @@
+ 	}
+ #endif
+ 
+-	// instead of checking for overflow, we just mask the index
+-	// so it wraps around
+-	index = tr.refdef.numDrawSurfs & DRAWSURF_MASK;
++	const int capacity = backEndData->mapDrawCapacity ? backEndData->mapDrawCapacity : MAX_DRAWSURFS;
++	if (tr.refdef.numDrawSurfs >= capacity) {
++		if (!backEndData->mapDrawOverflow) {
++			backEndData->mapDrawOverflow = true;
++			ri.Printf(PRINT_WARNING, "Draw surface capacity exceeded (%i)\n", capacity);
++		}
++		return;
++	}
++	index = tr.refdef.numDrawSurfs;
+ 	// the sort data is packed into a single 32 bit value so it can be
+ 	// compared quickly during the qsorting process
+ 	tr.refdef.drawSurfs[index].sort = (shader->sortedIndex << QSORT_SHADERNUM_SHIFT)
+@@ -1407,6 +1431,7 @@
+ 		R_AddDrawSurfCmd(drawSurfs, numDrawSurfs);
+ 		return;
+ 	}
++
+ 
+ 	// sort the drawsurfs by sort type, then orientation, then shader
+ 	R_RadixSort(drawSurfs, numDrawSurfs);
+--- a/codemp/rd-vulkan/tr_scene.cpp
++++ b/codemp/rd-vulkan/tr_scene.cpp
+@@ -514,7 +514,7 @@
+ 	tr.refdef.floatTime = tr.refdef.time * 0.001f;
+ 
+ 	tr.refdef.numDrawSurfs = r_firstSceneDrawSurf;
+-	tr.refdef.drawSurfs = backEndData->drawSurfs;
++	tr.refdef.drawSurfs = R_MapDrawSurfaces();
+ 
+ #ifdef USE_PMLIGHT
+ 	tr.refdef.numLitSurfs = r_firstSceneLitSurf;
+--- a/codemp/rd-vulkan/tr_skin.cpp
++++ b/codemp/rd-vulkan/tr_skin.cpp
+@@ -147,7 +147,7 @@
+ 		// parse the shader name
+ 		token = CommaParse( &text_p );
+ 
+-		if ( !strcmp( &surfName[strlen(surfName)-4], "_off") )
++		if ( strlen(surfName) >= 4 && !strcmp( &surfName[strlen(surfName)-4], "_off") )
+ 		{
+ 			if ( !strcmp( token ,"*off" ) )
+ 			{
+@@ -181,6 +181,8 @@
+ 
+ 	return hSkin;
+ }
++
++#include "../rd-common/st_cosmetic_load.h"
+ 
+ qhandle_t RE_RegisterSkin( const char *name ) {
+ 	qhandle_t	hSkin;
+@@ -217,6 +219,9 @@
+ 	tr.skins[hSkin] = skin;
+ 	Q_strncpyz( skin->name, name, sizeof( skin->name ) );
+ 	skin->numSurfaces = 0;
++    skin->stCosmeticModel=skin->stCosmeticSkin=0;
++    skin->stCosmeticReported=0;
++    skin->stCosmeticClassic[0]=0;
+ 
+ 	// If not a .skin file, load as a single shader
+ 	if ( strcmp( name + strlen( name ) - 5, ".skin" ) ) {
+@@ -247,6 +252,7 @@
+ 	{//single skin
+ 		hSkin = RE_RegisterIndividualSkin(name, hSkin);
+ 	}
++	if (hSkin) ST_RegisterCosmetic(skin);
+ 	return(hSkin);
+ }
+ 

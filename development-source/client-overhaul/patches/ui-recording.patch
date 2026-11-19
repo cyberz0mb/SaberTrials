@@ -1,0 +1,10 @@
+--- a/codemp/ui/ui_shared.c
++++ b/codemp/ui/ui_shared.c
+@@ -4886,6 +4886,7 @@
+ 	"messagemode3",
+ 	"messagemode4",
+ 	"saberAttackCycle",
++	"st_record",
+ 	"taunt",
+ 	"use_bacta",
+ 	"use_electrobinoculars",

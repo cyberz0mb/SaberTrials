@@ -1,0 +1,1736 @@
+ is assigned to: 	被分配到 :
+%d B/s max	%d B/s 最大
+%s | default %s | edit range %.4g to %.4g	%s 預設 %s 編輯範圍%.4g 到%.4g
+')!=std::string::npos)){error=	')!===============
++  Advanced video	+ 高级影片
++altattack	+升降
++attack	+ 攻擊
++back	+ back
++forward	+向前
++left	+左
++lookdown	+向下看
++lookup	+查詢
++movedown	+ 移下
++moveleft	+左移
++moveright	+高度
++moveup	+移動
++right	+右
++scores	+分數
++speed	+速度
++strafe	+strafe +
++use	+使用
++useforce	+使用力
+-  Advanced video	- 高级影片
+-2=Desktop|-1=Custom	-2=德士克托普 ===
+.png	. png 中
+.skin	...皮肤
+.tga	.tga :
+/default	/ 預設值
+/misc	/微小
+/model.glm	/模具.glm
+10 minutes: reconnect or substitute	10 分鐘: 重新連接或取代
+10 rounds per match	每局10發
+16 bit	16 位
+1v1 TOURNAMENT	1v1次
+22 kHz	22千赫
+2v2 / 20 kills	2v2 / 20人死亡
+32 bit	32 位
+3v3 / 30 kills	3v3 / 30人死亡
+44 kHz	44千赫
+4v4 / 40 kills	4v4/40人死亡
+5 minutes to reconnect	再連接五分鐘
+5-5 tie: one deciding round	5 -5平手,一局決定
+5v5 / 50 kills	5v5/50人死亡
+8-32 players / even entries	8-32名玩家/甚至列
+: unsupported value.	: 不支援值。
+; engine directory limit reached	; 引擎目錄限制已達
+; engine range 	; 引擎範圍
+< Profile	< 配置文件
+@MENUS_ABSORB	ABSORB( ABSORB )
+@MENUS_ACROBATICS	杂技
+@MENUS_ADD_BOT	新增瓶
+@MENUS_ADD_FAVORITE	新增最愛
+@MENUS_ADD_SELECTED_SERVER_TO	新增選取的伺服器到最愛 。
+@MENUS_ADJUSTS_THE_DIFFICULTY	調整遊戲中人工智能的彈匣的難度 。
+@MENUS_ADV_GAME_RULES	附加遊戲规则
+@MENUS_ALL	全部
+@MENUS_ALLOWS_YOU_TO_SELECT	允許您選擇您要玩的伺服器的遊戲類型 。
+@MENUS_ALLOW_SABER_CHALLENGE	允許 Saber 挑戰 :
+@MENUS_AN_ATTACK_DRONE_SIMILAR	探險者無人機\n這架無人機與絕地訓練無人機的技術相似,
+@MENUS_AN_ELEGANT_WEAPON_FOR	光劍\n光劍是更文明時代的優雅武器, 光劍是絕地武士的首選武器。 光劍是一副能量的刀片, 可以用來攻擊和防守。\n\n主要火力 -- -- 砍刀和挥棒式攻击\n二次火力 - 強力助推\n防守能力 - 防爆器和能量武器火力,\n弹药型 - 無效/ A
+@MENUS_APPEARANCE	申请
+@MENUS_APPLY	套用
+@MENUS_APPLY_CHANGES	通用的變化
+@MENUS_APPLY_CHANGES_AND_JOIN	套用變更並加入遊戲中 。
+@MENUS_APPLY_CHANGES_AND_THEN	套用變更, 然后去主選單 。
+@MENUS_APPLY_PLAYER_SABER	套用變更到播放器中, 並前往 saber 選取 。
+@MENUS_APPLY_POWERS	套用權限
+@MENUS_APPLY_SABER_CHANGES	套用 saber 變更並返回主選單 。
+@MENUS_APPLY_THESE_CHANGES_OR	要套用這些變更還是丟棄 ?
+@MENUS_ASSIST_ME	幫助我
+@MENUS_ATTACK_THE_ENEMY_S_BASE	攻擊敵人的基地
+@MENUS_ATTACK_TITLE	攻擊
+@MENUS_AUTO_DOWNLOAD	自動下載 :
+@MENUS_AUTO_JOIN	自動加入 :
+@MENUS_AUTO_JOIN_DESC	允許伺服器選擇您的隊伍和課程 。
+@MENUS_AUTO_MAP_CYCLE	自動映射周期 :
+@MENUS_AUTO_MAP_CYCLE_DESC	每次比賽完成, 都去下一張地圖 。
+@MENUS_AUTO_TEAM	自動 TEAM
+@MENUS_AWAITING_CHALLENGE	等待挑戰... %i
+@MENUS_AWAITING_CONNECTION	正在等待連接...%i
+@MENUS_AWAITING_GAMESTATE	等待遊戲狀態...
+@MENUS_A_DEDICATED_SERVER_IS	专用伺服器是只為他人運作遊戲的電腦 。
+@MENUS_A_DETONATION_PACK_IS	引爆包\n引爆包基本上是一個有遠端引爆扳機的小型爆破裝置。 炸彈包是放置或扔的, 使用者可以隨意引爆。 引爆包通常用于伏擊敵人或打開密封的門 。\n\n主火 - 向使用者腳下扔電荷\n二次火力 - 全部引爆
+@MENUS_BACKTOMAIN	回到主菜單上
+@MENUS_BACKTORULES	回到規則選單
+@MENUS_BACKUP_ONE_MENU	退后一份菜單。
+@MENUS_BACK_2_PROFILE	回到檔案選單中 。
+@MENUS_BACTA_CANISTERS_ARE_PORTABLE	生物技術\nBacta 罐子是可移植的、一次性的包裝菌膏和緊急治療工具。 設計在野外使用, 菌藥罐可以用于醫療復原時治傷、恢復活力。 任何野外醫師都不該沒有它們 。
+@MENUS_BACTA_CAPS	百合
+@MENUS_BECOME_A_NEARLY_UNSTOPPABLE	成為一個幾乎不可阻止的猶太人
+@MENUS_BEGIN_PLAYING_THE_DEMO	開始播放選取的檔案的演示文稿 。
+@MENUS_BLADE_COLOR	布拉德州
+@MENUS_BLADE_COLOR_DESC	選擇您光劍的顏色 。
+@MENUS_BLASTER_PISTOL	布拉斯特·皮斯托爾
+@MENUS_BLASTER_PISTOL_DESC	DL-44 重筒\n星系中最常用的武器之一,DL-44重型Blaster手枪的射速很慢,但非常精确.\n\n主火 - 慢速,單一射擊,非常精確和損壞\n二次火力 - 增加破坏的能量堆積\n弹药型態 - 亮度包
+@MENUS_BLASTER_RIFLE	光圈光圈
+@MENUS_BOTS	瓶
+@MENUS_BOWCASTER_CAPS	巴巴多斯
+@MENUS_CALL_FOR_VOTES	要求投票
+@MENUS_CANCEL	反恐
+@MENUS_CANCEL_DESC	回到遊戲中而不改變隊伍
+@MENUS_CAPTURE_LIMIT	抓取限制 :
+@MENUS_CAPTURE_THE_FLAG_RULES	抓住旗子遊戲規則
+@MENUS_CAP_AUTO_JOIN	自動加入
+@MENUS_CHANNEL_THE_FORCE_TO	利用原力來治療你的盟友
+@MENUS_CHARACTER_CREATION	夏克特的歌聲
+@MENUS_CHOOSE_A_PRE_MADE_ALLOCATION	選擇預設的強權分配 。
+@MENUS_CHOOSE_CLASS	挑剔一類
+@MENUS_CHOOSE_MOVE_DESC	選擇移動型態 。
+@MENUS_CHOOSE_RULES	選擇遊戲規則
+@MENUS_CHOOSE_SOURCE_OF_SERVERS	選擇伺服器的來源 。
+@MENUS_CHOOSE_SPECIES	選擇一個物种。
+@MENUS_CHOOSE_THE_PATH_OF_THE	選擇光面或黑暗面的路徑 。
+@MENUS_CHOOSE_YOUR_FORCE_TRAINING	選擇您的強力訓練
+@MENUS_CHOOSE_YOUR_GAME	選擇您的遊戲 。
+@MENUS_CLASS_CHOICE_DESC	選擇課程 。
+@MENUS_CLASS_FORCEPOWERS	強制本課的權力
+@MENUS_CLASS_INVENTORY	此類目目錄
+@MENUS_CLASS_WEAPONS	這班的用兵器
+@MENUS_CLICK_FOR_HUMAN_BOTS	點擊人體、人體或關閉的空間
+@MENUS_CLIENTS_CAN_DOWNLOAD	客戶端可以下載新的資料和代碼 。
+@MENUS_CLIENT_MUST_HAVE_EXACT	客戶端和伺服器必須有完全相同的密碼和資料 。
+@MENUS_CLOAK_CAPS	爬行神盾局
+@MENUS_CLOAK_DESC	遮蔽盾牌\n隱形盾牌讓穿戴者看不到其他人, 允許隱形行動。 然而, 由于發動裝置所需的巨大能量, 隱形盾牌會持續很短時間。\n\n直接從 DEMP 2 槍中擊中會暫時關閉盾牌。 此外, DEMP 2 的次擊會永久關閉盾牌 。\n\n隱形盾牌只可用於西格遊戲類型 。
+@MENUS_COLOR	科洛爾
+@MENUS_COLOR1_DESC	選擇刀片顏色 。
+@MENUS_COLOR2	第2份
+@MENUS_COLOR2_DESC	選擇第二片刀片顏色 。
+@MENUS_COMBAT_RULES	通则
+@MENUS_COMMONLY_REFERRED_TO	阻斷電磁脈冲2炮\n通常稱為 DEMP 2 的脉冲步槍主要用于機器人和電子裝置。 DEMP 2 發射高功率的离子暴動, 破壞電子系統, 並且對個人盾牌最有效。 和武器之前的化身不同, DEMP 2 的离子電荷能損壞活物 。\n\n主火力 - 單一擊中,對人造成一些傷害,對盾牌造成额外傷害\n副火力 - 發射一顆能擊倒敵人的 近瞬間震波的子彈\nAmmo 型態 - 電力儲存格
+@MENUS_COMPLETE_THE_CURRENT	完成目前的目標 。
+@MENUS_CONC_RIFLE	結 论
+@MENUS_CONC_RIFLE_DESC	斯圖克腦震荡槍\n造成直径約4米的爆炸。\n\n主火 - 單一射擊,\n副火力 - 射出爆炸半徑较小但造成更大損害且后座力更嚴重的射擊\n弹药型態 - 金屬瓶
+@MENUS_CONFIGURE_GAME_CONTROLS	配置遊戲控制器 。
+@MENUS_CONFIGURE_GAME_SETTINGS	配置遊戲設定值 。
+@MENUS_CONNECTING_TO	正在連接到 %s
+@MENUS_CONNECTION_RULES	通 知
+@MENUS_CREATE_AN_AURA_THAT_PROTECTS	建立防體攻擊的氣息
+@MENUS_CTF_CAPS	接住那架火車
+@MENUS_CUSTOM_CHARACTER	自訂字元
+@MENUS_DARK_RAGE	黑暗的怒吼 :
+@MENUS_DATAPAD	數據板 :
+@MENUS_DATA_RATE	資料率 :
+@MENUS_DATA_RATE_DESC	網路上的信息傳輸連接速度 。
+@MENUS_DATA_TRANSFER_RATE_TO	數據傳輸率到客戶端 。
+@MENUS_DEDICATED_SERVER	專業伺服器 :
+@MENUS_DEFAULT	預設
+@MENUS_DEFEND_OUR_BASE	保護我們的基地。
+@MENUS_DEFEND_TITLE	防守
+@MENUS_DELETE_SELECTED_SERVER	從最愛的伺服器刪除 。
+@MENUS_DEL_FAVORITE	Del. 最愛
+@MENUS_DEMP_2_1	德梅普2
+@MENUS_DESCRIPTION_OF_A_FORCE	描述力量的力量。
+@MENUS_DESCRIPTION_OF_A_WEAPON	武器型的描述
+@MENUS_DESCRIPTION_OF_ITEM_TYPE	描述項目類型 。
+@MENUS_DETPACK	破解
+@MENUS_DISABLE_FORCE	禁用強性 :
+@MENUS_DISABLE_FORCE_INFO	在玩耍中停止使用任何強力力量。
+@MENUS_DISCARD	丟棄
+@MENUS_DISPLAY_SERVER_INFORMATION	顯示伺服器資訊 。
+@MENUS_DISRUPTOR	逮捕人
+@MENUS_DONE	完成
+@MENUS_DONE_CAPS	完成
+@MENUS_DONE_DESC	返回到伺服器搜尋器 。
+@MENUS_DO_NOT_APPLY_CHANGES	不使用變更, 返回到影像選單 。
+@MENUS_DRAIN	瑞恩
+@MENUS_DRAIN_THE_FORCE_POWER	把反對者的力量 抽干來增加你的身體健康
+@MENUS_DUALSABERS	雙撒布
+@MENUS_DUALSABERS_DESC	用兩只單手的刀,只用一個格斗的樣子
+@MENUS_DUAL_SABERS	雙撒布
+@MENUS_DUEL_CAPS	杜爾
+@MENUS_DUEL_GAMETYPE	決斗規矩
+@MENUS_DUEL_LIMIT	決斗限制 :
+@MENUS_DURATION_5_SECONDS_NAREA	強速\n期限:變數(10-20秒)\n效境域:絕地\n效果: 絕地加速了.\n\n排名1 - 絕地的移動速度比正常快25%,10秒\n排名2 - 絕地的動作比正常速度快50%,15秒\n排名3 - 絕地超過正常的75% 20秒
+@MENUS_DURATION_CONTINUOUS_NAREA	強力吸收\n期限: 连续\n效果區域: 只有絕地\n效果 : 保護不受任何直接強力的影響 。\n\n強力力的損害 直接指向握手 把能量變成有用的強力力\n\n1 級 - 取消1 級 軍隊攻擊, 減少更高級軍隊攻擊的效果。 傳回一些軍隊力量 。\n2級 - 取消2級軍隊攻擊, 大大降低更高级軍隊攻擊的效果。 傳回更大的軍隊力量 。\n第3級 - 取消所有強制攻擊 傳回更大的強制力量
+@MENUS_DURATION_IMMEDIATE_NAREA	強制跳動\n期限:立即\n效果區域: 只限絕地\n效果: 絕地可以做出巨大的垂直跳跃。\n\n排名1 絕地可以跳升到正常跳升高度的兩倍\n排名2 絕地可以跳升到正常跳升高度的四倍\n3級 絕地可以跳到8倍於正常跳高
+@MENUS_DURATION_INSTANTANEOUS	強制推\n期限:即時效果\n效果區域: 物件或人\n效果: 讓絕地把物件從自己身上推開 導致導彈偏移 以及防禦強力攻擊\n\n1級 - 絕地用原力推進特定敵人或焦點的物件.\n排名2 - 絕地利用原力在有限的弧內推倒多個敵人或物件.\n第3級 絕地可以用足夠的力力力 推倒多個敵人 以將敵人推向堅固的表面或從窗台上掉下來
+@MENUS_DURATION_INSTANTANEOUS_NAREA	強制網格\n期限: 即時\n有效领域:只有活人\n效果:讓絕地窒息或收縮活人的器官.\n\n1級 受影響的敵人被扣住並保持未受傷害,但5秒內不動。\n第二級 敵人受到的影響與第一級一樣 但握力會傷害和解除敵人的重心\n第3級 敵人受到的影響與第2級相仿 但絕地可以自由行動 把敵人打成牆壁和其他障礙 或者在仍處於窒息損害時 用敵人做盾牌
+@MENUS_DURATION_VARIABLE_10	強制 Rage\n期限:可變(10-30秒)\n效果區域: 黑暗絕地\n效應:絕地在一定的時間內陷入狂熱的狀態,但必須在後來恢復。\n\n黑暗惡魔:火速33%,移動100%,減少50%的損害,握手者不能死(健康停留在1).\n暗黑的Rage復原:火力慢50%,以75%的速度移動\n\n排名1 - Rage 10秒 10秒恢复\n排名2 - Rage, 20秒, 10秒恢复\n排名 3 - Rage 30秒, 10秒恢复
+@MENUS_DURATION_VARIABLE_20	智障\n期限:變數( 5 - 15 秒)\n效果區域: 其他玩家\n效果: 讓絕地讓其他玩家看不到自己.\n\n1級 絕地在5秒內 被一個目標的敵人看不到\n2級 絕地在中度距離的前方弧內 對敵人來說是隱形的 10秒\n3級... 絕地在15秒內是所有敵人都看不到的
+@MENUS_DURATION_VARIABLE_NAREA	強制保護\n期限: 變數\n效果區域: 只有絕地\n效果: 保護身体不受攻擊。\n\n攻擊對絕地的損害 取自強力力量 而不是健康分數\n\n排名1-50% 损害被封鎖,100%被從武力集合中移除,最大100 损害\n排名2 - 75% 损害被封鎖,50% 被從武力集合中移除,最大200 损害\n3 - 87.5%的損失被封鎖,25%的損失被移除,最多400人
+@MENUS_EFFECT_JEDI_ALLIES_NEFFECT	团队能量化\n期限:即時效果\n效應區域: 絕地盟國\n效果:絕地有能力以強力能量注入盟軍.\n\n強力隊Energize讓絕地在身体的一定半徑內恢复一定量的強力能量給盟友. 絕地可以把50強的指向一個盟友,33強的指向兩個盟友或25強的指向3個或更多的盟友.\n\n排名 1 - 正常範圍\n排名 2 - 正常範圍的一倍半\n排名 3 - 雙倍正常範圍
+@MENUS_EFFECT_NAREA_OF_EFFECT	強調\n期限:即時效果\n效果區域: 絕地視野\n效果:讓絕地有偉大的、廣泛的視覺。\n\n強制觀察讓絕地可以清晰地看到所有敵人, 無論光線如何, 用輕鬆的光氣圍繞他們。 強制觀察也讓絕地可以反擊絕地的心靈特技力。 在強制觀察絕地的最高層, 強制發展出第六种感知, 讓他可以躲避狙擊手的射擊。\n\n排名 1 - 觀看玩家的氣象, 以正常時間來顯示 。\n排名2 - 看見球員的氣氛, 并穿過牆壁,\n排名 3 - 在任何有三長時間的射程中看到玩家的氣氛和穿過牆壁。 玩家可以在此關卡自動躲避狙擊手的射擊 。
+@MENUS_ENABLE_VOTING	開啟投票 :
+@MENUS_ENDGAME_RULES	末日规则
+@MENUS_ENTER_IP_ADDRESS	輸入 IP 位址 :
+@MENUS_ENTER_IP_ADDRESS_OF_FAVORITE	輸入最愛伺服器的 IP 位址 。
+@MENUS_ENTER_PASSWORD	ENTER PASWORD( 原始語: ENTER PASWORD)
+@MENUS_ENTER_THE_NAME_FOR_YOUR	輸入您的伺服器名稱 。
+@MENUS_ENTER_THE_TITLE_FOR_YOUR	輸入您強力樣本的標題( 只有空白) 。
+@MENUS_ERROR	錯誤 :
+@MENUS_ESTABLISH_THE_NUMBER	贏比賽的殺人數量
+@MENUS_EVEN_TEAMS	連隊伍都說:
+@MENUS_EWEB_CAPS	e-WEB
+@MENUS_EWEB_DESC	e-Web\nE-Web是一款功率三腳架激光炮,可以部署在戰場上以帮助建立強固的防守位置.\n\nE-Web 只在圍城遊戲型態中可用 。
+@MENUS_EXIT_TO_MAIN_MENU	退出主選單 。
+@MENUS_FASTEST_CLIENT_ALLOWED	允許連接的最快客戶端 。
+@MENUS_FAVORITE_SERVER_INFO	最喜歡的服務
+@MENUS_FFA_CAPS	人人自由
+@MENUS_FILENAME	文件名 :
+@MENUS_FILTER_FOR_SPECIFIC_GAME	設定特定遊戲類型的過程 。
+@MENUS_FIND_PLAYER	尋找玩家
+@MENUS_FINISHED_INPUTTING_INFO	已輸入資訊 。
+@MENUS_FLECHETTE_1	飛翔
+@MENUS_FOLLOW_ME	跟我來
+@MENUS_FORCEDESC_DARK	黑暗
+@MENUS_FORCEDESC_LIGHT	光
+@MENUS_FORCE_ABSORB	吸收 :
+@MENUS_FORCE_DRAIN	排水:
+@MENUS_FORCE_GRIP	格普:
+@MENUS_FORCE_HEAL	治愈:
+@MENUS_FORCE_JUMP	跳 :
+@MENUS_FORCE_LIGHTNING	閃電 :
+@MENUS_FORCE_MASTERY	強制掌握者 :
+@MENUS_FORCE_MASTERY_INFO	定义可以分配到強權的點數 。
+@MENUS_FORCE_MINDTRICK	智障:
+@MENUS_FORCE_POWERS_TITLE	強制權限 :
+@MENUS_FORCE_POWERS_TITLE_DESC	啟動強力力 禁用強力 或只啟動跳動、推動、拉動和塞伯丟棄 。
+@MENUS_FORCE_PROTECT	保護 :
+@MENUS_FORCE_PULL	拉 :
+@MENUS_FORCE_PUSH	按:
+@MENUS_FORCE_RULES	強制規矩
+@MENUS_FORCE_SIDE	強性邊 :
+@MENUS_FORCE_SIGHT	看 :
+@MENUS_FORCE_SPEED	速度 :
+@MENUS_FORCE_TEAM_HEAL	救治隊:
+@MENUS_FORCE_TEAM_REPLENISH	团队能量:
+@MENUS_FORCE_TEMPLATES	強制樣本
+@MENUS_FREE_FOR_ALL_GAME_RULES	人人自由的遊戲規則 。
+@MENUS_FRIENDLY_FIRE	友好火 :
+@MENUS_GAME	遊戲 :
+@MENUS_GAME_RULES	遊戲規矩。
+@MENUS_GAME_TYPE	類型 :
+@MENUS_GENERAL_RULES	通则
+@MENUS_GET_ENEMY_FLAG_BACK_TO	把敵人的旗子帶回基地
+@MENUS_GET_NEW_LIST	取得新清單
+@MENUS_GET_OUR_FLAG_BACK	把旗子拿回來
+@MENUS_GET_SERVER_INFO	伺服器信息
+@MENUS_GET_UPDATED_SERVER_LIST	取得更新的伺服器清單 。
+@MENUS_GO_BACK_TO_STANDARD_SETTINGS	回到標準設定值 。
+@MENUS_GO_TO_MAIN_MENU	去主選?
+@MENUS_GRIP	GRIP 地圖
+@MENUS_GUARD_OUR_FLAG_CARRIER	守住我們的旗舰
+@MENUS_HEAD	頭部
+@MENUS_HEAL	保健
+@MENUS_HEAL_YOUR_BODY_WITH_THE	用原力治好你的身體
+@MENUS_HILT1	高音
+@MENUS_HILT1_DESC	挑個按鈕
+@MENUS_HILT2_DESC	選擇第二根符號 。
+@MENUS_IMMOBILIZE_OPPONENTS	激起反對者對死亡的悲傷
+@MENUS_INCLUDE_EMPTY_SERVERS	在清單中包含空伺服器 。
+@MENUS_INCLUDE_FULL_SERVERS	將完整伺服器包含在清單中 。
+@MENUS_INPUT_IP_ADDRESS_OF_SERVER	輸入伺服器的 IP 位址 。
+@MENUS_INPUT_PASSWORD	輸入密碼
+@MENUS_INPUT_PASSWORD_1	輸入密碼
+@MENUS_INPUT_PLAYER_NAME	輸入玩家名稱 。
+@MENUS_INSTANTANEOUS_EFFECT_NAREA	強力拉\n期限:即時效果\n效果區域: 物件或人\n效果 : 讓絕地以解除對手的機會把敵人拉向自己。 它也防備強力拉擊 。\n\n排名1 - 絕地用原力拉出一個專注的敵人.\n排名2 - 絕地用原力把多個敵人拉到一個有限的弧內.\n3級 絕地可以把多個敵人拉下來 強度足以擊落近距离的目標
+@MENUS_INTERNET	因特网
+@MENUS_IN_CAPTURE_THE_FLAG_CTF	在"抓捕旗"(CTF)中,兩支球隊競爭抓取對方球隊的旗子,並返回本隊基地。任何球隊的成員都可以拿起對方球隊的旗子。當拿下旗子時,地圖上的所有球員都會被提醒注意此事件。國旗航母必須從敵人的領土中逃出,並與旗子一起返回本隊基地取得分數。\n\n如果旗艦被移除, 旗艦在被移除時會降旗。 如果旗艦主隊的一員觸碰旗艦, 則會自動返回本隊。 如果被移除的一員可以繼續試著將旗艦送回本隊本隊本隊本隊本隊本隊本隊本隊本隊本隊本隊本隊本隊本隊本隊本隊本隊本隊本隊本隊本隊本隊本隊本隊本隊本隊本隊本隊本隊本隊本隊本隊本隊本隊本隊本隊本隊本隊本隊本隊本隊本隊本隊本隊本隊本隊本隊本隊本隊本隊本隊本隊本隊本隊本隊本隊本隊本隊本隊本隊本隊本隊本隊本隊本隊本隊本隊本隊本隊本隊本隊本隊本隊本隊本隊本隊本隊本隊本隊本隊本隊本隊本隊本隊本隊本隊本隊本隊本隊本隊本隊本隊本隊本隊本隊本隊本隊本隊本隊本隊本隊本隊本隊本隊本隊本隊本隊本隊本隊本隊本隊本隊本隊本隊本隊本隊本隊本隊本隊本隊本隊本隊本隊本\n\n隊伍翻譯\n捕捉敵人的旗: +1 點\n\n自己翻滾\n摘取敵人旗:+10分\n捕捉敵人的旗:+100分\n你的隊伍捕捉敵人的旗子:+25分\n回收您的旗: +10 點\n- 允許立即捕捉隊伍:+10分\n消除敵人旗舰:+20分\n- 允許立即捕捉隊伍:+10分\n保護旗舰: +5 點\n保護您的旗下基礎: +10 點\n\n在比賽結束時得分最高的球隊贏得比賽.
+@MENUS_ISDN	ISDN 語言
+@MENUS_ITEM_RULES	規矩
+@MENUS_JETPACK_CAPS	捷佩克
+@MENUS_JETPACK_DESC	喷气包\n噴射包讓穿戴者飛行短時間, 給他們比其他人的戰術優勢。 如果使用者不發射火箭, 它們會慢慢失去高度 。\n\n喷射包只可用於西格遊戲類型 。\n\n(注:要啟動喷射包, 跳動, 然后在空中按下「 使用 」 。 持有「 跳動 」 就可以讓使用者取得高度, 而持有「 跳動 」 則會降低高度 。 )
+@MENUS_JOIN	加入
+@MENUS_JOIN_A_TEAM	加入一隊
+@MENUS_JOIN_CAPS	加入
+@MENUS_JOIN_CHOSEN_SERVER	加入選取的伺服器 。
+@MENUS_JOIN_GAME	加入遊戲
+@MENUS_JOIN_PLAYER_DESC	加入此播放器的伺服器 。
+@MENUS_JOIN_TEAM_DESC	加入這支隊伍
+@MENUS_JUMP	Jump( JUMP ) :
+@MENUS_KILL_LIMIT	殺害限制 :
+@MENUS_LAN	局域网
+@MENUS_LEAP_TO_AMAZING_HEIGHTS	按下跳動按鈕 跳到惊人的高度
+@MENUS_LEGS	立 法
+@MENUS_LIGHTNING	光明
+@MENUS_LIGHTSABER_CAPS	燈光之夜
+@MENUS_LIGHTSABER_CREATION	光亮的發光
+@MENUS_LIGHTSABER_ONLY	只有光劍 :
+@MENUS_LIGHT_DARK_INFO	強迫紅色隊伍使用暗面力量 藍色的利用光面
+@MENUS_LIGHT_DARK_TEAMS	光/暗的隊伍:
+@MENUS_LIMITED	有限
+@MENUS_LOADING_MAPNAME	正在載入... %s
+@MENUS_MAIN_MENU	主選單
+@MENUS_MAKE_THESE_CHANGES_TO	改變你的性格 強力能力。
+@MENUS_MAP_LISTING	映射清單
+@MENUS_MATCH	重新啟動火柴嗎?
+@MENUS_MATCHING_NAMES	匹配的名字會被覆寫 。
+@MENUS_MAXIMUM_PING	最大平 :
+@MENUS_MAXIMUM_PLAYERS	最大玩家 :
+@MENUS_MAX_RATE	最大速率 :
+@MENUS_MEDPAC	MEDPAC( 中美洲)
+@MENUS_MERRSONN	墨瑞森
+@MENUS_MIND_TRICK	智障
+@MENUS_MINIMUM_PING	最小平 :
+@MENUS_MINIMUM_TIME_ALLOWED	距離連接試驗的最小時間 。
+@MENUS_MISSION	使命 :
+@MENUS_MISSION_OBJECTIVES	使命的目的
+@MENUS_MOVE_AT_AN_ACCELERATED	速度加快
+@MENUS_MOVE_DESC2	點擊以查看動作描述 。
+@MENUS_MOVE_RULES	移動規矩
+@MENUS_MOVE_TYPES	移動型態
+@MENUS_MUST_ACQUIRE_A_MINIMUM	必須在Saber攻擊中取得最低的1級 以获得光劍
+@MENUS_NAME	姓名
+@MENUS_NAME1	名稱 :
+@MENUS_NAME_TITLE	名稱 :
+@MENUS_NEW_FAVORITE	新最愛
+@MENUS_NO	不
+@MENUS_NO_LIGHTSABER	沒有光劍
+@MENUS_OBJECTIVE_1	目的1
+@MENUS_OBJECTIVE_2	目的2
+@MENUS_OBJECTIVE_3	目的3
+@MENUS_OBJECTIVE_4	目的4
+@MENUS_OBJECTIVE_5	目的5
+@MENUS_OBJECTIVE_6	目的6
+@MENUS_OBJECTIVE_7	目的7
+@MENUS_OBJECTIVE_8	目的8
+@MENUS_OBJECTIVE_COMPLETED	已完成。
+@MENUS_OF_EFFECT_JEDI_ALLIES_NEFFECT	治愈其他\n期限:即時效果\n效應區域:絕地盟軍\n效果:絕地有能力在受傷后治愈盟友.\n\n強烈的治療他方讓絕地在身體的一定半徑內 使盟友恢復一定的健康\n兩個盟國有33個健康 3個或3個以上的盟國有25個健康\n\n排名 1 - 正常範圍\n排名 2 - 正常範圍的一倍半\n排名 3 - 雙倍正常範圍
+@MENUS_OF_EFFECT_JEDI_ONLY_NEFFECT	強制修復\n期限:即時效果\n效果區域: 只限絕地\n效果:絕地在受傷后痊愈.\n\n1級 - 絕地立即恢复5個健康.\n2級... 絕地立刻恢復了10次健康\n3級 絕地立刻恢复25次健康
+@MENUS_OF_EFFECT_LIVING_PERSONS	強力閃電\n期限: 變數\n有效领域:只有活人\n效果: 讓絕地對敵人發射致命的電力攻擊\n\n1級 - 絕地發射了一個螺栓 發射前進,即刻造成損失.\n2級 絕地可以保持原力閃電 以保持前進攻擊\n第3級 絕地在一個大前方的弧形中 發出一個持續的電扇 破壞了他們面前的一切
+@MENUS_OKAY	好
+@MENUS_ONLY_HUMANS	只有人類才能被圍攻
+@MENUS_PASSWORD	密碼
+@MENUS_PASSWORD_1	密碼 :
+@MENUS_PERSONAL_SHIELD_ARMOR	(阿莫爾)
+@MENUS_PLAYERS	最小波茨/ layers :
+@MENUS_PLAYERS_INFO	如果伺服器的活跃人員數不足, 則加入 bots 。
+@MENUS_POINTS_REMAINING	剩下的點 :
+@MENUS_POWER	權力 :
+@MENUS_POWERDUEL_CAPS	Power Duel (波爾·杜爾)
+@MENUS_POWERDUEL_GAME_RULES	電力決斗遊戲規則
+@MENUS_PREVENT_THE_ENEMY_FROM	阻止敵人完成目前的目標
+@MENUS_PRIMARY_OBJECTIVES	主要使命
+@MENUS_PROFILE_DESC	配置字符設定值 。
+@MENUS_PROGRAM	退出程式?
+@MENUS_PROTECT	保 护
+@MENUS_PROTECT_AGAINST_FORCE	保護他們不受強制攻擊 從他們手中獲得力量
+@MENUS_PULL	PULL( PULL )
+@MENUS_PULL_YOUR_FOES_TO_YOU	拉你的敵人對你。
+@MENUS_PURE_SERVER	纯伺服器 :
+@MENUS_PUSH	推
+@MENUS_PUSH_YOUR_FOES_AWAY_AND	把敵人趕走 擊退射擊
+@MENUS_QUIT_PROGRAM	退出程序
+@MENUS_RAGE_1	RAGE : (原始内容存档于2019-09-09) (中文(简体) ).
+@MENUS_RECONNECT_LIMIT	重聯接限制 :
+@MENUS_REFRESH_LIST	刷新清單
+@MENUS_REFRESH_SERVER_LIST	刷新伺服器清單 。
+@MENUS_REGROUP	重組
+@MENUS_RENDER_YOURSELF_INVISIBLE	讓你自己隱形到選擇的目標。
+@MENUS_REPEATER	更新
+@MENUS_REPLY_TITLE	答复
+@MENUS_REQUEST_TITLE	要求
+@MENUS_RESTART_MATCH	重新匹配
+@MENUS_RETURN_PREVIOUS	回到上一個選單 。
+@MENUS_SABERLOCKING	允許 Saber 鎖定 :
+@MENUS_SABERLOCKING_DESC	允許玩家鎖上沙伯爾
+@MENUS_SABERSTAFF	雙手賽博
+@MENUS_SABERSTAFF_DESC	用一雙手的劍,只有一种格斗方式。
+@MENUS_SABER_ATTACK	塞伯攻擊 :
+@MENUS_SABER_CHALLENGE_INFO	玩家可以挑戰另一個對手的私人光劍決鬥。
+@MENUS_SABER_DEFEND	塞伯防守:
+@MENUS_SABER_HILTS_DESC	選擇您的 saber hilt( s) 。
+@MENUS_SABER_ONLY_INFO	所有玩家手持光劍 所有槍都拿掉
+@MENUS_SABER_STAFF	塞伯公司工作人员
+@MENUS_SABER_THROW	撒伯投:
+@MENUS_SABER_TYPE	沙伯型
+@MENUS_SABER_TYPE_DESC	選擇您的沙伯類型 。
+@MENUS_SAVE_CURRENT_FORCE_SETUP	儲存目前的強制設定為單一樣本 。
+@MENUS_SAVE_FILE	儲存檔案
+@MENUS_SEARCHING	正在搜尋 %d/%d...
+@MENUS_SEARCH_CAPS	搜索
+@MENUS_SEARCH_CURRENT_SERVER	搜尋目前伺服器清單中的朋友 。
+@MENUS_SEARCH_DESC	搜索此播放器的所有伺服器 。
+@MENUS_SECONDARY_OBJECTIVES	次要目的
+@MENUS_SEEKER_CAPS	眼鏡龍
+@MENUS_SEE_ENEMIES_AT_ALL_TIMES	總會看到敵人 甚至躲過狙擊手的槍擊
+@MENUS_SELECT_BOTS	選擇波茨
+@MENUS_SELECT_BOTS_DESC	選擇要對付的自訂彈匣
+@MENUS_SELECT_HEAD	選擇頭型 。
+@MENUS_SELECT_LEGS	選擇一條腿的樣式。
+@MENUS_SELECT_TORSO	選擇躯體樣式 。
+@MENUS_SENTRY_CAPS	星
+@MENUS_SERVERS_FOUNDWITH	%d 伺服器 %s 找到與玩家 %s
+@MENUS_SERVER_INFORMATION	伺服器信息
+@MENUS_SERVER_NAME_1	伺服器名稱 :
+@MENUS_SERVER_RULES	规则
+@MENUS_SETS_PASSWORD_FOR_YOUR	設定您的伺服器的密碼。 玩家輸入密碼時可以加入 。
+@MENUS_SETS_THE_MAXIMUM_NUMBER	設定可以加入您的伺服器的最大玩家數 。
+@MENUS_SET_FILTER_FOR_SPECIFIC	設定特定遊戲模式的過程 。
+@MENUS_SET_TO_ON_TO_HAVE_PLAYERS	強迫玩家加入而不是停留在觀察器模式中 。
+@MENUS_SHOW_GAME_CREDITS	顯示遊戲的授權 。
+@MENUS_SIEGE_ASSAULT	屁股
+@MENUS_SIEGE_CAPS	示 意
+@MENUS_SIEGE_DEMOLITIONS	叛 叛
+@MENUS_SIEGE_GAME_RULES	圍城遊戲規則
+@MENUS_SIEGE_GAME_RULES_DESC	圍攻讓兩支隊伍在一次定時的比賽中互相攻擊,而另一支隊伍則在防守上互相攻擊。兩支隊伍都有目標,但攻勢隊伍必須完成首要目標才能贏球。\n\n每支球隊由數位角色組成, 每個角色都有自己的特長。 每个角色都可以用自己独特的技能集來贡献。\n\n可選用伺服器規則可以讓團隊切換。 启用此選項後, 團隊在第一次比賽后切換。 如果攻擊隊贏得第一次比賽, 新的攻擊隊有時間限制, 等於第一個隊隊贏得的時間。 如果攻擊隊在更短的時間範圍內完成所有目標, 就會贏得比賽 。\n\n溫因條件 - 關閉\n在時間耗盡前完成所有首要目的\n\n任式 - 防守\n防止犯罪在時間流逝前完成所有首要目的\n完成目標 可能阻止攻勢隊隊隊完成任何主要目標
+@MENUS_SIEGE_HEAVY_WEAPS	重男轻女
+@MENUS_SIEGE_JEDI	杰迪
+@MENUS_SIEGE_SCOUT	舒特
+@MENUS_SIEGE_TECH	教 育
+@MENUS_SIGHT	看
+@MENUS_SINGLESABER	標準 Saber
+@MENUS_SINGLESABER_DESC	用一隻獨手的刀 選擇三種格斗方式
+@MENUS_SKILL	技能
+@MENUS_SKILL1	技能 :
+@MENUS_SLOWEST_CLIENT_ALLOWED	最慢的客戶端可以連接 。
+@MENUS_SORT_BY_GAME_TYPE	按遊戲類型排序 。
+@MENUS_SORT_BY_MAP_NAME	按地圖名稱排序 。
+@MENUS_SORT_BY_NUMBER_OF_PLAYERS	按玩家數量排序 。
+@MENUS_SORT_BY_PING_TIME	依時間排序
+@MENUS_SORT_BY_SERVER_NAME	按伺服器名稱排序 。
+@MENUS_SOURCE	來源 :
+@MENUS_SPECIES	具体内容
+@MENUS_SPECTATE	外觀
+@MENUS_SPECTATOR	觀察者
+@MENUS_SPEED	已預定
+@MENUS_SPEND_YOUR_POINTS_BY	點擊下面的原力權力 就可以把點數花掉 。
+@MENUS_SPOTTED_TITLE	已顯示
+@MENUS_STARTING_UP	開始...
+@MENUS_START_PLAYING_NOW	開始玩吧!
+@MENUS_START_SERVER	啟動伺服器 。
+@MENUS_STATIONARY_SHIELD_CAPS	哨兵
+@MENUS_TACTICS_TITLE	策略
+@MENUS_TEAM	團隊 :
+@MENUS_TEAM_BLUE	BLUE團隊
+@MENUS_TEAM_FFA_CAPS	隊伍 FFA
+@MENUS_TEAM_HEAL	隊伍健康
+@MENUS_TEAM_POWER_1	隊伍能源
+@MENUS_TEAM_RED	團隊RED
+@MENUS_TEAM_SWITCHING	隊伍切換 :
+@MENUS_TEAM_SWITCHING_DESC	切換遊戲模式, 讓各隊在最短的時間內完成地圖 。
+@MENUS_THERMAL_DETONATOR	劇本代碼
+@MENUS_THE_FORCE_TO_BOOST_THE	利用原力提升盟友的力量
+@MENUS_THE_GAME_OF_DUEL_IS_ALSO	決斗將兩名戰鬥者困在一個小封闭的竞技場上,與光劍戰鬥。兩位競爭者都以全體健康開頭,他們的沙劍手,以及一把爆破槍(伺服器選擇),\n\n任何數目的玩家都可以參與Duel, 但隨時只有兩人參加竞技場。 剩下的玩家會觀察, 直至比賽完成。 當一個玩家被淘汰, 失敗者會被放在觀察者排隊的尾部, 排隊的下一個人會被帶到場上與贏家比賽 。\n\n贏家繼續與新對手競爭, 得分直到被淘汰或比賽達到限制。\n\n旋轉\n消除敵人: +1 點\n清除自己:+1 給對手\n\n得分最高的玩家在比賽結束時获胜.
+@MENUS_THE_MEDPAC_IS_A_SMALL	梅帕克\n醫療工具是小型的、普通的醫療工具。醫療工具一旦得到,
+@MENUS_THE_PERSONAL_SHIELD_IS	個人盾牌( Armor)\n個人盾牌是一種帶式裝備裝置, 它會在穿戴者周圍投射一個保護力場。 盾牌受到損害時, 保護力的分數會降低。 一旦盾牌受到的損失與它的分數相等, 盾牌就會被關閉, 直至可以充電。 盾牌吸收了大部分攻擊損失型態, 但不會保護穿戴者不被摔倒或壓碎。 私人盾牌會被盾牌電池補充 。
+@MENUS_THE_PLX_2M_IS_AN_EXTREMELY	Merr-Sonn PLX-2M 便携式導彈系統\nPLX-2M是一種威力極大的武器, 它發射了阿拉基德3T3導彈。 PLX-2M 的爆炸力非常強大,\n\n主火 - 發射單枚前方火藥\n二级火力 - 發射一個追蹤已獲得和鎖定目標的「 智能」 導彈\n弹药型態 - 火箭
+@MENUS_THE_PRIMARY_WEAPON_OF	E-11 Blaster 步枪\nE11是帝國軍隊的主要武器,E11是一把堅固而致命的爆破槍,它雖然體型小,但能造成巨大的損害。E11的精密設計使得它容易携带和隱藏。\n\n主火 - 慢速、中度精度和大傷的單槍\n二级火力 -- -- 快速、爆破的火力精度低,火力區域扩大\n弹药型態 - 亮度包
+@MENUS_THE_THERMAL_DETONATOR	熱引爆器\n熱雷管是半徑損壞的榴彈 釋放大量能分解周圍所有物质的熱能\n\n主火 - 短時間后榴彈爆炸\n二级火 - 接触時榴彈爆炸
+@MENUS_THIS_ALLOWS_PLAYERS_TO	這讓玩家可以要求投票以踢踢玩家,改變地圖等.
+@MENUS_THIS_ARCHAIC_LOOKING	Wookie Bowcaster (波卡斯特)\n弓箭手需要巨大的體力才能發射。 在Wookie家園外出售的弓箭手大多都裝有自控的動作, 讓身体弱小的生物可以發射。\n\n主火 - 多槍的充電能量堆積\n二级火力 - 极精准,可射出Ricochet\nAmmo 型態 - 電力儲存格
+@MENUS_THIS_DEADLY_WEAPON_IS	便携式攻擊哨兵\n這致命的武器大概是大背包的大小,但不要讓它大小愚弄你。一旦啟動,武器就會爆發,並設計自動瞄准任何敵人的威脅。哨兵會加速排出電池的寿命,一旦部署,就不能恢復到它原有的便携狀態。
+@MENUS_THIS_DESTRUCTIVE_PROJECTILE	帝國重中继器與震荡發射器\n帝國軍隊使用重中继器致命的壓抑式火力和震擊發射器控制人群,\n大片地區\n\n主火 - 完全自動投射火\n二级火力 -- -- 一次性射击,震荡爆炸性彈藥\n弹药型 - 金屬螺栓
+@MENUS_THIS_GAME_IS_BEST_SUMMED	人人自由最好被概括為每個人為自己。 玩家得分的方式是除去其他玩家, 沒有人可以當作盟友 。\n\n除非在伺服器上另有指定, 武器與裝備會在戰場上取得。 有些選項包括是否允許強制權力以及可用的最大強制級 。\n\n旋轉\n消除敵人: +1 點\n-1分\n\n比賽结束后得分最高的玩家贏得比賽.
+@MENUS_THIS_GAME_PITS_TWO_JEDI	隊伍在争夺至高無上權力的戰鬥中使兩支絕地隊隊互相對抗。 每名球員得分是淘汰對手, 但同一隊的球員可以合作消除更強的敵人。 隊伍中的所有球員都將他們的分數合為一隊得分 。\n\n除非在伺服器上另有指定, 武器與裝備會在戰場上取得。 有些選項包括是否允許強制權力以及可用的最大力級 。\n\n旋轉\n除掉敵人隊員:+1分\n清除自己或隊員: - 1 分\n\n回合末得分最高的球隊贏得比賽.
+@MENUS_THIS_IS_THE_NUMBER_OF	這是贏得比賽的旗子的次數。
+@MENUS_THIS_NEFARIOUS_WEAPON	Tenloss DXR-6 破解步槍\n這種邪惡的武器會影響分子層面的物質, 輕鬆地撕裂活物。 由于武器的非人道性, DXR-6 被禁用到整個星系, 通常只被分散的機器人和雷姆南特軍隊使用 。\n\n初擊 - 射速慢的單一擊中,即時攻擊\n二级火力 - 範圍模式: 必須先裝填的單一射擊, 造成更大的損害和高能耗\nAmmo 型態 - 電力儲存格
+@MENUS_THIS_OPTION_RE_BALANCES	此選項會阻止球員加入球隊, 如果它會讓球隊失去平衡的話 。
+@MENUS_THIS_STATIONARY_ENERGY	文具盾牌\n此固定能量場可以投放到任何位置, 其時它部署一個大型平面盾牌, 可以阻擋敵人的火力。 盟軍可以通過盾牌, 但敵人不能。 偏移盾牌在耗盡電源或承受一定的損害後會消失 。
+@MENUS_THIS_VALUE_ADJUSTS_THE	比賽的分鐘會持續
+@MENUS_THROW_YOUR_LIGHTSABER	把你的光劍扔到遠處的目標上
+@MENUS_TIME_LIMIT	時間限制 :
+@MENUS_TORSO	托索
+@MENUS_TRIP_MINE	三、地雷
+@MENUS_TRIP_MINES_CONSIST_OF	地雷\n三角雷 由固定在一個形狀爆炸彈壳上的束射擊器组成。 射擊雷在布置地雷時啟動, 將束從彈藥延伸至最靠近其路徑的表面。 如果射擊梁破裂或彈藥被射擊, 地雷就會引爆, 并造成半徑範圍內任何物的損害 。\n\n主火 -- -- 一旦放置,如果梁梁被打破或地雷被破坏,就引爆。\n二次火 - 一旦被放置, 如果有人靠近它或地雷被炸毀, 就會引爆。 沒有梁, 也不會為使用者引爆 。
+@MENUS_UNAPPLIED_VIDEO_CHANGES	未應用影像變更
+@MENUS_UNLEASH_DEADLY_ELECTRICAL	解開致命的電擊攻擊你的敵人。
+@MENUS_UPDATE_ADVANCED_SERVER	更新高级伺服器設定值 。
+@MENUS_USE_MORE_POWERFUL_LIGHTSABER	使用更強大的光劍攻擊。 (需要擁有劍)
+@MENUS_USE_THE_LIGHTSABER_TO	用光劍來阻擋沙伯的攻擊和射擊
+@MENUS_VALUE_ADJUSTS_THE_TOTAL	贏得比賽所需的成功回合數( 決賽) 。
+@MENUS_VARIABLE_NAREA_OF_EFFECT	排水\n期限: 變數\n有效领域:只有活人\n效果: 排水力 和用它來補充生命。\n\n1級 - 發射一栓向前發射,每秒排水10個力點,愈合這數量.\n2級... 未發射的连续攻擊 每秒消耗15個力點\n排位3 - Emanates 一個持續的扇子 在一個大前方的弧, 排出任何目標 在他面前 每秒20個強點。
+@MENUS_VC_ATT	1. 攻擊
+@MENUS_VC_ATT_POSITION	3. 攻擊位置
+@MENUS_VC_ATT_PRIMARY	1. 首要目的
+@MENUS_VC_ATT_SECONDARY	2. 次要目的
+@MENUS_VC_CANCEL	取消
+@MENUS_VC_DEF	2. 防 防
+@MENUS_VC_DEF_GUNS	4. 炮位
+@MENUS_VC_DEF_POSITION	3. 防守位置
+@MENUS_VC_DEF_PRIMARY	1. 捍卫首要目的
+@MENUS_VC_DEF_SECONDARY	2. 防御次要目的
+@MENUS_VC_REPLY	4. 答复
+@MENUS_VC_REPLY_COMING	3. 來了
+@MENUS_VC_REPLY_GO	4. 防 防
+@MENUS_VC_REPLY_NO	2. 否定
+@MENUS_VC_REPLY_STAY	5. 防御
+@MENUS_VC_REPLY_YES	1. 收到
+@MENUS_VC_REQ	3. 要求
+@MENUS_VC_REQ_ASSIST	1. 援助
+@MENUS_VC_REQ_DEMO	6. 拆除
+@MENUS_VC_REQ_HVY	5. 重武器
+@MENUS_VC_REQ_MEDIC	2. 醫 科
+@MENUS_VC_REQ_SUPPLY	3. 用品
+@MENUS_VC_REQ_TECH	4. 技 术
+@MENUS_VC_SPOT	5. 被查
+@MENUS_VC_SPOT_DEF	1. 防 辨
+@MENUS_VC_SPOT_EMPLACED	4. 安置的武器
+@MENUS_VC_SPOT_SNIPER	3. 狙擊手
+@MENUS_VC_SPOT_TROOP	2. 士兵
+@MENUS_VC_TACTIC	6. 策略
+@MENUS_VC_TAC_COVER	1. 封面
+@MENUS_VC_TAC_FALLBACK	4. 撤退
+@MENUS_VC_TAC_FOLLOW	3. 遵循
+@MENUS_VC_TAC_HOLD	2. 持 住
+@MENUS_VC_TAC_SPLIT	6. 分拆
+@MENUS_VC_TAC_TOGETHER	5. 在一起
+@MENUS_VC_TITLE	口琴
+@MENUS_VIEW_EMPTY	查看空 :
+@MENUS_VIEW_FULL	完全檢視 :
+@MENUS_WATCH_DESC	看好任務
+@MENUS_WEAPON_RULES	武器規矩
+@MENUS_WHEN_ON_IT_MEANS_TEAMMATES	隊友可以用武器 和武力互相傷害和殺害\n
+@MENUS_WIDELY_USED_BY_THE_CORPORATE	戈兰武器FC1 弗莱歇特武器\nFC1火力的金屬碎片被廣泛使用, 武器設計是攻擊相近的多個目標, 但必須非常小心,\n\n初擊 - 單擊,分散射擊\n二次火力 -- -- 双重爆炸性弹片炸药\n弹药型態 - 金屬瓶
+@MENUS_YES	是
+@MENUS_YOU_DECIDE	你自己決定
+@MENUS_YOU_HAVE_MADE_CHANGES	您已改變視頻設定值
+@MENUS__REQUIRES_SABER_ATTACK	(要求Saber攻擊1)
+@MP_INGAME_GETTINGINFOFORSERVERS	正在取得伺服器信息...
+@MP_INGAME_JOIN_DOUBLE	德波爾
+@MP_INGAME_JOIN_SINGLE	單曲
+@MP_INGAME_SERVER_REFRESHTIME	伺服器刷新時間
+@MP_SVGAME_CANCEL_PASSWORD	關閉選單, 不試圖連接
+A / Cross confirms, B / Circle goes back	A/Cross 確認 B/Circle 返回
+A disconnect pauses the match for up to 10 minutes.	斷線會暫停比賽十分鐘
+A passed game-type vote is queued for the next round boundary.	下一個回合邊界的遊戲類型投票已排隊 。
+A setting or binding changed outside the editor. Cancel and reopen to refresh; nothing applied.	在編輯器外的設定或捆綁已變更。 取消並重新啟動以刷新; 沒有任何應用程式 。
+ACTION DETAILS / RESET	操作文件/
+ADD A BOT	ADD A 博特
+ASSISTS	刺眼
+About	關於
+Acceleration	加速
+Acceleration amount; zero disables it	加速量; 0 關閉
+Acceleration curve	加速曲線
+Acceleration curve: 0 legacy, 1 power	加速曲線: 0 遺產, 1 權力
+Acceleration offset	加速 :
+Accepted 1v1 challenges inside FFA. Shares the Duel ladder.	接受 FFA 內的 1v1 挑戰。 分享 Duel 梯度 。
+Account / Log in	帳號/ 登入
+Accounts and match reporting are not connected yet.	帳號與匹配報告尚未連接 。
+Action	動作
+Adaptive	适應性
+Add Berserker	新增貝瑟克
+Add Defender	新增守護者
+Add Duelist	新增定義清單
+Add Flag Catcher	新增抓旗者
+Add Saber Master	新增 Saber 主題
+Add Sentinel	新增哨兵
+Add Trickster	新增滑板
+Add bots	新增 bots 中
+Address	地址
+Adjust how fast the left stick moves the menu pointer.	調整左鍵移動選單指標的速度 。
+Adjusts how many chat lines fit.	調整聊天行的大小 。
+Adjusts the width across the screen.	調整螢幕的寬度 。
+Advanced	高级
+Advanced Input	高级輸入
+Advanced settings	高级設定值
+Advanced video	高级影片
+Advances to the next round	下一轮的預估
+All	全部
+Allow downloads	允許下載
+Alternate attack	替代攻擊
+Alternate weapon action / saber throw	替代武器動作 / saber 扔
+Always	永遠
+Always run	總是跑
+Analog joystick axes	仿真樂器斧頭
+Angle	角度
+Anime	動畫
+Anisotropic filtering	同位素滤波器
+Anisotropic filtering unavailable.	不可用的异形滤波器 。
+Antialiasing	反分解
+Applies on next spawn.	下一個产卵。
+Apply	套用
+Apply and continue	套用並繼續
+Apply camera	套用相機
+Apply changes	套用變更
+Apply or cancel pending edits before switching mods.	在切換mods前套用或取消待編輯的程式 。
+Apply or discard before leaving?	出門前要套用還是丟棄?
+Arabic	阿拉伯文
+Assets missing or overridden. Showing Stock; Apply cannot save.	資產缺失或覆蓋。 顯示股票; 套用無法儲存 。
+Assignment staged	已安排
+Attack	攻擊
+Autoexposure	自動曝光
+Automatic	自動
+Automatic controller detection	自動控制器檢測
+Automatic opens for gamepad when no keyboard is detected.	找不到鍵盤時自動開啟遊戲板 。
+Available display modes are added automatically.	可用的顯示模式是自動新增的 。
+Average mouse movement between frames.	平均滑鼠在框架之間移動 。
+Awaiting reply	等待回覆
+B / Circle confirms, A / Cross goes back	B / 圓 確認 A / 十字向后
+BLUE	藍色
+BLUE FLAG	黑色的FLAG
+BOT	博特
+BOTS	瓶
+BRACKET\nA random draw sets the single-elimination bracket. Byes advance unpaired entrants. Both full lineups must be connected, in the arena and ready before play starts.\n\n1v1 TOURNAMENT\nAn even field of 8 to 32 verified players enters. Play all 10 scored rounds. Each elimination wins a round. Simultaneous deaths replay the round. At 5-5, play one deciding round.\n\nTEAM TOURNAMENT\n2 to 8 teams enter at a fixed size, from 2v2 to 5v5. Players respawn. The first team to 20, 30, 40 or 50 kills respectively wins. After 10 minutes of play, the leader wins. If tied, play until one team takes the lead.\n\nRECONNECTS AND RESERVES\nA missing player pauses play. Each player has 5 minutes to reconnect in 1v1. Each team has 10 minutes to reconnect or fill the slot with a registered reserve from its own team. Repeat drops use the remaining time. Everyone readies again when the lineup is complete. Time expiry forfeits the match. If both sides expire, both are eliminated.	布洛克特\n隨機繪圖會設定單位消除的括號。 再見, 預先未授權的入球者。 兩組排隊必須連接, 在竞技場上, 並在比賽開始前準備好 。\n\n1v1次\n8到32名被證實的玩家進入偶數球場, 共打十回合, 每回合都贏得一回合, 死亡同時會重打一回合。 5到5點, 共打一回合 。\n\n團隊游戲\n2至8支球隊以固定大小進入, 從 2v2 到 5v5 。 玩家重生 。 第一支球隊得分為 20、 30、 40 或 50 , 得分分别为 20、 30、 40 或 50 。 在打完10 分鐘後, 領隊得分。 如果打平, 得分為 , 直至一隊取得主力 。\n\n恢复和保留\n失蹤的玩家暫停玩耍。 每名玩家有5分鐘在 1v1 中重新連接。 每支球隊有10分鐘從自己的隊伍中重新連接或填充已註冊的預留。 重复的降下會使用剩下的時間。 排隊完成後, 每個讀者會再次讀取 。 時間已過將輸入比賽。 如果雙方到期, 兩方將被淘汰 。
+Back	返回
+Back to Play	返回播放
+Back to ready room	回到正房去
+Backhand preview:	背手預覽 :
+Backspace	後空格
+Balanced	平衡
+Base	基底
+Basic Settings	基本設定
+Begin match	開始匹配
+Bilinear	雙線
+Binding staged; command was not executed	已裝訂階段; 命令未執行
+Bindlist	捆綁列表
+Black	黑色
+Blade %d / %d	刀片 %d /%d
+Blade off	刀片關掉
+Blade on	刀
+Blaster rifle	Blaster 步枪
+Blob	粗體
+Blue	藍
+Blue team	藍色小組
+Blue, Yellow and Red selected. Apply to save.	已選擇藍色、黃色和紅色 。 應用以儲存 。
+Bottom left	左下
+Bottom right	右下
+Bowcaster	博卡斯特
+Bracket	括号
+Brightness	亮度
+Browse unranked servers	瀏覽未排序的伺服器
+Bumpers move the caret	跳跳虎移動手提箱
+Bumpers: command history   Triggers: scroll	彈跳: 命令歷史 触发器: 滚动
+Button labels	按鍵標籤
+Button labels: 0 Xbox, 1 PlayStation, 2 generic	按鍵標籤: 0 Xbox, 1 PlayStation, 2 通用
+Button mapping	按鍵映射
+CALL GAME TYPE VOTE	呼叫遊戲類型VOTE
+CALL KICK VOTE	呼叫基奇·沃特
+CALL MAP VOTE	呼叫MAP VOTE
+CAST YOUR VOTE	給你的VOTE
+CHAT	查特
+CHOOSE AN ACTION	挑戰行動
+CONTROLLER DEFAULTS?	控制者防衛?
+CTY	CTY : CTY : CTY
+Call a vote	投票
+Camera	相機
+Camera / UI	相機/ UI
+Camera FOV	相機光線
+Camera damping	攝像機大停電
+Camera settings applied.	相機設定已啟動 。
+Camera smoothing	相機平滑
+Camera tilt	相機倾斜
+Cancel	取消
+Cancel changes	取消變更
+Cannot preserve the current custom renderer safely.	無法安全保存目前的自訂渲染器 。
+Capture	抓取
+Capture Limit:	抓取限制 :
+Capture limit	抓取限制
+Cast your vote	投你的票吧
+Center view	居中檢視
+Center your view	居中
+Changes the chat background. Text stays readable.	變更聊天背景。 文字可以讀取 。
+Changes the language of menus.	改變選單的語言 。
+Changing this restarts mouse input.	變更此項目會重新啟動滑鼠輸入 。
+Character shadows	字元陰影
+Chat	聊天
+Chat box height (%)	聊天盒高度(%)
+Chat box opacity (%)	聊天盒不透明 (%)
+Chat box size (%)	聊天盒大小(%)
+Chat box width (%)	聊天盒寬度(%)
+Chat sound	聊天音效
+Chat with the current audience	和目前的觀眾聊天
+Chat with your team	跟你的隊伍聊天
+Chinese (Simplified)	中文 (簡化)
+Chinese (Traditional)	中文( 傳統 )
+Choose Custom resolution.	自訂解析度 。
+Choose a format to preview its tournament lobby.	選擇預覽其比賽大廳的格式 。
+Choose a language if short messages or regional variants are misidentified.	如果短訊或區域變體被錯認, 選擇一種語言 。
+Choose a style	選擇樣式
+Choose a style for each of the three slots.	選擇三個槽中的每個樣式 。
+Choose a whole-number option.	選擇整數選項 。
+Choose an installed map for the current game type.	選擇目前遊戲類型的安裝地圖 。
+Choose each style's ready pose separately in Stances.	在史丹斯區 選擇各種風格
+Choose named action	選擇命名的動作
+Choose three different styles to complete your cycle.	選擇三种不同的樣式來完成您的周期 。
+Choose three different styles. Each style can fill only one slot.	選擇三個不同的樣式。 每個樣式只能填滿一個位 。
+Choose your arena.	選擇你的竞技場
+Choose your saber hand, then select Apply Changes.	選擇您的劍手, 然后選擇套用變更 。
+Circle	圓形
+Clean Capture	清除抓取
+Clean Capture is on.	乾淨的抓捕開始了
+Clear	清除
+Clear assignment	清除指派
+Client command packets per second.	客戶端指令包每秒 。
+Close	關閉
+Close registration and start the Tournament.	關閉登記并開始比賽
+Color depth	顏色深度
+Combat	格斗
+Combat styles	格斗樣式
+Combat styles...	戰鬥的風格...
+Comics	漫畫
+Communication	通信
+Compat.	配合。
+Complete	完成
+Composition grid: 	构成网格 :
+Config applied.	已使用配置 。
+Config loaded into editor. Review, then Apply.	配置已載入編輯器。 檢視, 然后套用 。
+Config write verification failed; existing config retained.	設定字元驗證失敗; 已存在的設定字元保留 。
+Confirm	确认
+Connect	連接
+Connection	連接
+Console	主控台
+Console keyboard	主控台鍵盤
+Console opacity	主控台不透明
+Console overlay	主控台覆蓋
+Controller	控制器
+Controller defaults staged; review before Apply	控制器預設階端; 套用前的檢視
+Controller detection	控制器偵測
+Controls	控制
+Controls what you see when the server allows dismemberment.	控制您在伺服器允許肢解時所看到的 。
+Could not confirm the display settings; recovery file could not be removed.	無法確定顯示設定值; 無法移除回收檔 。
+Could not finish saving; existing config retained.	無法完成儲存; 已存在的配置保留 。
+Could not open config for writing.	無法開啟設定值來寫入 。
+Could not read config	無法讀取配置
+Could not save display recovery.	無法儲存顯示復原 。
+Count up	數起來
+Cross	十字
+Crosshair	十字
+Crosshair and interface	十字和界面
+Crouch	蹲下
+Crouch / swim downward	蹲下/ 向下游
+Crystal	晶体
+Cubemap bounces	立方體反彈
+Cubemapping	立方圖
+Current custom character	目前自訂字元
+Current dual/staff combat; variants are planned.	目前雙方/人手戰鬥; 已計劃變種。
+Current style	目前樣式
+Curve subdivisions	曲線分區
+Custom	自訂
+Custom height	自訂高度
+Custom sounds	自訂聲音
+Custom width	自訂寬度
+Customize	自訂
+Cycle saber style	旋轉沙伯樣式
+Cycle your selected combat loadout	旋轉您選取的戰鬥載出
+Cycle: %s > %s > %s > repeat	周期: %s > %s > %s > 重复
+D-pad down	D - 平板
+D-pad left	左邊的 D- pad
+D-pad moves the pointer  /  Bumpers scroll	D- pad 移動指针/ 彈簧卷動
+D-pad right	右邊的 D- pad
+D-pad up	D- 貼上
+DEMP2	DEMP 2 檔案
+DISCARD PENDING EDITS?	失蹤者?
+DISCONNECT?	失蹤?
+DLC	DLC 磁碟
+DUEL STANDINGS	戴爾站起來
+Damage reactions	損失反應
+Default	預設
+Default movement speed.	預設移動速度 。
+Default staged	已預設
+Defaults selected. Click Apply Input to save.	已選擇的預設值。 點選應用輸入以儲存 。
+Defer player models	延遲播放器模型
+Deluxe mapping	豪華地圖
+Deluxe specular	奢侈的光谱
+Desktop	桌面
+Det pack	底包
+Detailed shaders	详细遮罩
+Detect compatible gamepads as you connect them.	在您連接時檢測相容的遊戲板 。
+Detected	已检测
+Deutsch	德意志
+Device preferences	裝置偏好
+Disable authenticated ghost mode	關閉已驗證的幽靈模式
+Disable warmup.	禁用熱身
+Discard	丟棄
+Discard and continue	拋棄並繼續
+Discard pending changes?	丟棄待變更嗎 ?
+Discard pending controls changes and open Saved Configs?	丟棄待定的控制變更並開啟已儲存的配置 ?
+Discard pending controls changes and return?	丟棄待定的控件變更並返回嗎 ?
+Disconnect	斷線
+Dismemberment	失讀
+Display	顯示
+Display recovery could not be verified; settings were not changed.	無法驗證顯示恢复; 設定未變更 。
+Disruptor	分解器
+Distance	距離
+Distance behind the player. Walls can bring the camera closer.	玩家身後的距離,牆壁可以把攝像機拉近
+Dominant hand...	主宰的手...
+Dominant hand:	主手:
+Done	完成
+Drag or right stick to orbit  /  Scroll or bumpers to zoom	拖曳或右邊的棍子到軌道 / 搖滾或保險杠到縮放
+Drag or type a value, then Apply. Size: 75-125%.	拖曳或輸入數值, 然后套用。 大小: 75-125% 。
+Drag or type values, then Apply camera.	拖曳或輸入數值, 然后套用相機 。
+Drag to orbit  /  Scroll to zoom	拖曳到轨道/ 卷動到縮放
+Driver info	驅動程式資訊
+Driver information	驅動程式信息
+Dual sabers	雙撒劍
+Duel	決斗
+Duel ladder	決斗梯
+Duel limit	決斗限制
+Dynamic crosshair	動力跨層
+Dynamic glow	动态光芒
+Dynamic lights	动态燈光
+EDIT ASSIGNED COMMAND	EDIT 發射指令
+EXIT	出口
+Edit	編輯
+Edit a proposal, then call its vote. Limits apply to the current mode.	編輯提案, 然后呼喚它的投票。 限制适用于目前的模式 。
+Editing stages a binding; the command is never executed here.	編輯階段 a 捆綁; 此命令從未在此執行 。
+Effects	效果
+Effects volume	效果音量
+Enable all Force powers, including Saber Throw.	啟用所有強力能力, 包括 Saber Show 。
+Enable warmup.	啟動熱身
+English	注
+Enter 	輸入
+Enter %s0 to %d.	輸入 %s0 到 %d。
+Enter a finite number.	輸入限定的數字 。
+Enter a player name.	輸入玩家名稱 。
+Enter a size from 48 to 144.	輸入大小為 48 到 144 。
+Enter individual lobby	進入個人大廳
+Enter size 75-125 and panel opacity 0-100.	輸入大小為75-125且面板不透明 0-100 。
+Enter your name	輸入您的名稱
+Equal, complete lineups required	需要等效的完整排程
+Esc  /  Back	Esc / 返回
+Español	西班牙文
+Every active player selects Ready.	每個在動玩家選擇就緒 。
+Existing voice-command menu; not proximity voice	已存在的語音命令選單; 不接近語音
+Exit	離開
+Exit Photo Mode	退出相片模式
+Experimental preview only. Apply keeps your regular selection.	只能做實驗預覽。 應用程式會保留您的正規選擇 。
+Extra button	附加按鍵
+FFA	FFA( 外婆 )
+FLAG	法拉格語Name
+FORCE POWERS	武力
+FPS counter	FPS 答覆器
+FPS limit	FPS 限制
+Fantasy	幻想
+Favorites	喜好
+Field of view	視域
+Find a Server	找到伺服器
+Find a server	尋找伺服器
+Fine-tune input settings without typing console commands.	不輸入控制台命令的精細調整輸入設定值 。
+Flechette	花排
+Footsteps	腳步
+Force	強制
+Force Training	部队培训
+Force absorb	強力吸收
+Force drain	排水量
+Force enabled in restricted gametype	強制啟用於受限遊戲型態
+Force enabled while all powers disabled	已關閉所有權力時強制啟用
+Force grip	強力抓住
+Force heal	強力治愈
+Force lightning	強烈閃電
+Force player models	強制玩家模型
+Force powers	強制權力
+Force protect	強制保護
+Force pull	強力拉
+Force push	強力推
+Force rage	強烈的憤怒
+Force rules, map rotation, Tournament, and team entry.	強制規矩 地圖旋轉 比賽 以及隊伍入場
+Force sense	強力感
+Force speed	強制速度
+Force team energize	強制隊伍動力
+Force team heal	強力救治隊伍
+Force: restricted	強制: 限制
+Force: unrestricted	強制: 不受限制
+Forward movement scale	前進移動尺度
+Fov	福夫
+Frag Limit:	碎片限制 :
+Frag limit	區塊限制
+Français	法國
+Free Camera	免費相機
+Free For All	人人自由
+Free mouse look	自由滑鼠的外觀
+Freecam speed	自由相機速度
+Freeze	站住
+Freeze is available in local solo games, including bots.	在本地的獨奏遊戲中, 包括bots 都可以使用冻结 。
+French	法文
+Full Force	全力
+Fullscreen	全屏
+GAME RULES	游戏规则
+GAME TYPE	遊戲類型
+GAME TYPES	遊戲類型
+GENERAL	一般
+GLOBAL RANK: unavailable	全球 RANK : 不可用
+Game Options	遊戲選項
+Game rules	遊戲規則
+Game sounds	遊戲聲音
+Game type	遊戲類型
+Game types	遊戲類型
+Generate normal maps	產生普通地圖
+Generic	一般
+Geometry detail	几何細節
+German	德文
+Ghost off	鬼走人
+Ghost on	鬼在
+Green	綠
+Guide	指南
+HDR	人类发展报告
+HDR lightmaps	HDR 亮度圖
+HUD size (%)	HUD 大小 (%)
+HUD style	HUD 樣式
+Have your say on the current vote,	這次的投票有你的話
+Health and ammo	健康和弹药
+Height	高度
+High	高
+Hilt	希爾特
+Hilt preview unavailable	Hilt 預覽不可用
+Hindi	印地語Name
+Hold for Drain when available	可用時抓緊排水
+Hold for Grip when available	可用時按住 Grip
+Hold for Lightning when available	可用時按住閃電
+Hold for legacy mouse/keyboard strafe	按住傳統滑鼠/鍵盤
+Hold to change walking/running speed	按住改變行走/ 跑步速度
+Hold to show match scores	按住顯示符合的分數
+Holocron	大霉
+Holster / draw saber	口袋/ 畫劍
+Holster or draw your saber	套或畫你的劍
+Horizontal look sensitivity	水平外觀敏感度
+Horizontal mouse scale	水平滑鼠比例
+Horizontal scale	水平尺度
+Horizontal sensitivity	水平敏感度
+Horizontal turn speed	水平轉速
+Horror	恐怖
+Host a match	主機匹配
+Host name	主機名稱
+INDIVIDUAL	本人
+ITEMS	項目
+Ignore small legacy axis movements.	忽略小的遺傳轴移動 。
+Ignore small stick movements.	忽略小棍子的動作.
+Illustration only. This result does not update your account.	說明而已, 此結果不會更新您的帳號 。
+Input settings applied.	已套用輸入設定值 。
+Inspect hilt	檢查符號
+Inspect off-hand	外移檢查
+Inspect primary	檢查初等
+Installed mods	已安裝的模組
+Installing the mod alone does not make a server official.	單獨安裝 Mod 并不代表伺服器正式 。
+Interact with usable world objects	与可用世界物件的交互
+Interface	介面
+Invalid QA key	不合法的 QA 金鑰
+Invalid action	不合法的動作
+Invalid assignment	不合法的指派
+Invalid key	不合法的金鑰
+Invalid personal config filename	不合法的個人設定檔名
+Invalid setting	不合法的設定值
+Invert controller vertical look	反轉控制器垂直外觀
+Invert mouse	反轉滑鼠
+Invert vertical look	反向垂直外觀
+Italian	意大利人
+Italiano	意大利語Name
+Items	项目
+JOIN	加入
+JOIN THE MATCH	加入火堆
+Japanese	日本人
+Jedi Master	絕地大師
+Join	加入
+Join game	加入遊戲
+Joystick deadzone	樂棍死區
+Jump	跳
+Jump / swim upward	跳 游 上
+Jump sounds	跳動聲音
+KEY ALREADY ASSIGNED	已發射的關鍵
+KICK	奇奇
+Keep Jump and Speed; disable other general powers.	保持跳動與速度; 禁用其他一般權力 。
+Keep changes	保持變更
+Keep display changes?	要繼續顯示變更嗎 ?
+Keep or revert the display change first.	先保留或退回顯示變更 。
+Key Bindings	金鑰捆綁
+Key change staged	按鍵變更已進行
+Keyboard	鍵盤
+Keyboard horizontal turn speed	關鍵盤水平轉速
+Keyboard turning	鍵盤轉動
+Keyboard vertical look	鍵盤垂直外觀
+Keyboard vertical look speed	鍵盤垂直視速
+Keys	金鑰
+Kill feed	殺掉 feed( E)
+Korean	韓國語Name
+LB	LB :
+LEAVE THE MATCH?	留下那塊土?
+LOAD SAVED SETTINGS?	洛德·塞丁斯
+LT	升
+Labels do not change assignments.	標籤不變更任務 。
+Lagometer	梯度表
+Language	語言
+Language pack unavailable; showing original chat	語言包不可用; 顯示原始聊天
+Leader	領導
+Leave lobby	出去大廳
+Leave this server and return to the main menu?	離開此伺服器回到主選單嗎 ?
+Leave this server and return to your desktop?	離開此伺服器回到您的桌面上嗎 ?
+Left hand	左手
+Left stick click	左鍵點擊
+Legacy	遺產
+Legacy joystick	傳統樂器
+Legacy joystick analog axes	傳統樂器類似斧頭
+Legacy joystick deadzone	傳統樂器死區
+Legacy joystick input; restarts input	遺傳樂器輸入; 重新啟動輸入
+Legacy mouse forward-movement scale	遺傳滑鼠前移比例
+Legacy mouse strafe scale	傳統滑鼠 strafe 比例
+Legacy or power acceleration.	遺產或電力加速。
+Letterbox	信箱
+Letters	字母
+Light flares	照明彈
+Lighting	照明
+Limbs only	只使用林布
+Limits affect the current mode.  0 = unlimited.	限制會影響目前的模式。 0 = 无限 。
+Lit preview	Lit 預覽
+Live	生活
+Live preview	直播預覽
+Load	載入
+Load into the editor for review, then Apply.	載入編輯器供審查, 然後套用 。
+Load the next map from the server rotation.	從伺服器旋轉中載入下一張地圖 。
+Local server	本地伺服器
+Lock Teams	鎖定隊伍
+Log in with Discord	使用 Discord 登入
+Log out / Cancel	登出/ 取消
+Logged out.	已登出。
+Look and movement	觀察與移動
+Look down	往下看
+Look up	看上面
+Looking with bound up / down keys.	使用捆綁的上下鍵來尋找 。
+Low	低
+Low health pulse	低健康脈搏
+Lower values make curved surfaces smoother.	下數值會使曲線表面更平滑 。
+Lyra  /  Registered reserve (sample)	Lyra / 已登記的保留地( 範例)
+MAP	MAP 磁碟
+MATCH RECORDINGS	磁帶紀錄
+MATCH TOOLS	豆腐
+MULTIPLAYER	摩提列爾
+Main menu	主選單
+Map	地圖
+Map not reported	未報告地圖
+Map preview unavailable	地圖預覽不可用
+Maps for the current game type	目前遊戲類型的地圖
+Master Mode	主模式
+Match clock	符合時鐘
+Match scores are separate from global rank.	比賽分數與全球排名分別。
+Match timer	符合定時器
+Match tools	匹配工具
+Matches	匹配
+Matching stance assets are missing. Choices were not saved.	缺少匹配的姿勢屬性。 選擇沒有儲存 。
+Matching style assets are missing. Blue, Yellow and Red remain available.	找不到符合樣式的屬性。 藍色、 黃色和紅色仍然可用 。
+Matching style assets are missing. Your choices were not saved.	找不到符合樣式的資產。 您的選擇沒有儲存 。
+Max packets	最大包
+Max players	最大玩家
+Medium	中
+Menu	選單
+Menu buttons	選單按鍵
+Menu confirm and back buttons	選單確認與背後按鍵
+Menu cursor speed	選單游標速度
+Menu language	選單語言
+Menu motion	選單動態
+Menu motion: Off	選單移動: 關閉
+Menu motion: On	選單移動: 開啟
+Message language	信件語言
+Message the last player who attacked you	傳送最後一個攻擊你的玩家
+Message the player under your crosshair	傳送玩家在您的十字架下
+Min players	最小玩家
+Mind trick	智障的把戲
+Minutes, 0 to 1440. Zero means unlimited. Applies after passing; may end the round.	0到1440分鐘,零表示無限,在過程後适用;可能結束回合。
+Mod switching is unavailable in this isolated test profile.	此孤立的測試設定檔中沒有 Mod 切換功能 。
+Mode	模式
+Model preview unavailable	模式預覽不可用
+Mods	模版
+Motion:	動態 :
+Mouse	滑鼠
+Mouse buttons and wheel are supported. Escape cancels.	支援滑鼠按鍵和輪子。 取消逃離 。
+Mouse input mode	滑鼠輸入模式
+Mouse input: 0 off, 1 raw, 2 compatibility; restarts input	滑鼠輸入: 0 關閉, 1 生, 2 兼容性; 重新啟動輸入
+Mouse movement when free look is off.	免費看的時候老鼠會移動
+Mouse movement while strafing.	滑鼠在打擊時移動
+Mouse sensitivity	滑鼠敏感度
+Mouse smoothing	滑鼠
+Move backward	向后移動
+Move forward	往前走
+Move left without turning	左移而不轉
+Move right without turning	右移不轉
+Move the mouse to look around.	移動滑鼠看看四周。
+Movement	移動
+Movement and legacy input	移動和遺傳投入
+Movement effects	動作效果
+Moves	移動
+Multiplayer built around pro saber dueling.	多玩家是專業的沙伯決鬥家
+Multiplier while walk / run is held.	步行/ 跑步的乘法被按住 。
+Music volume	音樂音量
+NOW = current match   /   WAIT = upcoming	Now = 当前匹配 / 等待 = 將來
+Name	姓名
+Names / scores	名稱/ 分數
+Negative shifts left. Positive shifts right. Zero centers the view.	向左轉 向右轉 向右轉 向右轉 向左轉
+Network	網路
+Network / FPS settings belong under Setup > Network.	網路 / FPS 設定屬于設定值 > 網路 。
+Next	下一頁
+Next Force power	下一股力量
+Next Map	下一個地圖
+Next Player	下一個玩家
+Next item	下項目
+Next opponent: awaiting the other match winner	下一個對手: 等待另一個比賽的贏家
+Next weapon	下一個武器
+No files	沒有檔案
+No matching entries.	沒有匹配的項目 。
+No matching hilts	找不到匹配的符號
+No matching settings.	沒有匹配的設定值 。
+No models match these filters.	沒有模型符合這些過程 。
+No official servers listed	沒有列出正式伺服器
+No password	沒有密碼
+No pending changes	沒有待定的變更
+No saved personal configs.	沒有儲存的個人設定值 。
+No standings available	沒有可用的站位
+Non-ASCII command preserved. This text editor supports ASCII; use change-key or clear.	非 ASCII 命令保留。 此文字編輯器支援 ASCII; 使用變更鍵或清除 。
+Not a personal setting: 	不是私人設置 :
+Not reported	未上報
+OFFICIAL RANKED SERVERS	正式的
+Off	關
+Official 1v1 matches on a Ranked Duel server.	正式的 1v1 符合 Ranked Duel 伺服器 。
+Offset used by the power curve.	電力曲線使用的偏移 。
+Older joystick path; restarts input.	舊的樂棍路徑; 重新啟動輸入 。
+On	開啟
+On-screen keyboard	屏幕上的鍵盤
+One TFFA match / respawns	一個 TFFA 匹配/ 重生
+One or more default keys have another command. Confirm to replace them.	一個或多個預設金鑰有另一個指令。 确认要取代它們 。
+Online free camera uses your normal spectator movement.	網路自由攝影機使用正常的觀眾動作.
+Only official registered teams enter this ladder.	只有正式的登記隊才會進入這個梯子
+Only reserves registered with this team may replace a player.	只有在這支隊伍中注册的預備區才能取代玩家 。
+Open / collapse chat	開啟/ 崩溃聊天
+Open or close the in-game menu	開啟或關閉遊戲中選單
+Open the console	打開控制台
+OpenAL	開啟( O)
+Opponent	反對者
+Options	選項
+Orange	橙
+Orbit angle	轨道角度
+Ordinary matches remain unranked.	普通的比賽沒有排位 。
+Original Blue style.	藍色原型
+Original JKA	原件JKA
+Original Red style.	紅色原型
+Original Yellow style.	黃色原型
+Overall mouse response.	鼠标總反應 。
+Overview	概述
+PHOTO MODE	照片模版
+PING	乒乓
+PLAY	玩
+PLAYER	玩家
+PRESS A KEY OR CONTROLLER BUTTON	拍一部關鍵或控制器布頓
+PS	PS :
+Packet duplication	套件重複
+Pages rotate every 10s. Your row stays visible.	頁面每 10 個旋轉。 您的列保持視窗 。
+Panel opacity (%)	面板不透明(%)
+Parallax mapping	Parallax 映射
+Password required	需要密碼
+Pause menu	暫停選單
+Pending changes	待修改
+Pending edits discarded	已丟棄待編輯
+Performance	性能
+Perspective	前景
+Photo Mode	照片模式
+Pick different styles. Your normal style-switch control follows this order.	選擇不同的樣式。 您的正常樣式變動控制遵循此顺序 。
+Ping	小萍
+Ping  %d ms	平分 %d ms
+Pistol	活塞
+Pitch	皮奇
+Pitch sway	皮奇搖擺
+Play	開始遊戲
+Play recording	播放錄音
+PlayStation	播放 Station
+Playback	回放
+Player	玩家
+Player labels	玩家標籤
+Player name	玩家名稱
+Player settings changed outside this menu. Reopen Profile to refresh.	玩家設定在此選單之外變更。 重新開啟設定檔以刷新 。
+Players	玩家
+Players  %s / %s	玩家 %s / %s
+Players and world	玩家與世界
+Polish	波蘭語Name
+Polski	波斯基
+Portrait	外觀
+Portrait size	外觀大小
+Portrait size applied.	畫面大小已套用 。
+Portraits	肖像
+Portuguese	葡萄牙語Name
+Portuguese (Brazil)	葡萄牙語 (巴西)
+Português	葡萄牙
+Português (Brasil)	波斯古埃( 布拉西爾 )
+Power	力量
+Power Duel	電力決斗
+Power acceleration offset	電源加速偏移
+Precise crosshair trace	精准的十字頭痕跡
+Preview disconnect	預覽斷線
+Preview hand:	預覽手 :
+Preview how a missing teammate appears in the ready room.	預告一下失蹤的隊友 是如何出現在準備室的
+Preview unavailable	預覽不可用
+Preview:	預覽 :
+Previous	前一個
+Previous Force power	先前的強力
+Previous Player	前一個玩家
+Previous item	前一個項目
+Previous weapon	前一個武器
+Primary	初等教育
+Primary attack; movement and style still govern saber moves	主攻; 動作和風格仍然支配著沙伯步
+Private chat with last attacker	私下跟上次攻擊者聊天
+Private chat with target	私下與目標聊天
+Private message	私人信件
+Profile	個人資料
+Projected	概算
+Projectile trails	投影追蹤
+Purple	紫色
+QUIT GAME?	快速游戲?
+Quality	质量
+Quick combinations; more weight than Blue.	快速的组合;比Blue重得多.
+Quit game	退出遊戲
+Quit the game and return to your desktop?	退出遊戲回到您的桌面上嗎 ?
+RANKED PLAY  /  DUEL LADDER	狂歡的演出/ 舞者
+RANKED PLAY  /  OVERVIEW	狂歡的表演/概述
+RANKED PLAY  /  SERVER DIRECTORY	狂歡的演出/ 傳統
+RANKED PLAY  /  TEAM LADDER	狂歡的玩偶/團隊樂隊
+RATIO	瑞西奧
+RB	经常预算
+READY	準備
+READY STANCE	準備登場
+RECONNECTS AND RESERVES	恢复和保留
+RECORDINGS	紀錄
+RED	RED 紅色
+RED %d     /     BLUE %d	RED %d / BLUE %d
+RED FLAG	紅色
+REPLACE DEFAULT KEY ASSIGNMENTS?	替代防守 重要發射?
+REPLACE SAVED CONFIG?	維拉塞·薩維德·蘇瓦格
+RESPAWN?	复辟?
+RT	RT 磁碟
+Radar	拉達
+Raise or lower the camera target.	升降攝像頭目標。
+Rank	排名
+Ranked Challenge Duel	排名挑戰決鬥
+Ranked Duel	排名決斗
+Ranked Duel and Ranked Challenge Duel share this ladder.	名牌決斗和名牌挑戰決斗 分享這梯子
+Ranked Play	排名播放
+Ranked TFFA	排名 TFFA
+Ranked connection: not configured	排序連接: 未配置
+Ranked mode	排名模式
+Ranked servers	排名伺服器
+Ranked services are coming soon.	名牌服務很快就要來了
+Rankings appear after verified official results are connected.	排名在官方確認結果後出現 。
+Rate	比率
+Rating	评级
+Rating change: unavailable. No verified ranked result received.	評等變更: 無法使用。 未收到已查證的排名結果 。
+Rating: unavailable / no verified ranked result	評分: 不可用 / 沒有檢查的排名結果
+Raven Software	Raven 軟體
+Raw	原始
+Ready	就緒
+Ready - offline	就緒 - 下線
+Ready cleared.	准備好了
+Ready for chat - offline	準備聊天 - 下線
+Ready selected.	已選擇
+Ready-pose choice only. Choose combat behavior in Combat styles.	只選擇戰鬥方式的戰鬥行為
+Record match	紀錄匹配
+Recording	錄音
+Recordings	錄音
+Red	紅
+Red team	紅色隊伍
+Registered teams compete on their own team ladder.	已登記的隊伍在自己的隊伍梯子上比賽.
+Release capture in windowed mode.	以視窗模式釋放抓取 。
+Release mouse capture in windowed mode	以視窗模式釋放滑鼠抓取
+Release window capture	釋放視窗抓取
+Renderer	渲染器
+Repeat commands in outgoing packets.	重複寄出包中的命令 。
+Repeater	中继器
+Replace	取代
+Replace 	取代
+Replace ordinary HUD	取代普通 HUD
+Replace pending config edits?	取代待選的設定值編輯嗎 ?
+Replace pending edits with this config?	要用此設定取代待編輯嗎 ?
+Replace saved config?	取代已儲存的設定值 ?
+Replace the controller's button assignments with defaults?	要用預設取代控制器的按鈕工作嗎 ?
+Requested bytes per second; server limits apply.	要求每秒位元組; 伺服器限制适用 。
+Requested snapshots per second.	每秒要求快照 。
+Requires Streamer mode with Clean Capture off.	需要清除抓取的流動模式 。
+Requires authenticated server permission	需要驗證的伺服器權限
+Requires server permission. Add a player argument using Edit command if needed.	需要伺服器權限。 需要時使用 Edit 命令新增播放器參數 。
+Requires server permission. Use the server's target syntax.	需要伺服器權限。 使用伺服器的目標語法 。
+Reserves	准备金
+Reset	重置
+Reset all to Stock	全部重置到 stock
+Reset camera	重置相機
+Reset filters	重置滤波器
+Reset preview	重置預覽
+Reset this tab	重置此分頁
+Reset this tab?	重置此分頁?
+Reset to originals	重置為原作
+Reset view	重置檢視
+Resolution	分辨率
+Respawn	重生
+Respawn now	重生了
+Restart Map	重新啟動地圖
+Restart the current map after the vote passes.	投票通過後重新啟動目前的地圖 。
+Restarts the renderer.	重新啟動製造器
+Restore action defaults	回復動作預設值
+Restricted Force	限制強度
+Result preview	結果預覽
+Resume  /  Esc	恢復 / Esc
+Return to editing to keep your pending changes.	返回編輯以保留您的待決變更 。
+Return to tournament selection?	回到大賽的選擇?
+Reverse right-stick vertical look.	反向右拐垂直看。
+Revert	復原
+Reverting in %d seconds.	以 %d 秒還原 。
+Review this change. Nothing changes until you confirm.	檢查一下這個變化,直到你確認前什麼都沒有變化。
+Right hand	右手
+Right stick click	右鍵點擊
+Right-stick horizontal look speed.	右棒水平看速.
+Right-stick vertical look speed.	右棍垂直看速.
+Rocket launcher	火箭发射器
+Role: Jedi	角色:絕地
+Role: Non-Jedi	角色:非杰迪
+Roll	滾
+Roll sway	搖擺
+Rotate:	旋轉 :
+Run command	執行命令
+Run pitch	執行投注
+Run roll	執行卷
+Russian	俄文
+SABERTRIALS	撒伯利亞語
+SAMPLE WINNER	桑普爾·溫納
+SCORE	沙雷
+SERVER INFORMATION	伺服器
+SINGLE SABER / CHOOSE THREE	單身薩伯 / 挑戰三
+SPEC	SPEC( SPEC )
+SSAO	撒俄
+Saber / melee	塞伯/梅莉
+Saber 1	Saber 1 名
+Saber 2	塞伯 2
+Saber trail	賽博追蹤
+Saber workbench	Saber 工作台
+Sabers	撒伯爾語Name
+Sample players and events. No live registration or match starts.	樣本播放器與事件。 沒有實際的登記或比賽開始 。
+Save a PNG screenshot	儲存 PNG 截圖
+Save current settings	儲存目前的設定值
+Saved 	已儲存
+Saved Configs	已儲存的配置
+Saved choices take effect next spawn on supporting servers.	儲存的選擇會在支援伺服器上產生下一個產生效果 。
+Saved config could not be verified.	無法驗證已儲存的設定值 。
+Scale horizontal mouse movement.	縮放水平滑鼠移動 。
+Scales the panel and text together.	縮放面板和文字。
+Scene: 	場景 :
+Sci-Fi	科幻片
+Scoreboard	分數板
+Screenshot	截圖
+Search Setup settings or console names...	搜尋設定值或控制台名稱...
+Search actions...	搜尋動作...
+Search current keys or commands...	搜尋目前的金鑰或命令...
+Search hilts	搜索符號
+Search input settings or console names...	搜尋輸入設定值或控制台名稱...
+Search models or outfits...	搜索模型或裝束...
+Secondary	中等教育
+Select DEMP2 when available	可用時選擇 DEMP2
+Select a game type. Changing this choice does not change the match.	選擇遊戲類型。 改變此選項不改變匹配 。
+Select a player or bot	選擇玩家或機器人
+Select a server	選擇伺服器
+Select an available map for the current game type.	選擇目前遊戲類型的可用地圖 。
+Select blaster rifle when available	可用時選擇爆破步槍
+Select bowcaster when available	可用時選擇弓架
+Select det packs	選擇套件
+Select disruptor when available	可用時選擇阻斷器
+Select flechette when available	可用時選擇旋轉
+Select next Force power	選擇下一個強力力量
+Select next available weapon	選擇下一個可用的武器
+Select next inventory item	選擇下一個目錄項目
+Select one of the six styles.	選擇六種樣式中的一種 。
+Select pistol when available	可用時選擇槍
+Select previous Force power	選擇上一個強力
+Select previous available weapon	選擇之前可用的武器
+Select previous inventory item	選擇上一個目錄項目
+Select repeater when available	可用時選擇中继器
+Select rockets when available	可用時選擇火箭
+Select saber or melee	選擇沙伯或梅莉
+Select thermal detonators	選擇熱雷管
+Select tournament	選擇比賽
+Select trip mines	選擇游雷
+Send message	傳送信件
+Sensitivity	敏捷度
+Sensitivity / settings	灵敏度/ 設定值
+Server	伺服器
+Server FPS	伺服器 FPS
+Server Management	伺服器管理
+Server information	伺服器信息
+Server location	伺服器位置
+Server staff protection still applies.	伺服器員的保護仍然适用
+Server tournament verification is coming next.	下一個是伺服器大賽檢查
+Setting is protected: 	設置被保護 :
+Setting staged	已安排
+Settings applied.	設定已套用 。
+Settings applied. Video/sound changes may require a restart.	應用設定。 影像/ 音效變更可能需要重新啟動 。
+Settings changed outside the editor. Cancel and reopen before applying.	編輯器外的設定已變更。 應用前取消並重新啟動 。
+Setup	設定
+Share / Create	分享/ 建立
+Shift	移動
+Shoulder offset	肩部偏移
+Show controls: 	顯示控件 :
+Show current bracket	顯示目前的括號
+Show current tournament status	顯示目前的比賽狀態
+Show original message	顯示原始信件
+Show score	顯示分數
+Show the original above its marked translation. Originals remain in the console.	顯示上面標記的翻譯。 原件留在主控台中 。
+Show weapon	顯示武器
+Shows the weapon model in first person.	以第一人称顯示武器型號.
+Siege	圍城
+Siege objectives	圍攻目的
+Siege voice commands	圍繞聲音命令
+Signed in with Discord.	在迪斯科德簽署。
+Signed out.	簽了字
+Simple items	簡單項目
+Single	單一
+Size: 48-144. Drag or type a number, then Apply size.	大小: 48-144. 拖放或輸入數字, 然后套用大小 。
+Slot 1:	排位1:
+Slot 2:	第二段:
+Slot 3:	第3步:
+Smooth follow	平滑跟蹤
+Smoothing	平滑
+Smooths changes to camera position.	平滑變更相機位置 。
+Smooths changes to the point the camera follows.	平滑變更到相機跟隨的點 。
+Snapshot timing offset; normally session-only.	快照授時偏移; 一般只會議 。
+Snapshots	快照
+Solo / replay speed	獨奏/ 重播速度
+Solo match	單打
+Solo, spectator and replay camera. Online matches stay live.	獨唱、觀眾和重播相機 線上火柴保持直播
+Some weapons and modes choose the view automatically.	某些武器和模式自動選擇視窗 。
+Sort A-Z	排序 A - Z
+Sort Z-A	排序 Z - A
+Sound	音效
+Sound quality	音效質量
+Sounds	音效
+Sounds + effects	音效 + 效果
+Sounds + effects + marks	聲音 + 效果 + 马克
+Space	空白
+Spanish	西班牙文
+Spectate	外觀
+Spectator camera	相机
+Speed	速度
+Speed trail	速度追蹤
+Square	平方
+Staff	工作人员
+Stage controller defaults	舞台控制器預設
+Stage defaults	阶段預設值
+Stage edit	階段編輯
+Stances	立柱
+Stances saved. Applies next spawn on a supporting server.	Stances 已儲存。 下一步在支援伺服器上啟動 。
+Stances...	史丹斯...
+Standard	標準
+Start / Resume	啟動/ 恢復
+Start Tournament	開始比賽
+Starting rating: 1000   |   Results and opponent strength decide changes.	開始評分:1000 QQ 結果與對手力量決定改變。
+Static	靜態
+Status notifications	狀態通知
+Stay here	待在這裡
+Stay in ready room	留在正房里
+Stencil	斯坦西爾
+Stick deadzone	粘住死區
+Stock	股票
+Stock action defaults staged (unassigned when no stock default exists)	股票動作預設( 在不存在股票預設時未簽署)
+Stock defaults unavailable	不可用的股票預設值
+Strafe left	草原左轉
+Strafe modifier	草原修整器
+Strafe movement scale	Strafe 移動尺度
+Strafe right	右轉
+Streamer mode	流動模式
+Streamer presentation	流体演示文稿
+Style:	樣式 :
+Subject	主題
+Supporting servers use this selection. Saber Offense requirements still apply.	支援伺服器使用此選項。 Saber Offfense 要求仍然适用 。
+Supports Ranked Duel, Ranked TFFA and FFA challenge servers.	支援 排名決斗 排名 TFFA 和 FFA 挑戰伺服器 。
+Swap	互換
+Swap Confirm and Back for menus.	換回和退後的菜單
+Swapped	刷新
+Switch mod	切換模式
+Switch mod?	切換mod?
+Switch mods from the disconnected main menu.	從已斷線的主選單切換mods 。
+Symbols	符號
+TEAM STANDINGS	隊伍站立
+TEAM TOURNAMENT	團隊游戲
+TEAMS	教練
+TFFA	TFFA( 特凡達 )
+TFFA: lock or reopen joining and team switching.	TFFA: 鎖定或重新啟動加入和隊伍切換 。
+TIME	時間
+TOURNAMENT	圖示
+TOURNAMENT  /  BRACKET	突擊 / 突擊
+TOURNAMENT  /  LEAVE LOBBY?	托爾納特 洛比
+TOURNAMENT  /  MATCH RESULT	交接/ 成交
+TOURNAMENT  /  READY ROOM	旅行/準備好房間
+TOURNAMENT  /  SELECT A FORMAT	圖案/ 本身格式
+TOURNAMENT  /  TEAM RESERVES	租借/隊伍保留
+Take photo	拍照
+Target damping	目標已關閉
+Target names	目標名稱
+Team / tag	團隊/ 標籤
+Team Free For All	人人自由的團隊
+Team appearance	團隊亮相
+Team chat	群組聊天
+Team chat only	只聊團隊
+Team chat sound	群組聊天聲音
+Team color lightsabers	團隊顏色燈光
+Team color skins	團體顏色皮膚
+Team ladder	隊列梯
+Team overlay	團隊覆蓋
+Team skin: Blue	團隊皮膚: 藍色
+Team skin: Default	團隊皮膚: 預設
+Team skin: Red	團體皮膚:紅色
+Text language	文字語言
+Texture compression	纹理壓縮
+Texture depth	纹理深度
+Texture detail	纹理細節
+Texture filter	纹理滤波器
+Texture intensity	纹理密度
+The complete lineup must ready up again before play resumes.	完整排隊必須在重播前再準備
+The missing player may reconnect, or a reserve takes their place.	失蹤的玩家可能會重新連接, 或者保留地會取代他們的位置 。
+The original style keeps its original combat behavior.	原作保持原作的格鬥行為.
+The previous display recovery has not been saved yet.	之前的顯示恢復尚未儲存 。
+The ranked server directory is not connected yet.	排名伺服器目錄尚未連接 。
+The ranking service is not connected.	排名服務沒有連接 。
+The selected model files are no longer available.	已選擇的模型檔案已無法使用 。
+The server checks that the map is installed and supports the current mode.	伺服器檢查地圖已安裝, 支援目前的模式 。
+Themes	主題
+Themes: 	主題 :
+Thermal detonator	熱雷管
+Third person	第三人
+Third-person framing	第三人称框架
+This character selection is unavailable.	此字元選擇不可用 。
+This command is too long for the text editor; it is preserved. Use change-key or clear.	此命令對文字編輯器太長了; 它被保存。 使用變更鍵或清除 。
+This ends your current life.	這結束了你的現今生活
+This model does not support a mirrored preview	此模型不支援鏡面預覽
+This outfit has no matching team skin.	這套衣服沒有相配的團體皮膚
+This restarts the game client.	這會重新啟動遊戲客戶端 。
+This slot has no key to swap. Choose Replace or Cancel.	此位址沒有要互換的按鍵。 選擇取代或取消 。
+Three styles saved. Use your normal style-switch control to cycle them.	儲存了三種樣式。 使用正常的樣式變換控制來繞過它們 。
+Three ways to compete	三種競爭方式
+Tilt the camera up or down.	向上或向下倾斜攝像機。
+Time Limit:	時間限制 :
+Time Nudge	時間
+Time limit	时间限制
+Time remaining	剩餘時間
+Timing and downloads	時間和下載
+Toggle camera view	切換相機檢視
+Toggle console	切換控制台
+Toggle existing match recording	切換已存在的匹配錄音
+Toggle supported first/third-person view	切換支援的第一/ 第三人稱檢視
+Toggle the chat panel and recent messages	切換聊天面板和最近的消息
+Tonemapping	記憶圖
+Top right	右上
+Tournament	巡回賽
+Tournament bracket	賽事包圍
+Tournament rules did not replace the previous description	比賽規則沒有取代先前的描述
+Tournament rules did not scroll	比賽規則沒有滚动
+Tournament rules headings did not load as separate lines	比賽規則標題未以單行載入
+Tournament status	比賽狀態
+Translate into	翻譯成
+Translate received public, team and private chat offline.	翻譯器在線下接觸了公眾、團隊和私人聊天
+Translating - offline	翻譯 - 下線
+Translation	翻譯
+Translation - %s	翻譯 - %s
+Translator unavailable; showing original chat	翻譯不可用; 顯示原始聊天
+Triangle	三角形
+Trilinear	三角形
+Trip mine	特里普地雷
+Turkish	土耳其語Name
+Turn left	左轉
+Turn right	右轉
+Turn the camera around the player.	把攝影機轉過來
+Turn-speed modifier	轉速變更器
+Turn-speed modifier while walk/run is held	行走/ 執行時轉速變更器
+Turning with bound left / right keys.	以左/ 右鍵轉動 。
+Two precise swings; vulnerable recovery.	兩次精確的秋千; 脆弱的恢复。
+Type:	類型 :
+Ukrainian	烏克蘭語Name
+Unassigned	未指定
+Unavailable in this client or server.	此客戶端或伺服器中找不到 。
+Uncategorized	未分類
+Unfreeze	解冻
+Universal translator	通用翻譯器
+Universe: 	宇宙 :
+Unknown Setup operation	未知的設定操作
+Unknown quality preset	未知的質量預置
+Unknown setting	未知的設定值
+Unlimited	無限制
+Unlock Teams	解鎖隊伍
+Unready	尚未準備好
+Unsaved changes	未儲存的變更
+Unsupported Controls operation	不支援的控制操作
+Unsupported value for 	不支援的值
+Up to 8 registered teams	多达8支已登記的球隊
+Use 	使用
+Use / interact	使用/ 交互
+Use Absorb when available	可用時使用 Absorb
+Use FOV 20-120, tilt -45 to 45, speed 20-800.	使用FOV 20-120,倾斜-45至45,速度20-800.
+Use Heal when available	可用時使用愈合
+Use Mind Trick when available	可用時使用 Mind Trick
+Use Protect when available	可用時使用保護
+Use Pull when available	可用時使用拉
+Use Push when available	可用時使用按鍵
+Use Rage when available	可用時使用 Rage
+Use Sense when available	可用時使用理智
+Use Speed when available	可用時使用速度
+Use a new personal config name (letters, numbers, spaces, _ or -).	使用新的個人設定名稱( 字母、 數字、 空格, _ 或 - ) 。
+Use analog axes on the legacy path.	在遺傳的路徑上使用類比斧頭 。
+Use fixed 50-point saber strikes and stronger timed parries.	使用固定的50點的沙伯擊擊擊和更強的時間拍攝。
+Use inventory item	使用目錄項目
+Use selected Force power	使用所選的強力
+Use team Energize when available	可用時使用團隊 Energize
+Use team Heal when available	可用時使用團隊治療
+Use team blade colors. Off shows chosen colors.	使用團隊刀片顏色, 顯示選擇的顏色 。
+Use team skins when available. Off shows chosen outfits.	可用時使用團隊皮膚。 脫下選擇的服裝 。
+Use the selected available Force power	使用所選取的強力
+Use the selected inventory item	使用選取的目錄項目
+Use turn speed 0-10000 and accel 0-100.	使用轉速0 -1000和0 -100
+Used for Custom resolution.	用于自訂解析 。
+VISUAL PREVIEW	影像前言
+VOTE	自愿
+VOTING	投票
+Value outside the supported edit range.	支援編輯範圍以外的值 。
+Vanilla	香草
+Vehicle lead indicator	汽車首領指示器
+Version	版本
+Vertex lighting	Vertex照明
+Vertical look sensitivity	垂直外觀敏感度
+Vertical look speed	垂直視速
+Vertical mouse scale	垂直滑鼠比例
+Vertical mouse scale; negative means inverted	垂直滑鼠比例; 負值表示反轉
+Vertical sensitivity	垂直灵敏度
+Vertical sway	垂直晃動
+Very high	非常高
+Video	影片
+View	查看
+Visual effects	視覺效果
+Voice commands	语音命令
+Voice language	語言
+Voice volume	聲音音量
+Volume	音量
+Vote / Call Vote	投票/召票
+Vote to add a role supported by the current game type.	投票加入目前遊戲類型支援的角色 。
+Vote to add this role. TFFA teams must be unlocked.	投票加入此角色。 TFFA 隊隊必須解鎖 。
+Vote to remove a player or bot.	投票去除玩家或機器人。
+WEAPONS	武器
+Waiting for the server's player list...	正在等待伺服器的玩家清單...
+Walk / run	走/ 跑
+Wall marks	牆印
+Warmup Off	暖化
+Warmup On	溫暖上
+Weapon FOV	武器位置
+Weapon's own ready pose overrides this preview in play.	武器本身的姿勢 控制了預覽
+Weapon:	武器:
+Weapons	武器
+Weapons: restricted	武器:限制
+Weapons: unrestricted	武器:不受限制
+Weightier attacks; less wind-up than Red.	更重的攻擊,比Red少
+White	白色
+White core: Off	白核: 關
+White core: On	白核: 開啟
+Whole number, 0 to 999. Zero means unlimited. Applies after passing; may end the round.	整數 0 到 999 。 0 表示無限 。 過後适用; 可能結束 。
+Xbox	Xbox 工具箱
+YOU	你
+Yellow	黃色
+You / Blue Horizon	您/ 藍色地平線
+Your character	你的角色
+Your preferred reading language. Requires the matching offline packs.	您偏愛的讀物語言。 需要匹配的离線包 。
+Your sample ready status will reset when you select another event.	當您選擇另一項事件時, 您的樣本就緒狀態會重新設定 。
+Your selection is remembered while using dual sabers or a staff.	你選擇的選擇是用雙人手或杖子來記住的
+Your server chooses the combat rules.	您的伺服器選擇戰鬥規則 。
+Your server may deduct a point.	您的伺服器可能會扣分 。
+Zero disables acceleration.	0禁用加速 。
+Zero disables this component of view swaying.	0 關閉此視窗的旋轉元件 。
+Zero removes the client frame-rate limit.	0移除客戶端帧率限制 。
+Zero uses your field of view.	Zero用你的视野。
+[ ] Waiting for you. Click Ready when prepared.	等你,準備好了就點擊
+[ ] You / Waiting	[ ]你/等待
+[!] Match paused / missing teammate. Reconnect window: 10:00 (sample).	[!] 匹配已暫停 / 缺少隊友。 重連視窗: 10: 00 (例) 。
+[!] Mira / Disconnected	[!] 米拉/ 斷線
+[+] Everyone is ready. Sample lobby: no match will start.	[+] 大家都準備好了 樣本大廳 不會有比賽開始的
+[+] You / READY	[+] 你/準備好了
+\\translator	翻譯( C)
+\\translator\\fonts	翻譯(_F)
+_st_setup_recovery.tmp	_st_setup_ recovery.tmp
+a whole number from 	整個數字來自
+alora/default	alora/ 默认
+animation instance missing	缺少動畫實體
+applied.	适用。
+asdfghjkl-	阿斯菲克爾
+border lights ignore motion preference	邊框燈光忽略了動作偏好
+cannot drag back to top	不能拖曳回上方
+cannot drag to bottom outside track	無法拖曳到曲目底端
+cl_st_setup.inc	cl_st_setup.inc 中
+click target missing	點擊目標缺失
+controller menu missing	缺少控制器選單
+dirty state	污點狀態
+expected %s got %s	期望 %s 得到 %s
+favorite selection missing	缺少最愛的選擇
+favorite state	最愛的狀態
+fixture has no overflow	固定沒有溢出
+fixture requires private Favorites view	固定需要私密的 Favorites 檢視
+force-rank	強度排名
+ghost off	鬼魂走了
+ghost on	鬼魂在
+hover does not light native button	徘徊不點亮本地按鈕
+keeps dragging after mouse release	滑鼠放出後繼續拖曳
+keyboard menu missing	缺少鍵盤選單
+kyle/default	Kyle/ 默认
+layout context	佈局上下文
+legacy action missing	遺傳動作缺失
+levelshots/%s	等級射擊/ %s
+live value mismatch	活值不匹配
+local browser reply was not displayed	本地瀏覽器回覆未顯示
+main-menu alias missing	主選單别名缺失
+menu destination	選單目的
+metadata display name mismatch	中繼資料顯示名稱不匹配
+metadata franchise mismatch	中繼儲存不匹配
+missing Speed rank picker	缺少速率分級器
+missing selection	缺少選擇區
+missing server list	缺少伺服器清單
+missing target %s	缺少目標 %s
+motion state mismatch	動態狀態不匹配
+native Force rank purchase changed	原地軍隊的軍衔購買已變更
+native Jedi role selector missing	缺少原生的絕地角色選擇器
+native Jedi role transition failed	本地絕地角色轉換失敗
+native destination mismatch	本地目的地不匹配
+native scrollbar did not drag	原生卷列沒有拖曳
+native target missing	缺少本地目標
+not enough server fixtures	伺服器定點程式不足
+or propose a change to this server.	或建議更改此伺服器。
+ordinary Apply changed Jedi role	套用已變更的絕地角色
+pending model mismatch	等待模型不匹配
+players/_humanoid/	玩家/ _ 人體/ Name
+preview unavailable	無法預覽
+qcommon/st_utf8.h	qcommon/st_utf8. h 。
+result count	結果數量
+scanning creates one cvar per model	掃瞄每個模型產生一個 cvar
+scrolling changed active model	滚动已變更的動態型態
+st-controls-save.tmp	st - controls -save.tmp
+st_hudStyle	st_hudStyle 元件
+st_uiPhoto%s	st_uiPhoto %s 中
+staged name	舞台名稱
+stale preview survived failed load	stale 預覽未成功載入
+status mismatch	狀態不匹配
+stock fallback mistaken for custom voice	儲存回落錯誤於自訂聲音
+stock portrait fixture missing	缺少股票肖像裁剪
+theme did not paint %s	佈景主題沒有畫出 %s
+thumb grab jumps	拇指抓住跳跃
+tournament bracket	聯賽括號
+tournament status	聯賽狀態
+track click does not scroll	音軌點擊不滚动
+unexpected connection state	意外連接狀態
+unknown QA operation	未知的 QA 操作
+unknown scrollbar fixture	未知的卷列固定
+value%d	值%d
+virtual keyboard state	虛擬鍵盤狀態
+weapon 1	武器 1
+weapon 10	武器 10
+weapon 11	武器 11
+weapon 12	武器 12
+weapon 2	武器2
+weapon 3	武器3
+weapon 4	武器 4
+weapon 5	武器5
+weapon 6	武器6
+weapon 7	武器 7
+weapon 8	武器 8
+weapon 9	武器9

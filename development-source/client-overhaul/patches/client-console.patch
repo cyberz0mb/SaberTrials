@@ -1,0 +1,66 @@
+--- a/codemp/client/cl_console.cpp
++++ b/codemp/client/cl_console.cpp
+@@ -37,6 +37,7 @@
+ 
+ cvar_t		*con_conspeed;
+ cvar_t		*con_notifytime;
++static cvar_t *st_consoleOverlay;
+ cvar_t		*con_opacity; // background alpha multiplier
+ cvar_t		*con_autoclear;
+ cvar_t		*con_height;
+@@ -493,7 +494,9 @@
+ 	con_conspeed = Cvar_Get ("scr_conspeed", "3", 0, "Console open/close speed");
+ 	Cvar_CheckRange (con_conspeed, 1.0f, 100.0f, qfalse);
+ 
+-	con_opacity = Cvar_Get ("con_opacity", "1.0", CVAR_ARCHIVE_ND, "Opacity of console background");
++	con_opacity = Cvar_Get ("con_opacity", "0.55", CVAR_ARCHIVE_ND, "Opacity of console background");
++	st_consoleOverlay = Cvar_Get( "st_consoleOverlay", "1", CVAR_ARCHIVE, "Use the Saber Trials transparent console overlay" );
++	Cvar_CheckRange( con_opacity, 0.0f, 1.0f, qfalse );
+ 	con_autoclear = Cvar_Get ("con_autoclear", "1", CVAR_ARCHIVE_ND, "Automatically clear console input on close");
+ 	con_height = Cvar_Get ("con_height", "0.5", CVAR_ARCHIVE_ND);
+ 
+@@ -878,18 +881,24 @@
+ 		y = 0;
+ 	}
+ 	else {
+-		// draw the background at full opacity only if fullscreen
+-		if (frac < 1.0f)
+-		{
+-			vec4_t con_color;
+-			MAKERGBA(con_color, 1.0f, 1.0f, 1.0f, Com_Clamp(0.0f, 1.0f, con_opacity->value));
+-			re->SetColor(con_color);
+-		}
+-		else
+-		{
+-			re->SetColor(NULL);
+-		}
+-		SCR_DrawPic( 0, 0, SCREEN_WIDTH, (float) y, cls.consoleShader );
++        if ( st_consoleOverlay->integer ) {
++            vec4_t backdrop = { 0.015f, 0.025f, 0.04f, 1.0f };
++            backdrop[3] = frac >= 1.0f ? 1.0f : Com_Clamp( 0.0f, 1.0f, con_opacity->value );
++            re->SetColor( backdrop );
++            SCR_DrawPic( 0, 0, SCREEN_WIDTH, (float)y, cls.whiteShader );
++            // A separate backing for command input keeps typed text legible.
++            float stripHeight = 3.0f * con.charHeight * SCREEN_HEIGHT / cls.glconfig.vidHeight;
++            backdrop[3] = Q_max( backdrop[3], 0.65f );
++            re->SetColor( backdrop );
++            SCR_DrawPic( 0, Q_max( 0.0f, y - stripHeight ), SCREEN_WIDTH,
++                Q_min( (float)y, stripHeight ), cls.whiteShader );
++        } else {
++            vec4_t artwork = { 1, 1, 1, 1 };
++            artwork[3] = frac >= 1.0f ? 1.0f : Com_Clamp( 0.0f, 1.0f, con_opacity->value );
++            re->SetColor( artwork );
++            SCR_DrawPic( 0, 0, SCREEN_WIDTH, (float)y, cls.consoleShader );
++        }
++        re->SetColor( NULL );
+ 	}
+ 
+ 	// draw the bottom bar and version number
+@@ -905,6 +914,7 @@
+ 	}
+ 
+ 	// draw the input prompt, user text, and cursor if desired
++	con.vislines = lines;
+ 	Con_DrawInput ();
+ 
+ 	// draw the text

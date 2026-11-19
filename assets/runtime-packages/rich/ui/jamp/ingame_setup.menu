@@ -1,0 +1,1 @@
+{ menuDef { name "ingame_setup" fullscreen 1 rect 0 0 640 480 visible 0 focusColor 1 1 1 1 } }

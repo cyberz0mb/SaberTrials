@@ -1,0 +1,110 @@
+SABER TRIALS - CREDITS AND THIRD-PARTY ACKNOWLEDGEMENTS
+======================================================
+
+Saber Trials exists to contribute to the Jedi Academy modding community.
+Credit should follow the work: when code, art, design, documentation, or a
+technical approach from another project is used, that contribution must be
+recorded here before the related change is released.
+
+
+SABER TRIALS
+------------
+
+Project creation, direction, gameplay design, testing, and community vision:
+The Saber Trials project creator.
+
+Additional contributors will be listed by the public name or handle they ask
+us to use. Contribution history will also remain visible in Git commits and
+pull requests.
+
+
+FOUNDATIONAL CODE CURRENTLY USED
+--------------------------------
+
+Jedi Knight: Jedi Academy source release
+  Raven Software, Inc. and Activision, Inc.
+  https://github.com/JACoders/OpenJK
+  Foundation for Jedi Academy game and engine code.
+
+OpenJK
+  The JACoders/OpenJK contributors.
+  https://github.com/JACoders/OpenJK
+  Saber Trials is derived from OpenJK multiplayer code and retains its
+  copyright and GNU GPL version 2 notices.
+
+ioquake3
+  id Software and ioquake3 contributors.
+  https://github.com/ioquake/ioq3
+  Portions of the OpenJK foundation include work originating in or adapted
+  from the Quake III Arena and ioquake3 codebases.
+
+
+PERMANENT STAFF ACCOUNTS
+-----------------------
+
+libsodium
+  Frank Denis and the libsodium contributors.
+  https://github.com/jedisct1/libsodium
+  Pinned 1.0.22 stable snapshot (1791761707), ISC license.
+  Ed25519 signatures, random generation and protected portable key backups.
+
+SQLite
+  D. Richard Hipp and the SQLite contributors.
+  https://www.sqlite.org/
+  Pinned 3.54.0 amalgamation, public domain.
+  Server-local permanent appointments and transactional audit storage.
+
+  Exact archives, hashes and verification records:
+  development-source/staff/dependencies/lock.json.
+  License texts are included in that directory. Staff releases include the
+  pinned dependency sources and matching OpenJK source/patches.
+
+
+BROADCAST FEATURES
+------------------
+
+TaystJK
+  Tayst and TaystJK contributors.
+  https://github.com/taysta/TaystJK
+  GPLv2 reference reviewed at commit 5802c999168db2f9759a48f1ef3a3d672fa99722.
+  Informed the kill feed, spectator camera and team overlay.
+
+Blender Jedi Academy Plugin Suite
+  Willi "mrwonko" Schinmeyer, Cagelight and contributors.
+  https://github.com/mrwonko/Blender-Jedi-Academy-Tools
+  v2.1.0, GPLv2 or later. Used for Ghoul2 compatibility checks.
+
+
+ASSET POLICY
+------------
+
+Do not add assets copied from Jedi Academy's base data, another mod, or an
+online source unless redistribution permission and attribution are known.
+Code licensing does not automatically grant permission to redistribute every
+model, texture, sound, font, map, or other asset shipped alongside a project.
+
+For each future third-party addition, record:
+  - Project and author or contributor name
+  - Source URL and exact commit or release
+  - Files or feature used
+  - License or written permission
+  - Local Saber Trials files containing the derived work
+
+
+NATIVE ACCOUNT JSON PARSER
+--------------------------
+
+  JSON for Modern C++ 3.12.0 by Niels Lohmann and contributors.
+  Source: https://github.com/nlohmann/json/releases/tag/v3.12.0
+  License: MIT; included at
+  development-source/accounts/codemp/accounts/vendor/LICENSE.MIT.
+  Used by the native account response parser and protected session storage.
+  Pinned downloads and hashes are in the adjacent vendor/lock.json.
+
+TRADEMARK NOTICE
+----------------
+
+Saber Trials is an unofficial community modification and is not affiliated
+with or endorsed by Lucasfilm, Disney, Activision, Raven Software, or id
+Software. Star Wars and related names and marks belong to their respective
+owners.

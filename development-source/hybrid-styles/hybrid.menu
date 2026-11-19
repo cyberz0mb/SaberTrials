@@ -1,0 +1,49 @@
+// @PAGE@ is substituted for each independent main/connected route.
+menuDef {
+ name @PAGE@
+ fullScreen 1 rect 0 0 640 480 visible 1
+ focusColor 1 1 1 1
+ onESC { uiScript stHybridCancel; }
+ itemDef { name arena rect 0 0 640 480 style 3 background "ui/assets/sabertrials/arena.tga" forecolor 1 1 1 1 visible 1 decoration }
+ itemDef { name shade rect 0 0 640 480 style 1 backcolor .004 .014 .025 .93 visible 1 decoration }
+ itemDef { name title text "SABER TRIALS / COMBAT STYLES" rect 28 20 584 32 font 2 textscale .84 forecolor .30 .78 1 1 visible 1 decoration }
+ itemDef { name divider rect 28 61 584 1 style 1 backcolor .20 .55 .70 .65 visible 1 decoration }
+ itemDef { name caption text "SINGLE SABER / CHOOSE THREE" rect 48 88 544 22 font 2 textscale .66 forecolor .55 .72 .83 1 visible 1 decoration }
+ itemDef { name instructions text "Pick different styles. Your normal style-switch control follows this order." rect 48 112 544 20 font 4 textscale .59 forecolor .66 .78 .86 1 visible 1 decoration }
+ itemDef { name slot1 text "Slot 1:" rect 64 142 528 28 type ITEM_TYPE_MULTI cvar ui_saberStyleSlot1
+  cvarFloatList { "Blue" 1 "Yellow" 2 "Red" 3 "Green" 4 "Purple" 5 "Orange" 6 } font 4 textscale .87 forecolor .86 .93 1 1 visible 1 }
+ itemDef { name st_hybrid_slot1_note text "" rect 64 170 528 18 font 4 textscale .57 forecolor .66 .78 .86 1 visible 1 decoration }
+ itemDef { name slot1_color1 rect 48 142 3 24 style 1 backcolor .25 .65 1 .9 visible 1 decoration cvarTest ui_saberStyleSlot1 showCvar { "1" } }
+ itemDef { name slot1_color2 rect 48 142 3 24 style 1 backcolor 1 .86 .30 .9 visible 1 decoration cvarTest ui_saberStyleSlot1 showCvar { "2" } }
+ itemDef { name slot1_color3 rect 48 142 3 24 style 1 backcolor 1 .32 .30 .9 visible 1 decoration cvarTest ui_saberStyleSlot1 showCvar { "3" } }
+ itemDef { name slot1_color4 rect 48 142 3 24 style 1 backcolor .30 .94 .54 .9 visible 1 decoration cvarTest ui_saberStyleSlot1 showCvar { "4" } }
+ itemDef { name slot1_color5 rect 48 142 3 24 style 1 backcolor .75 .44 1 .9 visible 1 decoration cvarTest ui_saberStyleSlot1 showCvar { "5" } }
+ itemDef { name slot1_color6 rect 48 142 3 24 style 1 backcolor 1 .55 .18 .9 visible 1 decoration cvarTest ui_saberStyleSlot1 showCvar { "6" } }
+ itemDef { name slot2 text "Slot 2:" rect 64 198 528 28 type ITEM_TYPE_MULTI cvar ui_saberStyleSlot2
+  cvarFloatList { "Blue" 1 "Yellow" 2 "Red" 3 "Green" 4 "Purple" 5 "Orange" 6 } font 4 textscale .87 forecolor .86 .93 1 1 visible 1 }
+ itemDef { name st_hybrid_slot2_note text "" rect 64 226 528 18 font 4 textscale .57 forecolor .66 .78 .86 1 visible 1 decoration }
+ itemDef { name slot2_color1 rect 48 198 3 24 style 1 backcolor .25 .65 1 .9 visible 1 decoration cvarTest ui_saberStyleSlot2 showCvar { "1" } }
+ itemDef { name slot2_color2 rect 48 198 3 24 style 1 backcolor 1 .86 .30 .9 visible 1 decoration cvarTest ui_saberStyleSlot2 showCvar { "2" } }
+ itemDef { name slot2_color3 rect 48 198 3 24 style 1 backcolor 1 .32 .30 .9 visible 1 decoration cvarTest ui_saberStyleSlot2 showCvar { "3" } }
+ itemDef { name slot2_color4 rect 48 198 3 24 style 1 backcolor .30 .94 .54 .9 visible 1 decoration cvarTest ui_saberStyleSlot2 showCvar { "4" } }
+ itemDef { name slot2_color5 rect 48 198 3 24 style 1 backcolor .75 .44 1 .9 visible 1 decoration cvarTest ui_saberStyleSlot2 showCvar { "5" } }
+ itemDef { name slot2_color6 rect 48 198 3 24 style 1 backcolor 1 .55 .18 .9 visible 1 decoration cvarTest ui_saberStyleSlot2 showCvar { "6" } }
+ itemDef { name slot3 text "Slot 3:" rect 64 254 528 28 type ITEM_TYPE_MULTI cvar ui_saberStyleSlot3
+  cvarFloatList { "Blue" 1 "Yellow" 2 "Red" 3 "Green" 4 "Purple" 5 "Orange" 6 } font 4 textscale .87 forecolor .86 .93 1 1 visible 1 }
+ itemDef { name st_hybrid_slot3_note text "" rect 64 282 528 18 font 4 textscale .57 forecolor .66 .78 .86 1 visible 1 decoration }
+ itemDef { name slot3_color1 rect 48 254 3 24 style 1 backcolor .25 .65 1 .9 visible 1 decoration cvarTest ui_saberStyleSlot3 showCvar { "1" } }
+ itemDef { name slot3_color2 rect 48 254 3 24 style 1 backcolor 1 .86 .30 .9 visible 1 decoration cvarTest ui_saberStyleSlot3 showCvar { "2" } }
+ itemDef { name slot3_color3 rect 48 254 3 24 style 1 backcolor 1 .32 .30 .9 visible 1 decoration cvarTest ui_saberStyleSlot3 showCvar { "3" } }
+ itemDef { name slot3_color4 rect 48 254 3 24 style 1 backcolor .30 .94 .54 .9 visible 1 decoration cvarTest ui_saberStyleSlot3 showCvar { "4" } }
+ itemDef { name slot3_color5 rect 48 254 3 24 style 1 backcolor .75 .44 1 .9 visible 1 decoration cvarTest ui_saberStyleSlot3 showCvar { "5" } }
+ itemDef { name slot3_color6 rect 48 254 3 24 style 1 backcolor 1 .55 .18 .9 visible 1 decoration cvarTest ui_saberStyleSlot3 showCvar { "6" } }
+ itemDef { name st_hybrid_cycle text "" rect 48 316 544 22 font 4 textscale .69 forecolor .30 .78 1 1 visible 1 decoration }
+ itemDef { name stance_note text "Choose each style's ready pose separately in Stances." rect 48 346 544 18 font 4 textscale .57 forecolor .66 .78 .86 1 visible 1 decoration }
+ itemDef { name weapon_note text "Your selection is remembered while using dual sabers or a staff." rect 48 366 544 18 font 4 textscale .55 forecolor .55 .72 .83 1 visible 1 decoration }
+ itemDef { name st_hybrid_assets text "" rect 48 389 544 18 font 4 textscale .52 forecolor .55 .72 .83 1 visible 1 decoration }
+ itemDef { name notice cvar ui_hybridNotice rect 48 411 544 18 font 4 textscale .54 forecolor 1 .75 .4 1 visible 1 decoration }
+ itemDef { name footer rect 28 440 584 1 style 1 backcolor .20 .55 .70 .65 visible 1 decoration }
+ itemDef { name cancel text "Cancel" rect 34 451 120 23 type ITEM_TYPE_BUTTON font 2 textscale .7 forecolor .76 .86 .93 1 visible 1 action { uiScript stHybridCancel; } }
+ itemDef { name reset text "Reset to originals" rect 210 451 230 23 type ITEM_TYPE_BUTTON font 4 textscale .65 forecolor .76 .86 .93 1 visible 1 action { uiScript stHybridReset; } }
+ itemDef { name apply text "Apply" rect 500 451 110 23 type ITEM_TYPE_BUTTON font 2 textscale .7 forecolor .76 .86 .93 1 visible 1 action { uiScript stHybridApply; } }
+}

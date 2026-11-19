@@ -1,0 +1,23 @@
+{
+  "format": 1,
+  "sodium": {
+    "version": "1.0.22-stable-snapshot-1791761707",
+    "url": "https://download.libsodium.org/libsodium/releases/libsodium-1.0.22-stable.tar.gz",
+    "archive": "sodium.tar.gz",
+    "directory": "libsodium-stable",
+    "sha256": "d9438bb0ab43157fc9b5d33fac06f19d935edd9e7a84e5539910eeb198d1523c",
+    "license": "ISC",
+    "minisign_public_key": "RWQf6LRCGA9i53mlYecO4IzT51TGPpvWucNSCh1CBM0QTaLn73Y7GFO3",
+    "verification": "Archive Ed25519 prehash and trusted-comment signatures verified 2026-10-12; stable URL is mutable, checksum is authoritative."
+  },
+  "sqlite": {
+    "version": "3.54.0",
+    "url": "https://www.sqlite.org/2026/sqlite-amalgamation-3540000.zip",
+    "archive": "sqlite.zip",
+    "directory": "sqlite-amalgamation-3540000",
+    "sha256": "68e913b0fe8ec6b4e5f391c594a28872884e80d6cd042a1e50c957be46b5aa4d",
+    "sha3_256": "7b670a62fdfbd672b75fef004cb703c8a3e87d3a5cc7d675b4a08337004a2d93",
+    "license": "Public domain",
+    "verification": "Official download page SHA3-256 verified 2026-10-12."
+  }
+}

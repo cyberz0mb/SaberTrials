@@ -1,0 +1,25 @@
+diff --git a/tools/quake3/common/maxworld.h b/tools/quake3/common/maxworld.h
+--- a/tools/quake3/common/maxworld.h
++++ b/tools/quake3/common/maxworld.h
+@@ -1,5 +1,5 @@
+ #pragma once
+ 
+-#define MIN_WORLD_COORD         ( -65536 )
+-#define MAX_WORLD_COORD         ( 65536 )
++#define MIN_WORLD_COORD         ( -131072 )
++#define MAX_WORLD_COORD         ( 131072 )
+ #define WORLD_SIZE              ( MAX_WORLD_COORD - MIN_WORLD_COORD )
+diff --git a/tools/quake3/q3map2/map.cpp b/tools/quake3/q3map2/map.cpp
+--- a/tools/quake3/q3map2/map.cpp
++++ b/tools/quake3/q3map2/map.cpp
+@@ -783,6 +783,10 @@
+ static void FinishBrush( bool noCollapseGroups, entity_t& mapEnt ){
+ 	/* create windings for sides and bounds for brush */
+ 	if ( !CreateBrushWindings( buildBrush ) ) {
++		if ( buildBrush.minmax.valid() && !c_worldMinmax.surrounds( buildBrush.minmax ) ) {
++			Error( "Entity %i, brush %i exceeds the supported world bounds (%i to %i)",
++			       mapEnt.mapEntityNum, buildBrush.brushNum, MIN_WORLD_COORD, MAX_WORLD_COORD );
++		}
+ 		return;
+ 	}
+ 

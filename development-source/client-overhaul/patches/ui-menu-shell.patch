@@ -1,0 +1,24 @@
+diff --git a/codemp/ui/ui_main.c b/codemp/ui/ui_main.c
+--- a/codemp/ui/ui_main.c
++++ b/codemp/ui/ui_main.c
+@@ -10010,6 +10010,8 @@ void UI_Refresh( int realtime )
+ 	UI_UpdateCvars();
+ 
+ 	if (Menu_Count() > 0) {
++		ST_UIRefreshShell();
+ 		// paint all the menus
+ 		Menu_PaintAll();
++		ST_UIPresentation();
+ 		// refresh server browser list
+@@ -10136,8 +10136,9 @@ void UI_KeyEvent( int key, qboolean down ) {
+ 	if (Menu_Count() > 0) {
+ 		menuDef_t *menu = Menu_GetFocused();
+ 		if (menu) {
+-			if (key == A_ESCAPE && down && !Menus_AnyFullScreenVisible()) {
+-				Menus_CloseAll();
++			if (key == A_ESCAPE && down && !Menus_AnyFullScreenVisible() && !menu->onESC) {
++				// Native popups without an Escape script return to their parent.
++				Menus_CloseByName(menu->window.name);
+ 			} else {
+ 				Menu_HandleKey(menu, key, down );
+ 			}

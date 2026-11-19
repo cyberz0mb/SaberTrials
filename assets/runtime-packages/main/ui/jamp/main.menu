@@ -1,0 +1,244 @@
+{
+assetGlobalDef {
+ font "ergoec" 18 smallFont "ocr_a" 18 bigFont "anewhope" 20 small2Font "arialnb" 14
+ cursor "ui/assets/sabertrials/cursor" gradientBar "ui/assets/gradientbar2.tga"
+ itemFocusSound "sound/interface/menuroam.wav"
+ fadeClamp 1 fadeCycle 1 fadeAmount 0.1 shadowColor 0 0 0 .6
+}menuDef { name "main" rect 0 0 640 480 visible 0 fullscreen 1 focusColor 0 0 0 0
+onOpen { uiScript stMenuInit; setfocus play; } onESC { open st_main_exit; }
+itemDef { name arena rect 0 0 640 480 style 3 background "ui/assets/sabertrials/arena.tga" forecolor 1 1 1 1 visible 1 decoration }
+itemDef { name shade rect 0 0 640 480 style 1 backcolor .005 .018 .032 .28 visible 1 decoration }
+itemDef { name movie rect 0 0 640 480 style 5 cinematic "video/sabertrials_menu.roq" visible 1 decoration cvarTest "st_uiMenuMovie" showCvar { "1" } }
+itemDef { name movie_shade rect 0 0 640 480 style 1 backcolor .005 .018 .032 .18 visible 1 decoration }
+itemDef { name play rect 23 133 153 40 type 1 text "Play" forecolor 0 0 0 0 visible 1 action { play "sound/interface/button1.wav" ; close main ; open multiplayermenu ; } }
+itemDef { name profile rect 23 179 153 40 type 1 text "Profile" forecolor 0 0 0 0 visible 1 action { play "sound/interface/button1.wav" ; close main ; open playerMenu ; } }
+itemDef { name controls rect 23 225 153 40 type 1 text "Controls" forecolor 0 0 0 0 visible 1 action { play "sound/interface/button1.wav" ; close main ; open controlsMenu ; } }
+itemDef { name setup rect 23 271 153 40 type 1 text "Setup" forecolor 0 0 0 0 visible 1 action { play "sound/interface/button1.wav" ; close main ; open setup_menu ; } }
+itemDef { name exit rect 23 317 153 40 type 1 text "Exit" forecolor 0 0 0 0 visible 1 action { play "sound/interface/button1.wav" ; open st_main_exit ; } }
+itemDef { name account_link rect 518 26 107 29 type 1 text "Account / Log in" forecolor 0 0 0 0 visible 1 action { play "sound/interface/button1.wav" ; open st_main_account ; } }
+itemDef { name motion rect 516 435 105 27 type 1 text "Menu motion" forecolor 0 0 0 0 visible 1 action { play "sound/interface/button1.wav" ; uiScript stMenuMotion ; } }
+}
+menuDef { name "mainMenu" rect 0 0 640 480 visible 0 fullscreen 1 focusColor 0 0 0 0
+onOpen { uiScript stMenuInit; setfocus play; } onESC { open st_main_exit; }
+itemDef { name arena rect 0 0 640 480 style 3 background "ui/assets/sabertrials/arena.tga" forecolor 1 1 1 1 visible 1 decoration }
+itemDef { name shade rect 0 0 640 480 style 1 backcolor .005 .018 .032 .28 visible 1 decoration }
+itemDef { name movie rect 0 0 640 480 style 5 cinematic "video/sabertrials_menu.roq" visible 1 decoration cvarTest "st_uiMenuMovie" showCvar { "1" } }
+itemDef { name movie_shade rect 0 0 640 480 style 1 backcolor .005 .018 .032 .18 visible 1 decoration }
+itemDef { name play rect 23 133 153 40 type 1 text "Play" forecolor 0 0 0 0 visible 1 action { play "sound/interface/button1.wav" ; close mainMenu ; open multiplayermenu ; } }
+itemDef { name profile rect 23 179 153 40 type 1 text "Profile" forecolor 0 0 0 0 visible 1 action { play "sound/interface/button1.wav" ; close mainMenu ; open playerMenu ; } }
+itemDef { name controls rect 23 225 153 40 type 1 text "Controls" forecolor 0 0 0 0 visible 1 action { play "sound/interface/button1.wav" ; close mainMenu ; open controlsMenu ; } }
+itemDef { name setup rect 23 271 153 40 type 1 text "Setup" forecolor 0 0 0 0 visible 1 action { play "sound/interface/button1.wav" ; close mainMenu ; open setup_menu ; } }
+itemDef { name exit rect 23 317 153 40 type 1 text "Exit" forecolor 0 0 0 0 visible 1 action { play "sound/interface/button1.wav" ; open st_main_exit ; } }
+itemDef { name account_link rect 518 26 107 29 type 1 text "Account / Log in" forecolor 0 0 0 0 visible 1 action { play "sound/interface/button1.wav" ; open st_main_account ; } }
+itemDef { name motion rect 516 435 105 27 type 1 text "Menu motion" forecolor 0 0 0 0 visible 1 action { play "sound/interface/button1.wav" ; uiScript stMenuMotion ; } }
+}
+menuDef { name "st_main_exit" rect 0 0 640 480 visible 0 fullscreen 0
+ popup
+ focusColor 1 1 1 1 disableColor .35 .42 .47 1
+ onOpen { setfocus back ; } onESC { close st_main_exit ; }
+itemDef { name "panel" rect 236 62 380 275 style 1 backcolor .008 .026 .044 .94 visible 1 decoration border 1 borderSize 1 bordercolor .30 .78 1 1  }
+itemDef { name "heading" type 0 rect 256 80 340 22 text "EXIT SABER TRIALS" font 4 textscale 1.02 textalign 0 textalignx 0 textaligny 0 forecolor .30 .78 1 1 visible 1 decoration  }
+itemDef { name "copy0" type 0 rect 256 113 340 22 text "Quit the game and return to your desktop?" font 2 textscale 0.77 textalign 0 textalignx 0 textaligny 0 forecolor .76 .86 .93 1 visible 1 decoration  }
+itemDef { name "focus_glow" rect 0 0 1 1 style 3 background "ui/assets/sabertrials/focus" forecolor 1 1 1 1 visible 0 decoration group focus }
+itemDef { name "confirm_line" rect 250 209 352 0.5 style 1 backcolor .38 .64 .78 .28 visible 1 decoration  }
+itemDef { name "confirm" rect 250 178 352 32 type 1 style 0 text "Quit game"
+ font 2 textscale .85 textalignx 14 textaligny 6.0
+ forecolor .76 .86 .93 1 visible 1
+ onFocus { show focus_glow ; setitemrect focus_glow 250 178 352 32 ; }
+ leaveFocus { hide focus_glow ; }
+ action { play "sound/interface/button1.wav" ; uiScript quit ; }  }
+itemDef { name "back_line" rect 250 326 352 0.5 style 1 backcolor .38 .64 .78 .28 visible 1 decoration  }
+itemDef { name "back" rect 250 299 352 28 type 1 style 0 text "Back"
+ font 2 textscale .85 textalignx 14 textaligny 4.0
+ forecolor .76 .86 .93 1 visible 1
+ onFocus { show focus_glow ; setitemrect focus_glow 250 299 352 28 ; }
+ leaveFocus { hide focus_glow ; }
+ action { play "sound/interface/button1.wav" ; close st_main_exit ; } textscale .8 }
+
+}
+menuDef { name "st_main_ranked" rect 0 0 640 480 visible 0 fullscreen 1 popup
+ focusColor 1 1 1 1 disableColor .35 .42 .47 1
+ onOpen { setfocus overview ; } onESC { close st_main_ranked ; open multiplayermenu ; }
+ itemDef { name arena rect 0 0 640 480 style 3 background "ui/assets/sabertrials/arena.tga" forecolor 1 1 1 1 visible 1 decoration }
+ itemDef { name shade rect 0 0 640 480 style 1 backcolor .004 .015 .028 .55 visible 1 decoration }
+itemDef { name brand rect 28 20 548 22 type 0 text "S A B E R   T R I A L S" font 2 textscale 1.3 forecolor .30 .78 1 1 visible 1 decoration }
+itemDef { name heading rect 28 53 548 22 type 0 text "RANKED PLAY  /  OVERVIEW" font 2 textscale .9 forecolor .76 .86 .93 1 visible 1 decoration }
+itemDef { name overview rect 28 88 142 30 type 1 text "Overview" font 2 textscale .82
+ textalignx 10 textaligny 6 forecolor .76 .86 .93 1 visible 1
+ style 1 backcolor .035 .16 .24 1 border 1 bordercolor .30 .78 1 .5
+ action { play "sound/interface/button1.wav" ; setfocus overview ; } }
+itemDef { name duel rect 174 88 142 30 type 1 text "Duel ladder" font 2 textscale .82
+ textalignx 10 textaligny 6 forecolor .76 .86 .93 1 visible 1
+ style 1 backcolor .015 .05 .08 .94 border 1 bordercolor .30 .78 1 .5
+ action { play "sound/interface/button1.wav" ; close st_main_ranked ; open st_ranked_duel ; } }
+itemDef { name teams rect 320 88 142 30 type 1 text "Team ladder" font 2 textscale .82
+ textalignx 10 textaligny 6 forecolor .76 .86 .93 1 visible 1
+ style 1 backcolor .015 .05 .08 .94 border 1 bordercolor .30 .78 1 .5
+ action { play "sound/interface/button1.wav" ; close st_main_ranked ; open st_ranked_teams ; } }
+itemDef { name servers rect 466 88 142 30 type 1 text "Ranked servers" font 2 textscale .82
+ textalignx 10 textaligny 6 forecolor .76 .86 .93 1 visible 1
+ style 1 backcolor .015 .05 .08 .94 border 1 bordercolor .30 .78 1 .5
+ action { play "sound/interface/button1.wav" ; close st_main_ranked ; open st_ranked_servers ; } }
+itemDef { name content rect 28 130 584 285 style 1 backcolor .008 .026 .044 .96 border 1 bordercolor .30 .78 1 .38 visible 1 decoration }
+itemDef { name back rect 28 431 180 30 type 1 text "Back to Play" font 2 textscale .82
+ textalignx 10 textaligny 6 forecolor .76 .86 .93 1 visible 1
+ style 1 backcolor .015 .05 .08 .94 border 1 bordercolor .30 .78 1 .5
+ action { play "sound/interface/button1.wav" ; close st_main_ranked ; open multiplayermenu ; } }
+itemDef { name offline rect 255 437 350 22 type 0 text "Ranked connection: not configured" font 2 textscale .73 forecolor .46 .66 .77 1 visible 1 decoration }
+itemDef { name title rect 46 150 548 22 type 0 text "Three ways to compete" font 2 textscale 1.05 forecolor .30 .78 1 1 visible 1 decoration }
+itemDef { name duelTitle rect 46 189 548 22 type 0 text "Ranked Duel" font 2 textscale .9 forecolor .90 .96 1 1 visible 1 decoration }
+itemDef { name duelCopy rect 46 213 548 22 type 0 text "Official 1v1 matches on a Ranked Duel server." font 2 textscale .77 forecolor .76 .86 .93 1 visible 1 decoration }
+itemDef { name challengeTitle rect 46 245 548 22 type 0 text "Ranked Challenge Duel" font 2 textscale .9 forecolor .90 .96 1 1 visible 1 decoration }
+itemDef { name challengeCopy rect 46 269 548 22 type 0 text "Accepted 1v1 challenges inside FFA. Shares the Duel ladder." font 2 textscale .77 forecolor .76 .86 .93 1 visible 1 decoration }
+itemDef { name teamTitle rect 46 301 548 22 type 0 text "Ranked TFFA" font 2 textscale .9 forecolor .90 .96 1 1 visible 1 decoration }
+itemDef { name teamCopy rect 46 325 548 22 type 0 text "Registered teams compete on their own team ladder." font 2 textscale .77 forecolor .76 .86 .93 1 visible 1 decoration }
+itemDef { name account rect 46 369 548 22 type 0 text "Accounts and match reporting are not connected yet." font 2 textscale .76 forecolor .46 .76 .88 1 visible 1 decoration }
+itemDef { name unranked rect 46 389 548 22 type 0 text "Ordinary matches remain unranked." font 2 textscale .73 forecolor .76 .86 .93 1 visible 1 decoration }
+}
+menuDef { name "st_ranked_duel" rect 0 0 640 480 visible 0 fullscreen 1 popup
+ focusColor 1 1 1 1 disableColor .35 .42 .47 1
+ onOpen { setfocus duel ; } onESC { close st_ranked_duel ; open multiplayermenu ; }
+ itemDef { name arena rect 0 0 640 480 style 3 background "ui/assets/sabertrials/arena.tga" forecolor 1 1 1 1 visible 1 decoration }
+ itemDef { name shade rect 0 0 640 480 style 1 backcolor .004 .015 .028 .55 visible 1 decoration }
+itemDef { name brand rect 28 20 548 22 type 0 text "S A B E R   T R I A L S" font 2 textscale 1.3 forecolor .30 .78 1 1 visible 1 decoration }
+itemDef { name heading rect 28 53 548 22 type 0 text "RANKED PLAY  /  DUEL LADDER" font 2 textscale .9 forecolor .76 .86 .93 1 visible 1 decoration }
+itemDef { name overview rect 28 88 142 30 type 1 text "Overview" font 2 textscale .82
+ textalignx 10 textaligny 6 forecolor .76 .86 .93 1 visible 1
+ style 1 backcolor .015 .05 .08 .94 border 1 bordercolor .30 .78 1 .5
+ action { play "sound/interface/button1.wav" ; close st_ranked_duel ; open st_main_ranked ; } }
+itemDef { name duel rect 174 88 142 30 type 1 text "Duel ladder" font 2 textscale .82
+ textalignx 10 textaligny 6 forecolor .76 .86 .93 1 visible 1
+ style 1 backcolor .035 .16 .24 1 border 1 bordercolor .30 .78 1 .5
+ action { play "sound/interface/button1.wav" ; setfocus duel ; } }
+itemDef { name teams rect 320 88 142 30 type 1 text "Team ladder" font 2 textscale .82
+ textalignx 10 textaligny 6 forecolor .76 .86 .93 1 visible 1
+ style 1 backcolor .015 .05 .08 .94 border 1 bordercolor .30 .78 1 .5
+ action { play "sound/interface/button1.wav" ; close st_ranked_duel ; open st_ranked_teams ; } }
+itemDef { name servers rect 466 88 142 30 type 1 text "Ranked servers" font 2 textscale .82
+ textalignx 10 textaligny 6 forecolor .76 .86 .93 1 visible 1
+ style 1 backcolor .015 .05 .08 .94 border 1 bordercolor .30 .78 1 .5
+ action { play "sound/interface/button1.wav" ; close st_ranked_duel ; open st_ranked_servers ; } }
+itemDef { name content rect 28 130 584 285 style 1 backcolor .008 .026 .044 .96 border 1 bordercolor .30 .78 1 .38 visible 1 decoration }
+itemDef { name back rect 28 431 180 30 type 1 text "Back to Play" font 2 textscale .82
+ textalignx 10 textaligny 6 forecolor .76 .86 .93 1 visible 1
+ style 1 backcolor .015 .05 .08 .94 border 1 bordercolor .30 .78 1 .5
+ action { play "sound/interface/button1.wav" ; close st_ranked_duel ; open multiplayermenu ; } }
+itemDef { name offline rect 255 437 350 22 type 0 text "Ranked connection: not configured" font 2 textscale .73 forecolor .46 .66 .77 1 visible 1 decoration }
+itemDef { name title rect 46 147 548 22 type 0 text "DUEL STANDINGS" font 2 textscale 1 forecolor .30 .78 1 1 visible 1 decoration }
+itemDef { name column0 rect 46 186 50 22 type 0 text "Rank" font 2 textscale .72 forecolor .76 .86 .93 1 visible 1 decoration }
+itemDef { name column1 rect 106 186 235 22 type 0 text "Player" font 2 textscale .72 forecolor .76 .86 .93 1 visible 1 decoration }
+itemDef { name column2 rect 355 186 70 22 type 0 text "Rating" font 2 textscale .72 forecolor .76 .86 .93 1 visible 1 decoration }
+itemDef { name column3 rect 448 186 60 22 type 0 text "W / L" font 2 textscale .72 forecolor .76 .86 .93 1 visible 1 decoration }
+itemDef { name column4 rect 521 186 72 22 type 0 text "Matches" font 2 textscale .72 forecolor .76 .86 .93 1 visible 1 decoration }
+itemDef { name rule rect 46 214 548 1 style 1 backcolor .30 .78 1 .45 border 1 bordercolor .30 .78 1 .38 visible 1 decoration }
+itemDef { name empty rect 46 249 548 22 type 0 text "No standings available" font 2 textscale 1.05 forecolor .90 .96 1 1 visible 1 decoration }
+itemDef { name reason rect 46 281 548 22 type 0 text "The ranking service is not connected." font 2 textscale .83 forecolor .76 .86 .93 1 visible 1 decoration }
+itemDef { name scope rect 46 339 548 22 type 0 text "Ranked Duel and Ranked Challenge Duel share this ladder." font 2 textscale .73 forecolor .76 .86 .93 1 visible 1 decoration }
+itemDef { name points rect 46 366 548 22 type 0 text "Starting rating: 1000   |   Results and opponent strength decide changes." font 2 textscale .71 forecolor .76 .86 .93 1 visible 1 decoration }
+itemDef { name note rect 46 389 548 22 type 0 text "Rankings appear after verified official results are connected." font 2 textscale .71 forecolor .76 .86 .93 1 visible 1 decoration }
+}
+menuDef { name "st_ranked_teams" rect 0 0 640 480 visible 0 fullscreen 1 popup
+ focusColor 1 1 1 1 disableColor .35 .42 .47 1
+ onOpen { setfocus teams ; } onESC { close st_ranked_teams ; open multiplayermenu ; }
+ itemDef { name arena rect 0 0 640 480 style 3 background "ui/assets/sabertrials/arena.tga" forecolor 1 1 1 1 visible 1 decoration }
+ itemDef { name shade rect 0 0 640 480 style 1 backcolor .004 .015 .028 .55 visible 1 decoration }
+itemDef { name brand rect 28 20 548 22 type 0 text "S A B E R   T R I A L S" font 2 textscale 1.3 forecolor .30 .78 1 1 visible 1 decoration }
+itemDef { name heading rect 28 53 548 22 type 0 text "RANKED PLAY  /  TEAM LADDER" font 2 textscale .9 forecolor .76 .86 .93 1 visible 1 decoration }
+itemDef { name overview rect 28 88 142 30 type 1 text "Overview" font 2 textscale .82
+ textalignx 10 textaligny 6 forecolor .76 .86 .93 1 visible 1
+ style 1 backcolor .015 .05 .08 .94 border 1 bordercolor .30 .78 1 .5
+ action { play "sound/interface/button1.wav" ; close st_ranked_teams ; open st_main_ranked ; } }
+itemDef { name duel rect 174 88 142 30 type 1 text "Duel ladder" font 2 textscale .82
+ textalignx 10 textaligny 6 forecolor .76 .86 .93 1 visible 1
+ style 1 backcolor .015 .05 .08 .94 border 1 bordercolor .30 .78 1 .5
+ action { play "sound/interface/button1.wav" ; close st_ranked_teams ; open st_ranked_duel ; } }
+itemDef { name teams rect 320 88 142 30 type 1 text "Team ladder" font 2 textscale .82
+ textalignx 10 textaligny 6 forecolor .76 .86 .93 1 visible 1
+ style 1 backcolor .035 .16 .24 1 border 1 bordercolor .30 .78 1 .5
+ action { play "sound/interface/button1.wav" ; setfocus teams ; } }
+itemDef { name servers rect 466 88 142 30 type 1 text "Ranked servers" font 2 textscale .82
+ textalignx 10 textaligny 6 forecolor .76 .86 .93 1 visible 1
+ style 1 backcolor .015 .05 .08 .94 border 1 bordercolor .30 .78 1 .5
+ action { play "sound/interface/button1.wav" ; close st_ranked_teams ; open st_ranked_servers ; } }
+itemDef { name content rect 28 130 584 285 style 1 backcolor .008 .026 .044 .96 border 1 bordercolor .30 .78 1 .38 visible 1 decoration }
+itemDef { name back rect 28 431 180 30 type 1 text "Back to Play" font 2 textscale .82
+ textalignx 10 textaligny 6 forecolor .76 .86 .93 1 visible 1
+ style 1 backcolor .015 .05 .08 .94 border 1 bordercolor .30 .78 1 .5
+ action { play "sound/interface/button1.wav" ; close st_ranked_teams ; open multiplayermenu ; } }
+itemDef { name offline rect 255 437 350 22 type 0 text "Ranked connection: not configured" font 2 textscale .73 forecolor .46 .66 .77 1 visible 1 decoration }
+itemDef { name title rect 46 147 548 22 type 0 text "TEAM STANDINGS" font 2 textscale 1 forecolor .30 .78 1 1 visible 1 decoration }
+itemDef { name column0 rect 46 186 50 22 type 0 text "Rank" font 2 textscale .72 forecolor .76 .86 .93 1 visible 1 decoration }
+itemDef { name column1 rect 106 186 235 22 type 0 text "Team / tag" font 2 textscale .72 forecolor .76 .86 .93 1 visible 1 decoration }
+itemDef { name column2 rect 355 186 70 22 type 0 text "Rating" font 2 textscale .72 forecolor .76 .86 .93 1 visible 1 decoration }
+itemDef { name column3 rect 448 186 60 22 type 0 text "W / L" font 2 textscale .72 forecolor .76 .86 .93 1 visible 1 decoration }
+itemDef { name column4 rect 521 186 72 22 type 0 text "Matches" font 2 textscale .72 forecolor .76 .86 .93 1 visible 1 decoration }
+itemDef { name rule rect 46 214 548 1 style 1 backcolor .30 .78 1 .45 border 1 bordercolor .30 .78 1 .38 visible 1 decoration }
+itemDef { name empty rect 46 249 548 22 type 0 text "No standings available" font 2 textscale 1.05 forecolor .90 .96 1 1 visible 1 decoration }
+itemDef { name reason rect 46 281 548 22 type 0 text "The ranking service is not connected." font 2 textscale .83 forecolor .76 .86 .93 1 visible 1 decoration }
+itemDef { name scope rect 46 339 548 22 type 0 text "Only official registered teams enter this ladder." font 2 textscale .73 forecolor .76 .86 .93 1 visible 1 decoration }
+itemDef { name points rect 46 366 548 22 type 0 text "Starting rating: 1000   |   Results and opponent strength decide changes." font 2 textscale .71 forecolor .76 .86 .93 1 visible 1 decoration }
+itemDef { name note rect 46 389 548 22 type 0 text "Rankings appear after verified official results are connected." font 2 textscale .71 forecolor .76 .86 .93 1 visible 1 decoration }
+}
+menuDef { name "st_ranked_servers" rect 0 0 640 480 visible 0 fullscreen 1 popup
+ focusColor 1 1 1 1 disableColor .35 .42 .47 1
+ onOpen { setfocus servers ; } onESC { close st_ranked_servers ; open multiplayermenu ; }
+ itemDef { name arena rect 0 0 640 480 style 3 background "ui/assets/sabertrials/arena.tga" forecolor 1 1 1 1 visible 1 decoration }
+ itemDef { name shade rect 0 0 640 480 style 1 backcolor .004 .015 .028 .55 visible 1 decoration }
+itemDef { name brand rect 28 20 548 22 type 0 text "S A B E R   T R I A L S" font 2 textscale 1.3 forecolor .30 .78 1 1 visible 1 decoration }
+itemDef { name heading rect 28 53 548 22 type 0 text "RANKED PLAY  /  SERVER DIRECTORY" font 2 textscale .9 forecolor .76 .86 .93 1 visible 1 decoration }
+itemDef { name overview rect 28 88 142 30 type 1 text "Overview" font 2 textscale .82
+ textalignx 10 textaligny 6 forecolor .76 .86 .93 1 visible 1
+ style 1 backcolor .015 .05 .08 .94 border 1 bordercolor .30 .78 1 .5
+ action { play "sound/interface/button1.wav" ; close st_ranked_servers ; open st_main_ranked ; } }
+itemDef { name duel rect 174 88 142 30 type 1 text "Duel ladder" font 2 textscale .82
+ textalignx 10 textaligny 6 forecolor .76 .86 .93 1 visible 1
+ style 1 backcolor .015 .05 .08 .94 border 1 bordercolor .30 .78 1 .5
+ action { play "sound/interface/button1.wav" ; close st_ranked_servers ; open st_ranked_duel ; } }
+itemDef { name teams rect 320 88 142 30 type 1 text "Team ladder" font 2 textscale .82
+ textalignx 10 textaligny 6 forecolor .76 .86 .93 1 visible 1
+ style 1 backcolor .015 .05 .08 .94 border 1 bordercolor .30 .78 1 .5
+ action { play "sound/interface/button1.wav" ; close st_ranked_servers ; open st_ranked_teams ; } }
+itemDef { name servers rect 466 88 142 30 type 1 text "Ranked servers" font 2 textscale .82
+ textalignx 10 textaligny 6 forecolor .76 .86 .93 1 visible 1
+ style 1 backcolor .035 .16 .24 1 border 1 bordercolor .30 .78 1 .5
+ action { play "sound/interface/button1.wav" ; setfocus servers ; } }
+itemDef { name content rect 28 130 584 285 style 1 backcolor .008 .026 .044 .96 border 1 bordercolor .30 .78 1 .38 visible 1 decoration }
+itemDef { name back rect 28 431 180 30 type 1 text "Back to Play" font 2 textscale .82
+ textalignx 10 textaligny 6 forecolor .76 .86 .93 1 visible 1
+ style 1 backcolor .015 .05 .08 .94 border 1 bordercolor .30 .78 1 .5
+ action { play "sound/interface/button1.wav" ; close st_ranked_servers ; open multiplayermenu ; } }
+itemDef { name offline rect 255 437 350 22 type 0 text "Ranked connection: not configured" font 2 textscale .73 forecolor .46 .66 .77 1 visible 1 decoration }
+itemDef { name title rect 46 147 548 22 type 0 text "OFFICIAL RANKED SERVERS" font 2 textscale 1 forecolor .30 .78 1 1 visible 1 decoration }
+itemDef { name column0 rect 46 186 220 22 type 0 text "Server" font 2 textscale .72 forecolor .76 .86 .93 1 visible 1 decoration }
+itemDef { name column1 rect 287 186 140 22 type 0 text "Ranked mode" font 2 textscale .72 forecolor .76 .86 .93 1 visible 1 decoration }
+itemDef { name column2 rect 439 186 100 22 type 0 text "Map" font 2 textscale .72 forecolor .76 .86 .93 1 visible 1 decoration }
+itemDef { name column3 rect 533 186 65 22 type 0 text "Players" font 2 textscale .72 forecolor .76 .86 .93 1 visible 1 decoration }
+itemDef { name rule rect 46 214 548 1 style 1 backcolor .30 .78 1 .45 border 1 bordercolor .30 .78 1 .38 visible 1 decoration }
+itemDef { name empty rect 46 244 548 22 type 0 text "No official servers listed" font 2 textscale 1.05 forecolor .90 .96 1 1 visible 1 decoration }
+itemDef { name reason rect 46 276 548 22 type 0 text "The ranked server directory is not connected yet." font 2 textscale .8 forecolor .76 .86 .93 1 visible 1 decoration }
+itemDef { name modes rect 46 315 548 22 type 0 text "Supports Ranked Duel, Ranked TFFA and FFA challenge servers." font 2 textscale .71 forecolor .76 .86 .93 1 visible 1 decoration }
+itemDef { name note rect 46 337 548 22 type 0 text "Installing the mod alone does not make a server official." font 2 textscale .73 forecolor .76 .86 .93 1 visible 1 decoration }
+itemDef { name browse rect 46 369 300 30 type 1 text "Browse unranked servers" font 2 textscale .82
+ textalignx 10 textaligny 6 forecolor .76 .86 .93 1 visible 1
+ style 1 backcolor .015 .05 .08 .94 border 1 bordercolor .30 .78 1 .5
+ action { play "sound/interface/button1.wav" ; close st_ranked_servers ; open joinserver ; } }
+}
+menuDef { name "st_main_account" rect 80 115 480 230 visible 0 fullscreen 0 popup
+ focusColor 1 1 1 1 onESC { close st_main_account ; } onOpen { setfocus back ; }
+ itemDef { name panel rect 0 0 480 230 style 1 backcolor .008 .026 .044 .97 border 1 bordercolor .22 .49 .64 .8 visible 1 decoration }
+itemDef { name title rect 18 12 550 20 type 0 text "SABER TRIALS / ACCOUNT" font 2 textscale .95 forecolor .76 .86 .93 1 visible 1 decoration }
+itemDef { name name rect 20 48 440 20 type 0 cvar "ui_stAccountName" font 2 textscale .92 forecolor .76 .86 .93 1 visible 1 decoration }
+itemDef { name team rect 20 77 440 20 type 0 cvar "ui_stAccountTeam" font 2 textscale .68 forecolor .76 .86 .93 1 visible 1 decoration }
+itemDef { name status rect 20 106 440 20 type 0 cvar "ui_stAccountStatus" font 2 textscale .68 forecolor .76 .86 .93 1 visible 1 decoration }
+itemDef { name notice rect 20 136 440 20 type 0 text "Server tournament verification is coming next." font 2 textscale .65 forecolor .76 .86 .93 1 visible 1 decoration }
+itemDef { name login rect 20 181 205 26 type 1 text "Log in with Discord" font 2 textscale .72
+ forecolor .76 .86 .93 1 visible 1 cvarTest "ui_stAccountCanLogin" showCvar { "1" }
+ action { play "sound/interface/button1.wav" ; exec "login" ; } }
+itemDef { name logout rect 235 181 145 26 type 1 text "Log out / Cancel" font 2 textscale .72
+ forecolor .76 .86 .93 1 visible 1 cvarTest "ui_stAccountCanLogout" showCvar { "1" }
+ action { play "sound/interface/button1.wav" ; exec "logout" ; } }
+itemDef { name back rect 390 181 70 26 type 1 text "Back" font 2 textscale .72
+ forecolor .76 .86 .93 1 visible 1 
+ action { play "sound/interface/button1.wav" ; close st_main_account ; } }
+}
+}

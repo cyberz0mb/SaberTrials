@@ -1,0 +1,667 @@
+{
+menuDef { name "multiplayermenu" rect 0 0 640 480 visible 0 fullscreen 1
+ focusColor 1 1 1 1 disableColor .35 .42 .47 1
+ onOpen { setfocus joinserver_button ; } onESC { close multiplayermenu ; open mainMenu ; }
+itemDef { name "arena" rect 0 0 640 480 style 3 background "ui/assets/sabertrials/arena.tga" forecolor 1 1 1 1 visible 1 decoration  }
+itemDef { name "shade" rect 0 0 640 480 style 1 backcolor .005 .018 .032 .27 visible 1 decoration  }
+itemDef { name "brand_line" rect 155 24 425 1 style 1 backcolor .22 .64 .93 .8 visible 1 decoration  }
+itemDef { name "starwars" type 0 rect 135 34 460 22 text "STAR WARS" font 3 textscale 2.3 textalign 1 textalignx 230.0 textaligny 0 forecolor .85 .93 1 1 visible 1 decoration  }
+itemDef { name "brand" type 0 rect 135 98 460 22 text "S A B E R   T R I A L S" font 3 textscale 0.97 textalign 1 textalignx 230.0 textaligny 0 forecolor .30 .78 1 1 visible 1 decoration  }
+itemDef { name "multiplayer" type 0 rect 135 135 460 22 text "M U L T I P L A Y E R" font 4 textscale 0.66 textalign 1 textalignx 230.0 textaligny 0 forecolor .76 .86 .93 1 visible 1 decoration  }
+itemDef { name "rail" rect 18 172 195 290 style 3 background "ui/assets/sabertrials/pause_rail" forecolor 1 1 1 1 visible 1 decoration  }
+itemDef { name "rail_edge" rect 18.0 172.0 1.0 290.0 style 3 background "ui/assets/sabertrials/pause_edge" forecolor 1 1 1 1 visible 1 decoration  }
+itemDef { name "section" type 0 rect 242 190 350 22 text "PLAY" font 3 textscale 1.3 textalign 0 textalignx 0 textaligny 0 forecolor .30 .78 1 1 visible 1 decoration  }
+itemDef { name "subtitle" type 0 rect 242 225 350 22 text "Choose your arena." font 2 textscale 0.95 textalign 0 textalignx 0 textaligny 0 forecolor .76 .86 .93 1 visible 1 decoration  }
+itemDef { name "rank_note" type 0 rect 242 401 350 22 text "Ranked services are coming soon." font 2 textscale 0.76 textalign 0 textalignx 0 textaligny 0 forecolor .76 .86 .93 1 visible 1 decoration  }
+itemDef { name "focus_glow" rect 0 0 1 1 style 3 background "ui/assets/sabertrials/pause_focus" forecolor 1 1 1 1 visible 0 decoration group focus }
+itemDef { name "joinserver_button_line" rect 20.0 211 192.0 0.5 style 3 background "ui/assets/sabertrials/pause_line" forecolor 1 1 1 1 visible 1 decoration  }
+itemDef { name "joinserver_button_icon" rect 32 186 20 20 style 3 background "ui/assets/sabertrials/join" forecolor 1 1 1 1 visible 1 decoration  }
+itemDef { name "joinserver_button" rect 20 180 192 32 type 1 style 0 text "Find a server"
+ font 2 textscale .85 textalignx 48 textaligny 6.0
+ forecolor .76 .86 .93 1 visible 1
+ onFocus { show focus_glow ; setitemrect focus_glow 20 180 192 32 ; }
+ leaveFocus { hide focus_glow ; }
+ action { play "sound/interface/button1.wav" ; close multiplayermenu ; open joinserver ; }  }
+itemDef { name "startserver_button_line" rect 20.0 245 192.0 0.5 style 3 background "ui/assets/sabertrials/pause_line" forecolor 1 1 1 1 visible 1 decoration  }
+itemDef { name "startserver_button_icon" rect 32 220 20 20 style 3 background "ui/assets/sabertrials/settings" forecolor 1 1 1 1 visible 1 decoration  }
+itemDef { name "startserver_button" rect 20 214 192 32 type 1 style 0 text "Host a match"
+ font 2 textscale .85 textalignx 48 textaligny 6.0
+ forecolor .76 .86 .93 1 visible 1
+ onFocus { show focus_glow ; setitemrect focus_glow 20 214 192 32 ; }
+ leaveFocus { hide focus_glow ; }
+ action { play "sound/interface/button1.wav" ; close multiplayermenu ; open createserver ; }  }
+itemDef { name "quickserver_button_line" rect 20.0 279 192.0 0.5 style 3 background "ui/assets/sabertrials/pause_line" forecolor 1 1 1 1 visible 1 decoration  }
+itemDef { name "quickserver_button_icon" rect 32 254 20 20 style 3 background "ui/assets/sabertrials/play" forecolor 1 1 1 1 visible 1 decoration  }
+itemDef { name "quickserver_button" rect 20 248 192 32 type 1 style 0 text "Solo match"
+ font 2 textscale .85 textalignx 48 textaligny 6.0
+ forecolor .76 .86 .93 1 visible 1
+ onFocus { show focus_glow ; setitemrect focus_glow 20 248 192 32 ; }
+ leaveFocus { hide focus_glow ; }
+ action { play "sound/interface/button1.wav" ; close multiplayermenu ; open quickgame ; }  }
+itemDef { name "playdemo_button_line" rect 20.0 313 192.0 0.5 style 3 background "ui/assets/sabertrials/pause_line" forecolor 1 1 1 1 visible 1 decoration  }
+itemDef { name "playdemo_button_icon" rect 32 288 20 20 style 3 background "ui/assets/sabertrials/camera" forecolor 1 1 1 1 visible 1 decoration  }
+itemDef { name "playdemo_button" rect 20 282 192 32 type 1 style 0 text "Recordings"
+ font 2 textscale .85 textalignx 48 textaligny 6.0
+ forecolor .76 .86 .93 1 visible 1
+ onFocus { show focus_glow ; setitemrect focus_glow 20 282 192 32 ; }
+ leaveFocus { hide focus_glow ; }
+ action { play "sound/interface/button1.wav" ; close multiplayermenu ; open demo ; }  }
+itemDef { name "ranked_line" rect 20.0 347 192.0 0.5 style 3 background "ui/assets/sabertrials/pause_line" forecolor 1 1 1 1 visible 1 decoration  }
+itemDef { name "ranked_icon" rect 32 322 20 20 style 3 background "ui/assets/sabertrials/rank" forecolor 1 1 1 1 visible 1 decoration  }
+itemDef { name "ranked" rect 20 316 192 32 type 1 style 0 text "Ranked Play"
+ font 2 textscale .85 textalignx 48 textaligny 6.0
+ forecolor .76 .86 .93 1 visible 1
+ onFocus { show focus_glow ; setitemrect focus_glow 20 316 192 32 ; }
+ leaveFocus { hide focus_glow ; }
+ action { play "sound/interface/button1.wav" ; close multiplayermenu ; open st_main_ranked ; }  }
+itemDef { name "tournament_line" rect 20.0 381 192.0 0.5 style 3 background "ui/assets/sabertrials/pause_line" forecolor 1 1 1 1 visible 1 decoration  }
+itemDef { name "tournament_icon" rect 32 356 20 20 style 3 background "ui/assets/sabertrials/trophy" forecolor 1 1 1 1 visible 1 decoration  }
+itemDef { name "tournament" rect 20 350 192 32 type 1 style 0 text "Tournament"
+ font 2 textscale .85 textalignx 48 textaligny 6.0
+ forecolor .76 .86 .93 1 visible 1
+ onFocus { show focus_glow ; setitemrect focus_glow 20 350 192 32 ; }
+ leaveFocus { hide focus_glow ; }
+ action { play "sound/interface/button1.wav" ; close multiplayermenu ; open st_main_tournament ; }  }
+itemDef { name "rules_button_line" rect 20.0 415 192.0 0.5 style 3 background "ui/assets/sabertrials/pause_line" forecolor 1 1 1 1 visible 1 decoration  }
+itemDef { name "rules_button_icon" rect 32 390 20 20 style 3 background "ui/assets/sabertrials/info" forecolor 1 1 1 1 visible 1 decoration  }
+itemDef { name "rules_button" rect 20 384 192 32 type 1 style 0 text "Game rules"
+ font 2 textscale .85 textalignx 48 textaligny 6.0
+ forecolor .76 .86 .93 1 visible 1
+ onFocus { show focus_glow ; setitemrect focus_glow 20 384 192 32 ; }
+ leaveFocus { hide focus_glow ; }
+ action { play "sound/interface/button1.wav" ; close multiplayermenu ; open rulesMenu ; }  }
+itemDef { name "back_line" rect 20.0 457 192.0 0.5 style 3 background "ui/assets/sabertrials/pause_line" forecolor 1 1 1 1 visible 1 decoration  }
+itemDef { name "back" rect 20 430 192 28 type 1 style 0 text "Back"
+ font 2 textscale .85 textalignx 14 textaligny 4.0
+ forecolor .76 .86 .93 1 visible 1
+ onFocus { show focus_glow ; setitemrect focus_glow 20 430 192 28 ; }
+ leaveFocus { hide focus_glow ; }
+ action { play "sound/interface/button1.wav" ; close multiplayermenu ; open mainMenu ; } textscale .8 }
+
+}
+menuDef { name "st_main_tournament" rect 0 0 640 480 visible 0 fullscreen 1
+ focusColor 1 1 1 1 disableColor .35 .42 .47 1
+ onOpen { setfocus individual ; } onESC { close st_main_tournament ; open multiplayermenu ; }
+ itemDef { name arena rect 0 0 640 480 style 3 background "ui/assets/sabertrials/arena.tga" forecolor 1 1 1 1 visible 1 decoration }
+ itemDef { name shade rect 0 0 640 480 style 1 backcolor .004 .015 .028 .60 visible 1 decoration }
+itemDef { name brand rect 28 20 550 22 type 0 text "S A B E R   T R I A L S" font 2 textscale 1.15 forecolor .30 .78 1 1 visible 1 decoration  }
+itemDef { name heading rect 28 57 550 22 type 0 text "TOURNAMENT  /  SELECT A FORMAT" font 2 textscale .86 forecolor .76 .86 .93 1 visible 1 decoration  }
+itemDef { name preview rect 482 28 140 22 type 0 text "VISUAL PREVIEW" font 2 textscale .62 forecolor .53 .77 .9 1 visible 1 decoration  }
+itemDef { name sample rect 212 441 400 22 type 0 text "Sample players and events. No live registration or match starts." font 2 textscale .58 forecolor .57 .72 .81 1 visible 1 decoration  }
+itemDef { name back rect 28 434 171 30 type 1 text "Back to Play" font 2 textscale .78
+ textalignx 10 textaligny 6 forecolor .76 .86 .93 1 visible 1 
+ style 1 backcolor .015 .055 .08 .94 border 1 bordersize .5 bordercolor .30 .78 1 .5
+ onFocus { setitemcolor back backcolor .035 .19 .28 .98 ; }
+ leaveFocus { setitemcolor back backcolor .015 .055 .08 .94 ; }
+ action { play "sound/interface/button1.wav" ; close st_main_tournament ; open multiplayermenu ; } }
+itemDef { name intro rect 28 98 584 22 type 0 text "Choose a format to preview its tournament lobby." font 4 textscale .79 forecolor .76 .86 .93 1 visible 1 decoration  }
+itemDef { name format28 rect 28 140 286 271 style 1 backcolor .008 .026 .044 .94 border 1 bordersize .5 bordercolor .30 .78 1 .4 visible 1 decoration }
+itemDef { name emblem28 rect 46 159 22 22 style 3 background "ui/assets/sabertrials/player" forecolor .40 .80 1 1 visible 1 decoration }
+itemDef { name name28 rect 80 158 210 22 type 0 text "INDIVIDUAL" font 4 textscale .95 forecolor .30 .78 1 1 visible 1 decoration  }
+itemDef { name formatline28 rect 46 191 250 .5 style 1 backcolor .30 .55 .65 .35 visible 1 decoration }
+itemDef { name format326 rect 326 140 286 271 style 1 backcolor .008 .026 .044 .94 border 1 bordersize .5 bordercolor .30 .78 1 .4 visible 1 decoration }
+itemDef { name emblem326 rect 344 159 22 22 style 3 background "ui/assets/sabertrials/join" forecolor .40 .80 1 1 visible 1 decoration }
+itemDef { name name326 rect 378 158 210 22 type 0 text "TEAMS" font 4 textscale .95 forecolor .30 .78 1 1 visible 1 decoration  }
+itemDef { name formatline326 rect 344 191 250 .5 style 1 backcolor .30 .55 .65 .35 visible 1 decoration }
+itemDef { name ruleA0 rect 46 207 250 22 type 0 text "8-32 players / even entries" font 4 textscale .75 forecolor .76 .86 .93 1 visible 1 decoration  }
+itemDef { name ruleA1 rect 46 236 250 22 type 0 text "10 rounds per match" font 4 textscale .75 forecolor .76 .86 .93 1 visible 1 decoration  }
+itemDef { name ruleA2 rect 46 265 250 22 type 0 text "5-5 tie: one deciding round" font 4 textscale .75 forecolor .76 .86 .93 1 visible 1 decoration  }
+itemDef { name ruleA3 rect 46 294 250 22 type 0 text "5 minutes to reconnect" font 4 textscale .75 forecolor .76 .86 .93 1 visible 1 decoration  }
+itemDef { name individual rect 46 359 250 30 type 1 text "Enter individual lobby" font 2 textscale .71
+ textalignx 10 textaligny 6 forecolor .76 .86 .93 1 visible 1 
+ style 1 backcolor .015 .055 .08 .94 border 0
+ onFocus { setitemcolor individual backcolor .035 .19 .28 .98 ; }
+ leaveFocus { setitemcolor individual backcolor .015 .055 .08 .94 ; }
+ action { play "sound/interface/button1.wav" ; exec "exec st-tournament-preview-individual.cfg" ; close st_main_tournament ; open st_tournament_ready ; } }
+itemDef { name ruleB0 rect 344 207 250 22 type 0 text "Up to 8 registered teams" font 4 textscale .71 forecolor .76 .86 .93 1 visible 1 decoration  }
+itemDef { name ruleB1 rect 344 231 250 22 type 0 text "One TFFA match / respawns" font 4 textscale .71 forecolor .76 .86 .93 1 visible 1 decoration  }
+itemDef { name ruleB2 rect 344 255 250 22 type 0 text "Equal, complete lineups required" font 4 textscale .71 forecolor .76 .86 .93 1 visible 1 decoration  }
+itemDef { name team2 rect 344 288 122 30 type 1 text "2v2 / 20 kills" font 2 textscale .71
+ textalignx 10 textaligny 6 forecolor .76 .86 .93 1 visible 1 
+ style 1 backcolor .015 .055 .08 .94 border 0
+ onFocus { setitemcolor team2 backcolor .035 .19 .28 .98 ; }
+ leaveFocus { setitemcolor team2 backcolor .015 .055 .08 .94 ; }
+ action { play "sound/interface/button1.wav" ; exec "exec st-tournament-preview-2v2.cfg" ; close st_main_tournament ; open st_tournament_ready ; } }
+itemDef { name team3 rect 472 288 122 30 type 1 text "3v3 / 30 kills" font 2 textscale .71
+ textalignx 10 textaligny 6 forecolor .76 .86 .93 1 visible 1 
+ style 1 backcolor .015 .055 .08 .94 border 0
+ onFocus { setitemcolor team3 backcolor .035 .19 .28 .98 ; }
+ leaveFocus { setitemcolor team3 backcolor .015 .055 .08 .94 ; }
+ action { play "sound/interface/button1.wav" ; exec "exec st-tournament-preview-3v3.cfg" ; close st_main_tournament ; open st_tournament_ready ; } }
+itemDef { name team4 rect 344 324 122 30 type 1 text "4v4 / 40 kills" font 2 textscale .71
+ textalignx 10 textaligny 6 forecolor .76 .86 .93 1 visible 1 
+ style 1 backcolor .015 .055 .08 .94 border 0
+ onFocus { setitemcolor team4 backcolor .035 .19 .28 .98 ; }
+ leaveFocus { setitemcolor team4 backcolor .015 .055 .08 .94 ; }
+ action { play "sound/interface/button1.wav" ; exec "exec st-tournament-preview-4v4.cfg" ; close st_main_tournament ; open st_tournament_ready ; } }
+itemDef { name team5 rect 472 324 122 30 type 1 text "5v5 / 50 kills" font 2 textscale .71
+ textalignx 10 textaligny 6 forecolor .76 .86 .93 1 visible 1 
+ style 1 backcolor .015 .055 .08 .94 border 0
+ onFocus { setitemcolor team5 backcolor .035 .19 .28 .98 ; }
+ leaveFocus { setitemcolor team5 backcolor .015 .055 .08 .94 ; }
+ action { play "sound/interface/button1.wav" ; exec "exec st-tournament-preview-5v5.cfg" ; close st_main_tournament ; open st_tournament_ready ; } }
+itemDef { name reconnect rect 344 367 250 22 type 0 text "10 minutes: reconnect or substitute" font 4 textscale .64 forecolor .76 .86 .93 1 visible 1 decoration  }
+itemDef { name readyhint rect 344 388 250 22 type 0 text "Every active player selects Ready." font 4 textscale .64 forecolor .76 .86 .93 1 visible 1 decoration  }
+}
+menuDef { name "st_tournament_ready" rect 0 0 640 480 visible 0 fullscreen 1
+ focusColor 1 1 1 1 disableColor .35 .42 .47 1
+ onOpen { setfocus ready ; } onESC { close st_tournament_ready ; open st_main_tournament ; }
+ itemDef { name arena rect 0 0 640 480 style 3 background "ui/assets/sabertrials/arena.tga" forecolor 1 1 1 1 visible 1 decoration }
+ itemDef { name shade rect 0 0 640 480 style 1 backcolor .004 .015 .028 .60 visible 1 decoration }
+itemDef { name brand rect 28 20 550 22 type 0 text "S A B E R   T R I A L S" font 2 textscale 1.15 forecolor .30 .78 1 1 visible 1 decoration  }
+itemDef { name heading rect 28 57 550 22 type 0 text "TOURNAMENT  /  READY ROOM" font 2 textscale .86 forecolor .76 .86 .93 1 visible 1 decoration  }
+itemDef { name preview rect 482 28 140 22 type 0 text "VISUAL PREVIEW" font 2 textscale .62 forecolor .53 .77 .9 1 visible 1 decoration  }
+itemDef { name sample rect 212 441 400 22 type 0 text "Sample players and events. No live registration or match starts." font 2 textscale .58 forecolor .57 .72 .81 1 visible 1 decoration  }
+itemDef { name back rect 28 434 171 30 type 1 text "Select tournament" font 2 textscale .78
+ textalignx 10 textaligny 6 forecolor .76 .86 .93 1 visible 1 
+ style 1 backcolor .015 .055 .08 .94 border 1 bordersize .5 bordercolor .30 .78 1 .5
+ onFocus { setitemcolor back backcolor .035 .19 .28 .98 ; }
+ leaveFocus { setitemcolor back backcolor .015 .055 .08 .94 ; }
+ action { play "sound/interface/button1.wav" ; close st_tournament_ready ; open st_main_tournament ; } }
+itemDef { name event rect 28 96 584 22 type 0 cvar "ui_stFrontEvent" font 4 textscale .91 forecolor .30 .78 1 1 visible 1 decoration  }
+itemDef { name entries rect 28 122 584 22 type 0 cvar "ui_stFrontEntries" font 4 textscale .66 forecolor .76 .86 .93 1 visible 1 decoration  }
+itemDef { name versus rect 310 228 26 22 type 0 text "VS" font 4 textscale .95 forecolor .30 .78 1 1 visible 1 decoration  }
+itemDef { name roster0 rect 28 153 272 199 style 1 backcolor .008 .026 .044 .94 border 1 bordersize .5 bordercolor .30 .78 1 .4 visible 1 decoration }
+itemDef { name emblem0 rect 42 167 22 22 style 3 background "ui/assets/sabertrials/join" forecolor .40 .80 1 1 visible 1 decoration }
+itemDef { name team0 rect 73 165 213 22 type 0 cvar "ui_stFrontSide0" font 4 textscale .80 forecolor .9 .96 1 1 visible 1 decoration  }
+itemDef { name rosterline0 rect 42 214 244 .5 style 1 backcolor .30 .55 .65 .35 visible 1 decoration }
+itemDef { name count0 rect 42 193 244 22 type 0 cvar "ui_stFrontCount0" font 4 textscale .63 forecolor .76 .86 .93 1 visible 1 decoration cvarTest "ui_stFrontReady" showCvar { "0" } }
+itemDef { name count1 rect 42 193 244 22 type 0 cvar "ui_stFrontCount1" font 4 textscale .63 forecolor .76 .86 .93 1 visible 1 decoration cvarTest "ui_stFrontReady" showCvar { "1" } }
+itemDef { name count2 rect 42 193 244 22 type 0 cvar "ui_stFrontCount2" font 4 textscale .63 forecolor .76 .86 .93 1 visible 1 decoration cvarTest "ui_stFrontReady" showCvar { "2" } }
+itemDef { name you0 rect 42 223 244 22 type 0 text "[ ] You / Waiting" font 4 textscale .71 forecolor .96 .8 .47 1 visible 1 decoration cvarTest "ui_stFrontReady" showCvar { "0" } }
+itemDef { name you1 rect 42 223 244 22 type 0 text "[+] You / READY" font 4 textscale .71 forecolor .42 .87 .77 1 visible 1 decoration cvarTest "ui_stFrontReady" showCvar { "1" } }
+itemDef { name you2 rect 42 223 244 22 type 0 text "[ ] You / Waiting" font 4 textscale .71 forecolor .96 .8 .47 1 visible 1 decoration cvarTest "ui_stFrontReady" showCvar { "2" } }
+itemDef { name row01 rect 42 247 244 22 type 0 cvar "ui_stFrontRow1" font 4 textscale .71 forecolor .76 .86 .93 1 visible 1 decoration cvarTest "ui_stFrontReady" showCvar { 0 ; 1 } }
+itemDef { name row01offline rect 42 247 244 22 type 0 text "[!] Mira / Disconnected" font 4 textscale .71 forecolor 1 .55 .44 1 visible 1 decoration cvarTest "ui_stFrontReady" showCvar { "2" } }
+itemDef { name row02 rect 42 271 244 22 type 0 cvar "ui_stFrontRow2" font 4 textscale .71 forecolor .76 .86 .93 1 visible 1 decoration  }
+itemDef { name row03 rect 42 295 244 22 type 0 cvar "ui_stFrontRow3" font 4 textscale .71 forecolor .76 .86 .93 1 visible 1 decoration  }
+itemDef { name row04 rect 42 319 244 22 type 0 cvar "ui_stFrontRow4" font 4 textscale .71 forecolor .76 .86 .93 1 visible 1 decoration  }
+itemDef { name roster1 rect 340 153 272 199 style 1 backcolor .008 .026 .044 .94 border 1 bordersize .5 bordercolor .30 .78 1 .4 visible 1 decoration }
+itemDef { name emblem1 rect 354 167 22 22 style 3 background "ui/assets/sabertrials/join" forecolor .40 .80 1 1 visible 1 decoration }
+itemDef { name team1 rect 385 165 213 22 type 0 cvar "ui_stFrontSide1" font 4 textscale .80 forecolor .9 .96 1 1 visible 1 decoration  }
+itemDef { name rosterline1 rect 354 214 244 .5 style 1 backcolor .30 .55 .65 .35 visible 1 decoration }
+itemDef { name opponentcount rect 354 193 244 22 type 0 cvar "ui_stFrontOpponentCount" font 4 textscale .63 forecolor .76 .86 .93 1 visible 1 decoration  }
+itemDef { name row10 rect 354 223 244 22 type 0 cvar "ui_stFrontRow5" font 4 textscale .71 forecolor .76 .86 .93 1 visible 1 decoration  }
+itemDef { name row11 rect 354 247 244 22 type 0 cvar "ui_stFrontRow6" font 4 textscale .71 forecolor .76 .86 .93 1 visible 1 decoration  }
+itemDef { name row12 rect 354 271 244 22 type 0 cvar "ui_stFrontRow7" font 4 textscale .71 forecolor .76 .86 .93 1 visible 1 decoration  }
+itemDef { name row13 rect 354 295 244 22 type 0 cvar "ui_stFrontRow8" font 4 textscale .71 forecolor .76 .86 .93 1 visible 1 decoration  }
+itemDef { name row14 rect 354 319 244 22 type 0 cvar "ui_stFrontRow9" font 4 textscale .71 forecolor .76 .86 .93 1 visible 1 decoration  }
+itemDef { name waiting rect 28 361 584 22 type 0 text "[ ] Waiting for you. Click Ready when prepared." font 4 textscale .72 forecolor .76 .86 .93 1 visible 1 decoration cvarTest "ui_stFrontReady" showCvar { "0" } }
+itemDef { name allready rect 28 361 584 22 type 0 text "[+] Everyone is ready. Sample lobby: no match will start." font 4 textscale .72 forecolor .42 .87 .77 1 visible 1 decoration cvarTest "ui_stFrontReady" showCvar { "1" } }
+itemDef { name disconnected rect 28 361 584 22 type 0 text "[!] Match paused / missing teammate. Reconnect window: 10:00 (sample)." font 4 textscale .68 forecolor 1 .55 .44 1 visible 1 decoration cvarTest "ui_stFrontReady" showCvar { "2" } }
+itemDef { name ready rect 28 391 108 30 type 1 text "Ready" font 2 textscale .71
+ textalignx 10 textaligny 6 forecolor .76 .86 .93 1 visible 1 cvarTest "ui_stFrontReady" showCvar { "0" }
+ style 1 backcolor .015 .055 .08 .94 border 0
+ onFocus { setitemcolor ready backcolor .035 .19 .28 .98 ; }
+ leaveFocus { setitemcolor ready backcolor .015 .055 .08 .94 ; }
+ action { play "sound/interface/button1.wav" ; setcvar ui_stFrontReady "1" ; setcvar st_uiPresentationNotice "Preview: ready selected." ; setfocus unready ; } }
+itemDef { name unready rect 28 391 108 30 type 1 text "Unready" font 2 textscale .71
+ textalignx 10 textaligny 6 forecolor .76 .86 .93 1 visible 1 cvarTest "ui_stFrontReady" showCvar { "1" }
+ style 1 backcolor .015 .055 .08 .94 border 0
+ onFocus { setitemcolor unready backcolor .035 .19 .28 .98 ; }
+ leaveFocus { setitemcolor unready backcolor .015 .055 .08 .94 ; }
+ action { play "sound/interface/button1.wav" ; setcvar ui_stFrontReady "0" ; setcvar st_uiPresentationNotice "Preview: ready cleared." ; setfocus ready ; } }
+itemDef { name reconnect rect 28 391 108 30 type 1 text "Reset preview" font 2 textscale .71
+ textalignx 10 textaligny 6 forecolor .76 .86 .93 1 visible 1 cvarTest "ui_stFrontReady" showCvar { "2" }
+ style 1 backcolor .015 .055 .08 .94 border 0
+ onFocus { setitemcolor reconnect backcolor .035 .19 .28 .98 ; }
+ leaveFocus { setitemcolor reconnect backcolor .015 .055 .08 .94 ; }
+ action { play "sound/interface/button1.wav" ; setcvar ui_stFrontReady "0" ; setfocus ready ; } }
+itemDef { name bracket rect 146 391 112 30 type 1 text "Bracket" font 2 textscale .71
+ textalignx 10 textaligny 6 forecolor .76 .86 .93 1 visible 1 
+ style 1 backcolor .015 .055 .08 .94 border 0
+ onFocus { setitemcolor bracket backcolor .035 .19 .28 .98 ; }
+ leaveFocus { setitemcolor bracket backcolor .015 .055 .08 .94 ; }
+ action { play "sound/interface/button1.wav" ; close st_tournament_ready ; open st_tournament_bracket1 ; } }
+itemDef { name result rect 264 391 112 30 type 1 text "Result preview" font 2 textscale .71
+ textalignx 10 textaligny 6 forecolor .76 .86 .93 1 visible 1 
+ style 1 backcolor .015 .055 .08 .94 border 0
+ onFocus { setitemcolor result backcolor .035 .19 .28 .98 ; }
+ leaveFocus { setitemcolor result backcolor .015 .055 .08 .94 ; }
+ action { play "sound/interface/button1.wav" ; close st_tournament_ready ; open st_tournament_result ; } }
+itemDef { name reserves rect 382 391 112 30 type 1 text "Reserves" font 2 textscale .71
+ textalignx 10 textaligny 6 forecolor .76 .86 .93 1 visible 1 cvarTest "ui_stFrontTeam" showCvar { "1" }
+ style 1 backcolor .015 .055 .08 .94 border 0
+ onFocus { setitemcolor reserves backcolor .035 .19 .28 .98 ; }
+ leaveFocus { setitemcolor reserves backcolor .015 .055 .08 .94 ; }
+ action { play "sound/interface/button1.wav" ; close st_tournament_ready ; open st_tournament_reserves ; } }
+itemDef { name leave rect 500 391 112 30 type 1 text "Leave lobby" font 2 textscale .71
+ textalignx 10 textaligny 6 forecolor .76 .86 .93 1 visible 1 
+ style 1 backcolor .015 .055 .08 .94 border 0
+ onFocus { setitemcolor leave backcolor .035 .19 .28 .98 ; }
+ leaveFocus { setitemcolor leave backcolor .015 .055 .08 .94 ; }
+ action { play "sound/interface/button1.wav" ; close st_tournament_ready ; open st_tournament_leave ; } }
+}
+menuDef { name "st_tournament_bracket1" rect 0 0 640 480 visible 0 fullscreen 1
+ focusColor 1 1 1 1 disableColor .35 .42 .47 1
+ onOpen { setfocus back ; } onESC { close st_tournament_bracket1 ; open st_tournament_ready ; }
+ itemDef { name arena rect 0 0 640 480 style 3 background "ui/assets/sabertrials/arena.tga" forecolor 1 1 1 1 visible 1 decoration }
+ itemDef { name shade rect 0 0 640 480 style 1 backcolor .004 .015 .028 .60 visible 1 decoration }
+itemDef { name brand rect 28 20 550 22 type 0 text "S A B E R   T R I A L S" font 2 textscale 1.15 forecolor .30 .78 1 1 visible 1 decoration  }
+itemDef { name heading rect 28 57 550 22 type 0 text "TOURNAMENT  /  BRACKET" font 2 textscale .86 forecolor .76 .86 .93 1 visible 1 decoration  }
+itemDef { name preview rect 482 28 140 22 type 0 text "VISUAL PREVIEW" font 2 textscale .62 forecolor .53 .77 .9 1 visible 1 decoration  }
+itemDef { name sample rect 212 441 400 22 type 0 text "Sample players and events. No live registration or match starts." font 2 textscale .58 forecolor .57 .72 .81 1 visible 1 decoration  }
+itemDef { name back rect 28 434 171 30 type 1 text "Back to ready room" font 2 textscale .78
+ textalignx 10 textaligny 6 forecolor .76 .86 .93 1 visible 1 
+ style 1 backcolor .015 .055 .08 .94 border 1 bordersize .5 bordercolor .30 .78 1 .5
+ onFocus { setitemcolor back backcolor .035 .19 .28 .98 ; }
+ leaveFocus { setitemcolor back backcolor .015 .055 .08 .94 ; }
+ action { play "sound/interface/button1.wav" ; close st_tournament_bracket1 ; open st_tournament_ready ; } }
+itemDef { name stage rect 28 98 584 22 type 0 cvar "ui_stFrontBracketHeading1" font 4 textscale .82 forecolor .30 .78 1 1 visible 1 decoration  }
+itemDef { name card0 rect 28 139 272 46 style 1 backcolor .008 .026 .044 .94 border 1 bordersize .5 bordercolor .30 .78 1 .4 visible 1 decoration cvarTest "ui_stFrontTeam" showCvar { "0" } }
+itemDef { name matchlabel0 rect 38 143 252 22 type 0 cvar "ui_stCardTitle0" font 4 textscale .53 forecolor .30 .78 1 1 visible 1 decoration cvarTest "ui_stFrontTeam" showCvar { "0" }  }
+itemDef { name pairA0 rect 38 156 252 22 type 0 cvar "ui_stCardA0" font 4 textscale .68 forecolor .76 .86 .93 1 visible 1 decoration cvarTest "ui_stFrontTeam" showCvar { "0" }  }
+itemDef { name pairB0 rect 38 169 252 22 type 0 cvar "ui_stCardB0" font 4 textscale .68 forecolor .76 .86 .93 1 visible 1 decoration cvarTest "ui_stFrontTeam" showCvar { "0" }  }
+itemDef { name card1 rect 340 139 272 46 style 1 backcolor .008 .026 .044 .94 border 1 bordersize .5 bordercolor .30 .78 1 .4 visible 1 decoration cvarTest "ui_stFrontTeam" showCvar { "0" } }
+itemDef { name matchlabel1 rect 350 143 252 22 type 0 cvar "ui_stCardTitle1" font 4 textscale .53 forecolor .30 .78 1 1 visible 1 decoration cvarTest "ui_stFrontTeam" showCvar { "0" }  }
+itemDef { name pairA1 rect 350 156 252 22 type 0 cvar "ui_stCardA1" font 4 textscale .68 forecolor .76 .86 .93 1 visible 1 decoration cvarTest "ui_stFrontTeam" showCvar { "0" }  }
+itemDef { name pairB1 rect 350 169 252 22 type 0 cvar "ui_stCardB1" font 4 textscale .68 forecolor .76 .86 .93 1 visible 1 decoration cvarTest "ui_stFrontTeam" showCvar { "0" }  }
+itemDef { name card2 rect 28 196 272 46 style 1 backcolor .008 .026 .044 .94 border 1 bordersize .5 bordercolor .30 .78 1 .4 visible 1 decoration cvarTest "ui_stFrontTeam" showCvar { "0" } }
+itemDef { name matchlabel2 rect 38 200 252 22 type 0 cvar "ui_stCardTitle2" font 4 textscale .53 forecolor .30 .78 1 1 visible 1 decoration cvarTest "ui_stFrontTeam" showCvar { "0" }  }
+itemDef { name pairA2 rect 38 213 252 22 type 0 cvar "ui_stCardA2" font 4 textscale .68 forecolor .76 .86 .93 1 visible 1 decoration cvarTest "ui_stFrontTeam" showCvar { "0" }  }
+itemDef { name pairB2 rect 38 226 252 22 type 0 cvar "ui_stCardB2" font 4 textscale .68 forecolor .76 .86 .93 1 visible 1 decoration cvarTest "ui_stFrontTeam" showCvar { "0" }  }
+itemDef { name card3 rect 340 196 272 46 style 1 backcolor .008 .026 .044 .94 border 1 bordersize .5 bordercolor .30 .78 1 .4 visible 1 decoration cvarTest "ui_stFrontTeam" showCvar { "0" } }
+itemDef { name matchlabel3 rect 350 200 252 22 type 0 cvar "ui_stCardTitle3" font 4 textscale .53 forecolor .30 .78 1 1 visible 1 decoration cvarTest "ui_stFrontTeam" showCvar { "0" }  }
+itemDef { name pairA3 rect 350 213 252 22 type 0 cvar "ui_stCardA3" font 4 textscale .68 forecolor .76 .86 .93 1 visible 1 decoration cvarTest "ui_stFrontTeam" showCvar { "0" }  }
+itemDef { name pairB3 rect 350 226 252 22 type 0 cvar "ui_stCardB3" font 4 textscale .68 forecolor .76 .86 .93 1 visible 1 decoration cvarTest "ui_stFrontTeam" showCvar { "0" }  }
+itemDef { name card4 rect 28 253 272 46 style 1 backcolor .008 .026 .044 .94 border 1 bordersize .5 bordercolor .30 .78 1 .4 visible 1 decoration cvarTest "ui_stFrontTeam" showCvar { "0" } }
+itemDef { name matchlabel4 rect 38 257 252 22 type 0 cvar "ui_stCardTitle4" font 4 textscale .53 forecolor .30 .78 1 1 visible 1 decoration cvarTest "ui_stFrontTeam" showCvar { "0" }  }
+itemDef { name pairA4 rect 38 270 252 22 type 0 cvar "ui_stCardA4" font 4 textscale .68 forecolor .76 .86 .93 1 visible 1 decoration cvarTest "ui_stFrontTeam" showCvar { "0" }  }
+itemDef { name pairB4 rect 38 283 252 22 type 0 cvar "ui_stCardB4" font 4 textscale .68 forecolor .76 .86 .93 1 visible 1 decoration cvarTest "ui_stFrontTeam" showCvar { "0" }  }
+itemDef { name card5 rect 340 253 272 46 style 1 backcolor .008 .026 .044 .94 border 1 bordersize .5 bordercolor .30 .78 1 .4 visible 1 decoration cvarTest "ui_stFrontTeam" showCvar { "0" } }
+itemDef { name matchlabel5 rect 350 257 252 22 type 0 cvar "ui_stCardTitle5" font 4 textscale .53 forecolor .30 .78 1 1 visible 1 decoration cvarTest "ui_stFrontTeam" showCvar { "0" }  }
+itemDef { name pairA5 rect 350 270 252 22 type 0 cvar "ui_stCardA5" font 4 textscale .68 forecolor .76 .86 .93 1 visible 1 decoration cvarTest "ui_stFrontTeam" showCvar { "0" }  }
+itemDef { name pairB5 rect 350 283 252 22 type 0 cvar "ui_stCardB5" font 4 textscale .68 forecolor .76 .86 .93 1 visible 1 decoration cvarTest "ui_stFrontTeam" showCvar { "0" }  }
+itemDef { name card6 rect 28 310 272 46 style 1 backcolor .008 .026 .044 .94 border 1 bordersize .5 bordercolor .30 .78 1 .4 visible 1 decoration cvarTest "ui_stFrontTeam" showCvar { "0" } }
+itemDef { name matchlabel6 rect 38 314 252 22 type 0 cvar "ui_stCardTitle6" font 4 textscale .53 forecolor .30 .78 1 1 visible 1 decoration cvarTest "ui_stFrontTeam" showCvar { "0" }  }
+itemDef { name pairA6 rect 38 327 252 22 type 0 cvar "ui_stCardA6" font 4 textscale .68 forecolor .76 .86 .93 1 visible 1 decoration cvarTest "ui_stFrontTeam" showCvar { "0" }  }
+itemDef { name pairB6 rect 38 340 252 22 type 0 cvar "ui_stCardB6" font 4 textscale .68 forecolor .76 .86 .93 1 visible 1 decoration cvarTest "ui_stFrontTeam" showCvar { "0" }  }
+itemDef { name card7 rect 340 310 272 46 style 1 backcolor .008 .026 .044 .94 border 1 bordersize .5 bordercolor .30 .78 1 .4 visible 1 decoration cvarTest "ui_stFrontTeam" showCvar { "0" } }
+itemDef { name matchlabel7 rect 350 314 252 22 type 0 cvar "ui_stCardTitle7" font 4 textscale .53 forecolor .30 .78 1 1 visible 1 decoration cvarTest "ui_stFrontTeam" showCvar { "0" }  }
+itemDef { name pairA7 rect 350 327 252 22 type 0 cvar "ui_stCardA7" font 4 textscale .68 forecolor .76 .86 .93 1 visible 1 decoration cvarTest "ui_stFrontTeam" showCvar { "0" }  }
+itemDef { name pairB7 rect 350 340 252 22 type 0 cvar "ui_stCardB7" font 4 textscale .68 forecolor .76 .86 .93 1 visible 1 decoration cvarTest "ui_stFrontTeam" showCvar { "0" }  }
+itemDef { name card0 rect 28 139 170 46 style 1 backcolor .008 .026 .044 .94 border 1 bordersize .5 bordercolor .30 .78 1 .4 visible 1 decoration cvarTest "ui_stFrontTeam" showCvar { "1" } }
+itemDef { name matchlabel0 rect 38 143 150 22 type 0 cvar "ui_stCardTitle0" font 4 textscale .53 forecolor .30 .78 1 1 visible 1 decoration cvarTest "ui_stFrontTeam" showCvar { "1" }  }
+itemDef { name pairA0 rect 38 156 150 22 type 0 cvar "ui_stCardA0" font 4 textscale .68 forecolor .76 .86 .93 1 visible 1 decoration cvarTest "ui_stFrontTeam" showCvar { "1" }  }
+itemDef { name pairB0 rect 38 169 150 22 type 0 cvar "ui_stCardB0" font 4 textscale .68 forecolor .76 .86 .93 1 visible 1 decoration cvarTest "ui_stFrontTeam" showCvar { "1" }  }
+itemDef { name card1 rect 28 196 170 46 style 1 backcolor .008 .026 .044 .94 border 1 bordersize .5 bordercolor .30 .78 1 .4 visible 1 decoration cvarTest "ui_stFrontTeam" showCvar { "1" } }
+itemDef { name matchlabel1 rect 38 200 150 22 type 0 cvar "ui_stCardTitle1" font 4 textscale .53 forecolor .30 .78 1 1 visible 1 decoration cvarTest "ui_stFrontTeam" showCvar { "1" }  }
+itemDef { name pairA1 rect 38 213 150 22 type 0 cvar "ui_stCardA1" font 4 textscale .68 forecolor .76 .86 .93 1 visible 1 decoration cvarTest "ui_stFrontTeam" showCvar { "1" }  }
+itemDef { name pairB1 rect 38 226 150 22 type 0 cvar "ui_stCardB1" font 4 textscale .68 forecolor .76 .86 .93 1 visible 1 decoration cvarTest "ui_stFrontTeam" showCvar { "1" }  }
+itemDef { name card2 rect 28 253 170 46 style 1 backcolor .008 .026 .044 .94 border 1 bordersize .5 bordercolor .30 .78 1 .4 visible 1 decoration cvarTest "ui_stFrontTeam" showCvar { "1" } }
+itemDef { name matchlabel2 rect 38 257 150 22 type 0 cvar "ui_stCardTitle2" font 4 textscale .53 forecolor .30 .78 1 1 visible 1 decoration cvarTest "ui_stFrontTeam" showCvar { "1" }  }
+itemDef { name pairA2 rect 38 270 150 22 type 0 cvar "ui_stCardA2" font 4 textscale .68 forecolor .76 .86 .93 1 visible 1 decoration cvarTest "ui_stFrontTeam" showCvar { "1" }  }
+itemDef { name pairB2 rect 38 283 150 22 type 0 cvar "ui_stCardB2" font 4 textscale .68 forecolor .76 .86 .93 1 visible 1 decoration cvarTest "ui_stFrontTeam" showCvar { "1" }  }
+itemDef { name card3 rect 28 310 170 46 style 1 backcolor .008 .026 .044 .94 border 1 bordersize .5 bordercolor .30 .78 1 .4 visible 1 decoration cvarTest "ui_stFrontTeam" showCvar { "1" } }
+itemDef { name matchlabel3 rect 38 314 150 22 type 0 cvar "ui_stCardTitle3" font 4 textscale .53 forecolor .30 .78 1 1 visible 1 decoration cvarTest "ui_stFrontTeam" showCvar { "1" }  }
+itemDef { name pairA3 rect 38 327 150 22 type 0 cvar "ui_stCardA3" font 4 textscale .68 forecolor .76 .86 .93 1 visible 1 decoration cvarTest "ui_stFrontTeam" showCvar { "1" }  }
+itemDef { name pairB3 rect 38 340 150 22 type 0 cvar "ui_stCardB3" font 4 textscale .68 forecolor .76 .86 .93 1 visible 1 decoration cvarTest "ui_stFrontTeam" showCvar { "1" }  }
+itemDef { name card4 rect 242 167 170 46 style 1 backcolor .008 .026 .044 .94 border 1 bordersize .5 bordercolor .30 .78 1 .4 visible 1 decoration cvarTest "ui_stFrontTeam" showCvar { "1" } }
+itemDef { name matchlabel4 rect 252 171 150 22 type 0 cvar "ui_stCardTitle4" font 4 textscale .53 forecolor .30 .78 1 1 visible 1 decoration cvarTest "ui_stFrontTeam" showCvar { "1" }  }
+itemDef { name pairA4 rect 252 184 150 22 type 0 cvar "ui_stCardA4" font 4 textscale .68 forecolor .76 .86 .93 1 visible 1 decoration cvarTest "ui_stFrontTeam" showCvar { "1" }  }
+itemDef { name pairB4 rect 252 197 150 22 type 0 cvar "ui_stCardB4" font 4 textscale .68 forecolor .76 .86 .93 1 visible 1 decoration cvarTest "ui_stFrontTeam" showCvar { "1" }  }
+itemDef { name card5 rect 242 281 170 46 style 1 backcolor .008 .026 .044 .94 border 1 bordersize .5 bordercolor .30 .78 1 .4 visible 1 decoration cvarTest "ui_stFrontTeam" showCvar { "1" } }
+itemDef { name matchlabel5 rect 252 285 150 22 type 0 cvar "ui_stCardTitle5" font 4 textscale .53 forecolor .30 .78 1 1 visible 1 decoration cvarTest "ui_stFrontTeam" showCvar { "1" }  }
+itemDef { name pairA5 rect 252 298 150 22 type 0 cvar "ui_stCardA5" font 4 textscale .68 forecolor .76 .86 .93 1 visible 1 decoration cvarTest "ui_stFrontTeam" showCvar { "1" }  }
+itemDef { name pairB5 rect 252 311 150 22 type 0 cvar "ui_stCardB5" font 4 textscale .68 forecolor .76 .86 .93 1 visible 1 decoration cvarTest "ui_stFrontTeam" showCvar { "1" }  }
+itemDef { name card6 rect 456 224 156 46 style 1 backcolor .008 .026 .044 .94 border 1 bordersize .5 bordercolor .30 .78 1 .4 visible 1 decoration cvarTest "ui_stFrontTeam" showCvar { "1" } }
+itemDef { name matchlabel6 rect 466 228 136 22 type 0 cvar "ui_stCardTitle6" font 4 textscale .53 forecolor .30 .78 1 1 visible 1 decoration cvarTest "ui_stFrontTeam" showCvar { "1" }  }
+itemDef { name pairA6 rect 466 241 136 22 type 0 cvar "ui_stCardA6" font 4 textscale .68 forecolor .76 .86 .93 1 visible 1 decoration cvarTest "ui_stFrontTeam" showCvar { "1" }  }
+itemDef { name pairB6 rect 466 254 136 22 type 0 cvar "ui_stCardB6" font 4 textscale .68 forecolor .76 .86 .93 1 visible 1 decoration cvarTest "ui_stFrontTeam" showCvar { "1" }  }
+itemDef { name connector0 rect 198 162 22 0.5 style 1 backcolor .30 .65 .8 .6 visible 1 decoration cvarTest "ui_stFrontTeam" showCvar { "1" } }
+itemDef { name connector1 rect 198 219 22 0.5 style 1 backcolor .30 .65 .8 .6 visible 1 decoration cvarTest "ui_stFrontTeam" showCvar { "1" } }
+itemDef { name connector2 rect 220 162 0.5 57 style 1 backcolor .30 .65 .8 .6 visible 1 decoration cvarTest "ui_stFrontTeam" showCvar { "1" } }
+itemDef { name connector3 rect 220 190 22 0.5 style 1 backcolor .30 .65 .8 .6 visible 1 decoration cvarTest "ui_stFrontTeam" showCvar { "1" } }
+itemDef { name connector4 rect 198 276 22 0.5 style 1 backcolor .30 .65 .8 .6 visible 1 decoration cvarTest "ui_stFrontTeam" showCvar { "1" } }
+itemDef { name connector5 rect 198 333 22 0.5 style 1 backcolor .30 .65 .8 .6 visible 1 decoration cvarTest "ui_stFrontTeam" showCvar { "1" } }
+itemDef { name connector6 rect 220 276 0.5 57 style 1 backcolor .30 .65 .8 .6 visible 1 decoration cvarTest "ui_stFrontTeam" showCvar { "1" } }
+itemDef { name connector7 rect 220 304 22 0.5 style 1 backcolor .30 .65 .8 .6 visible 1 decoration cvarTest "ui_stFrontTeam" showCvar { "1" } }
+itemDef { name connector8 rect 412 190 22 0.5 style 1 backcolor .30 .65 .8 .6 visible 1 decoration cvarTest "ui_stFrontTeam" showCvar { "1" } }
+itemDef { name connector9 rect 412 304 22 0.5 style 1 backcolor .30 .65 .8 .6 visible 1 decoration cvarTest "ui_stFrontTeam" showCvar { "1" } }
+itemDef { name connector10 rect 434 190 0.5 114 style 1 backcolor .30 .65 .8 .6 visible 1 decoration cvarTest "ui_stFrontTeam" showCvar { "1" } }
+itemDef { name connector11 rect 434 247 22 0.5 style 1 backcolor .30 .65 .8 .6 visible 1 decoration cvarTest "ui_stFrontTeam" showCvar { "1" } }
+itemDef { name page1 rect 28 391 44 30 type 1 text "1" font 2 textscale .71
+ textalignx 10 textaligny 6 forecolor .76 .86 .93 1 visible 1 cvarTest "ui_stFrontBracketPage1" showCvar { "1" }
+ style 1 backcolor .015 .055 .08 .94 border 0
+ onFocus { setitemcolor page1 backcolor .035 .19 .28 .98 ; }
+ leaveFocus { setitemcolor page1 backcolor .015 .055 .08 .94 ; }
+ action { play "sound/interface/button1.wav" ; close st_tournament_bracket1 ; open st_tournament_bracket1 ; } }
+itemDef { name page2 rect 80 391 44 30 type 1 text "2" font 2 textscale .71
+ textalignx 10 textaligny 6 forecolor .76 .86 .93 1 visible 1 cvarTest "ui_stFrontBracketPage2" showCvar { "1" }
+ style 1 backcolor .015 .055 .08 .94 border 0
+ onFocus { setitemcolor page2 backcolor .035 .19 .28 .98 ; }
+ leaveFocus { setitemcolor page2 backcolor .015 .055 .08 .94 ; }
+ action { play "sound/interface/button1.wav" ; close st_tournament_bracket1 ; open st_tournament_bracket2 ; } }
+itemDef { name page3 rect 132 391 44 30 type 1 text "3" font 2 textscale .71
+ textalignx 10 textaligny 6 forecolor .76 .86 .93 1 visible 1 cvarTest "ui_stFrontBracketPage3" showCvar { "1" }
+ style 1 backcolor .015 .055 .08 .94 border 0
+ onFocus { setitemcolor page3 backcolor .035 .19 .28 .98 ; }
+ leaveFocus { setitemcolor page3 backcolor .015 .055 .08 .94 ; }
+ action { play "sound/interface/button1.wav" ; close st_tournament_bracket1 ; open st_tournament_bracket3 ; } }
+itemDef { name page4 rect 184 391 44 30 type 1 text "4" font 2 textscale .71
+ textalignx 10 textaligny 6 forecolor .76 .86 .93 1 visible 1 cvarTest "ui_stFrontBracketPage4" showCvar { "1" }
+ style 1 backcolor .015 .055 .08 .94 border 0
+ onFocus { setitemcolor page4 backcolor .035 .19 .28 .98 ; }
+ leaveFocus { setitemcolor page4 backcolor .015 .055 .08 .94 ; }
+ action { play "sound/interface/button1.wav" ; close st_tournament_bracket1 ; open st_tournament_bracket4 ; } }
+itemDef { name legend rect 260 398 352 22 type 0 text "NOW = current match   /   WAIT = upcoming" font 4 textscale .62 forecolor .76 .86 .93 1 visible 1 decoration  }
+}
+menuDef { name "st_tournament_bracket2" rect 0 0 640 480 visible 0 fullscreen 1
+ focusColor 1 1 1 1 disableColor .35 .42 .47 1
+ onOpen { setfocus back ; } onESC { close st_tournament_bracket2 ; open st_tournament_ready ; }
+ itemDef { name arena rect 0 0 640 480 style 3 background "ui/assets/sabertrials/arena.tga" forecolor 1 1 1 1 visible 1 decoration }
+ itemDef { name shade rect 0 0 640 480 style 1 backcolor .004 .015 .028 .60 visible 1 decoration }
+itemDef { name brand rect 28 20 550 22 type 0 text "S A B E R   T R I A L S" font 2 textscale 1.15 forecolor .30 .78 1 1 visible 1 decoration  }
+itemDef { name heading rect 28 57 550 22 type 0 text "TOURNAMENT  /  BRACKET" font 2 textscale .86 forecolor .76 .86 .93 1 visible 1 decoration  }
+itemDef { name preview rect 482 28 140 22 type 0 text "VISUAL PREVIEW" font 2 textscale .62 forecolor .53 .77 .9 1 visible 1 decoration  }
+itemDef { name sample rect 212 441 400 22 type 0 text "Sample players and events. No live registration or match starts." font 2 textscale .58 forecolor .57 .72 .81 1 visible 1 decoration  }
+itemDef { name back rect 28 434 171 30 type 1 text "Back to ready room" font 2 textscale .78
+ textalignx 10 textaligny 6 forecolor .76 .86 .93 1 visible 1 
+ style 1 backcolor .015 .055 .08 .94 border 1 bordersize .5 bordercolor .30 .78 1 .5
+ onFocus { setitemcolor back backcolor .035 .19 .28 .98 ; }
+ leaveFocus { setitemcolor back backcolor .015 .055 .08 .94 ; }
+ action { play "sound/interface/button1.wav" ; close st_tournament_bracket2 ; open st_tournament_ready ; } }
+itemDef { name stage rect 28 98 584 22 type 0 cvar "ui_stFrontBracketHeading2" font 4 textscale .82 forecolor .30 .78 1 1 visible 1 decoration  }
+itemDef { name card8 rect 28 139 272 46 style 1 backcolor .008 .026 .044 .94 border 1 bordersize .5 bordercolor .30 .78 1 .4 visible 1 decoration }
+itemDef { name matchlabel8 rect 38 143 252 22 type 0 cvar "ui_stCardTitle8" font 4 textscale .53 forecolor .30 .78 1 1 visible 1 decoration  }
+itemDef { name pairA8 rect 38 156 252 22 type 0 cvar "ui_stCardA8" font 4 textscale .68 forecolor .76 .86 .93 1 visible 1 decoration  }
+itemDef { name pairB8 rect 38 169 252 22 type 0 cvar "ui_stCardB8" font 4 textscale .68 forecolor .76 .86 .93 1 visible 1 decoration  }
+itemDef { name card9 rect 340 139 272 46 style 1 backcolor .008 .026 .044 .94 border 1 bordersize .5 bordercolor .30 .78 1 .4 visible 1 decoration }
+itemDef { name matchlabel9 rect 350 143 252 22 type 0 cvar "ui_stCardTitle9" font 4 textscale .53 forecolor .30 .78 1 1 visible 1 decoration  }
+itemDef { name pairA9 rect 350 156 252 22 type 0 cvar "ui_stCardA9" font 4 textscale .68 forecolor .76 .86 .93 1 visible 1 decoration  }
+itemDef { name pairB9 rect 350 169 252 22 type 0 cvar "ui_stCardB9" font 4 textscale .68 forecolor .76 .86 .93 1 visible 1 decoration  }
+itemDef { name card10 rect 28 196 272 46 style 1 backcolor .008 .026 .044 .94 border 1 bordersize .5 bordercolor .30 .78 1 .4 visible 1 decoration }
+itemDef { name matchlabel10 rect 38 200 252 22 type 0 cvar "ui_stCardTitle10" font 4 textscale .53 forecolor .30 .78 1 1 visible 1 decoration  }
+itemDef { name pairA10 rect 38 213 252 22 type 0 cvar "ui_stCardA10" font 4 textscale .68 forecolor .76 .86 .93 1 visible 1 decoration  }
+itemDef { name pairB10 rect 38 226 252 22 type 0 cvar "ui_stCardB10" font 4 textscale .68 forecolor .76 .86 .93 1 visible 1 decoration  }
+itemDef { name card11 rect 340 196 272 46 style 1 backcolor .008 .026 .044 .94 border 1 bordersize .5 bordercolor .30 .78 1 .4 visible 1 decoration }
+itemDef { name matchlabel11 rect 350 200 252 22 type 0 cvar "ui_stCardTitle11" font 4 textscale .53 forecolor .30 .78 1 1 visible 1 decoration  }
+itemDef { name pairA11 rect 350 213 252 22 type 0 cvar "ui_stCardA11" font 4 textscale .68 forecolor .76 .86 .93 1 visible 1 decoration  }
+itemDef { name pairB11 rect 350 226 252 22 type 0 cvar "ui_stCardB11" font 4 textscale .68 forecolor .76 .86 .93 1 visible 1 decoration  }
+itemDef { name card12 rect 28 253 272 46 style 1 backcolor .008 .026 .044 .94 border 1 bordersize .5 bordercolor .30 .78 1 .4 visible 1 decoration }
+itemDef { name matchlabel12 rect 38 257 252 22 type 0 cvar "ui_stCardTitle12" font 4 textscale .53 forecolor .30 .78 1 1 visible 1 decoration  }
+itemDef { name pairA12 rect 38 270 252 22 type 0 cvar "ui_stCardA12" font 4 textscale .68 forecolor .76 .86 .93 1 visible 1 decoration  }
+itemDef { name pairB12 rect 38 283 252 22 type 0 cvar "ui_stCardB12" font 4 textscale .68 forecolor .76 .86 .93 1 visible 1 decoration  }
+itemDef { name card13 rect 340 253 272 46 style 1 backcolor .008 .026 .044 .94 border 1 bordersize .5 bordercolor .30 .78 1 .4 visible 1 decoration }
+itemDef { name matchlabel13 rect 350 257 252 22 type 0 cvar "ui_stCardTitle13" font 4 textscale .53 forecolor .30 .78 1 1 visible 1 decoration  }
+itemDef { name pairA13 rect 350 270 252 22 type 0 cvar "ui_stCardA13" font 4 textscale .68 forecolor .76 .86 .93 1 visible 1 decoration  }
+itemDef { name pairB13 rect 350 283 252 22 type 0 cvar "ui_stCardB13" font 4 textscale .68 forecolor .76 .86 .93 1 visible 1 decoration  }
+itemDef { name card14 rect 28 310 272 46 style 1 backcolor .008 .026 .044 .94 border 1 bordersize .5 bordercolor .30 .78 1 .4 visible 1 decoration }
+itemDef { name matchlabel14 rect 38 314 252 22 type 0 cvar "ui_stCardTitle14" font 4 textscale .53 forecolor .30 .78 1 1 visible 1 decoration  }
+itemDef { name pairA14 rect 38 327 252 22 type 0 cvar "ui_stCardA14" font 4 textscale .68 forecolor .76 .86 .93 1 visible 1 decoration  }
+itemDef { name pairB14 rect 38 340 252 22 type 0 cvar "ui_stCardB14" font 4 textscale .68 forecolor .76 .86 .93 1 visible 1 decoration  }
+itemDef { name card15 rect 340 310 272 46 style 1 backcolor .008 .026 .044 .94 border 1 bordersize .5 bordercolor .30 .78 1 .4 visible 1 decoration }
+itemDef { name matchlabel15 rect 350 314 252 22 type 0 cvar "ui_stCardTitle15" font 4 textscale .53 forecolor .30 .78 1 1 visible 1 decoration  }
+itemDef { name pairA15 rect 350 327 252 22 type 0 cvar "ui_stCardA15" font 4 textscale .68 forecolor .76 .86 .93 1 visible 1 decoration  }
+itemDef { name pairB15 rect 350 340 252 22 type 0 cvar "ui_stCardB15" font 4 textscale .68 forecolor .76 .86 .93 1 visible 1 decoration  }
+itemDef { name page1 rect 28 391 44 30 type 1 text "1" font 2 textscale .71
+ textalignx 10 textaligny 6 forecolor .76 .86 .93 1 visible 1 cvarTest "ui_stFrontBracketPage1" showCvar { "1" }
+ style 1 backcolor .015 .055 .08 .94 border 0
+ onFocus { setitemcolor page1 backcolor .035 .19 .28 .98 ; }
+ leaveFocus { setitemcolor page1 backcolor .015 .055 .08 .94 ; }
+ action { play "sound/interface/button1.wav" ; close st_tournament_bracket2 ; open st_tournament_bracket1 ; } }
+itemDef { name page2 rect 80 391 44 30 type 1 text "2" font 2 textscale .71
+ textalignx 10 textaligny 6 forecolor .76 .86 .93 1 visible 1 cvarTest "ui_stFrontBracketPage2" showCvar { "1" }
+ style 1 backcolor .015 .055 .08 .94 border 0
+ onFocus { setitemcolor page2 backcolor .035 .19 .28 .98 ; }
+ leaveFocus { setitemcolor page2 backcolor .015 .055 .08 .94 ; }
+ action { play "sound/interface/button1.wav" ; close st_tournament_bracket2 ; open st_tournament_bracket2 ; } }
+itemDef { name page3 rect 132 391 44 30 type 1 text "3" font 2 textscale .71
+ textalignx 10 textaligny 6 forecolor .76 .86 .93 1 visible 1 cvarTest "ui_stFrontBracketPage3" showCvar { "1" }
+ style 1 backcolor .015 .055 .08 .94 border 0
+ onFocus { setitemcolor page3 backcolor .035 .19 .28 .98 ; }
+ leaveFocus { setitemcolor page3 backcolor .015 .055 .08 .94 ; }
+ action { play "sound/interface/button1.wav" ; close st_tournament_bracket2 ; open st_tournament_bracket3 ; } }
+itemDef { name page4 rect 184 391 44 30 type 1 text "4" font 2 textscale .71
+ textalignx 10 textaligny 6 forecolor .76 .86 .93 1 visible 1 cvarTest "ui_stFrontBracketPage4" showCvar { "1" }
+ style 1 backcolor .015 .055 .08 .94 border 0
+ onFocus { setitemcolor page4 backcolor .035 .19 .28 .98 ; }
+ leaveFocus { setitemcolor page4 backcolor .015 .055 .08 .94 ; }
+ action { play "sound/interface/button1.wav" ; close st_tournament_bracket2 ; open st_tournament_bracket4 ; } }
+itemDef { name legend rect 260 398 352 22 type 0 text "NOW = current match   /   WAIT = upcoming" font 4 textscale .62 forecolor .76 .86 .93 1 visible 1 decoration  }
+}
+menuDef { name "st_tournament_bracket3" rect 0 0 640 480 visible 0 fullscreen 1
+ focusColor 1 1 1 1 disableColor .35 .42 .47 1
+ onOpen { setfocus back ; } onESC { close st_tournament_bracket3 ; open st_tournament_ready ; }
+ itemDef { name arena rect 0 0 640 480 style 3 background "ui/assets/sabertrials/arena.tga" forecolor 1 1 1 1 visible 1 decoration }
+ itemDef { name shade rect 0 0 640 480 style 1 backcolor .004 .015 .028 .60 visible 1 decoration }
+itemDef { name brand rect 28 20 550 22 type 0 text "S A B E R   T R I A L S" font 2 textscale 1.15 forecolor .30 .78 1 1 visible 1 decoration  }
+itemDef { name heading rect 28 57 550 22 type 0 text "TOURNAMENT  /  BRACKET" font 2 textscale .86 forecolor .76 .86 .93 1 visible 1 decoration  }
+itemDef { name preview rect 482 28 140 22 type 0 text "VISUAL PREVIEW" font 2 textscale .62 forecolor .53 .77 .9 1 visible 1 decoration  }
+itemDef { name sample rect 212 441 400 22 type 0 text "Sample players and events. No live registration or match starts." font 2 textscale .58 forecolor .57 .72 .81 1 visible 1 decoration  }
+itemDef { name back rect 28 434 171 30 type 1 text "Back to ready room" font 2 textscale .78
+ textalignx 10 textaligny 6 forecolor .76 .86 .93 1 visible 1 
+ style 1 backcolor .015 .055 .08 .94 border 1 bordersize .5 bordercolor .30 .78 1 .5
+ onFocus { setitemcolor back backcolor .035 .19 .28 .98 ; }
+ leaveFocus { setitemcolor back backcolor .015 .055 .08 .94 ; }
+ action { play "sound/interface/button1.wav" ; close st_tournament_bracket3 ; open st_tournament_ready ; } }
+itemDef { name stage rect 28 98 584 22 type 0 cvar "ui_stFrontBracketHeading3" font 4 textscale .82 forecolor .30 .78 1 1 visible 1 decoration  }
+itemDef { name card16 rect 28 139 272 46 style 1 backcolor .008 .026 .044 .94 border 1 bordersize .5 bordercolor .30 .78 1 .4 visible 1 decoration }
+itemDef { name matchlabel16 rect 38 143 252 22 type 0 cvar "ui_stCardTitle16" font 4 textscale .53 forecolor .30 .78 1 1 visible 1 decoration  }
+itemDef { name pairA16 rect 38 156 252 22 type 0 cvar "ui_stCardA16" font 4 textscale .68 forecolor .76 .86 .93 1 visible 1 decoration  }
+itemDef { name pairB16 rect 38 169 252 22 type 0 cvar "ui_stCardB16" font 4 textscale .68 forecolor .76 .86 .93 1 visible 1 decoration  }
+itemDef { name card17 rect 340 139 272 46 style 1 backcolor .008 .026 .044 .94 border 1 bordersize .5 bordercolor .30 .78 1 .4 visible 1 decoration }
+itemDef { name matchlabel17 rect 350 143 252 22 type 0 cvar "ui_stCardTitle17" font 4 textscale .53 forecolor .30 .78 1 1 visible 1 decoration  }
+itemDef { name pairA17 rect 350 156 252 22 type 0 cvar "ui_stCardA17" font 4 textscale .68 forecolor .76 .86 .93 1 visible 1 decoration  }
+itemDef { name pairB17 rect 350 169 252 22 type 0 cvar "ui_stCardB17" font 4 textscale .68 forecolor .76 .86 .93 1 visible 1 decoration  }
+itemDef { name card18 rect 28 196 272 46 style 1 backcolor .008 .026 .044 .94 border 1 bordersize .5 bordercolor .30 .78 1 .4 visible 1 decoration }
+itemDef { name matchlabel18 rect 38 200 252 22 type 0 cvar "ui_stCardTitle18" font 4 textscale .53 forecolor .30 .78 1 1 visible 1 decoration  }
+itemDef { name pairA18 rect 38 213 252 22 type 0 cvar "ui_stCardA18" font 4 textscale .68 forecolor .76 .86 .93 1 visible 1 decoration  }
+itemDef { name pairB18 rect 38 226 252 22 type 0 cvar "ui_stCardB18" font 4 textscale .68 forecolor .76 .86 .93 1 visible 1 decoration  }
+itemDef { name card19 rect 340 196 272 46 style 1 backcolor .008 .026 .044 .94 border 1 bordersize .5 bordercolor .30 .78 1 .4 visible 1 decoration }
+itemDef { name matchlabel19 rect 350 200 252 22 type 0 cvar "ui_stCardTitle19" font 4 textscale .53 forecolor .30 .78 1 1 visible 1 decoration  }
+itemDef { name pairA19 rect 350 213 252 22 type 0 cvar "ui_stCardA19" font 4 textscale .68 forecolor .76 .86 .93 1 visible 1 decoration  }
+itemDef { name pairB19 rect 350 226 252 22 type 0 cvar "ui_stCardB19" font 4 textscale .68 forecolor .76 .86 .93 1 visible 1 decoration  }
+itemDef { name card20 rect 28 253 272 46 style 1 backcolor .008 .026 .044 .94 border 1 bordersize .5 bordercolor .30 .78 1 .4 visible 1 decoration }
+itemDef { name matchlabel20 rect 38 257 252 22 type 0 cvar "ui_stCardTitle20" font 4 textscale .53 forecolor .30 .78 1 1 visible 1 decoration  }
+itemDef { name pairA20 rect 38 270 252 22 type 0 cvar "ui_stCardA20" font 4 textscale .68 forecolor .76 .86 .93 1 visible 1 decoration  }
+itemDef { name pairB20 rect 38 283 252 22 type 0 cvar "ui_stCardB20" font 4 textscale .68 forecolor .76 .86 .93 1 visible 1 decoration  }
+itemDef { name card21 rect 340 253 272 46 style 1 backcolor .008 .026 .044 .94 border 1 bordersize .5 bordercolor .30 .78 1 .4 visible 1 decoration }
+itemDef { name matchlabel21 rect 350 257 252 22 type 0 cvar "ui_stCardTitle21" font 4 textscale .53 forecolor .30 .78 1 1 visible 1 decoration  }
+itemDef { name pairA21 rect 350 270 252 22 type 0 cvar "ui_stCardA21" font 4 textscale .68 forecolor .76 .86 .93 1 visible 1 decoration  }
+itemDef { name pairB21 rect 350 283 252 22 type 0 cvar "ui_stCardB21" font 4 textscale .68 forecolor .76 .86 .93 1 visible 1 decoration  }
+itemDef { name card22 rect 28 310 272 46 style 1 backcolor .008 .026 .044 .94 border 1 bordersize .5 bordercolor .30 .78 1 .4 visible 1 decoration }
+itemDef { name matchlabel22 rect 38 314 252 22 type 0 cvar "ui_stCardTitle22" font 4 textscale .53 forecolor .30 .78 1 1 visible 1 decoration  }
+itemDef { name pairA22 rect 38 327 252 22 type 0 cvar "ui_stCardA22" font 4 textscale .68 forecolor .76 .86 .93 1 visible 1 decoration  }
+itemDef { name pairB22 rect 38 340 252 22 type 0 cvar "ui_stCardB22" font 4 textscale .68 forecolor .76 .86 .93 1 visible 1 decoration  }
+itemDef { name card23 rect 340 310 272 46 style 1 backcolor .008 .026 .044 .94 border 1 bordersize .5 bordercolor .30 .78 1 .4 visible 1 decoration }
+itemDef { name matchlabel23 rect 350 314 252 22 type 0 cvar "ui_stCardTitle23" font 4 textscale .53 forecolor .30 .78 1 1 visible 1 decoration  }
+itemDef { name pairA23 rect 350 327 252 22 type 0 cvar "ui_stCardA23" font 4 textscale .68 forecolor .76 .86 .93 1 visible 1 decoration  }
+itemDef { name pairB23 rect 350 340 252 22 type 0 cvar "ui_stCardB23" font 4 textscale .68 forecolor .76 .86 .93 1 visible 1 decoration  }
+itemDef { name page1 rect 28 391 44 30 type 1 text "1" font 2 textscale .71
+ textalignx 10 textaligny 6 forecolor .76 .86 .93 1 visible 1 cvarTest "ui_stFrontBracketPage1" showCvar { "1" }
+ style 1 backcolor .015 .055 .08 .94 border 0
+ onFocus { setitemcolor page1 backcolor .035 .19 .28 .98 ; }
+ leaveFocus { setitemcolor page1 backcolor .015 .055 .08 .94 ; }
+ action { play "sound/interface/button1.wav" ; close st_tournament_bracket3 ; open st_tournament_bracket1 ; } }
+itemDef { name page2 rect 80 391 44 30 type 1 text "2" font 2 textscale .71
+ textalignx 10 textaligny 6 forecolor .76 .86 .93 1 visible 1 cvarTest "ui_stFrontBracketPage2" showCvar { "1" }
+ style 1 backcolor .015 .055 .08 .94 border 0
+ onFocus { setitemcolor page2 backcolor .035 .19 .28 .98 ; }
+ leaveFocus { setitemcolor page2 backcolor .015 .055 .08 .94 ; }
+ action { play "sound/interface/button1.wav" ; close st_tournament_bracket3 ; open st_tournament_bracket2 ; } }
+itemDef { name page3 rect 132 391 44 30 type 1 text "3" font 2 textscale .71
+ textalignx 10 textaligny 6 forecolor .76 .86 .93 1 visible 1 cvarTest "ui_stFrontBracketPage3" showCvar { "1" }
+ style 1 backcolor .015 .055 .08 .94 border 0
+ onFocus { setitemcolor page3 backcolor .035 .19 .28 .98 ; }
+ leaveFocus { setitemcolor page3 backcolor .015 .055 .08 .94 ; }
+ action { play "sound/interface/button1.wav" ; close st_tournament_bracket3 ; open st_tournament_bracket3 ; } }
+itemDef { name page4 rect 184 391 44 30 type 1 text "4" font 2 textscale .71
+ textalignx 10 textaligny 6 forecolor .76 .86 .93 1 visible 1 cvarTest "ui_stFrontBracketPage4" showCvar { "1" }
+ style 1 backcolor .015 .055 .08 .94 border 0
+ onFocus { setitemcolor page4 backcolor .035 .19 .28 .98 ; }
+ leaveFocus { setitemcolor page4 backcolor .015 .055 .08 .94 ; }
+ action { play "sound/interface/button1.wav" ; close st_tournament_bracket3 ; open st_tournament_bracket4 ; } }
+itemDef { name legend rect 260 398 352 22 type 0 text "NOW = current match   /   WAIT = upcoming" font 4 textscale .62 forecolor .76 .86 .93 1 visible 1 decoration  }
+}
+menuDef { name "st_tournament_bracket4" rect 0 0 640 480 visible 0 fullscreen 1
+ focusColor 1 1 1 1 disableColor .35 .42 .47 1
+ onOpen { setfocus back ; } onESC { close st_tournament_bracket4 ; open st_tournament_ready ; }
+ itemDef { name arena rect 0 0 640 480 style 3 background "ui/assets/sabertrials/arena.tga" forecolor 1 1 1 1 visible 1 decoration }
+ itemDef { name shade rect 0 0 640 480 style 1 backcolor .004 .015 .028 .60 visible 1 decoration }
+itemDef { name brand rect 28 20 550 22 type 0 text "S A B E R   T R I A L S" font 2 textscale 1.15 forecolor .30 .78 1 1 visible 1 decoration  }
+itemDef { name heading rect 28 57 550 22 type 0 text "TOURNAMENT  /  BRACKET" font 2 textscale .86 forecolor .76 .86 .93 1 visible 1 decoration  }
+itemDef { name preview rect 482 28 140 22 type 0 text "VISUAL PREVIEW" font 2 textscale .62 forecolor .53 .77 .9 1 visible 1 decoration  }
+itemDef { name sample rect 212 441 400 22 type 0 text "Sample players and events. No live registration or match starts." font 2 textscale .58 forecolor .57 .72 .81 1 visible 1 decoration  }
+itemDef { name back rect 28 434 171 30 type 1 text "Back to ready room" font 2 textscale .78
+ textalignx 10 textaligny 6 forecolor .76 .86 .93 1 visible 1 
+ style 1 backcolor .015 .055 .08 .94 border 1 bordersize .5 bordercolor .30 .78 1 .5
+ onFocus { setitemcolor back backcolor .035 .19 .28 .98 ; }
+ leaveFocus { setitemcolor back backcolor .015 .055 .08 .94 ; }
+ action { play "sound/interface/button1.wav" ; close st_tournament_bracket4 ; open st_tournament_ready ; } }
+itemDef { name stage rect 28 98 584 22 type 0 cvar "ui_stFrontBracketHeading4" font 4 textscale .82 forecolor .30 .78 1 1 visible 1 decoration  }
+itemDef { name card24 rect 28 139 170 46 style 1 backcolor .008 .026 .044 .94 border 1 bordersize .5 bordercolor .30 .78 1 .4 visible 1 decoration  }
+itemDef { name matchlabel24 rect 38 143 150 22 type 0 cvar "ui_stCardTitle24" font 4 textscale .53 forecolor .30 .78 1 1 visible 1 decoration   }
+itemDef { name pairA24 rect 38 156 150 22 type 0 cvar "ui_stCardA24" font 4 textscale .68 forecolor .76 .86 .93 1 visible 1 decoration   }
+itemDef { name pairB24 rect 38 169 150 22 type 0 cvar "ui_stCardB24" font 4 textscale .68 forecolor .76 .86 .93 1 visible 1 decoration   }
+itemDef { name card25 rect 28 196 170 46 style 1 backcolor .008 .026 .044 .94 border 1 bordersize .5 bordercolor .30 .78 1 .4 visible 1 decoration  }
+itemDef { name matchlabel25 rect 38 200 150 22 type 0 cvar "ui_stCardTitle25" font 4 textscale .53 forecolor .30 .78 1 1 visible 1 decoration   }
+itemDef { name pairA25 rect 38 213 150 22 type 0 cvar "ui_stCardA25" font 4 textscale .68 forecolor .76 .86 .93 1 visible 1 decoration   }
+itemDef { name pairB25 rect 38 226 150 22 type 0 cvar "ui_stCardB25" font 4 textscale .68 forecolor .76 .86 .93 1 visible 1 decoration   }
+itemDef { name card26 rect 28 253 170 46 style 1 backcolor .008 .026 .044 .94 border 1 bordersize .5 bordercolor .30 .78 1 .4 visible 1 decoration  }
+itemDef { name matchlabel26 rect 38 257 150 22 type 0 cvar "ui_stCardTitle26" font 4 textscale .53 forecolor .30 .78 1 1 visible 1 decoration   }
+itemDef { name pairA26 rect 38 270 150 22 type 0 cvar "ui_stCardA26" font 4 textscale .68 forecolor .76 .86 .93 1 visible 1 decoration   }
+itemDef { name pairB26 rect 38 283 150 22 type 0 cvar "ui_stCardB26" font 4 textscale .68 forecolor .76 .86 .93 1 visible 1 decoration   }
+itemDef { name card27 rect 28 310 170 46 style 1 backcolor .008 .026 .044 .94 border 1 bordersize .5 bordercolor .30 .78 1 .4 visible 1 decoration  }
+itemDef { name matchlabel27 rect 38 314 150 22 type 0 cvar "ui_stCardTitle27" font 4 textscale .53 forecolor .30 .78 1 1 visible 1 decoration   }
+itemDef { name pairA27 rect 38 327 150 22 type 0 cvar "ui_stCardA27" font 4 textscale .68 forecolor .76 .86 .93 1 visible 1 decoration   }
+itemDef { name pairB27 rect 38 340 150 22 type 0 cvar "ui_stCardB27" font 4 textscale .68 forecolor .76 .86 .93 1 visible 1 decoration   }
+itemDef { name card28 rect 242 167 170 46 style 1 backcolor .008 .026 .044 .94 border 1 bordersize .5 bordercolor .30 .78 1 .4 visible 1 decoration  }
+itemDef { name matchlabel28 rect 252 171 150 22 type 0 cvar "ui_stCardTitle28" font 4 textscale .53 forecolor .30 .78 1 1 visible 1 decoration   }
+itemDef { name pairA28 rect 252 184 150 22 type 0 cvar "ui_stCardA28" font 4 textscale .68 forecolor .76 .86 .93 1 visible 1 decoration   }
+itemDef { name pairB28 rect 252 197 150 22 type 0 cvar "ui_stCardB28" font 4 textscale .68 forecolor .76 .86 .93 1 visible 1 decoration   }
+itemDef { name card29 rect 242 281 170 46 style 1 backcolor .008 .026 .044 .94 border 1 bordersize .5 bordercolor .30 .78 1 .4 visible 1 decoration  }
+itemDef { name matchlabel29 rect 252 285 150 22 type 0 cvar "ui_stCardTitle29" font 4 textscale .53 forecolor .30 .78 1 1 visible 1 decoration   }
+itemDef { name pairA29 rect 252 298 150 22 type 0 cvar "ui_stCardA29" font 4 textscale .68 forecolor .76 .86 .93 1 visible 1 decoration   }
+itemDef { name pairB29 rect 252 311 150 22 type 0 cvar "ui_stCardB29" font 4 textscale .68 forecolor .76 .86 .93 1 visible 1 decoration   }
+itemDef { name card30 rect 456 224 156 46 style 1 backcolor .008 .026 .044 .94 border 1 bordersize .5 bordercolor .30 .78 1 .4 visible 1 decoration  }
+itemDef { name matchlabel30 rect 466 228 136 22 type 0 cvar "ui_stCardTitle30" font 4 textscale .53 forecolor .30 .78 1 1 visible 1 decoration   }
+itemDef { name pairA30 rect 466 241 136 22 type 0 cvar "ui_stCardA30" font 4 textscale .68 forecolor .76 .86 .93 1 visible 1 decoration   }
+itemDef { name pairB30 rect 466 254 136 22 type 0 cvar "ui_stCardB30" font 4 textscale .68 forecolor .76 .86 .93 1 visible 1 decoration   }
+itemDef { name connector0 rect 198 162 22 0.5 style 1 backcolor .30 .65 .8 .6 visible 1 decoration  }
+itemDef { name connector1 rect 198 219 22 0.5 style 1 backcolor .30 .65 .8 .6 visible 1 decoration  }
+itemDef { name connector2 rect 220 162 0.5 57 style 1 backcolor .30 .65 .8 .6 visible 1 decoration  }
+itemDef { name connector3 rect 220 190 22 0.5 style 1 backcolor .30 .65 .8 .6 visible 1 decoration  }
+itemDef { name connector4 rect 198 276 22 0.5 style 1 backcolor .30 .65 .8 .6 visible 1 decoration  }
+itemDef { name connector5 rect 198 333 22 0.5 style 1 backcolor .30 .65 .8 .6 visible 1 decoration  }
+itemDef { name connector6 rect 220 276 0.5 57 style 1 backcolor .30 .65 .8 .6 visible 1 decoration  }
+itemDef { name connector7 rect 220 304 22 0.5 style 1 backcolor .30 .65 .8 .6 visible 1 decoration  }
+itemDef { name connector8 rect 412 190 22 0.5 style 1 backcolor .30 .65 .8 .6 visible 1 decoration  }
+itemDef { name connector9 rect 412 304 22 0.5 style 1 backcolor .30 .65 .8 .6 visible 1 decoration  }
+itemDef { name connector10 rect 434 190 0.5 114 style 1 backcolor .30 .65 .8 .6 visible 1 decoration  }
+itemDef { name connector11 rect 434 247 22 0.5 style 1 backcolor .30 .65 .8 .6 visible 1 decoration  }
+itemDef { name page1 rect 28 391 44 30 type 1 text "1" font 2 textscale .71
+ textalignx 10 textaligny 6 forecolor .76 .86 .93 1 visible 1 cvarTest "ui_stFrontBracketPage1" showCvar { "1" }
+ style 1 backcolor .015 .055 .08 .94 border 0
+ onFocus { setitemcolor page1 backcolor .035 .19 .28 .98 ; }
+ leaveFocus { setitemcolor page1 backcolor .015 .055 .08 .94 ; }
+ action { play "sound/interface/button1.wav" ; close st_tournament_bracket4 ; open st_tournament_bracket1 ; } }
+itemDef { name page2 rect 80 391 44 30 type 1 text "2" font 2 textscale .71
+ textalignx 10 textaligny 6 forecolor .76 .86 .93 1 visible 1 cvarTest "ui_stFrontBracketPage2" showCvar { "1" }
+ style 1 backcolor .015 .055 .08 .94 border 0
+ onFocus { setitemcolor page2 backcolor .035 .19 .28 .98 ; }
+ leaveFocus { setitemcolor page2 backcolor .015 .055 .08 .94 ; }
+ action { play "sound/interface/button1.wav" ; close st_tournament_bracket4 ; open st_tournament_bracket2 ; } }
+itemDef { name page3 rect 132 391 44 30 type 1 text "3" font 2 textscale .71
+ textalignx 10 textaligny 6 forecolor .76 .86 .93 1 visible 1 cvarTest "ui_stFrontBracketPage3" showCvar { "1" }
+ style 1 backcolor .015 .055 .08 .94 border 0
+ onFocus { setitemcolor page3 backcolor .035 .19 .28 .98 ; }
+ leaveFocus { setitemcolor page3 backcolor .015 .055 .08 .94 ; }
+ action { play "sound/interface/button1.wav" ; close st_tournament_bracket4 ; open st_tournament_bracket3 ; } }
+itemDef { name page4 rect 184 391 44 30 type 1 text "4" font 2 textscale .71
+ textalignx 10 textaligny 6 forecolor .76 .86 .93 1 visible 1 cvarTest "ui_stFrontBracketPage4" showCvar { "1" }
+ style 1 backcolor .015 .055 .08 .94 border 0
+ onFocus { setitemcolor page4 backcolor .035 .19 .28 .98 ; }
+ leaveFocus { setitemcolor page4 backcolor .015 .055 .08 .94 ; }
+ action { play "sound/interface/button1.wav" ; close st_tournament_bracket4 ; open st_tournament_bracket4 ; } }
+itemDef { name legend rect 260 398 352 22 type 0 text "NOW = current match   /   WAIT = upcoming" font 4 textscale .62 forecolor .76 .86 .93 1 visible 1 decoration  }
+}
+menuDef { name "st_tournament_reserves" rect 0 0 640 480 visible 0 fullscreen 1
+ focusColor 1 1 1 1 disableColor .35 .42 .47 1
+ onOpen { setfocus back ; } onESC { close st_tournament_reserves ; open st_tournament_ready ; }
+ itemDef { name arena rect 0 0 640 480 style 3 background "ui/assets/sabertrials/arena.tga" forecolor 1 1 1 1 visible 1 decoration }
+ itemDef { name shade rect 0 0 640 480 style 1 backcolor .004 .015 .028 .60 visible 1 decoration }
+itemDef { name brand rect 28 20 550 22 type 0 text "S A B E R   T R I A L S" font 2 textscale 1.15 forecolor .30 .78 1 1 visible 1 decoration  }
+itemDef { name heading rect 28 57 550 22 type 0 text "TOURNAMENT  /  TEAM RESERVES" font 2 textscale .86 forecolor .76 .86 .93 1 visible 1 decoration  }
+itemDef { name preview rect 482 28 140 22 type 0 text "VISUAL PREVIEW" font 2 textscale .62 forecolor .53 .77 .9 1 visible 1 decoration  }
+itemDef { name sample rect 212 441 400 22 type 0 text "Sample players and events. No live registration or match starts." font 2 textscale .58 forecolor .57 .72 .81 1 visible 1 decoration  }
+itemDef { name back rect 28 434 171 30 type 1 text "Back to ready room" font 2 textscale .78
+ textalignx 10 textaligny 6 forecolor .76 .86 .93 1 visible 1 
+ style 1 backcolor .015 .055 .08 .94 border 1 bordersize .5 bordercolor .30 .78 1 .5
+ onFocus { setitemcolor back backcolor .035 .19 .28 .98 ; }
+ leaveFocus { setitemcolor back backcolor .015 .055 .08 .94 ; }
+ action { play "sound/interface/button1.wav" ; close st_tournament_reserves ; open st_tournament_ready ; } }
+itemDef { name content rect 28 135 584 279 style 1 backcolor .008 .026 .044 .94 border 1 bordersize .5 bordercolor .30 .78 1 .4 visible 1 decoration }
+itemDef { name team rect 46 151 548 22 type 0 cvar "ui_stFrontSide0" font 2 textscale .95 forecolor .30 .78 1 1 visible 1 decoration  }
+itemDef { name rule0 rect 46 190 548 22 type 0 text "Only reserves registered with this team may replace a player." font 2 textscale .73 forecolor .76 .86 .93 1 visible 1 decoration  }
+itemDef { name rule1 rect 46 215 548 22 type 0 text "A disconnect pauses the match for up to 10 minutes." font 2 textscale .73 forecolor .76 .86 .93 1 visible 1 decoration  }
+itemDef { name rule2 rect 46 240 548 22 type 0 text "The missing player may reconnect, or a reserve takes their place." font 2 textscale .73 forecolor .76 .86 .93 1 visible 1 decoration  }
+itemDef { name rule3 rect 46 265 548 22 type 0 text "The complete lineup must ready up again before play resumes." font 2 textscale .73 forecolor .76 .86 .93 1 visible 1 decoration  }
+itemDef { name reserve rect 46 309 548 22 type 0 text "Lyra  /  Registered reserve (sample)" font 2 textscale .82 forecolor .76 .86 .93 1 visible 1 decoration  }
+itemDef { name available rect 46 344 548 22 type 0 text "Preview how a missing teammate appears in the ready room." font 2 textscale .74 forecolor .76 .86 .93 1 visible 1 decoration  }
+itemDef { name disconnectpreview rect 46 376 244 30 type 1 text "Preview disconnect" font 2 textscale .71
+ textalignx 10 textaligny 6 forecolor .76 .86 .93 1 visible 1 
+ style 1 backcolor .015 .055 .08 .94 border 0
+ onFocus { setitemcolor disconnectpreview backcolor .035 .19 .28 .98 ; }
+ leaveFocus { setitemcolor disconnectpreview backcolor .015 .055 .08 .94 ; }
+ action { play "sound/interface/button1.wav" ; setcvar ui_stFrontReady "2" ; close st_tournament_reserves ; open st_tournament_ready ; } }
+}
+
+menuDef { name "st_tournament_leave" rect 0 0 640 480 visible 0 fullscreen 1
+ focusColor 1 1 1 1 disableColor .35 .42 .47 1
+ onOpen { setfocus stay ; } onESC { close st_tournament_leave ; open st_tournament_ready ; }
+ itemDef { name arena rect 0 0 640 480 style 3 background "ui/assets/sabertrials/arena.tga" forecolor 1 1 1 1 visible 1 decoration }
+ itemDef { name shade rect 0 0 640 480 style 1 backcolor .004 .015 .028 .60 visible 1 decoration }
+itemDef { name brand rect 28 20 550 22 type 0 text "S A B E R   T R I A L S" font 2 textscale 1.15 forecolor .30 .78 1 1 visible 1 decoration  }
+itemDef { name heading rect 28 57 550 22 type 0 text "TOURNAMENT  /  LEAVE LOBBY?" font 2 textscale .86 forecolor .76 .86 .93 1 visible 1 decoration  }
+itemDef { name preview rect 482 28 140 22 type 0 text "VISUAL PREVIEW" font 2 textscale .62 forecolor .53 .77 .9 1 visible 1 decoration  }
+itemDef { name sample rect 212 441 400 22 type 0 text "Sample players and events. No live registration or match starts." font 2 textscale .58 forecolor .57 .72 .81 1 visible 1 decoration  }
+itemDef { name back rect 28 434 171 30 type 1 text "Back to ready room" font 2 textscale .78
+ textalignx 10 textaligny 6 forecolor .76 .86 .93 1 visible 1 
+ style 1 backcolor .015 .055 .08 .94 border 1 bordersize .5 bordercolor .30 .78 1 .5
+ onFocus { setitemcolor back backcolor .035 .19 .28 .98 ; }
+ leaveFocus { setitemcolor back backcolor .015 .055 .08 .94 ; }
+ action { play "sound/interface/button1.wav" ; close st_tournament_leave ; open st_tournament_ready ; } }
+itemDef { name content rect 28 146 584 254 style 1 backcolor .008 .026 .044 .94 border 1 bordersize .5 bordercolor .30 .78 1 .4 visible 1 decoration }
+itemDef { name question rect 48 171 544 22 type 0 text "Return to tournament selection?" font 2 textscale 1 forecolor .30 .78 1 1 visible 1 decoration  }
+itemDef { name explain rect 48 218 544 22 type 0 text "Your sample ready status will reset when you select another event." font 2 textscale .75 forecolor .76 .86 .93 1 visible 1 decoration  }
+itemDef { name confirm rect 48 322 240 30 type 1 text "Leave lobby" font 2 textscale .78
+ textalignx 10 textaligny 6 forecolor .76 .86 .93 1 visible 1 
+ style 1 backcolor .015 .055 .08 .94 border 1 bordersize .5 bordercolor .30 .78 1 .5
+ onFocus { setitemcolor confirm backcolor .035 .19 .28 .98 ; }
+ leaveFocus { setitemcolor confirm backcolor .015 .055 .08 .94 ; }
+ action { play "sound/interface/button1.wav" ; setcvar ui_stFrontReady "0" ; close st_tournament_leave ; open st_main_tournament ; } }
+itemDef { name stay rect 308 322 282 30 type 1 text "Stay in ready room" font 2 textscale .78
+ textalignx 10 textaligny 6 forecolor .76 .86 .93 1 visible 1 
+ style 1 backcolor .015 .055 .08 .94 border 1 bordersize .5 bordercolor .30 .78 1 .5
+ onFocus { setitemcolor stay backcolor .035 .19 .28 .98 ; }
+ leaveFocus { setitemcolor stay backcolor .015 .055 .08 .94 ; }
+ action { play "sound/interface/button1.wav" ; close st_tournament_leave ; open st_tournament_ready ; } }
+}
+menuDef { name "st_tournament_result" rect 0 0 640 480 visible 0 fullscreen 1
+ focusColor 1 1 1 1 disableColor .35 .42 .47 1
+ onOpen { setfocus back ; } onESC { close st_tournament_result ; open st_tournament_ready ; }
+ itemDef { name arena rect 0 0 640 480 style 3 background "ui/assets/sabertrials/arena.tga" forecolor 1 1 1 1 visible 1 decoration }
+ itemDef { name shade rect 0 0 640 480 style 1 backcolor .004 .015 .028 .60 visible 1 decoration }
+itemDef { name brand rect 28 20 550 22 type 0 text "S A B E R   T R I A L S" font 2 textscale 1.15 forecolor .30 .78 1 1 visible 1 decoration  }
+itemDef { name heading rect 28 57 550 22 type 0 text "TOURNAMENT  /  MATCH RESULT" font 2 textscale .86 forecolor .76 .86 .93 1 visible 1 decoration  }
+itemDef { name preview rect 482 28 140 22 type 0 text "VISUAL PREVIEW" font 2 textscale .62 forecolor .53 .77 .9 1 visible 1 decoration  }
+itemDef { name sample rect 212 441 400 22 type 0 text "Sample players and events. No live registration or match starts." font 2 textscale .58 forecolor .57 .72 .81 1 visible 1 decoration  }
+itemDef { name back rect 28 434 171 30 type 1 text "Back to ready room" font 2 textscale .78
+ textalignx 10 textaligny 6 forecolor .76 .86 .93 1 visible 1 
+ style 1 backcolor .015 .055 .08 .94 border 1 bordersize .5 bordercolor .30 .78 1 .5
+ onFocus { setitemcolor back backcolor .035 .19 .28 .98 ; }
+ leaveFocus { setitemcolor back backcolor .015 .055 .08 .94 ; }
+ action { play "sound/interface/button1.wav" ; close st_tournament_result ; open st_tournament_ready ; } }
+itemDef { name result rect 28 134 584 276 style 1 backcolor .008 .026 .044 .94 border 1 bordersize .5 bordercolor .30 .78 1 .4 visible 1 decoration }
+itemDef { name winnericon rect 52 159 22 22 style 3 background "ui/assets/sabertrials/player" forecolor .40 .80 1 1 visible 1 decoration }
+itemDef { name winner rect 88 157 490 22 type 0 text "SAMPLE WINNER" font 4 textscale .70 forecolor .30 .78 1 1 visible 1 decoration  }
+itemDef { name champion rect 52 190 520 22 type 0 text "You / Blue Horizon" font 4 textscale 1.15 forecolor .90 .96 1 1 visible 1 decoration  }
+itemDef { name resultline rect 52 226 536 .5 style 1 backcolor .30 .55 .65 .35 visible 1 decoration }
+itemDef { name score rect 52 243 536 22 type 0 cvar "ui_stFrontResultScore" font 4 textscale .92 forecolor .76 .86 .93 1 visible 1 decoration  }
+itemDef { name advance rect 52 279 536 22 type 0 text "Advances to the next round" font 4 textscale .80 forecolor .42 .87 .77 1 visible 1 decoration  }
+itemDef { name next rect 52 309 536 22 type 0 text "Next opponent: awaiting the other match winner" font 4 textscale .72 forecolor .76 .86 .93 1 visible 1 decoration  }
+itemDef { name rating rect 52 350 536 22 type 0 text "Rating: unavailable / no verified ranked result" font 4 textscale .69 forecolor .76 .86 .93 1 visible 1 decoration  }
+itemDef { name previewresult rect 52 378 536 22 type 0 text "Illustration only. This result does not update your account." font 4 textscale .62 forecolor .76 .86 .93 1 visible 1 decoration  }
+}
+}

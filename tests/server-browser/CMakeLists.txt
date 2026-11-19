@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.16)
+project(saber_trials_server_browser C)
+enable_testing()
+add_executable(server_browser browser.c)
+target_include_directories(server_browser PRIVATE ../../development-source/server-browser)
+add_test(NAME server_browser COMMAND server_browser)

@@ -1,0 +1,355 @@
+--- a/codemp/client/cl_main.cpp
++++ b/codemp/client/cl_main.cpp
+@@ -25,6 +25,8 @@
+ // cl_main.c  -- client main loop
+ 
+ #include "client.h"
++#include "cl_staff.h"
++#include <string>
+ 
+ #include <limits.h>
+ #include "ghoul2/G2.h"
+@@ -803,6 +805,7 @@
+ #include "cl_sabertrials_photo.inc"
+ 
+ void CL_Disconnect( qboolean showMainMenu ) {
++    CL_StaffReset();
+     ST_PhotoEngineReset();
+ 	if ( !com_cl_running || !com_cl_running->integer ) {
+ 		return;
+@@ -1032,17 +1035,11 @@
+ 
+ ================
+ */
+-void CL_Connect_f( void ) {
+-	char	*server;
+-	const char	*serverString;
+-
+-	if ( Cmd_Argc() != 2 ) {
+-		Com_Printf( "usage: connect [server]\n");
+-		return;
+-	}
++void CL_ConnectAddress( const char* server ) {
++	const char *serverString;
+ 
+ 	// save arguments for reconnect
+-	Cvar_Set("cl_reconnectArgs", Cmd_Args());
++	Cvar_Set("cl_reconnectArgs", server);
+ 
+ 	Cvar_Set("ui_singlePlayerActive", "0");
+ 
+@@ -1052,7 +1049,6 @@
+ 	// clear any previous "server full" type messages
+ 	clc.serverMessage[0] = 0;
+ 
+-	server = Cmd_Argv (1);
+ 
+ 	if ( com_sv_running->integer && !strcmp( server, "localhost" ) ) {
+ 		// if running a local server, kill it
+@@ -1103,6 +1099,12 @@
+ 	// server connection string
+ 	Cvar_Set( "cl_currentServerAddress", server );
+ 	Cvar_Set( "cl_currentServerIP", serverString );
++}
++
++void CL_Connect_f(void) {
++ if (Cmd_Argc()!=2) { Com_Printf("usage: connect [server]\n"); return; }
++ const std::string server = Cmd_Argv(1);
++ CL_ConnectAddress(server.c_str());
+ }
+ 
+ #define MAX_RCON_MESSAGE 1024
+@@ -1941,6 +1943,7 @@
+ 
+ 	Cmd_TokenizeString( s );
+ 
++	if (CL_StaffPacket(from)) return;
+ 	c = Cmd_Argv( 0 );
+ 
+ 	if ( com_developer->integer ) {
+@@ -2208,6 +2211,7 @@
+ static float avgFrametime=0.0;
+ extern void SE_CheckForLanguageUpdates(void);
+ void CL_Frame ( int msec ) {
++    CL_StaffFrame();
+ 	qboolean takeVideoFrame = qfalse;
+ 
+ 	if ( !com_cl_running->integer ) {
+@@ -2898,6 +2902,7 @@
+ 	Cmd_AddCommand ("cmd", CL_ForwardToServer_f, "Forward command to server" );
+ 	Cmd_AddCommand ("globalservers", CL_GlobalServers_f, "Query the masterserver for serverlist" );
+ 	Cmd_AddCommand( "addFavorite", CL_AddFavorite_f, "Add server to favorites" );
++	CL_StaffInit();
+ 	Cmd_AddCommand ("record", CL_Record_f, "Record a demo" );
+ 	Cvar_Get( "st_recording", "0", CVAR_ROM );
+ 	Cvar_Set( "st_recording", "0" );
+--- a/codemp/client/cl_parse.cpp
++++ b/codemp/client/cl_parse.cpp
+@@ -25,6 +25,7 @@
+ // cl_parse.c  -- parse a message received from the server
+ 
+ #include "client.h"
++#include "cl_staff.h"
+ #include "cl_cgameapi.h"
+ #include "qcommon/stringed_ingame.h"
+ 
+@@ -499,6 +500,7 @@
+ ==================
+ */
+ void CL_ParseGamestate( msg_t *msg ) {
++ CL_StaffReset();
+ 	int				i;
+ 	entityState_t	*es;
+ 	int				newnum;
+--- a/codemp/client/cl_cgame.cpp
++++ b/codemp/client/cl_cgame.cpp
+@@ -23,6 +23,7 @@
+ 
+ // cl_cgame.c  -- client system interaction with client game
+ #include "client.h"
++#include "cl_staff.h"
+ #include "cl_cgameapi.h"
+ #include "botlib/botlib.h"
+ #include "FXExport.h"
+@@ -451,6 +452,7 @@
+ 	}
+ 
+ 	if ( !strcmp( cmd, "map_restart" ) ) {
++        CL_StaffReset();
+ 		// clear notify lines and outgoing commands before passing
+ 		// the restart to the cgame
+ 		Con_ClearNotify();
+--- a/codemp/server/sv_main.cpp
++++ b/codemp/server/sv_main.cpp
+@@ -23,6 +23,7 @@
+ */
+ 
+ #include "server.h"
++#include "sv_staff.h"
+ 
+ #include "ghoul2/ghoul2_shared.h"
+ #include "sv_gameapi.h"
+@@ -746,6 +747,7 @@
+ 	s = MSG_ReadStringLine( msg );
+ 	Cmd_TokenizeString( s );
+ 
++	if (SV_StaffPacket(from)) return;
+ 	c = Cmd_Argv(0);
+ 	if ( com_developer->integer ) {
+ 		Com_Printf( "SV packet %s : %s\n", NET_AdrToString( from ), c );
+--- a/codemp/server/sv_ccmds.cpp
++++ b/codemp/server/sv_ccmds.cpp
+@@ -23,6 +23,7 @@
+ */
+ 
+ #include "server.h"
++#include "sv_staff.h"
+ #include "qcommon/stringed_ingame.h"
+ #include "qcommon/game_version.h"
+ #include "server/sv_gameapi.h"
+@@ -1954,6 +1955,7 @@
+ 	}
+ 	initialized = qtrue;
+ 
++	if (com_dedicated->integer) Cmd_AddCommand("staff", SV_StaffConsole_f, "Permanent staff administration");
+ 	Cmd_AddCommand ("heartbeat", SV_Heartbeat_f, "Sends a heartbeat to the masterserver" );
+ 	Cmd_AddCommand ("kick", SV_Kick_f, "Kick a user from the server" );
+ 	Cmd_AddCommand ("kickbots", SV_KickBots_f, "Kick all bots from the server" );
+--- a/codemp/server/sv_bot.cpp
++++ b/codemp/server/sv_bot.cpp
+@@ -23,6 +23,7 @@
+ 
+ // sv_bot.c
+ #include "server.h"
++#include "sv_staff.h"
+ #include "botlib/botlib.h"
+ #include "qcommon/cm_public.h"
+ #include "server/sv_gameapi.h"
+@@ -208,6 +209,8 @@
+ 	cl->netchan.remoteAddress.type = NA_BOT;
+ 	cl->rate = 16384;
+ 
++	// Bots call ClientConnect inside the game module, bypassing GVM_ClientConnect.
++	SV_StaffConnect(i,true);
+ 	// cannot start recording auto demos here since bot's name is not set yet
+ 	return i;
+ }
+@@ -223,6 +226,7 @@
+ 	if ( clientNum < 0 || clientNum >= sv_maxclients->integer ) {
+ 		Com_Error( ERR_DROP, "SV_BotFreeClient: bad clientNum: %i", clientNum );
+ 	}
++	SV_StaffDisconnect(clientNum);
+ 	cl = &svs.clients[clientNum];
+ 	cl->state = CS_FREE;
+ 	cl->name[0] = 0;
+--- a/codemp/server/sv_gameapi.cpp
++++ b/codemp/server/sv_gameapi.cpp
+@@ -22,6 +22,8 @@
+ //Anything above this #include will be ignored by the compiler
+ 
+ #include "server.h"
++#include "sv_staff.h"
++#include "sys/sys_loadlib.h"
+ #include "botlib/botlib.h"
+ #include "qcommon/stringed_ingame.h"
+ #include "qcommon/RoffSystem.h"
+@@ -36,12 +38,28 @@
+ // game interface
+ static gameExport_t *ge; // game export table
+ static vm_t *gvm; // game vm, valid for legacy and new api
++static const STGameAPI* staffAPI;
++int GVM_StaffExecute(const STVerifiedAction* action,STGameResult* result) {
++ if(!gvm||gvm->isLegacy||!ST_ValidGameAPI(staffAPI))return 0;
++ VMSwap v(gvm); return staffAPI->Execute(action,result);
++}
++int GVM_StaffResolve(const char* text,STTargetRef* target) {
++ if(!gvm||gvm->isLegacy||!ST_ValidGameAPI(staffAPI))return 0;
++ VMSwap v(gvm); return staffAPI->ResolveTarget(text,target);
++}
++void GVM_StaffRevoke(const char* account,int actorSlot) {
++ if(gvm&&!gvm->isLegacy&&ST_ValidGameAPI(staffAPI)){ VMSwap v(gvm);staffAPI->Revoke(account,actorSlot); }
++}
++void GVM_StaffReset() {
++ if(gvm&&!gvm->isLegacy&&ST_ValidGameAPI(staffAPI)){ VMSwap v(gvm);staffAPI->ResetSessions(); }
++}
+ 
+ //
+ // game vmMain calls
+ //
+ 
+ void GVM_InitGame( int levelTime, int randomSeed, int restart ) {
++    SV_StaffReset();
+ 	if ( gvm->isLegacy ) {
+ 		VM_Call( gvm, GAME_INIT, levelTime, randomSeed, restart );
+ 		return;
+@@ -52,6 +70,7 @@
+ }
+ 
+ void GVM_ShutdownGame( int restart ) {
++    SV_StaffReset();
+ 	if ( gvm->isLegacy ) {
+ 		VM_Call( gvm, GAME_SHUTDOWN, restart );
+ 		return;
+@@ -62,6 +81,7 @@
+ }
+ 
+ char *GVM_ClientConnect( int clientNum, qboolean firstTime, qboolean isBot ) {
++    SV_StaffConnect(clientNum,isBot!=qfalse);
+ 	if ( gvm->isLegacy )
+ 		return (char *)VM_Call( gvm, GAME_CLIENT_CONNECT, clientNum, firstTime, isBot );
+ 	VMSwap v( gvm );
+@@ -88,6 +108,7 @@
+ }
+ 
+ void GVM_ClientDisconnect( int clientNum ) {
++    SV_StaffDisconnect(clientNum);
+ 	if ( gvm->isLegacy ) {
+ 		VM_Call( gvm, GAME_CLIENT_DISCONNECT, clientNum );
+ 		return;
+@@ -118,6 +139,7 @@
+ }
+ 
+ void GVM_RunFrame( int levelTime ) {
++    SV_StaffFrame();
+ 	if ( gvm->isLegacy ) {
+ 		VM_Call( gvm, GAME_RUN_FRAME, levelTime );
+ 		return;
+@@ -3127,10 +3149,14 @@
+ 			Com_Error( ERR_FATAL, "GetGameAPI failed on %s", dllName );
+ 		}
+ 		ge = ret;
++        GetSaberTrialsStaffAPI_t staffExport=(GetSaberTrialsStaffAPI_t)Sys_LoadFunction(gvm->dllHandle,"GetSaberTrialsStaffAPI");
++        staffAPI=staffExport?staffExport(SV_StaffImports()):NULL;
++        if(!ST_ValidGameAPI(staffAPI))staffAPI=NULL;
+ 
+ 		return;
+ 	}
+ 
++	staffAPI=NULL;
+ 	// fall back to legacy syscall/vm_call api
+ 	gvm = VM_CreateLegacy( VM_GAME, SV_GameSystemCalls );
+ 	if ( !gvm ) {
+@@ -3141,6 +3167,7 @@
+ 
+ void SV_UnbindGame( void ) {
+ 	GVM_ShutdownGame( qfalse );
++	staffAPI=NULL;
+ 	VM_Free( gvm );
+ 	gvm = NULL;
+ }
+--- a/codemp/qcommon/common.cpp
++++ b/codemp/qcommon/common.cpp
+@@ -1012,7 +1012,14 @@
+ error recovery
+ =============
+ */
++#ifndef DEDICATED
++extern void CL_StaffCommand_f(void);
++extern bool CL_StaffConnected(void);
++#endif
+ static void Com_Freeze_f (void) {
++#ifndef DEDICATED
++    if (CL_StaffConnected()) { CL_StaffCommand_f(); return; }
++#endif
+ 	float	s;
+ 	int		start, now;
+ 
+--- a/codemp/game/bg_pmove.c
++++ b/codemp/game/bg_pmove.c
+@@ -27,6 +27,7 @@
+ #include "qcommon/q_shared.h"
+ #include "bg_public.h"
+ #include "bg_local.h"
++#include "../staff/st_staff_movement.h"
+ #include "ghoul2/G2.h"
+ 
+ #ifdef _GAME
+@@ -1169,7 +1170,7 @@
+ 	int		max;
+ 	float	total;
+ 	float	scale;
+-	int		umove = 0; //cmd->upmove;
++	int		umove = (pm->ps->pm_type == PM_NOCLIP && pm->ps->stats[ST_STAFF_STAT] == ST_STAFF_GHOST) ? cmd->upmove : 0;
+ 			//don't factor upmove into scaling speed
+ 
+ 	max = abs( cmd->forwardmove );
+@@ -11172,6 +11173,16 @@
+ void Pmove (pmove_t *pmove) {
+ 	int			finalTime;
+ 
++	// Apply the same restrictions in server movement and local prediction.
++	if ((pmove->ps->pm_type == PM_FREEZE && pmove->ps->stats[ST_STAFF_STAT] == ST_STAFF_FROZEN) ||
++	    (pmove->ps->pm_type == PM_NOCLIP && pmove->ps->stats[ST_STAFF_STAT] == ST_STAFF_GHOST)) {
++		pmove->cmd.buttons &= BUTTON_TALK;
++		pmove->cmd.generic_cmd = 0;
++		if (pmove->ps->stats[ST_STAFF_STAT] == ST_STAFF_FROZEN)
++			pmove->cmd.forwardmove = pmove->cmd.rightmove = pmove->cmd.upmove = 0;
++		else
++			pmove->ps->pm_flags &= ~PMF_JUMP_HELD;
++	}
+ 	finalTime = pmove->cmd.serverTime;
+ 
+ 	if ( finalTime < pmove->ps->commandTime ) {
+--- a/shared/sys/con_win32.cpp
++++ b/shared/sys/con_win32.cpp
+@@ -190,7 +190,9 @@
+ 	CHAR_INFO line[ MAX_EDIT_LINE ];
+ 	WORD attrib;
+ 
+-	GetConsoleScreenBufferInfo( qconsole_hout, &binfo );
++	// Redirected output has no console screen buffer. Never use uninitialized dimensions.
++	if( !GetConsoleScreenBufferInfo( qconsole_hout, &binfo ) )
++		return;
+ 
+ 	// if we're in the middle of printf, don't bother writing the buffer
+ 	if( !qconsole_drawinput )
+@@ -305,7 +307,8 @@
+ 
+ 	FlushConsoleInputBuffer( qconsole_hin );
+ 
+-	GetConsoleScreenBufferInfo( qconsole_hout, &info );
++	if( !GetConsoleScreenBufferInfo( qconsole_hout, &info ) )
++		return;
+ 	qconsole_attrib = info.wAttributes;
+ 	qconsole_backgroundAttrib = qconsole_attrib & (BACKGROUND_BLUE|BACKGROUND_GREEN|BACKGROUND_RED|BACKGROUND_INTENSITY);
+ 

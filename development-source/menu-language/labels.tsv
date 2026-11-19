@@ -1,0 +1,47 @@
+English	es	ru	ja	zh	zt	ar	de	fr	it	pt	pb	ko	hi	pl	tr	uk
+MULTIPLAYER	Multijugador	Сетевая игра	マルチプレイ	多人游戏	多人遊戲	اللعب الجماعي	Mehrspieler	Multijoueur	Multigiocatore	Multijogador	Multijogador	멀티플레이어	मल्टीप्लेयर	Tryb wieloosobowy	Çok oyunculu	Мережева гра
+Account / Log in	Cuenta / Iniciar sesión	Аккаунт / Войти	アカウント / ログイン	账号 / 登录	帳號 / 登入	الحساب / تسجيل الدخول	Konto / Anmelden	Compte / Connexion	Account / Accedi	Conta / Iniciar sessão	Conta / Entrar	계정 / 로그인	खाता / लॉग इन	Konto / Zaloguj się	Hesap / Giriş yap	Обліковий запис / Увійти
+Host a match	Crear partida	Создать матч	対戦を作成	创建比赛	建立對戰	استضافة مباراة	Partie erstellen	Héberger une partie	Ospita partita	Criar partida	Criar partida	방 만들기	मैच होस्ट करें	Utwórz mecz	Maç oluştur	Створити матч
+Solo match	Partida en solitario	Одиночный матч	ソロマッチ	单人对战	單人對戰	مباراة فردية	Solopartie	Partie solo	Partita in solitaria	Partida a solo	Partida solo	솔로 매치	एकल मैच	Mecz solo	Tek kişilik maç	Одиночний матч
+Ranked Play	Partida clasificatoria	Рейтинговая игра	ランクマッチ	排位赛	排位賽	اللعب المصنّف	Rangliste	Partie classée	Partita classificata	Jogo competitivo	Partida ranqueada	랭크 게임	रैंक वाला मैच	Gra rankingowa	Dereceli oyun	Рейтингова гра
+Tournament	Torneo	Турнир	トーナメント	锦标赛	錦標賽	بطولة	Turnier	Tournoi	Torneo	Torneio	Torneio	토너먼트	टूर्नामेंट	Turniej	Turnuva	Турнір
+Game rules	Reglas del juego	Правила игры	ゲームルール	游戏规则	遊戲規則	قواعد اللعبة	Spielregeln	Règles du jeu	Regole del gioco	Regras do jogo	Regras do jogo	게임 규칙	खेल के नियम	Zasady gry	Oyun kuralları	Правила гри
+Key Bindings	Asignación de teclas	Назначение клавиш	キー割り当て	按键绑定	按鍵綁定	تعيين المفاتيح	Tastenbelegung	Raccourcis clavier	Assegnazione tasti	Atalhos de teclado	Atalhos de teclado	키 설정	कुंजी बाइंडिंग	Przypisanie klawiszy	Tuş atamaları	Призначення клавіш
+Bindlist	Lista de asignaciones	Список привязок	割り当て一覧	绑定列表	綁定清單	قائمة التعيينات	Belegungsliste	Liste des raccourcis	Elenco tasti	Lista de atalhos	Lista de atalhos	키 목록	बाइंडिंग सूची	Lista przypisań	Atama listesi	Список прив’язок
+Server Management	Gestión del servidor	Управление сервером	サーバー管理	服务器管理	伺服器管理	إدارة الخادم	Serververwaltung	Gestion du serveur	Gestione server	Gestão do servidor	Gerenciamento do servidor	서버 관리	सर्वर प्रबंधन	Zarządzanie serwerem	Sunucu yönetimi	Керування сервером
+Controller	Mando	Геймпад	コントローラー	手柄	控制器	وحدة التحكم	Controller	Manette	Controller	Comando	Controle	컨트롤러	कंट्रोलर	Kontroler	Oyun kumandası	Геймпад
+Advanced Input	Entrada avanzada	Расширенный ввод	詳細入力設定	高级输入	進階輸入	إعدادات الإدخال المتقدمة	Erweiterte Eingabe	Entrées avancées	Input avanzato	Entrada avançada	Entrada avançada	고급 입력	उन्नत इनपुट	Wejście zaawansowane	Gelişmiş giriş	Розширене введення
+Saved Configs	Configuraciones guardadas	Сохранённые настройки	保存済み設定	已保存配置	已儲存設定	الإعدادات المحفوظة	Gespeicherte Profile	Configurations sauvegardées	Configurazioni salvate	Configurações guardadas	Configurações salvas	저장된 설정	सहेजे गए कॉन्फ़िगरेशन	Zapisane konfiguracje	Kayıtlı ayarlar	Збережені налаштування
+Apply	Aplicar	Применить	適用	应用	套用	تطبيق	Anwenden	Appliquer	Applica	Aplicar	Aplicar	적용	लागू करें	Zastosuj	Uygula	Застосувати
+Cancel	Cancelar	Отмена	キャンセル	取消	取消	إلغاء	Abbrechen	Annuler	Annulla	Cancelar	Cancelar	취소	रद्द करें	Anuluj	İptal	Скасувати
+Primary	Principal	Основная	メイン	主要	主要	أساسي	Primär	Principale	Primario	Principal	Principal	기본	प्राथमिक	Podstawowe	Birincil	Основна
+Secondary	Secundaria	Дополнительная	サブ	次要	次要	ثانوي	Sekundär	Secondaire	Secondario	Secundária	Secundária	보조	द्वितीयक	Dodatkowe	İkincil	Додаткова
+Movement	Movimiento	Движение	移動	移动	移動	الحركة	Bewegung	Déplacements	Movimento	Movimento	Movimento	이동	मूवमेंट	Ruch	Hareket	Рух
+Next	Siguiente	Далее	次へ	下一页	下一頁	التالي	Weiter	Suivant	Avanti	Seguinte	Próximo	다음	अगला	Dalej	Sonraki	Далі
+Previous	Anterior	Назад	前へ	上一页	上一頁	السابق	Zurück	Précédent	Indietro	Anterior	Anterior	이전	पिछला	Wstecz	Önceki	Назад
+Move forward	Avanzar	Вперёд	前進	前进	前進	تحرّك للأمام	Vorwärts	Avancer	Avanti	Avançar	Avançar	앞으로 이동	आगे बढ़ें	Do przodu	İleri git	Рух уперед
+Move backward	Retroceder	Назад	後退	后退	後退	تحرّك للخلف	Rückwärts	Reculer	Indietro	Recuar	Recuar	뒤로 이동	पीछे जाएँ	Do tyłu	Geri git	Рух назад
+Strafe left	Desplazarse a la izquierda	Шаг влево	左に移動	向左平移	向左平移	تحرّك جانبياً لليسار	Seitwärts links	Pas à gauche	Sposta a sinistra	Deslocar para a esquerda	Mover para a esquerda	왼쪽으로 이동	बाएँ खिसकें	Krok w lewo	Sola kay	Крок ліворуч
+Strafe right	Desplazarse a la derecha	Шаг вправо	右に移動	向右平移	向右平移	تحرّك جانبياً لليمين	Seitwärts rechts	Pas à droite	Sposta a destra	Deslocar para a direita	Mover para a direita	오른쪽으로 이동	दाएँ खिसकें	Krok w prawo	Sağa kay	Крок праворуч
+Crouch	Agacharse	Присесть	しゃがむ	蹲下	蹲下	انحناء	Ducken	S’accroupir	Accovacciati	Agachar	Agachar	웅크리기	झुकें	Kucnij	Çömel	Присісти
+Look up	Mirar arriba	Взгляд вверх	上を見る	向上看	向上看	انظر للأعلى	Nach oben sehen	Regarder en haut	Guarda in alto	Olhar para cima	Olhar para cima	위 보기	ऊपर देखें	Spójrz w górę	Yukarı bak	Погляд угору
+Look down	Mirar abajo	Взгляд вниз	下を見る	向下看	向下看	انظر للأسفل	Nach unten sehen	Regarder en bas	Guarda in basso	Olhar para baixo	Olhar para baixo	아래 보기	नीचे देखें	Spójrz w dół	Aşağı bak	Погляд униз
+All	Todo	Все	すべて	全部	全部	الكل	Alle	Tout	Tutti	Tudo	Tudo	전체	सभी	Wszystkie	Tümü	Усі
+Menu motion: On	Animación: Sí	Анимация меню: вкл.	メニュー演出：オン	菜单动画：开启	選單動畫：開啟	حركة القائمة: مفعّلة	Menüanimation: An	Animations : oui	Animazioni: sì	Animações: sim	Animações: sim	메뉴 모션: 켬	मेनू एनीमेशन: चालू	Animacje: wł.	Menü animasyonu: Açık	Анімація меню: увімк.
+Menu motion: Off	Animación: No	Анимация меню: выкл.	メニュー演出：オフ	菜单动画：关闭	選單動畫：關閉	حركة القائمة: معطّلة	Menüanimation: Aus	Animations : non	Animazioni: no	Animações: não	Animações: não	메뉴 모션: 끔	मेनू एनीमेशन: बंद	Animacje: wył.	Menü animasyonu: Kapalı	Анімація меню: вимк.
+Name	Nombre	Имя	名前	名称	名稱	الاسم	Name	Nom	Nome	Nome	Nome	이름	नाम	Nazwa	Ad	Ім’я
+Sabers	Sables	Мечи	ライトセーバー	光剑	光劍	السيوف الضوئية	Lichtschwerter	Sabres	Sciabole	Sabres	Sabres	광선검	लाइटसेबर	Miecze świetlne	Işın kılıçları	Світлові мечі
+Force	Fuerza	Сила	フォース	原力	原力	القوة	Macht	Force	Forza	Força	Força	포스	फ़ोर्स	Moc	Güç	Сила
+Anime	Anime	Аниме	アニメ	动漫	動漫	أنمي	Anime	Anime	Anime	Anime	Anime	애니메이션	ऐनिमे	Anime	Anime	Аніме
+Sci-Fi	Ciencia ficción	Фантастика	SF	科幻	科幻	خيال علمي	Science-Fiction	Science-fiction	Fantascienza	Ficção científica	Ficção científica	SF	विज्ञान कथा	Sci-fi	Bilim kurgu	Фантастика
+Quit game	Salir del juego	Выйти из игры	ゲームを終了	退出游戏	離開遊戲	إنهاء اللعبة	Spiel beenden	Quitter le jeu	Esci dal gioco	Sair do jogo	Sair do jogo	게임 종료	गेम छोड़ें	Zakończ grę	Oyundan çık	Вийти з гри
+@MENUS_FFA_CAPS	Todos contra todos	Каждый за себя	個人戦	自由混战	自由混戰	الكل ضد الكل	Jeder gegen jeden	Chacun pour soi	Tutti contro tutti	Todos contra todos	Todos contra todos	개인전	सबके विरुद्ध	Każdy na każdego	Herkes tek	Кожен за себе
+@MENUS_TEAM_FFA_CAPS	Combate por equipos	Командный бой	チーム戦	团队混战	團隊混戰	قتال الفرق	Teamkampf	Combat en équipe	Scontro a squadre	Combate por equipas	Combate em equipes	팀전	टीम युद्ध	Walka drużynowa	Takım savaşı	Командний бій
+@MENUS_CTF_CAPS	Captura la bandera	Захват флага	旗取り	夺旗	奪旗	أسر العلم	Flaggeneroberung	Capture du drapeau	Cattura la bandiera	Capturar a bandeira	Captura da bandeira	깃발 뺏기	झंडा पकड़ें	Przejmij flagę	Bayrağı kap	Захоплення прапора
+%d model	%d modelo	%d модель	%d体	%d 个模型	%d 個模型	%d نموذج	%d Modell	%d modèle	%d modello	%d modelo	%d modelo	모델 %d개	%d मॉडल	%d model	%d model	%d модель
+%d models	%d modelos	Моделей: %d	%d体	%d 个模型	%d 個模型	النماذج: %d	%d Modelle	%d modèles	%d modelli	%d modelos	%d modelos	모델 %d개	%d मॉडल	Modele: %d	%d model	Моделей: %d
+%d-%d of %d	%d–%d de %d	%d–%d из %d	%d～%d / 全%d件	%d–%d / 共%d项	%d–%d / 共%d項	%d–%d من %d	%d–%d von %d	%d–%d sur %d	%d–%d di %d	%d–%d de %d	%d–%d de %d	%d–%d / 총 %d개	%d–%d / कुल %d	%d–%d z %d	%d–%d / %d	%d–%d з %d
+Vote / Call Vote	Votar / Proponer votación	Голосовать / Начать голосование	投票 / 投票を提案	投票 / 发起投票	投票 / 發起投票	التصويت / بدء تصويت	Abstimmen / Abstimmung starten	Voter / Lancer un vote	Vota / Avvia votazione	Votar / Iniciar votação	Votar / Iniciar votação	투표 / 투표 시작	वोट दें / वोट शुरू करें	Głosuj / Rozpocznij głosowanie	Oy ver / Oylama başlat	Голосувати / Почати голосування
+Photo Mode	Modo foto	Фоторежим	フォトモード	拍照模式	拍照模式	وضع التصوير	Fotomodus	Mode photo	Modalità foto	Modo de fotografia	Modo foto	사진 모드	फ़ोटो मोड	Tryb fotograficzny	Fotoğraf modu	Фоторежим
+Respawn	Reaparecer	Возродиться	リスポーン	重生	重生	إعادة الظهور	Respawn	Réapparaître	Rientra	Renascer	Renascer	부활	फिर से प्रकट हों	Odrodź się	Yeniden doğ	Відродитися
+Resume / Esc	Continuar / Esc	Продолжить / Esc	再開 / Esc	继续 / Esc	繼續 / Esc	متابعة / Esc	Fortsetzen / Esc	Reprendre / Échap	Riprendi / Esc	Continuar / Esc	Continuar / Esc	계속 / Esc	जारी रखें / Esc	Wznów / Esc	Devam et / Esc	Продовжити / Esc

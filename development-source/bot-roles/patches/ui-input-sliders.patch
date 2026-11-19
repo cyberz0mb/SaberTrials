@@ -1,0 +1,59 @@
+--- a/codemp/ui/ui_shared.c
++++ b/codemp/ui/ui_shared.c
+@@ -3805,6 +3805,17 @@
+ 	}
+ }
+ 
++// Compact values for the paired Saber Trials slider/text controls only.
++static void Item_SetSliderValue(itemDef_t *item, float value) {
++    qboolean stInput = !Q_stricmp(item->cvar, "st_uiYawSpeed") ||
++        !Q_stricmp(item->cvar, "st_uiMouseAccel") || !Q_stricmp(item->cvar, "st_uiPortraitSize") || !Q_stricmp(item->cvar, "st_uiHudScale") || !Q_stricmp(item->cvar, "st_uiHudOpacity");
++    if (stInput) {
++        editFieldDef_t *editDef = item->typeData.edit;
++        value = Com_Clamp(editDef->minVal, editDef->maxVal, value);
++    }
++    DC->setCVar(item->cvar, va(stInput ? "%.6g" : "%f", value));
++}
++
+ static void Scroll_Slider_ThumbFunc(void *p) {
+ 	float x, value, cursorx;
+ 	scrollInfo_t *si = (scrollInfo_t*)p;
+@@ -3827,7 +3838,7 @@
+ 	value /= SLIDER_WIDTH;
+ 	value *= (editDef->maxVal - editDef->minVal);
+ 	value += editDef->minVal;
+-	DC->setCVar(si->item->cvar, va("%f", value));
++	Item_SetSliderValue(si->item, value);
+ }
+ 
+ void Item_StartCapture(itemDef_t *item, int key)
+@@ -3939,7 +3950,7 @@
+ 					// vm fuckage
+ 					// value = (((float)(DC->cursorx - x)/ SLIDER_WIDTH) * (editDef->maxVal - editDef->minVal));
+ 					value += editDef->minVal;
+-					DC->setCVar(item->cvar, va("%f", value));
++					Item_SetSliderValue(item, value);
+ 					return qtrue;
+ 				}
+ 			}
+@@ -4209,11 +4220,19 @@
+ 
+ 	if (g_editingField && down)
+ 	{
++		// A click from either ST number box should also activate its target
++		// (Apply, Reset, the other field, or a slider) on the first click.
++		qboolean stForwardClick = key == A_MOUSE1 && g_editItem && g_editItem->cvar &&
++			(!Q_stricmp(g_editItem->cvar, "st_uiYawSpeed") ||
++			 !Q_stricmp(g_editItem->cvar, "st_uiMouseAccel") || !Q_stricmp(g_editItem->cvar, "st_uiPortraitSize") || !Q_stricmp(g_editItem->cvar, "st_uiHudScale") || !Q_stricmp(g_editItem->cvar, "st_uiHudOpacity")) &&
++			!Rect_ContainsPoint(&g_editItem->window.rect, DC->cursorx, DC->cursory);
+ 		if (!Item_TextField_HandleKey(g_editItem, key))
+ 		{
++			Leaving_EditField(g_editItem);
+ 			g_editingField = qfalse;
+ 			g_editItem = NULL;
+-			return;
++			if (!stForwardClick) return;
++			Display_MouseMove(NULL, DC->cursorx, DC->cursory);
+ 		}
+ 		else if (key == A_MOUSE1 || key == A_MOUSE2 || key == A_MOUSE3)
+ 		{

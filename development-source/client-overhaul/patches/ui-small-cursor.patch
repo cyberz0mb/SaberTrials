@@ -1,0 +1,20 @@
+diff --git a/codemp/ui/ui_main.c b/codemp/ui/ui_main.c
+--- a/codemp/ui/ui_main.c
++++ b/codemp/ui/ui_main.c
+@@ -10085,7 +10085,14 @@ void _UI_Refresh( int realtime ) {
+ 	// draw cursor
+ 	UI_SetColor( NULL );
+ 	if (Menu_Count() > 0 && (trap->Key_GetCatcher() & KEYCATCH_UI)) {
+-		UI_DrawHandlePic( (float)uiInfo.uiDC.cursorx, (float)uiInfo.uiDC.cursory, 40.0f, 40.0f, uiInfo.uiDC.Assets.cursor);
+-		//UI_DrawHandlePic( uiInfo.uiDC.cursorx, uiInfo.uiDC.cursory, 48, 48, uiInfo.uiDC.Assets.cursor);
++		if (uiInfo.uiDC.Assets.cursorStr &&
++			!Q_stricmp(uiInfo.uiDC.Assets.cursorStr, "ui/assets/sabertrials/cursor")) {
++			// Compact arrow, with its tip aligned to the actual click position.
++			UI_DrawHandlePic((float)uiInfo.uiDC.cursorx - 4.5f,
++				(float)uiInfo.uiDC.cursory - 2.25f, 24.0f, 24.0f, uiInfo.uiDC.Assets.cursor);
++		} else {
++			UI_DrawHandlePic((float)uiInfo.uiDC.cursorx, (float)uiInfo.uiDC.cursory,
++				40.0f, 40.0f, uiInfo.uiDC.Assets.cursor);
++		}
+ 	}
+ 

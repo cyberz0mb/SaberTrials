@@ -1,0 +1,167 @@
+warning: in the working copy of 'codemp/ui/ui_main.c', LF will be replaced by CRLF the next time Git touches it
+diff --git a/codemp/ui/ui_main.c b/codemp/ui/ui_main.c
+index 3375301f..158207ca 100644
+--- a/codemp/ui/ui_main.c
++++ b/codemp/ui/ui_main.c
+@@ -8497,6 +8497,9 @@ static const char *UI_FeederItemText(float feederID, int index, int column,
+ 	return "";
+ }
+ 
++static void ST_BuildPlayerIconPath( const char *modelSkin, char *iconPath,
++	size_t iconPathSize );
++
+ static qhandle_t UI_FeederItemImage(float feederID, int index) {
+ 	int	validCnt,i;
+ 	static char info[MAX_STRING_CHARS];
+@@ -8535,43 +8538,9 @@ static qhandle_t UI_FeederItemImage(float feederID, int index) {
+ 			  //for storing shader names. I can't just replace q3HeadNames with the shader name, because we
+ 			  //print what's in q3HeadNames and the icon name would look funny.
+ 				char iconNameFromSkinName[256];
+-				int i = 0;
+-				int skinPlace;
+-
+-				i = strlen(uiInfo.q3HeadNames[index]);
+-
+-				while (uiInfo.q3HeadNames[index][i] != '/')
+-				{
+-					i--;
+-				}
+-
+-				i++;
+-				skinPlace = i; //remember that this is where the skin name begins
+-
+-				//now, build a full path out of what's in q3HeadNames, into iconNameFromSkinName
+-				Com_sprintf(iconNameFromSkinName, sizeof(iconNameFromSkinName), "models/players/%s", uiInfo.q3HeadNames[index]);
+ 
+-				i = strlen(iconNameFromSkinName);
+-
+-				while (iconNameFromSkinName[i] != '/')
+-				{
+-					i--;
+-				}
+-
+-				i++;
+-				iconNameFromSkinName[i] = 0; //terminate, and append..
+-				Q_strcat(iconNameFromSkinName, 256, "icon_");
+-
+-				//and now, for the final step, append the skin name from q3HeadNames onto the end of iconNameFromSkinName
+-				i = strlen(iconNameFromSkinName);
+-
+-				while (uiInfo.q3HeadNames[index][skinPlace])
+-				{
+-					iconNameFromSkinName[i] = uiInfo.q3HeadNames[index][skinPlace];
+-					i++;
+-					skinPlace++;
+-				}
+-				iconNameFromSkinName[i] = 0;
++				ST_BuildPlayerIconPath( uiInfo.q3HeadNames[index],
++					iconNameFromSkinName, sizeof( iconNameFromSkinName ) );
+ 
+ 				//and now we are ready to register (thankfully this will only happen once)
+ 				uiInfo.q3HeadIcons[index] = trap->R_RegisterShaderNoMip(iconNameFromSkinName);
+@@ -9392,21 +9361,21 @@ bIsImageFile
+ builds path and scans for valid image extentions
+ =================
+ */
+-static qboolean bIsImageFile(const char* dirptr, const char* skinname)
++static qboolean ST_ImageFileExists( const char *basePath )
+ {
+ 	char fpath[MAX_QPATH];
+ 	int f;
+ 
+-	Com_sprintf(fpath, MAX_QPATH, "models/players/%s/icon_%s.jpg", dirptr, skinname);
++	Com_sprintf( fpath, sizeof( fpath ), "%s.jpg", basePath );
+ 	trap->FS_Open(fpath, &f, FS_READ);
+ 	if (!f)
+ 	{ //not there, try png
+-		Com_sprintf(fpath, MAX_QPATH, "models/players/%s/icon_%s.png", dirptr, skinname);
++		Com_sprintf( fpath, sizeof( fpath ), "%s.png", basePath );
+ 		trap->FS_Open(fpath, &f, FS_READ);
+ 	}
+ 	if (!f)
+ 	{ //not there, try tga
+-		Com_sprintf(fpath, MAX_QPATH, "models/players/%s/icon_%s.tga", dirptr, skinname);
++		Com_sprintf( fpath, sizeof( fpath ), "%s.tga", basePath );
+ 		trap->FS_Open(fpath, &f, FS_READ);
+ 	}
+ 	if (f)
+@@ -9418,6 +9387,79 @@ static qboolean bIsImageFile(const char* dirptr, const char* skinname)
+ 	return qfalse;
+ }
+ 
++static qboolean ST_IsBuiltInCharacterModel( const char *dirptr )
++{
++	static const char *const characterModels[] = {
++		"jawa"
++	};
++	int i;
++
++	for ( i = 0; i < ARRAY_LEN( characterModels ); i++ )
++	{
++		if ( !Q_stricmp( dirptr, characterModels[i] ) )
++		{
++			return qtrue;
++		}
++	}
++	return qfalse;
++}
++
++static qboolean bIsImageFile(const char* dirptr, const char* skinname)
++{
++	char imagePath[MAX_QPATH];
++
++	Com_sprintf( imagePath, sizeof( imagePath ),
++		"models/players/%s/icon_%s", dirptr, skinname );
++	if ( ST_ImageFileExists( imagePath ) )
++	{
++		return qtrue;
++	}
++
++	/* Saber Trials exposes built-in NPC actors even when Raven did not provide
++	 * an MP profile-grid icon. Vehicles and scenery are deliberately excluded. */
++	return ST_IsBuiltInCharacterModel( dirptr );
++}
++
++static void ST_BuildPlayerIconPath( const char *modelSkin, char *iconPath,
++	size_t iconPathSize )
++{
++	const char *slash = strchr( modelSkin, '/' );
++	const char *skin;
++	char model[MAX_QPATH];
++	size_t modelLength;
++
++	if ( !slash )
++	{
++		Q_strncpyz( iconPath, "gfx/mp/custom_mp_default", iconPathSize );
++		return;
++	}
++	modelLength = slash - modelSkin;
++	if ( modelLength >= sizeof( model ) )
++	{
++		modelLength = sizeof( model ) - 1;
++	}
++	memcpy( model, modelSkin, modelLength );
++	model[modelLength] = '\0';
++	skin = slash + 1;
++
++	Com_sprintf( iconPath, iconPathSize, "models/players/%s/icon_%s",
++		model, skin );
++	if ( ST_ImageFileExists( iconPath ) )
++	{
++		return;
++	}
++
++	/* Several SP-only characters, including Jawa, already ship a suitable
++	 * portrait named after their model directory. Reuse it without copying it. */
++	Com_sprintf( iconPath, iconPathSize, "models/players/%s/%s", model, model );
++	if ( ST_ImageFileExists( iconPath ) )
++	{
++		return;
++	}
++
++	Q_strncpyz( iconPath, "gfx/mp/custom_mp_default", iconPathSize );
++}
++
+ 
+ /*
+ =================

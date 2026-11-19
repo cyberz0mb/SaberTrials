@@ -1,0 +1,1632 @@
+ is assigned to: 	é atribuído a:
+%d B/s max	%d B/s máx.
+')!=std::string::npos)){error=	')!=std::string::npos)) {error=
++  Advanced video	+ Vídeo avançado
++altattack	+ataque
++attack	+ataque
++forward	+avançar
++left	+esquerdo
++lookup	+ procurar
++moveright	+supervisão
++right	+direita
++scores	+pontuações
++speed	+velocidade
++use	+usar
++useforce	+Useforce
+-  Advanced video	- Vídeo avançado
+-2=Desktop|-1=Custom	- 2=Desktop ?-1=Alfândega
+10 minutes: reconnect or substitute	10 minutos: reconectar ou substituir
+10 rounds per match	10 rodadas por partida
+16 bit	16 bits
+1v1 TOURNAMENT	1v1 TURNAMENTO
+2v2 / 20 kills	2v2 / 20 mortes
+32 bit	32 bits
+3v3 / 30 kills	3v3 / 30 mortes
+4v4 / 40 kills	4v4 / 40 mortes
+5 minutes to reconnect	5 minutos para reconectar
+5-5 tie: one deciding round	5-5 empate: uma rodada de decisão
+5v5 / 50 kills	5v5 / 50 mortes
+8-32 players / even entries	8-32 jogadores / entradas pares
+: unsupported value.	: valor não suportado.
+; engine directory limit reached	; limite de diretório do motor atingido
+; engine range 	; Gama de motores
+< Profile	< Perfil
+@MENUS_ABSORB	ABSÓRB
+@MENUS_ACROBATICS	Acrobacias
+@MENUS_ADD_BOT	Adicionar Bot
+@MENUS_ADD_FAVORITE	Adicionar Favorito
+@MENUS_ADD_SELECTED_SERVER_TO	Adicionar o servidor selecionado aos favoritos.
+@MENUS_ADJUSTS_THE_DIFFICULTY	Ajusta o nível de dificuldade dos bots artificialmente inteligentes no jogo.
+@MENUS_ADV_GAME_RULES	REGRAS DE JOGO AVANÇADAS
+@MENUS_ALL	Tudo
+@MENUS_ALLOWS_YOU_TO_SELECT	Permite- lhe seleccionar o tipo de jogo para o servidor que gostaria de jogar.
+@MENUS_ALLOW_SABER_CHALLENGE	Permitir o Desafio do Saber:
+@MENUS_AN_ATTACK_DRONE_SIMILAR	Drone Seeker\nUm drone de ataque semelhante aos drones de treinamento usados pelos Jedi para praticar suas habilidades de sabre de luz, o Seeker paira em torno de seu usuário e ataca qualquer inimigo sobre o qual o usuário dispara. O drone opera automaticamente por um tempo limitado e, em seguida, se autodestrui quando sua energia é esgotada.
+@MENUS_AN_ELEGANT_WEAPON_FOR	Sabre de luz\nUma arma elegante para uma idade mais civilizada, o sabre de luz é a arma preferida do Cavaleiro Jedi. O sabre de luz é uma lâmina de energia de grande poder que pode ser usado pelo empunhador para tanto ataque e defesa.\n\nFogo primário - Ataques de esmagamento e balanço\nFogo Secundário - Força de lançamento de sabre\nCapacidade defensiva - Defletores blaster e fogo arma de energia, parries ataques inimigos sabre de luz\nTipo de munição - N/A
+@MENUS_APPEARANCE	APRESENTAÇÃO
+@MENUS_APPLY	Aplicar
+@MENUS_APPLY_CHANGES	MUDANÇAS APLICATIVAS
+@MENUS_APPLY_CHANGES_AND_JOIN	Aplique alterações e junte-se ao jogo em andamento.
+@MENUS_APPLY_CHANGES_AND_THEN	Aplique alterações e, em seguida, vá para o Menu Principal.
+@MENUS_APPLY_PLAYER_SABER	Aplique alterações ao jogador e vá para a seleção do sabre.
+@MENUS_APPLY_POWERS	Aplicar poderes
+@MENUS_APPLY_SABER_CHANGES	Aplique alterações de sabre e retorne ao Menu Principal.
+@MENUS_APPLY_THESE_CHANGES_OR	Aplicar estas alterações ou descartar?
+@MENUS_ASSIST_ME	Ajuda-me.
+@MENUS_ATTACK_THE_ENEMY_S_BASE	Ataquem a base inimiga.
+@MENUS_ATTACK_TITLE	Ataque
+@MENUS_AUTO_DOWNLOAD	Transferência Automática:
+@MENUS_AUTO_JOIN	Entrar automaticamente:
+@MENUS_AUTO_JOIN_DESC	Permitir que o servidor escolha sua equipe e classe.
+@MENUS_AUTO_MAP_CYCLE	Ciclo de Mapa Automático:
+@MENUS_AUTO_MAP_CYCLE_DESC	Vá para o próximo mapa cada vez que uma correspondência estiver concluída.
+@MENUS_AUTO_TEAM	Equipe Automática
+@MENUS_AWAITING_CHALLENGE	À espera de um desafio... %i
+@MENUS_AWAITING_CONNECTION	Aguardando conexão...%i
+@MENUS_AWAITING_GAMESTATE	À espera do estado do jogo...
+@MENUS_A_DEDICATED_SERVER_IS	Um servidor dedicado é um computador que só executa um jogo para outros.
+@MENUS_A_DETONATION_PACK_IS	Pacotes de Detonação\nUm pacote de detonação é essencialmente um pequeno dispositivo explosivo com um gatilho de detonação remoto. O pacote é colocado ou jogado e pode ser detonado à vontade pelo usuário. Pacotes de detonação são comumente usados para emboscar inimigos ou abrir portas seladas.\n\nFogo Primário - Carga de lançamento aos pés do usuário\nFogo Secundário - Explode todas as cargas definidas
+@MENUS_BACKTOMAIN	De volta ao menu principal.
+@MENUS_BACKTORULES	Voltar ao Menu Regras
+@MENUS_BACKUP_ONE_MENU	Recua um menu.
+@MENUS_BACK_2_PROFILE	De volta ao menu de perfil.
+@MENUS_BACTA_CANISTERS_ARE_PORTABLE	Canais de Bacta BioTech\nAs latas de bacta são portáteis, embalagens descartáveis de pomadas de bacta e ferramentas de cuidados de emergência. Projetado para uso no campo, latas de bacta podem ser usados para curar feridas e restaurar a vitalidade durante a recuperação médica.
+@MENUS_BECOME_A_NEARLY_UNSTOPPABLE	Tornar-se um quase imparável juggernaut.
+@MENUS_BEGIN_PLAYING_THE_DEMO	Comece a reproduzir a demonstração do arquivo selecionado.
+@MENUS_BLADE_COLOR	COR BLADE
+@MENUS_BLADE_COLOR_DESC	Selecione a cor para sua lâmina de sabre de luz.
+@MENUS_BLASTER_PISTOL	PISTOL DE BLASTER
+@MENUS_BLASTER_PISTOL_DESC	DL-44 Pistola de Blaster Pesado\nUma das armas mais comuns na galáxia, a pistola DL-44 Heavy Blaster tem uma taxa lenta de fogo, mas é altamente precisa.\n\nFogo Primário - Lento, único tiro com grande precisão e danos\nIncêndio Secundário - Acumulação de energia carregada para aumento da explosão de danos\nTipo de munição - Pacote Blaster
+@MENUS_BLASTER_RIFLE	RIFLE DE BLASTER
+@MENUS_BOWCASTER_CAPS	CAIXA DE CAIXA
+@MENUS_CALL_FOR_VOTES	Pedido de votação
+@MENUS_CANCEL	CÂNCEL
+@MENUS_CANCEL_DESC	Voltar ao jogo sem mudar de times.
+@MENUS_CAPTURE_LIMIT	Limite de Captura:
+@MENUS_CAPTURE_THE_FLAG_RULES	Capturar as regras do jogo de bandeira.
+@MENUS_CAP_AUTO_JOIN	Auto- Juntar
+@MENUS_CHANNEL_THE_FORCE_TO	Canalize a Força para curar os seus aliados.
+@MENUS_CHARACTER_CREATION	CRIAÇÃO DE CARACTERÍSTICAS
+@MENUS_CHOOSE_A_PRE_MADE_ALLOCATION	Escolha uma alocação pré-feita de Força Powers.
+@MENUS_CHOOSE_CLASS	ESCOLHA UMA CLASSE
+@MENUS_CHOOSE_MOVE_DESC	Escolha um tipo de movimento.
+@MENUS_CHOOSE_RULES	Escolha as regras do jogo
+@MENUS_CHOOSE_SOURCE_OF_SERVERS	Escolha a origem dos servidores.
+@MENUS_CHOOSE_SPECIES	Escolha uma espécie.
+@MENUS_CHOOSE_THE_PATH_OF_THE	Escolha o caminho do Lado da Luz ou do Lado Negro.
+@MENUS_CHOOSE_YOUR_FORCE_TRAINING	Escolha o seu Treinamento de Força
+@MENUS_CHOOSE_YOUR_GAME	Escolha o seu jogo.
+@MENUS_CLASS_CHOICE_DESC	Selecione uma classe.
+@MENUS_CLASS_FORCEPOWERS	Poderes de força para esta classe.
+@MENUS_CLASS_INVENTORY	Inventário para esta classe
+@MENUS_CLASS_WEAPONS	Armas para esta classe.
+@MENUS_CLICK_FOR_HUMAN_BOTS	Clique para humanos, bots ou slots fechados.
+@MENUS_CLIENTS_CAN_DOWNLOAD	Os clientes podem baixar novos dados e código.
+@MENUS_CLIENT_MUST_HAVE_EXACT	Os clientes e o servidor devem ter exatamente o mesmo código e dados.
+@MENUS_CLOAK_DESC	Escudo de revestimento\nO escudo de camuflagem torna o usuário invisível para os outros, permitindo o movimento furtivo. No entanto, devido à imensa energia necessária para alimentar o dispositivo, o manto dura por uma curta duração.\n\nUm tiro direto de uma arma DEMP 2 irá desativar temporariamente o escudo. Além disso, um tiro do fogo secundário do DEMP 2 irá desativar permanentemente o escudo.\n\nO escudo de camuflagem só é utilizável no tipo de jogo Siege.
+@MENUS_COLOR	COR
+@MENUS_COLOR1_DESC	Selecione uma cor de lâmina.
+@MENUS_COLOR2_DESC	Selecione uma cor de segunda lâmina.
+@MENUS_COMBAT_RULES	REGRAS DE COMBATE
+@MENUS_COMMONLY_REFERRED_TO	Pulso eletromagnético destrutivo 2 pistola\nComumente referido como DEMP 2, este rifle de pulso é usado principalmente contra dróides e dispositivos elétricos. O DEMP 2 dispara explosões de íons de alta potência que interrompem sistemas elétricos e são mais eficazes contra escudos pessoais. Ao contrário das encarnações anteriores da arma, as cargas de íons do DEMP 2 são capazes de danificar material vivo.\n\nFogo Primário - Tiro único, causa algum dano aos humanos, dano extra aos escudos\nFogo Secundário - Um tiro carregado que desencadeia uma onda de choque quase instantânea que pode derrubar os inimigos de volta\nTipo de munição - Célula de energia
+@MENUS_COMPLETE_THE_CURRENT	Complete o objetivo atual.
+@MENUS_CONC_RIFLE	RIFLE DE CONCUSSÃO
+@MENUS_CONC_RIFLE_DESC	Espingarda de Concussão de Stouker\nO Stouker dispara uma explosão concussiva criando uma explosão que se espalha por cerca de 4 metros de diâmetro.\n\nFogo primário - Tiro único, grande efeito explosivo que danifica tudo, taxa de disparo lenta\nFogo Secundário - Dispara um projétil menor que tem um raio explosivo menor, mas causa muito mais danos nesse raio e tem um recuo mais grave\nTipo de munição - Parafusos metálicos
+@MENUS_CONFIGURE_GAME_CONTROLS	Configurar os controles do jogo.
+@MENUS_CONFIGURE_GAME_SETTINGS	Configurar as configurações do jogo.
+@MENUS_CONNECTING_TO	Conectando a %s
+@MENUS_CONNECTION_RULES	REGRAS DE CONEXÃO
+@MENUS_CREATE_AN_AURA_THAT_PROTECTS	Crie uma aura que proteja contra ataques físicos.
+@MENUS_CTF_CAPS	CAPTURE A FLAGA
+@MENUS_CUSTOM_CHARACTER	Caracter Personalizado
+@MENUS_DARK_RAGE	Raiva Escura:
+@MENUS_DATAPAD	Bloco de dados:
+@MENUS_DATA_RATE	Taxa de dados:
+@MENUS_DATA_RATE_DESC	Velocidade de transferência de informação através da Internet.
+@MENUS_DATA_TRANSFER_RATE_TO	Taxa de transferência de dados para clientes.
+@MENUS_DEDICATED_SERVER	Servidor dedicado:
+@MENUS_DEFAULT	Predefinição
+@MENUS_DEFEND_OUR_BASE	Defenda a nossa base.
+@MENUS_DEFEND_TITLE	Defender
+@MENUS_DELETE_SELECTED_SERVER	Apagar o servidor seleccionado dos favoritos.
+@MENUS_DEL_FAVORITE	Del. Favorito
+@MENUS_DESCRIPTION_OF_A_FORCE	Descrição de um Poder de Força.
+@MENUS_DESCRIPTION_OF_A_WEAPON	Descrição de um tipo de arma.
+@MENUS_DESCRIPTION_OF_ITEM_TYPE	Descrição do tipo de item.
+@MENUS_DISABLE_FORCE	Desactivar a Força:
+@MENUS_DISABLE_FORCE_INFO	Não permitir o uso de qualquer poder de força durante o jogo.
+@MENUS_DISCARD	Descartar
+@MENUS_DISPLAY_SERVER_INFORMATION	Mostrar informações do servidor.
+@MENUS_DONE	Feito
+@MENUS_DONE_CAPS	FEITO
+@MENUS_DONE_DESC	Voltar ao Localizador de Servidores.
+@MENUS_DO_NOT_APPLY_CHANGES	Não aplicar alterações e voltar ao menu de vídeo.
+@MENUS_DRAIN	DREIN
+@MENUS_DRAIN_THE_FORCE_POWER	Drenar o poder de força dos adversários para aumentar a sua saúde.
+@MENUS_DUALSABERS	Sabres duplos
+@MENUS_DUALSABERS_DESC	Use 2 sabres de uma mão, apenas um estilo de luta.
+@MENUS_DUAL_SABERS	Sabres duplos
+@MENUS_DUEL_GAMETYPE	Regras de jogo de duelo.
+@MENUS_DUEL_LIMIT	Limite de Duelo:
+@MENUS_DURATION_5_SECONDS_NAREA	Forçar a Velocidade\nDuração: Variável (10 - 20 segundos)\nÁrea de Efeito: Jedi\nEfeito: Jedi acelera.\n\nRank 1 - Os Jedi movem 25% mais rápido do que o normal durante 10 segundos\nRank 2 - Os Jedi movem-se 50% mais rápido do que o normal durante 15 segundos\nRank 3 - Os Jedi movem 75% mais rápido do que o normal durante 20 segundos
+@MENUS_DURATION_CONTINUOUS_NAREA	Absorção de Força\nDuração: Continua\nÁrea de Efeito: Apenas Jedi\nEfeito: Protege de qualquer Força direta.\n\nAbsorve os danos das habilidades da Força dirigidas ao empunhador e transforma essa energia em poder de força utilizável.\n\nRank 1 - Nullies rank 1 Ataques de força, reduz o efeito de ataques de força de patente mais alta. Retorna algum poder de força.\nRank 2 - Nullies Rank 2 Ataques de força, reduz grandemente o efeito de ataques de força de classificação mais alta. Retorna maior Força Poder.\nPosição 3 - Nulifica todos os ataques de força. Retorna ainda maior Força de Poder.
+@MENUS_DURATION_IMMEDIATE_NAREA	Forçar o Salto\nDuração: Imediato\nÁrea de Efeito: Apenas Jedi\nEfeito: Permite que Jedi dê um tremendo salto vertical.\n\nRank 1 - Jedi pode saltar para o dobro da sua altura normal de salto.\nRank 2 - Jedi pode saltar até quatro vezes a sua altura de salto normal.\nPosição 3 - Jedi pode saltar até oito vezes a sua altura normal de salto.
+@MENUS_DURATION_INSTANTANEOUS	Forçar a empurrar\nDuração: Efeito instantâneo\nÁrea de Efeito: Objetos ou Pessoas\nEfeito: Permite aos Jedi afastar objetos de si mesmos, desviar mísseis e defender-se contra ataques de Force Grip e Force Push.\n\nRank 1 - Jedi usa a Força para empurrar um inimigo ou objeto específico focado.\nRank 2 - Jedi usa a Força para empurrar vários inimigos ou objetos em um arco limitado.\nRank 3 - Jedi pode empurrar para trás vários inimigos com força suficiente para causar danos empurrando os inimigos em superfícies sólidas ou fora de bordas.
+@MENUS_DURATION_INSTANTANEOUS_NAREA	Forçar o Aperto\nDuração: Instantânea\nÁrea de Efeito: Apenas pessoas vivas\nEfeito: Permite que Jedi sufoque ou restrinja os órgãos de um ser vivo.\n\nPosição 1 - O inimigo afetado está agarrado e mantido intacto, mas imóvel por 5 segundos. Jedi deve permanecer parado.\nRank 2 - Inimigo é afetado de forma semelhante ao Rank 1, mas o aperto pode danificar e levantar inimigos com foco prolongado do aperto. Jedi deve permanecer parado.\nPosição 3 - Inimigo é afetado de forma semelhante à categoria 2, mas os Jedi podem mover-se livremente e esmagar o inimigo em paredes e outros obstáculos ou usar o inimigo como um escudo enquanto ainda fazendo danos sufocantes.
+@MENUS_DURATION_VARIABLE_10	Forçar a Raiva\nDuração: Variável (10 - 30 segundos)\nÁrea de Efeito: Jedi Sombrio Apenas\nEfeito: Jedi entra em um frenesi de velocidade para uma determinada duração, mas deve recuperar depois. Drena saúde enquanto ativo, e expira após a duração ou quando a saúde atinge 1.\n\nRaiva Escura: Fogo 33% mais rápido, Mova-se 100% mais rápido, diminuir os danos tomados em 50%, o empujador não pode morrer (a saúde permanece em 1).\nDark Rage Recuperação: Fogo 50% mais lento, mover a 75% de velocidade\n\nRank 1 - Raiva por 10 segundos, recuperação de 10 segundos\nRank 2 - Raiva por 20 segundos, recuperação de 10 segundos\nPosição 3 - Raiva por 30 segundos, 10 segundos de recuperação
+@MENUS_DURATION_VARIABLE_20	Trick Mental\nDuração: Variável (5 - 15 segundos)\nÁrea de efeito: Outros jogadores\nEfeito: Permite que Jedi se tornem invisíveis para outros jogadores.\n\nPosição 1 - Um Jedi é invisível a um único inimigo alvo por 5 segundos.\nRank 2 - Um Jedi é invisível aos inimigos em um arco dianteiro de distância moderada por 10 segundos.\nPosição 3 - Um Jedi é invisível a todos os inimigos a uma distância moderada durante 15 segundos.
+@MENUS_DURATION_VARIABLE_NAREA	Protecção das Forças\nDuração: Variável\nÁrea de Efeito: Apenas Jedi\nEfeito: Protege do ataque físico.\n\nDanos aos Jedi de ataques físicos são tirados do Force Power pool em vez de da saúde.\n\nPosição 1 - 50% Danos bloqueados, 100% removidos do pool Força, máx. 100 Danos\nRank 2 - 75% Danos bloqueados, 50% removidos do pool da Força, máx. 200 Danos\nPosição 3 - 87,5% Danos bloqueados, 25% removidos do pool da Força, máx. 400 Danos
+@MENUS_EFFECT_JEDI_ALLIES_NEFFECT	Energizar a Equipe\nDuração: Efeito instantâneo\nÁrea de Efeito: Jedi Aliados\nEfeito: O Jedi tem a capacidade de imbuir aliados com energia da Força.\n\nA Força Energia permite que os Jedi restaurem uma certa quantidade de energia da Força aos seus aliados dentro de um certo raio de seu corpo. Jedi pode restaurar 50 pontos de Força para um aliado, 33 pontos de Força para dois aliados ou 25 pontos de Força para 3 ou mais aliados.\n\nPosição 1 - Intervalo normal\nGrau 2 - Faixa de uma vez e meia normal\nPosição 3 - Intervalo normal duplo
+@MENUS_EFFECT_NAREA_OF_EFFECT	Forçar o Sentido\nDuração: Efeito instantâneo\nÁrea de Efeito: Campo de visão Jedi\nEfeito: Permite uma visão grande e ampla aos Jedi.\n\nA visão de força permite que os Jedi vejam todos os inimigos claramente, independentemente das condições de iluminação, ao rodeá-los com uma aura brilhante fácil de ver. A visão de força também permite que Jedi contrarie o poder da força Jedi Mind Trick. No nível mais alto da força Ver os Jedi desenvolve um sexto sentido que lhe permite evitar o fogo de atirador.\n\nPosição 1 - Veja as auras dos jogadores destacadas em vista com duração normal do tempo.\nRank 2 - Veja as auras dos jogadores em vista e através de paredes com duração de tempo duplo.\nPosição 3 - Veja as auras dos jogadores em vista e através de paredes em qualquer intervalo com duração tripla. Os jogadores podem automaticamente esquivar-se de tiros de sniper neste nível.
+@MENUS_ENABLE_VOTING	Habilitar votação:
+@MENUS_ENDGAME_RULES	REGRAS DE FIM DO JOGO
+@MENUS_ENTER_IP_ADDRESS	Digite endereço IP:
+@MENUS_ENTER_IP_ADDRESS_OF_FAVORITE	Digite o endereço IP do servidor favorito.
+@MENUS_ENTER_PASSWORD	PASSÃO DE ENTRADA
+@MENUS_ENTER_THE_NAME_FOR_YOUR	Indique o nome do seu servidor.
+@MENUS_ENTER_THE_TITLE_FOR_YOUR	Digite o título para o seu modelo de força (apenas alphanumérico).
+@MENUS_ERROR	Erro:
+@MENUS_ESTABLISH_THE_NUMBER	O número de mortes necessárias para ganhar o jogo.
+@MENUS_EVEN_TEAMS	Equipas pares:
+@MENUS_EWEB_DESC	E-Web\nO E-Web é um canhão laser tripé de potência. Pode ser implantado no campo de batalha para ajudar a criar uma posição defensiva forte.\n\nO E-Web só é utilizável no tipo de jogo Siege.
+@MENUS_EXIT_TO_MAIN_MENU	Sair para o Menu Principal.
+@MENUS_FASTEST_CLIENT_ALLOWED	Cliente mais rápido permitido para conectar.
+@MENUS_FAVORITE_SERVER_INFO	INFORMAÇÃO DO SERVIÇO FAVORITÁRIO
+@MENUS_FFA_CAPS	LIVRE PARA TODOS
+@MENUS_FILENAME	Nome do arquivo:
+@MENUS_FILTER_FOR_SPECIFIC_GAME	Definir filtro para tipos de jogo específicos.
+@MENUS_FIND_PLAYER	Procurar o Jogador
+@MENUS_FINISHED_INPUTTING_INFO	A informação de entrada terminou.
+@MENUS_FOLLOW_ME	Sigam-me.
+@MENUS_FORCEDESC_DARK	Escuro
+@MENUS_FORCEDESC_LIGHT	Luz
+@MENUS_FORCE_ABSORB	Absorventes:
+@MENUS_FORCE_DRAIN	Drenagem:
+@MENUS_FORCE_GRIP	Aperto:
+@MENUS_FORCE_HEAL	Cura:
+@MENUS_FORCE_JUMP	Saltar:
+@MENUS_FORCE_LIGHTNING	Relâmpago:
+@MENUS_FORCE_MASTERY	Forçar o Mestre:
+@MENUS_FORCE_MASTERY_INFO	Define o número de pontos que podem ser atribuídos às potências de força.
+@MENUS_FORCE_MINDTRICK	Trick Mental:
+@MENUS_FORCE_POWERS_TITLE	Potências de força:
+@MENUS_FORCE_POWERS_TITLE_DESC	Activar os poderes de força, desactivar os poderes de força, ou apenas activar Saltar, Empurrar, Puxar e Saber Lançar.
+@MENUS_FORCE_PROTECT	Proteger:
+@MENUS_FORCE_PULL	Puxar:
+@MENUS_FORCE_PUSH	Empurrar:
+@MENUS_FORCE_RULES	Regras da Força.
+@MENUS_FORCE_SIDE	Lado da força:
+@MENUS_FORCE_SIGHT	Ver:
+@MENUS_FORCE_SPEED	Velocidade:
+@MENUS_FORCE_TEAM_HEAL	Equipe Cura:
+@MENUS_FORCE_TEAM_REPLENISH	Equipa Energizar:
+@MENUS_FORCE_TEMPLATES	Forçar Modelos
+@MENUS_FREE_FOR_ALL_GAME_RULES	Grátis para Todas as regras do jogo.
+@MENUS_FRIENDLY_FIRE	Fogo amigo:
+@MENUS_GAME	Jogo:
+@MENUS_GAME_RULES	Regras do Jogo.
+@MENUS_GAME_TYPE	Tipo:
+@MENUS_GENERAL_RULES	REGRAS GERAIS
+@MENUS_GET_ENEMY_FLAG_BACK_TO	Leve a bandeira inimiga de volta à base.
+@MENUS_GET_NEW_LIST	Obter uma Nova Lista
+@MENUS_GET_OUR_FLAG_BACK	Recupera a nossa bandeira.
+@MENUS_GET_SERVER_INFO	Informações do Servidor
+@MENUS_GET_UPDATED_SERVER_LIST	Obter lista de servidores atualizada.
+@MENUS_GO_BACK_TO_STANDARD_SETTINGS	Volte para as configurações padrão.
+@MENUS_GO_TO_MAIN_MENU	Ir para o Menu Principal?
+@MENUS_GUARD_OUR_FLAG_CARRIER	Guarda o nosso porta-bandeira.
+@MENUS_HEAD	CABEÇA
+@MENUS_HEAL	CURA
+@MENUS_HEAL_YOUR_BODY_WITH_THE	Cura o teu corpo com a Força.
+@MENUS_HILT1_DESC	Selecione um cabo.
+@MENUS_HILT2_DESC	Selecione um segundo punho.
+@MENUS_IMMOBILIZE_OPPONENTS	Immobilizar oponentes em um aperto agonizante da morte.
+@MENUS_INCLUDE_EMPTY_SERVERS	Incluir os servidores vazios na lista.
+@MENUS_INCLUDE_FULL_SERVERS	Incluir os servidores completos na lista.
+@MENUS_INPUT_IP_ADDRESS_OF_SERVER	Endereço IP de entrada do servidor.
+@MENUS_INPUT_PASSWORD	Senha de entrada.
+@MENUS_INPUT_PASSWORD_1	Senha de Entrada
+@MENUS_INPUT_PLAYER_NAME	Nome do jogador de entrada.
+@MENUS_INSTANTANEOUS_EFFECT_NAREA	Forçar a puxar\nDuração: Efeito instantâneo\nÁrea de Efeito: Objetos ou Pessoas\nEfeito: Permite que Jedi puxe inimigos em direção a si mesmos com a chance de desarmar o oponente. Ele também se defende contra ataques Force Pull.\n\nRank 1 - Jedi usa a Força para puxar um inimigo específico focado.\nRank 2 - Jedi usa a Força para puxar vários inimigos em um arco limitado.\nRank 3 - Jedi pode puxar vários inimigos com força suficiente para derrubar alvos de perto.
+@MENUS_IN_CAPTURE_THE_FLAG_CTF	No Capture The Flag (CTF), duas equipas competem para capturar a bandeira da equipa adversa e devolvê- la à sua base pessoal. Qualquer membro de uma equipa pode apanhar a bandeira da equipa adversa. Quando a bandeira for tomada, todos os jogadores no mapa são alertados para o evento. A transportadora da bandeira deve então fugir do território do inimigo e voltar com a bandeira para a sua própria base para marcar.\n\nSe o porta- bandeiras for eliminado, a bandeira é jogada no ponto de eliminação. Se um membro da equipa do proprietário da bandeira tocar na bandeira, ela é devolvida automaticamente à sua base. Se um membro da equipa do jogador eliminado a apanhar, ele poderá continuar a tentar devolvê- la à sua base. A própria bandeira do porta- bandeira deve estar em casa na sua posição de base para que a transportadora marque com a bandeira da equipa adversa.\n\nCORING DA EQUIPE\nCapturando a bandeira do inimigo: +1 ponto\n\nCRONOLOGIA INDIVIDUAL\nPegando a bandeira do inimigo: +10 pontos\nCapturando a bandeira do inimigo: +100 pontos\nSua equipe captura a bandeira do inimigo: +25 pontos\nRecuperar sua bandeira: +10 pontos\n- permitindo captura imediata para a equipe: +10 pontos\nEliminando o porta-bandeira inimigo: +20 pontos\n- permitindo captura imediata para a equipe: +10 pontos\nProtegendo o seu porta-bandeira: +5 pontos\nProtegendo sua base de bandeira: +10 pontos\n\nO time com a maior pontuação no final da partida ganha o jogo.
+@MENUS_ISDN	RDIS
+@MENUS_ITEM_RULES	Regras do Item.
+@MENUS_JETPACK_DESC	Jetpack\nO jetpack permite que o usuário voe por curta duração, dando-lhes uma vantagem tática sobre os outros. Se o usuário não disparar os foguetes, eles perderão lentamente altitude.\n\nO jetpack só é utilizável no tipo de jogo Siege.\n\n(Nota: Para ativar o jetpack, pule e pressione "use" enquanto estiver no ar. Segurar "jump" permitirá que o usuário ganhe altitude, enquanto segurando "crouch" diminuirá a altitude.)
+@MENUS_JOIN	Entrar
+@MENUS_JOIN_A_TEAM	Junte-se a uma equipe
+@MENUS_JOIN_CAPS	AJUNTA
+@MENUS_JOIN_CHOSEN_SERVER	Junte- se ao servidor escolhido.
+@MENUS_JOIN_GAME	Juntar-se ao Jogo
+@MENUS_JOIN_PLAYER_DESC	Junte- se ao servidor com este jogador.
+@MENUS_JOIN_TEAM_DESC	Junta-te a esta equipa.
+@MENUS_KILL_LIMIT	Limite de Morte:
+@MENUS_LEAP_TO_AMAZING_HEIGHTS	Salte para alturas incríveis segurando o botão Jump.
+@MENUS_LEGS	LES
+@MENUS_LIGHTNING	LUZ
+@MENUS_LIGHTSABER_CAPS	LUZESABER
+@MENUS_LIGHTSABER_CREATION	CRIAÇÃO DE LUZESABER
+@MENUS_LIGHTSABER_ONLY	Apenas sabre de luz:
+@MENUS_LIGHT_DARK_INFO	Força a equipa vermelha a usar poderes de força do lado negro, azul para usar o lado claro.
+@MENUS_LIGHT_DARK_TEAMS	Equipas ligeiras/escuras:
+@MENUS_LIMITED	Limitado
+@MENUS_LOADING_MAPNAME	Carregando... %s
+@MENUS_MAIN_MENU	Menu Principal
+@MENUS_MAKE_THESE_CHANGES_TO	Faça essas mudanças nas habilidades de força do seu personagem.
+@MENUS_MATCH	Reiniciar a partida?
+@MENUS_MATCHING_NAMES	Os nomes correspondentes serão substituídos.
+@MENUS_MAXIMUM_PING	Ping máximo:
+@MENUS_MAXIMUM_PLAYERS	Máximo de Jogadores:
+@MENUS_MAX_RATE	Taxa Máxima:
+@MENUS_MIND_TRICK	TRICK MENTE
+@MENUS_MINIMUM_PING	Ping mínimo:
+@MENUS_MINIMUM_TIME_ALLOWED	Tempo mínimo permitido entre as tentativas de ligação.
+@MENUS_MISSION	Missão:
+@MENUS_MISSION_OBJECTIVES	OBJECTIVOS DE MISSÃO
+@MENUS_MOVE_AT_AN_ACCELERATED	Mova-se a uma velocidade acelerada.
+@MENUS_MOVE_DESC2	Clique para ver uma descrição de movimento.
+@MENUS_MOVE_RULES	Regras de Movimento.
+@MENUS_MOVE_TYPES	TIPOS DE CIRCULAÇÃO
+@MENUS_MUST_ACQUIRE_A_MINIMUM	Deve adquirir uma classificação mínima de 1 em Saber Attack para ganhar sabre de luz.
+@MENUS_NAME	Nome
+@MENUS_NAME1	Nome:
+@MENUS_NAME_TITLE	Nome:
+@MENUS_NEW_FAVORITE	Novo Favorito
+@MENUS_NO	Não
+@MENUS_NO_LIGHTSABER	Nenhum sabre de luz
+@MENUS_OBJECTIVE_1	Objetivo # 1
+@MENUS_OBJECTIVE_2	Objetivo n.o 2
+@MENUS_OBJECTIVE_3	Objetivo # 3
+@MENUS_OBJECTIVE_4	Objetivo # 4
+@MENUS_OBJECTIVE_5	Objetivo # 5
+@MENUS_OBJECTIVE_6	Objetivo # 6
+@MENUS_OBJECTIVE_7	Objetivo # 7
+@MENUS_OBJECTIVE_8	Objetivo # 8
+@MENUS_OBJECTIVE_COMPLETED	Concluído.
+@MENUS_OF_EFFECT_JEDI_ALLIES_NEFFECT	Curar outros\nDuração: Efeito instantâneo\nÁrea de Efeito: aliados Jedi\nEfeito: O Jedi tem a capacidade de curar aliados após ferimentos.\n\nForçar a Cura Outro permite aos Jedi restaurar uma certa quantidade de saúde aos seus aliados num certo raio de seu corpo. Jedi pode restaurar 50 saúde para um aliado,\n33 saúde para dois aliados ou 25 saúde para 3 ou mais aliados.\n\nPosição 1 - Intervalo normal\nGrau 2 - Faixa de uma vez e meia normal\nPosição 3 - Intervalo normal duplo
+@MENUS_OF_EFFECT_JEDI_ONLY_NEFFECT	Forçar a Cura\nDuração: Efeito instantâneo\nÁrea de Efeito: Apenas Jedi\nEfeito: Os Jedi curam após ferimentos.\n\nRank 1 - Jedi recupera até 5 saúde instantaneamente.\nRank 2 - Jedi recupera até 10 saúde instantaneamente.\nPosição 3 - Jedi recupera até 25 saúde instantaneamente.
+@MENUS_OF_EFFECT_LIVING_PERSONS	Forçar o relâmpago\nDuração: Variável\nÁrea de Efeito: Apenas pessoas vivas\nEfeito: Permite que Jedi lance um ataque elétrico devastador contra inimigos.\n\nRank 1 - Jedi lança um único parafuso que dispara para a frente, fazendo danos instantâneos.\nRank 2 - Jedi pode manter a Força Relâmpago para um ataque avançado sustentado.\nPosição 3 - Jedi emana um ventilador sustentado de eletricidade em um grande arco dianteiro, danificando qualquer coisa na frente deles.
+@MENUS_OKAY	Está bem.
+@MENUS_ONLY_HUMANS	Só os humanos podem ser cercados.
+@MENUS_PASSWORD	Senha
+@MENUS_PASSWORD_1	Senha:
+@MENUS_PERSONAL_SHIELD_ARMOR	SHIELD PESSOAL (ARMO)
+@MENUS_PLAYERS	Bots/Players mínimos:
+@MENUS_PLAYERS_INFO	Adicionar bots se o servidor tiver menos do que este número de jogadores humanos ativos.
+@MENUS_POINTS_REMAINING	Pontos restantes:
+@MENUS_POWER	Potência:
+@MENUS_POWERDUEL_CAPS	DUEL DE PODER
+@MENUS_POWERDUEL_GAME_RULES	Regras de jogo Power Duel.
+@MENUS_PREVENT_THE_ENEMY_FROM	Impedir que o inimigo complete o seu objectivo actual.
+@MENUS_PRIMARY_OBJECTIVES	Objectivo da Missão Primária
+@MENUS_PROFILE_DESC	Configurar configurações de caracteres.
+@MENUS_PROGRAM	Sair do Programa?
+@MENUS_PROTECT	PROTEÇÃO
+@MENUS_PROTECT_AGAINST_FORCE	Proteger contra ataques de força e ganhar poder deles.
+@MENUS_PULL_YOUR_FOES_TO_YOU	Puxa os teus inimigos para ti.
+@MENUS_PURE_SERVER	Servidor Puro:
+@MENUS_PUSH	PRESSÃO
+@MENUS_PUSH_YOUR_FOES_AWAY_AND	Afasta os teus inimigos e repeli os projéteis.
+@MENUS_QUIT_PROGRAM	Sair da Aplicação
+@MENUS_RECONNECT_LIMIT	Limite de Religação:
+@MENUS_REFRESH_LIST	Actualizar a Lista
+@MENUS_REFRESH_SERVER_LIST	Actualizar a Lista de Servidores.
+@MENUS_REGROUP	Reagrupar.
+@MENUS_RENDER_YOURSELF_INVISIBLE	Rende-te invisível a alvos seleccionados.
+@MENUS_REPEATER	REPETRAÇÃO
+@MENUS_REPLY_TITLE	Responder
+@MENUS_REQUEST_TITLE	Pedido
+@MENUS_RESTART_MATCH	Reiniciar a correspondência
+@MENUS_RETURN_PREVIOUS	Voltar ao menu anterior.
+@MENUS_SABERLOCKING	Permitir bloqueio do Saber:
+@MENUS_SABERLOCKING_DESC	Permitir que os jogadores para bloquear sabres.
+@MENUS_SABERSTAFF	Sabre de Duas Mãos
+@MENUS_SABERSTAFF_DESC	Use um sabre de duas mãos, apenas um estilo de luta.
+@MENUS_SABER_ATTACK	Ataque de Saber:
+@MENUS_SABER_CHALLENGE_INFO	Um jogador pode desafiar outro para um duelo de sabre de luz privado.
+@MENUS_SABER_DEFEND	Defesa do Saber:
+@MENUS_SABER_HILTS_DESC	Escolha o(s) punho(s) do sabre.
+@MENUS_SABER_ONLY_INFO	Todos os jogadores usam sabres de luz, e todas as armas são removidas.
+@MENUS_SABER_STAFF	Pessoal do Saber
+@MENUS_SABER_THROW	Jogo de Saber:
+@MENUS_SABER_TYPE	TIPO DE SABER
+@MENUS_SABER_TYPE_DESC	Selecione o seu tipo de sabre.
+@MENUS_SAVE_CURRENT_FORCE_SETUP	Gravar a configuração da força actual como um modelo separado.
+@MENUS_SAVE_FILE	Salvar arquivo
+@MENUS_SEARCHING	pesquisando %d/%d...
+@MENUS_SEARCH_CAPS	PROCURAR
+@MENUS_SEARCH_CURRENT_SERVER	Procurar na lista de servidores actual por amigos.
+@MENUS_SEARCH_DESC	Procure todos os servidores por este jogador.
+@MENUS_SECONDARY_OBJECTIVES	Objectivos Secundários
+@MENUS_SEE_ENEMIES_AT_ALL_TIMES	Ver inimigos em todos os momentos, e até mesmo esquivar tiros sniper.
+@MENUS_SELECT_BOTS	Selecionar Bots
+@MENUS_SELECT_BOTS_DESC	Escolha bots personalizados para jogar contra
+@MENUS_SELECT_HEAD	Selecione um estilo de cabeça.
+@MENUS_SELECT_LEGS	Selecione um estilo de pernas.
+@MENUS_SELECT_TORSO	Selecione um estilo de tronco.
+@MENUS_SENTRY_CAPS	ENTRADA
+@MENUS_SERVERS_FOUNDWITH	%d servidor%s encontrado com o jogador %s
+@MENUS_SERVER_INFORMATION	Informação do Servidor
+@MENUS_SERVER_NAME_1	Nome do Servidor:
+@MENUS_SERVER_RULES	REGRAS DE SERVIÇO
+@MENUS_SETS_PASSWORD_FOR_YOUR	Define a senha para o seu servidor. Os jogadores podem juntar- se se introduzirem a senha.
+@MENUS_SETS_THE_MAXIMUM_NUMBER	Define o número máximo de jogadores permitidos para se juntar ao seu servidor.
+@MENUS_SET_FILTER_FOR_SPECIFIC	Definir filtro para mods de jogo específicos.
+@MENUS_SET_TO_ON_TO_HAVE_PLAYERS	Forçar os jogadores a participar em vez de ficar no modo espectador.
+@MENUS_SHOW_GAME_CREDITS	Mostrar créditos de jogo.
+@MENUS_SIEGE_ASSAULT	ASSUNTO
+@MENUS_SIEGE_DEMOLITIONS	DEMOLIÇÕES
+@MENUS_SIEGE_GAME_RULES	Regras do jogo do cerco.
+@MENUS_SIEGE_GAME_RULES_DESC	Cerco coloca duas equipes um contra o outro em uma partida cronometrada em que uma equipe está em ataque e a outra em defesa. Ambas as equipes têm objetivos, mas a equipe ofensiva deve completar seus objetivos primários para vencer.\n\nCada equipe é composta por um número de personagens, cada um com sua própria especialidade. Cada personagem pode contribuir com seu próprio conjunto de habilidades.\n\nUma regra opcional do servidor permite a mudança de equipa. Com esta opção activada, as equipas mudam após a primeira partida. Se a equipa ofensiva tiver ganho a primeira partida, a nova equipa ofensiva tem um limite de tempo igual ao tempo que levou a primeira equipa a ganhar. Se a equipa ofensiva completar todos os objectivos no prazo de tempo mais curto, eles ganham o jogo.\n\nCONDIÇÕES DE WIN - OFENSE\nComplete todos os objetivos primários antes que o tempo se esgote.\n\nCONDIÇÕES DE VENCIMENTO - DEFESA\nEvite o ataque de completar todos os objetivos primários antes que o tempo se esgote.\nObjectivos completos que podem impedir a equipa ofensiva de completar qualquer um dos seus objectivos primários.
+@MENUS_SIEGE_HEAVY_WEAPS	Armas pesadas
+@MENUS_SIGHT	VER
+@MENUS_SINGLESABER	Sabre Padrão
+@MENUS_SINGLESABER_DESC	Use um sabre de uma mão, escolha de 3 estilos de luta.
+@MENUS_SKILL	Habilidade
+@MENUS_SKILL1	Habilidade:
+@MENUS_SLOWEST_CLIENT_ALLOWED	Cliente mais lento permitido para se conectar.
+@MENUS_SORT_BY_GAME_TYPE	Ordenar por tipo de jogo.
+@MENUS_SORT_BY_MAP_NAME	Ordenar pelo nome do mapa.
+@MENUS_SORT_BY_NUMBER_OF_PLAYERS	Ordenar por número de jogadores.
+@MENUS_SORT_BY_PING_TIME	Ordenar por tempo de ping.
+@MENUS_SORT_BY_SERVER_NAME	Ordenar por Nome do Servidor.
+@MENUS_SOURCE	Fonte:
+@MENUS_SPECIES	ESPÉCIES
+@MENUS_SPECTATE	Espectar
+@MENUS_SPECTATOR	Espectador
+@MENUS_SPEED	VELOCIDADE
+@MENUS_SPEND_YOUR_POINTS_BY	Gaste seus pontos clicando nas Forças de Força abaixo.
+@MENUS_SPOTTED_TITLE	Manchado
+@MENUS_STARTING_UP	A começar...
+@MENUS_START_PLAYING_NOW	Comecem a jogar agora!
+@MENUS_START_SERVER	Iniciar servidor.
+@MENUS_STATIONARY_SHIELD_CAPS	SHIELD ESTACIONAL
+@MENUS_TACTICS_TITLE	Táticas
+@MENUS_TEAM	Equipa:
+@MENUS_TEAM_BLUE	Equipa AZUL
+@MENUS_TEAM_FFA_CAPS	EQUIPE FFA
+@MENUS_TEAM_FFA_GAMETYPE	Regras de jogo da equipa FFA.
+@MENUS_TEAM_HEAL	CURA DA EQUIPE
+@MENUS_TEAM_POWER_1	ENERGIA DA EQUIPE
+@MENUS_TEAM_RED	Equipe RED
+@MENUS_TEAM_SWITCHING	Mudança de Equipa:
+@MENUS_TEAM_SWITCHING_DESC	Alterna o modo de jogo onde as equipes competem para terminar o mapa em menos tempo.
+@MENUS_THERMAL_DETONATOR	DETONATOR TERmal
+@MENUS_THE_FORCE_TO_BOOST_THE	Canalize a Força para aumentar o poder dos seus aliados.
+@MENUS_THE_GAME_OF_DUEL_IS_ALSO	Duelo coloca dois combatentes em uma pequena arena fechada para lutar com sabres de luz. Ambos os concorrentes começam uma rodada com saúde total, seus sabres, e uma pistola de blaster (opção servidor), e devem enfrentar uns contra os outros.\n\nQualquer número de jogadores pode participar no Duel, mas apenas dois estão na arena a qualquer momento. Os restantes jogadores observam até que uma partida esteja concluída. Quando um jogador é eliminado, o perdedor é colocado no final da fila de observadores, e a próxima pessoa na linha é trazida para lutar contra o vencedor.\n\nMais uma vez, ambos os concorrentes são totalmente reabastecidos com saúde. O vencedor continua a competir contra novos adversários, marcando pontos até que ele ou ela é eliminado ou o limite de jogo é alcançado.\n\nCURANDO\nEliminando um inimigo: +1 ponto\nEliminando-se: +1 para o seu oponente\n\nO jogador com a maior pontuação no final da partida ganha.
+@MENUS_THE_MEDPAC_IS_A_SMALL	Medpac\nO medpac é um pequeno kit médico de campo padrão. Quando adquirido, o medpac recupera instantaneamente a saúde perdida e cura tecido danificado.
+@MENUS_THE_PERSONAL_SHIELD_IS	Escudo pessoal (Armor)\nO escudo pessoal é um dispositivo montado em cinto que projeta um campo de força de proteção em torno do usuário. À medida que o escudo sofre danos, sua classificação de proteção é reduzida. Uma vez que o escudo teve danos iguais à sua classificação, o escudo desativa até que ele possa ser recarregado. Escudos absorvem a maioria dos tipos de danos de ataque, mas não protegem o usuário contra quedas ou esmagamento de danos.
+@MENUS_THE_PLX_2M_IS_AN_EXTREMELY	Sistema de mísseis portátil Merr-Sonn PLX-2M\nO PLX-2M é uma arma extremamente poderosa que dispara mísseis Arakyd 3T3. O poder explosivo puro do PLX-2M torna perigoso disparar cegamente em locais próximos, mas é extremamente eficaz quando usado como uma arma de rastreamento "inteligente".\n\nFogo Primário - Dispara um único míssil explosivo a frente\nFogo Secundário - Dispara um único míssil 'inteligível' que rastreia alvos adquiridos e bloqueados\nTipo de Munição - Foguetes
+@MENUS_THE_PRIMARY_WEAPON_OF	E-11 Explosor Rifle\nA arma principal das forças imperiais, o E-11 é um rifle de blaster robusto e mortal capaz de causar grandes danos, apesar de seu pequeno tamanho. O design compacto do E-11 torna fácil de transportar e esconder.\n\nFogo Primário - Lento, tiro único com precisão moderada e grandes danos\nFogo Secundário - Fogo rápido, estouro com baixa precisão e área de disparo expandida\nTipo de munição - Pacote Blaster
+@MENUS_THE_THERMAL_DETONATOR	Detonador térmico\nO detonador térmico é uma granada de raio-dano que liberta uma barragem de energia térmica capaz de desintegrar toda a matéria à sua volta.\n\nFogo primário - Granada explode após curta duração\nFogo Secundário - Granada explode em contato
+@MENUS_THIS_ALLOWS_PLAYERS_TO	Isso permite aos jogadores pedirem uma votação para chutar os jogadores, mudar mapas, etc.
+@MENUS_THIS_ARCHAIC_LOOKING	Wookiee Bowcaster\nEsta arma de aparência arcaica dispara poderosos parafusos de metal envolvidos em bolsos de energia. Capaz de infligir danos incríveis, o Bowcaster requer tremenda força física para disparar. A maioria dos Bowcasters vendidos fora do mundo natal Wookiee vêm equipados com ações auto-cocking que permitem criaturas fisicamente mais fracas para demiti-los.\n\nIncêndio primário - acumulação de energia carregada para múltiplos disparos\nFogo Secundário - Tiro único extremamente preciso e ricocheteável\nTipo de munição - Célula de energia
+@MENUS_THIS_DEADLY_WEAPON_IS	Sentry de assalto portátil\nEsta arma mortal é aproximadamente do tamanho de uma mochila grande, mas não deixe que o seu tamanho engane você. Uma vez ativada, a arma desenrole e está definida para automaticamente atingir qualquer ameaça inimiga. O Sentry drena vida da bateria a uma velocidade acelerada e, uma vez implantado, não pode ser restaurado para a sua condição original portátil.
+@MENUS_THIS_DESTRUCTIVE_PROJECTILE	Repetedor Imperial Pesado com Lançador de Concussão\nEsta arma de projétil destrutiva é extremamente mortal, disparando fluxos rápidos de balas de metal. Forças imperiais usam o fogo supressor mortal do repetidor pesado e lançador de concussão para controle de multidão e espalhar fogo pesado sobre\nGrandes áreas.\n\nFogo primário - Fogo projétil totalmente automático\nFogo Secundário - Tiro único, bala explosiva concussão\nTipo de munição - parafusos metálicos
+@MENUS_THIS_GAME_IS_BEST_SUMMED	Free For All é melhor resumido como cada pessoa para si. Os jogadores marcam pontos eliminando outros jogadores e ninguém pode ser considerado um aliado.\n\nAs armas e os equipamentos são adquiridos no campo, salvo indicação em contrário no servidor. Algumas opções incluem a permissão de poderes de força ou não e o nível máximo de força disponível.\n\nCURANDO\nEliminando um inimigo: +1 ponto\nEliminando-se: -1 ponto\n\nO jogador com a maior pontuação no final da partida ganha o jogo.
+@MENUS_THIS_GAME_PITS_TWO_JEDI	Equipe Livre para Todos coloca duas equipes Jedi um contra o outro em uma batalha pela supremacia. Cada jogador marca pontos para eliminar adversários, mas os jogadores da mesma equipe podem trabalhar juntos para eliminar inimigos mais fortes. Todos os jogadores de uma equipe combinam suas pontuações para uma única pontuação em equipe.\n\nAs armas e os equipamentos são adquiridos no campo, salvo indicação em contrário no servidor. Algumas opções incluem a permissão de poderes de força ou não e o nível máximo de força disponível.\n\nCURANDO\nEliminando um membro da equipe inimiga: +1 ponto\nEliminando a si mesmo ou a um membro da equipe: -1 ponto\n\nO time com a maior pontuação no final da rodada ganha o jogo.
+@MENUS_THIS_IS_THE_NUMBER_OF	Este é o número de vezes que uma bandeira deve ser capturada para ganhar o jogo.
+@MENUS_THIS_NEFARIOUS_WEAPON	Fuzil disruptor Tenloss DXR-6\nEsta arma nefasta afeta a matéria a nível molecular, rasgando o material vivo com facilidade. Por causa da natureza desumana da arma, o DXR-6 é proibido em toda a galáxia e geralmente só é usado por forças dróides e Remanentes dispersas.\n\nFogo primário - Tiro único com taxa de fogo lenta, e ataque instantâneo\nFogo Secundário - Modo escopo: Tiro único que deve ser carregado primeiro, causa danos aumentados e tem um consumo de energia elevado\nTipo de munição - Célula de energia
+@MENUS_THIS_OPTION_RE_BALANCES	Esta opção impede que um jogador se junte a uma equipe se ela vai desequilibrar as equipes.
+@MENUS_THIS_STATIONARY_ENERGY	Escudo estacionário\nEste campo de energia estacionária pode ser largado em qualquer local, altura em que ele implementa um grande escudo plano que pode bloquear o fogo inimigo. Os aliados podem passar pelo escudo, mas os inimigos não podem. O escudo defletor irá desaparecer após gastar a sua fonte de energia ou depois de suportar uma certa quantidade de danos.
+@MENUS_THIS_VALUE_ADJUSTS_THE	O número de minutos que uma partida vai durar.
+@MENUS_THROW_YOUR_LIGHTSABER	Atire o sabre de luz para danificar alvos distantes.
+@MENUS_TIME_LIMIT	Limite de Tempo:
+@MENUS_TRIP_MINE	MINHA DE TRIP
+@MENUS_TRIP_MINES_CONSIST_OF	Minas de Viagem\nAs minas de viagem consistem em um projetor de feixe afixado em um invólucro explosivo em forma. O laser ativa quando a mina é colocada e estende um feixe da carga para a superfície mais próxima que cruza seu caminho. Se o feixe é quebrado ou a carga é disparada, a mina detona e causa danos de raio para qualquer coisa no alcance.\n\nFogo primário - Uma vez colocado, ele detona se o feixe está quebrado ou a mina é destruída\nFogo Secundário - Uma vez colocado, ele detona se alguém está próximo ou se a mina é destruída. Não há feixe e não vai detonar para o usuário
+@MENUS_UNAPPLIED_VIDEO_CHANGES	Alterações de Vídeo Não Aplicadas
+@MENUS_UNLEASH_DEADLY_ELECTRICAL	Libertar ataques eléctricos mortíferos contra os inimigos.
+@MENUS_UPDATE_ADVANCED_SERVER	Atualizar configurações avançadas do servidor.
+@MENUS_USE_MORE_POWERFUL_LIGHTSABER	Use ataques de sabre de luz mais poderosos. (Requerido para possuir sabre)
+@MENUS_USE_THE_LIGHTSABER_TO	Use o sabre de luz para desviar ataques de sabre e projéteis.
+@MENUS_VALUE_ADJUSTS_THE_TOTAL	O número de rodadas bem sucedidas (duels) necessárias para ganhar a partida.
+@MENUS_VARIABLE_NAREA_OF_EFFECT	Forçar a drenagem\nDuração: Variável\nÁrea de Efeito: Apenas pessoas vivas\nEfeito: Drenar Forçar e usá-lo para reabastecer a vida.\n\nRank 1 - Lança um único parafuso que dispara para a frente, drenando 10 pontos de força por segundo e curando essa quantidade.\nRank 2 - Um ataque contínuo, sem alvo, drenando 15 pontos de força por segundo.\nRank 3 - Emana um ventilador sustentado em um grande arco dianteiro, drenando qualquer alvo na frente dele de 20 pontos de força por segundo.
+@MENUS_VC_ATT	1. Ataque
+@MENUS_VC_ATT_POSITION	3. Posição de ataque
+@MENUS_VC_ATT_PRIMARY	1. Ataque objetivo primário
+@MENUS_VC_ATT_SECONDARY	2. Objetivo secundário do ataque
+@MENUS_VC_CANCEL	Cancelar
+@MENUS_VC_DEF	2. Defender
+@MENUS_VC_DEF_GUNS	4. Posição da arma
+@MENUS_VC_DEF_POSITION	3. Defender posição
+@MENUS_VC_DEF_PRIMARY	1. Defender o objetivo primário
+@MENUS_VC_DEF_SECONDARY	2. Defender o objetivo secundário
+@MENUS_VC_REPLY	4. Responder
+@MENUS_VC_REPLY_COMING	3. Já vou.
+@MENUS_VC_REPLY_GO	4. Ofensa
+@MENUS_VC_REPLY_NO	2. Negativo
+@MENUS_VC_REPLY_STAY	5. Defesa
+@MENUS_VC_REPLY_YES	1. Entendido.
+@MENUS_VC_REQ	3. Pedido
+@MENUS_VC_REQ_ASSIST	1. Assistência
+@MENUS_VC_REQ_DEMO	6. Demolições
+@MENUS_VC_REQ_HVY	5. Armas Pesadas
+@MENUS_VC_REQ_MEDIC	2. Médico
+@MENUS_VC_REQ_SUPPLY	3. Fornecimentos
+@MENUS_VC_REQ_TECH	4. Tecnologia
+@MENUS_VC_SPOT	5. Manchado
+@MENUS_VC_SPOT_DEF	1. Defesas
+@MENUS_VC_SPOT_EMPLACED	4. Armas colocadas
+@MENUS_VC_SPOT_SNIPER	3. Atirador
+@MENUS_VC_SPOT_TROOP	2. Tropas
+@MENUS_VC_TACTIC	6. Táticas
+@MENUS_VC_TAC_COVER	1. Cobertura
+@MENUS_VC_TAC_FALLBACK	4. Retirar
+@MENUS_VC_TAC_FOLLOW	3. Seguir
+@MENUS_VC_TAC_HOLD	2. Segure
+@MENUS_VC_TAC_SPLIT	6. Separe-se
+@MENUS_VC_TAC_TOGETHER	5. Fiquem juntos
+@MENUS_VC_TITLE	CHAT DE VOZ
+@MENUS_VIEW_EMPTY	Ver Vazio:
+@MENUS_VIEW_FULL	Ver Completo:
+@MENUS_WATCH_DESC	Cuidado com a missão.
+@MENUS_WEAPON_RULES	Regras de Armas.
+@MENUS_WHEN_ON_IT_MEANS_TEAMMATES	Quando os companheiros de equipa começam, podem ferir-se e matar-se uns aos outros com armas e poderes de força.\n
+@MENUS_WIDELY_USED_BY_THE_CORPORATE	Arma de Flechette Golan Arms FC1\nAmplamente utilizado pelos esquadrões de polícia da Autoridade Setorial Corporativa, o FC1 dispara fragmentos de metal em um padrão generalizado. A arma é projetada para atingir múltiplos alvos na proximidade, mas muito cuidado deve ser tomado para evitar danos ricochet.\n\nFogo Primário - Tiro único, espalhar fogo\nIncêndio Secundário - Cargas de estilhaços explosivos duplos\nTipo de munição - Parafusos metálicos
+@MENUS_YES	Sim.
+@MENUS_YOU_DECIDE	Tu decides.
+@MENUS_YOU_HAVE_MADE_CHANGES	Você fez alterações nas configurações de vídeo
+@MENUS__REQUIRES_SABER_ATTACK	(exige o Ataque de Saber 1)
+@MP_INGAME_GETTINGINFOFORSERVERS	Obtendo informações para servidores...
+@MP_INGAME_JOIN_DOUBLE	DUPLO
+@MP_INGAME_JOIN_SINGLE	ÚNICO
+@MP_INGAME_SERVER_REFRESHTIME	Tempo de atualização do servidor
+@MP_SVGAME_CANCEL_PASSWORD	Fechar o menu, não tentar ligar
+A / Cross confirms, B / Circle goes back	A / Cross confirma, B / Círculo volta
+A disconnect pauses the match for up to 10 minutes.	Uma desconexão pausa o jogo por até 10 minutos.
+A passed game-type vote is queued for the next round boundary.	Um voto passado do tipo jogo está em fila para o próximo limite redondo.
+A setting or binding changed outside the editor. Cancel and reopen to refresh; nothing applied.	Uma configuração ou ligação foi alterada fora do editor. Cancelar e reabrir para actualizar; nada foi aplicado.
+ACTION DETAILS / RESET	DETALHES DE ACÇÃO / REET
+ASSISTS	ASSISTÊNCIAS
+About	Sobre
+Acceleration	Aceleração
+Acceleration amount; zero disables it	Quantidade de aceleração; zero desactiva- a
+Acceleration curve	Curva de aceleração
+Acceleration curve: 0 legacy, 1 power	Curva de aceleração: 0 legado, 1 potência
+Acceleration offset	Desvio da aceleração
+Accepted 1v1 challenges inside FFA. Shares the Duel ladder.	Desafios aceitos 1v1 dentro da FFA. Compartilha a escada Duel.
+Account / Log in	Conta / Login
+Accounts and match reporting are not connected yet.	As contas e relatórios de correspondência ainda não estão conectados.
+Action	Acção
+Adaptive	Adaptativo
+Add Berserker	Adicionar Berserker
+Add Defender	Adicionar Defender
+Add Duelist	Adicionar um Duelista
+Add Flag Catcher	Adicionar o Apanhador de Bandeiras
+Add Saber Master	Adicionar Mestre Saber
+Add Sentinel	Adicionar Sentinel
+Add Trickster	Adicionar Trickster
+Add bots	Adicionar bots
+Address	Endereço
+Adjust how fast the left stick moves the menu pointer.	Ajuste a velocidade com que a vara esquerda move o ponteiro do menu.
+Adjusts how many chat lines fit.	Ajusta quantas linhas de chat se encaixam.
+Adjusts the width across the screen.	Ajusta a largura através da tela.
+Advanced	Avançado
+Advanced Input	Entrada Avançada
+Advanced settings	Configurações avançadas
+Advanced video	Vídeo avançado
+Advances to the next round	Avanços para a próxima ronda
+All	Tudo
+Allow downloads	Permitir downloads
+Alternate attack	Ataque alternativo
+Alternate weapon action / saber throw	Ação de arma alternativa / lançamento de sabre
+Always	Sempre
+Always run	Executar sempre
+Analog joystick axes	Eixos de joystick analógicos
+Angle	Ângulo
+Anisotropic filtering	Filtragem anisotrópica
+Anisotropic filtering unavailable.	Filtragem anisotrópica indisponível.
+Applies on next spawn.	Aplica-se na próxima desova.
+Apply	Aplicar
+Apply and continue	Aplicar e continuar
+Apply camera	Aplicar a câmara
+Apply changes	Aplicar alterações
+Apply or cancel pending edits before switching mods.	Aplicar ou cancelar edições pendentes antes de mudar de mods.
+Apply or discard before leaving?	Aplicar ou descartar antes de sair?
+Arabic	Árabe
+Assets missing or overridden. Showing Stock; Apply cannot save.	Os activos em falta ou anulados. A mostrar o stock; A aplicar não pode gravar.
+Assignment staged	Atribuições em curso
+Attack	Ataque
+Autoexposure	Autoexposição
+Automatic	Automático
+Automatic controller detection	Detecção automática do controlador
+Automatic opens for gamepad when no keyboard is detected.	Abre automaticamente para gamepad quando nenhum teclado é detectado.
+Available display modes are added automatically.	Os modos de exibição disponíveis são adicionados automaticamente.
+Average mouse movement between frames.	Movimento médio do rato entre quadros.
+Awaiting reply	Resposta à espera
+B / Circle confirms, A / Cross goes back	B / Círculo confirma, A / Cruz volta
+BLUE	AZUL
+BRACKET\nA random draw sets the single-elimination bracket. Byes advance unpaired entrants. Both full lineups must be connected, in the arena and ready before play starts.\n\n1v1 TOURNAMENT\nAn even field of 8 to 32 verified players enters. Play all 10 scored rounds. Each elimination wins a round. Simultaneous deaths replay the round. At 5-5, play one deciding round.\n\nTEAM TOURNAMENT\n2 to 8 teams enter at a fixed size, from 2v2 to 5v5. Players respawn. The first team to 20, 30, 40 or 50 kills respectively wins. After 10 minutes of play, the leader wins. If tied, play until one team takes the lead.\n\nRECONNECTS AND RESERVES\nA missing player pauses play. Each player has 5 minutes to reconnect in 1v1. Each team has 10 minutes to reconnect or fill the slot with a registered reserve from its own team. Repeat drops use the remaining time. Everyone readies again when the lineup is complete. Time expiry forfeits the match. If both sides expire, both are eliminated.	BRANCO\nUm sorteio aleatório define o suporte de eliminação única. Byes advance unpared entrants. Ambos os alinhamentos completos devem ser conectados, na arena e prontos antes de começar o jogo.\n\n1v1 TURNAMENTO\nUm campo par de 8 a 32 jogadores verificados entra. Jogue todas as 10 rodadas marcadas. Cada eliminação ganha uma rodada. Mortes simultâneas replay the round. Em 5-5, jogar uma rodada decidindo.\n\nTORNAMENTO DAS EQUIPES\n2 a 8 equipes entram em um tamanho fixo, de 2v2 a 5v5. Jogadores respawn. A primeira equipe para 20, 30, 40 ou 50 mortes respectivamente vence. Após 10 minutos de jogo, o líder ganha. Se empatado, jogar até que uma equipe toma a liderança.\n\nRECONHECIMENTOS E RESERVAS\nUm jogador em falta pausa o jogo. Cada jogador tem 5 minutos para se reconectar em 1v1. Cada equipe tem 10 minutos para reconectar ou preencher o slot com uma reserva registrada da sua própria equipe. As gotas de repetição usam o tempo restante. Todos se preparam novamente quando o alinhamento estiver concluído. O tempo de expiração perde o jogo. Se ambos os lados expirarem, ambos serão eliminados.
+Back	Voltar
+Back to Play	Voltar à Reprodução
+Back to ready room	De volta à sala de estar
+Backhand preview:	Visualização do backhand:
+Balanced	Equilibrado
+Basic Settings	Configuração Básica
+Begin match	Iniciar correspondência
+Binding staged; command was not executed	O comando Binding staged; não foi executado
+Bindlist	Lista de ligações
+Black	Preto
+Blade %d / %d	Lâmina %d / %d
+Blade off	Lâmina desligada
+Blade on	Lâmina ligada
+Blaster rifle	Fuzileiro de blaster
+Blue	Azul
+Blue team	Equipa azul
+Blue, Yellow and Red selected. Apply to save.	Azul, Amarelo e Vermelho selecionados. Aplicar para salvar.
+Bottom left	Fundo esquerdo
+Bottom right	Baixo- direito
+Brightness	Brilho
+Browse unranked servers	Navegar em servidores não classificados
+Bumpers move the caret	Bumpers mover o careta
+Bumpers: command history   Triggers: scroll	Bumpers: histórico de comandos Triggers: slock
+Button labels	Rótulos dos botões
+Button labels: 0 Xbox, 1 PlayStation, 2 generic	Etiquetas de botões: 0 Xbox, 1 PlayStation, 2 genéricos
+Button mapping	Mapeamento de botões
+CALL GAME TYPE VOTE	VOTO DO TIPO DE JOGO DE CALL
+CALL KICK VOTE	VOTO DE CHAMADA KICK
+CALL MAP VOTE	VOTO DO MAP DE CALL
+CAST YOUR VOTE	CAST SEU VOTO
+CHOOSE AN ACTION	ESCOLHE UMA ACÇÃO
+CONTROLLER DEFAULTS?	DEFICIÊNCIAS DE CONTROLE?
+Call a vote	Convocar uma votação
+Camera	Câmera
+Camera / UI	Câmera / UI
+Camera FOV	Câmera FOV
+Camera damping	Amortecimento da câmara
+Camera settings applied.	Configurações da câmera aplicadas.
+Camera smoothing	Alisamento da câmera
+Camera tilt	Inclinação da câmara
+Cancel	Cancelar
+Cancel changes	Cancelar alterações
+Cannot preserve the current custom renderer safely.	Não é possível preservar o renderizador personalizado actual com segurança.
+Capture	Capturar
+Capture Limit:	Limite de Captura:
+Capture limit	Limite de captura
+Cast your vote	Vote.
+Center view	Visão central
+Center your view	Centralizar a sua vista
+Changes the chat background. Text stays readable.	Muda o fundo da conversa. O texto permanece legível.
+Changes the language of menus.	Muda a linguagem dos menus.
+Changing this restarts mouse input.	A alteração desta opção reinicia a entrada do rato.
+Character shadows	Sombras de caracteres
+Chat	Conversar
+Chat box height (%)	Altura da caixa de bate-papo (%)
+Chat box opacity (%)	Opacidade da caixa de bate- papo (%)
+Chat box size (%)	Tamanho da caixa de bate- papo (%)
+Chat box width (%)	Largura da caixa de bate- papo (%)
+Chat sound	Som de bate- papo
+Chat with the current audience	Conversar com o público atual
+Chat with your team	Converse com sua equipe
+Chinese (Simplified)	Chinês (Simplificado)
+Chinese (Traditional)	Chinês (Tradicional)
+Choose Custom resolution.	Escolha a resolução personalizada.
+Choose a format to preview its tournament lobby.	Escolha um formato para visualizar o lobby do torneio.
+Choose a language if short messages or regional variants are misidentified.	Escolha um idioma se mensagens curtas ou variantes regionais forem erroneamente identificadas.
+Choose a style	Escolha um estilo
+Choose a style for each of the three slots.	Escolha um estilo para cada um dos três slots.
+Choose a whole-number option.	Escolha uma opção de número inteiro.
+Choose an installed map for the current game type.	Escolha um mapa instalado para o tipo de jogo atual.
+Choose each style's ready pose separately in Stances.	Escolha a pose pronta de cada estilo separadamente em Stances.
+Choose named action	Escolha a ação nomeada
+Choose three different styles to complete your cycle.	Escolha três estilos diferentes para completar o seu ciclo.
+Choose three different styles. Each style can fill only one slot.	Escolha três estilos diferentes. Cada estilo pode preencher apenas um espaço.
+Choose your arena.	Escolhe a tua arena.
+Choose your saber hand, then select Apply Changes.	Escolha sua mão sabre e, em seguida, selecione Aplicar alterações.
+Circle	Círculo
+Clean Capture	Limpar captura
+Clean Capture is on.	A captura limpa está ligada.
+Clear	Limpar
+Clear assignment	Limpar a atribuição
+Client command packets per second.	Pacotes de comando do cliente por segundo.
+Close	Fechar
+Close registration and start the Tournament.	Feche o registro e inicie o Torneio.
+Color depth	Profundidade de cor
+Combat	Combate
+Combat styles	Estilos de combate
+Combat styles...	Estilos de combate...
+Comics	Quadrinhos
+Communication	Comunicação
+Complete	Completar
+Composition grid: 	Grade de composição:
+Config applied.	A configuração foi aplicada.
+Config loaded into editor. Review, then Apply.	Configuração carregada no editor. Reveja e depois Aplicar.
+Config write verification failed; existing config retained.	A verificação de gravação da configuração falhou; a configuração existente foi mantida.
+Confirm	Confirmar
+Connect	Conectar
+Connection	Ligação
+Console	Consola
+Console keyboard	Teclado da consola
+Console opacity	Opacidade da consola
+Console overlay	Sobreposição da consola
+Controller	Controlador
+Controller defaults staged; review before Apply	Os padrões do controlador foram encenados; revisão antes de Aplicar
+Controller detection	Detecção do controlador
+Controls	Controlos
+Controls what you see when the server allows dismemberment.	Controla o que você vê quando o servidor permite o desmembramento.
+Could not confirm the display settings; recovery file could not be removed.	Não foi possível confirmar as configurações de exibição; o arquivo de recuperação não pôde ser removido.
+Could not finish saving; existing config retained.	Não foi possível terminar a gravação; a configuração existente foi mantida.
+Could not open config for writing.	Não foi possível abrir a configuração para escrita.
+Could not read config	Não foi possível ler a configuração
+Could not save display recovery.	Não foi possível gravar a recuperação do ecrã.
+Count up	Contar
+Cross	Cruz
+Crosshair	Mira
+Crosshair and interface	Mira e interface
+Crouch	Agachar
+Crouch / swim downward	Agachar-se / nadar para baixo
+Crystal	Cristal
+Cubemap bounces	Saltos do Cubemap
+Current custom character	Caracter personalizado atual
+Current dual/staff combat; variants are planned.	Combate dual/pessoal actual; as variantes estão planeadas.
+Current style	Estilo atual
+Curve subdivisions	Subdivisão da curva
+Custom	Personalizado
+Custom height	Altura personalizada
+Custom sounds	Sons personalizados
+Custom width	Largura personalizada
+Customize	Personalizar
+Cycle saber style	Estilo sabre de ciclo
+Cycle your selected combat loadout	Ciclo da carga de combate seleccionada
+Cycle: %s > %s > %s > repeat	Ciclo: %s > %s > %s > repetir
+D-pad down	Bloco D para baixo
+D-pad left	Bloco D esquerdo
+D-pad moves the pointer  /  Bumpers scroll	D-pad move o cursor / Rolagem de pára-choques
+D-pad right	D-pad à direita
+D-pad up	Bloco D para cima
+DISCARD PENDING EDITS?	Editais de reserva?
+DISCONNECT?	Desconnecto?
+DUEL STANDINGS	DUEL PERMANECE
+Damage reactions	Reacções de danos
+Default	Predefinição
+Default movement speed.	Velocidade de movimento padrão.
+Default staged	Estagiado padrão
+Defaults selected. Click Apply Input to save.	Predefinição seleccionada. Carregue em Aplicar a Entrada para gravar.
+Defer player models	Derrotar modelos de jogadores
+Deluxe mapping	Mapeamento Deluxe
+Deluxe specular	Especular de luxo
+Desktop	Área de trabalho
+Det pack	Det-pack
+Detailed shaders	Saqueadores detalhados
+Detect compatible gamepads as you connect them.	Detecte gamepads compatíveis ao conectá-los.
+Detected	Detectado
+Deutsch	Deutsche
+Device preferences	Preferências do dispositivo
+Disable authenticated ghost mode	Desactivar o modo fantasma autenticado
+Disable warmup.	Desactivar o aquecimento.
+Discard	Descartar
+Discard and continue	Descartar e continuar
+Discard pending changes?	Descartar as alterações pendentes?
+Discard pending controls changes and open Saved Configs?	Descartar as alterações pendentes dos controlos e abrir as Configuração Gravadas?
+Discard pending controls changes and return?	Descartar as alterações dos controlos pendentes e regressar?
+Disconnect	Desligar
+Dismemberment	Desmembramento
+Display	Visualização
+Display recovery could not be verified; settings were not changed.	A recuperação do ecrã não pôde ser verificada; as configurações não foram alteradas.
+Distance	Distância
+Distance behind the player. Walls can bring the camera closer.	Distância atrás do jogador. Paredes podem aproximar a câmera.
+Dominant hand...	Mão dominante...
+Dominant hand:	Mão dominante:
+Done	Feito
+Drag or right stick to orbit  /  Scroll or bumpers to zoom	Arrastar ou direita vara para órbita / Rolar ou pára-choques para zoom
+Drag or type a value, then Apply. Size: 75-125%.	Arraste ou digite um valor e depois aplique. Tamanho: 75-125%.
+Drag or type values, then Apply camera.	Arraste ou digite valores, em seguida, aplique a câmera.
+Drag to orbit  /  Scroll to zoom	Arraste para órbita / Role para zoom
+Driver info	Informações do driver
+Driver information	Informações do condutor
+Dual sabers	Sabres duplos
+Duel ladder	Escada de duelo
+Duel limit	Limite de duelo
+Dynamic crosshair	Raio dinâmico
+Dynamic glow	Brilho dinâmico
+Dynamic lights	Luzes dinâmicas
+EDIT ASSIGNED COMMAND	EDITO ASSINADO COMMAND
+Edit	Editar
+Edit a proposal, then call its vote. Limits apply to the current mode.	Edite uma proposta e, em seguida, convoque sua votação. Os limites se aplicam ao modo atual.
+Editing stages a binding; the command is never executed here.	A edição encena uma ligação; o comando nunca é executado aqui.
+Effects	Efeitos
+Effects volume	Volume de efeitos
+Enable all Force powers, including Saber Throw.	Activar todos os poderes da Força, incluindo o Saber Throw.
+Enable warmup.	Activar aquecimento.
+English	Inglês
+Enter 	Digite
+Enter %s0 to %d.	Digite %s0 a %d.
+Enter a finite number.	Digite um número finito.
+Enter a player name.	Indique o nome de um jogador.
+Enter a size from 48 to 144.	Digite um tamanho de 48 a 144.
+Enter individual lobby	Introduza o lobby individual
+Enter size 75-125 and panel opacity 0-100.	Digite tamanho 75-125 e opacidade do painel 0-100.
+Enter your name	Digite seu nome
+Equal, complete lineups required	Iguais, completas forups necessárias
+Esc  /  Back	Esc / Voltar
+Every active player selects Ready.	Cada jogador ativo seleciona Pronto.
+Existing voice-command menu; not proximity voice	Menu de comando de voz existente; não voz de proximidade
+Exit	Sair
+Exit Photo Mode	Modo de saída da foto
+Experimental preview only. Apply keeps your regular selection.	Apenas antevisão experimental. A aplicação mantém a sua selecção regular.
+Extra button	Botão extra
+FORCE POWERS	PODERES DE FORÇA
+FPS counter	Contador FPS
+FPS limit	Limite FPS
+Fantasy	Fantasia
+Favorites	Favoritos
+Field of view	Campo de visão
+Find a Server	Procurar um Servidor
+Find a server	Procurar servidor
+Fine-tune input settings without typing console commands.	Configurações de entrada de ajuste fino sem digitar comandos de console.
+Footsteps	Passos
+Force	Forçar
+Force Training	Formação de Força
+Force absorb	Absorção da força
+Force drain	Forçar o dreno
+Force enabled in restricted gametype	Forçar activado no tipo de jogo restrito
+Force enabled while all powers disabled	Forçar activada enquanto todos os poderes estão desactivados
+Force grip	Forçar a aderência
+Force heal	Força curar
+Force lightning	Forçar relâmpagos
+Force player models	Forçar modelos de jogadores
+Force powers	Poderes de força
+Force protect	Forçar a proteger
+Force pull	Forçar a puxar
+Force push	Forçar a empurrar
+Force rage	Forçar a raiva
+Force rules, map rotation, Tournament, and team entry.	Forçar regras, rotação do mapa, Torneio, e entrada da equipe.
+Force sense	Forçar o sentido
+Force speed	Velocidade da força
+Force team energize	Forçar a energização da equipa
+Force team heal	Forçar a equipa a curar
+Force: restricted	Força: restrita
+Force: unrestricted	Força: sem restrições
+Forward movement scale	Escala de movimento para a frente
+Frag Limit:	Limite de Fragmento:
+Frag limit	Limite de fragmentação
+Free Camera	Câmera Livre
+Free For All	Livre para Todos
+Free mouse look	Visualização do rato livre
+Freecam speed	Velocidade Freecam
+Freeze	Parado.
+Freeze is available in local solo games, including bots.	Freeze está disponível em jogos solo locais, incluindo bots.
+French	Francês
+Full Force	Força total
+Fullscreen	Ecrã completo
+GAME RULES	REGRAS DE JOGO
+GAME TYPE	TIPO DE JOGO
+GAME TYPES	TIPOS DE JOGOS
+GENERAL	GERAL
+GLOBAL RANK: unavailable	RANK GLOBAL: não disponível
+Game Options	Opções do Jogo
+Game rules	Regras do jogo
+Game sounds	Sons de jogo
+Game type	Tipo de jogo
+Game types	Tipos de jogos
+Generate normal maps	Gerar mapas normais
+Generic	Genérico
+Geometry detail	Detalhe da geometria
+German	Alemão
+Ghost off	Desactivar o Fantasma
+Ghost on	Fantasma ligado
+Green	Verde
+Guide	Guia
+HDR lightmaps	Mapas de luzes HDR
+HUD appearance applied.	A aparência do HUD foi aplicada.
+HUD size (%)	Dimensão do HUD (%)
+HUD style	Estilo HUD
+Have your say on the current vote,	Tem a sua palavra sobre a votação em curso,
+Health and ammo	Saúde e munições
+Height	Altura
+Hide HUD, radar, chat and spectator overlays.	Esconder HUD, radar, bate-papo e sobreposições de espectadores.
+High	Alta
+Hilt preview unavailable	Previsão do Hilt indisponível
+Hold for Drain when available	Aguarde para dreno quando disponível
+Hold for Grip when available	Segure para Grip quando disponível
+Hold for Lightning when available	Segure para relâmpago quando disponível
+Hold for legacy mouse/keyboard strafe	Aguarde pelo strafe do mouse/teclado legado
+Hold to change walking/running speed	Mantenha-se para alterar a velocidade de marcha/corrente
+Hold to show match scores	Manter para mostrar os resultados correspondentes
+Holster / draw saber	Sabre de coldre/desenho
+Holster or draw your saber	Guarda ou desenha o teu sabre
+Horizontal look sensitivity	Sensibilidade de aparência horizontal
+Horizontal mouse scale	Escala horizontal do rato
+Horizontal scale	Escala horizontal
+Horizontal sensitivity	Sensibilidade horizontal
+Horizontal turn speed	Velocidade de rotação horizontal
+Host a match	Hospedar uma correspondência
+Host name	Nome da máquina
+ITEMS	PONTOS
+Ignore small legacy axis movements.	Ignorar pequenos movimentos do eixo legado.
+Ignore small stick movements.	Ignorar pequenos movimentos de vara.
+Illustration only. This result does not update your account.	Apenas ilustração. Este resultado não atualiza a sua conta.
+Input settings applied.	Configurações de entrada aplicadas.
+Inspect hilt	Inspecionar o cabo
+Inspect off-hand	Inspeccionar desempregada
+Inspect primary	Inspecionar o primário
+Installed mods	Mods instalados
+Installing the mod alone does not make a server official.	Instalar o mod sozinho não torna um servidor oficial.
+Interact with usable world objects	Interagir com objetos de mundo utilizáveis
+Invalid QA key	Chave de QA inválida
+Invalid action	Acção inválida
+Invalid assignment	Assunção inválida
+Invalid key	Chave inválida
+Invalid personal config filename	Nome do ficheiro de configuração pessoal inválido
+Invalid setting	Configuração inválida
+Invert controller vertical look	Inverter a aparência vertical do controlador
+Invert mouse	Inverter o rato
+Invert vertical look	Inverter a aparência vertical
+Italian	Italiano
+Items	Itens
+JOIN	AJUNTA
+JOIN THE MATCH	Junte-se ao jogo
+Japanese	Japonês
+Jedi Master	Mestre Jedi
+Join	Entrar
+Join game	Juntar-se ao jogo
+Jump	Saltar
+Jump / swim upward	Saltar / nadar para cima
+Jump sounds	Salto de sons
+KEY ALREADY ASSIGNED	CHAVE JÁ DESIGNADA
+Keep Jump and Speed; disable other general powers.	Manter o Salto e a Velocidade; desactivar outras potências gerais.
+Keep changes	Manter as alterações
+Keep display changes?	Manter as alterações de exibição?
+Keep or revert the display change first.	Mantenha ou reverta a mudança de exibição primeiro.
+Key Bindings	Combinações de Teclas
+Key change staged	Mudança de tecla encenada
+Keyboard	Teclado
+Keyboard horizontal turn speed	Velocidade de rotação horizontal do teclado
+Keyboard turning	Rodar o teclado
+Keyboard vertical look	Visualização vertical do teclado
+Keyboard vertical look speed	Velocidade vertical do olhar do teclado
+Keys	Chaves
+Kill feed	Matar a alimentação
+Korean	Coreano
+LEAVE THE MATCH?	Deixar o jogo?
+LOAD SAVED SETTINGS?	Encarregados?
+Labels do not change assignments.	As etiquetas não mudam as tarefas.
+Lagometer	Lagômetro
+Language	Idioma
+Language pack unavailable; showing original chat	Pacote de idiomas não disponível; mostrando chat original
+Leader	Líder
+Leave lobby	Deixe o lobby
+Leave this server and return to the main menu?	Deixar este servidor e voltar ao menu principal?
+Leave this server and return to your desktop?	Deixar este servidor e voltar para o seu ambiente de trabalho?
+Left hand	Mão esquerda
+Left stick click	Botão esquerdo clique
+Legacy	Legado
+Legacy joystick	Joystick legado
+Legacy joystick analog axes	Eixos analógicos de joystick legados
+Legacy joystick input; restarts input	Entrada do joystick legado; reinicia a entrada
+Legacy mouse forward-movement scale	Escala de movimento avançado do rato legado
+Legacy mouse strafe scale	Escala de strafe de rato legado
+Legacy or power acceleration.	Legado ou aceleração de potência.
+Letterbox	Caixa de Letra
+Letters	Letras
+Light flares	Luzes de sinalização
+Lighting	Iluminação
+Limbs only	Apenas membros
+Limits affect the current mode.  0 = unlimited.	Os limites afectam o modo actual. 0 = ilimitado.
+Lit preview	Visualização do Lit
+Live	Vivo
+Live preview	Visualização ao vivo
+Load	Carregar
+Load into the editor for review, then Apply.	Carregue no editor para revisão e, em seguida, Aplicar.
+Load the next map from the server rotation.	Carregar o próximo mapa a partir da rotação do servidor.
+Local server	Servidor local
+Lock Teams	Bloquear equipes
+Log in with Discord	Entrar com Discórdia
+Log out / Cancel	Sair / Cancelar
+Logged in as %.100s.	Inaugurado em %.100s.
+Logged out.	Abortado.
+Look and movement	Olhar e movimento
+Look down	Olha para baixo.
+Look up	Olha para cima.
+Looking with bound up / down keys.	Olhando com teclas ligadas para cima / para baixo.
+Low	Baixo
+Low health pulse	Pulso de saúde baixo
+Lower values make curved surfaces smoother.	Valores mais baixos tornam as superfícies curvas mais lisas.
+Lyra  /  Registered reserve (sample)	Lyra / Reserva registada (amostra)
+MATCH RECORDINGS	REGISTO DE MATÉRIAS
+MATCH TOOLS	FERROVIÁRIOS
+Main menu	Menu principal
+Map	Mapa
+Map not reported	Mapa não reportado
+Map preview unavailable	Antevisão do mapa não está disponível
+Maps for the current game type	Mapas para o tipo de jogo atual
+Master Mode	Modo Mestre
+Match clock	Corresponder ao relógio
+Match scores are separate from global rank.	Os resultados dos jogos são separados da classificação global.
+Match timer	Temporizador de correspondência
+Match tools	Ferramentas de correspondência
+Matches	Correspondência
+Matching stance assets are missing. Choices were not saved.	Faltam os activos de posicionamento correspondentes. As opções não foram gravadas.
+Matching style assets are missing. Blue, Yellow and Red remain available.	Os ativos de estilo correspondente estão faltando. Azul, Amarelo e Vermelho permanecem disponíveis.
+Matching style assets are missing. Your choices were not saved.	Faltam os activos do estilo correspondente. As suas opções não foram gravadas.
+Max packets	Pacotes máximos
+Max players	Máximo de jogadores
+Medium	Médio
+Menu buttons	Botões do menu
+Menu confirm and back buttons	Os botões do menu confirmam e recuam
+Menu cursor speed	Velocidade do cursor do menu
+Menu language	Idioma dos menus
+Menu motion	Movimento do menu
+Menu motion: Off	Movimento do menu: Desligado
+Menu motion: On	Movimento do menu: Ligado
+Message language	Língua da mensagem
+Message the last player who attacked you	Mensagem o último jogador que o atacou
+Message the player under your crosshair	Mensagem do jogador sob a sua mira
+Min players	Jogadores mínimos
+Mind trick	Truque mental
+Minutes, 0 to 1440. Zero means unlimited. Applies after passing; may end the round.	Minutos, 0 a 1440. Zero significa ilimitado. Aplica-se depois de passar; pode terminar a rodada.
+Mod switching is unavailable in this isolated test profile.	A mudança de mod não está disponível neste perfil de teste isolado.
+Mode	Modo
+Model preview unavailable	Antevisão do modelo não está disponível
+Motion:	Moção:
+Mouse buttons and wheel are supported. Escape cancels.	Os botões do mouse e a roda são suportados. Escape cancela.
+Mouse input mode	Modo de entrada do mouse
+Mouse input: 0 off, 1 raw, 2 compatibility; restarts input	Entrada do mouse: 0 desligado, 1 bruto, 2 compatibilidade; reinicia a entrada
+Mouse movement when free look is off.	Movimento do mouse quando o olhar livre é desligado.
+Mouse movement while strafing.	Movimento do mouse enquanto strafing.
+Mouse sensitivity	Sensibilidade do rato
+Mouse smoothing	Alisamento do mouse
+Move backward	Mover para trás
+Move forward	Mover para a frente
+Move left without turning	Mover para a esquerda sem rodar
+Move right without turning	Mover para a direita sem rodar
+Move the mouse to look around.	Mova o mouse para olhar ao redor.
+Movement	Movimento
+Movement and legacy input	Movimento e contributos legados
+Movement effects	Efeitos dos movimentos
+Moves	Movimentos
+Multiplayer built around pro saber dueling.	Multijogador construído em torno de duelo pro sabre.
+Multiplier while walk / run is held.	Multiplicador enquanto caminhada / corrida é realizada.
+Music volume	Volume de música
+NOW = current match   /   WAIT = upcoming	AGORA = correspondência atual / Wait = vindouro
+Name	Nome
+Names / scores	Nomes / pontuações
+Negative m_pitch inverts vertical look.	O m_pitch negativo inverte a aparência vertical.
+Negative shifts left. Positive shifts right. Zero centers the view.	Deslocações negativas à esquerda, deslocações positivas à direita, zero centraliza a vista.
+Network	Rede
+Network / FPS settings belong under Setup > Network.	Configurações de rede / FPS pertencem em Configuração > Rede.
+Next	Próxima
+Next Force power	Próxima Forçar a energia
+Next Map	Mapa Seguinte
+Next Player	Próximo Jogador
+Next item	Próximo item
+Next opponent: awaiting the other match winner	Próximo adversário: aguardando o outro vencedor da partida
+Next weapon	Próxima arma
+No files	Nenhum arquivo
+No matching entries.	Sem itens correspondentes.
+No matching hilts	Sem colchas correspondentes
+No matching settings.	Não há configurações correspondentes.
+No models match these filters.	Nenhum modelo corresponde a estes filtros.
+No official servers listed	Nenhum servidor oficial listado
+No password	Sem senha
+No pending changes	Sem alterações pendentes
+No saved personal configs.	Nenhuma configuração pessoal gravada.
+No standings available	Nenhuma posição disponível
+Non-ASCII command preserved. This text editor supports ASCII; use change-key or clear.	O comando não- ASCII foi preservado. Este editor de texto suporta o ASCII; use a chave de mudança ou a chave limpa.
+Not a personal setting: 	Não é uma configuração pessoal:
+Not reported	Não reportado
+OFFICIAL RANKED SERVERS	SERVOS OFICIAIS
+Off	Desligado
+Official 1v1 matches on a Ranked Duel server.	Oficial 1v1 corresponde a um servidor de Duelos Ranqueados.
+Offset used by the power curve.	Deslocamento utilizado pela curva de potência.
+Older joystick path; restarts input.	Caminho antigo do joystick; reinicia a entrada.
+On	Ligado
+On-screen keyboard	Teclado no ecrã
+One TFFA match / respawns	Um TFFA corresponde / respane
+One or more default keys have another command. Confirm to replace them.	Uma ou mais teclas predefinidas têm outro comando. Confirme para as substituir.
+Online free camera uses your normal spectator movement.	Câmera livre online usa seu movimento normal espectador.
+Only official registered teams enter this ladder.	Só as equipas oficiais registadas entram nesta escada.
+Only reserves registered with this team may replace a player.	Apenas reservas registadas com esta equipa podem substituir um jogador.
+Open / collapse chat	Abrir / colapsar chat
+Open or close the in-game menu	Abra ou feche o menu no jogo
+Open the console	Abrir a consola
+Opponent	Opositor
+Options	Opções
+Orange	Laranja
+Orbit angle	Ângulo de órbita
+Ordinary matches remain unranked.	As partidas comuns permanecem sem classificação.
+Original Blue style.	Estilo original azul.
+Original JKA	JKA original
+Original JKA and Saber Trials Combat are supported.	O JKA original e o Saber Trials Combat são suportados.
+Original Red style.	Estilo vermelho original.
+Original Yellow style.	Estilo amarelo original.
+Overall mouse response.	Resposta global do rato.
+Overview	Visão geral
+PHOTO MODE	MODELO DE FOTOFOTO
+PLAY	JOGAR
+PLAYER	JOGADOR
+PRESS A KEY OR CONTROLLER BUTTON	Pressione um botão chave ou controlador
+Packet duplication	Duplicação de pacotes
+Pages rotate every 10s. Your row stays visible.	Páginas giram a cada 10s. Sua linha permanece visível.
+Panel opacity (%)	Opacidade do painel (%)
+Parallax mapping	Mapeamento paralaxe
+Password required	Senha necessária
+Pause menu	Pausa do menu
+Pending changes	Alterações pendentes
+Pending edits discarded	Edições pendentes descartadas
+Performance	Desempenho
+Perspective	Perspectiva
+Photo Mode	Modo de Fotografia
+Pick different styles. Your normal style-switch control follows this order.	Escolha estilos diferentes. Seu controle de mudança de estilo normal segue esta ordem.
+Ping  %d ms	Ping %d ms
+Pitch sway	Balanceamento do pitch
+Play	Jogar
+Play recording	Reproduzir a gravação
+Playback	Reproduzir
+Player	Jogador
+Player labels	Rótulos dos jogadores
+Player name	Nome do jogador
+Player settings changed outside this menu. Reopen Profile to refresh.	As configurações do jogador foram alteradas fora deste menu. Reabre o perfil para atualizar.
+Players	Jogadores
+Players  %s / %s	Jogadores %s / %s
+Players and world	Jogadores e mundo
+Polish	Polaco
+Portrait	Retrato
+Portrait size	Tamanho do retrato
+Portrait size applied.	Tamanho do retrato aplicado.
+Portraits	Retratos
+Portuguese	Português
+Portuguese (Brazil)	Português (Brasil)
+Power	Potência
+Power Duel	Duelo de Potência
+Power acceleration offset	Desvio da aceleração da potência
+Precise crosshair trace	Rastreamento preciso da mira
+Preview disconnect	Desligar a antevisão
+Preview hand:	Mão de antevisão:
+Preview how a missing teammate appears in the ready room.	Visualize como um companheiro de equipa desaparecido aparece na sala de estar.
+Preview unavailable	Antevisão não disponível
+Preview:	Antevisão:
+Previous	Anterior
+Previous Force power	Poder de força anterior
+Previous Player	Jogador Anterior
+Previous item	Artigo anterior
+Previous weapon	Arma anterior
+Primary	Primário
+Primary attack; movement and style still govern saber moves	Ataque primário; movimento e estilo ainda governam movimentos de sabre
+Private chat with last attacker	Conversa privada com o último atacante
+Private chat with target	Conversa privada com o alvo
+Private message	Mensagem privada
+Profile	Perfil
+Projected	Projetado
+Projectile trails	Trilhos projéteis
+Purple	Roxo
+QUIT GAME?	Deixa-te de brincadeiras?
+Quality	Qualidade
+Quick combinations; more weight than Blue.	Combinações rápidas; mais peso do que o azul.
+Quit game	Sair do jogo
+Quit the game and return to your desktop?	Sair do jogo e voltar para o seu desktop?
+RANKED PLAY  /  DUEL LADDER	JOGAR RANKED / DUEL LADDER
+RANKED PLAY  /  OVERVIEW	JOGAMENTO/PADRÃO GERAL
+RANKED PLAY  /  SERVER DIRECTORY	DIRECÇÃO DE JOGOS / SERVIDORES
+RANKED PLAY  /  TEAM LADDER	JOGAMENTO CONGELADO / LADER DA EQUIPE
+READY	PRONTO
+READY STANCE	ESTÂNCIA DE PRONTO
+RECONNECTS AND RESERVES	RECONHECIMENTOS E RESERVAS
+RECORDINGS	RECORDAÇÕES
+RED	Vermelho
+RED %d     /     BLUE %d	Vermelho %d / BLUE %d
+RED FLAG	FLAG VERMELHO
+REPLACE DEFAULT KEY ASSIGNMENTS?	REPARTIÇÃO DE DESAFIO DAS DESIGNAÇÕES-CHAVE?
+REPLACE SAVED CONFIG?	Substituir o CONFIG salvo?
+RESPAWN?	RESPOSTA?
+RT	NT1 produto químico
+Raise or lower the camera target.	Aumente ou baixe o alvo da câmera.
+Rank	Posição
+Ranked Challenge Duel	Duelo de Desafio Ranqueado
+Ranked Duel	Duel Rankeado
+Ranked Duel and Ranked Challenge Duel share this ladder.	Duelo Rankeado e Duelo Desafio Rankeado compartilhar esta escada.
+Ranked Play	Jogo Rankeado
+Ranked TFFA	TFFA classificado
+Ranked connection: not configured	Ligação classificada: não configurada
+Ranked mode	Modo classificado
+Ranked servers	Servidores classificados
+Ranked services are coming soon.	Os serviços secretos estão a chegar.
+Rankings appear after verified official results are connected.	Os rankings aparecem após resultados oficiais verificados estarem conectados.
+Rate	Taxa
+Rating	Classificação
+Rating change: unavailable. No verified ranked result received.	Alteração de classificação: não disponível. Nenhum resultado verificado recebido.
+Rating: unavailable / no verified ranked result	Classificação: indisponível / nenhum resultado ranqueado verificado
+Raven Software	Software Raven
+Ready	Prontos
+Ready - offline	Pronto - offline
+Ready cleared.	Pronto.
+Ready for chat - offline	Pronto para o chat - offline
+Ready selected.	Pronto seleccionado.
+Ready-pose choice only. Choose combat behavior in Combat styles.	Escolha o comportamento de combate em estilos de combate.
+Record match	Gravar a correspondência
+Recording	Gravação
+Recordings	Gravações
+Red	Vermelho
+Red team	Equipa vermelha
+Registered teams compete on their own team ladder.	As equipas registadas competem na sua própria escada.
+Release capture in windowed mode.	Lançar a captura em modo de janela.
+Release mouse capture in windowed mode	Lançar a captura do rato em modo de janela
+Release window capture	Release captura da janela
+Renderer	Renderizador
+Repeat commands in outgoing packets.	Repita os comandos nos pacotes de saída.
+Repeater	Repetidor
+Replace	Substituir
+Replace 	Substituir
+Replace ordinary HUD	Substituir o HUD normal
+Replace pending config edits?	Substituir as edições de configuração pendentes?
+Replace pending edits with this config?	Substituir as edições pendentes por esta configuração?
+Replace saved config?	Substituir a configuração gravada?
+Replace the controller's button assignments with defaults?	Substituir as atribuições dos botões do controlador por predefinições?
+Requested bytes per second; server limits apply.	Os bytes solicitados por segundo; os limites do servidor aplicam- se.
+Requested snapshots per second.	Requisito de instantâneos por segundo.
+Requires Rend2.	Requer Rend2.
+Requires Streamer mode with Clean Capture off.	Requer modo Streamer com Captura limpa desligada.
+Requires authenticated server permission	Requer permissão autenticada do servidor
+Requires server permission. Add a player argument using Edit command if needed.	Requer permissão do servidor. Adicione um argumento do jogador usando o comando Editar, se necessário.
+Requires server permission. Use the server's target syntax.	Requer permissão do servidor. Use a sintaxe de destino do servidor.
+Reserves	Reservas
+Reset	Reiniciar
+Reset all to Stock	Reiniciar tudo para o monte
+Reset camera	Reiniciar a câmara
+Reset filters	Reiniciar os filtros
+Reset preview	Reiniciar a antevisão
+Reset this tab	Reiniciar esta página
+Reset this tab?	Reiniciar esta página?
+Reset to originals	Reiniciar para os originais
+Reset view	Reiniciar visão
+Resolution	Resolução
+Respawn now	Respawn agora
+Restart Map	Reiniciar o Mapa
+Restart the current map after the vote passes.	Reinicie o mapa atual após a votação passar.
+Restarts the renderer.	Reinicia o renderizador.
+Restore action defaults	Restaurar os padrões de ação
+Restricted Force	Força Restrita
+Result preview	Visualização do resultado
+Resume  /  Esc	Continuar / Esc
+Return to editing to keep your pending changes.	Voltar à edição para manter as suas alterações pendentes.
+Return to tournament selection?	Voltar à seleção do torneio?
+Reverse right-stick vertical look.	Olhar vertical para a direita.
+Revert	Reversão
+Reverting in %d seconds.	Revertendo em %d segundos.
+Review this change. Nothing changes until you confirm.	Reveja esta mudança, nada muda até confirmar.
+Right hand	Mão direita
+Right stick click	Botão direito clique
+Right-stick horizontal look speed.	Velocidade de olhar horizontal da vara direita.
+Right-stick vertical look speed.	Velocidade vertical da vara direita.
+Rocket launcher	Lança-foguetes
+Role: Jedi	Papel: Jedi
+Role: Non-Jedi	Papel: Não- Jedi
+Roll	Rolar
+Roll sway	Rodar a balança
+Rotate:	Rodar:
+Run command	Executar o comando
+Run pitch	Executar arremesso
+Run roll	Executar o rolo
+Russian	Russo
+SABERTRIALS	SABERTRIAIS
+SAMPLE WINNER	WINNER DE AMOSTRA
+SCORE	ÂMBITO DE APLICAÇÃO
+SERVER INFORMATION	INFORMAÇÃO DO SERVIÇO
+SINGLE SABER / CHOOSE THREE	SABER ÚNICO / ESCOLHA TRÊS
+SPEC	ESPECÍFICO
+ST_CONTROLS_FAIL settings count	Contagem de configurações ST_CONTROLS_FAIL
+Saber 1	Sabre 1
+Saber trail	Trilho do Saber
+Saber workbench	Banco de trabalho do Saber
+Sabers	Sabres
+Sample players and events. No live registration or match starts.	Experimente jogadores e eventos. Sem registro ao vivo ou partida começa.
+Save a PNG screenshot	Gravar uma imagem PNG
+Save current settings	Gravar as opções actuais
+Saved 	Gravado
+Saved Configs	Configuração Gravada
+Saved choices take effect next spawn on supporting servers.	Escolhas salvas fazem efeito no próximo desova em servidores de suporte.
+Saved config could not be verified.	Não foi possível verificar a configuração gravada.
+Scale horizontal mouse movement.	Escalar o movimento horizontal do rato.
+Scales the panel and text together.	Escala o painel e o texto juntos.
+Scene: 	Cena:
+Sci-Fi	Ficção Científica
+Scoreboard	Painel de Avaliação
+Screenshot	Imagem
+Search Setup settings or console names...	Procurar Configuração ou nomes de consola...
+Search actions...	Ações de pesquisa...
+Search current keys or commands...	Procurar chaves ou comandos actuais...
+Search hilts	Procurar pelos
+Search input settings or console names...	Procurar as configurações de entrada ou nomes da consola...
+Search models or outfits...	Procure modelos ou roupas...
+Secondary	Secundário
+Select DEMP2 when available	Selecione DEMP2 quando disponível
+Select a game type. Changing this choice does not change the match.	Seleccione um tipo de jogo. A alteração desta opção não altera a correspondência.
+Select a player or bot	Selecione um jogador ou bot
+Select a server	Selecione um servidor
+Select an available map for the current game type.	Selecione um mapa disponível para o tipo de jogo atual.
+Select blaster rifle when available	Selecione rifle blaster quando disponível
+Select bowcaster when available	Seleccionar o Bowcaster quando disponível
+Select det packs	Seleccionar os pacotes de det
+Select disruptor when available	Selecione o disruptor quando disponível
+Select flechette when available	Selecione flechette quando disponível
+Select next Force power	Selecione a próxima força de força
+Select next available weapon	Selecione a próxima arma disponível
+Select next inventory item	Selecione o item de inventário seguinte
+Select one of the six styles.	Selecione um dos seis estilos.
+Select pistol when available	Selecione a pistola quando disponível
+Select previous Force power	Selecione o poder de força anterior
+Select previous available weapon	Seleccionar a arma disponível anterior
+Select previous inventory item	Seleccionar o item de inventário anterior
+Select repeater when available	Seleccionar o repetidor quando disponível
+Select rockets when available	Selecione foguetes quando disponíveis
+Select saber or melee	Selecione sabre ou melee
+Select thermal detonators	Seleccionar detonadores térmicos
+Select tournament	Selecionar torneio
+Select trip mines	Selecione minas de viagem
+Send message	Enviar mensagem
+Sensitivity	Sensibilidade
+Sensitivity / settings	Sensibilidade / configurações
+Server	Servidor
+Server FPS	Servidor FPS
+Server Management	Gestão de Servidores
+Server information	Informação do servidor
+Server location	Localização do servidor
+Server staff protection still applies.	A proteção da equipe do servidor ainda se aplica.
+Server tournament verification is coming next.	A verificação do torneio do servidor está a vir a seguir.
+Setting is protected: 	A configuração está protegida:
+Setting staged	Ajustar a fase
+Settings applied.	Configurações aplicadas.
+Settings applied. Video/sound changes may require a restart.	Configurações aplicadas. As alterações de som/vídeo podem requerer uma reinicialização.
+Settings changed outside the editor. Cancel and reopen before applying.	Configurações alteradas fora do editor. Cancelar e reabrir antes de se aplicar.
+Setup	Definições
+Share / Create	Partilhar / Criar
+Shift	Deslocar
+Shoulder offset	Deslocamento do ombro
+Show controls: 	Mostrar os comandos:
+Show current bracket	Mostrar o parêntese atual
+Show current tournament status	Mostrar o estado atual do torneio
+Show original message	Mostrar a mensagem original
+Show score	Mostrar a pontuação
+Show the original above its marked translation. Originals remain in the console.	Mostrar o original acima da sua tradução marcada. Os originais permanecem na consola.
+Show weapon	Mostrar a arma
+Shows the weapon model in first person.	Mostra o modelo de arma em primeira pessoa.
+Siege	Cerco
+Siege objectives	Objetivos do cerco
+Siege voice commands	Comandos de voz do cerco
+Signed in with Discord.	Assinado com Discórdia.
+Signed out.	Assinado.
+Simple items	Itens simples
+Single	Simples
+Size: 48-144. Drag or type a number, then Apply size.	Tamanho: 48-144. Arraste ou digite um número e depois aplique o tamanho.
+Slot 1:	Fenda 1:
+Slot 2:	Fenda 2:
+Slot 3:	Fenda 3:
+Smooth follow	Seguir suavemente
+Smoothing	Suavização
+Smooths changes to camera position.	Suaviza as mudanças na posição da câmera.
+Smooths changes to the point the camera follows.	Suaviza as mudanças para o ponto que a câmera segue.
+Snapshot timing offset; normally session-only.	Deslocamento do tempo de captura de tela; normalmente somente na sessão.
+Snapshots	Instantâneos
+Solo / replay speed	Solo / velocidade de repetição
+Solo match	Correspondência individual
+Solo, spectator and replay camera. Online matches stay live.	Solo, espectador e câmera de repetição. Jogos online permanecer ao vivo.
+Some weapons and modes choose the view automatically.	Algumas armas e modos escolhem a vista automaticamente.
+Sort A-Z	Ordenar A-Z
+Sort Z-A	Ordenar Z-A
+Sound	Som
+Sound quality	Qualidade do som
+Sounds	Sons
+Sounds + effects	Sons + efeitos
+Sounds + effects + marks	Sons + efeitos + marcas
+Space	Espaço
+Spanish	Espanhol
+Spectate	Espectar
+Spectator camera	Câmara do espectador
+Speed	Velocidade
+Speed trail	Trilho de velocidade
+Square	Quadrado
+Staff	Pessoal
+Stage controller defaults	Padrão do controlador de palco
+Stage defaults	Predefinições do estágio
+Stage edit	Edição do estágio
+Stances	Estantes
+Stances saved. Applies next spawn on a supporting server.	Stances salvas. Aplica a próxima geração em um servidor de suporte.
+Standard	Padrão
+Start / Resume	Iniciar / Continuar
+Start Tournament	Iniciar o Torneio
+Starting rating: 1000   |   Results and opponent strength decide changes.	Classificação inicial: 1000 . Resultados e força do oponente decidem mudanças.
+Static	Estático
+Status notifications	Notificações de status
+Stay here	Fica aqui.
+Stay in ready room	Fica na sala de estar.
+Stick deadzone	Zona morta do Stick
+Stock	Unidade populacional
+Stock action defaults staged (unassigned when no stock default exists)	O padrão da ação de ações de ações está sendo encenado (não assinado quando não existe o padrão da ação de ações)
+Stock defaults unavailable	Valores por omissão indisponível
+Strafe left	Strafe à esquerda
+Strafe modifier	Modificador de eixo
+Strafe movement scale	Escala de movimento do eixo
+Strafe right	Esticar à direita
+Streamer mode	Modo de transmissão
+Streamer presentation	Apresentação do Streamer
+Style:	Estilo:
+Subject	Assunto
+Supporting servers use this selection. Saber Offense requirements still apply.	Os servidores que suportam usam esta seleção. Os requisitos do Saber Offense ainda se aplicam.
+Supports Ranked Duel, Ranked TFFA and FFA challenge servers.	Suporta Duel Rankeado, TFFA Rankeado e FFA servidores de desafio.
+Swap	Trocar
+Swap Confirm and Back for menus.	Troca Confirmar e Voltar para menus.
+Switch mod	Mudar de mod
+Switch mod?	Mudar de mod?
+Switch mods from the disconnected main menu.	Alternar mods do menu principal desconectado.
+Symbols	Símbolos
+TEAM STANDINGS	REPARTIÇÃO DAS EQUIPES
+TEAM TOURNAMENT	TORNAMENTO DAS EQUIPES
+TEAMS	EQUIPAMENTOS
+TFFA: lock or reopen joining and team switching.	TFFA: bloquear ou reabrir a união e a troca de equipa.
+TIME	TEMPO
+TOURNAMENT	TURNAMENTO
+TOURNAMENT  /  BRACKET	TURNAMENTO / BRANCO
+TOURNAMENT  /  LEAVE LOBBY?	TORNAMENTO / DEIXAR LOBBY?
+TOURNAMENT  /  MATCH RESULT	TURNAMENTO / RESULTADO DE MATÉRIA
+TOURNAMENT  /  READY ROOM	TORNAMENTO / QUARTO DE PRONTO
+TOURNAMENT  /  SELECT A FORMAT	TORNAMENTO / SELECÇÃO DE UM FORMATO
+TOURNAMENT  /  TEAM RESERVES	TORNAMENTO / RESERVAS DA EQUIPE
+Take photo	Tirar uma foto
+Target damping	Amortecimento do alvo
+Target names	Nomes dos alvos
+Team / tag	Equipa / etiqueta
+Team Free For All	Equipe Livre Para Todos
+Team appearance	Aparência da equipe
+Team chat	Conversa em equipa
+Team chat only	Apenas bate- papo em equipa
+Team chat sound	Som de bate-papo em equipa
+Team color lightsabers	Sabres de luz coloridos da equipa
+Team color skins	Peles de cores em equipe
+Team ladder	Escada de equipa
+Team overlay	Sobreposição da equipa
+Team skin: Blue	Pele da equipe: Azul
+Team skin: Default	Skin de equipe: Padrão
+Team skin: Red	Pele da equipe: Vermelho
+Text language	Língua de texto
+Texture compression	Compressão de textura
+Texture depth	Profundidade da textura
+Texture detail	Detalhes da textura
+Texture filter	Filtro de textura
+Texture intensity	Intensidade da textura
+The complete lineup must ready up again before play resumes.	O lineup completo deve se preparar novamente antes de jogar retomas.
+The missing player may reconnect, or a reserve takes their place.	O jogador desaparecido pode reconectar-se, ou uma reserva toma o seu lugar.
+The original style keeps its original combat behavior.	O estilo original mantém seu comportamento de combate original.
+The previous display recovery has not been saved yet.	A recuperação anterior da tela ainda não foi salva.
+The ranked server directory is not connected yet.	O diretório do servidor ranqueado ainda não está conectado.
+The ranking service is not connected.	O serviço de classificação não está conectado.
+The selected model files are no longer available.	Os arquivos de modelo selecionados não estão mais disponíveis.
+The server checks that the map is installed and supports the current mode.	O servidor verifica se o mapa está instalado e suporta o modo atual.
+Themes	Temas
+Themes: 	Temas:
+Thermal detonator	Detonador térmico
+Third person	Terceira pessoa
+Third-person framing	Quadro de terceira pessoa
+This character selection is unavailable.	Esta selecção de caracteres não está disponível.
+This command is too long for the text editor; it is preserved. Use change-key or clear.	Este comando é demasiado longo para o editor de texto; está preservado. Use a chave de mudança ou fique claro.
+This ends your current life.	Isto acaba com a tua vida actual.
+This model does not support a mirrored preview	Este modelo não suporta uma antevisão espelhada
+This outfit has no matching team skin.	Esta roupa não tem pele de equipa.
+This restarts the game client.	Isto reinicia o cliente do jogo.
+This slot has no key to swap. Choose Replace or Cancel.	Este espaço não tem nenhuma chave para trocar. Escolha Substituir ou Cancelar.
+Three styles saved. Use your normal style-switch control to cycle them.	Três estilos salvos. Use o seu controle de mudança de estilo normal para cicloizá- los.
+Three ways to compete	Três maneiras de competir
+Tilt the camera up or down.	Incline a câmera para cima ou para baixo.
+Time Limit:	Limite de Tempo:
+Time Nudge	Nudge de Tempo
+Time limit	Prazo
+Time remaining	Tempo restante
+Timing and downloads	Calendário e downloads
+Toggle camera view	Alternar a visão da câmera
+Toggle console	Alternar a consola
+Toggle existing match recording	Alternar a gravação de correspondência existente
+Toggle supported first/third-person view	Alternar a visão de primeira/terceira pessoa suportada
+Toggle the chat panel and recent messages	Alternar o painel de conversação e as mensagens recentes
+Top right	Superior direito
+Tournament	Torneio
+Tournament bracket	Suporte do torneio
+Tournament rules did not replace the previous description	As regras do torneio não substituíram a descrição anterior
+Tournament rules did not scroll	As regras do torneio não se deslocaram
+Tournament rules headings did not load as separate lines	Os títulos das regras do torneio não carregaram como linhas separadas
+Tournament status	Status do torneio
+Translate into	Traduzir para
+Translate received public, team and private chat offline.	Traduzir o chat público, equipe e privado recebido offline.
+Translating - offline	Traduzindo - offline
+Translation	Tradução
+Translation - %s	Tradução - %s
+Translator unavailable; showing original chat	O tradutor não está disponível; mostrando a conversa original
+Triangle	Triângulo
+Trip mine	Tripular o meu
+Turkish	Turco
+Turn left	Virar à esquerda
+Turn right	Virar à direita
+Turn the camera around the player.	Vira a câmara ao redor do jogador.
+Turn-speed modifier	Modificador de velocidade de rotação
+Turn-speed modifier while walk/run is held	Modificador de velocidade de rotação durante a marcha/corrida
+Turning with bound left / right keys.	Virando com as teclas da esquerda/direita.
+Two precise swings; vulnerable recovery.	Duas mudanças precisas, recuperação vulnerável.
+Type:	Tipo:
+Ukrainian	Ucraniano
+Unassigned	Não atribuído
+Unavailable in this client or server.	Indisponível neste cliente ou servidor.
+Uncategorized	Sem categoria
+Unfreeze	Descongelar
+Universal translator	Tradutor universal
+Universe: 	Universo:
+Unknown Setup operation	Operação de configuração desconhecida
+Unknown quality preset	Predefinição de qualidade desconhecida
+Unknown setting	Configuração desconhecida
+Unlimited	Ilimitado
+Unlock Teams	Desbloquear equipes
+Unready	Não Prontos
+Unsaved changes	Alterações não salvas
+Unsupported Controls operation	Operação de Controles Não Suportados
+Unsupported value for 	Valor não suportado para
+Up to 8 registered teams	Até 8 equipas registadas
+Use 	Utilização
+Use / interact	Usar / interagir
+Use Absorb when available	Usar Absorb quando disponível
+Use FOV 20-120, tilt -45 to 45, speed 20-800.	Use FOV 20-120, inclinação -45 a 45, velocidade 20-800.
+Use Heal when available	Usar a Cura quando disponível
+Use Mind Trick when available	Usar o truque mental quando disponível
+Use Protect when available	Usar o Protect quando disponível
+Use Pull when available	Usar o Puxar quando disponível
+Use Push when available	Usar o Push quando disponível
+Use Rage when available	Usar o Rage quando disponível
+Use Sense when available	Usar o Sentido quando disponível
+Use Speed when available	Usar a Velocidade quando disponível
+Use a new personal config name (letters, numbers, spaces, _ or -).	Use um novo nome de configuração pessoal (cartas, números, espaços, _ ou -).
+Use analog axes on the legacy path.	Use eixos analógicos no caminho legado.
+Use fixed 50-point saber strikes and stronger timed parries.	Use golpes de sabre fixos de 50 pontos e parries cronometrados mais fortes.
+Use inventory item	Usar item de inventário
+Use selected Force power	Usar o poder de força seleccionado
+Use team Energize when available	Usar a equipe Energizar quando disponível
+Use team Heal when available	Usar a equipe de Curar quando disponível
+Use team blade colors. Off shows chosen colors.	Use cores de lâmina de equipe. Off mostra cores escolhidas.
+Use team skins when available. Off shows chosen outfits.	Use skins de equipe quando disponível. Off mostra roupas escolhidas.
+Use the selected available Force power	Usar o poder de força disponível seleccionado
+Use the selected inventory item	Usar o item de inventário selecionado
+Use turn speed 0-10000 and accel 0-100.	Use a velocidade de giro 0-10000 e accel 0-100.
+Used for Custom resolution.	Usado para resolução personalizada.
+VISUAL PREVIEW	ANTERIOR VISUAL
+VOTE	VOTAÇÕES
+VOTING	VOTAÇÕES
+Value outside the supported edit range.	Valor fora do intervalo de edição suportado.
+Vanilla	Baunilha
+Vehicle lead indicator	Indicador de chumbo do veículo
+Version	Versão
+Vertex lighting	Iluminação de vértices
+Vertical look sensitivity	Sensibilidade da aparência vertical
+Vertical look speed	Velocidade vertical da olhada
+Vertical mouse scale	Escala vertical do rato
+Vertical mouse scale; negative means inverted	Escala vertical do rato; negativo significa invertido
+Vertical sensitivity	Sensibilidade vertical
+Vertical sway	Balanceamento vertical
+Very high	Muito alto
+Video	Vídeo
+View	Ver
+Visual effects	Efeitos visuais
+Voice commands	Comandos de voz
+Voice language	Língua da voz
+Voice volume	Volume de voz
+Vote / Call Vote	Votação / Chamada Votação
+Vote to add a role supported by the current game type.	Vote para adicionar uma função suportada pelo tipo de jogo atual.
+Vote to add this role. TFFA teams must be unlocked.	Votem para adicionar este papel, as equipas do TFFA têm de ser desbloqueadas.
+Vote to remove a player or bot.	Vote para remover um jogador ou bot.
+WEAPONS	ARMAS
+Waiting for the server's player list...	À espera da lista de jogadores do servidor...
+Walk / run	Andar / correr
+Wall marks	Marcas de parede
+Warmup Off	Desligar o Aquecimento
+Warmup On	Aquecimento
+Weapon FOV	Arma FOV
+Weapon's own ready pose overrides this preview in play.	A pose pronta da própria arma anula esta pré-visualização em jogo.
+Weapon:	Arma:
+Weapons	Armas
+Weapons: restricted	Armas: restritas
+Weapons: unrestricted	Armas: sem restrições
+Weightier attacks; less wind-up than Red.	Ataques mais pesados; menos de corda do que o Red.
+White	Branco
+White core: Off	Núcleo branco: desligado
+White core: On	Núcleo branco: Ligado
+Whole number, 0 to 999. Zero means unlimited. Applies after passing; may end the round.	Número inteiro, 0 a 999. Zero significa ilimitado. Aplica-se após passar; pode terminar a rodada.
+YOU	VOCÊ
+Yellow	Amarelo
+You / Blue Horizon	Você / Blue Horizon
+Your character	Seu caráter
+Your preferred reading language. Requires the matching offline packs.	O seu idioma de leitura preferido. Requer os pacotes offline correspondentes.
+Your sample ready status will reset when you select another event.	Seu status de amostra pronto será reiniciado quando você selecionar outro evento.
+Your selection is remembered while using dual sabers or a staff.	Sua seleção é lembrada ao usar sabres duplos ou uma equipe.
+Your server chooses the combat rules.	Seu servidor escolhe as regras de combate.
+Your server may deduct a point.	Seu servidor pode deduzir um ponto.
+Zero disables acceleration.	Zero desactiva a aceleração.
+Zero disables this component of view swaying.	Zero desactiva este componente de oscilação da vista.
+Zero removes the client frame-rate limit.	Zero remove o limite de taxa de quadros do cliente.
+Zero uses your field of view.	Zero usa o seu campo de visão.
+[ ] Waiting for you. Click Ready when prepared.	[ ] Esperando por você. Clique pronto quando preparado.
+[ ] You / Waiting	Você / Esperando
+[!] Match paused / missing teammate. Reconnect window: 10:00 (sample).	[!] Coincidir com companheiro de equipa pausado / ausente. Reconectar janela: 10:00 (amostra).
+[!] Mira / Disconnected	[!] Mira / Desligado
+[+] Everyone is ready. Sample lobby: no match will start.	[+] Todos estão prontos. lobby de amostra: nenhuma correspondência começará.
+[+] You / READY	[+] Você / Pronto
+\\translator	\\tradutor
+\\translator\\fonts	\\tradutor\\fonts
+^3Saber Trials ^7Local Review	^3Experiências de segurança ^7Revisão local
+^7Akaza: ^2Ready when you are.	^7Akaza: ^2Pronto quando estiver.
+^7Hisoka: ^2Meet by the stairs.	^7Hisoka: ^2Encontrem-se nas escadas.
+^7Hisoka: ^2See you there.	^7Hisoka: ^2 Vemo-nos lá.
+^7Sousuke Aizen: ^2Just passing through.	^7Sousuke Aizen: ^2 Só de passagem.
+a whole number from 	um número inteiro de
+alora/default	alora/padrão
+animation instance missing	instância de animação em falta
+applied.	aplicado.
+border lights ignore motion preference	luzes de borda ignoram a preferência de movimento
+cannot drag back to top	não é possível arrastar para o topo
+cannot drag to bottom outside track	não é possível arrastar para baixo para a faixa externa
+click target missing	Falta o alvo do clique
+controller menu missing	menu do controlador em falta
+dirty state	estado sujo
+expected %s got %s	esperado %s tem %s
+favorite selection missing	seleção favorita em falta
+favorite state	estado favorito
+fixture has no overflow	o dispositivo não tem transbordamento
+fixture requires private Favorites view	o equipamento requer vista privada dos Favoritos
+force-rank	force- rank
+game/st_stance_assets.h	jogo/st_stance_assets.h
+game/st_stance_runtime.h	jogo/st_stance_runtime.h
+ghost off	fantasma desligado
+ghost on	fantasma sobre
+hover does not light native button	hover não acende o botão nativo
+keeps dragging after mouse release	continua a arrastar após a libertação do rato
+keyboard menu missing	Falta o menu de teclado
+kyle/default	kyle/padrão
+layout context	contexto de disposição
+legacy action missing	Falta a ação do legado
+levelshots/%s	níveis de disparos/%s
+live value mismatch	desfasamento do valor vivo
+local browser reply was not displayed	a resposta do navegador local não foi exibida
+main-menu alias missing	Alias do menu principal em falta
+menu destination	destino do menu
+metadata display name mismatch	Falta de correspondência entre os metadados
+metadata franchise mismatch	Descompatibilidade da franquia de metadados
+missing Speed rank picker	faltando o seletor de classificação de velocidade
+missing selection	Falta a seleção
+missing server list	lista de servidores em falta
+missing target %s	Falta o alvo %s
+motion state mismatch	estado de incompatibilidade da moção
+native Force rank purchase changed	A compra nativa do posto de força foi alterada
+native Jedi role selector missing	Selector de funções nativo Jedi em falta
+native Jedi role transition failed	A transição de papéis nativo Jedi falhou
+native destination mismatch	Descompatibilidade de destino nativo
+native scrollbar did not drag	a barra de rolagem nativa não foi arrastada
+native target missing	Falta o alvo nativo
+not enough server fixtures	não bastam os dispositivos do servidor
+or propose a change to this server.	ou propor uma alteração para este servidor.
+ordinary Apply changed Jedi role	normal Aplicar o papel Jedi alterado
+pending model mismatch	descompasso do modelo pendente
+players/_humanoid/	jogadores/_humanóide/
+preview unavailable	Antevisão não disponível
+result count	contagem de resultados
+scanning creates one cvar per model	a digitalização cria um cvar por modelo
+scrolling changed active model	rolagem mudou o modelo ativo
+st-controls-save.tmp	st-controls-salve.tmp
+staged name	nome da fase
+stale preview survived failed load	Previsualização pregressa sobreviveu à carga falhada
+status mismatch	desfasamento de status
+stock fallback mistaken for custom voice	estoque fallback confundido com voz personalizada
+stock portrait fixture missing	estoque retrato dispositivo faltando
+theme did not paint %s	o tema não pintou %s
+thumb grab jumps	pulos de pega do polegar
+tournament bracket	suporte do torneio
+tournament status	status do torneio
+track click does not scroll	o 'clic' da faixa não se desloca
+unexpected connection state	estado inesperado da conexão
+unknown QA operation	operação QA desconhecida
+unknown scrollbar fixture	dispositivo de barras de rolagem desconhecido
+value%d	valor%d
+virtual keyboard state	estado do teclado virtual
+weapon 1	arma 1
+weapon 10	arma 10
+weapon 11	arma 11
+weapon 12	arma 12
+weapon 2	arma 2
+weapon 3	arma 3
+weapon 4	arma 4
+weapon 5	arma 5
+weapon 6	arma 6
+weapon 7	arma 7
+weapon 8	arma 8
+weapon 9	arma 9

@@ -1,0 +1,73 @@
+--- a/codemp/client/cl_main.cpp
++++ b/codemp/client/cl_main.cpp
+@@ -776,7 +776,10 @@
+ This is also called on Com_Error and Com_Quit, so it shouldn't cause any errors
+ =====================
+ */
++#include "cl_sabertrials_photo.inc"
++
+ void CL_Disconnect( qboolean showMainMenu ) {
++    ST_PhotoEngineReset();
+ 	if ( !com_cl_running || !com_cl_running->integer ) {
+ 		return;
+ 	}
+@@ -2240,6 +2243,8 @@
+ 	// if we haven't gotten a packet in a long time,
+ 	// drop the connection
+ 	CL_CheckTimeout();
++
++	ST_PhotoEngineFrame();
+ 
+ 	// send intentions now
+ 	CL_SendCmd();
+@@ -2723,6 +2728,7 @@
+ ====================
+ */
+ void CL_Init( void ) {
++    ST_PhotoEngineInit();
+ //	Com_Printf( "----- Client Initialization -----\n" );
+ 
+ 	Con_Init ();
+--- a/codemp/server/sv_main.cpp
++++ b/codemp/server/sv_main.cpp
+@@ -948,6 +948,19 @@
+ SV_CheckPaused
+ ==================
+ */
++// Photo Freeze is permitted only for an actual local human and bots.
++qboolean SV_STPhotoSolo(void) {
++    if (!svs.clients || !sv_maxclients) return qfalse;
++    int humans = 0;
++    for (int i=0;i<sv_maxclients->integer;i++) {
++        client_t *cl = &svs.clients[i];
++        if (cl->state < CS_CONNECTED || cl->netchan.remoteAddress.type == NA_BOT) continue;
++        if (cl->netchan.remoteAddress.type != NA_LOOPBACK) return qfalse;
++        humans++;
++    }
++    return humans == 1 ? qtrue : qfalse;
++}
++
+ qboolean SV_CheckPaused( void ) {
+ 	int		count;
+ 	client_t	*cl;
+--- a/codemp/client/cl_scrn.cpp
++++ b/codemp/client/cl_scrn.cpp
+@@ -462,7 +462,7 @@
+ 			break;
+ 		case CA_ACTIVE:
+ 			CL_CGameRendering( stereoFrame );
+-			SCR_DrawDemoRecording();
++			if (!Cvar_VariableIntegerValue("st_photoMode")) SCR_DrawDemoRecording();
+ 			break;
+ 		}
+ 	}
+--- a/codemp/client/cl_console.cpp
++++ b/codemp/client/cl_console.cpp
+@@ -722,6 +722,7 @@
+ */
+ void Con_DrawNotify (void)
+ {
++    if (Cvar_VariableIntegerValue("st_photoMode")) return;
+ 	int		x, v;
+ 	int		lineLimit = con.linewidth;
+ 	conChar_t		*text;

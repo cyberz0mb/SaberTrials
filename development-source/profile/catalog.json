@@ -1,0 +1,181 @@
+{
+  "luffy": {
+    "displayName": "Monkey D. Luffy",
+    "universe": "One Piece",
+    "themes": [
+      "Anime",
+      "Fantasy"
+    ],
+    "group": "luffy"
+  },
+  "akaza": {
+    "displayName": "Akaza",
+    "universe": "Demon Slayer",
+    "themes": [
+      "Anime",
+      "Fantasy"
+    ]
+  },
+  "aizen": {
+    "displayName": "Sosuke Aizen",
+    "universe": "Bleach",
+    "themes": [
+      "Anime",
+      "Fantasy"
+    ]
+  },
+  "jedi_alien": {
+    "displayName": "Alien",
+    "universe": "Alien",
+    "themes": [
+      "Sci-Fi",
+      "Horror"
+    ]
+  },
+  "boba_fett": {
+    "displayName": "Boba Fett",
+    "universe": "Star Wars",
+    "themes": [
+      "Sci-Fi"
+    ]
+  },
+  "darkmagiciangirl": {
+    "displayName": "Dark Magician Girl",
+    "universe": "Yu-Gi-Oh!",
+    "themes": [
+      "Anime",
+      "Fantasy"
+    ]
+  },
+  "denji": {
+    "displayName": "Denji",
+    "universe": "Chainsaw Man",
+    "themes": [
+      "Anime",
+      "Horror"
+    ]
+  },
+  "hisoka": {
+    "displayName": "Hisoka",
+    "universe": "Hunter x Hunter",
+    "themes": [
+      "Anime",
+      "Fantasy"
+    ]
+  },
+  "hk47": {
+    "displayName": "HK-47",
+    "universe": "Star Wars",
+    "themes": [
+      "Sci-Fi"
+    ]
+  },
+  "chewbacca": {
+    "displayName": "Chewbacca",
+    "universe": "Star Wars",
+    "themes": [
+      "Sci-Fi"
+    ]
+  },
+  "joker": {
+    "displayName": "Joker",
+    "universe": "DC",
+    "themes": [
+      "Comics"
+    ]
+  },
+  "kyle": {
+    "displayName": "Kyle Katarn",
+    "universe": "Star Wars",
+    "themes": [
+      "Sci-Fi"
+    ]
+  },
+  "leia": {
+    "displayName": "Leia Organa",
+    "universe": "Star Wars",
+    "themes": [
+      "Sci-Fi"
+    ]
+  },
+  "okarun": {
+    "displayName": "Okarun",
+    "universe": "Dandadan",
+    "themes": [
+      "Anime",
+      "Sci-Fi"
+    ]
+  },
+  "padme": {
+    "displayName": "Padme Amidala",
+    "universe": "Star Wars",
+    "themes": [
+      "Sci-Fi"
+    ]
+  },
+  "spacewolves": {
+    "displayName": "Space Wolves Champion",
+    "universe": "Warhammer 40,000",
+    "themes": [
+      "Sci-Fi",
+      "Fantasy"
+    ]
+  },
+  "stormtrooper": {
+    "displayName": "Stormtrooper",
+    "universe": "Star Wars",
+    "themes": [
+      "Sci-Fi"
+    ]
+  },
+  "sunraku": {
+    "displayName": "Sunraku",
+    "universe": "Shangri-La Frontier",
+    "themes": [
+      "Anime",
+      "Fantasy"
+    ]
+  },
+  "talon": {
+    "displayName": "Darth Talon",
+    "universe": "Star Wars",
+    "themes": [
+      "Sci-Fi",
+      "Comics"
+    ]
+  },
+  "t800_human": {
+    "displayName": "T-800",
+    "universe": "Terminator",
+    "themes": [
+      "Sci-Fi"
+    ]
+  },
+  "luffy_wano": {
+    "displayName": "Monkey D. Luffy",
+    "universe": "One Piece",
+    "themes": [
+      "Anime",
+      "Fantasy"
+    ],
+    "group": "luffy"
+  },
+  "luffy_newworld": {
+    "displayName": "Monkey D. Luffy",
+    "universe": "One Piece",
+    "themes": [
+      "Anime",
+      "Fantasy"
+    ],
+    "group": "luffy"
+  },
+  "luffy_g5": {
+    "displayName": "Monkey D. Luffy",
+    "universe": "One Piece",
+    "themes": [
+      "Anime",
+      "Fantasy"
+    ],
+    "group": "luffy"
+  }
+}

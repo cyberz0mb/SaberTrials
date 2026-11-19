@@ -1,0 +1,46 @@
+// Native Profile browser; legacy action scripts preserved from 71d8fdd.
+{ menuDef { name "ingame_player" fullscreen 1 rect 0 0 640 480 visible 0 style 1 backcolor .027 .063 .098 1 focusColor 1 1 1 1
+onOpen { uiScript update "ui_GetName"; uiScript updateForceStatus; }
+itemDef { name st_profile_preview type ITEM_TYPE_MODEL rect 466 150 152 194 model_g2anim "BOTH_WALK1" model_angle 180 model_rotation 100 model_g2mins -32 -32 -26 model_g2maxs 32 32 42 model_fovy 36 isCharacter 1 visible 1 decoration cvarTest "ui_stProfilePreviewAvailable" showCvar { "1" } }
+itemDef { name sp_action_custom type ITEM_TYPE_BUTTON rect 0 0 0 0 visible 0 decoration action {
+				play			"sound/interface/button1.wav"
+				uiScript				updateForceStatus
+				close			ingame_player
+				open			ingame_player2
+			} }
+itemDef { name sp_action_saber type ITEM_TYPE_BUTTON rect 0 0 0 0 visible 0 decoration action {
+				play			"sound/interface/button1.wav"
+				close			ingame_player
+				open			ingame_saber
+			} }
+itemDef { name sp_action_force type ITEM_TYPE_BUTTON rect 0 0 0 0 visible 0 decoration action {
+				play			"sound/interface/button1"
+				close			ingame_player
+				open			ingame_playerforce
+				hide			highlights
+			} }
+itemDef { name sp_action_join type ITEM_TYPE_BUTTON rect 0 0 0 0 visible 0 decoration action {
+				play			"sound/interface/button1"
+				uiScript 		setForce "free"
+				hide			highlights
+				uiScript 		closeingame
+			} }
+itemDef { name sp_action_red type ITEM_TYPE_BUTTON rect 0 0 0 0 visible 0 decoration action {
+				play			"sound/interface/button1"
+				uiScript		setForce "red"
+				hide			highlights
+				uiScript 		closeingame
+			} }
+itemDef { name sp_action_blue type ITEM_TYPE_BUTTON rect 0 0 0 0 visible 0 decoration action {
+				play			"sound/interface/button1"
+				uiScript 		setForce "blue"
+				hide			highlights
+				uiScript 		closeingame
+			} }
+itemDef { name sp_action_spectate type ITEM_TYPE_BUTTON rect 0 0 0 0 visible 0 decoration action {
+				play			"sound/interface/button1"
+				uiScript 		setForce "s"
+				hide			highlights
+				uiScript 		closeingame
+			} }
+} }

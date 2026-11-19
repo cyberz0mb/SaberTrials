@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "id": "saber-trials",
+  "preserve": ["Saber Trials", "JKA", "TFFA", "FFA", "CTF", "Jedi", "Sith", "Padawan", "Force Push", "Force Pull", "Force Speed"],
+  "phrases": [
+    {"source": "en", "target": "es", "text": "gg", "translation": "buena partida"},
+    {"source": "en", "target": "es", "text": "good game", "translation": "buena partida"},
+    {"source": "es", "target": "en", "text": "buena partida", "translation": "good game"}
+  ]
+}

@@ -1,0 +1,517 @@
+{
+  "version": 2,
+  "platform": "windows-x86_64",
+  "files": [
+    {
+      "file": "python-3.14.10-embed-amd64.zip",
+      "url": "https://www.python.org/ftp/python/3.14.10/python-3.14.10-embed-amd64.zip",
+      "bytes": 12619664,
+      "sha256": "90905e64a840557d8c1bc4f5b74db3d7ee85e3ffb217611cac1c7813acea4159",
+      "kind": "python",
+      "license": "PSF-2.0"
+    },
+    {
+      "file": "wheels/click-8.5.1-py3-none-any.whl",
+      "url": "https://files.pythonhosted.org/packages/31/7d/164b7ffc8624fe9efb4221bf9af485d5c1e41b9ae118045d2b6dc5457d8b/click-8.5.1-py3-none-any.whl",
+      "bytes": 126163,
+      "sha256": "8bb5376d2006950386f8c6427613334a2acadc5f559cb80e638d00b4df957e37",
+      "kind": "wheel",
+      "license": "BSD-3-Clause"
+    },
+    {
+      "file": "wheels/cloudpickle-3.1.2-py3-none-any.whl",
+      "url": "https://files.pythonhosted.org/packages/88/39/799be3f2f0f38cc727ee3b4f1445fe6d5e4133064ec2e4115069418a5bb6/cloudpickle-3.1.2-py3-none-any.whl",
+      "bytes": 22228,
+      "sha256": "9acb47f6afd73f60dc1df93bb801b472f05ff42fa6c84167d25cb206be1fbf4a",
+      "kind": "wheel",
+      "license": "BSD-3-Clause"
+    },
+    {
+      "file": "wheels/colorama-0.4.6-py2.py3-none-any.whl",
+      "url": "https://files.pythonhosted.org/packages/d1/d6/3965ed04c63042e047cb6a3e6ed1a63a35087b6a609aa3a15ed8ac56c221/colorama-0.4.6-py2.py3-none-any.whl",
+      "bytes": 25335,
+      "sha256": "4f1d9991f5acc0ca119f9d443620b77f9d6b33703e51011c16baf57afb285fc6",
+      "kind": "wheel",
+      "license": "See bundled dist-info license"
+    },
+    {
+      "file": "wheels/ctranslate2-4.9.0-cp314-cp314-win_amd64.whl",
+      "url": "https://files.pythonhosted.org/packages/d3/f8/b546a4eca219d089ee936a4e604ff83b96eea74b6e982d0864d6a1dead4b/ctranslate2-4.9.0-cp314-cp314-win_amd64.whl",
+      "bytes": 20682430,
+      "sha256": "36ec6213ec7ff7609229db0a35f7b2403a66e1b5e1bd4c606f51e4e3ea56c330",
+      "kind": "wheel",
+      "license": "MIT"
+    },
+    {
+      "file": "wheels/joblib-1.6.0-py3-none-any.whl",
+      "url": "https://files.pythonhosted.org/packages/18/53/84099323c2ec4be98d935f63c033ac4151ee83836ca1050ede3b3aadf155/joblib-1.6.0-py3-none-any.whl",
+      "bytes": 306115,
+      "sha256": "3dbbf9f6e4b592a2357b854608e980fe6390d131d7a82f011a377ef2ebef7aba",
+      "kind": "wheel",
+      "license": "BSD-3-Clause"
+    },
+    {
+      "file": "wheels/mock-5.2.0-py3-none-any.whl",
+      "url": "https://files.pythonhosted.org/packages/bd/d9/617e6af809bf3a1d468e0d58c3997b1dc219a9a9202e650d30c2fc85d481/mock-5.2.0-py3-none-any.whl",
+      "bytes": 31617,
+      "sha256": "7ba87f72ca0e915175596069dbbcc7c75af7b5e9b9bc107ad6349ede0819982f",
+      "kind": "wheel",
+      "license": "See bundled dist-info license"
+    },
+    {
+      "file": "wheels/numpy-2.5.4-cp314-cp314-win_amd64.whl",
+      "url": "https://files.pythonhosted.org/packages/52/9a/e1e512ebc948d5b9dd33b08736760f0ebbed2848fd4eda1f553088a6dcee/numpy-2.5.4-cp314-cp314-win_amd64.whl",
+      "bytes": 12703552,
+      "sha256": "2ca144f15135b6212a5c47b1e2aeca6e412f102f95a2d5d88d8aec77eb255de3",
+      "kind": "wheel",
+      "license": "BSD-3-Clause AND 0BSD AND MIT AND Zlib AND CC0-1.0"
+    },
+    {
+      "file": "wheels/py3langid-0.4.0-py3-none-any.whl",
+      "url": "https://files.pythonhosted.org/packages/69/2d/0eeff2727c970b1d553be70d15ba2d84e3830696c09a79d954c5ae3d5212/py3langid-0.4.0-py3-none-any.whl",
+      "bytes": 4600605,
+      "sha256": "c25bd038147951ba3a89efe9ec12cc7d2116cb6f311ff8af84ade398a8bc0616",
+      "kind": "wheel",
+      "license": "BSD-3-Clause"
+    },
+    {
+      "file": "wheels/pyyaml-6.0.3-cp314-cp314-win_amd64.whl",
+      "url": "https://files.pythonhosted.org/packages/23/20/bb6982b26a40bb43951265ba29d4c246ef0ff59c9fdcdf0ed04e0687de4d/pyyaml-6.0.3-cp314-cp314-win_amd64.whl",
+      "bytes": 156429,
+      "sha256": "4a2e8cebe2ff6ab7d1050ecd59c25d4c8bd7e6f400f5f82b96557ac0abafd0ac",
+      "kind": "wheel",
+      "license": "MIT"
+    },
+    {
+      "file": "wheels/regex-2026.11.9-cp314-cp314-win_amd64.whl",
+      "url": "https://files.pythonhosted.org/packages/4e/d0/5a472f1404c2217c92ebbd98d65a273cc48adc0a1f2948743ed59a873c18/regex-2026.11.9-cp314-cp314-win_amd64.whl",
+      "bytes": 284464,
+      "sha256": "4d2bb485c68c8688201e5d56f6a7cd563ad9ee40ad2a700e77a13fceaac3a517",
+      "kind": "wheel",
+      "license": "Apache-2.0 AND CNRI-Python"
+    },
+    {
+      "file": "wheels/sacremoses-0.1.1-py3-none-any.whl",
+      "url": "https://files.pythonhosted.org/packages/0b/f0/89ee2bc9da434bd78464f288fdb346bc2932f2ee80a90b2a4bbbac262c74/sacremoses-0.1.1-py3-none-any.whl",
+      "bytes": 897476,
+      "sha256": "31e04c98b169bfd902144824d191825cd69220cdb4ae4bcf1ec58a7db5587b1a",
+      "kind": "wheel",
+      "license": "See bundled dist-info license"
+    },
+    {
+      "file": "wheels/sentencepiece-0.2.3-cp314-cp314-win_amd64.whl",
+      "url": "https://files.pythonhosted.org/packages/10/5f/54ded99266afba048f53d7cd0f6383178172415005dff5f298cb13786145/sentencepiece-0.2.3-cp314-cp314-win_amd64.whl",
+      "bytes": 1774639,
+      "sha256": "0d1235ccd36c3e8c2021355258b47866c694a55003a89f00701c513eac1aef06",
+      "kind": "wheel",
+      "license": "Apache-2.0"
+    },
+    {
+      "file": "wheels/subword_nmt-0.3.8-py3-none-any.whl",
+      "url": "https://files.pythonhosted.org/packages/1b/9a/488ecac22d78eb429928b9ee4f6b6c692e116ca4bd43ef42a475698def32/subword_nmt-0.3.8-py3-none-any.whl",
+      "bytes": 27271,
+      "sha256": "d22526b557752f35ac15e8ea384ea7773e50a51d966b8752d023d16cb87eac36",
+      "kind": "wheel",
+      "license": "MIT"
+    },
+    {
+      "file": "wheels/tqdm-4.70.1-py3-none-any.whl",
+      "url": "https://files.pythonhosted.org/packages/a7/03/921a3d3c75785aca9ebfbfcabfbc3a1be12e2ab5265deb026d55a5a3f83e/tqdm-4.70.1-py3-none-any.whl",
+      "bytes": 80199,
+      "sha256": "c293e525e6fef9c20e8728fd4612df02a0aa31bb5fe91ecd93e123b1b7bffa73",
+      "kind": "wheel",
+      "license": "MPL-2.0 AND MIT"
+    },
+    {
+      "file": "translate-en_es-1_0.argosmodel",
+      "url": "https://argos-net.com/v1/translate-en_es-1_0.argosmodel",
+      "bytes": 87503191,
+      "sha256": "d698d0ef87ad70d5d184b7fa6965905bf4368f09a2bb9ffb165a79bac96af0c4",
+      "kind": "model",
+      "pair": "en-es",
+      "license": "Argos maintainer MIT-or-CC0 statement; package/corpus rights require redistribution review"
+    },
+    {
+      "file": "translate-es_en-1_9.argosmodel",
+      "url": "https://argos-net.com/v1/translate-es_en-1_9.argosmodel",
+      "bytes": 285208831,
+      "sha256": "c54df2b62fceaf54a3ce5d97db6bf56efd7940063329f6778f4212d2acb370d4",
+      "kind": "model",
+      "pair": "es-en",
+      "license": "CC-BY-4.0 (model README)"
+    },
+    {
+      "file": "translate-en_ru-1_9.argosmodel",
+      "url": "https://argos-net.com/v1/translate-en_ru-1_9.argosmodel",
+      "kind": "model",
+      "pair": "en-ru",
+      "package_version": "1.9",
+      "bytes": 195746693,
+      "sha256": "591d743ae103752b88ffc38785c50421320f4eff93c8967e0d3d2e14d4e27811",
+      "license": "Argos maintainer MIT-or-CC0 statement; package/corpus rights require redistribution review"
+    },
+    {
+      "file": "translate-ru_en-1_9.argosmodel",
+      "url": "https://argos-net.com/v1/translate-ru_en-1_9.argosmodel",
+      "kind": "model",
+      "pair": "ru-en",
+      "package_version": "1.9",
+      "bytes": 156239112,
+      "sha256": "e9ba8bf722d10a4a4c39f74289d5938fd47eac08dbe4ed0afd22d89445a5c3ac",
+      "license": "Argos maintainer MIT-or-CC0 statement; package/corpus rights require redistribution review"
+    },
+    {
+      "file": "translate-en_ja-1_1.argosmodel",
+      "url": "https://argos-net.com/v1/translate-en_ja-1_1.argosmodel",
+      "kind": "model",
+      "pair": "en-ja",
+      "package_version": "1.1",
+      "bytes": 120470284,
+      "sha256": "16300cc4eaa85320520cabcf433b63d01be40ef6966251de72043a083408f716",
+      "license": "Argos maintainer MIT-or-CC0 statement; package/corpus rights require redistribution review"
+    },
+    {
+      "file": "translate-ja_en-1_1.argosmodel",
+      "url": "https://argos-net.com/v1/translate-ja_en-1_1.argosmodel",
+      "kind": "model",
+      "pair": "ja-en",
+      "package_version": "1.1",
+      "bytes": 117155716,
+      "sha256": "623e3477959a815eb0a5ef53e09079ae8f1f9d3bbcd230473baf28c03fb83335",
+      "license": "Argos maintainer MIT-or-CC0 statement; package/corpus rights require redistribution review"
+    },
+    {
+      "file": "translate-en_zh-1_9.argosmodel",
+      "url": "https://argos-net.com/v1/translate-en_zh-1_9.argosmodel",
+      "kind": "model",
+      "pair": "en-zh",
+      "package_version": "1.9",
+      "bytes": 70743021,
+      "sha256": "433e7c4f034d87fbe2353161e05f18646d7999452f801a4e1f0378522b9850ab",
+      "license": "CC-BY-4.0 (model README)"
+    },
+    {
+      "file": "translate-zh_en-1_9.argosmodel",
+      "url": "https://argos-net.com/v1/translate-zh_en-1_9.argosmodel",
+      "kind": "model",
+      "pair": "zh-en",
+      "package_version": "1.9",
+      "bytes": 74481402,
+      "sha256": "62e7af5a3a48b530e47b7b3e5c78c2de79073ecd815750d2bf3ab35b4a67da2d",
+      "license": "CC-BY-4.0 (model README)"
+    },
+    {
+      "file": "translate-en_zt-1_9.argosmodel",
+      "url": "https://argos-net.com/v1/translate-en_zt-1_9.argosmodel",
+      "kind": "model",
+      "pair": "en-zt",
+      "package_version": "1.9",
+      "bytes": 70743045,
+      "sha256": "b97b6532196c4421240c0788cb711cc1fe5e5ecbde553c937193d13e5c67826c",
+      "license": "CC-BY-4.0 (model README)"
+    },
+    {
+      "file": "translate-zt_en-1_9.argosmodel",
+      "url": "https://argos-net.com/v1/translate-zt_en-1_9.argosmodel",
+      "kind": "model",
+      "pair": "zt-en",
+      "package_version": "1.9",
+      "bytes": 74498034,
+      "sha256": "a9ea826d801f059dd47f1f47b6c1dc9d762519a80ea3afd2a982130a42a25486",
+      "license": "CC-BY-4.0 (model README)"
+    },
+    {
+      "file": "translate-en_ar-1_0.argosmodel",
+      "url": "https://argos-net.com/v1/translate-en_ar-1_0.argosmodel",
+      "kind": "model",
+      "pair": "en-ar",
+      "package_version": "1.0",
+      "bytes": 88502631,
+      "sha256": "e2a6e84337f7ebbb55f9dc61dcba3a861c0d786ae5a46fa198fd8d6473f5c775",
+      "license": "Argos maintainer MIT-or-CC0 statement; package/corpus rights require redistribution review"
+    },
+    {
+      "file": "translate-ar_en-1_0.argosmodel",
+      "url": "https://argos-net.com/v1/translate-ar_en-1_0.argosmodel",
+      "kind": "model",
+      "pair": "ar-en",
+      "package_version": "1.0",
+      "bytes": 81869670,
+      "sha256": "bc98cd4e27ca1cebfae9b7086b2ebc635e4dbed45e7cb5f0891cb7d22feacfad",
+      "license": "Argos maintainer MIT-or-CC0 statement; package/corpus rights require redistribution review"
+    },
+    {
+      "file": "translate-en_de-1_3.argosmodel",
+      "url": "https://argos-net.com/v1/translate-en_de-1_3.argosmodel",
+      "kind": "model",
+      "pair": "en-de",
+      "package_version": "1.3",
+      "bytes": 150508297,
+      "sha256": "6cd847f0c06c9c66013e6b0932e07fd54a6d90894659c02bf6c5247b72fb25b1",
+      "license": "Argos maintainer MIT-or-CC0 statement; package/corpus rights require redistribution review"
+    },
+    {
+      "file": "translate-de_en-1_3.argosmodel",
+      "url": "https://argos-net.com/v1/translate-de_en-1_3.argosmodel",
+      "kind": "model",
+      "pair": "de-en",
+      "package_version": "1.3",
+      "bytes": 150512831,
+      "sha256": "becc2b0011f8249fcb89be9ecb75ba0d876b1fab93c28ee6ff0420936897d637",
+      "license": "Argos maintainer MIT-or-CC0 statement; package/corpus rights require redistribution review"
+    },
+    {
+      "file": "translate-en_fr-1_9.argosmodel",
+      "url": "https://argos-net.com/v1/translate-en_fr-1_9.argosmodel",
+      "kind": "model",
+      "pair": "en-fr",
+      "package_version": "1.9",
+      "bytes": 65472327,
+      "sha256": "3a65ed83364f4e7b06e30f9dd823db1934899ed3ce839e63f46dc7b09dc797b4",
+      "license": "CC-BY-4.0 (model README)"
+    },
+    {
+      "file": "translate-fr_en-1_9.argosmodel",
+      "url": "https://argos-net.com/v1/translate-fr_en-1_9.argosmodel",
+      "kind": "model",
+      "pair": "fr-en",
+      "package_version": "1.9",
+      "bytes": 66585033,
+      "sha256": "3b3052fee6bb1e8e8e632a26a723eb2a2c7710dfe73ba61ffd9b83e85d4f14c1",
+      "license": "CC-BY-4.0 (model README)"
+    },
+    {
+      "file": "translate-en_it-1_0.argosmodel",
+      "url": "https://argos-net.com/v1/translate-en_it-1_0.argosmodel",
+      "kind": "model",
+      "pair": "en-it",
+      "package_version": "1.0",
+      "bytes": 87660780,
+      "sha256": "dde2180001a47904ecbbd688a41e35db8a040e4fd5b52e4f29b4bb499516ab32",
+      "license": "Argos maintainer MIT-or-CC0 statement; package/corpus rights require redistribution review"
+    },
+    {
+      "file": "translate-it_en-1_0.argosmodel",
+      "url": "https://argos-net.com/v1/translate-it_en-1_0.argosmodel",
+      "kind": "model",
+      "pair": "it-en",
+      "package_version": "1.0",
+      "bytes": 87190224,
+      "sha256": "d2dd23b8b702f612b8127f07c7a0391f5f2a8b93344e6ddc9dd93c81824e85cb",
+      "license": "Argos maintainer MIT-or-CC0 statement; package/corpus rights require redistribution review"
+    },
+    {
+      "file": "translate-en_pt-1_9.argosmodel",
+      "url": "https://argos-net.com/v1/translate-en_pt-1_9.argosmodel",
+      "kind": "model",
+      "pair": "en-pt",
+      "package_version": "1.9",
+      "bytes": 66179184,
+      "sha256": "0c5350a2fa5b923de1346edc0d42e08e38bab2e33cede3a0b9a48eb4281ad8a9",
+      "license": "CC-BY-4.0 (model README)"
+    },
+    {
+      "file": "translate-pt_en-1_9.argosmodel",
+      "url": "https://argos-net.com/v1/translate-pt_en-1_9.argosmodel",
+      "kind": "model",
+      "pair": "pt-en",
+      "package_version": "1.9",
+      "bytes": 69447231,
+      "sha256": "ae76df6f650895c16f2b582065014fab496755ca846ecb19fae81d51f332a38e",
+      "license": "CC-BY-4.0 (model README)"
+    },
+    {
+      "file": "translate-en_pb-1_9.argosmodel",
+      "url": "https://argos-net.com/v1/translate-en_pb-1_9.argosmodel",
+      "kind": "model",
+      "pair": "en-pb",
+      "package_version": "1.9",
+      "bytes": 66179201,
+      "sha256": "1d1cd5e9540c6b38c258bed002a42d3b311b8a189acb74feaa311ef30d175c5b",
+      "license": "CC-BY-4.0 (model README)"
+    },
+    {
+      "file": "translate-pb_en-1_9.argosmodel",
+      "url": "https://argos-net.com/v1/translate-pb_en-1_9.argosmodel",
+      "kind": "model",
+      "pair": "pb-en",
+      "package_version": "1.9",
+      "bytes": 69447841,
+      "sha256": "578e9c504595ac85f8e8e0b31e4f53c84e38e7638db8c3c8df384d05eac2671b",
+      "license": "CC-BY-4.0 (model README)"
+    },
+    {
+      "file": "translate-en_ko-1_1.argosmodel",
+      "url": "https://argos-net.com/v1/translate-en_ko-1_1.argosmodel",
+      "kind": "model",
+      "pair": "en-ko",
+      "package_version": "1.1",
+      "bytes": 120789009,
+      "sha256": "e03d8e65e6d44525ec5808c3409fcf8728c76c2c76925372b6d3dc3278de17fc",
+      "license": "Argos maintainer MIT-or-CC0 statement; package/corpus rights require redistribution review"
+    },
+    {
+      "file": "opus-ko-en-2019-12-18.zip",
+      "url": "https://object.pouta.csc.fi/OPUS-MT-models/ko-en/opus-2019-12-18.zip",
+      "kind": "marian",
+      "pair": "ko-en",
+      "package_version": "opus-2019-12-18",
+      "bytes": 280898340,
+      "sha256": "2bd09e44fd41ca556cdf57e88a16f743a37616a9409491437f7cdd53d9ce2adc",
+      "license": "CC-BY-4.0 (bundled LICENSE); Helsinki-NLP OPUS-MT; converted to CTranslate2 int8"
+    },
+    {
+      "file": "translate-en_hi-1_1.argosmodel",
+      "url": "https://argos-net.com/v1/translate-en_hi-1_1.argosmodel",
+      "kind": "model",
+      "pair": "en-hi",
+      "package_version": "1.1",
+      "bytes": 106752178,
+      "sha256": "60470a003a9c7339db8c060ed8eafc7cf999ba90dfa5dceebd8d0a4f75f1d3f0",
+      "license": "Argos maintainer MIT-or-CC0 statement; package/corpus rights require redistribution review"
+    },
+    {
+      "file": "translate-hi_en-1_1.argosmodel",
+      "url": "https://argos-net.com/v1/translate-hi_en-1_1.argosmodel",
+      "kind": "model",
+      "pair": "hi-en",
+      "package_version": "1.1",
+      "bytes": 102381771,
+      "sha256": "f99eadf297073c0f5a320df5d634ebb73e9ab0b819404edf7bd0a0daf6b1ce43",
+      "license": "Argos maintainer MIT-or-CC0 statement; package/corpus rights require redistribution review"
+    },
+    {
+      "file": "translate-en_pl-1_9.argosmodel",
+      "url": "https://argos-net.com/v1/translate-en_pl-1_9.argosmodel",
+      "kind": "model",
+      "pair": "en-pl",
+      "package_version": "1.9",
+      "bytes": 67294886,
+      "sha256": "85d865369326b6d8220876fbd7bc552fa5ec8b99e81161fab4a26f78187cedbc",
+      "license": "CC-BY-4.0 (model README)"
+    },
+    {
+      "file": "translate-pl_en-1_9.argosmodel",
+      "url": "https://argos-net.com/v1/translate-pl_en-1_9.argosmodel",
+      "kind": "model",
+      "pair": "pl-en",
+      "package_version": "1.9",
+      "bytes": 71696499,
+      "sha256": "07eda9edbd6ae5121df7c1d7bd847030423269b8c5056f1c222495c4a81e1721",
+      "license": "CC-BY-4.0 (model README)"
+    },
+    {
+      "file": "translate-en_tr-1_5.argosmodel",
+      "url": "https://argos-net.com/v1/translate-en_tr-1_5.argosmodel",
+      "kind": "model",
+      "pair": "en-tr",
+      "package_version": "1.5",
+      "bytes": 124742526,
+      "sha256": "2d553a00880a0c21dea5b1c375535659e6bf18c9bf2ce9847c2a2fd2ff50316a",
+      "license": "Argos maintainer MIT-or-CC0 statement; package/corpus rights require redistribution review"
+    },
+    {
+      "file": "translate-tr_en-1_5.argosmodel",
+      "url": "https://argos-net.com/v1/translate-tr_en-1_5.argosmodel",
+      "kind": "model",
+      "pair": "tr-en",
+      "package_version": "1.5",
+      "bytes": 120561223,
+      "sha256": "15217905586561fac843efb5730aabff9a1534d5a9aa3f6ebcc0f9641394ac2d",
+      "license": "Argos maintainer MIT-or-CC0 statement; package/corpus rights require redistribution review"
+    },
+    {
+      "file": "translate-en_uk-1_4.argosmodel",
+      "url": "https://argos-net.com/v1/translate-en_uk-1_4.argosmodel",
+      "kind": "model",
+      "pair": "en-uk",
+      "package_version": "1.4",
+      "bytes": 119889246,
+      "sha256": "037ebc690c0f7287bff01b09006f76707d7089134205a91ef3d823a3c73811e3",
+      "license": "Argos maintainer MIT-or-CC0 statement; package/corpus rights require redistribution review"
+    },
+    {
+      "file": "translate-uk_en-1_9.argosmodel",
+      "url": "https://argos-net.com/v1/translate-uk_en-1_9.argosmodel",
+      "kind": "model",
+      "pair": "uk-en",
+      "package_version": "1.9",
+      "bytes": 76077099,
+      "sha256": "374fd797fd403875c241d018398c77f239b092c6ba5ed7488320838fa1532850",
+      "license": "CC-BY-4.0 (model README)"
+    },
+    {
+      "file": "fonts/NotoSans-Regular.ttf",
+      "url": "https://raw.githubusercontent.com/notofonts/noto-fonts/main/hinted/ttf/NotoSans/NotoSans-Regular.ttf",
+      "kind": "font",
+      "license": "OFL-1.1",
+      "bytes": 569208,
+      "sha256": "b85c38ecea8a7cfb39c24e395a4007474fa5a4fc864f6ee33309eb4948d232d5"
+    },
+    {
+      "file": "fonts/NotoSansArabic-Regular.ttf",
+      "url": "https://raw.githubusercontent.com/notofonts/noto-fonts/main/hinted/ttf/NotoSansArabic/NotoSansArabic-Regular.ttf",
+      "kind": "font",
+      "license": "OFL-1.1",
+      "bytes": 240456,
+      "sha256": "ceea25b464a656dc3b26849bab9356740401af62aedf1bfa8b7f0d9b75925b1b"
+    },
+    {
+      "file": "fonts/NotoSansDevanagari-Regular.ttf",
+      "url": "https://raw.githubusercontent.com/notofonts/noto-fonts/main/hinted/ttf/NotoSansDevanagari/NotoSansDevanagari-Regular.ttf",
+      "kind": "font",
+      "license": "OFL-1.1",
+      "bytes": 219212,
+      "sha256": "385e78e6359a9d88a0f243d53b1209d7548361ba2194e2b9ec779bcaa7e8949d"
+    },
+    {
+      "file": "fonts/OFL-Noto.txt",
+      "url": "https://raw.githubusercontent.com/notofonts/noto-fonts/main/LICENSE",
+      "kind": "font",
+      "license": "OFL-1.1",
+      "bytes": 4377,
+      "sha256": "0dab92d0544f7b233403f14b84a663bdbfa746982eda629e7f4f9ffe1b036feb"
+    },
+    {
+      "file": "fonts/NotoSansCJKjp-Regular.otf",
+      "url": "https://raw.githubusercontent.com/notofonts/noto-cjk/main/Sans/OTF/Japanese/NotoSansCJKjp-Regular.otf",
+      "kind": "font",
+      "license": "OFL-1.1",
+      "bytes": 16467736,
+      "sha256": "68a3fc98800b2a27b371f2fb79991daf3633bd89309d4ffaa6946fd587f375b5"
+    },
+    {
+      "file": "fonts/NotoSansCJKsc-Regular.otf",
+      "url": "https://raw.githubusercontent.com/notofonts/noto-cjk/main/Sans/OTF/SimplifiedChinese/NotoSansCJKsc-Regular.otf",
+      "kind": "font",
+      "license": "OFL-1.1",
+      "bytes": 16437364,
+      "sha256": "2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b"
+    },
+    {
+      "file": "fonts/NotoSansCJKtc-Regular.otf",
+      "url": "https://raw.githubusercontent.com/notofonts/noto-cjk/main/Sans/OTF/TraditionalChinese/NotoSansCJKtc-Regular.otf",
+      "kind": "font",
+      "license": "OFL-1.1",
+      "bytes": 16435884,
+      "sha256": "dce08bd4fd91aa8aa76ed8fea4b694c2dfb8550f67871e326843212ddbeb88b4"
+    },
+    {
+      "file": "fonts/NotoSansCJKkr-Regular.otf",
+      "url": "https://raw.githubusercontent.com/notofonts/noto-cjk/main/Sans/OTF/Korean/NotoSansCJKkr-Regular.otf",
+      "kind": "font",
+      "license": "OFL-1.1",
+      "bytes": 16433112,
+      "sha256": "6bcb2a0703aa137e874fc2dffa85f6c21ba9a67fa329e81b8c801663af7e992a"
+    },
+    {
+      "file": "fonts/OFL-CJK.txt",
+      "url": "https://raw.githubusercontent.com/notofonts/noto-cjk/main/Sans/LICENSE",
+      "kind": "font",
+      "license": "OFL-1.1",
+      "bytes": 4301,
+      "sha256": "6a73f9541c2de74158c0e7cf6b0a58ef774f5a780bf191f2d7ec9cc53efe2bf2"
+    }
+  ],
+  "index_sha256": "a65ae909a97ddc89a01cbf0596932dc6415df9815a11d85fe8240b367926b7b0"
+}

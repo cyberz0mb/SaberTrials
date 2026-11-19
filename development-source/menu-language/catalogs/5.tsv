@@ -1,0 +1,1754 @@
+ is assigned to: 	分配给:
+%d B/s max	%d B/s 最大值(最多)
+%s | default %s | edit range %.4g to %.4g	%s 默认 %s 编辑范围 %.4g 到%.4g
+')!=std::string::npos)){error=	')!=std: string::npos)= error= (中文(简体) ).
++  Advanced video	+ 高级视频
++altattack	+ 攻击
++attack	+攻击
++back	+back 组合键
++forward	+向前键
++left	+左键
++lookdown	+向下浏览
++lookup	组合键
++movedown	+ 移动
++moveleft	+向左移动
++moveright	+重力
++moveup	+移动
++right	+对
++scores	+分数
++speed	+ 速度
++strafe	+strafe 组合键
++use	+ 使用数
++useforce	+ 使用力
+-  Advanced video	- 高级视频
+-2=Desktop|-1=Custom	-2=德士克托普=-1=海关
+.cfg	.cfg 数据
+.jpg	. jpg 语句
+.png	. png (韩语).
+.skin	皮肤
+.tga	.tga (英语).
+/default	/ 默认
+/misc	/微调
+/model.glm	/ model.glm (英语).
+/st_profile.ini	/st_profile.ini (英语).
+10 minutes: reconnect or substitute	10分钟:重新连接或替换
+10 rounds per match	每场比赛10发
+16 bit	16 位点
+1v1 TOURNAMENT	1v1 课程
+22 kHz	22千赫兹
+2v2 / 20 kills	2v2 / 20 人死亡
+32 bit	32 位数
+3v3 / 30 kills	3v3 / 30人被杀
+44 kHz	44千赫兹
+4v4 / 40 kills	4v4/40人死亡
+5 minutes to reconnect	5分钟后重新连接
+5-5 tie: one deciding round	5 -5 平局:一个决定回合
+5v5 / 50 kills	5v5 / 50人被杀
+8-32 players / even entries	8-32 玩家/甚至条目
+: unsupported value.	: 不支持的值。
+; engine directory limit reached	; 引擎目录限制已达到
+; engine range 	; 引擎范围
+< Profile	< 简介
+@MENUS_ABSORB	ABSORB 化学反应
+@MENUS_ACROBATICS	杂技
+@MENUS_ADD_BOT	添加瓶
+@MENUS_ADD_FAVORITE	添加最爱
+@MENUS_ADD_SELECTED_SERVER_TO	将选中的服务器添加到最爱 。
+@MENUS_ADJUSTS_THE_DIFFICULTY	调整游戏中人工智能波茨的难度级别。
+@MENUS_ADV_GAME_RULES	辅助规则
+@MENUS_ALL	全部人员
+@MENUS_ALLOWS_YOU_TO_SELECT	允许您选择您想要玩的服务器的游戏类型 。
+@MENUS_ALLOW_SABER_CHALLENGE	允许 Saber 挑战 :
+@MENUS_AN_ATTACK_DRONE_SIMILAR	探测器无人机\n无人机与绝地训练无人机一样,用来锻炼灯塔技能,猎人盘旋在使用者周围,攻击任何敌人,攻击使用者的射击。 无人机在有限的时间内自动运行,然后在动力耗尽时自毁。
+@MENUS_AN_ELEGANT_WEAPON_FOR	光剑\n光剑是更文明时代的优雅武器,光剑是绝地骑士的首选武器. 光剑是威力强大的能量叶片,可以被握手者用于攻击和防御两种用途.\n\n主要火力 -- -- 刀锋和摇摆式攻击\n二级火力 -- -- 武力助力的沙伯弹\n防御能力 -- -- 防爆器和能源武器射击、挖坑敌人的灯塔攻击\n弹药类型 - 不详
+@MENUS_APPEARANCE	申请
+@MENUS_APPLY	应用
+@MENUS_APPLY_CHANGES	实用变化
+@MENUS_APPLY_CHANGES_AND_JOIN	应用更改并加入正在进行中的游戏.
+@MENUS_APPLY_CHANGES_AND_THEN	应用更改,然后转到主菜单。
+@MENUS_APPLY_PLAYER_SABER	将更改应用到玩家, 并进入 saber 选择 。
+@MENUS_APPLY_POWERS	应用权限
+@MENUS_APPLY_SABER_CHANGES	应用 saber 更改并返回主菜单 。
+@MENUS_APPLY_THESE_CHANGES_OR	应用这些更改还是丢弃?
+@MENUS_ASSIST_ME	帮我
+@MENUS_ATTACK_THE_ENEMY_S_BASE	进攻敌军基地.
+@MENUS_ATTACK_TITLE	攻击
+@MENUS_AUTO_DOWNLOAD	自动下载 :
+@MENUS_AUTO_JOIN	自动加入 :
+@MENUS_AUTO_JOIN_DESC	允许服务器选择您的团队和类 。
+@MENUS_AUTO_MAP_CYCLE	自动映射循环 :
+@MENUS_AUTO_MAP_CYCLE_DESC	每次匹配完成时, 请访问下一张地图 。
+@MENUS_AUTO_TEAM	自动团队
+@MENUS_AWAITING_CHALLENGE	等待挑战... %i
+@MENUS_AWAITING_CONNECTION	正在等待连接...%i
+@MENUS_AWAITING_GAMESTATE	等待游戏状态...
+@MENUS_A_DEDICATED_SERVER_IS	专用服务器是只为他人运行游戏的计算机.
+@MENUS_A_DETONATION_PACK_IS	引爆包\n引爆包本质上是一个带有遥控引爆触发器的小型爆炸装置,包被放置或投掷,用户可以随意引爆,引爆包通常用于伏击敌人或打开密封门.\n\n主火 - 向用户脚下投掷电荷\n二次火灾 -- -- 全部引爆
+@MENUS_BACKTOMAIN	回到主菜单。
+@MENUS_BACKTORULES	返回规则菜单
+@MENUS_BACKUP_ONE_MENU	备份一个菜单。
+@MENUS_BACK_2_PROFILE	回到配置菜单中 。
+@MENUS_BACTA_CANISTERS_ARE_PORTABLE	生物技术\n细菌罐是便携式的、一次性的包装细菌膏剂和紧急护理工具,设计用于现场,细菌罐可用于治愈伤口和在医疗恢复期间恢复活力,任何野战军医都不应该没有这些药剂。
+@MENUS_BACTA_CAPS	巴林银行
+@MENUS_BECOME_A_NEARLY_UNSTOPPABLE	变成一个几乎无法阻止的杂耍家
+@MENUS_BEGIN_PLAYING_THE_DEMO	开始播放所选文件中的演示文稿 。
+@MENUS_BLADE_COLOR	布莱德·科尔
+@MENUS_BLADE_COLOR_DESC	选择您的光剑的颜色 。
+@MENUS_BLASTER_PISTOL	布莱斯特·皮斯托尔(英语:Blaster Pistol)
+@MENUS_BLASTER_PISTOL_DESC	DL-44 重击手枪\n银河系中最常见的武器之一,DL-44重型Blaster手枪的射速较慢,但非常精确.\n\n主火 - 慢射,单发,精度和损坏很大\n二次火灾 -- -- 为增加破坏的爆炸而充电的能量积聚\n弹药类型 - Blaster 包
+@MENUS_BLASTER_RIFLE	布莱斯特·瑞弗尔
+@MENUS_BOTS	炸弹
+@MENUS_BOWCASTER_CAPS	巴巴多斯
+@MENUS_CALL_FOR_VOTES	号召投票
+@MENUS_CANCEL	比利时
+@MENUS_CANCEL_DESC	返回比赛时不更换球队.
+@MENUS_CAPTURE_LIMIT	抓取限制 :
+@MENUS_CAPTURE_THE_FLAG_RULES	抓好旗下游戏规则.
+@MENUS_CAP_AUTO_JOIN	自动加入
+@MENUS_CHANNEL_THE_FORCE_TO	利用原力来治愈你的盟友
+@MENUS_CHARACTER_CREATION	字符评选
+@MENUS_CHOOSE_A_PRE_MADE_ALLOCATION	选择预先设定的强制权力分配 。
+@MENUS_CHOOSE_CLASS	挑战一个类
+@MENUS_CHOOSE_MOVE_DESC	选择移动类型 。
+@MENUS_CHOOSE_RULES	选择游戏规则
+@MENUS_CHOOSE_SOURCE_OF_SERVERS	选择服务器来源 。
+@MENUS_CHOOSE_SPECIES	选择一个物种。
+@MENUS_CHOOSE_THE_PATH_OF_THE	选择光边或暗边的路径 。
+@MENUS_CHOOSE_YOUR_FORCE_TRAINING	选择您的强制训练
+@MENUS_CHOOSE_YOUR_GAME	选择您的游戏 。
+@MENUS_CLASS_CHOICE_DESC	选择一个类。
+@MENUS_CLASS_FORCEPOWERS	强制权力为本类.
+@MENUS_CLASS_INVENTORY	本类存货
+@MENUS_CLASS_WEAPONS	这班的兵器
+@MENUS_CLICK_FOR_HUMAN_BOTS	点击用于人,bots或关闭的插槽.
+@MENUS_CLIENTS_CAN_DOWNLOAD	客户端可以下载新的数据和代码.
+@MENUS_CLIENT_MUST_HAVE_EXACT	客户端和服务器必须拥有完全相同的代码和数据.
+@MENUS_CLOAK_CAPS	偷窥机身
+@MENUS_CLOAK_DESC	隐蔽盾牌\n隐形盾牌让穿戴者看不见他人,允许隐形移动。 然而,由于给设备提供动力所需的巨大能量,隐形盾牌持续了很短的时间。\n\n从DEMP 2 枪直接击中会暂时使盾牌失效,此外,从DEMP 2 的二次火力中击中会永久使盾牌失效.\n\n隐形盾只可用于西格游戏类型.
+@MENUS_COLOR	科洛尔
+@MENUS_COLOR1_DESC	选择刀片颜色。
+@MENUS_COLOR2	第2条
+@MENUS_COLOR2_DESC	选择第二个刀片颜色 。
+@MENUS_COMBAT_RULES	通则
+@MENUS_COMMONLY_REFERRED_TO	电磁脉冲2号炮\n通常称为DEMP 2,这种脉冲步枪主要用于对抗机器人和电气装置. DEMP 2发射的强力离子暴动干扰了电气系统,并且对个人盾牌最为有效. DEMP 2的离子电荷与以往的武器化身不同,它能够破坏活材料.\n\n一级火 - 单发子弹,对人体造成一些伤害,对盾牌造成额外伤害\n二级火力 - 发射近瞬间冲击波,可以击退敌人的子弹\n弹药类型 - 电源电池
+@MENUS_COMPLETE_THE_CURRENT	完成目前的目标。
+@MENUS_CONC_RIFLE	结 论
+@MENUS_CONC_RIFLE_DESC	斯图克脑震荡步枪\n斯图克号发射的震荡爆炸造成直径约4米的爆炸.\n\n一级火 -- -- 单发弹、大爆炸作用、破坏一切、慢射率\n二次射击 -- -- 发射一个爆炸半径较小但在该半径造成更大破坏且后坐力较重的较小射弹射击\n弹药类型 - 金属瓶
+@MENUS_CONFIGURE_GAME_CONTROLS	配置游戏控件 。
+@MENUS_CONFIGURE_GAME_SETTINGS	配置游戏设置 。
+@MENUS_CONNECTING_TO	正在连接到 %s
+@MENUS_CONNECTION_RULES	接 续 规则
+@MENUS_CREATE_AN_AURA_THAT_PROTECTS	创造一种保护身体不受攻击的气息.
+@MENUS_CTF_CAPS	抓起来的泡沫
+@MENUS_CUSTOM_CHARACTER	自定义字符
+@MENUS_DARK_RAGE	暗号:
+@MENUS_DATAPAD	数据盘 :
+@MENUS_DATA_RATE	数据率 :
+@MENUS_DATA_RATE_DESC	互联网上的信息传输连接速度.
+@MENUS_DATA_TRANSFER_RATE_TO	数据传输率到客户端.
+@MENUS_DEDICATED_SERVER	专用服务器 :
+@MENUS_DEFAULT	默认
+@MENUS_DEFEND_OUR_BASE	保卫我们的基地。
+@MENUS_DEFEND_TITLE	防卫
+@MENUS_DELETE_SELECTED_SERVER	从最爱中删除选中的服务器 。
+@MENUS_DEL_FAVORITE	Del. 最爱
+@MENUS_DEMP_2_1	保卫人民民主联盟2
+@MENUS_DESCRIPTION_OF_A_FORCE	描述一种力量的力量。
+@MENUS_DESCRIPTION_OF_A_WEAPON	武器类型的描述。
+@MENUS_DESCRIPTION_OF_ITEM_TYPE	说明物品类型。
+@MENUS_DETPACK	解开
+@MENUS_DISABLE_FORCE	禁用强制 :
+@MENUS_DISABLE_FORCE_INFO	停止在游戏中使用任何武力。
+@MENUS_DISCARD	丢弃
+@MENUS_DISPLAY_SERVER_INFORMATION	显示服务器信息 。
+@MENUS_DISRUPTOR	检察官
+@MENUS_DONE	完成( E)
+@MENUS_DONE_CAPS	完成时间
+@MENUS_DONE_DESC	返回到服务器查找器 。
+@MENUS_DO_NOT_APPLY_CHANGES	不应用更改并返回视频菜单 。
+@MENUS_DRAIN	瑞恩 瑞恩 瑞恩 瑞恩
+@MENUS_DRAIN_THE_FORCE_POWER	把对手的力量 抽出来,增加你的健康。
+@MENUS_DUALSABERS	双撒布
+@MENUS_DUALSABERS_DESC	使用两只单手的剑,只有一种格斗风格.
+@MENUS_DUAL_SABERS	双撒布
+@MENUS_DUEL_CAPS	杜尔
+@MENUS_DUEL_GAMETYPE	决斗游戏规则.
+@MENUS_DUEL_LIMIT	决斗限制 :
+@MENUS_DURATION_5_SECONDS_NAREA	强制速度\n持续时间:可变(10-20秒)\n影响地区:绝地\n效果:绝地加速.\n\n排名1 - 绝地武士移动速度比正常快25%10秒\n排名2 - 绝地武士移动速度比正常快50%,15秒\n排名3 - 绝地武士移动速度比正常快75%20秒
+@MENUS_DURATION_CONTINUOUS_NAREA	强制吸收\n持续时间:\n影响地区:仅限绝地\n效果:保护免受任何直接势力强国的影响。\n\n由力力力对着传动器造成吸收力损伤 并将能量转化为可用的力力.\n\n1级 - 取消1级 部队攻击,减少军衔较高的部队攻击的影响. Return some Force Power.\n军衔2 - 取消军衔2 部队攻击,大大减少军衔较高的部队攻击的影响. Return Great Force Power.\n第3级 - 取消所有武力攻击 回归更大的武力力量
+@MENUS_DURATION_IMMEDIATE_NAREA	强制跳跃\n持续时间: 立即\n影响区域:仅限绝地\n效果:允许绝地武士实现巨大的垂直飞跃.\n\n1级 - 绝地武士可以跳跃到他们正常跳跃高度的两倍.\n排名2 - 绝地武士可以跳跃达到他们正常跳跃高度的4倍.\n排名3 - 绝地可以跳跃到他们正常跳跃高度的8倍.
+@MENUS_DURATION_INSTANTANEOUS	强制推\n持续时间: 即时效应\n有效区域:物体或人员\n效果:允许绝地将物体从自己身上推开,使导弹偏转,并防御力量Grip和力量Push的攻击.\n\n排名1 - 绝地武士利用原力推动特定敌人或目标聚焦.\n排名2 - 绝地武士利用原力在有限的弧内击退多个敌人或物体.\n排名3 - 绝地可以用足够的力量将敌人推向固体表面或从窗台上推出来进行破坏来击退多个敌人.
+@MENUS_DURATION_INSTANTANEOUS_NAREA	强制网格\n会期: 即时\n影响领域:仅限活人\n效果:让绝地能窒息或收缩活人的器官.\n\n排名1 - 受影响的敌人被扣住,没有受损,但无法移动5秒。绝地必须保持静止状态。\n2级 — 敌方同样受到1级的影响,但握力会破坏和解除敌人,而长时间的握力焦点. 绝地必须保持静止状态.\n3级 - 敌方同样受到2级的影响,但绝地可以自由行动,将敌人打碎,打成墙壁和其他障碍物,或者在仍进行窒息损伤的同时,利用敌人作为盾牌.
+@MENUS_DURATION_VARIABLE_10	强制 Rage\n持续时间:可变(10-30秒)\n影响区: 仅限黑暗绝地\n效果:绝地在一定的时间内进入疯狂的速度,但必须在之后恢复。 活动时排出健康,在持续时间或健康达到1时后失效。\n\n暗雷奇:火速33%,移动100%,减少50%的损伤,挥发者不能死亡(健康停留在1岁)。\n暗光回收:火力慢50%,速度75%\n\n排名1 - Rage 10秒, 10秒恢复\n排名2 - Rage 20秒,10秒恢复\n排名3 - 30秒的Rage,10秒的恢复
+@MENUS_DURATION_VARIABLE_20	心智诡计\n持续时间: 变量(5-15秒)\n效果区域: 其他玩家\n效果:允许绝地武士让自己对其他玩家视而不见.\n\n1级 - 一个绝地武士在5秒内对单一目标敌人隐形.\n排名2 - 绝地武士在中距离的前方弧内对敌人隐形10秒.\n排名3 - 绝地武士在15秒的中距离内对所有敌人都是看不见的.
+@MENUS_DURATION_VARIABLE_NAREA	部队保护\n持续时间: 变量\n影响地区:仅限绝地\n效果:保护身体不受攻击.\n\n身体攻击对绝地的伤害来自力量力量池,而不是健康分数.\n\n一级-50%的损坏被封锁,100%从部队集合中清除,最多100个损坏\n排名2-75% 损害被阻断,50%从部队集合中清除,最多200项损害\n3级 - 87.5% 损害被阻断,25%从部队集合中清除,最多400项损害
+@MENUS_EFFECT_JEDI_ALLIES_NEFFECT	团队能量化\n持续时间: 即时效应\n影响地区:绝地盟军\n效果:绝地拥有向盟国注入力量能量的能力.\n\n力量团队Energize允许绝地武士在身体的一定半径内将一定的能量还原给盟友,绝地武士可以将50个力量点还给一个盟友,33个力量点还给两个盟友或25个力量点还给3个或3个以上盟友.\n\n等级 1 - 正常范围\n排名2 - 正常范围的1.5倍\n排名 3 - 双正常范围
+@MENUS_EFFECT_NAREA_OF_EFFECT	强制语气\n持续时间: 即时效应\n影响领域:绝地视野\n效果:允许绝地大而广的视野.\n\n强制视线可以让绝地通过一个容易看见的发光气来包围他们,从而清晰地看到所有敌人,不管他们有何种照明条件。 强制视线还可以让绝地通过对抗绝地心灵特技力的力量。 在最高水平的强制视线中,绝地发展出第六种感官,使他可以躲避狙击手的射击。\n\n排名 1 - 参见玩家的气息突出显示,以正常时间长度为准.\n排名2 - 在视野中和通过墙壁中看到玩家的气息,并有双重时间期限.\n排名 3 - 在任何具有三长时段的射程中看到玩家的气息并穿透墙壁,玩家可以自动躲过这个关卡的狙击手射击.
+@MENUS_ENABLE_VOTING	启用表决 :
+@MENUS_ENDGAME_RULES	结束游戏规则
+@MENUS_ENTER_IP_ADDRESS	输入 IP 地址 :
+@MENUS_ENTER_IP_ADDRESS_OF_FAVORITE	输入最爱服务器的 IP 地址 。
+@MENUS_ENTER_PASSWORD	ENTER PASSWORD (英语).
+@MENUS_ENTER_THE_NAME_FOR_YOUR	输入服务器的名称 。
+@MENUS_ENTER_THE_TITLE_FOR_YOUR	输入您强制模板的标题( 仅是空白) 。
+@MENUS_ERROR	错误 :
+@MENUS_ESTABLISH_THE_NUMBER	赢得比赛所需的杀机数量.
+@MENUS_EVEN_TEAMS	甚至团队:
+@MENUS_EWEB_CAPS	电子WEB
+@MENUS_EWEB_DESC	电子网络\nE-Web是功率三脚架激光炮,可以部署在战斗场上,帮助建立强大的防御阵地.\n\nE-Web只可用于Siege游戏类型.
+@MENUS_EXIT_TO_MAIN_MENU	退出主菜单 。
+@MENUS_FASTEST_CLIENT_ALLOWED	最快速的客户端允许连接 。
+@MENUS_FAVORITE_SERVER_INFO	最喜欢的服务信息
+@MENUS_FFA_CAPS	人人享受自由
+@MENUS_FILENAME	文件名 :
+@MENUS_FILTER_FOR_SPECIFIC_GAME	设置特定游戏类型的过滤器 。
+@MENUS_FIND_PLAYER	查找玩家
+@MENUS_FINISHED_INPUTTING_INFO	输入信息完成 。
+@MENUS_FLECHETTE_1	飞翔
+@MENUS_FOLLOW_ME	跟我来
+@MENUS_FORCEDESC_DARK	暗处
+@MENUS_FORCEDESC_LIGHT	光线
+@MENUS_FORCE_ABSORB	吸附剂:
+@MENUS_FORCE_DRAIN	排水量:
+@MENUS_FORCE_GRIP	格莱普:
+@MENUS_FORCE_HEAL	治疗:
+@MENUS_FORCE_JUMP	跳跃 :
+@MENUS_FORCE_LIGHTNING	闪电 :
+@MENUS_FORCE_MASTERY	强制大师( F) :
+@MENUS_FORCE_MASTERY_INFO	定义可以分配给强制权力的点数.
+@MENUS_FORCE_MINDTRICK	脑电图:
+@MENUS_FORCE_POWERS_TITLE	强制权力 :
+@MENUS_FORCE_POWERS_TITLE_DESC	启用强力力,禁用强力,或只启用跳跃,推力,拉力,和Saber Throw.
+@MENUS_FORCE_PROTECT	保护:
+@MENUS_FORCE_PULL	拉 :
+@MENUS_FORCE_PUSH	推动 :
+@MENUS_FORCE_RULES	武力规则。
+@MENUS_FORCE_SIDE	强制侧 :
+@MENUS_FORCE_SIGHT	见者:
+@MENUS_FORCE_SPEED	速度 :
+@MENUS_FORCE_TEAM_HEAL	治疗小组:
+@MENUS_FORCE_TEAM_REPLENISH	团队能量:
+@MENUS_FORCE_TEMPLATES	强制模板
+@MENUS_FREE_FOR_ALL_GAME_RULES	人人免费游戏规则.
+@MENUS_FRIENDLY_FIRE	友爱火:
+@MENUS_GAME	游戏 :
+@MENUS_GAME_RULES	游戏规则.
+@MENUS_GAME_TYPE	类型 :
+@MENUS_GENERAL_RULES	一般规则
+@MENUS_GET_ENEMY_FLAG_BACK_TO	把敌军的旗子放回基地
+@MENUS_GET_NEW_LIST	获取新列表
+@MENUS_GET_OUR_FLAG_BACK	把旗子拿回来
+@MENUS_GET_SERVER_INFO	服务器信息
+@MENUS_GET_UPDATED_SERVER_LIST	获取更新的服务器列表 。
+@MENUS_GO_BACK_TO_STANDARD_SETTINGS	返回到标准设置中 。
+@MENUS_GO_TO_MAIN_MENU	去主菜单?
+@MENUS_GRIP	GRIP (爱尔兰语).
+@MENUS_GUARD_OUR_FLAG_CARRIER	守卫我们的旗舰
+@MENUS_HEAD	总部
+@MENUS_HEAL	卫生
+@MENUS_HEAL_YOUR_BODY_WITH_THE	将身体与原力同治.
+@MENUS_HILT1	高级
+@MENUS_HILT1_DESC	选择一个脚印。
+@MENUS_HILT2	高尔夫2号
+@MENUS_HILT2_DESC	选择第二个脚印。
+@MENUS_IMMOBILIZE_OPPONENTS	将对手动员起来 痛苦地控制着死亡
+@MENUS_INCLUDE_EMPTY_SERVERS	在列表中包含空服务器 。
+@MENUS_INCLUDE_FULL_SERVERS	在列表中包含完整的服务器 。
+@MENUS_INPUT_IP_ADDRESS_OF_SERVER	输入服务器的IP地址 。
+@MENUS_INPUT_PASSWORD	输入密码 。
+@MENUS_INPUT_PASSWORD_1	输入密码
+@MENUS_INPUT_PLAYER_NAME	输入玩家名称 。
+@MENUS_INSTANTANEOUS_EFFECT_NAREA	强制拉动\n持续时间: 即时效应\n有效区域:物体或人员\n效果:让绝地用解除对手武装的机会把敌人拉向自己,它也防御力量拉攻击.\n\n排名1 - 绝地武士利用原力牵引一个特定的敌人聚焦.\n排名2 - 绝地武士利用原力在有限的弧内拉出多个敌人.\n排名3 - 绝地能用足够力量将目标近距离击落,从而拉动多个敌人.
+@MENUS_INTERNET	互联网
+@MENUS_ISDN	ISDN (印度尼西亚语)
+@MENUS_ITEM_RULES	项目规则。
+@MENUS_JETPACK_CAPS	贾跃亭
+@MENUS_JETPACK_DESC	喷气包装\n喷气包允许佩戴者飞行时间短,使其具有比其他人的战术优势,如果使用者不发射火箭,就会慢慢失去高度.\n\n喷气式包只可用于西格游戏类型.\n\n(注:要激活喷气套件,跳跃,然后在空中按下“使用”键。持有“跳跃”将允许用户获得高度,而持有“跳跃”将降低高度。 )
+@MENUS_JOIN	加入( E)
+@MENUS_JOIN_A_TEAM	加入一个团队
+@MENUS_JOIN_CAPS	联合
+@MENUS_JOIN_CHOSEN_SERVER	加入选中的服务器 。
+@MENUS_JOIN_GAME	加入游戏
+@MENUS_JOIN_PLAYER_DESC	与此玩家加入服务器 。
+@MENUS_JOIN_TEAM_DESC	加入这个团队。
+@MENUS_JUMP	JUMP 预览
+@MENUS_KILL_LIMIT	杀限制 :
+@MENUS_LAN	局域网
+@MENUS_LEAP_TO_AMAZING_HEIGHTS	通过握住跳动按钮,滑到惊人的高处.
+@MENUS_LEGS	法规
+@MENUS_LIGHTNING	灯光
+@MENUS_LIGHTSABER_CAPS	灯光浴
+@MENUS_LIGHTSABER_CREATION	灯光节
+@MENUS_LIGHTSABER_ONLY	仅限光剑 :
+@MENUS_LIGHT_DARK_INFO	强迫红队使用暗面力量的力量,蓝色使用浅面力量.
+@MENUS_LIGHT_DARK_TEAMS	浅/暗小组:
+@MENUS_LIMITED	有限
+@MENUS_LOADING_MAPNAME	正在装入... %s
+@MENUS_MAIN_MENU	主菜单
+@MENUS_MAKE_THESE_CHANGES_TO	改变你的性格 力量能力。
+@MENUS_MAP_LISTING	地图列表
+@MENUS_MATCH	重新开始火柴吗?
+@MENUS_MATCHING_NAMES	匹配的名称会被覆盖 。
+@MENUS_MAXIMUM_PING	最大键 :
+@MENUS_MAXIMUM_PLAYERS	最大玩家数 :
+@MENUS_MAX_RATE	最大比率 :
+@MENUS_MEDPAC	MEDPAC( 中美洲)
+@MENUS_MERRSONN	迈尔-森
+@MENUS_MIND_TRICK	头脑的曲折
+@MENUS_MINIMUM_PING	最小键 :
+@MENUS_MINIMUM_TIME_ALLOWED	连接尝试之间允许的最小时间 。
+@MENUS_MISSION	任务 :
+@MENUS_MISSION_OBJECTIVES	特派团的目标
+@MENUS_MOVE_AT_AN_ACCELERATED	以加速速度移动。
+@MENUS_MOVE_DESC2	单击可查看移动描述 。
+@MENUS_MOVE_RULES	调度规则。
+@MENUS_MOVE_TYPES	移动类型
+@MENUS_MUST_ACQUIRE_A_MINIMUM	在Saber攻击中必须获得最低一级军衔才能获得光锋.
+@MENUS_NAME	名称
+@MENUS_NAME1	名称 :
+@MENUS_NAME_TITLE	名称 :
+@MENUS_NEW_FAVORITE	新最爱
+@MENUS_NO	没有
+@MENUS_NO_LIGHTSABER	无光剑
+@MENUS_OBJECTIVE_1	目标1
+@MENUS_OBJECTIVE_2	目标2
+@MENUS_OBJECTIVE_3	目标3
+@MENUS_OBJECTIVE_4	目标4
+@MENUS_OBJECTIVE_5	目标5
+@MENUS_OBJECTIVE_6	目标6
+@MENUS_OBJECTIVE_7	目标7
+@MENUS_OBJECTIVE_8	目标8
+@MENUS_OBJECTIVE_COMPLETED	已完成。
+@MENUS_OF_EFFECT_JEDI_ALLIES_NEFFECT	其他疗养\n持续时间: 即时效应\n影响地区:绝地盟国\n效果:绝地武士在受伤后有能力治愈盟友.\n\n强制治疗他方允许绝地在身体的一定半径内恢复其盟友一定的健康. 绝地可以将50个健康恢复到一个盟友,\n33健康为2个盟友,25个健康为3个或3个以上盟友.\n\n等级 1 - 正常范围\n排名2 - 正常范围的1.5倍\n排名 3 - 双正常范围
+@MENUS_OF_EFFECT_JEDI_ONLY_NEFFECT	强制治疗\n持续时间: 即时效应\n影响区域:仅限绝地\n效果:绝地武士受伤后痊愈.\n\n排名1 - 绝地武士立即恢复了高达5个健康.\n排名2 - 绝地武士立即恢复了10个健康.\n3级 绝地武士立即恢复了25个健康
+@MENUS_OF_EFFECT_LIVING_PERSONS	强制闪电\n持续时间: 变量\n影响领域:仅限活人\n效果:允许绝地对敌人发动毁灭性的电击.\n\n排名1 - 绝地神发射一个发射前方发射的螺栓,进行即时损伤.\n排名2 - 绝地可以维持原力闪电号进行持续的前方攻击.\n3级 - 绝地武士在一个大前方弧中 产生了持续的电扇 破坏了他们面前的一切
+@MENUS_OKAY	还好
+@MENUS_ONLY_HUMANS	只有人类才能被围攻
+@MENUS_PASSWORD	密码
+@MENUS_PASSWORD_1	密码 :
+@MENUS_PERSONAL_SHIELD_ARMOR	人神盾局(阿摩尔)
+@MENUS_PLAYERS	最小波兹/层数:
+@MENUS_PLAYERS_INFO	如果服务器的活跃载人玩家数量少于此数,则添加 bots 。
+@MENUS_POINTS_REMAINING	剩余点 :
+@MENUS_POWER	电源 :
+@MENUS_POWERDUEL_CAPS	鲍尔·杜尔
+@MENUS_POWERDUEL_GAME_RULES	权力决斗游戏规则.
+@MENUS_PREVENT_THE_ENEMY_FROM	防止敌人完成他们目前的目标.
+@MENUS_PRIMARY_OBJECTIVES	主要目标
+@MENUS_PROFILE_DESC	配置字符设置 。
+@MENUS_PROGRAM	退出程序吗?
+@MENUS_PROTECT	保护
+@MENUS_PROTECT_AGAINST_FORCE	保护自己免受武力攻击并从中获取力量.
+@MENUS_PULL	脉冲
+@MENUS_PULL_YOUR_FOES_TO_YOU	拉你的敌人给你。
+@MENUS_PURE_SERVER	纯服务器 :
+@MENUS_PUSH	推举
+@MENUS_PUSH_YOUR_FOES_AWAY_AND	把敌人赶走 击退射弹
+@MENUS_QUIT_PROGRAM	退出程序
+@MENUS_RAGE_1	RAGE (英语).
+@MENUS_RECONNECT_LIMIT	重连接限制 :
+@MENUS_REFRESH_LIST	刷新列表
+@MENUS_REFRESH_SERVER_LIST	刷新服务器列表 。
+@MENUS_REGROUP	复组.
+@MENUS_RENDER_YOURSELF_INVISIBLE	将自己隐形到选定的目标。
+@MENUS_REPEATER	副 员
+@MENUS_REPLY_TITLE	答复
+@MENUS_REQUEST_TITLE	请求
+@MENUS_RESTART_MATCH	重新开始匹配
+@MENUS_RETURN_PREVIOUS	返回上一个菜单 。
+@MENUS_SABERLOCKING	允许 Saber 锁定 :
+@MENUS_SABERLOCKING_DESC	允许玩家锁定sabers.
+@MENUS_SABERSTAFF	双人手Saber
+@MENUS_SABERSTAFF_DESC	使用一双手的剑,只有一种格斗风格.
+@MENUS_SABER_ATTACK	赛博攻击:
+@MENUS_SABER_CHALLENGE_INFO	玩家可以向另一个私人灯塔决斗挑战.
+@MENUS_SABER_DEFEND	赛博保卫:
+@MENUS_SABER_HILTS_DESC	选择您的剑拔弩张 。
+@MENUS_SABER_ONLY_INFO	所有玩家手持灯具,所有枪都取走.
+@MENUS_SABER_STAFF	萨比尔工作人员
+@MENUS_SABER_THROW	赛博投:
+@MENUS_SABER_TYPE	盐类
+@MENUS_SABER_TYPE_DESC	选择您的剑形文字类型 。
+@MENUS_SAVE_CURRENT_FORCE_SETUP	将当前力量设置保存为单独的模板 。
+@MENUS_SAVE_FILE	保存文件
+@MENUS_SEARCHING	正在搜索%d/%d...
+@MENUS_SEARCH_CAPS	搜索
+@MENUS_SEARCH_CURRENT_SERVER	为朋友搜索当前服务器列表 。
+@MENUS_SEARCH_DESC	搜索此玩家的所有服务器 。
+@MENUS_SECONDARY_OBJECTIVES	次级目标
+@MENUS_SEEKER_CAPS	偷车狂
+@MENUS_SEE_ENEMIES_AT_ALL_TIMES	随时都能看到敌人 甚至躲避狙击手的枪声
+@MENUS_SELECT_BOTS	选择批次
+@MENUS_SELECT_BOTS_DESC	选择要玩的自定义 bots
+@MENUS_SELECT_HEAD	选择头部样式。
+@MENUS_SELECT_LEGS	选择一条腿的样式。
+@MENUS_SELECT_TORSO	选择躯干样式。
+@MENUS_SENTRY_CAPS	塞内加尔
+@MENUS_SERVERS_FOUNDWITH	%d 服务器 %s 与玩家 %s
+@MENUS_SERVER_INFORMATION	服务器信息
+@MENUS_SERVER_NAME_1	服务器名称 :
+@MENUS_SERVER_RULES	规则
+@MENUS_SETS_PASSWORD_FOR_YOUR	为您的服务器设置密码。 玩家输入密码后可以加入 。
+@MENUS_SETS_THE_MAXIMUM_NUMBER	设置允许加入服务器的最大玩家数量。
+@MENUS_SET_FILTER_FOR_SPECIFIC	设置特定游戏模式的过滤器 。
+@MENUS_SET_TO_ON_TO_HAVE_PLAYERS	强迫玩家加入而非停留在旁观者模式中.
+@MENUS_SHOW_GAME_CREDITS	显示游戏信用值 。
+@MENUS_SIEGE_ASSAULT	屁眼(英语)
+@MENUS_SIEGE_CAPS	示 举
+@MENUS_SIEGE_DEMOLITIONS	驱 逐
+@MENUS_SIEGE_GAME_RULES	围棋游戏规则.
+@MENUS_SIEGE_GAME_RULES_DESC	围攻让两支球队在一次定时对决中互相夹击,其中一支球队在进攻中,另一支球队在防御中相互夹击. 两支球队都有目标,但进攻队必须完成首要目标才能获胜.\n\n每个团队由多个角色组成,每个角色都有各自的特长,每个角色都可以用自己独特的技能组合来贡献.\n\n一种可选的服务器规则允许团队切换,在此选项允许的情况下,团队在第一次比赛后切换,如果进攻小组已经赢得了第一次比赛,新的进攻小组有与第一小组胜出的时间相等的时间限制,如果进攻小组在较短的时间内完成所有目标,他们就赢得了比赛.\n\n温条件 - 关闭\n在时间耗尽之前完成所有主要目标。\n\n温条件 - 防御\n防止犯罪在时间耗尽前完成所有主要目标。\n完成可能妨碍进攻小组完成任何主要目标的目标。
+@MENUS_SIEGE_HEAVY_WEAPS	(HEAVY WEAPS) (HEAVY WEAPS) (HEAVY WEAPES) (英语)(HEAVY WEAPES) (英语).
+@MENUS_SIEGE_JEDI	捷迪尔
+@MENUS_SIEGE_SCOUT	科鲁特
+@MENUS_SIEGE_TECH	教学
+@MENUS_SIGHT	视线
+@MENUS_SINGLESABER	标准 Saber
+@MENUS_SINGLESABER_DESC	使用单手剑,选择3种格斗风格.
+@MENUS_SKILL	技能
+@MENUS_SKILL1	技能 :
+@MENUS_SLOWEST_CLIENT_ALLOWED	允许连接的最慢客户端 。
+@MENUS_SORT_BY_GAME_TYPE	按游戏类型排序 。
+@MENUS_SORT_BY_MAP_NAME	按地图名称排序 。
+@MENUS_SORT_BY_NUMBER_OF_PLAYERS	按玩家数量排序 。
+@MENUS_SORT_BY_PING_TIME	按时间排序
+@MENUS_SORT_BY_SERVER_NAME	按服务器名排序 。
+@MENUS_SOURCE	资料来源:
+@MENUS_SPECIES	具体内容
+@MENUS_SPECTATE	光谱
+@MENUS_SPECTATOR	观察者
+@MENUS_SPEED	预设
+@MENUS_SPEND_YOUR_POINTS_BY	点击下面的“原力权力”将您的点数花掉。
+@MENUS_SPOTTED_TITLE	被监视
+@MENUS_STARTING_UP	开始...
+@MENUS_START_PLAYING_NOW	开始玩吧!
+@MENUS_START_SERVER	启动服务器 。
+@MENUS_STATIONARY_SHIELD_CAPS	军需部
+@MENUS_TACTICS_TITLE	战术
+@MENUS_TEAM	团队 :
+@MENUS_TEAM_BLUE	团队BLUE
+@MENUS_TEAM_HEAL	医疗队
+@MENUS_TEAM_POWER_1	团队能源
+@MENUS_TEAM_RED	团队RED
+@MENUS_TEAM_SWITCHING	团队切换 :
+@MENUS_TEAM_SWITCHING_DESC	切换游戏模式,其中各团队竞相在最少的时间完成地图.
+@MENUS_THERMAL_DETONATOR	主题代号
+@MENUS_THE_FORCE_TO_BOOST_THE	利用原力来增强你的盟友的力量
+@MENUS_THE_GAME_OF_DUEL_IS_ALSO	决斗将两名战斗人员困在一个封闭的小竞技场与灯塔手展开战斗。 两位竞争者都以完全健康、他们的剑塔手和一把爆破手枪(服务器选项)为起点,必须相互对峙。\n\n任何数量的球员都可以参加Duel,但任何特定时间都只有两人在竞技场上,剩下的球员观察直到比赛完成,当一名球员被淘汰时,输家被置于观察者队列的尾部,接下来排队的人被带入与胜者对决.\n\n双方竞争对手再次以健康为重,继续对抗新对手,积分直至被淘汰或达到比赛极限.\n\n弯曲\n消除敌人:+1 点\n清除自己: +1 给对手\n\n比赛结束后得分最高的球员获胜.
+@MENUS_THE_MEDPAC_IS_A_SMALL	梅达帕克\n甲板是小型标准野外医疗包,一旦获得,甲板立即恢复了失去的健康,并治愈受损的组织.
+@MENUS_THE_PERSONAL_SHIELD_IS	个人盾牌( Armor)\n个人盾牌是一种带状挂载装置,在佩戴者周围投射保护力场,随着盾牌的损坏,其保护等级降低,一旦盾牌的损坏达到与它的评级相当的水平,盾牌就停止使用直至可以充电. 盾牌吸收了大多数攻击性损坏类型,但不保护佩戴者免受掉落或压碎的损害. 个人盾牌由盾牌电池补充.
+@MENUS_THE_PLX_2M_IS_AN_EXTREMELY	Merr-Sonn PLX-2M 便携式导弹系统\nPLX-2M是发射阿拉基德3T3导弹的极其强大的武器,PLX-2M的爆炸力极强,使得在近距离内盲目射击是危险的,但作为"智能"追踪武器使用时却极其有效.\n\n主火 -- -- 发射单枚前射式爆炸性导弹\n二级火 - 发射一枚跟踪已获取和锁定目标的“智能”导弹\n弹药类型 - 火箭
+@MENUS_THE_PRIMARY_WEAPON_OF	E-11 Blaster 步枪\n帝国部队的主要武器E-11是坚固而致命的爆破步枪,尽管体积较小,但仍能造成巨大破坏. E-11的紧凑设计使得它易于携带和隐藏.\n\n主火 -- -- 慢速、中度准确和大损毁的单发子弹\n二级火 -- -- 快速、爆破的火力精度低,射击面积扩大\n弹药类型 - Blaster 包
+@MENUS_THE_THERMAL_DETONATOR	热引爆器\n热雷管是一种半径损坏的榴弹,它释放出能够使其周围所有物质分解的热能。\n\n主火 -- -- 短时间后手榴弹爆炸\n二次火灾 -- -- 接触时手榴弹爆炸
+@MENUS_THIS_ALLOWS_PLAYERS_TO	这使得玩家可以要求投票来踢球员,更改地图等.
+@MENUS_THIS_ARCHAIC_LOOKING	沃基·鲍卡斯特(英语:Wookie Bowcaster)\n这种古老的武器燃烧着充满能量的金属螺栓。 弓箭手能够造成令人难以置信的伤害,需要巨大的体力才能开火。 在Wookie家居世界之外出售的大多数弓箭手都配备了自闭动作,让身体较弱的生物能够发射它们。\n\n主火 - 多发子弹充电能量积聚\n二次射击 -- -- 极准确、可弹弓的单发射击\n弹药类型 - 电源电池
+@MENUS_THIS_DEADLY_WEAPON_IS	便携式攻击哨兵\n这种致命武器大致相当于一个大背包的大小,但不要让它的大小愚弄你. 武器一旦激活,就会脱落并设定自动瞄准任何敌人的威胁. 哨兵会加速排出电池寿命,一旦部署,就无法恢复到原来的可移植状态.
+@MENUS_THIS_DESTRUCTIVE_PROJECTILE	帝国重中继器与震荡发射器\n这种毁灭性的弹射武器极其致命,发射的金属子弹流很快. 帝国部队使用重中继器致命的压制性火力和震荡发射器进行人群控制,并用重火向上扩散.\n面积大。\n\n主火 -- -- 完全自动投射火\n二次射击 -- -- 单发子弹,震荡爆炸性子弹\n弹药类型 - 金属螺栓
+@MENUS_THIS_GAME_IS_BEST_SUMMED	人人自由(Free For All)最好概括为每个人为自己,玩家通过消灭其他玩家来得分,任何人都不能被视为盟友.\n\n除非在服务器上另有说明,否则武器和设备是在外地购置的。有些选项包括是否允许部队权力和部队最高级别。\n\n弯曲\n消除敌人:+1 点\n清除自己: - 1 点\n\n比赛结束后得分最高的玩家赢得比赛.
+@MENUS_THIS_GAME_PITS_TWO_JEDI	Team Free For All在争夺优势的战斗中让两支绝地武士队互相夹击,每名球员都得分消灭对手,但同一队的球员可以合作消灭更坚硬的敌人,一队中的所有球员都把得分组合在一起,以获得一个球队的得分.\n\n除非在服务器上另有说明,否则武器和设备是在外地购置的。有些选项包括是否允许部队权力和部队最高级别。\n\n弯曲\n消灭敌方队员:+1分\n淘汰自己或队员: -1分\n\n回合结束后得分最高的球队赢得比赛.
+@MENUS_THIS_IS_THE_NUMBER_OF	这是一面旗帜必须抓起来才能赢得比赛的次数.
+@MENUS_THIS_NEFARIOUS_WEAPON	Tenloss DXR-6 干扰步枪\n这种邪恶的武器在分子层面影响物质,轻易地撕裂活物,由于武器具有不人道的性质,DXR-6在整个银河系被禁用,一般只有散乱的机器人和雷姆南特部队使用.\n\n主火 -- -- 单发射击,射速慢,即时攻击\n二级火灾 -- -- 范围模式:必须先装药的单发子弹,造成更大的破坏,并消耗高能量\n弹药类型 - 电源电池
+@MENUS_THIS_OPTION_RE_BALANCES	此选项将阻止球员加入一个球队, 如果它会打破球队的平衡的话.
+@MENUS_THIS_STATIONARY_ENERGY	固定盾牌\n这个固定的能量场可以在任何地点投放,此时它部署一个能够挡住敌人火力的大型平面盾牌。盟军可以穿过盾牌,但敌人不能。偏转盾牌在耗尽其电力供应或遭受一定破坏后会消失。
+@MENUS_THIS_VALUE_ADJUSTS_THE	比赛的分钟数会持续。
+@MENUS_THROW_YOUR_LIGHTSABER	把灯光扔到遥远的目标上
+@MENUS_TIME_LIMIT	时间限制 :
+@MENUS_TORSO	托尔索
+@MENUS_TRIP_MINE	三、地雷
+@MENUS_TRIP_MINES_CONSIST_OF	地雷\n三角地雷由固定在形状爆炸弹壳上的束状投射器组成,激光在布设地雷时激活,并将束从电荷延伸至其路径相交的最近表面。如果梁断裂或电荷被击中,地雷就会引爆,并对射程范围内的任何物体造成半径损害。\n\n主火 -- -- 一旦放置,如果梁梁断裂或地雷被摧毁,则引爆。\n二次火 -- -- 一旦放置,如果有人靠近它,或地雷被摧毁,就会引爆。没有梁,也不会为用户引爆。
+@MENUS_UNAPPLIED_VIDEO_CHANGES	未应用的视频更改
+@MENUS_UNLEASH_DEADLY_ELECTRICAL	解开致命的电攻击你的敌人。
+@MENUS_UPDATE_ADVANCED_SERVER	更新高级服务器设置 。
+@MENUS_USE_MORE_POWERFUL_LIGHTSABER	使用更强大的光栅攻击。 (必须拥有剑)
+@MENUS_USE_THE_LIGHTSABER_TO	用灯塔来阻断沙伯的攻击和射弹
+@MENUS_VALUE_ADJUSTS_THE_TOTAL	赢得比赛所需的成功回合数(决赛).
+@MENUS_VARIABLE_NAREA_OF_EFFECT	强制排水\n持续时间: 变量\n影响领域:仅限活人\n效果:排水力强,用它来补充生命.\n\n排名1 - 发射一个向前射击的单螺栓,每秒排水10个力点,并治愈这个量.\n排名2 - 未发炮,连续攻击,每秒消耗15个力点.\n排名3 - Emanates 一个持续风扇在一个大前方弧, 排尽任何目标在他面前 20  Force points每秒。
+@MENUS_VC_ATT	1. 攻击
+@MENUS_VC_ATT_POSITION	3. 攻击位置
+@MENUS_VC_ATT_PRIMARY	1. 攻击首要目标
+@MENUS_VC_ATT_SECONDARY	2. 攻击次要目标
+@MENUS_VC_CANCEL	取消( E)
+@MENUS_VC_DEF	2. 辩护
+@MENUS_VC_DEF_GUNS	4. 枪械位置
+@MENUS_VC_DEF_POSITION	3. 防御阵地
+@MENUS_VC_DEF_PRIMARY	1. 捍卫主要目标
+@MENUS_VC_DEF_SECONDARY	2. 捍卫次要目标
+@MENUS_VC_REPLY	4. 答复
+@MENUS_VC_REPLY_COMING	3. 即将到来
+@MENUS_VC_REPLY_GO	4. 辩护
+@MENUS_VC_REPLY_NO	2. 负数
+@MENUS_VC_REPLY_STAY	5. 国防
+@MENUS_VC_REPLY_YES	1. 罗杰
+@MENUS_VC_REQ	3. 请求
+@MENUS_VC_REQ_ASSIST	1. 援助
+@MENUS_VC_REQ_DEMO	6. 拆除
+@MENUS_VC_REQ_HVY	5. 重型武器
+@MENUS_VC_REQ_MEDIC	2. 医疗
+@MENUS_VC_REQ_SUPPLY	3. 用品
+@MENUS_VC_REQ_TECH	4. 技术
+@MENUS_VC_SPOT	5. 现场观察
+@MENUS_VC_SPOT_DEF	1. 辩护
+@MENUS_VC_SPOT_EMPLACED	4. 安置武器
+@MENUS_VC_SPOT_SNIPER	3. 狙击手
+@MENUS_VC_SPOT_TROOP	2. 部队
+@MENUS_VC_TACTIC	6. 战术
+@MENUS_VC_TAC_COVER	1. 盖 盖
+@MENUS_VC_TAC_FALLBACK	4. 撤退
+@MENUS_VC_TAC_FOLLOW	3. 跟踪
+@MENUS_VC_TAC_HOLD	2. 持有
+@MENUS_VC_TAC_SPLIT	6. 分开
+@MENUS_VC_TAC_TOGETHER	5. 团结在一起
+@MENUS_VC_TITLE	声音聊天
+@MENUS_VIEW_EMPTY	查看空 :
+@MENUS_VIEW_FULL	查看全数 :
+@MENUS_WATCH_DESC	看着任务
+@MENUS_WEAPON_RULES	武器规则。
+@MENUS_WHEN_ON_IT_MEANS_TEAMMATES	上场时,队友可以使用武器和武力互相伤害和杀害.\n
+@MENUS_WIDELY_USED_BY_THE_CORPORATE	戈兰武器FC1 Flechette武器\n被企业部门管理局的警察大队广泛使用,FC1型火炮以广泛模式喷发金属碎片,该武器旨在近距离击中多个目标,但必须非常小心,避免雷管损坏.\n\n主火 -- -- 单发、散射\n二次射击 -- -- 双重爆炸性弹片装药\n弹药类型 - 金属瓶
+@MENUS_YES	对
+@MENUS_YOU_DECIDE	你来决定
+@MENUS_YOU_HAVE_MADE_CHANGES	您已经更改了视频设置
+@MENUS__REQUIRES_SABER_ATTACK	(要求Saber攻击1)
+@MP_INGAME_GETTINGINFOFORSERVERS	获取服务器信息...
+@MP_INGAME_JOIN_DOUBLE	杜伯尔
+@MP_INGAME_JOIN_SINGLE	单身
+@MP_INGAME_SERVER_REFRESHTIME	服务器刷新时间
+@MP_SVGAME_CANCEL_PASSWORD	关闭菜单, 不尝试连接
+A / Cross confirms, B / Circle goes back	A / Cross 确认 B / Circle 返回
+A disconnect pauses the match for up to 10 minutes.	断开会暂停比赛最多10分钟.
+A passed game-type vote is queued for the next round boundary.	下一轮边界的通过游戏类型投票被排队.
+A setting or binding changed outside the editor. Cancel and reopen to refresh; nothing applied.	编辑器外的设置或绑定更改。 取消并重新打开以刷新; 没有应用 。
+ACTION DETAILS / RESET	行动要点/成果
+ADD A BOT	ADD A 键
+ASSISTS	危机
+About	关于
+Acceleration	加速
+Acceleration amount; zero disables it	加速量; 0 禁用
+Acceleration curve	加速曲线
+Acceleration curve: 0 legacy, 1 power	加速曲线:0 遗产,1 功率
+Acceleration offset	经常预算: 预算外:
+Account / Log in	账户/ 登录到
+Accounts and match reporting are not connected yet.	账户和匹配报告尚未连接。
+Action	行动
+Adaptive	适应性
+Add Berserker	添加贝塞尔克语Name
+Add Defender	添加守护者
+Add Duelist	添加排程表
+Add Flag Catcher	添加抓旗符
+Add Saber Master	添加 Saber 主控器
+Add Sentinel	添加哨兵
+Add Trickster	添加绊脚石
+Add bots	添加 bots (单位)
+Address	地址
+Adjust how fast the left stick moves the menu pointer.	调整左杖移动菜单指针的速度。
+Adjusts how many chat lines fit.	调整聊天行的匹配量 。
+Adjusts the width across the screen.	调整屏幕上的宽度。
+Advanced	高级
+Advanced Input	高级输入
+Advanced settings	高级设置
+Advanced video	高级视频
+Advances to the next round	下一轮的预付款
+All	全部人员
+Allow downloads	允许下载
+Alternate attack	替代攻击
+Alternate weapon action / saber throw	备用武器动作/ 沙伯投射
+Always	总是
+Always run	总是运行
+Analog joystick axes	仿真游戏杆轴
+Angle	角度
+Anime	动画
+Anisotropic filtering	非同位素过滤
+Anisotropic filtering unavailable.	无法进行异性过滤 。
+Antialiasing	防伪
+Applies on next spawn.	应用在下一个产卵。
+Apply	应用
+Apply and continue	应用和继续
+Apply camera	应用相机
+Apply changes	应用更改
+Apply or cancel pending edits before switching mods.	在切换 Mods 之前应用或取消待编辑.
+Apply or discard before leaving?	离开前要应用还是丢弃?
+Arabic	阿拉伯语
+Assets missing or overridden. Showing Stock; Apply cannot save.	资产丢失或覆没。 显示股票; 应用无法保存 。
+Assignment staged	分配阶段
+Attack	攻击
+Autoexposure	自动曝光
+Automatic	自动
+Automatic controller detection	自动控制器检测
+Automatic opens for gamepad when no keyboard is detected.	在未检测到键盘时自动打开游戏盘 。
+Available display modes are added automatically.	自动添加可用的显示模式 。
+Average mouse movement between frames.	平均鼠标在帧间移动 。
+Awaiting reply	等待答复
+B / Circle confirms, A / Cross goes back	B / 圆形确认 A / 十字向后
+BLUE	布莱尔
+BLUE FLAG	布莱福拉格
+BOT	BOT 键
+BOTS	炸弹
+BRACKET\nA random draw sets the single-elimination bracket. Byes advance unpaired entrants. Both full lineups must be connected, in the arena and ready before play starts.\n\n1v1 TOURNAMENT\nAn even field of 8 to 32 verified players enters. Play all 10 scored rounds. Each elimination wins a round. Simultaneous deaths replay the round. At 5-5, play one deciding round.\n\nTEAM TOURNAMENT\n2 to 8 teams enter at a fixed size, from 2v2 to 5v5. Players respawn. The first team to 20, 30, 40 or 50 kills respectively wins. After 10 minutes of play, the leader wins. If tied, play until one team takes the lead.\n\nRECONNECTS AND RESERVES\nA missing player pauses play. Each player has 5 minutes to reconnect in 1v1. Each team has 10 minutes to reconnect or fill the slot with a registered reserve from its own team. Repeat drops use the remaining time. Everyone readies again when the lineup is complete. Time expiry forfeits the match. If both sides expire, both are eliminated.	刹车\n随机绘图设置了单一消除括号。 再见, 将未加入者提前。 这两组队伍必须连接, 在竞技场上, 并在游戏开始前准备就绪 。\n\n1v1 课程\n8到32名经认证的球员进入一个偶数场, 全部打满10个得分的回合, 每场淘汰赛胜出一回合, 同时死亡者重播该回合。 5到5时, 决赛一场。\n\n团队参观\n2至8支球队以固定规模进入,从2v2到5v5. 玩家重播,第一队分别到20,30,40或50杀胜,比赛10分钟后,领队获胜,如果打平,则打到一队取得领先.\n\n储备金和储备金\n缺少的玩家暂停游戏。 每个玩家有5分钟在 1v1 中重新连接。 每个团队有10分钟从自己的团队中重新连接或填补空档。 重复减少使用剩余时间。 当排队完成时, 每个人再次读数。 时间到期后将失去匹配。 如果双方都过期, 两者将被淘汰 。
+Back	返回
+Back to Play	返回播放
+Back to ready room	回到准备室
+Backhand preview:	后手预览 :
+Backspace	后空格
+Balanced	余额
+Base	基础
+Basic Settings	基本设置
+Begin match	开始匹配
+Bilinear	双线性
+Binding staged; command was not executed	装订阶段; 命令未执行
+Bindlist	绑定列表
+Black	黑色
+Blade %d / %d	刀锋 %d /%d
+Blade off	刀锋关
+Blade on	刀锋上
+Blaster rifle	Blaster步枪
+Blob	块
+Blue	蓝色
+Blue team	蓝队
+Blue, Yellow and Red selected. Apply to save.	选择了蓝色、黄色和红色。 应用以保存 。
+Bottom left	左边
+Bottom right	右下边
+Bowcaster	鲍卡斯特
+Bracket	括号
+Brightness	亮度
+Browse unranked servers	浏览未排序的服务器
+Bumpers move the caret	跳跃者移动护身符
+Bumpers: command history   Triggers: scroll	凸轮:命令历史 触发器: 滚动
+Button labels	按钮标签
+Button labels: 0 Xbox, 1 PlayStation, 2 generic	按钮标签: 0 Xbox, 1 PlayStation, 2 通用
+Button mapping	按钮映射
+CALL GAME TYPE VOTE	呼叫游戏类型VOTE
+CALL KICK VOTE	呼叫基奇・沃特
+CALL MAP VOTE	呼叫地图VOTE
+CAST YOUR VOTE	带上你的阴道
+CHAT	贾特
+CHOOSE AN ACTION	挑战行动
+CONTROLLER DEFAULTS?	控制者防御工事吗?
+CTY	CTY 主题
+Call a vote	要求表决
+Camera	摄影机
+Camera / UI	相机/ 用户界面
+Camera FOV	相机视野
+Camera damping	相机关闭
+Camera settings applied.	相机设置已应用 。
+Camera smoothing	相机的滑动
+Camera tilt	相机倾斜
+Cancel	取消( E)
+Cancel changes	取消更改
+Cannot preserve the current custom renderer safely.	无法安全保存当前自定义渲染器 。
+Capture	捕获
+Capture Limit:	抓取限制 :
+Capture limit	捕捉限制
+Cast your vote	投你一票吧 投你一票
+Center view	居中视图
+Center your view	居中视线
+Changes the chat background. Text stays readable.	更改聊天背景。 文本可以读取 。
+Changes the language of menus.	更改菜单的语言。
+Changing this restarts mouse input.	更改此选项会重新启动鼠标输入 。
+Character shadows	字符阴影
+Chat	聊天
+Chat box height (%)	聊天盒高度(%)
+Chat box opacity (%)	聊天盒不透明(%)
+Chat box size (%)	聊天框大小(%)
+Chat box width (%)	聊天框宽度(%)
+Chat sound	聊天声音
+Chat with the current audience	与当前观众聊天
+Chat with your team	跟你的团队聊天
+Chinese (Simplified)	中文( 简化)
+Chinese (Traditional)	汉语( 传统)
+Choose Custom resolution.	选择自定义分辨率 。
+Choose a format to preview its tournament lobby.	选择预览其锦标赛大厅的格式 。
+Choose a language if short messages or regional variants are misidentified.	如果短消息或区域变体被错误识别,请选择一种语言 。
+Choose a style	选择样式
+Choose a style for each of the three slots.	为三个槽选择一个样式。
+Choose a whole-number option.	选择一个整数选项 。
+Choose an installed map for the current game type.	为当前游戏类型选择已安装的地图 。
+Choose each style's ready pose separately in Stances.	在斯丹斯分别选择每种风格的准备姿势.
+Choose named action	选择命名动作
+Choose three different styles to complete your cycle.	选择三种不同的样式来完成周期。
+Choose three different styles. Each style can fill only one slot.	选择三种不同的样式,每种样式只能填补一个空档。
+Choose your arena.	选择你的竞技场。
+Choose your saber hand, then select Apply Changes.	选择您的剑手, 然后选择应用更改 。
+Circle	圆形
+Clean Capture	干净抓取
+Clean Capture is on.	干净的捕捉开始了。
+Clear	清除
+Clear assignment	清除任务
+Client command packets per second.	每秒有客户端命令包 。
+Close	关闭
+Close registration and start the Tournament.	关闭注册并开始锦标赛.
+Color depth	颜色深度
+Combat	战斗
+Combat styles	战斗风格
+Combat styles...	战斗风格...
+Comics	漫画
+Communication	通讯
+Compat.	相声.
+Complete	完成
+Composition grid: 	组成网格 :
+Config applied.	应用配置 。
+Config loaded into editor. Review, then Apply.	配置已装入编辑器。 审查后应用 。
+Config write verification failed; existing config retained.	配置写入验证失败; 保留已有的配置 。
+Confirm	确认
+Connect	连接
+Connection	连接
+Console	控制台
+Console keyboard	主控台键盘
+Console opacity	控制台不透明
+Console overlay	主控台覆盖
+Controller	主计长
+Controller defaults staged; review before Apply	控制器默认已设置; 应用前的审查
+Controller detection	检测控制器
+Controls	控制
+Controls what you see when the server allows dismemberment.	控制服务器允许肢解时所看到的。
+Could not confirm the display settings; recovery file could not be removed.	无法确认显示设置; 无法删除恢复文件 。
+Could not finish saving; existing config retained.	无法完成保存; 已存在的配置保留 。
+Could not open config for writing.	无法打开配置来写入 。
+Could not read config	无法读取配置
+Could not save display recovery.	无法保存显示恢复 。
+Count up	数起来
+Cross	十字记
+Crosshair	十字楼梯
+Crosshair and interface	十字架和接口
+Crouch	蹲着
+Crouch / swim downward	蹲下/ 向下游
+Crystal	晶体
+Cubemap bounces	立方体弹跳
+Cubemapping	立方图
+Current custom character	当前自定义字符
+Current dual/staff combat; variants are planned.	目前的双人/工作人员战斗;已规划了各种变体。
+Current style	当前样式
+Curve subdivisions	曲线分区
+Custom	自定义
+Custom height	自定义高度
+Custom sounds	自定义声音
+Custom width	自定义宽度
+Customize	自定义
+Cycle saber style	循环沙伯样式
+Cycle your selected combat loadout	循环您选中的战斗卸载
+Cycle: %s > %s > %s > repeat	周期: %s > %s > %s > 重复
+D-pad down	D - 贴下来
+D-pad left	左侧 D-pad
+D-pad moves the pointer  /  Bumpers scroll	D- pad 移动指针/ 弹簧卷轴
+D-pad right	右侧的 D- pad
+D-pad up	D -贴上
+DEMP2	保卫人民国际2
+DISCARD PENDING EDITS?	失踪的床垫?
+DISCONNECT?	失踪了?
+DLC	DLC 数据层
+DUEL STANDINGS	杜尔站
+DUEL W/L	杜埃尔W/L
+Damage reactions	损害反应
+Default	默认
+Default movement speed.	默认移动速度 。
+Default staged	默认已预设
+Defaults selected. Click Apply Input to save.	选中的默认值。 单击应用输入以保存 。
+Defer player models	延迟玩家模式
+Deluxe mapping	豪华绘图
+Deluxe specular	奢华的光谱
+Desktop	桌面
+Det pack	数据包
+Detailed shaders	详细阴影
+Detect compatible gamepads as you connect them.	在连接时检测兼容的游戏板 。
+Detected	检测到
+Deutsch	德国
+Device preferences	设备首选项
+Disable authenticated ghost mode	禁用已认证的幽灵模式
+Disable warmup.	禁用热身。
+Discard	丢弃
+Discard and continue	丢弃和继续
+Discard pending changes?	丢弃待修改的吗 ?
+Discard pending controls changes and open Saved Configs?	丢弃待定的控件更改并打开已保存的配置 ?
+Discard pending controls changes and return?	丢弃待定的控件更改和返回 ?
+Disconnect	断开连接
+Dismemberment	断读
+Display	显示
+Display recovery could not be verified; settings were not changed.	无法校验显示恢复; 设置没有更改 。
+Disruptor	干扰器
+Distance	距离
+Distance behind the player. Walls can bring the camera closer.	距离在玩家身后,墙壁可以使镜头更近.
+Dominant hand...	强势的手...
+Dominant hand:	主手曰:
+Done	完成( E)
+Drag or right stick to orbit  /  Scroll or bumpers to zoom	拖动或右侧粘贴到轨道/ 滚动或缓冲器到缩放
+Drag or type a value, then Apply. Size: 75-125%.	拖动或键入一个值, 然后应用。 大小: 75-125 % 。
+Drag or type values, then Apply camera.	拖动或类型值,然后应用相机。
+Drag to orbit  /  Scroll to zoom	拖动到轨道/ 滚动到缩放
+Driver info	驱动信息
+Driver information	驱动信息
+Dual sabers	双撒布
+Duel	决斗
+Duel ladder	决斗阶梯
+Duel limit	决斗限制
+Dynamic crosshair	动态交叉
+Dynamic glow	动态光芒
+Dynamic lights	动态灯光
+EDIT ASSIGNED COMMAND	EDIT 传射指挥
+EXIT	EXIT 专辑
+Edit	编辑
+Edit a proposal, then call its vote. Limits apply to the current mode.	编辑提案,然后要求表决。限制适用于当前模式。
+Editing stages a binding; the command is never executed here.	编辑阶段为绑定; 命令从未在此执行 。
+Effects	效果
+Effects volume	效果量
+Enable all Force powers, including Saber Throw.	启用全部强制电源, 包括 Saber Srow 。
+Enable warmup.	启用热身。
+English	联合国
+Enter 	输入
+Enter %s0 to %d.	输入 %s0 到 %d。
+Enter a finite number.	输入一个有限的数字。
+Enter a player name.	输入玩家名称 。
+Enter a size from 48 to 144.	输入从48到144的大小 。
+Enter individual lobby	进入个人大厅
+Enter size 75-125 and panel opacity 0-100.	输入大小为75-125,面板不透明为0-100.
+Enter your name	输入您的名字
+Equal, complete lineups required	需要相等的完整线条
+Esc  /  Back	ESC / 后卫
+Español	西班牙语Name
+Every active player selects Ready.	每个活跃的玩家都会选择准备.
+Existing voice-command menu; not proximity voice	已有的语音命令菜单; 不接近的声音
+Exit	退出
+Exit Photo Mode	退出图片模式
+Experimental preview only. Apply keeps your regular selection.	只进行实验预览。 应用时要保留常规选择 。
+Extra button	额外按钮
+FFA K/D	FFA K/D (韩语)
+FLAG	FLAG( 法语)
+FORCE POWERS	武装部队
+FPS counter	FPS 计数器
+FPS limit	FPS 限制
+Fantasy	幻想
+Favorites	爱好
+Field of view	视野
+Find a Server	找到服务器
+Find a server	查找服务器
+Fine-tune input settings without typing console commands.	在不输入控制台命令的情况下进行精细的输入设置.
+Flechette	弗莱歇特语Name
+Footsteps	脚步
+Force	强制
+Force Training	部队培训
+Force absorb	部队吸收
+Force drain	部队排水量
+Force enabled in restricted gametype	强制在限制游戏类型中启用
+Force enabled while all powers disabled	强制启用, 而所有权限已禁用
+Force grip	强制抓住
+Force heal	强制治愈
+Force lightning	强制闪电
+Force player models	强制玩家模式
+Force powers	武力权力
+Force protect	武力保护
+Force pull	强制拉动
+Force push	强迫推
+Force rage	强暴
+Force rules, map rotation, Tournament, and team entry.	部队规则 地图旋转 巡回赛 和队伍进入
+Force sense	强制感
+Force speed	强制速度
+Force team energize	增强部队力量
+Force team heal	部队小组痊愈
+Force: restricted	强制:限制
+Force: unrestricted	强制:无限制
+Forward movement scale	前进移动比例
+Fov	福尔
+Frag Limit:	断裂限制 :
+Frag limit	断裂限制
+Français	法国语Name
+Free Camera	免费相机
+Free For All	人人免费
+Free mouse look	免费鼠标外观
+Freecam speed	自由摄像头速度
+Freeze	不许动
+Freeze is available in local solo games, including bots.	冻结可以在本地的独奏游戏中,包括bots.
+French	法语
+Full Force	完全战斗力
+Fullscreen	全屏幕
+GAME RULES	游戏规则
+GAME TYPE	游戏类型
+GAME TYPES	游戏类型
+GENERAL	A. 概况
+GLOBAL RANK: unavailable	全球范围: 不可用
+Game Options	游戏选项
+Game rules	游戏规则
+Game sounds	游戏声音
+Game type	游戏类型
+Game types	游戏类型
+Generate normal maps	生成普通地图
+Generic	常规
+Geometry detail	几何细节
+German	德语
+Ghost off	鬼魂离开
+Ghost on	幽灵在
+Green	绿色
+Guide	指南
+HDR	人类发展报告
+HDR lightmaps	HDR 灯光图
+HUD style	HUD 风格
+Have your say on the current vote,	现在的投票有你的话
+Health and ammo	卫生和弹药
+Height	高度
+High	高档
+Hilt	希尔特
+Hilt preview unavailable	无法使用希尔特预览
+Hindi	印地语
+Hold for Drain when available	可用时抓好排水管
+Hold for Grip when available	可用时按住 Grip
+Hold for Lightning when available	可用时按住闪电
+Hold for legacy mouse/keyboard strafe	抓好遗留的鼠标/键盘
+Hold to change walking/running speed	坚持更改行走/运行速度
+Hold to show match scores	坚持显示匹配的分数
+Holocron	大饥荒
+Holster / draw saber	口袋/ 画剑
+Holster or draw your saber	收缩或画你的剑
+Horizontal look sensitivity	水平外观敏感性
+Horizontal mouse scale	水平鼠标比例
+Horizontal scale	水平尺度
+Horizontal sensitivity	水平敏感度
+Horizontal turn speed	水平转速
+Horror	恐惧
+Host a match	主持一个匹配
+Host name	主机名称
+INDIVIDUAL	个人
+ITEMS	项目
+Ignore small legacy axis movements.	忽略小遗产轴运动 。
+Ignore small stick movements.	忽略小棒移动.
+Illustration only. This result does not update your account.	仅说明。 此结果不会更新您的账户 。
+Input settings applied.	应用了输入设置 。
+Inspect hilt	检查脚印
+Inspect off-hand	检查离手
+Inspect primary	初级检查
+Installed mods	已安装的模型
+Installing the mod alone does not make a server official.	单独安装 Mod不会成为服务器的官方功能 。
+Interact with usable world objects	与可用世界对象的互动
+Interface	界面
+Invalid QA key	无效的 QA 密钥
+Invalid action	无效的动作
+Invalid assignment	无效的指派
+Invalid key	无效的密钥
+Invalid personal config filename	无效的个人配置文件名
+Invalid setting	无效的设置
+Invert controller vertical look	反向控制器垂直外观
+Invert mouse	反转鼠标
+Invert vertical look	垂直反向视图
+Italian	意大利语Name
+Italiano	意大利语Name
+Items	项目
+JOIN	联合
+JOIN THE MATCH	加入战队
+Japanese	日语
+Jedi Master	绝地大师
+Join	加入( E)
+Join game	加入游戏
+Joystick deadzone	欢乐棒死区
+Jump	跳跃
+Jump / swim upward	跳跃/ 游向上
+Jump sounds	跳动声音
+KEY ALREADY ASSIGNED	已经指定的关键
+KICK	捷克语
+Keep Jump and Speed; disable other general powers.	保持跳跃和速度; 禁用其他一般的功率 。
+Keep changes	保留更改
+Keep display changes?	保持显示更改吗 ?
+Keep or revert the display change first.	先保留或还原显示更改 。
+Key Bindings	密钥绑定
+Key change staged	已进行关键更改
+Keyboard	键盘
+Keyboard horizontal turn speed	键盘水平转速
+Keyboard turning	键盘转动
+Keyboard vertical look	键盘垂直外观
+Keyboard vertical look speed	键盘垂直视速
+Keys	密钥
+Kill feed	杀死种子
+Korean	韩语
+LB	法学
+LEAVE THE MATCH?	离开马奇?
+LOAD SAVED SETTINGS?	洛达保存的床垫?
+LT	升( L)
+Labels do not change assignments.	标签不更改任务 。
+Lagometer	梯度计
+Language	语言
+Language pack unavailable; showing original chat	语言包不可用; 显示原始聊天
+Leader	组长
+Leave lobby	离开大厅
+Leave this server and return to the main menu?	离开这个服务器返回主菜单?
+Leave this server and return to your desktop?	离开此服务器返回您的桌面吗 ?
+Left hand	左手边
+Left stick click	左键点击
+Legacy	遗产
+Legacy joystick	遗物乐器
+Legacy joystick analog axes	遗留的游戏杆模拟轴
+Legacy joystick deadzone	遗产乐器死区
+Legacy joystick input; restarts input	遗留的游戏杆输入; 重新启动输入
+Legacy mouse forward-movement scale	遗留鼠标前移尺度
+Legacy mouse strafe scale	鼠标流度表
+Legacy or power acceleration.	遗产或动力加速。
+Letterbox	信箱
+Letters	信件
+Light flares	轻型照明弹
+Lighting	照明
+Limbs only	仅限鞭打
+Limits affect the current mode.  0 = unlimited.	限制会影响当前模式. 0 = 无限.
+Lit preview	升预览
+Live	现场直播
+Live preview	现场预览
+Load	装入
+Load into the editor for review, then Apply.	装入编辑器进行审核,然后应用.
+Load the next map from the server rotation.	从服务器旋转中装入下一张地图 。
+Local server	本地服务器
+Lock Teams	锁定团队
+Log in with Discord	登录 Discord
+Log out / Cancel	注销/ 取消
+Logged out.	已登录。
+Look and movement	看着和移动
+Look down	向下看,向下看,往下看,往下看,往下看,往下看,往下看
+Look up	抬头看
+Looking with bound up / down keys.	以绑上/下键查看 。
+Low	低级
+Low health pulse	低健康脉搏
+Lower values make curved surfaces smoother.	数值较低使曲线表面更平滑.
+Lyra  /  Registered reserve (sample)	Lyra / 已登记准备金(样本)
+MAP	MAP 地图
+MATCH RECORDINGS	内容记录
+MATCH TOOLS	马特托尔斯
+MULTIPLAYER	穆蒂贝勒
+Main menu	主菜单
+Map	地图
+Map not reported	未报告的地图
+Map preview unavailable	无法预览地图
+Maps for the current game type	当前游戏类型的地图
+Master Mode	主模式
+Match clock	匹配时钟
+Match scores are separate from global rank.	比赛分数与全局排名分开.
+Match timer	匹配计时器
+Match tools	匹配工具
+Matches	匹配
+Matching stance assets are missing. Choices were not saved.	缺少匹配的姿态资产。 选择没有保存 。
+Matching style assets are missing. Blue, Yellow and Red remain available.	匹配样式资产缺失。 蓝色、 黄色和红色仍然可用 。
+Matching style assets are missing. Your choices were not saved.	匹配样式资产缺失。 您的选择没有保存 。
+Max packets	最大数据包
+Max players	最大玩家数
+Medium	中型
+Menu	菜单
+Menu buttons	菜单按钮
+Menu confirm and back buttons	菜单确认和后退按钮
+Menu cursor speed	菜单光标速度
+Menu language	菜单语言
+Menu motion	菜单动议
+Menu motion: Off	菜单动议: 关闭
+Menu motion: On	菜单动议: 打开
+Message language	信件语言
+Message the last player who attacked you	给最后一个攻击你的玩家留言
+Message the player under your crosshair	将玩家在您的十字架下的信件
+Min players	最小玩家
+Mind trick	智商诡计
+Minutes, 0 to 1440. Zero means unlimited. Applies after passing; may end the round.	分钟,0-1440. 0表示无限,在经过后适用;可能结束回合.
+Mod switching is unavailable in this isolated test profile.	在此孤立的测试配置中无法使用 Mod 切换 。
+Mode	模式
+Model preview unavailable	无法使用模型预览
+Mods	模块
+Motion:	动议 :
+Mouse	鼠标
+Mouse buttons and wheel are supported. Escape cancels.	支持鼠标按钮和轮子。 退出取消 。
+Mouse input mode	鼠标输入模式
+Mouse input: 0 off, 1 raw, 2 compatibility; restarts input	鼠标输入: 0 关闭, 1 原始, 2 兼容; 重新启动输入
+Mouse movement when free look is off.	鼠标在自由外观关闭时移动 。
+Mouse movement while strafing.	鼠标在移动时进行射击。
+Mouse sensitivity	鼠标敏感度
+Mouse smoothing	滑动鼠标
+Move backward	向后移动
+Move forward	前进
+Move left without turning	左转而不转
+Move right without turning	向右移动而不转
+Move the mouse to look around.	移动鼠标四处看.
+Movement	移动
+Movement and legacy input	调动和遗产投入
+Movement effects	移动效应
+Moves	移动
+Multiplayer built around pro saber dueling.	多人围绕职业沙伯决斗而建.
+Multiplier while walk / run is held.	步行/ 运行时的乘数被按住 。
+Music volume	音乐量
+NOW = current match   /   WAIT = upcoming	Now = 当前匹配 / 等待 = 即将完成
+Name	名称
+Names / scores	名称/ 分数
+Negative m_pitch inverts vertical look.	负 m_pitch 反转垂直视 。
+Negative shifts left. Positive shifts right. Zero centers the view.	左转负数 右转正数 零中点
+Network	网络
+Next	下一个
+Next Force power	下一个力量力量
+Next Map	下一个地图
+Next Player	下一个玩家
+Next item	下一个项目
+Next opponent: awaiting the other match winner	下一位对手:等待另一场比赛获胜
+Next weapon	下一个武器
+No files	没有文件
+No matching entries.	没有匹配条目 。
+No matching hilts	没有匹配的脚印
+No matching settings.	没有匹配的设置 。
+No models match these filters.	没有匹配这些过滤器的模型 。
+No official servers listed	未列出官方服务器
+No password	无密码
+No pending changes	无待决变动
+No saved personal configs.	没有保存的个人配置 。
+No standings available	无可用状态
+Non-ASCII command preserved. This text editor supports ASCII; use change-key or clear.	保留了非 ASCII 命令。 此文本编辑器支持 ASCII; 使用更改键或清除 。
+Not a personal setting: 	不是个人设定 :
+Not reported	未报告
+OFFICIAL RANKED SERVERS	正式公务员
+Off	关
+Official 1v1 matches on a Ranked Duel server.	正式的1v1在Ranked Duel服务器上匹配.
+Offset used by the power curve.	电源曲线使用的偏移 。
+Older joystick path; restarts input.	旧的游戏杆路径; 重新启动输入 。
+On	打开
+On-screen keyboard	屏幕键盘
+One TFFA match / respawns	一个 TFFA 匹配/ 重生
+One or more default keys have another command. Confirm to replace them.	一个或多个默认密钥有另一个命令。 确认可以替换它们 。
+Online free camera uses your normal spectator movement.	在线免费摄像头使用正常的观众动作.
+Only official registered teams enter this ladder.	只有正式注册的队伍进入这个梯子.
+Only reserves registered with this team may replace a player.	只有在本队注册的预备队才能替换一名球员.
+Open / collapse chat	打开/ 崩溃聊天
+Open or close the in-game menu	打开或关闭游戏中菜单
+Open the console	打开控制台
+OpenAL	打开( O)
+Opponent	反对者
+Options	选项
+Orange	橘子( 橙子)
+Orbit angle	轨道角度
+Ordinary matches remain unranked.	普通比赛没有排名 。
+Original Blue style.	原蓝风格.
+Original JKA	原文:JKA
+Original Red style.	原红色风格.
+Original Yellow style.	原黄式.
+Overall mouse response.	鼠标总体反应.
+Overview	概览
+PHOTO MODE	图片模式
+PING	铃声
+PLAY	玩游戏
+PLAYER	玩家游戏
+PRESS A KEY OR CONTROLLER BUTTON	制作一个关键或控制器
+PS	PS 密码
+Packet duplication	包复制
+Pages rotate every 10s. Your row stays visible.	每10页旋转一页,您的行保持可见。
+Panel opacity (%)	面板不透明(%)
+Parallax mapping	参数映射
+Password required	需要密码
+Pause menu	暂停菜单
+Pending changes	待修改
+Pending edits discarded	待编辑已丢弃
+Performance	业绩
+Perspective	视角
+Photo Mode	图片模式
+Pick different styles. Your normal style-switch control follows this order.	选择不同的样式。 您的常规样式切换控制遵循此顺序 。
+Ping	小萍,你来干什么?
+Ping  %d ms	平时 %d 毫秒
+Pistol	手枪
+Pitch	皮条
+Pitch sway	皮奇摇摆
+Play	开始游戏
+Play recording	播放录音
+PlayStation	游戏Station
+Playback	重播
+Player	玩家( T)
+Player labels	玩家标签
+Player name	玩家名称
+Player settings changed outside this menu. Reopen Profile to refresh.	玩家设置在此菜单外更改。 重新打开配置文件以刷新 。
+Players	玩家
+Players  %s / %s	玩家 %s /%s 数
+Players and world	玩家与世界
+Polish	波兰语Name
+Polski	波尔斯基
+Portrait	纵向
+Portrait size	纵向大小
+Portrait size applied.	应用了外观大小 。
+Portraits	图形
+Portuguese	葡萄牙语
+Portuguese (Brazil)	葡萄牙语( 巴西 )
+Português	葡萄牙
+Português (Brasil)	葡萄牙语( 布拉西尔)
+Power	电源
+Power Duel	权力决斗
+Power acceleration offset	电源加速抵消
+Precise crosshair trace	精确的十字楼梯跟踪
+Preview disconnect	预览断开
+Preview hand:	预览手 :
+Preview how a missing teammate appears in the ready room.	预告一下失踪的队友是如何出现在准备室的
+Preview unavailable	无法预览
+Preview:	预览 :
+Previous	上一个
+Previous Force power	上一个部队权力
+Previous Player	上一个玩家
+Previous item	上一个项目
+Previous weapon	上个武器
+Primary	小学
+Primary attack; movement and style still govern saber moves	主攻;动作和风格仍然支配着沙伯动作
+Private chat with last attacker	与上次攻击者私下聊天
+Private chat with target	与目标私下聊天
+Private message	私人信件
+Profile	个人资料
+Projected	预计数
+Projectile trails	投射线索
+Purple	紫色( 紫色)
+QUIT GAME?	快速游戏?
+Quality	质量
+Quick combinations; more weight than Blue.	快速组合;重量大于蓝色.
+Quit game	退出游戏
+Quit the game and return to your desktop?	退出游戏并返回您的桌面吗 ?
+RANKED PLAY  /  DUEL LADDER	狂欢的表演/舞者
+RANKED PLAY  /  OVERVIEW	随机播放/概述
+RANKED PLAY  /  SERVER DIRECTORY	随机播放/服务器
+RANKED PLAY  /  TEAM LADDER	跑步游戏/团队乐手
+RATIO	拉脱维亚
+RB	经常预算
+READY	准备
+READY STANCE	准备就绪
+RECONNECTS AND RESERVES	储备金和储备金
+RECORDINGS	记录
+RED	红色
+RED %d     /     BLUE %d	RED %d / BLUE %d
+RED FLAG	红灯
+REPLACE DEFAULT KEY ASSIGNMENTS?	替代防御 关键转让?
+REPLACE SAVED CONFIG?	维莱尔拯救冲突?
+RESPAWN?	准备?
+RT	RT 调制组
+Radar	雷达
+Raise or lower the camera target.	提高或降低摄像头目标.
+Rank	军衔
+Ranked Challenge Duel	排名挑战决斗
+Ranked Duel	排名决斗
+Ranked Duel and Ranked Challenge Duel share this ladder.	排名决斗和排名挑战决斗 分享这个梯子。
+Ranked Play	排名游戏
+Ranked connection: not configured	排序连接: 未配置
+Ranked mode	排名模式
+Ranked servers	排名服务器
+Ranked services are coming soon.	军衔军衔即将到来。
+Rankings appear after verified official results are connected.	排名出现在经核实的官方结果被连接后.
+Rate	费率
+Rating	评级
+Rating change: unavailable. No verified ranked result received.	评分变化: 无法获取。 未收到经核实的排名结果 。
+Rating: unavailable / no verified ranked result	评分: 无/ 无经核实的排名结果
+Raven Software	Raven 软件
+Raw	原始内容
+Ready	准备
+Ready - offline	准备 - 离线
+Ready cleared.	准备就绪
+Ready for chat - offline	准备聊天 - 离线
+Ready selected.	准备 选中 。
+Ready-pose choice only. Choose combat behavior in Combat styles.	只能选择,选择战斗风格的战斗行为。
+Record match	记录匹配
+Recording	记录
+Recordings	记录
+Red	红色
+Red team	红队
+Registered teams compete on their own team ladder.	注册的球队在自己的队伍梯队上进行比赛.
+Release capture in windowed mode.	以窗口模式释放抓取 。
+Release mouse capture in windowed mode	在窗口模式下释放鼠标捕获
+Release window capture	释放窗口抓取
+Renderer	渲染器
+Repeat commands in outgoing packets.	重复发件包中的命令 。
+Repeater	中继器
+Replace	替换
+Replace 	替换
+Replace ordinary HUD	替换普通的 HUD
+Replace pending config edits?	替换未完成的配置编辑吗 ?
+Replace pending edits with this config?	要用此配置替换待编辑吗 ?
+Replace saved config?	替换已保存的配置吗 ?
+Replace the controller's button assignments with defaults?	用默认替换控制器的按钮任务 ?
+Requested bytes per second; server limits apply.	请求的字节每秒; 服务器限制适用 。
+Requested snapshots per second.	请求的快照每秒。
+Requires Streamer mode with Clean Capture off.	需要使用 Streamer 模式, 并关闭 Clean Captal 。
+Requires authenticated server permission	需要认证服务器权限
+Requires server permission. Add a player argument using Edit command if needed.	需要服务器权限。 如果需要, 请使用 Edit 命令添加玩家参数 。
+Requires server permission. Use the server's target syntax.	需要服务器权限。 使用服务器的目标语法 。
+Reserves	准备金
+Reset	重设
+Reset all to Stock	将全部重置为 stock
+Reset camera	重置相机
+Reset filters	重置过滤器
+Reset preview	重置预览
+Reset this tab	重置此标签
+Reset this tab?	重置此标签 ?
+Reset to originals	重置为正本
+Reset view	重置视图
+Resolution	决议
+Respawn	复发
+Respawn now	现在重生了
+Restart Map	重新启动地图
+Restart the current map after the vote passes.	投票通过后重新启动当前地图.
+Restarts the renderer.	重开铸造器.
+Restore action defaults	恢复动作默认值
+Restricted Force	限制部队
+Result preview	结果预览
+Resume  /  Esc	恢复 / Esc
+Return to editing to keep your pending changes.	返回编辑以保留您的待决更改 。
+Return to tournament selection?	回到锦标赛的选拔?
+Reverse right-stick vertical look.	反向右棍垂直视线.
+Revert	还原
+Reverting in %d seconds.	以 %d 秒恢复 。
+Review this change. Nothing changes until you confirm.	检查一下这个变化,直到确认为止
+Right hand	右手 右手 右手 右手
+Right stick click	右键点击
+Right-stick horizontal look speed.	右棒水平视速.
+Right-stick vertical look speed.	右棒垂直视速.
+Rocket launcher	火箭发射器
+Role: Jedi	角色:绝地武士
+Role: Non-Jedi	角色:非杰迪语
+Roll	滚动
+Roll sway	摇摆
+Rotate:	旋转 :
+Run command	运行命令
+Run pitch	运行投注
+Run roll	运行滚动
+Russian	俄罗斯语
+SABERTRIALS	盐
+SAMPLE WINNER	萨默·温纳
+SCORE	塞尔维亚
+SERVER INFORMATION	服务信息
+SINGLE SABER / CHOOSE THREE	单人萨贝尔/乔斯三
+SPEC	SPEC 标准
+SSAO	萨奥
+ST_CONTROLS_FAIL hit visibility	ST_CONTROLS_FAIL 击中可见度
+ST_CONTROLS_FAIL page mismatch	ST_CONTROLS_FAIL 页面不匹配
+ST_CONTROLS_FAIL settings count	ST_CONTROLS_FAIL 设置计数
+Saber / melee	萨比尔/梅莉
+Saber 1	萨比尔1号
+Saber 2	赛博 2
+Saber trail	赛博小径
+Saber workbench	赛博工作台
+Sabers	赛博斯
+Sample players and events. No live registration or match starts.	样本玩家和事件,没有现场注册或比赛开始.
+Save a PNG screenshot	保存 PNG 截图
+Save current settings	保存当前设置
+Saved 	已保存
+Saved Configs	保存的配置
+Saved choices take effect next spawn on supporting servers.	所节省的选择在支持服务器上产生下个产卵效应.
+Saved config could not be verified.	无法校验已保存的配置 。
+Scale horizontal mouse movement.	缩放水平鼠标移动 。
+Scales the panel and text together.	将面板和文本缩放在一起。
+Scene: 	场景 :
+Sci-Fi	科学- Fi
+Scoreboard	计分板
+Screenshot	截图
+Search Setup settings or console names...	搜索设置或控制台名称...
+Search actions...	搜索动作...
+Search current keys or commands...	搜索当前密钥或命令...
+Search hilts	搜索脚印
+Search input settings or console names...	搜索输入设置或控制台名称...
+Search models or outfits...	搜索模型或服装...
+Secondary	中学
+Select DEMP2 when available	可用时选择 DEMP2
+Select a game type. Changing this choice does not change the match.	选择游戏类型。 更改此选择不会改变匹配 。
+Select a player or bot	选择玩家或机器人
+Select a server	选择服务器
+Select an available map for the current game type.	为当前游戏类型选择可用的映射。
+Select blaster rifle when available	可用时选择爆破枪
+Select bowcaster when available	可用时选择弓架
+Select det packs	选择数据包
+Select disruptor when available	可用时选择干扰器
+Select flechette when available	可用时选择箭头
+Select next Force power	选择下一个强制功率
+Select next available weapon	选择下一个可用的武器
+Select next inventory item	选择下一个清单项目
+Select one of the six styles.	选择六种样式之一.
+Select pistol when available	可用时选择手枪
+Select previous Force power	选择上一个强制功率
+Select previous available weapon	选择先前可用的武器
+Select previous inventory item	选择上一个清单项目
+Select repeater when available	可用时选择中继器
+Select rockets when available	可用时选择火箭
+Select saber or melee	选择剑或剑
+Select thermal detonators	选择热雷管
+Select tournament	选择比赛
+Select trip mines	选择绊脚地雷
+Send message	发送消息
+Sensitivity	灵敏度
+Sensitivity / settings	敏感性/ 设置
+Server	服务器
+Server FPS	服务器 FPS
+Server Management	服务器管理
+Server information	服务器信息
+Server location	服务器位置
+Server staff protection still applies.	服务器工作人员的保护仍然适用。
+Server tournament verification is coming next.	接下来是服务器锦标赛的验证
+Setting is protected: 	设置受到保护 :
+Setting staged	已分阶段设置
+Settings applied.	设置已应用 。
+Settings applied. Video/sound changes may require a restart.	应用的设置。 视频/ 声音变化可能需要重新启动 。
+Settings changed outside the editor. Cancel and reopen before applying.	在编辑器外更改了设置。 应用前取消并重新打开 。
+Setup	设置
+Share / Create	共享/ 创建
+Shift	移动
+Shoulder offset	页:1
+Show controls: 	显示控件 :
+Show current bracket	显示当前括号
+Show current tournament status	显示当前锦标赛状态
+Show original message	显示原始信件
+Show score	显示分数
+Show the original above its marked translation. Originals remain in the console.	显示上面标注的译名的原件。 原件留在控制台中 。
+Show weapon	显示武器
+Shows the weapon model in first person.	以第一人称显示武器模型.
+Siege	包围
+Siege objectives	包围目标
+Siege voice commands	包围语音命令
+Signed in with Discord.	与迪斯科德签约.
+Signed out.	签了字
+Simple items	简单项目
+Single	单身
+Size: 48-144. Drag or type a number, then Apply size.	大小: 48-144. 拖动或键入数字,然后应用大小。
+Slot 1:	第1档:
+Slot 2:	第2档:
+Slot 3:	第3档:
+Smooth follow	平滑跟随
+Smoothing	平滑状态
+Smooths changes to camera position.	平滑地更改相机位置。
+Smooths changes to the point the camera follows.	平滑地改变相机所遵循的点。
+Snapshot timing offset; normally session-only.	抓图时间偏移; 通常只显示会话 。
+Snapshots	抓图
+Solo / replay speed	独奏/ 重播速度
+Solo match	单打
+Solo, spectator and replay camera. Online matches stay live.	独奏,观众和重播相机,在线火柴保持直播.
+Some weapons and modes choose the view automatically.	一些武器和模式会自动选择视图.
+Sort A-Z	排序 A- Z
+Sort Z-A	排序 Z -A
+Sound	声音
+Sound quality	声音质量
+Sounds	声音
+Sounds + effects	声音 + 效果
+Sounds + effects + marks	声音 + 效果 + 标记
+Space	空间
+Spanish	西班牙语
+Spectate	光谱
+Spectator camera	相机摄像头
+Speed	速度
+Speed trail	速度线索
+Square	平方边
+Staff	工作人员
+Stage controller defaults	阶段控制器默认值
+Stage defaults	阶段默认值
+Stage edit	阶段编辑
+Stances	钢筋
+Stances saved. Applies next spawn on a supporting server.	Stances 保存了。 将下一个产卵应用到支持服务器上 。
+Stances...	斯丹斯... 斯丹斯... 斯丹斯...
+Standard	标准
+Start / Resume	开始/ 恢复
+Start Tournament	开始比赛
+Starting rating: 1000   |   Results and opponent strength decide changes.	开始评分:1000QQ结果和对手实力决定变化.
+Static	静态
+Status notifications	状态通知
+Stay here	待在这里
+Stay in ready room	待在准备室里
+Stencil	斯坦西尔
+Stick deadzone	坚持死区
+Stock	库存
+Stock action defaults staged (unassigned when no stock default exists)	股票动作默认阶段(在不存在股票默认时未签名)
+Stock defaults unavailable	无法使用的股票默认值
+Strafe left	左边的草原
+Strafe modifier	草原修饰器
+Strafe movement scale	草原运动尺度
+Strafe right	右转
+Streamer mode	流线模式
+Streamer presentation	流体演示文稿
+Style:	样式 :
+Subject	议题
+Supporting servers use this selection. Saber Offense requirements still apply.	支持服务器使用此选择。 Saber Offfense 要求仍然适用 。
+Swap	交换
+Swap Confirm and Back for menus.	交换确认和返回菜单。
+Swapped	已扫描
+Switch mod	切换模式
+Switch mod?	切换模式?
+Switch mods from the disconnected main menu.	从断开的主菜单切换 Mods.
+Symbols	符号
+TEAM STANDINGS	团队的站姿
+TEAM TOURNAMENT	团队参观
+TEAMS	教师
+TFFA	TFFA (法语)
+TFFA: lock or reopen joining and team switching.	TFFA:锁定或重开加盟和团队切换.
+TIME	时间
+TOURNAMENT	文 献
+TOURNAMENT  /  BRACKET	旅游/拆卸
+TOURNAMENT  /  LEAVE LOBBY?	旅行 /离开LOBBY?
+TOURNAMENT  /  MATCH RESULT	培训/活动结果
+TOURNAMENT  /  READY ROOM	参观/准备房间
+TOURNAMENT  /  SELECT A FORMAT	课程/课程
+TOURNAMENT  /  TEAM RESERVES	租借/小组储备
+Take photo	照张相
+Target damping	目标拦坝
+Target names	目标名称
+Team / tag	团队/ 标签
+Team Free For All	人人免费团队
+Team appearance	团队亮相
+Team chat	团队聊天
+Team chat only	只进行团队聊天
+Team chat sound	团队聊天声音
+Team color lightsabers	团队颜色灯光
+Team color skins	团队颜色皮肤
+Team ladder	团队梯子
+Team overlay	团队重叠
+Team skin: Blue	团队皮肤:蓝色
+Team skin: Default	团队皮肤: 默认
+Team skin: Red	团队皮肤:红色
+Text language	文本语言
+Texture compression	纹理压缩
+Texture depth	纹理深度
+Texture detail	纹理细节
+Texture filter	纹理过滤器
+Texture intensity	纹理强度
+The complete lineup must ready up again before play resumes.	完整排队必须在恢复比赛前再准备好.
+The missing player may reconnect, or a reserve takes their place.	失踪的玩家可能重新连接,或者一个预备队取代他们的位置.
+The original style keeps its original combat behavior.	原作风格保持其原作的战斗行为.
+The previous display recovery has not been saved yet.	前一个显示恢复尚未保存 。
+The ranked server directory is not connected yet.	排名的服务器目录尚未连接 。
+The ranking service is not connected.	排名服务没有连接.
+The selected model files are no longer available.	所选的模型文件已无法使用 。
+The server checks that the map is installed and supports the current mode.	服务器检查是否安装了地图,并支持当前模式。
+Themes	主题
+Themes: 	主题 :
+Thermal detonator	热雷管
+Third person	第三人称
+Third-person framing	第三人称设定
+This character selection is unavailable.	此字符选择不可用 。
+This command is too long for the text editor; it is preserved. Use change-key or clear.	此命令对于文本编辑器来说太长; 它被保存。 使用更改键或清晰 。
+This ends your current life.	这结束了你现在的生活。
+This model does not support a mirrored preview	此模式不支持镜像预览
+This outfit has no matching team skin.	这身衣服没有匹配的团队皮肤。
+This restarts the game client.	此重新启动游戏客户端 。
+This slot has no key to swap. Choose Replace or Cancel.	此位置没有要交换的密钥 。 选择替换或取消 。
+Three styles saved. Use your normal style-switch control to cycle them.	保存了三种样式。 使用正常的样式切换控制来循环它们 。
+Three ways to compete	三个竞争方式
+Tilt the camera up or down.	向上或向下倾斜相机.
+Time Limit:	时间限制 :
+Time Nudge	时间
+Time limit	时限
+Time remaining	剩余时间
+Timing and downloads	时间安排和下载
+Toggle camera view	切换相机视图
+Toggle console	切换控制台
+Toggle existing match recording	切换已存在的匹配记录
+Toggle supported first/third-person view	切换已支持的第一/第三人称视图
+Toggle the chat panel and recent messages	切换聊天面板和最近的消息
+Tonemapping	记事
+Top right	右上边
+Tournament	比赛
+Tournament bracket	锦标赛
+Tournament rules did not replace the previous description	比赛规则没有取代之前的描述
+Tournament rules did not scroll	比赛规则没有滚动
+Tournament rules headings did not load as separate lines	锦标赛规则标题没有作为单独线路加载
+Tournament status	参赛情况
+Translate into	翻译为
+Translate received public, team and private chat offline.	翻译工作离线后,得到了公开、团队和私人聊天。
+Translating - offline	翻译 - 离线
+Translation	翻译
+Translation - %s	翻译 - %s
+Translator unavailable; showing original chat	翻译不可用; 显示原始聊天
+Triangle	三角形
+Trilinear	三线
+Trip mine	绊倒矿井
+Turkish	土耳其语Name
+Turn left	左转
+Turn right	右转
+Turn the camera around the player.	转相机绕玩家.
+Turn-speed modifier	转速修饰器
+Turn-speed modifier while walk/run is held	在行走/运行时旋转速度修饰器
+Turning with bound left / right keys.	以绑定的左/右键旋转 。
+Two precise swings; vulnerable recovery.	两次精确的秋千;脆弱的恢复。
+Type:	类型 :
+Ukrainian	乌克兰语Name
+Unassigned	未指定
+Unavailable in this client or server.	在此客户端或服务器中无法获取 。
+Uncategorized	未分类
+Unfreeze	解冻
+Universal translator	通用翻译
+Universe: 	宇宙 :
+Unknown Setup operation	未知的设置操作
+Unknown quality preset	未知的质量预设
+Unknown setting	未知的设置
+Unlimited	无限制
+Unlock Teams	解锁团队
+Unready	尚未准备好
+Unsaved changes	未保存的更改
+Unsupported Controls operation	不支持的控制操作
+Unsupported value for 	不支持的数值
+Up to 8 registered teams	多达8个已登记的小组
+Use 	使用
+Use / interact	使用/ 交互
+Use Absorb when available	可用时使用辅助工具
+Use FOV 20-120, tilt -45 to 45, speed 20-800.	使用FOV 20-120,倾斜-45至45,速度20-800.
+Use Heal when available	可用时使用治疗
+Use Mind Trick when available	可用时使用 Mind Trick
+Use Protect when available	可用时使用保护
+Use Pull when available	可用时使用拉
+Use Push when available	可用时使用 Push
+Use Rage when available	可用时使用 Rage
+Use Sense when available	可用时使用语气
+Use Speed when available	可用时使用速度
+Use a new personal config name (letters, numbers, spaces, _ or -).	使用新的个人配置名称(字母、数字、空格、_或-) 。
+Use analog axes on the legacy path.	在遗产路径上使用模拟轴.
+Use fixed 50-point saber strikes and stronger timed parries.	使用固定的50分的剑击和更坚固的时空锯齿.
+Use inventory item	使用库存项目
+Use selected Force power	使用选中的强制电源
+Use team Energize when available	可用时使用团队 Energize
+Use team Heal when available	可用时使用团队治疗
+Use team blade colors. Off shows chosen colors.	使用团队的刀片颜色。 关闭显示选择的颜色 。
+Use team skins when available. Off shows chosen outfits.	可用时使用团队皮肤。 关闭显示选中的服装 。
+Use the selected available Force power	使用选中的可用强力
+Use the selected inventory item	使用选定的清单项目
+Use turn speed 0-10000 and accel 0-100.	使用转弯速度0-1000和accel 0-100.
+Used for Custom resolution.	用于自定义解析 。
+VISUAL PREVIEW	视频前言
+VOTE	瓦努阿图
+VOTING	投票
+VS	维基百科
+Value outside the supported edit range.	支持的编辑范围以外的值 。
+Vanilla	香草
+Vehicle lead indicator	车辆领导指标
+Version	版本
+Vertex lighting	Vertex照明
+Vertical look sensitivity	垂直外观敏感性
+Vertical look speed	垂直视速
+Vertical mouse scale	垂直鼠标比例
+Vertical mouse scale; negative means inverted	垂直鼠标比例; 负值表示反转
+Vertical sensitivity	垂直灵敏度
+Vertical sway	垂直摇摆
+Very high	非常高,非常高,非常高,非常高,非常高,非常高
+Video	视频
+View	视图
+Visual effects	视觉效果
+Voice commands	语音命令
+Voice language	语音语言
+Voice volume	语音音量
+Volume	音量
+Vote / Call Vote	投票/呼吁投票
+Vote to add a role supported by the current game type.	投票后增加一个由当前游戏类型支持的角色.
+Vote to remove a player or bot.	投票去掉一个玩家或机器人.
+WEAPONS	武器
+Waiting for the server's player list...	正在等待服务器的玩家列表...
+Walk / run	走/ 运行
+Wall marks	墙印
+Warmup Off	关闭温暖
+Warmup On	打开温暖
+Weapon FOV	武器视野
+Weapon's own ready pose overrides this preview in play.	武器本身准备的姿势在游戏中会取代这个预览.
+Weapon:	武器:
+Weapons	武器
+Weapons: restricted	武器:限制
+Weapons: unrestricted	武器:无限制
+Weightier attacks; less wind-up than Red.	更重的攻击; 不如红。
+White	白色
+White core: Off	白核: 关闭
+White core: On	白核: 打开
+Whole number, 0 to 999. Zero means unlimited. Applies after passing; may end the round.	整数 0 到 999 , 0 表示无限, 过后适用; 可能结束回合 。
+Xbox	Xbox 选项
+YOU	你个
+Yellow	黄色
+You / Blue Horizon	您/ 蓝色地平线
+Your character	你个性
+Your preferred reading language. Requires the matching offline packs.	您喜欢的阅读语言。 需要匹配的离线包 。
+Your sample ready status will reset when you select another event.	选择其他事件时, 您的样本状态将会重置 。
+Your selection is remembered while using dual sabers or a staff.	你的选择被记住了 同时使用双刀或手杖。
+Your server chooses the combat rules.	您的服务器选择战斗规则 。
+Your server may deduct a point.	您的服务器可以扣除一个点 。
+Zero disables acceleration.	0禁用加速度.
+Zero disables this component of view swaying.	0 禁用视图摇动的此组件 。
+Zero removes the client frame-rate limit.	0取消客户端帧率限制.
+Zero uses your field of view.	零用汝观境界.
+[ ] Waiting for you. Click Ready when prepared.	等你,准备好就点击准备
+[ ] You / Waiting	[ ] 你/等待
+[!] Match paused / missing teammate. Reconnect window: 10:00 (sample).	[!] 匹配暂停 / 缺少队友. 重联窗口: 10: 00(样本).
+[!] Mira / Disconnected	[!] 米拉/断线
+[+] Everyone is ready. Sample lobby: no match will start.	[+]大家都准备好了,样本大厅:没有比赛开始.
+[+] You / READY	[+] 你/准备
+\\translator	翻译( C)
+\\translator\\fonts	翻译器(_F)
+^3Saber Trials ^7Local Review	^3 Saber 审判 ^7 地方审查
+^7Akaza: ^2I'll be there soon.	^7Akaza: ^2我马上就到。
+^7Akaza: ^2Ready when you are.	^7Akaza: ^2 准备好的时候你。
+^7Hisoka: ^2Meet by the stairs.	^7 希索卡: ^2 在楼梯边见面.
+^7Hisoka: ^2See you there.	^7 Hisoka: ^2 再见。
+_st_setup_recovery.tmp	_st_setup_ recovery.tmp
+a whole number from 	整个数字从
+alora/default	alora/ 默认
+animation instance missing	缺少动画实例
+applied.	已应用。
+asdfghjkl-	亚瑟夫杰克尔...
+border lights ignore motion preference	边框灯光忽略运动偏好
+cannot drag back to top	无法拖曳回顶部
+cannot drag to bottom outside track	无法拖曳到外部轨道下方
+cl_st_setup.inc	cl_st_setup.inc (中文(简体) ).
+click target missing	单击目标缺失
+controller menu missing	缺少控制菜单
+dirty state	脏态
+expected %s got %s	预期 %s 获得 %s
+favorite selection missing	缺少最爱选择
+favorite state	最喜欢的状态
+fixture has no overflow	固定没有溢出
+fixture requires private Favorites view	固定视图需要私有的 Favorites 视图
+force-rank	军衔
+game/st_stance_runtime.h	游戏/st_stance_runtime.h
+ghost off	鬼魂离开
+ghost on	幽灵在
+hover does not light native button	悬浮不会点亮本地按钮
+keeps dragging after mouse release	鼠标释放后继续拖曳
+keyboard menu missing	键盘菜单缺失
+kyle/default	Kyle/ 默认
+layout context	版式上下文
+legacy action missing	缺少遗留的动作
+levelshots/%s	级别shots/%s
+live value mismatch	活值不匹配
+local browser reply was not displayed	未显示本地浏览器回复
+main-menu alias missing	主菜单别名缺失
+menu destination	菜单目的
+metadata display name mismatch	元数据显示名称不匹配
+metadata franchise mismatch	元数据权限不匹配
+missing Speed rank picker	缺少速度等级拾取器
+missing selection	缺少选择
+missing server list	缺少服务器列表
+missing target %s	缺少目标 %s
+motion state mismatch	运动状态不匹配
+native Force rank purchase changed	部队的军衔采购变更
+native Jedi role selector missing	本地绝地角色选择器缺失
+native Jedi role transition failed	本地绝地角色转换失败
+native destination mismatch	本地目的地不匹配
+native scrollbar did not drag	本地滚动条没有拖动
+native target missing	本地目标缺失
+not enough server fixtures	服务器固定装置不足
+or propose a change to this server.	或提议更改此服务器。
+ordinary Apply changed Jedi role	应用已更改的绝地武士角色
+pending model mismatch	待处理的模型不匹配
+players/_humanoid/	玩家/ _ 人文/ 游戏
+preview unavailable	无法预览
+qcommon/st_utf8.h	qcommon/st_utf8.h 时,您可以直接访问。
+result count	结果计数
+scanning creates one cvar per model	扫描每个模型创建一个 cvar
+scrolling changed active model	滚动已更改的活动模式
+st-controls-save.tmp	ST - controls -save.tmp (英语).
+st_hybridAssets	st_hybridAssets (中文(简体) ).
+st_uiRightStickX	st_uiRightStickX (简体中文).
+staged name	舞台名称
+stale preview survived failed load	stale 预览幸存了失败的负载
+status mismatch	状态不匹配
+stock fallback mistaken for custom voice	股票倒置错误为自定义语音
+stock portrait fixture missing	缺少库存肖像固定图
+sys/sys_public.h	sys/sys_public.h (中文(简体) ).
+theme did not paint %s	主题没有绘制 %s
+thumb grab jumps	抓拇指跳跃
+tournament bracket	锦标赛括号
+tournament status	锦标赛状态
+track click does not scroll	音轨点击不滚动
+ui_stProfilePreviewAvailable	ui_stProfilePreviewAvailable (中文(简体) ).
+ui_st_brand.inc	ui_st_brand.inc (中文(简体) ).
+ui_st_chat_preview.inc	ui_st_chat_preview.inc (中文(简体) ).
+ui_st_hybrid.inc	ui_st_hybrid.inc 时,您可以直接访问
+ui_st_profile_catalog.inc	ui_st_profile_catalog.inc 页面存档备份,存于互联网档案馆 互联网档案馆的存檔,存档日期2013-09-02.
+ui_st_profile_draw.inc	ui_st_profile_draw.inc 页面存档备份,存于互联网档案馆
+ui_st_rich.inc	ui_st_rich.inc (中文(简体) ).
+ui_st_setup.inc	ui_st_setup.inc (中文(简体) ).
+ui_st_setup_draw.inc	ui_st_setup_draw.inc 页面存档备份,存于互联网档案馆
+unexpected connection state	意外连接状态
+unknown QA operation	未知的 QA 操作
+unknown scrollbar fixture	未知的滚动条固定
+value%d	数值%d
+virtual keyboard state	虚拟键盘状态
+weapon 1	武器1号
+weapon 10	武器 10
+weapon 11	武器 11
+weapon 12	武器 12
+weapon 2	二号武器
+weapon 3	3号武器
+weapon 4	武器 4
+weapon 5	武器 5
+weapon 6	武器 6
+weapon 7	武器 7
+weapon 8	武器 8
+weapon 9	武器 9

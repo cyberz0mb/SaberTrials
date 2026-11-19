@@ -1,0 +1,246 @@
+{
+  "version": 1,
+  "stances": [
+    {
+      "id": 1,
+      "animation": "BOTH_ST_READY_01",
+      "label": "KOTOR Upright",
+      "author": "master_ibonek",
+      "family": 0,
+      "preview_only": false,
+      "pack": "kotor_stances_2.0/KOTOR Stances 2.0/ZZzzZZzzZZKOTORSTANCES 2.0.pk3",
+      "source_animation": "BOTH_STAND2",
+      "expected_row": [
+        21388,
+        1,
+        0,
+        20
+      ]
+    },
+    {
+      "id": 2,
+      "animation": "BOTH_ST_READY_02",
+      "label": "KOTOR High Guard",
+      "author": "master_ibonek",
+      "family": 0,
+      "preview_only": false,
+      "pack": "kotor_stances_2.0/KOTOR Stances 2.0/ZZzzZZzzZZKOTORSTANCES 2.0.pk3",
+      "source_animation": "BOTH_SABERFAST_STANCE",
+      "expected_row": [
+        21422,
+        1,
+        -1,
+        60
+      ]
+    },
+    {
+      "id": 3,
+      "animation": "BOTH_ST_READY_03",
+      "label": "KOTOR Low Guard",
+      "author": "master_ibonek",
+      "family": 0,
+      "preview_only": false,
+      "pack": "kotor_stances_2.0/KOTOR Stances 2.0/ZZzzZZzzZZKOTORSTANCES 2.0.pk3",
+      "source_animation": "BOTH_SABERSLOW_STANCE",
+      "expected_row": [
+        21386,
+        1,
+        -1,
+        60
+      ]
+    },
+    {
+      "id": 4,
+      "animation": "BOTH_ST_READY_04",
+      "label": "V2 High Guard",
+      "author": "master_ibonek",
+      "family": 0,
+      "preview_only": false,
+      "pack": "stances_v2/zzzsaberstances_v2zzzz.pk3",
+      "source_animation": "BOTH_SABERFAST_STANCE",
+      "expected_row": [
+        21376,
+        2,
+        -1,
+        60
+      ]
+    },
+    {
+      "id": 5,
+      "animation": "BOTH_ST_READY_05",
+      "label": "V2 Raised Guard",
+      "author": "master_ibonek",
+      "family": 0,
+      "preview_only": false,
+      "pack": "stances_v2/zzzsaberstances_v2zzzz.pk3",
+      "source_animation": "BOTH_SABERSLOW_STANCE",
+      "expected_row": [
+        12273,
+        1,
+        -1,
+        60
+      ]
+    },
+    {
+      "id": 6,
+      "animation": "BOTH_ST_READY_06",
+      "label": "V2 Upright",
+      "author": "master_ibonek",
+      "family": 0,
+      "preview_only": false,
+      "pack": "stances_v2/zzzsaberstances_v2zzzz.pk3",
+      "source_animation": "BOTH_STAND2",
+      "expected_row": [
+        11132,
+        1,
+        -1,
+        20
+      ]
+    },
+    {
+      "id": 7,
+      "animation": "BOTH_ST_READY_07",
+      "label": "Apollyon Forward",
+      "author": "Apollyon",
+      "family": 0,
+      "preview_only": false,
+      "pack": "aps_japlus_stances/z_apollyon_stances_japlus.pk3",
+      "source_animation": "BOTH_SABERFAST_STANCE",
+      "expected_row": [
+        431,
+        4,
+        -1,
+        30
+      ]
+    },
+    {
+      "id": 8,
+      "animation": "BOTH_ST_READY_08",
+      "label": "Apollyon Guard",
+      "author": "Apollyon",
+      "family": 0,
+      "preview_only": false,
+      "pack": "aps_japlus_stances/z_apollyon_stances_japlus.pk3",
+      "source_animation": "BOTH_STAND2",
+      "expected_row": [
+        1852,
+        12,
+        -1,
+        30
+      ]
+    },
+    {
+      "id": 9,
+      "animation": "BOTH_ST_READY_09",
+      "label": "Aidy Forward",
+      "author": "Aidy",
+      "family": 0,
+      "preview_only": false,
+      "pack": "stancesanimations/Stances&Animations.pk3",
+      "source_animation": "BOTH_SABERFAST_STANCE",
+      "expected_row": [
+        2281,
+        15,
+        -1,
+        60
+      ]
+    },
+    {
+      "id": 10,
+      "animation": "BOTH_ST_READY_10",
+      "label": "Aidy Upright",
+      "author": "Aidy",
+      "family": 0,
+      "preview_only": false,
+      "pack": "stancesanimations/Stances&Animations.pk3",
+      "source_animation": "BOTH_STAND2",
+      "expected_row": [
+        11042,
+        21,
+        -1,
+        20
+      ]
+    },
+    {
+      "id": 11,
+      "animation": "BOTH_ST_READY_11",
+      "label": "KOTOR Dual",
+      "author": "master_ibonek",
+      "family": 1,
+      "preview_only": false,
+      "pack": "kotor_stances_2.0/KOTOR Stances 2.0/ZZzzZZzzZZKOTORSTANCES 2.0.pk3",
+      "source_animation": "BOTH_SABERDUAL_STANCE",
+      "expected_row": [
+        21436,
+        1,
+        -1,
+        20
+      ]
+    },
+    {
+      "id": 12,
+      "animation": "BOTH_ST_READY_12",
+      "label": "Apollyon Dual",
+      "author": "Apollyon",
+      "family": 1,
+      "preview_only": false,
+      "pack": "aps_japlus_stances/z_apollyon_stances_japlus.pk3",
+      "source_animation": "BOTH_SABERDUAL_STANCE",
+      "expected_row": [
+        649,
+        4,
+        -1,
+        30
+      ]
+    },
+    {
+      "id": 13,
+      "animation": "BOTH_ST_READY_13",
+      "label": "KOTOR Staff",
+      "author": "master_ibonek",
+      "family": 2,
+      "preview_only": false,
+      "pack": "kotor_stances_2.0/KOTOR Stances 2.0/ZZzzZZzzZZKOTORSTANCES 2.0.pk3",
+      "source_animation": "BOTH_SABERSTAFF_STANCE",
+      "expected_row": [
+        21434,
+        1,
+        -1,
+        20
+      ]
+    },
+    {
+      "id": 14,
+      "animation": "BOTH_ST_READY_14",
+      "label": "Apollyon Staff",
+      "author": "Apollyon",
+      "family": 2,
+      "preview_only": false,
+      "pack": "aps_japlus_stances/z_apollyon_stances_japlus.pk3",
+      "source_animation": "BOTH_SABERSTAFF_STANCE",
+      "expected_row": [
+        9722,
+        2,
+        -1,
+        20
+      ]
+    },
+    {
+      "id": 15,
+      "animation": "BOTH_ST_READY_15",
+      "label": "Backhand (preview only)",
+      "author": "spior (attribution pending verification)",
+      "family": 0,
+      "preview_only": true,
+      "pack": "backhand_saber_stance_hq/backhand_saber_stance_hq/Stance_v1.pk3",
+      "source_animation": "BOTH_STAND2",
+      "expected_row": [
+        21376,
+        2,
+        0,
+        1
+      ]
+    }
+  ],
+  "credits": "Original Jedi Academy animation library: Raven Software / LucasArts. JA+ base library retained from the installed JA+ animation archive. KOTOR Stances 2.0 and Stances V2: master_ibonek; KOTOR readme credits an unidentified earlier raw-data author; V2 ideas: Lonewolf_Samurai. Apollyon stances: Apollyon; JA+ compatibility: The Real Kain. Stances & Animations: Aidy. Backhand HQ: supplied without readme; matching JKHub listing credits spior, archive identity not independently established. User confirms permission to use all supplied packs. Zinneys visual-effects packs are not included. Integration: Saber Trials."
+}

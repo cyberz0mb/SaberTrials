@@ -1,0 +1,1406 @@
+ is assigned to: 	Yemin edilir:
+%s | default %s | edit range %.4g to %.4g	%s | varsayılan%s | edit aralığı%.4g to%.4g
+')!=std::string::npos)){error=	“)!=std: enstring::npos)
++  Advanced video	+ Gelişmiş video
++altattack	+alt saldırı
++attack	+ saldırılar
++forward	+ ileri
++lookdown	+ göz ardı
++lookup	+ lookup
++moveright	+
++right	+
++scores	+ göstergeler
++speed	+ hızlı
+-  Advanced video	- Gelişmiş video
+-2=Desktop|-1=Custom	-2=Desktop /-1=Müşteri
+.png	.txt
+/default	/
+10 minutes: reconnect or substitute	10 dakika: yeniden bağlantı veya yedek
+10 rounds per match	Maç başına 10 tur
+2v2 / 20 kills	2v2 / 20 öldürür
+32 bit	32 bit 32
+3v3 / 30 kills	3v3 / 30 öldürür
+44 kHz	44
+4v4 / 40 kills	4v4 / 40 ölü
+5 minutes to reconnect	Yeniden bağlantı kurmak için 5 dakika
+5-5 tie: one deciding round	5-5 kravat: yuvarlak karar veren biri
+5v5 / 50 kills	5v5 / 50 öldürür
+8-32 players / even entries	8-32 oyuncu / hatta giriş girişleri
+: unsupported value.	: desteklenmeyen değer.
+; engine directory limit reached	Motor rehberi limiti ulaştı
+; engine range 	motor aralığı
+< Profile	< Profil Profil
+@MENUS_ACROBATICS	Magnetics
+@MENUS_ADD_BOT	Add Bot ekle
+@MENUS_ADD_FAVORITE	Add Favorite Favorite Add Favorite Add Favorite Add Favorite
+@MENUS_ADD_SELECTED_SERVER_TO	Favorilere seçilmiş sunucu ekleyin.
+@MENUS_ADJUSTS_THE_DIFFICULTY	Oyunda yapay olarak akıllı botların zorluk seviyesini ayarlayın.
+@MENUS_ALLOWS_YOU_TO_SELECT	Oynamak istediğiniz sunucu için oyun türünü seçmenize izin verin.
+@MENUS_ALLOW_SABER_CHALLENGE	Saber Challenge'a izin verin:
+@MENUS_AN_ATTACK_DRONE_SIMILAR	Seeker Drone\nJedi tarafından kullanılan eğitim droneları için benzer bir saldırı drone, ışıklarını uygulayabilmek için, Seeker kullanıcının etrafında dolaşıyor ve kullanıcı yangınlarını herhangi bir düşmana saldırıyor. drone, sınırlı bir süre boyunca otomatik olarak çalışır ve sonra kendi imhaları kendi başına imha edilir.
+@MENUS_AN_ELEGANT_WEAPON_FOR	Işıklar\nDaha medeni bir yaş için zarif bir silah, ışıklar, Jedi Knight'ın tercih edilen silahıdır. Işıklar, her iki saldırı ve savunma için kullanılan büyük bir enerji bıçağıdır.\n\nİlk Yangın - Slashing ve hızlanan saldırılar\nİkinci Ateş - Kuvvetli saber at\nDefensive yeteneği - patlamacı ve enerji silah ateşini tanımlar, düşman ışıkları\nAmmo Type - N/A
+@MENUS_APPLY	Başvuru Başvuru Başvuru Başvuru
+@MENUS_APPLY_CHANGES_AND_JOIN	Değişiklikler uygulayın ve ilerlemedeki oyuna katılın.
+@MENUS_APPLY_CHANGES_AND_THEN	Değişiklikler uygulayın ve sonra Main Menu'e gidin.
+@MENUS_APPLY_PLAYER_SABER	Oyuncuya değişiklikler uygulayın ve saber seçimine gidin.
+@MENUS_APPLY_POWERS	Güçler Uygulayır
+@MENUS_APPLY_SABER_CHANGES	saber değişiklikleri uygulayın ve Main Menu'e geri dönün.
+@MENUS_APPLY_THESE_CHANGES_OR	Bu değişiklikleri veya kartpostalları uygulayın?
+@MENUS_ASSIST_ME	Bana yardım et.
+@MENUS_ATTACK_THE_ENEMY_S_BASE	Düşmanın üssüne saldırmak.
+@MENUS_ATTACK_TITLE	Saldırı Saldırı Saldırı
+@MENUS_AUTO_JOIN_DESC	Sunucunuz takımınızı ve sınıfınızı seçmesine izin verin.
+@MENUS_AUTO_MAP_CYCLE_DESC	Bir sonraki haritaya gidin her seferinde bir maç tamamlandı.
+@MENUS_AWAITING_CHALLENGE	Bekleyen bir meydan okuma... %i
+@MENUS_AWAITING_CONNECTION	Bekleyen bir bağlantı...%i
+@MENUS_AWAITING_GAMESTATE	Bekleyen bir oyun devleti...
+@MENUS_A_DEDICATED_SERVER_IS	Özel bir sunucu sadece başkaları için bir oyun çalışan bir bilgisayardır.
+@MENUS_A_DETONATION_PACK_IS	Detonation Packs\nBir detonasyon paketi aslında uzak bir detonasyon tetikleyicisi olan küçük bir patlayıcı cihazıdır. Paket yerleştirilir veya atılır ve kullanıcı tarafından silinebilir.Detonation paketleri genellikle birmbush düşmanları veya açık kapılar için kullanılır.\n\nİlk Yangın - Kullanıcının Ayaklarında Yükleniyor\nOrta Ateş - Tüm set suçlamaları
+@MENUS_BACKTOMAIN	Ana menüye dön.
+@MENUS_BACKTORULES	Kurallara Geri Döndü
+@MENUS_BACKUP_ONE_MENU	Bir menüyü geri alın.
+@MENUS_BACK_2_PROFILE	Profil menüsüne geri dön.
+@MENUS_BACTA_CANISTERS_ARE_PORTABLE	BioTech Bacta Canisters\nBacta canisters taşınabilir, tek kullanımlık paketler ve acil bakım araçlarıdır. Alanda kullanılmak üzere tasarlanmış, bacta canisters yaraları iyileştirmek ve tıbbi kurtarma sırasında hayatiliği geri yüklemek için kullanılabilir. hiçbir alan tıbbi kurtarma olmadan olmamalıdır.
+@MENUS_BECOME_A_NEARLY_UNSTOPPABLE	Neredeyse durdurulamaz bir juggernaut ol.
+@MENUS_BEGIN_PLAYING_THE_DEMO	demoyu seçilmiş dosyadan oynamaya başlayın.
+@MENUS_BLADE_COLOR	BLADENK
+@MENUS_BLADE_COLOR_DESC	Işıklarınız için renk seçin.
+@MENUS_BLASTER_PISTOL_DESC	DL-44 Ağır Blaster Pistol\nGalaksideki en yaygın silahlardan biri, DL-44 Ağır Blaster tabancasının yavaş ateş oranı var, ancak son derece doğru.\n\nİlk Yangın - Yavaş, tek büyük doğruluk ve hasar ile vuruldu\nİkinci ateş - artan hasar patlama için şarj edilen enerji tasarrufu\nAmmo Type - Blaster Pack
+@MENUS_CALL_FOR_VOTES	Oylar için çağrı
+@MENUS_CANCEL_DESC	Takımları değiştirmeden oyuna dön.
+@MENUS_CAPTURE_LIMIT	Yakalama Sınırı:
+@MENUS_CAPTURE_THE_FLAG_RULES	Bayrak oyun kurallarını yakalayın.
+@MENUS_CHANNEL_THE_FORCE_TO	Müttefiklerinizi iyileştirmek için Force kanal.
+@MENUS_CHOOSE_A_PRE_MADE_ALLOCATION	Güçlerin önceden hazırlanmış bir tahsisini seçin.
+@MENUS_CHOOSE_MOVE_DESC	Bir hareket türü seçin.
+@MENUS_CHOOSE_RULES	Oyun kurallarını seçin
+@MENUS_CHOOSE_SOURCE_OF_SERVERS	Sunucuların kaynağını seçin.
+@MENUS_CHOOSE_SPECIES	Bir tür seçin.
+@MENUS_CHOOSE_THE_PATH_OF_THE	Işık Side'nun veya Karanlık Side'nun yolunu seçin.
+@MENUS_CHOOSE_YOUR_FORCE_TRAINING	Kuvvet Eğitimini seçin
+@MENUS_CHOOSE_YOUR_GAME	Oyununuzu seçin.
+@MENUS_CLASS_CHOICE_DESC	Bir sınıf seçin.
+@MENUS_CLASS_FORCEPOWERS	Bu sınıf için güçler.
+@MENUS_CLASS_INVENTORY	Bu sınıf için zorunlu
+@MENUS_CLASS_WEAPONS	Bu sınıf için silah.
+@MENUS_CLICK_FOR_HUMAN_BOTS	İnsan, botlar veya kapalı yuvalar için tıklayın.
+@MENUS_CLIENTS_CAN_DOWNLOAD	Müşteriler yeni verileri ve kodu indirebilirler.
+@MENUS_CLIENT_MUST_HAVE_EXACT	Müşteriler ve Server aynı kod ve verilere sahip olmalıdır.
+@MENUS_CLOAK_DESC	Cloaking Shield\nKoruma kalkanı, diğerlerine görünmez olan koruyucuyu verir, çalma hareketine izin verir. Ancak, cihazı güçlendirmek için gerekli olan muazzam enerji nedeniyle, kısa bir süre boyunca pıhtılaşır.\n\nBir DEMP 2 tabancasından doğrudan bir vuruş, kalkanı geçici olarak devre dışı bırakacak. Ek olarak, DEMP 2'nin ikincil yangınından bir hit kalıcı olarak kalkanı devre dışı bırakacaktır.\n\nRahip kalkanı sadece Siege oyun türünde kullanılabilir.
+@MENUS_COLOR	RENKNK
+@MENUS_COLOR1_DESC	Bir bıçak rengi seçin.
+@MENUS_COLOR2	2 RENK 2
+@MENUS_COLOR2_DESC	İkinci bir bıçak rengi seçin.
+@MENUS_COMMONLY_REFERRED_TO	Destructive Electro-Magnetic Pulse 2 Gun\nYaygın olarak DEMP 2 olarak adlandırılır, bu pul tüfeği öncelikle droidlere ve elektrik cihazlara karşı kullanılır. DEMP 2, elektrik sistemlerini bozan yüksek güçlü iyon patlamaları ve kişisel kalkanlara karşı en etkili olanıdır.Silahların aksine, DEMP 2'nin iyon suçlamaları yaşam materyaline zarar verebilir.\n\nİlk Yangın - Tek atış, insanlara bazı zarar verir, kalkanlara ekstra zarar verir\nOrta Ateş - Düşmanları geri vurabilecek neredeyse anında şok dalgası açığa çıkaran bir ateş -\nAmmo Type - Power cell
+@MENUS_COMPLETE_THE_CURRENT	Mevcut hedefi tamamlayın.
+@MENUS_CONC_RIFLE_DESC	Stouker Concussion Type\nStouker, yaklaşık 4 metre uzunluğunda yayılan bir patlama yaratıyor.\n\nİlk Yangın - Tek atış, her şeyi zarar veren büyük patlayıcı etkisi, yavaş ateş oranı\nOrta Ateş - Daha küçük bir patlayıcı yarıpına sahip daha küçük bir projek vuruyor ama o yarıda çok daha fazla zarar veriyor ve daha ciddi bir geri teptüre sahip.\nAmmo Type - Metallic Bolts
+@MENUS_CONFIGURE_GAME_CONTROLS	Oyun kontrollerini yapılandırın.
+@MENUS_CONFIGURE_GAME_SETTINGS	Oyun ayarları.
+@MENUS_CONNECTING_TO	%s'e bağlanın
+@MENUS_CONNECTION_RULES	► RULES
+@MENUS_CREATE_AN_AURA_THAT_PROTECTS	Fiziksel saldırılardan koruyan bir aura oluşturun.
+@MENUS_CUSTOM_CHARACTER	Özel Karakter
+@MENUS_DATA_RATE_DESC	Bilgi transferi internet üzerinden bağlantı hızı.
+@MENUS_DATA_TRANSFER_RATE_TO	Data transfer oranı müşterilere.
+@MENUS_DEDICATED_SERVER	Gizli Server:
+@MENUS_DEFAULT	Varsayılan olarak sıralayıcı
+@MENUS_DEFEND_OUR_BASE	üssümüzü savun.
+@MENUS_DEFEND_TITLE	Korumayı savunmak
+@MENUS_DELETE_SELECTED_SERVER	Favorilerden seçilmiş sunucu.
+@MENUS_DESCRIPTION_OF_A_FORCE	Bir Kuvvet Gücünün Açıklaması.
+@MENUS_DESCRIPTION_OF_A_WEAPON	Bir silah türünin tanımı.
+@MENUS_DESCRIPTION_OF_ITEM_TYPE	Madde türünin tanımı.
+@MENUS_DISABLE_FORCE	Engelli Kuvvet:
+@MENUS_DISABLE_FORCE_INFO	Oyun sırasında herhangi bir güç kullanımını bozmak.
+@MENUS_DISPLAY_SERVER_INFORMATION	Ekran sunucusu bilgileri.
+@MENUS_DISRUPTOR	DISRUPTORTOR
+@MENUS_DONE_DESC	Server Finder'a dön.
+@MENUS_DO_NOT_APPLY_CHANGES	Değişiklikleri uygulama ve video menüsüne geri dönme.
+@MENUS_DRAIN_THE_FORCE_POWER	Rakiplerin gücünü sağlığınıza eklemek için ortadan kaldırın.
+@MENUS_DUALSABERS	Çift Sabers
+@MENUS_DUALSABERS_DESC	2 tane el sabers kullanın, sadece bir dövüş tarzı.
+@MENUS_DUAL_SABERS	Çift Sabers
+@MENUS_DUEL_CAPS	DUEL DUEL
+@MENUS_DUEL_GAMETYPE	Duel oyun kuralları.
+@MENUS_DURATION_5_SECONDS_NAREA	Güç Hızı\nSüre: Değişken (10 - 20 saniye)\nEtkisi Alanı: Jedi\nEtkisi: Jedi hızlar.\n\nRank 1 - Jedi 10 saniye boyunca normalden% 25 daha hızlı hareket eder\nRank 2 - Jedi 15 saniye boyunca normalden% 50 daha hızlı hareket eder\nRank 3 - Jedi 20 saniye boyunca normalden %75 daha hızlı hareket ediyor
+@MENUS_DURATION_CONTINUOUS_NAREA	Kuvvet Aborpsiyon\nSüre: Süreklilik\nEtkisi Alanı: Jedi Sadece\nEtkisi: Herhangi bir doğrudan Güçlerden korunmak.\n\nAbsorbs, çalışan güçlerden zarar verir ve bu enerjinin biziable Force Power'a dönüşr.\n\nRank 1 - 1 Güç saldırıları sıralayacaktır, daha yüksek rütbeli kuvvet saldırıları etkisini azaltır. Bazı Kuvvet Gücünü döndürür.\nRank 2 - 2 Güç saldırılarını sıralayacaktır, büyük ölçüde daha yüksek rütbeli kuvvet saldırıları etkisini azaltır.\nRank 3 - Tüm Güç saldırılarını Nullifies. daha büyük Güç döndürür.
+@MENUS_DURATION_IMMEDIATE_NAREA	Güç Jump Force Jump\nSüre: Immediate\nEtkisi Alanı: Jedi sadece\nEtkisi: Jedi'nın muazzam bir dikey adım atmasına izin verin.\n\nRank 1 - Jedi normal atlayış yüksekliklerine iki katına çıkabilir.\nRank 2 - Jedi normal atlayış yüksekliklerini dört katına çıkarabilir.\nRank 3 - Jedi normal atlayış yüksekliklerini sekiz katına çıkarabilir.
+@MENUS_DURATION_INSTANTANEOUS	Güç Push Push\nSüre: Antanous etkisi\nEtkisi Alanı: Objects veya Persons\nEtkisi: Jedi’nın nesnelerden uzak durmalarına izin verin, tahmin edilebilir füzeler, ve Kuvvetli Ayaklanma ve Zor Push saldırılarına karşı savunmak.\n\nRank 1 - Jedi, belirli bir düşman veya nesneye odaklanmaya yönelik Gücü kullanır.\nRank 2 - Jedi, sınırlı bir yaydaki birden fazla düşman veya nesneyi geri itmek için Gücü kullanır.\nRank 3 - Jedi, düşmanları sağlam yüzeylere veya kesintiye uğratarak zarar vermek için yeterince güç olan birden fazla düşmanı geri itebilir.
+@MENUS_DURATION_INSTANTANEOUS_NAREA	Kuvveti\nSüre: Antanous\nEtkisi Alanı: Sadece yaşayan insanlar sadece\nEtkisi: Jedi'nın bir canlının organlarının uyanmasına veya kısıtlamasına izin verin.\n\nRank 1 - Etkilenen düşman ayağa kalktı ve hasar gördü, ancak 5 saniye boyunca hareketsiz. Jedi sabit kalmalıdır.\nRank 2 - Düşman 1 sıraya benzer şekilde etkilenir, ancak tutuşun uzun süre odaklanması ile düşmanları zarar verebilir ve kaldırmalıdır. Jedi sabit kalmalıdır.\nRank 3 - Düşman 2 sıraya benzer şekilde etkilenir, ancak Jedi özgürce hareket edebilir ve düşmanı duvarlara ve diğer engellere parçalayabilir veya düşmanı hala kıvrım hasarı yaparken kullanabilir.
+@MENUS_DURATION_VARIABLE_10	Force Rage\nSüre: Değişken (10 - 30 saniye)\nEtkisi Alanı: Dark Jedi Sadece\nEtkisi: Jedi belirli bir süre için çılgınca bir hıza gidiyor, ancak daha sonra iyileşmesi gerekir. Aktif iken ve sağlık 1'in ardından sona ermelidir.\n\nDark Rage: Fire% 33 daha hızlı,% 100 oranında daha hızlı hareket,% 50 oranında alınan hasarları azaltın (sağlık 1).\nDark Rage Recovery: Yangın% 50 daha yavaş,% 75 hızda hareket\n\nRank 1 - 10 saniye boyunca Rage, 10 ikinci kurtarma\nRank 2 - 20 saniye boyunca Rage, 10 ikinci kurtarma\nRank 3 - 30 saniye boyunca Rage, 10 ikinci kurtarma
+@MENUS_DURATION_VARIABLE_20	Zihinsel\nSüre: Değişken (5 - 15 saniye)\nEtkisi Alanı: Diğer Oyuncular\nEtkisi: Jedi'nın kendilerini diğer oyunculara görünmez hale getirmelerine izin verin.\n\nRank 1 - Bir Jedi, 5 saniye boyunca tek hedefli bir düşmana görünmez.\nRank 2 - A Jedi, 10 saniye boyunca ileri bir orta mesafenin yaylarında düşmanları görünmez.\nRank 3 - Bir Jedi, 15 saniye boyunca orta bir mesafedeki tüm düşmanları görünmez.
+@MENUS_DURATION_VARIABLE_NAREA	Güç Koruma Kuvveti\nSüre: Değişkenlik\nEtkisi Alanı: Jedi Sadece\nEtkisi: Fiziksel saldırıdan korur.\n\nFiziksel saldırılardan Jedi'ya zarar, sağlık puanından ziyade Force Power havuzundan alınır.\n\nRank 1 - 50% Hasar bloke edildi,% 100 Force havuzundan kaldırıldı, max 100 Hasar\nRank 2 - %75 Hasar bloke edildi, Force havuzundan% 50 kaldırıldı, max 200 Hasar\nRank 3 - 87.5% Hasar bloke edildi, kuvvet havuzundan %25 kaldırıldı, max 400 Hasar
+@MENUS_EFFECT_JEDI_ALLIES_NEFFECT	Team Energize\nSüre: Antanous etkisi\nEtkisi Alanı: Jedi Allies\nEtkisi: Jedi, güç enerjisi ile müttefikleri taklit etme yeteneğine sahiptir.\n\nForce Team Energize, Jedi'nın bazı vücut yarıçapında müttefiklerine belirli bir miktar Kuvvet enerjisini geri yüklemesine izin veriyor. Jedi, 50 Force puanını bir müttefike geri getirebilir, 33 Kuvvet noktası iki müttefike veya 25 Güç noktasına 3 veya daha fazla müttefike.\n\nRank 1 - Normal aralık\nRank 2 - Bir buçuk kez normal aralığı\nRank 3 - Çift normal aralığı
+@MENUS_EFFECT_NAREA_OF_EFFECT	Force Sense\nSüre: Antanous etkisi\nEtkisi Alanı: Jedi bakış alanı\nEtkisi: Jedi'ya büyük ve geniş bir vizyona izin verin.\n\nForce see, Jedi'nın tüm düşmanları açıkça görmelerine izin veriyor, aydınlatma koşulları ne olursa olsun, onları kolay bir aura ile çevreleyerek. Force see ayrıca Jedi'nın Jedi Mind Trick Force gücünü karşılamasına izin veriyor.\n\nRank 1 - Oyuncuların auraları normal zaman süresi ile görüşte vurgulandı.\nRank 2 - Oyuncuların bakışlarında ve iki zaman süresi olan duvarlar aracılığıyla bakın.\nRank 3 - Oyuncuların bakış auraslarını ve üç saat boyunca duvarlar aracılığıyla görün. Oyuncular otomatik olarak bu seviyede keskin nişancı çekim yapabilir.
+@MENUS_ENTER_IP_ADDRESS	IP Adresi girin:
+@MENUS_ENTER_IP_ADDRESS_OF_FAVORITE	En sevdiğiniz sunucunun IP adresini girin.
+@MENUS_ENTER_THE_NAME_FOR_YOUR	Sunucunuz için adı girin.
+@MENUS_ENTER_THE_TITLE_FOR_YOUR	Güç şablonunuz için başlık girin (yalnızca ikisine de kat).
+@MENUS_ERROR	Hata:
+@MENUS_ESTABLISH_THE_NUMBER	Maçı kazanmak için gereken öldürme sayısı.
+@MENUS_EVEN_TEAMS	Takımlar bile:
+@MENUS_EWEB_DESC	E-Web\nE-Web, güçlü bir savunma pozisyonu oluşturmaya yardımcı olmak için savaş alanında konuşlandırılabilir.\n\nE-Web sadece Siege oyun türünde kullanılabilir.
+@MENUS_EXIT_TO_MAIN_MENU	Main Menu'e çıkın.
+@MENUS_FASTEST_CLIENT_ALLOWED	En hızlı müşteri bağlanmaya izin verdi.
+@MENUS_FFA_CAPS	ÜCRETSİZ
+@MENUS_FILENAME	Dosya adı:
+@MENUS_FILTER_FOR_SPECIFIC_GAME	Belirli oyun türleri için filtre ayarlayın.
+@MENUS_FIND_PLAYER	Oyuncu bul Oyuncu bul
+@MENUS_FINISHED_INPUTTING_INFO	Bilgiyi bitirmeyi bitirdi.
+@MENUS_FOLLOW_ME	Beni takip edin.
+@MENUS_FORCEDESC_DARK	Dark Dark
+@MENUS_FORCEDESC_LIGHT	Işık Işık Işığı
+@MENUS_FORCE_DRAIN	Dr.:
+@MENUS_FORCE_GRIP	Ayaklanma:
+@MENUS_FORCE_LIGHTNING	Yıldırım:
+@MENUS_FORCE_MASTERY_INFO	Güçlere tahsis edilebilecek noktaların sayısını tanımlar.
+@MENUS_FORCE_MINDTRICK	Zihinsel Psiko:
+@MENUS_FORCE_POWERS_TITLE	Güçler:
+@MENUS_FORCE_POWERS_TITLE_DESC	Enable güçler, güç devrelerini devre dışı bırakmak veya sadece Jump, Push, Pull ve Saber atını etkinleştirin.
+@MENUS_FORCE_PROTECT	Koruma:
+@MENUS_FORCE_RULES	Kuvvet Kuralları.
+@MENUS_FORCE_SIDE	Güç tarafı:
+@MENUS_FORCE_SIGHT	Görmek:
+@MENUS_FORCE_SPEED	Hız:
+@MENUS_FORCE_TEMPLATES	Kuvvet Şablonları
+@MENUS_FREE_FOR_ALL_GAME_RULES	Tüm oyun kuralları için ücretsiz.
+@MENUS_FRIENDLY_FIRE	Dostum Ateş:
+@MENUS_GAME	Oyun:
+@MENUS_GAME_RULES	Oyun Kuralları.
+@MENUS_GAME_TYPE	Tipi:
+@MENUS_GENERAL_RULES	GENEL RULES
+@MENUS_GET_ENEMY_FLAG_BACK_TO	Düşman bayrağını arkaya geri alın.
+@MENUS_GET_NEW_LIST	Yeni Liste Alın
+@MENUS_GET_OUR_FLAG_BACK	bayrağımızı geri alın.
+@MENUS_GET_SERVER_INFO	Server Info Server
+@MENUS_GET_UPDATED_SERVER_LIST	Güncellenen Server Listesi alın.
+@MENUS_GO_BACK_TO_STANDARD_SETTINGS	Standart ayarlara geri dönün.
+@MENUS_GO_TO_MAIN_MENU	Main Menu'e gidin mi?
+@MENUS_GUARD_OUR_FLAG_CARRIER	Bayrak taşıyıcımızı korumak.
+@MENUS_HEAD	O'na yemin ederim
+@MENUS_HEAL	Ey Âdem
+@MENUS_HEAL_YOUR_BODY_WITH_THE	Vücudunu kuvvetle kuşatıyor.
+@MENUS_HILT1_DESC	Bir hilt seçin.
+@MENUS_HILT2_DESC	İkinci bir hilt seçin.
+@MENUS_IMMOBILIZE_OPPONENTS	Bir öncekinde rakipleri ölüme itmek.
+@MENUS_INCLUDE_EMPTY_SERVERS	Listede boş sunucular ekleyin.
+@MENUS_INCLUDE_FULL_SERVERS	Listede tam sunucular ekleyin.
+@MENUS_INPUT_IP_ADDRESS_OF_SERVER	Access IP address of server.
+@MENUS_INPUT_PASSWORD	Giriş şifresi.
+@MENUS_INPUT_PASSWORD_1	Giriş Şifre Şifre
+@MENUS_INPUT_PLAYER_NAME	Giriş oyuncu adı.
+@MENUS_INSTANTANEOUS_EFFECT_NAREA	Force Pull\nSüre: Antanous etkisi\nEtkisi Alanı: Objects veya Persons\nEtkisi: Jedi’nın rakipleri silahsızlaştırma şansına karşı düşmanları çekmesine izin verin. Ayrıca Force Pull saldırılarına karşı da savunuyor.\n\nRank 1 - Jedi, odaklandığı belirli bir düşman çekmek için Gücü kullanır.\nRank 2 - Jedi, sınırlı bir yayda birden fazla düşman çekmek için Gücü kullanır.\nRank 3 - Jedi, yakın aralıkta hedefleri yakalamak için yeterli güçle birden fazla düşman çekebilir.
+@MENUS_INTERNET	İnternet Internet Internet
+@MENUS_IN_CAPTURE_THE_FLAG_CTF	Bayrak (CTF), iki takım karşıt takımın bayrağını yakalamak ve eve geri dönmek için yarışıyor.Bir takım herhangi bir üyesi, karşıt takımın bayrağını alabilir. bayrak alındığı zaman, haritadaki tüm oyuncular olaylara uyarılır. bayrak taşıyıcısı o zaman düşmanın bölgesinden kaçmalıdır ve bayrakları puan almak için kendi tabanlarına geri dönmelidir.\n\nEğer bayrak taşıyıcısı ortadan kaldırılırsa, bayrak ortadan kaldırılır. Bayrak sahibinin ekibinin bir üyesi bayrak sahibinin takımı bayraklara dokunursa, bu otomatik olarak ters bir oyuncunun ekibinin bir üyesi onu alırsa, eve geri dönmeye çalışabilirler.\n\nTEAM SCORING\nDüşmanın bayrağını örtmek: +1 point\n\nINDIVIDUAL SCORING\nDüşmanın bayrağını almak: +10 puan\nDüşmanın bayrağını sarsın: +100 puan\nEkibiniz düşman bayrağını yakalar: +25 puan\nbayrağını yeniden keşfedin: +10 puan\n- takım için acil yakalama izin: +10 puan\nDüşman bayrak taşıyıcısı: +20 puan\n- takım için acil yakalama izin: +10 puan\nBayrak taşıyıcınızı korumak: +5 puan\nBayrak üssünüzü korumak: +10 puan\n\nMaçın sonunda en yüksek puanla takım oyunu kazanır.
+@MENUS_ITEM_RULES	Madde Kuralları.
+@MENUS_JETPACK_DESC	Jetpack\nJetpack, aşınmanın kısa süreler için uçmasına izin verir, onlara diğerlerinin üzerinde taktik bir avantaj sağlar.Eğer kullanıcı roketleri ateş etmezse, yavaş yavaş yüksekliğe kaybolacaklardır.\n\njetpack sadece Siege oyun türünde kullanılabilir.\n\n(Not: jetpack'i etkinleştirin, atlayın, sonra havada ‘kullanış’, kullanıcının yüksekliğe girmesine izin verir, ancak ‘crouch’un altındaki yükseklik azalır.)
+@MENUS_JOIN_CHOSEN_SERVER	Seçilmiş sunucuya katılın.
+@MENUS_JOIN_GAME	Oyuna Katıl
+@MENUS_JOIN_PLAYER_DESC	Bu oyuncu ile sunucuya katılın.
+@MENUS_JOIN_TEAM_DESC	Bu takıma katılın.
+@MENUS_LEAP_TO_AMAZING_HEIGHTS	Jump düğmesine kaparak şaşırtıcı yüksekliklere hazırlanın.
+@MENUS_LEAVE_JEDI_KNIGHT_II	Jedi Academy'yi Çok Oyunu Bırak.
+@MENUS_LIGHTSABER_CREATION	LIGHTSABER
+@MENUS_LIGHTSABER_ONLY	Işıklar sadece:
+@MENUS_LIGHT_DARK_INFO	Kırmızı takımı karanlık yan güçlerini kullanmak için, mavi ışık tarafını kullanmak için.
+@MENUS_LIGHT_DARK_TEAMS	Işık / Dark Takımları:
+@MENUS_LOADING_MAPNAME	Yükleniyor... %s
+@MENUS_MAKE_THESE_CHANGES_TO	Bu değişiklikleri karakterin Kuvvet Abilitelerine yapın.
+@MENUS_MATCHING_NAMES	Eşleştirme isimleri yazılacak.
+@MENUS_MAXIMUM_PING	Maksimum Ping:
+@MENUS_MAXIMUM_PLAYERS	Maksimum Oyuncular:
+@MENUS_MINIMUM_PING	Asgari Ping:
+@MENUS_MINIMUM_TIME_ALLOWED	Bağlantı girişimleri arasında minimum süre izin verilir.
+@MENUS_MISSION	Misyon:
+@MENUS_MOVE_AT_AN_ACCELERATED	Hızlandırılmış bir hızda hareket edin.
+@MENUS_MOVE_DESC2	Bir hareket açıklamasını görüntülemek için tıklayın.
+@MENUS_MOVE_RULES	Hareket Kuralları.
+@MENUS_MOVE_TYPES	HARE TYPES
+@MENUS_MUST_ACQUIRE_A_MINIMUM	Işıklar kazanmak için Saber Saldırısında minimum 1 sırayı elde etmek gerekir.
+@MENUS_NAME1	Ad:
+@MENUS_NAME_TITLE	Ad:
+@MENUS_NO	Hayır hayır hayır hayır
+@MENUS_NO_LIGHTSABER	No lightsaber
+@MENUS_OBJECTIVE_1	Objektif #1
+@MENUS_OBJECTIVE_2	Hedef #2
+@MENUS_OBJECTIVE_3	Objektif #3
+@MENUS_OBJECTIVE_4	Hedef #4
+@MENUS_OBJECTIVE_5	Objektif #5
+@MENUS_OBJECTIVE_6	Hedef #6
+@MENUS_OBJECTIVE_7	Objektif #7
+@MENUS_OBJECTIVE_8	Hedef #8
+@MENUS_OBJECTIVE_COMPLETED	Tamamlandı.
+@MENUS_OF_EFFECT_JEDI_ALLIES_NEFFECT	Heal Other\nSüre: Antanous etkisi\nEtkisi Alanı: Jedi müttefikleri\nEtkisi: Jedi, yaralanmadan sonra müttefikleri iyileştirme yeteneğine sahiptir.\n\nForce Heal Diğer, Jedi'nın bazı vücutlarının yarıçapları içinde müttefiklerine belirli bir miktar sağlık geri yüklemesine izin verir. Jedi, 50 sağlığını bir müttefike geri getirebilir,\n33 iki müttefike veya 25 sağlığına 3 veya daha fazla müttefike sağlık.\n\nRank 1 - Normal aralık\nRank 2 - Bir buçuk kez normal aralığı\nRank 3 - Çift normal aralığı
+@MENUS_OF_EFFECT_JEDI_ONLY_NEFFECT	Kuvvet Heal\nSüre: Antanous etkisi\nEtkisi Alanı: Jedi sadece\nEtkisi: Jedi yaralanmadan sonra iyileşir.\n\nRank 1 - Jedi anında 5 sağlık için geri dönüyor.\nRank 2 - Jedi anında 10 sağlık için geri dönüyor.\nRank 3 - Jedi anında 25 sağlık için geri döndü.
+@MENUS_OF_EFFECT_LIVING_PERSONS	Force Lightning Lightning\nSüre: Değişkenlik\nEtkisi Alanı: Sadece yaşayan insanlar sadece\nEtkisi: Jedi'ya düşmanlara karşı yıkıcı bir elektrik saldırısına izin verin.\n\nRank 1 - Jedi, yangınları ileriye götüren tek bir cıvata başlatır, anında zarar verir.\nRank 2 - Jedi, devam eden bir saldırı için Force Lightning'i koruyabilir.\nRank 3 - Jedi, büyük bir ileri arkta sürekli bir elektrik hayranı, onların önünde herhangi bir şeye zarar veriyor.
+@MENUS_ONLY_HUMANS	Sadece insanlar kuşatmaya izin verilir
+@MENUS_PASSWORD	Şifre Şifre Şifre
+@MENUS_PASSWORD_1	Şifre:
+@MENUS_PLAYERS	Asgari Botlar/Oyuncular:
+@MENUS_PLAYERS_INFO	Sunucunun bu sayıda aktif insan oyuncuya sahip olup olmadığını botlar ekleyin.
+@MENUS_POINTS_REMAINING	Kalan noktalar:
+@MENUS_POWER	Güç:
+@MENUS_POWERDUEL_CAPS	GÜVEN DUEL
+@MENUS_POWERDUEL_GAME_RULES	Power Duel oyun kuralları.
+@MENUS_PREVENT_THE_ENEMY_FROM	Düşmanı mevcut hedeflerini tamamlamaktan alıkoyun.
+@MENUS_PRIMARY_OBJECTIVES	Temel Misyon Amaç
+@MENUS_PROFILE_DESC	Şekil karakter ayarları.
+@MENUS_PROGRAM	Oldukça Program?
+@MENUS_PROTECT_AGAINST_FORCE	Kuvvet saldırılarına karşı korumak ve onlardan güç kazanmak.
+@MENUS_PULL_YOUR_FOES_TO_YOU	Ağzını sana götürün.
+@MENUS_PUSH_YOUR_FOES_AWAY_AND	Folarınızı uzaklaştırın ve projeilleri yeniden şekillendirin.
+@MENUS_QUIT_PROGRAM	Oldukça Program
+@MENUS_REFRESH_LIST	Yenileme Listesi
+@MENUS_REFRESH_SERVER_LIST	Yeni Server Listesi.
+@MENUS_RENDER_YOURSELF_INVISIBLE	Seçilmiş hedefler için kendinizi görünmez bir şekilde giyin.
+@MENUS_REPLY_TITLE	Reply Reply Reply
+@MENUS_REQUEST_TITLE	Talep İste İstek
+@MENUS_RESTART_MATCH	Yeniden Başlayın Match
+@MENUS_RETURN_PREVIOUS	Önceki menüye dön.
+@MENUS_SABERLOCKING	Saber Lock'a izin verin:
+@MENUS_SABERLOCKING_DESC	Oyuncuların sabers kilitlemesine izin verin.
+@MENUS_SABERSTAFF	İki-Handed Saber
+@MENUS_SABERSTAFF_DESC	Bir iki el saber kullanın, sadece bir dövüş tarzı.
+@MENUS_SABER_ATTACK	Saber Saldırı:
+@MENUS_SABER_CHALLENGE_INFO	Bir oyuncu, özel bir ışıktan başka bir şeye meydan okuyabilir.
+@MENUS_SABER_DEFEND	Saber savunuyor:
+@MENUS_SABER_HILTS_DESC	saber hilt (s) seçin.
+@MENUS_SABER_ONLY_INFO	Tüm oyuncular ışıklarıabers kullanıyor ve tüm silahlar kaldırıldı.
+@MENUS_SABER_STAFF	Saber Personel
+@MENUS_SABER_THROW	Saber Jump:
+@MENUS_SABER_TYPE_DESC	saber tipini seçin.
+@MENUS_SAVE_CURRENT_FORCE_SETUP	Mevcut kuvvet kurulumunu ayrı bir şablon olarak kurtarın.
+@MENUS_SAVE_FILE	Kaydet File
+@MENUS_SEARCHING	%d /%d ...
+@MENUS_SEARCH_CURRENT_SERVER	Arkadaşlar için mevcut sunucu listesini arayın.
+@MENUS_SEARCH_DESC	Bu oyuncu için tüm sunucular arayın.
+@MENUS_SECONDARY_OBJECTIVES	İkincil Hedefler
+@MENUS_SEE_ENEMIES_AT_ALL_TIMES	Düşmanları her zaman gör ve hatta keskin nişancı çekimler bile.
+@MENUS_SELECT_BOTS	Bots seçin
+@MENUS_SELECT_BOTS_DESC	Özel botlar oynamak için
+@MENUS_SELECT_HEAD	Bir kafa stili seçin.
+@MENUS_SELECT_LEGS	Bir bacak stili seçin.
+@MENUS_SELECT_TORSO	Bir torso stili seçin.
+@MENUS_SENTRY_CAPS	SENTRYRY
+@MENUS_SERVER_INFORMATION	Server Bilgileri
+@MENUS_SETS_PASSWORD_FOR_YOUR	Sunucunuz için parola ayarlar. Oyuncular parola girerlerse katılabilirler.
+@MENUS_SETS_THE_MAXIMUM_NUMBER	Oyuncuların maksimum sayıda oyuncu sunucunuza katılmalarına izin verdi.
+@MENUS_SET_FILTER_FOR_SPECIFIC	Belirli oyun modları için filtre ayarlayın.
+@MENUS_SET_TO_ON_TO_HAVE_PLAYERS	Kuvvet oyuncuları seyirci modunda kalmak yerine katılmak.
+@MENUS_SHOW_GAME_CREDITS	Oyun kredilerini göster.
+@MENUS_SIEGE_GAME_RULES	Siege oyun kuralları.
+@MENUS_SIEGE_GAME_RULES_DESC	Siege, bir takım suçta ve savunmada olduğu bir zamanda birbirlerine karşı iki takım var. Her iki takım da hedefleri var, ancak saldırgan ekip, birincil hedeflerini kazanmak için tamamlamak zorundadır.\n\nHer takım bir dizi karakterden oluşur, her biri kendi uzmanlıklarından oluşur. Her karakter kendi benzersiz yetenekleri setleriyle katkıda bulunabilir.\n\nSeçmeli bir sunucu kuralı, takım geçişine izin verir. Bu seçenekle, takımlar ilk maçtan sonra geçiş yapar. Eğer saldırgan takım ilk maç kazandıysa, yeni saldırgan takım ilk takım kazanmak için ilk takıma eşit bir zaman sınırı vardır.\n\nBÖRÜNCÜ - OFFENSE\nZaman tükenmeden önce tüm birincil hedefleri tamamlayın.\n\nBÖLÜMLER - DEF\nZaman tükenmeden önce tüm birincil hedefleri tamamlamaktan suçluyu önlemek.\nSaldırı ekibinin birincil hedeflerinden herhangi birini tamamlamasını engelleyen tam hedefler.
+@MENUS_SIEGE_TECH	TEKNİK
+@MENUS_SINGLESABER	Standart Saber
+@MENUS_SINGLESABER_DESC	Bir el saber kullanın, 3 dövüş stili seçimi.
+@MENUS_SKILL	Skill Skill Skill
+@MENUS_SKILL1	Beceri:
+@MENUS_SLOWEST_CLIENT_ALLOWED	Yavaş müşteri bağlantı kurma izin verdi.
+@MENUS_SORT_BY_GAME_TYPE	Oyun türü tarafından sıralayın.
+@MENUS_SORT_BY_MAP_NAME	Harita adı ile Sort.
+@MENUS_SORT_BY_NUMBER_OF_PLAYERS	Oyuncuların sayısına göre sıralayın.
+@MENUS_SOURCE	Kaynak:
+@MENUS_SPEND_YOUR_POINTS_BY	Aşağıdaki Güçlere tıklayarak puanlarınızı geçirin.
+@MENUS_SPOTTED_TITLE	Spott
+@MENUS_STARTING_UP	Başlayın...
+@MENUS_START_PLAYING_NOW	Şimdi oynamaya başlayın!
+@MENUS_STATIONARY_SHIELD_CAPS	KAYNAK DAHABER
+@MENUS_TEAM	Takım:
+@MENUS_TEAM_BLUE	Takım BLUE
+@MENUS_TEAM_FFA_GAMETYPE	Team FFA oyun kuralları.
+@MENUS_TEAM_RED	Takım RED
+@MENUS_TEAM_SWITCHING	Takım Anahtarlama:
+@MENUS_TEAM_SWITCHING_DESC	Takımların haritayı en az miktarda zaman bitirmek için yarıştığı oyun modu.
+@MENUS_THERMAL_DETONATOR	THERMAL DETONAT
+@MENUS_THE_FORCE_TO_BOOST_THE	Güç, müttefiklerinizin gücünü artırmak için.
+@MENUS_THE_GAME_OF_DUEL_IS_ALSO	Duel, küçük bir kapalıdaki iki dövüşçüyü ışıklarabers ile savaşa sokuyor. Her iki rakip de tam bir sağlıkla, onların sabers ve bir patlama tabancası (server seçeneği) ve birbiriyle yüzleşmelidir.\n\nHerhangi bir oyuncu Duel'e katılabilir, ancak sadece iki kişi herhangi bir zamanda arenadadır. Bir maç tamamlanmaya kadar oyuncu gözlemler.Bir oyuncu ortadan kalktığında, kaybeden gözlemci kuyruğunun sonunda ortaya çıkar ve bir sonraki kişi kazananla savaşmak için getirilir.\n\nBir kez daha, her iki rakip de sağlıkla tamamen yeni rakiplere karşı rekabet etmeye devam ediyor, o ya da ortadan kalkıncaya kadar puan veriyor ya da maç limitine ulaştı.\n\nSCORING\nBir düşmanı ortadan kaldırmak: +1 point\nKendinizi yönetin: rakibinize +1\n\nMaçın sonunda en yüksek puanı olan oyuncu kazanır.
+@MENUS_THE_MEDPAC_IS_A_SMALL	Medpac\nMedpac küçük bir standart alan tıbbi kit. Ne zaman satın alındı, medpac anında sağlığı geri döndürür ve hasarlı doku iyileştirir.
+@MENUS_THE_PERSONAL_SHIELD_IS	Kişisel Shield (Armor)\nKişisel kalkan, en çok saldırı hasar türlerine karşı koruyucu bir güç alanı olan bir kemer kaplı bir cihazdır, ancak kalkan zarara karşı koruyucu puanı azaltılır.Bir kez kalkan puana eşit hasar alırsa, kalkan şarj edilebilir. Shields çoğu saldırı hasar türünü absorbe eder ancak aşınmaya veya ezilmeye karşı koruyucusu korumaz.
+@MENUS_THE_PLX_2M_IS_AN_EXTREMELY	Merr-Sonn PLX-2M Portre Füze Sistemi\nPLX-2M, Arakyd 3T3 füzelerini yangınlayan son derece güçlü bir silahtır. PLX-2M'nin patlayıcı gücü, yakın çeyreklerde körüne ateş etmek için tehlikeli hale getirir, ancak ‘akıllı’ bir silah olarak kullanıldığında son derece etkilidir.\n\nİlk Yangın - tek, ileri patlayıcı bir füze\nOrta Ateş - Dağları satın alınan ve kilit hedefler alan tek 'akıllı' bir füze\nAmmo Type - Rockets
+@MENUS_THE_PRIMARY_WEAPON_OF	E-11 Blaster T\nİmparatorluk güçlerinin birincil silahı, E-11, küçük boyutuna rağmen büyük zarar verebilecek sağlam ve ölümcül bir patlama tüfeğidir. E-11'in kompakt tasarımı taşımak ve gizlemek için kolay hale getirir.\n\nİlk Yangın - Yavaş, tek tek orta doğruluk ve büyük hasar ile atış\nOrta Ateş - Hızlı, düşük doğrulukla ateş patladı ve ateş alanı genişletildi\nAmmo Type - Blaster Pack
+@MENUS_THE_THERMAL_DETONATOR	Termal Detonator\nTermal detonator, etrafındaki tüm meseleyi parçalayabilen bir ısı enerjisinin bir barakını salıveren bir yarı-damage grenade.\n\nİlk Yangın - Grenade kısa süre sonra patladı\nOrta ateş - Grenade temasa geçti
+@MENUS_THIS_ALLOWS_PLAYERS_TO	Bu, oyuncuların oyuncuları tekmelemek için bir oy aramasını sağlar, haritaları değiştirir, vs.
+@MENUS_THIS_ARCHAIC_LOOKING	Wookiee Bowcaster\nBu arşivli silah, Wookiee homeworld dışındaki çok sayıda avcının, fiziksel olarak zayıf yaratıkların onları ateş etmesine izin veren eylemlerin güçlü bir şekilde ateş etmesi gerekir.\n\nİlk Yangın - Birden fazla çekim için şarj edilen enerji\nOrta Ateş - Aşırı doğru, ricochet-bilinmeyen tek atış\nAmmo Type - Power cell
+@MENUS_THIS_DEADLY_WEAPON_IS	Portatif Saldırı Sentry\nBu ölümcül silah kabaca büyük bir sırt çantasının büyüklüğüdür, ancak büyüklüğü sizi kandırmasına izin vermeyin.Bir kez aktive edildiğinde, silahsızlığı ve herhangi bir düşman tehdidini otomatik olarak hedefletir.Sentry batarya hayatını hızlandırıyor ve bir kez orijinal taşınabilir duruma geri dönülemez.
+@MENUS_THIS_DESTRUCTIVE_PROJECTILE	Concussion Launcher ile İmparatorluk Ağır Tekrarlayıcı\nBu yıkıcı proje silahı son derece ölümcül, metal mermilerin hızlı akışını ateş ediyor. İmparatorluk güçleri, ağır tekrarlayıcının kalabalık kontrolü için ölümcül baskıcı ateş ve konksepsiyon başlatıcısını kullanıyor ve kalabalık kontrolü için ağır ateş yayıyor ve ağır ateş yayıyor.\nBüyük alanlar.\n\nİlk Yangın - Tamamen otomatik proje\nOrta ateş - Tek atış, patlayıcı yuvarlak\nAmmo tipi - Metalik cıvatalar
+@MENUS_THIS_GAME_IS_BEST_SUMMED	Herkes için ücretsiz, kendileri için her kişi olarak en iyi özetlenir. Oyuncular diğer oyuncuları ortadan kaldırarak puan alır ve kimse bir müttefik olarak kabul edilemez.\n\nSilahlar ve ekipman, sunucuda aksi takdirde elde edilir. Bazı seçenekler, Force güçlerine izin vermek veya mevcut maksimum Kuvvet Seviyeye izin vermek isteyip istemediğini içerir.\n\nSCORING\nBir düşmanı ortadan kaldırmak: +1 point\nKendini kınayan: -1 nokta\n\nMaçın sonunda en yüksek puanı olan oyuncu oyunu kazanır.
+@MENUS_THIS_GAME_PITS_TWO_JEDI	Team Free For All pits two Jedi takımları birbirlerine karşı bir savaşta üstünlüğü için puanlar.Her oyuncu rakipleri ortadan kaldırmak için puanlar verir, ancak aynı takımdaki oyuncular sert düşmanları ortadan kaldırmak için birlikte çalışabilirler.Bir takımdaki tüm oyuncular puanlarını tek bir takım puan için birleştirir.\n\nSilahlar ve ekipman, sunucuda aksi takdirde elde edilir. Bazı seçenekler, Force güçlerine izin vermek veya mevcut maksimum Kuvvet Seviyesine izin vermek isteyip istemediğini içerir.\n\nSCORING\nDüşman takımının bir üyesini ortadan kaldırmak: +1 point\nKendinizi veya bir takım üyesini yönetin: -1 nokta\n\nYuvarlak sonunda en yüksek puanla takım oyunu kazanır.
+@MENUS_THIS_IS_THE_NUMBER_OF	Bu, bir bayrakın oyunu kazanmak için yakalanması gereken zaman sayısıdır.
+@MENUS_THIS_NEFARIOUS_WEAPON	Tenloss DXR-6 Disruptor tüfeği\nBu olumsuz silah, moleküler düzeyde önemli ölçüde etkiler, yaşam materyalini rahat bir şekilde dağıtır. Silahın insan doğası nedeniyle, DXR-6 galaksi boyunca yasaklanır ve genellikle sadece dağınık droid ve Remnant kuvvetler tarafından kullanılır.\n\nİlk Yangın - Tek yavaş ateş oranıyla vurun ve anında saldırı\nOrta Ateş - Scoped mode: İlk olarak şarj edilmesi gereken tek atış, artan hasara neden olur ve yüksek enerji tüketimine sahiptir\nAmmo Type - Power cell
+@MENUS_THIS_OPTION_RE_BALANCES	Bu seçenek, takımlara dengesiz olacaksa bir takıma katılmaktan bir oyuncuyu engeller.
+@MENUS_THIS_STATIONARY_ENERGY	İstasyon\nBu sabit enerji alanı, herhangi bir yerde düşebilir, hangi zamanda düşman ateşini engelleyebilir büyük bir düz kalkan dağıtılır. Tüm bunlar kalkan yoluyla geçebilir, ancak düşmanlar güç tedarikini hızlandırır veya belirli miktarda hasardan sonra kaybolamaz.
+@MENUS_THIS_VALUE_ADJUSTS_THE	Bir maçın sayısı son olacak.
+@MENUS_THROW_YOUR_LIGHTSABER	Işıklarınızı uzak hedeflere zarar vermek için atlayın.
+@MENUS_TIME_LIMIT	Zaman Sınırı:
+@MENUS_TORSO	TORSOSO
+@MENUS_TRIP_MINES_CONSIST_OF	Trip Mines\nGezi madenleri, şekillendirilmiş bir patlayıcıya adanmış bir projeksiyon cihazından oluşur. Lazer, benim yerleştirildiği ve yoldaki en yakın yüzeye bir kirişi genişletir.Eğer kiriş kırılırsa ya da şarj edilirse, her şeye yarı yarıya zarar verir.\n\nİlk Ateş - Bir kez yerleştirilen, kiriş kırılırsa veya benimki yok edilir\nİkinci ateş - Bir kez yerleştirilen, birinin yakınlıkta olup olmadığını ya da benimki yok edilir. Şaşırtıcı yoktur ve kullanıcı için detonat olmayacaktır.
+@MENUS_UNAPPLIED_VIDEO_CHANGES	Video Değişiklikleri
+@MENUS_UNLEASH_DEADLY_ELECTRICAL	Düşmanlarınıza karşı ölümcül elektrik saldırıları.
+@MENUS_UPDATE_ADVANCED_SERVER	Gelişmiş sunucu ayarlarını güncelleyin.
+@MENUS_USE_MORE_POWERFUL_LIGHTSABER	Daha güçlü ışıklaraber saldırıları kullanın. (Required to have saber)
+@MENUS_USE_THE_LIGHTSABER_TO	Gelen saber saldırılarını ve projeillerini görmezden gelmek için ışıklaraber kullanın.
+@MENUS_VALUE_ADJUSTS_THE_TOTAL	Maçı kazanmak için başarılı tur sayısı (duels) gereklidir.
+@MENUS_VARIABLE_NAREA_OF_EFFECT	Kuvveti\nSüre: Değişkenlik\nEtkisi Alanı: Sadece yaşayan insanlar sadece\nEtkisi: Dr.s Force Power ve onu yaşamı tamamlamak için kullanır.\n\nRank 1 - yangınları ileriye götüren tek bir cıvata başlatır, bu miktarı ikinci ve iyileştirecek 10 Güç puanını azaltır.\nRank 2 - Un-aimed, sürekli bir saldırı, ikinci başına 15 Güç puanını boşaltın.\nRank 3 - Büyük ileriye dönük bir yayda sürekli bir fanazlar, ikinci başına 20 Force puanını önlerinde herhangi bir hedef çıkarırlar.
+@MENUS_VC_ATT	1. Saldırı 1.
+@MENUS_VC_ATT_POSITION	3. Saldırı pozisyonu
+@MENUS_VC_ATT_PRIMARY	1. Saldırı Temel amacı
+@MENUS_VC_ATT_SECONDARY	2. Saldırı İkincil Hedefe Saldırı
+@MENUS_VC_DEF	2. savunmayı savun.
+@MENUS_VC_DEF_GUNS	4. Silah pozisyonları
+@MENUS_VC_DEF_POSITION	3. pozisyonu savun
+@MENUS_VC_DEF_PRIMARY	1. Temel amacı savun
+@MENUS_VC_DEF_SECONDARY	2. Orta amacı savun
+@MENUS_VC_REPLY	4. Reply
+@MENUS_VC_REPLY_COMING	3.Gelin 3.
+@MENUS_VC_REPLY_GO	4. Offense
+@MENUS_VC_REPLY_NO	2. Negatif
+@MENUS_VC_REPLY_STAY	5. Savunma Savunma 5.
+@MENUS_VC_REPLY_YES	1. Roger
+@MENUS_VC_REQ	3. İstek 3.
+@MENUS_VC_REQ_ASSIST	1. Yardım 1.
+@MENUS_VC_REQ_DEMO	6. Demolitions
+@MENUS_VC_REQ_HVY	5. Ağır Silahlar
+@MENUS_VC_REQ_MEDIC	2. Medic
+@MENUS_VC_REQ_SUPPLY	3. Malzemeler 3.
+@MENUS_VC_REQ_TECH	4. Tech
+@MENUS_VC_SPOT	5. Spotted
+@MENUS_VC_SPOT_DEF	1. Savunmalar
+@MENUS_VC_SPOT_EMPLACED	4. Emplaced Weapons
+@MENUS_VC_SPOT_SNIPER	3. Sniper
+@MENUS_VC_SPOT_TROOP	2. Troops
+@MENUS_VC_TACTIC	6. Tactics
+@MENUS_VC_TAC_COVER	1. Kapak 1.
+@MENUS_VC_TAC_FALLBACK	4. Retreat
+@MENUS_VC_TAC_FOLLOW	3. Takip 3.
+@MENUS_VC_TAC_HOLD	2. Keep 2. Hold 2.
+@MENUS_VC_TAC_SPLIT	6. Split up
+@MENUS_VC_TAC_TOGETHER	5. Birlikte kalın
+@MENUS_VIEW_EMPTY	Görme Boş:
+@MENUS_WATCH_DESC	Görevi izleyin.
+@MENUS_WEAPON_RULES	Silah Kuralları.
+@MENUS_WHEN_ON_IT_MEANS_TEAMMATES	Ne zaman, takım arkadaşları yaralanabilir ve silahlar ve güç güçleriyle bir başkasını öldürebilir.\n
+@MENUS_WIDELY_USED_BY_THE_CORPORATE	Golan Arms FC1 Flechette Weapon\nKurumsal Sektör Kurumu'nun polis ekipleri tarafından geniş ölçüde kullanılır, FC1 yangınlar yaygın bir modelde metalin sertleri yangınlar. Silah yakın bir yerde birden çok hedefe vurmak için tasarlanmıştır, ancak büyük bakım ricochet hasarlarından kaçınmak için alınmalıdır.\n\nİlk Ateş - Tek atış, ateş yay\nOrta ateş - Çift patlayıcı parrapnel suçlamaları\nAmmo Type - Metallic Bolts
+@MENUS_YES	Evet Evet Evet
+@MENUS_YOU_DECIDE	Karara karar veriyorsunuz
+@MENUS_YOU_HAVE_MADE_CHANGES	Video ayarlarına değişiklikler yaptınız
+@MP_INGAME_GETTINGINFOFORSERVERS	sunucular için bilgi almak...
+@MP_INGAME_SERVER_REFRESHTIME	Server Yeni Zaman
+@MP_SVGAME_CANCEL_PASSWORD	Yakın menü, bağlantı kurmaya çalışmıyor
+A / Cross confirms, B / Circle goes back	A / Cross onaylar, B / Circle geri dönüyor
+A disconnect pauses the match for up to 10 minutes.	Bir kapanış maçı 10 dakikaya kadar durdurur.
+A passed game-type vote is queued for the next round boundary.	Geç bir oyun tipi oylama bir sonraki tur sınırı için sıralanır.
+A setting or binding changed outside the editor. Cancel and reopen to refresh; nothing applied.	Bir ayar veya bağlayıcı editörün dışında değişti ve yenilemeye yeniden açtı; hiçbir şey uygulanmadı.
+ACTION DETAILS / RESET	DETAILS / RESET
+ADD A BOT	Bir BOT
+Acceleration amount; zero disables it	Hızlandırma miktarı; sıfır onu devre dışı bırakır
+Acceleration curve	Hızlandırma eğriliği
+Acceleration curve: 0 legacy, 1 power	Hızlandırma eğrisi: 0 mirası, 1 güç
+Acceleration offset	Acceleration Balance
+Accepted 1v1 challenges inside FFA. Shares the Duel ladder.	FFA içinde 1v1 zorluk kabul etti. Duel merdivenini paylaşın.
+Account / Log in	Hesap / Giriş
+Accounts and match reporting are not connected yet.	Hesaplar ve maç raporlama henüz bağlantılı değildir.
+Action	Action Action Action
+Adaptive	Adaptif
+Add Berserker	Ekle Berserker
+Add Flag Catcher	Add Catch Flager
+Add Saber Master	Saber Master Ekle
+Add Trickster	Ekle Trickster
+Add bots	Botları ekle
+Address	Adres
+Adjust how fast the left stick moves the menu pointer.	Sol çubuğun menü noktası nasıl hızlı hareket ettiğini ayarlayın.
+Adjusts how many chat lines fit.	Kaç sohbet hattının ne kadar uygun olduğunu ayarlayın.
+Adjusts the width across the screen.	Ekrandaki genişliği ayarlayın.
+Advanced Input	Gelişmiş Giriş
+Advanced settings	Gelişmiş ayarlar
+Advanced video	Gelişmiş video
+Advances to the next round	Bir sonraki tura ilerlemeler
+Allow downloads	İndirmelere İzin Ver
+Alternate attack	Alternatif saldırı
+Alternate weapon action / saber throw	Alternatif silah eylemi / saber at
+Always run	Her zaman koşmak her zaman
+Analog joystick axes	Analog sevinçstick axes
+Angle	Yüz Yüz Yüz
+Anime	Anime Anime
+Anisotropic filtering	Anisotropic filtreleme
+Anisotropic filtering unavailable.	Anisotropic filtreleme mevcut değildir.
+Applies on next spawn.	Bir sonraki spawn'da Applies on next spawn
+Apply	Başvuru Başvuru Başvuru Başvuru
+Apply and continue	Uygulama ve devam et
+Apply camera	Uygulamayı Uygulayın
+Apply changes	Değişiklikleri uygula
+Apply or cancel pending edits before switching mods.	Mods geçiş yapmadan önce yapılan düzenlemeleri uygulayın veya iptal edin.
+Apply or discard before leaving?	Ayrılmadan önce uygulama veya kartpostal uygulayın?
+Arabic	Arapça Arapça
+Assets missing or overridden. Showing Stock; Apply cannot save.	Varlıklar eksik ya da overridden. Show Stock; Uygulama kurtaramaz.
+Attack	Saldırı Saldırı Saldırı
+Automatic controller detection	Otomatik kontrol algılama algılama algılama algılama
+Automatic opens for gamepad when no keyboard is detected.	Otomatik olarak, hiçbir klavye tespit edildiğinde oyunpad için açılır.
+Available display modes are added automatically.	Mevcut ekran modları otomatik olarak eklenir.
+Average mouse movement between frames.	çerçeveler arasındaki ortalama fare hareketi.
+Awaiting reply	Bekleyen bir cevap
+B / Circle confirms, A / Cross goes back	B / Circle onaylar, A / Cross geri dönüyor
+BRACKET\nA random draw sets the single-elimination bracket. Byes advance unpaired entrants. Both full lineups must be connected, in the arena and ready before play starts.\n\n1v1 TOURNAMENT\nAn even field of 8 to 32 verified players enters. Play all 10 scored rounds. Each elimination wins a round. Simultaneous deaths replay the round. At 5-5, play one deciding round.\n\nTEAM TOURNAMENT\n2 to 8 teams enter at a fixed size, from 2v2 to 5v5. Players respawn. The first team to 20, 30, 40 or 50 kills respectively wins. After 10 minutes of play, the leader wins. If tied, play until one team takes the lead.\n\nRECONNECTS AND RESERVES\nA missing player pauses play. Each player has 5 minutes to reconnect in 1v1. Each team has 10 minutes to reconnect or fill the slot with a registered reserve from its own team. Repeat drops use the remaining time. Everyone readies again when the lineup is complete. Time expiry forfeits the match. If both sides expire, both are eliminated.	BRACKET\nrastgele bir çizim, tek harfli gerileme braketini ayarlar. Byes önceden tamamlanmamış entrants. Her iki tam satır da birbirine bağlı olmalıdır, arenada ve oyun başlamadan önce hazır olmalıdır.\n\n1v1 TOURNAMENT\n8 ila 32 doğrulanmış oyuncunun alanı bile 10 puanlı turları oynayın. Her bir ortadan kaldırma bir tur kazanır. Simultane ölümler tura tekrar oynar. 5-5'te, bir yuvarlak karar verin.\n\nTEAM TOURNAMENT\n2 ila 8 takım sabit bir boyuta girer, 2v2'den 5v5'e kadar Oyuncular yeniden canlanırlar. İlk takım 20, 30, 40 veya 50 kişi kazanır. 10 dakika sonra, bir takım liderlik alırsa.\n\nRECONNECTS AND REZERVASYON YAPS\nKayıp bir oyuncu çalınır oyun.Her oyuncu 1v1'de yeniden bağlantı kurmak için 5 dakika vardır. Her iki taraf da maça yeniden bağlantı kurmak veya yuvayı kendi ekibinden kayıtlı bir rezervle doldurmanız için 10 dakika vardır.
+Back	Geri
+Back to ready room	Hazır odaya geri dön
+Backhand preview:	Backhand önizleme:
+Balanced	Dengeli
+Base	Base Base
+Basic Settings	Temel Ayarlar
+Begin match	Maça başlayın
+Bilinear	Bilinci
+Binding staged; command was not executed	Binding sahnelendi; komuta idam edilmedi
+Black	Black Black Black
+Blade on	Blade on Blade
+Blaster rifle	Blaster tüfeği
+Blue	Blue Blue Blue Blue
+Blue, Yellow and Red selected. Apply to save.	Blue, Sarı ve Red seçildi. kurtarmak için uygulayın.
+Bottom left	Altmış Sol Sol
+Brightness	Kataliz
+Browse unranked servers	Unranked servers
+Bumpers move the caret	Bumperler bakımı hareket eder
+Bumpers: command history   Triggers: scroll	Bumperler: tarih Tesirleri komut: kaydırma
+Button labels	Düğme etiketleri
+Button labels: 0 Xbox, 1 PlayStation, 2 generic	Düğme etiketleri: 0 Xbox, 1 PlayStation, 2 genel
+Button mapping	Düğme haritası
+CAST YOUR VOTE	CAST YOU VOTE
+Call a vote	Bir oylama çağır
+Camera	Kamera Kamera
+Camera / UI	Kamera / UI
+Camera FOV	Kamera FOV
+Camera damping	Kamera damping
+Camera settings applied.	Kamera ayarları uygulanır.
+Camera smoothing	Kamera düzgünleştirici
+Camera tilt	Kamera
+Cancel changes	İptal değişiklikleri
+Cannot preserve the current custom renderer safely.	Mevcut özel devreyi güvenli bir şekilde koruyabilir.
+Capture	yakalama yakalama yakalama
+Capture Limit:	Yakalama Sınırı:
+Capture limit	yakalama limiti
+Cast your vote	Oynunuzu Cast your vote
+Center view	Merkez manzarası
+Center your view	Merkezi your view
+Changes the chat background. Text stays readable.	Sohbet geçmişini değiştirir. Text okunabilir kalır.
+Changes the language of menus.	Menülerin dilini değiştirir.
+Changing this restarts mouse input.	Bu yeniden başlatma fare girişi.
+Character shadows	Karakter gölgeleri
+Chat	Chat Chat
+Chat box height (%)	Chat box yükseklik (%)
+Chat box size (%)	Chat box boyutu (%)
+Chat box width (%)	Chat box genişlik (%)
+Chat with the current audience	Şu anki seyirciyle Chat
+Chat with your team	Ekibinizle Chat with your team
+Chinese (Simplified)	Çinliler (Siified)
+Chinese (Traditional)	Çin (Traditional)
+Choose Custom resolution.	Özel karar seçin.
+Choose a format to preview its tournament lobby.	Turnuva lobisini önizlemek için bir format seçin.
+Choose a language if short messages or regional variants are misidentified.	Kısa mesajlar veya bölgesel varyantlar misidenized ise bir dil seçin.
+Choose a style	Bir stil seçin
+Choose a style for each of the three slots.	Üç yuvanın her biri için bir stil seçin.
+Choose a whole-number option.	Tüm sayı seçeneği seçin.
+Choose an installed map for the current game type.	Mevcut oyun türü için yüklü bir harita seçin.
+Choose each style's ready pose separately in Stances.	Her stilin Stances'ta ayrı olarak hazır olmasını seçin.
+Choose named action	İsimli aksiyon
+Choose three different styles to complete your cycle.	döngüsünizi tamamlamak için üç farklı stil seçin.
+Choose three different styles. Each style can fill only one slot.	Üç farklı stil seçin. Her stil sadece bir slot doldurabilir.
+Choose your arena.	Senin arenayı seçin.
+Choose your saber hand, then select Apply Changes.	saber elinizi seçin, sonra Uygulama Değişiklikleri seçin.
+Circle	Circle Circle
+Clean Capture	Temiz yakalama
+Clean Capture is on.	Temiz yakalama devam ediyor.
+Clear	Clear Clear Clear Clear
+Client command packets per second.	Müşteriler ikinci başına paketler sipariş ederler.
+Close registration and start the Tournament.	Yakın kayıt ve Turnuvaya başlayın.
+Color depth	Renk derinliği
+Combat	Savaşla Mücadele Mücadele
+Combat styles	Savaş stilleri
+Combat styles...	Savaş stilleri...
+Comics	Comics Comics
+Communication	İletişim İletişim
+Composition grid: 	Kompozisyon ızgarası:
+Config applied.	Config uygulandı.
+Config loaded into editor. Review, then Apply.	Config editör. Review'a yüklendi, sonra uygulayın.
+Config write verification failed; existing config retained.	Config, doğrulama başarısız oldu; mevcut yapılandırılan yapılandırıldı.
+Confirm	Onay Onay Onay Onaylandı
+Connect	Connect Connect
+Connection	Bağlantı Bağlantısı
+Console	Konsol Konsol
+Console keyboard	Konsol klavye
+Console opacity	Konsol opaklık
+Console overlay	Konsol Overlay
+Controller	Controller Controller
+Controller defaults staged; review before Apply	Kontrollü varsayılan varsayılanlar sahnelendi; Uygulamadan önce gözden geçirme
+Controller detection	Controller algılama algılama
+Controls	Kontroller
+Controls what you see when the server allows dismemberment.	Sunucunun dismemberment izin verdiğinde gördüğünüz şeyleri kontrol eder.
+Could not confirm the display settings; recovery file could not be removed.	Ekran ayarlarını doğrulamayabilir; kurtarma dosyası kaldırılamaz.
+Could not finish saving; existing config retained.	Tasarrufu bitiremez; mevcut yapılandırılmış.
+Could not open config for writing.	Yazma için yapılandırılamaz.
+Could not read config	yapılandırmayı okuyamayabilir
+Could not save display recovery.	Ekran kurtarmasını kurtaramaz.
+Count up	Kont up
+Cross	Cross Cross
+Crosshair and interface	Crosshair and arabirim
+Crouch / swim downward	Crouch / yüz aşağı
+Crystal	Kristal Kristal Kristal
+Cubemap bounces	Cubemap çürüyor
+Current custom character	Mevcut özel karakter
+Current dual/staff combat; variants are planned.	Mevcut dual/staff savaş; varyantlar planlanmaktadır.
+Current style	Şimdiki stil
+Curve subdivisions	DÖRÜŞÜNÇÜŞÜNÜ
+Custom	Özel Özel Özel Özel
+Custom height	Özel yükseklik
+Custom sounds	Özel sesler
+Custom width	Özel genişlik
+Customize	Özelleştirin
+Cycle saber style	Lisans saber tarzı
+Cycle your selected combat loadout	Seçilmiş savaş yüklerinizi kapat
+Cycle: %s > %s > %s > repeat	Lisans: %s >%s >%s > tekrarlar
+D-pad left	D-pad ayrıldı
+D-pad moves the pointer  /  Bumpers scroll	D-pad noktası hareket eder / Bumpers kaydırma
+D-pad right	D-pad Doğru
+D-pad up	D-pad yukarı
+DUEL W/L	DUEL W /L
+Damage reactions	Hasar reaksiyonları
+Default	Varsayılan olarak sıralayıcı
+Default movement speed.	Varsayılan hareket hızı.
+Default staged	Temsil aşaması
+Defaults selected. Click Apply Input to save.	Seçilmiş Varsayılanler. kurtarmak için Giriş uygulayın.
+Defer player models	Defer oyuncu modelleri
+Desktop	Masaüstü Masaüstü
+Det pack	Det paket
+Detailed shaders	Detaylı gölgeler
+Detect compatible gamepads as you connect them.	uyumlu oyunpads onları bağlantınız olarak.
+Deutsch	Deutsch Deutsch
+Device preferences	Device tercihleri
+Disable authenticated ghost mode	Başarısız gerçekleştirilmiş hayalet modu
+Disable warmup.	İstenmeyen ısıtın.
+Discard and continue	Discard ve devam et
+Discard pending changes?	Kartpostaları beklemeden mi?
+Discard pending controls changes and open Saved Configs?	Kontrolleri bekleyen kartpostaları ve açık Saved Configs?
+Discard pending controls changes and return?	Kontrolleri bekleyen kartpostallar ve geri dönmeler?
+Disconnect	Disconnectconnect
+Dismemberment	De ki:
+Display	Ekran görüntüsü
+Display recovery could not be verified; settings were not changed.	Ekran kurtarma doğrulanamazdı; ayarlar değişmedi.
+Distance	Uzak Uzak
+Distance behind the player. Walls can bring the camera closer.	Oyuncunun arkasında mesafe. Duvarlar kamerayı daha da yaklaştırabilir.
+Dominant hand...	Hakim el...
+Dominant hand:	Hakim el:
+Drag or right stick to orbit  /  Scroll or bumpers to zoom	Drag ya da sağ yörüngeye / Sayfaya veya bumperlere yakın tutun
+Drag or type a value, then Apply. Size: 75-125%.	Drag veya bir değer yazın, sonra uygulayın. Boyut: 75-125%.
+Drag or type values, then Apply camera.	Drag veya tip değerler, sonra kamera uygulayın.
+Drag to orbit  /  Scroll to zoom	yörüngeye git / zoom
+Driver info	Sürücü bilgi
+Driver information	Sürücü bilgisi
+Duel ladder	Duel merdiven
+Dynamic crosshair	Dinamik haç
+Dynamic glow	Dinamik ışık
+Dynamic lights	Dinamik ışıklar
+Edit	Edit Edit
+Edit a proposal, then call its vote. Limits apply to the current mode.	Bir öneriyi analiz edin, sonra oylarını arayın. Limitler mevcut modlara uygulanır.
+Editing stages a binding; the command is never executed here.	Bağlanma aşamalarını bağlayıcı bir şekilde analiz etmek; komut burada asla idam edilmez.
+Effects	Etkileri
+Effects volume	Etkileri
+Enable all Force powers, including Saber Throw.	Saber At da dahil olmak üzere tüm Kuvvet güçleri.
+Enable warmup.	Enable hotup.
+Enter %s0 to %d.	%s0'ı %d'e girin.
+Enter a finite number.	Sonlu bir sayı girin.
+Enter a player name.	Bir oyuncu adı girin.
+Enter a size from 48 to 144.	48 ila 144 arasında bir boyut girin.
+Enter individual lobby	Bireysel lobiye girin
+Enter size 75-125 and panel opacity 0-100.	75-125 ve panel opakity 0-100.
+Enter your name	Adınızı girin
+Equal, complete lineups required	eşit, tam satırlar gerekli
+Esc  /  Back	Esc / Back / Back
+Every active player selects Ready.	Her aktif oyuncu hazır seçer.
+Existing voice-command menu; not proximity voice	Seslendirme menüsü; yakın sese sahip değil
+Exit	Çıkış
+Exit Photo Mode	Çıkış Fotoğraf Modu
+Experimental preview only. Apply keeps your regular selection.	Deneysel önizleme sadece. Uygulama normal seçiminizi tutar.
+Extra button	Ekstra düğme
+FPS counter	FPS karşı
+FPS limit	FPS limiti
+Fantasy	Fantasy Fantasy
+Favorites	Favoriler Favoriler
+Find a Server	Bir Server Bul
+Find a server	Sunucu bul
+Fine-tune input settings without typing console commands.	Konsol komutları olmadan güzel giriş ayarları.
+Footsteps	Ayaklanmalar
+Force	Kuvvet Gücü
+Force Training	Kuvvet Eğitimi
+Force absorb	Güç absorbı
+Force drain	Güç drenajı
+Force enabled in restricted gametype	Force, sınırlı oyun türünde etkinleştirildi
+Force enabled while all powers disabled	Güçler devretken güç devretme etkinleştirdi.
+Force grip	Kuvvetli güç
+Force heal	Kuvvet iyileşir
+Force lightning	Kuvvetli yıldırım
+Force player models	Force player modelleri
+Force powers	Güç güç güçleri
+Force pull	Güç çekmesi
+Force push	Güç iti
+Force rage	Güç öfkesi
+Force rules, map rotation, Tournament, and team entry.	Kuvvet kuralları, harita rotasyonu, Turnuva ve takım girişi.
+Force sense	Güç duygusu
+Force speed	Güç hızı
+Force team energize	Kuvvet ekibi enerjik
+Force team heal	Kuvvet ekibi iyileşiyor
+Force: restricted	Kuvvet: kısıtlı
+Force: unrestricted	Kuvvet: sınırsız
+Forward movement scale	İleri hareket ölçek ölçeği
+Frag limit	Parça limiti
+Free Camera	Ücretsiz Kamera
+Free For All	Tüm Için Ücretsiz
+Free mouse look	Ücretsiz fare görünümü
+Freecam speed	Freecam hız
+Freeze is available in local solo games, including bots.	Freeze, botlar da dahil olmak üzere yerel solo oyunlarda mevcuttur.
+Full Force	Full Force Full
+Fullscreen	Fullscreen Full
+GAME RULES	OYUN RULES
+GENERAL	GENEL GENEL
+GLOBAL RANK: unavailable	GLOBAL RANK: Yok
+Game Options	Oyun Seçenekleri
+Game rules	Oyun kuralları
+Game sounds	Oyun geliyor
+Game type	Oyun türü
+Game types	Oyun türleri
+Generate normal maps	Genrate normal haritalar
+Generic	Genric
+Geometry detail	Geometry detay detayı
+German	Alman Alman Alman Alman
+Ghost off	Hayalet
+Ghost on	Ghost on Ghost on
+Green	Yeşil Yeşil Yeşil
+Guide	Kılavuz
+HDR	HDR HDR
+HUD appearance applied.	HUD görünümü uygulanır.
+HUD size (%)	HUD boyutu (%)
+HUD style	HUD tarzı
+Have your say on the current vote,	Şu anki oylamada söylediğiniz gibi,
+Health and ammo	Sağlık ve ammomo
+Height	Yükseklik
+Hide HUD, radar, chat and spectator overlays.	Hide HUD, radar, sohbet ve seyirci overlays.
+Hilt preview unavailable	Hilt önizlemesi mevcut değildi
+Hold for Drain when available	Mevcut olduğunda Dr.Öğr.
+Hold for Grip when available	Mevcut olduğunda grip için tutun
+Hold for Lightning when available	Mevcut olduğunda Lightning için tutun
+Hold for legacy mouse/keyboard strafe	Geleneksel fare /keyboard için tutun
+Hold to change walking/running speed	yürüyüş/işletme hızını değiştirmek için tutun
+Hold to show match scores	Maç puanlarını göstermek için tutun
+Holster / draw saber	Holster / çiz saber
+Holster or draw your saber	Holster veya saberinizi çizin
+Horizontal look sensitivity	Yatay bakış duyarlılığı
+Horizontal mouse scale	yatay fare ölçeği
+Horizontal scale	yatay ölçek
+Horizontal sensitivity	yatay duyarlılık
+Horizontal turn speed	Yatay dönüş hızı hızı
+Horror	Korku Korku Korku Korkusu
+Host name	Host name adı
+Ignore small legacy axis movements.	Küçük miras eksen hareketlerini görmezden gelirim.
+Ignore small stick movements.	Küçük çubuk hareketlerini görmezden gelirim.
+Illustration only. This result does not update your account.	Sadece en iyirasyon. Bu sonuç hesabınızı güncellemez.
+Input settings applied.	Giriş ayarları uygulanır.
+Inspect primary	Inspect birincil
+Installed mods	Yüklemek modlar
+Installing the mod alone does not make a server official.	Modu tek başına yükleme, bir sunucu yetkilisi yapmaz.
+Interact with usable world objects	Kullanılabilir dünya nesnelerle Interact with usable world objects
+Interface	Arayüz
+Invalid personal config filename	Invalid kişisel dosya adı
+Invalid setting	Invalid ayarı
+Invert controller vertical look	Invert kontrolörü dikey görünümü
+Invert mouse	Invert fare
+Invert vertical look	Invert dikey görünümü
+Italian	İtalyan İtalyan İtalyan İtalyan
+Items	Maddeler
+Japanese	Japon Japonca Japonca
+Join game	Oyuna Katıl
+Joystick deadzone	Joystick ölüzon
+Jump	Jump Jump Jump Jump
+Jump / swim upward	Jump / yüzmek
+Jump sounds	Jump sesler
+Keep Jump and Speed; disable other general powers.	Jump and Speed; diğer genel güçleri devre dışı bırak.
+Keep changes	Değişiklikleri Keep changes
+Keep display changes?	Ekran değişiklikleri mi tutun?
+Keep or revert the display change first.	Ekran değişikliği ilk önce tutun veya iptal edin.
+Key change staged	Anahtar değişim sahnelendi
+Keyboard	Klavye
+Keyboard horizontal turn speed	Klavye yatay dönüş hızı
+Keyboard turning	Klavye Döndürme
+Keyboard vertical look	Klavye dikey görünümü
+Keyboard vertical look speed	Klavye dikey bakış hızı
+Keys	Anahtarlar
+Kill feed	Kill feed feed
+Korean	Koreli
+LEAVE THE MATCH?	MATCH'i destekliyor musunuz?
+LOAD SAVED SETTINGS?	LOAD ARAŞTIRMAD SETTINGS?
+Labels do not change assignments.	Etiketler atamaları değiştirmez.
+Lagometer	Lagometre
+Language	Dil
+Language pack unavailable; showing original chat	Dil paketi kullanılamaz; orijinal sohbet göstermek
+Leader	Lider Lider Lider Lider Lider
+Leave lobby	Leave lobi Leave Leave
+Leave this server and return to the main menu?	Bu sunucuyu bırakın ve ana menüye geri dönün?
+Leave this server and return to your desktop?	Bu sunucuyu bırakın ve masaüstüne geri dönün?
+Left hand	Sol el
+Left stick click	Sol çubuğu tıklayın
+Legacy	Legacy Legacy Legacy
+Legacy joystick	Miraç sevinci
+Legacy joystick deadzone	Legacy joystick ölüzon
+Legacy joystick input; restarts input	Legacy joystick girişi; girdileri yeniden başlatın
+Legacy mouse forward-movement scale	Legacy fare forward-movement ölçek
+Legacy mouse strafe scale	Legacy fare strafe ölçeği
+Legacy or power acceleration.	Miras veya güç ivmesi.
+Letters	Mektuplar Mektupları
+Light flares	Işık alevleri
+Lighting	Aydınlatma Aydınlatma
+Limbs only	Limbs sadece sadece
+Limits affect the current mode.  0 = unlimited.	Limitler mevcut modu etkiler. 0 = sınırsız.
+Lit preview	Lit önizleme
+Live	Canlı Canlı Canlı
+Live preview	Canlı önizleme
+Load	Load Load Load
+Load into the editor for review, then Apply.	İnceleme için editöre yük, sonra uygulayın.
+Load the next map from the server rotation.	Bir sonraki haritayı sunucu rotasyonundan gönderin.
+Local server	Yerel sunucu
+Look and movement	Bak ve hareket
+Look down	Bak aşağıya aşağıya bak
+Look up	Bak yukarı
+Looking with bound up / down keys.	Bağlantı / aşağı anahtarlara bakmak.
+Low	Low Low Low Low Low
+Low health pulse	Düşük sağlık pulsu
+Lower values make curved surfaces smoother.	Alt değerler eğri yüzeyleri pürüzsüz hale getirir.
+Lyra  /  Registered reserve (sample)	Lyra / Registered rezerv (sample)
+MAP	MAP MAP
+MATCH RECORDINGS	İZMİRLER
+MATCH TOOLS	MOL TOOL
+Map not reported	Map not reports
+Map preview unavailable	Harita önizlemesi mevcut değildi
+Maps for the current game type	Mevcut oyun türü için haritalar
+Match clock	Maç saati
+Match scores are separate from global rank.	Maç puanları global sıralamadan ayrıdır.
+Match tools	Maç araçları
+Matches	Maçlar
+Matching stance assets are missing. Choices were not saved.	Görünüşe göre varlıklar eksiktir. Seçenekler kurtarılmamıştı.
+Matching style assets are missing. Blue, Yellow and Red remain available.	Türlü varlıklar eksik. Blue, Sarı ve Red mevcut.
+Matching style assets are missing. Your choices were not saved.	Stile ait varlıklar eksiktir. Seçenekleriniz kurtarılmamıştı.
+Max packets	Max paketleri
+Max players	Max oyuncuları
+Menu	Menü Menü
+Menu buttons	Menü düğmeleri
+Menu confirm and back buttons	Menü doğru ve geri düğmeleri doğrulayın
+Menu language	Menü dili
+Menu motion	Menü hareketi
+Menu motion: Off	Menü hareketi: Off
+Menu motion: On	Menü hareketi: Onda
+Message language	Mesaj dili
+Message the last player who attacked you	Size saldıran son oyuncuya Mesaj
+Message the player under your crosshair	Crosshair'in altındaki oyuncuya Mesaj
+Min players	Min oyuncuları
+Mind trick	Zihin hile
+Minutes, 0 to 1440. Zero means unlimited. Applies after passing; may end the round.	Dakikalar, 0 ila 1440. Zero sınırsız anlamına gelir.Gerekdikten sonra başvurular; yuvarlak sona erebilir.
+Mod switching is unavailable in this isolated test profile.	Mod geçişi bu izole test profilinde kullanılamaz.
+Mode	Mode Mode
+Model preview unavailable	Model Tanıtımı Yok Yok Yok
+Motion:	Hareket:
+Mouse buttons and wheel are supported. Escape cancels.	Mouse düğmeleri ve tekerlekleri desteklenmektedir. Escape Cancels.
+Mouse input mode	Mouse girişi modu
+Mouse input: 0 off, 1 raw, 2 compatibility; restarts input	Mouse girişi: 0 off, 1 ham, 2 uyumluluk; girdileri yeniden başlatın
+Mouse movement when free look is off.	Ücretsiz görünüm bittiğinde Mouse hareketi.
+Mouse movement while strafing.	Ayırma sırasında Mouse hareketi.
+Mouse sensitivity	Mouse
+Mouse smoothing	Fare düzgünleştirici
+Move backward	Move back
+Move forward	Move forward forward
+Move left without turning	Döndürmeden ayrıldık
+Move right without turning	Doğru hareket etmeden hemen hareket ettirin
+Move the mouse to look around.	Etrafına bakmak için fareyi hareket edin.
+Movement	Hareket Hareketi
+Movement and legacy input	Hareket ve miras girişi
+Movement effects	Hareket etkileri
+Multiplayer built around pro saber dueling.	Pro saber dueling etrafında inşa edilen çok şey.
+Multiplier while walk / run is held.	Yürüyüş / koşu yapıldığında çok basit.
+Music volume	Müzik hacmi
+NOW = current match   /   WAIT = upcoming	Şimdi = mevcut maç / WAIT =
+Names / scores	Adlar / puanlar
+Negative m_pitch inverts vertical look.	Olumsuz m_pitch inverts dikey görünümü.
+Negative shifts left. Positive shifts right. Zero centers the view.	Olumsuz değişimler ayrıldı. Olumlu değişimler doğru. Zero merkezleri görüş.
+Network	Ağ Ağı Ağı Ağı Ağı
+Network / FPS settings belong under Setup > Network.	Network / FPS ayarları Kurulum > Ağ altında yer almaktadır.
+Next Force power	Sonraki Kuvvet Gücü Güç Gücü
+Next Player	Sonraki Oyuncu
+Next item	Sonraki item
+Next opponent: awaiting the other match winner	Sonraki rakip: diğer maç kazananını bekliyor
+Next weapon	Sonraki silah
+No files	Hiçbir dosya yok
+No matching entries.	Eşleme girişleri yok.
+No matching hilts	Hiçbir eşleştirme hilt
+No matching settings.	Uygun ayarlar yok.
+No models match these filters.	Hiçbir model bu filtrelerle eşleşmez.
+No official servers listed	Hiçbir resmi sunucu listelenmedi
+No password	Hiçbir şifre yok
+No pending changes	Beklenmeyen değişiklikler
+No saved personal configs.	Kişisel yapılandırılmadı.
+No standings available	Mevcut olmayanlar
+Non-ASCII command preserved. This text editor supports ASCII; use change-key or clear.	ASCII'yi korumak için hiçbir şey kalmadı; değişim anahtarını veya açık kullanın.
+Not a personal setting: 	Kişisel bir ayar değil:
+Not reported	Hiçbir rapor yayınlanmadı
+OFFICIAL RANKED SERVERS	YARATILIK RANKED SERVERS
+Off	Off Off Off
+Official 1v1 matches on a Ranked Duel server.	Resmi 1v1 bir Ranked Duel sunucusunda maçları.
+Offset used by the power curve.	Güç eğrisi tarafından kullanılan Offset.
+Older joystick path; restarts input.	Yaşlı sevinç yolu; girdileri yeniden başlatın.
+On	Onda
+On-screen keyboard	On-screen klavye
+One TFFA match / respawns	One TFFA maç / respawns
+One or more default keys have another command. Confirm to replace them.	Bir veya daha varsayılan anahtarların başka bir komutu vardır. Onları değiştirmeyi onaylayın.
+Online free camera uses your normal spectator movement.	Online ücretsiz kamera normal seyirci hareketinizi kullanır.
+Only official registered teams enter this ladder.	Sadece resmi kayıtlı takımlar bu merdivene girer.
+Only reserves registered with this team may replace a player.	Sadece bu takımla kayıtlı rezervler bir oyuncu değiştirebilir.
+Open / collapse chat	Open / çöküş sohbet
+Open or close the in-game menu	Açık veya oyun menüsüne yakın
+Open the console	Konsolu açın
+Options	Seçenekler Seçenekleri
+Orbit angle	Orbit açısı
+Ordinary matches remain unranked.	Sıradan maçlar sıra dışı kalır.
+Original Blue style.	Orijinal Blue stili.
+Original JKA	Orijinal JKA
+Original Red style.	Orijinal Red stili.
+Original Yellow style.	Orijinal Sarı stil.
+Overall mouse response.	Genel olarak fare cevabı.
+PHOTO MODE	FOTOĞRAF
+PING	PING PING
+PRESS A KEY OR CONTROLLER BUTTON	PRE A KEY OR CONTROLLER BUTTON
+PS	PS PS
+Pages rotate every 10s. Your row stays visible.	Sayfalar her 10'u döndürür. sıranız görünür kalır.
+Panel opacity (%)	Panel opakity (%)
+Password required	Gerekli Şifre Gerekli Şifre
+Pause menu	Pause menüsü
+Pending changes	Pending değişiklikleri
+Perspective	Perspektif
+Photo Mode	Photo Mode Mode
+Pick different styles. Your normal style-switch control follows this order.	Farklı stilleri seçin.Normal tarzınız kontrol bu düzeni takip eder.
+Ping	Ping Ping
+Ping  %d ms	%d ms
+Pitch	Sahacı
+Pitch sway	Saha
+Play	Oyna
+Play recording	Play record
+PlayStation	PlayStation PlayStation
+Player	Oyuncu Oyuncu
+Player labels	Oyuncu etiketleri
+Player name	Oyuncu adı
+Player settings changed outside this menu. Reopen Profile to refresh.	Oyuncu ayarları bu menü dışında değişti. Reopen Profile yenilemek için.
+Players	Oyuncular Oyuncular
+Players  %s / %s	Oyuncular %s / %s
+Players and world	Oyuncular ve dünya
+Polish	Polonya Polonya Polonya
+Portrait	Portre Portre Portre
+Portrait size	Portre büyüklüğü
+Portrait size applied.	Portre büyüklüğü uygulanır.
+Portraits	Portreler
+Portuguese	Portekiz Portekiz Portekiz Portekiz
+Portuguese (Brazil)	Portekiz (Brazil)
+Português	Portuguê
+Power	Güç gücü
+Power acceleration offset	Güç ivmesi denge dengelemek
+Precise crosshair trace	Precise haç izi
+Preview disconnect	Ölçümün
+Preview hand:	Öpücü el:
+Preview how a missing teammate appears in the ready room.	Eksik bir takım arkadaşı hazır odada nasıl görünür.
+Preview unavailable	Öfke mevcut değildir
+Preview:	Preview: Preview:
+Previous Force power	Önceki Kuvvet Gücü Güç Gücü
+Previous Player	Önceki Oyuncu
+Previous item	Önceki İçerik
+Previous weapon	Önceki silah
+Primary	İlk önce birincil birincil birincil birincil birincil
+Primary attack; movement and style still govern saber moves	İlk saldırı; hareket ve stil hala saber hareketlerini yönetiyor
+Private chat with last attacker	Son saldırgan ile özel sohbet
+Private chat with target	Hedefle özel sohbet
+Private message	Özel mesaj
+Profile	Profil
+Projectile trails	Projectile izs
+Purple	Mor
+Quick combinations; more weight than Blue.	Hızlı kombinasyonlar; Blue'dan daha fazla ağırlık.
+Quit game	Oldukça oyun
+Quit the game and return to your desktop?	Oyun ve masaüstüne geri dönüyor mu?
+RANKED PLAY  /  DUEL LADDER	RANKED PLAY / DUEL LADDER
+RANKED PLAY  /  OVERVIEW	RANKED PLAY / GENEL
+RANKED PLAY  /  SERVER DIRECTORY	RANKED PLAY / SERVER PLY
+RANKED PLAY  /  TEAM LADDER	RANKED PLAY / TEAM LADDER
+READY	DUYUCU
+READY STANCE	OKUYUN
+RECONNECTS AND RESERVES	RECONNECTS AND REZERVASYON YAPS
+RED %d     /     BLUE %d	RED %d / BLUE %d
+REPLACE SAVED CONFIG?	REPLACED CONFIG?
+RT	RT RT
+Radar	Radar Radar
+Raise or lower the camera target.	Kamera hedefini yukarı veya daha düşük.
+Ranked Duel and Ranked Challenge Duel share this ladder.	Ranked Duel ve Ranked Challenge Duel bu merdiveni paylaşıyor.
+Ranked connection: not configured	Sıralamalı bağlantı: yapılandırılmadı
+Ranked services are coming soon.	Sıralamalı hizmetler yakında geliyor.
+Rankings appear after verified official results are connected.	Rankings doğrulanmış resmi sonuçlar bağlandıktan sonra görünür.
+Rate	Puan
+Rating	Rating Rating Rating
+Rating change: unavailable. No verified ranked result received.	Rating change: Yok. Doğrulanmış sıralama sonucu alındı.
+Rating: unavailable / no verified ranked result	Puan: Yok / doğrulanmış sıralama sonucu yok
+Raw	Raw Raw
+Ready	Hazır Hazır Hazır Hazır Hazır
+Ready - offline	Hazır - çevrimdışı
+Ready cleared.	Hazırlayın.
+Ready for chat - offline	sohbete hazır - çevrimdışı
+Ready selected.	Hazır seçilmiş.
+Ready-pose choice only. Choose combat behavior in Combat styles.	Sadece hazır seçim. Savaş stillerinde savaş davranışını seçin.
+Record match	Rekor maç
+Recording	Kayıt Kaydı Kayıt Kayıt Kayıt Kayıt Kayıt Kaydı
+Recordings	Kayıtlar
+Red	Red Red Red
+Red team	Kırmızı takım
+Registered teams compete on their own team ladder.	Kayıt edilen takımlar kendi takım merdivenleri üzerinde yarışıyor.
+Release capture in windowed mode.	Pencereli modda salıverin.
+Release mouse capture in windowed mode	Yayın faresi pencereli modunda yakalama
+Release window capture	Salı Pencere yakalama
+Repeat commands in outgoing packets.	Geçerli paketlerde komutları tekrarlayın.
+Repeater	Tekrarlayıcı
+Replace	Değişimi Değiştir
+Replace 	Değişimi Değiştir
+Replace ordinary HUD	Sıradan HUD'yi Değiştirin
+Replace pending config edits?	Yapı düzenlemelerini bekleyen değişiklikler mi?
+Replace pending edits with this config?	Bu yapılandırılmış düzenlemelere devam eden değişiklikler mi?
+Replace saved config?	Yedekler yapılandırıldı mı?
+Replace the controller's button assignments with defaults?	Kontrolörün düğme atamalarını varsayılanlarla değiştirin mi?
+Requested bytes per second; server limits apply.	İkinci olarak talep edilenler; sunucu sınırları geçerlidir.
+Requested snapshots per second.	İkinci olarak talep edilen anlık görüntüler.
+Requires Rend2.	Rend2 gerektirir.
+Requires Streamer mode with Clean Capture off.	Temiz yakalama ile akış modu gerektirir.
+Requires authenticated server permission	Gerçekleştirilmiş sunucu izni
+Requires server permission. Add a player argument using Edit command if needed.	Gerekli sunucu izni gerektirir. Gerekirse Edit komutunu kullanarak bir oyuncu argümanı ekleyin.
+Requires server permission. Use the server's target syntax.	Sunucu izni gerektirir. sunucunun hedef sözcülüğünü kullanın.
+Reserves	Rezervler
+Reset	reset reset
+Reset all to Stock	Bütünü Borsaya Getirin
+Reset camera	Sıfır kamera
+Reset filters	Sıfır filtreler
+Reset preview	reset
+Reset this tab	Bu sekmeyi sıfırlama
+Reset this tab?	Bu sekmeyi sıfırlama?
+Reset to originals	Orijinallere Yeniden Yapın
+Reset view	Üçüncü görüş
+Resolution	Karar Çözümü
+Respawn now	Respawn şimdi
+Restart Map	Yeniden Başlayın Map
+Restart the current map after the vote passes.	Oy geçtikten sonra mevcut haritayı yeniden başlatın.
+Restarts the renderer.	Dileyiciyi yeniden başlatır.
+Restore action defaults	Yeniden yükleme eylemleri varsayılanleri geri yükleme
+Result preview	Sonuç önizleme
+Resume  /  Esc	Resume / Esc
+Return to editing to keep your pending changes.	Beklemek değişikliklerinizi tutmak için düzenlemeye dön.
+Return to tournament selection?	Turnuva seçimine geri dön?
+Reverse right-stick vertical look.	Doğru kenar dikey görünümü.
+Reverting in %d seconds.	%d saniye içinde geri dönün.
+Review this change. Nothing changes until you confirm.	Bu değişikliği gözden geçirin. Onayladığınıza kadar hiçbir şey değişmez.
+Right hand	Doğru el
+Right stick click	Doğru çubuğu tıklayın
+Right-stick horizontal look speed.	Doğru-stick yatay bakış hızı.
+Right-stick vertical look speed.	Doğru-stick dikey görünümü hızı.
+Rocket launcher	Rocket starter
+Role: Jedi	Rol: Jedi
+Role: Non-Jedi	Rol: Non-Jedi
+Roll	Roll Roll
+Run command	Run komut
+Russian	Rus Rus Rus Rus
+SABER TRIALS  /  	SABER TRIALS /
+SABER TRIALS  /  FIND A SERVER	SABER TRIALS / FIND A SERVER
+SABER TRIALS  /  HOST A MATCH	SABER TRIALS / HOST A MATCH
+SABER TRIALS  /  MOVES	SABER TRIALS / HARES
+SABER TRIALS  /  SOLO MATCH	SABER TRIALS / SOLO MATCH
+SABER TRIALS / 	SABER TRIALS /
+SERVER INFORMATION	SERVER BİLGİLER
+ST_CONTROLS_FAIL binding mismatch	ST_CONTROLS_FAIL bağlayıcı yanlış eşleştirme
+ST_CONTROLS_FAIL hit visibility	ST_CONTROLS_FAIL görünür görünürlük
+ST_CONTROLS_FAIL menu closed	ST_CONTROLS_FAIL menü kapalı
+ST_CONTROLS_FAIL page mismatch	ST_CONTROLS_FAIL sayfası yanlış
+ST_CONTROLS_FAIL settings count	ST_CONTROLS_FAIL ayarları count
+ST_CONTROLS_FAIL status mismatch	ST_CONTROLS_FAIL durumu yanlış
+ST_CONTROLS_FAIL variable mismatch	ST_CONTROLS_FAIL değişken yanlış
+Saber trail	Saber iz
+Sample players and events. No live registration or match starts.	Örnek oyuncular ve olaylar. Canlı kayıt veya maç başlar.
+Save a PNG screenshot	Bir PNG ekran görüntüsü Kaydet
+Save current settings	Mevcut ayarları Kurtarın
+Saved 	Kurtarılan Kurtarıldı
+Saved Configs	Kurtarılmış Konigs
+Saved choices take effect next spawn on supporting servers.	Kaydetilen seçimler, sunuculara destek vermek için bir sonraki spawn'ı etkiler.
+Saved config could not be verified.	Kaydetilmiş yapılandırılmış yapılandırılamaz.
+Scale horizontal mouse movement.	Yüzeyli fare hareketi.
+Scales the panel and text together.	Panel ve metin birlikte ölçekler.
+Scene: 	Sahne: Sahne:
+Screenshot	Ekran görüntüsü
+Search Setup settings or console names...	Arama Ayarları veya konsol isimleri...
+Search actions...	Arama eylemleri...
+Search current keys or commands...	Mevcut anahtarlar veya komutlar arayın...
+Search hilts	Arama hilts
+Search input settings or console names...	Arama girişi ayarları veya konsol isimleri...
+Search models or outfits...	Arama modelleri veya kıyafetler...
+Select DEMP2 when available	Mevcut olduğunda DEMP2'yi seçin
+Select a game type. Changing this choice does not change the match.	Bir oyun türü seçin. Bu seçimi değiştirmek maçı değiştirmez.
+Select a player or bot	Bir oyuncu veya bot seçin
+Select a server	Bir sunucu seçin
+Select an available map for the current game type.	Mevcut oyun türü için mevcut bir harita seçin.
+Select blaster rifle when available	Mevcut olduğunda patlama tüfeği seçin
+Select bowcaster when available	Mevcut olduğunda yaycaster'ı seçin
+Select det packs	Select det paketleri seçin
+Select disruptor when available	Mevcut olduğunda kesintici seçin
+Select flechette when available	Mevcut olduğunda flechette seçin
+Select next Force power	Bir sonraki Kuvvet Gücü Güç Güç Güç Seç
+Select next available weapon	Bir sonraki mevcut silah seçin
+Select next inventory item	Bir sonraki envanter öğesi öğe seçin
+Select one of the six styles.	Altı stilden birini seçin.
+Select pistol when available	Mevcut olduğunda tabancayı seçin
+Select previous Force power	Önceki Kuvvet Güç Güç Güçlerini Seçin
+Select previous available weapon	Önceki mevcut silah seçin
+Select previous inventory item	Önceki envanter öğeyi seçin
+Select repeater when available	Mevcut olduğunda tekrarlayıcı seçin
+Select rockets when available	Mevcut olduğunda roketleri seçin
+Select saber or melee	saber veya melee
+Select thermal detonators	Termal detonatörleri seçin
+Select tournament	Turnuvayı seçin
+Select trip mines	Gezi mayınlarını seçin
+Send message	Mesaj Gönder
+Sensitivity	Hassasiyet
+Sensitivity / settings	Hassasiyet / ayarlar
+Server	Server Server
+Server Management	Server Yönetimi
+Server information	Server bilgisi
+Server location	Server lokasyonu
+Server staff protection still applies.	Server personeli koruması hala geçerlidir.
+Server tournament verification is coming next.	Server turnuvası doğrulama bir sonraki geliyor.
+Setting is protected: 	Kurulum korunur:
+Setting staged	Ayarlama aşaması
+Settings applied.	Uygulanan ayarlar.
+Settings applied. Video/sound changes may require a restart.	Uygulanan ayarlar. Video/sound değişiklikleri yeniden başlatılabilir.
+Settings changed outside the editor. Cancel and reopen before applying.	Ayarlar editör dışında değişti ve başvurudan önce yeniden açıldı.
+Setup	Ayarlar
+Shift	Shift Shift
+Shoulder offset	Omuz 2:
+Show controls: 	Gösteri kontrolleri:
+Show current bracket	Şu anki braket göster
+Show current tournament status	Şu anki turnuva durumunu göster
+Show score	Show puan puan
+Show the original above its marked translation. Originals remain in the console.	Orijinali işaretli çevirinin üstünde gösterin. Originals konsolda kalır.
+Show weapon	Silahı göster
+Shows the weapon model in first person.	İlk kişideki silah modelini gösterir.
+Siege objectives	Siege hedefleri
+Siege voice commands	Siege ses komutları
+Signed in with Discord.	Discord ile oturum açın.
+Signed out.	Çıkış.
+Simple items	Basit öğeler
+Single	Single Single
+Size: 48-144. Drag or type a number, then Apply size.	Boyut: 48-144. Drag veya bir sayı yazın, sonra boyut uygulayın.
+Smooth follow	Smooth Takip
+Smoothing	Direnmek
+Smooths changes to camera position.	Kamera pozisyonu için aptallar değişiklikler.
+Smooths changes to the point the camera follows.	Kameranın takip ettiği noktaya kadar gri değişiklikler.
+Snapshot timing offset; normally session-only.	Snapshot zamanlaması dengeleme; normalde oturum-sadece.
+Solo match	Solo maç
+Solo, spectator and replay camera. Online matches stay live.	Solo, seyirci ve replay kamera. Online maçlar yaşıyor.
+Some weapons and modes choose the view automatically.	Bazı silahlar ve modlar görüş otomatik olarak seçer.
+Sound	Ses Ses Ses Ses Ses
+Sound quality	Ses kalitesi
+Sounds	Sesler
+Sounds + effects	Sesler + etkiler
+Sounds + effects + marks	Sesler + etkiler + işaretler
+Space	Uzay Uzay Uzay Uzay
+Spanish	İspanyolca İspanyolca İspanyolca
+Spectator camera	Spectator kamera
+Speed	Hız Hız Hız Hız
+Speed trail	Hız izi
+Square	Square Square Square
+Staff	Personel
+Stage controller defaults	Aşama kontrol varsayılan varsayılan varsayılanlar
+Stage defaults	Aşama varsayılanları
+Stage edit	Aşama düzenleme
+Stances	Azizlik
+Stances saved. Applies next spawn on a supporting server.	Stances kurtarıldı. Destekleyici bir sunucuda bir sonraki spawn'ı uygulayın.
+Start Tournament	Başlangıç Turnuva Başlat
+Starting rating: 1000   |   Results and opponent strength decide changes.	Puana başlayın: 1000 | Sonuçlar ve rakip güç değişiklikleri karar verir.
+Static	Statik
+Status notifications	Durum bildirimleri
+Stay here	Burada kalın
+Stay in ready room	Hazır oda içinde kalın
+Stick deadzone	Stick Deadzone
+Stock	Borsa
+Stock action defaults staged (unassigned when no stock default exists)	Stok aksiyon varsayılanları sahnelendi (tassigned when no stok varsayılan var)
+Stock defaults unavailable	Borsa varsayılanları mevcut değildir
+Strafe left	Strafe ayrıldı
+Strafe movement scale	Strafe hareketi ölçek ölçeği
+Streamer presentation	Streamer sunum
+Subject	Konu
+Supporting servers use this selection. Saber Offense requirements still apply.	Destekleyici sunucular bu seçimi kullanır. Saber Offense gereksinimleri hala geçerlidir.
+Supports Ranked Duel, Ranked TFFA and FFA challenge servers.	Destekler Ranked Duel, Ranked TFFA ve FFA meydan okuma sunucuları.
+Swap Confirm and Back for menus.	Swap Onaylandı ve menüler için geri döndü.
+Swapped	Swapped Swapped Swapped
+Switch mod?	Anahtar mod?
+Switch mods from the disconnected main menu.	Bağlantılı ana menüden geçiş modları.
+Symbols	Semboller
+TFFA: lock or reopen joining and team switching.	TFFA: kilitleme veya yeniden katılma ve takım geçiş.
+TIME	Saati
+TOURNAMENT  /  BRACKET	TOURNAMENT / BRACKET
+TOURNAMENT  /  LEAVE LOBBY?	TOURNAMENT / LEAVE LOBBY?
+TOURNAMENT  /  MATCH RESULT	TOURNAMENT / MATCH RESULT
+TOURNAMENT  /  READY ROOM	TOURNAMENT / OKY ROOM
+TOURNAMENT  /  SELECT A FORMAT	TOURNAMENT / SE A FORMAT
+TOURNAMENT  /  TEAM RESERVES	TOURNAMENT / TEAM REZERVASYON YAPS
+Take photo	Fotoğrafı alın
+Target damping	Hedef barajı
+Target names	Hedef isimleri
+Team / tag	Takım / etiket
+Team Free For All	Takım Tüm Için Ücretsiz
+Team appearance	Team görünüş
+Team chat only	Takım sohbet sadece sadece sohbet
+Team color lightsabers	Takım rengi ışıklarabers
+Team color skins	Takım rengi ciltler
+Team ladder	Takım merdiveni
+Team overlay	Takım Overlay
+Team skin: Blue	Takım derisi: Blue
+Team skin: Default	Takım derisi: Varsayılan
+Team skin: Red	Takım derisi: Red
+Text language	Metin Dili
+Texture compression	Texture sıkıştırma
+Texture depth	Texture derinlik
+Texture detail	Texture detayı
+Texture filter	Texture filtre
+Texture intensity	Texture yoğunluk
+The complete lineup must ready up again before play resumes.	Tam çizgi yeniden başlamadan önce yeniden hazırlanmalıdır.
+The missing player may reconnect, or a reserve takes their place.	Kayıp oyuncu yeniden bağlantı kurabilir veya bir rezerv onların yerini alır.
+The original style keeps its original combat behavior.	Orijinal stil orijinal savaş davranışını tutar.
+The previous display recovery has not been saved yet.	Önceki ekran kurtarma henüz kurtarılmamıştır.
+The ranked server directory is not connected yet.	Sıradaki sunucu rehberi henüz bağlantılı değildir.
+The ranking service is not connected.	Sıralama servisi bağlantılı değildir.
+The selected model files are no longer available.	Seçilmiş model dosyaları artık mevcut değildir.
+The server checks that the map is installed and supports the current mode.	Sunucu haritanın kurulduğunu ve mevcut modu desteklediğini kontrol eder.
+Themes	Temalar
+Themes: 	Temalar:
+Thermal detonator	Termal detonator
+Third person	Üçüncü kişi
+Third-person framing	Üçüncü kişi framing
+This character selection is unavailable.	Bu karakter seçimi mevcut değildir.
+This command is too long for the text editor; it is preserved. Use change-key or clear.	Bu komut metin editörü için çok uzun; bu korunmuştur. Değişim anahtarını veya açık kullanın.
+This ends your current life.	Bu, mevcut hayatınızı sona erdirir.
+This model does not support a mirrored preview	Bu model aynalı bir önizleme desteklemez
+This outfit has no matching team skin.	Bu elbisenin eşleşen bir takım derisi yoktur.
+This restarts the game client.	Bu oyun müşterisini yeniden başlatır.
+This slot has no key to swap. Choose Replace or Cancel.	Bu slot, takas etmek için önemli değil. Seç veya iptal et.
+Three styles saved. Use your normal style-switch control to cycle them.	Üç stil kurtarıldı. Normal stilinizi kullanarak kontrollerini onları döngüsüne kullanın.
+Three ways to compete	Üç şekilde rekabet etmek için
+Tilt the camera up or down.	Kamerayı yukarı ya da aşağı fırlatın.
+Time Limit:	Zaman Sınırı:
+Time Nudge	Zaman Nudge
+Time limit	Zaman sınırı
+Time remaining	Zaman kaldı
+Timing and downloads	Timing ve downloads
+Toggle camera view	Toggle kamera view
+Toggle console	Toggle konsol
+Toggle existing match recording	Mevcut maç kaydı
+Toggle supported first/third-person view	Toggle ilk / üçüncü kişilik görüş destekledi
+Toggle the chat panel and recent messages	Sohbet panelini ve son mesajları dinlemek
+Tonemapping	Tonema
+Top right	Top right Top right
+Tournament	Turnuva Turnuva Turnuva Turnuva Turnuvası
+Tournament bracket	Turnuva braketi
+Tournament rules did not replace the previous description	Turnuva kuralları önceki açıklamayı değiştirmedi
+Tournament rules did not scroll	Turnuva kuralları kaydırmadı
+Tournament rules headings did not load as separate lines	Turnuva kuralları başlığı ayrı çizgiler olarak yüklemedi
+Tournament status	Turnuva statüsü
+Translate into	Çeviriye Çeviri
+Translate received public, team and private chat offline.	Translate halka, takım ve özel sohbet çevrimdışı aldı.
+Translating - offline	Translating - çevrimdışı
+Translation	Çeviri çevirisi
+Translation - %s	Çeviri - %s
+Translator unavailable; showing original chat	Translator mevcut değil; orijinal sohbet
+Triangle	Üçgen Üçgen
+Trip mine	Trip mine my Trip
+Turn left	Geri dön
+Turn right	Doğru dön
+Turn the camera around the player.	Oyuncunun etrafındaki kamerayı açın.
+Turn-speed modifier	Turn- speed modifier
+Turn-speed modifier while walk/run is held	Turn- speed modifier while walk/run is held
+Turning with bound left / right keys.	Sınır sol / sağ anahtarlarla geri dönün.
+Two precise swings; vulnerable recovery.	İki kesin hızlar; savunmasız kurtarma.
+Type:	Tipi:
+Ukrainian	Ukraynalı Ukraynalı Ukraynalı Ukraynalı Ukraynalı
+Unavailable in this client or server.	Bu müşteri veya sunucuda mevcut olmayan.
+Universal translator	Universal çevirmen
+Universe: 	Evren:
+Unknown quality preset	Bilinmeyen kalite presettür
+Unknown setting	Bilinmeyen ayarı
+Unlimited	Sınırsız Sınırsız Sınırsız
+Unsaved changes	Unsaved değişiklikler
+Unsupported Controls operation	Desteksiz Kontroller Operasyonları
+Unsupported value for 	Desteksiz değer için
+Up to 8 registered teams	8 kayıtlı takıma kadar
+Use 	Use Use Use Use
+Use / interact	Kullanım / etkileşim
+Use Absorb when available	Mevcut olduğunda Absorb kullanın
+Use FOV 20-120, tilt -45 to 45, speed 20-800.	FOV 20-120 kullanın, eğim -45 ila 45, hız 20800.
+Use Heal when available	Mevcut olduğunda Heal kullanın
+Use Mind Trick when available	Mevcut olduğunda Mind Trick kullanın
+Use Protect when available	Mevcut olduğunda koruma kullanın
+Use Pull when available	Mevcut olduğunda Pull Kullanın
+Use Push when available	Mevcut olduğunda Push kullanın
+Use Rage when available	Mevcut olduğunda Rage kullanın
+Use Sense when available	Mevcut olduğunda Sense'ı kullanın
+Use Speed when available	Mevcut olduğunda hızlı kullanın
+Use a new personal config name (letters, numbers, spaces, _ or -).	Yeni bir kişisel yapılandırma adı kullanın (köpekler, sayılar, boşluklar, _ veya -).
+Use analog axes on the legacy path.	Geleneksel yolda analog axes kullanın.
+Use fixed 50-point saber strikes and stronger timed parries.	Sabit 50 noktalı saber grevlerini ve daha güçlü zamanlı parries'i kullanın.
+Use inventory item	envanter öğesi öğeyi kullanın
+Use selected Force power	Seçilmiş Kuvvet Güç Güç Güç Güç Güçleri Kullanımı
+Use team Energize when available	Mevcut olduğunda takım Energize kullanın
+Use team Heal when available	Mevcut olduğunda takım Heal'ı kullanın
+Use team blade colors. Off shows chosen colors.	Takım bıçağı renkleri kullanın. Off, renkleri seçilmiş gösterir.
+Use team skins when available. Off shows chosen outfits.	Mevcut olduğunda takım derilerini kullanın. Off gösteriler seçilmiş kıyafetler gösterir.
+Use the selected available Force power	Mevcut Kuvvet Gücü Güç gücünü kullanın
+Use the selected inventory item	Seçilmiş envanter öğesini kullanın
+Use turn speed 0-10000 and accel 0-100.	Döndürme 0-10000 ve cel 0-100.
+Used for Custom resolution.	Özel karar için kullanılır.
+VOTING	BÜYÜ
+Value outside the supported edit range.	Desteklenen düzenleme aralığı dışında değer.
+Vehicle lead indicator	Araç yönlendirme göstergesi
+Version	Version Version Version Version
+Vertex lighting	Vertex aydınlatma
+Vertical look sensitivity	Dikey bakış hassasiyeti
+Vertical look speed	Dikey bakış hızı
+Vertical mouse scale	Dikey fare ölçeği
+Vertical mouse scale; negative means inverted	Dikey fare ölçeği; negatif ifadeler
+Vertical sensitivity	Fiziksel duyarlılık
+Vertical sway	Dikey sway
+Very high	Çok yüksek
+Video	Video Video Video
+View	View View
+Visual effects	Görsel etkiler
+Voice commands	Ses komutları
+Voice language	Ses dili
+Voice volume	Ses hacimleri
+Volume	Volume Volume
+Vote / Call Vote	Oy / Oy Çağrı
+Vote to add a role supported by the current game type.	Mevcut oyun türü tarafından desteklenen bir rol eklemek için oy verin.
+Vote to add this role. TFFA teams must be unlocked.	Bu rolü eklemek için oy verin. TFFA takımları açıklanmalıdır.
+Vote to remove a player or bot.	Bir oyuncu veya bot kaldırmak için oy verin.
+WEAPONS	WeAPONS
+Waiting for the server's player list...	Sunucunun oyuncu listesi için bekleyin...
+Wall marks	Duvar işaretleri
+Warmup Off	Isınma Off
+Warmup On	Isınma Üzerine
+Weapon FOV	Silah FOV
+Weapon's own ready pose overrides this preview in play.	Silahın kendi hazır, bu önizlemeyi oyunda abartır.
+Weapon:	Silah:
+Weapons	Silahlar
+Weapons: restricted	Silahlar: kısıtlı
+Weapons: unrestricted	Silahlar: Unrestricted
+Weightier attacks; less wind-up than Red.	Ağırlıklı saldırılar; Red'den daha az rüzgar.
+White	Beyaz Beyaz Beyaz Beyaz
+White core: Off	Beyaz temel: Off
+White core: On	Beyaz temel: Onda
+Whole number, 0 to 999. Zero means unlimited. Applies after passing; may end the round.	Tüm sayı, 0 ila 999. Zero sınırsız anlamına gelir. Çıkıştan sonra başvurular; yuvarlak sona erebilir.
+Xbox	Xbox Xbox
+YOU	SİZİN SİZİN
+Yellow	Sarı sarı sarı sarı
+Your character	Karakteriniz
+Your preferred reading language. Requires the matching offline packs.	Tercih edilen okuma diliniz. eşleşen çevrimdışı paketler gerektirir.
+Your sample ready status will reset when you select another event.	Örnek hazır durumunız başka bir olayı seçtiğinizde sıfırlanacaktır.
+Your selection is remembered while using dual sabers or a staff.	Seçiminiz, çift sabers veya personel kullanırken hatırlanır.
+Your server chooses the combat rules.	Sunucunuz savaş kurallarını seçer.
+Your server may deduct a point.	Sunucunuz bir noktaya girebilir.
+Zero disables acceleration.	Sıfır hız devre dışı bırakır.
+Zero disables this component of view swaying.	Zero, bu bakış açısını devre dışı bırakır.
+Zero removes the client frame-rate limit.	Zero, müşteri çerçevesini kısıtlar.
+Zero uses your field of view.	Zero, bakış alanınızı kullanır.
+[ ] Waiting for you. Click Ready when prepared.	[ ] Sizin için bekleyin. Hazırlandığında hazır olun.
+[!] Match paused / missing teammate. Reconnect window: 10:00 (sample).	[!] Maç durakladı / eksik takım arkadaşı. Yeniden bağlantı penceresi: 10:00 (sample).
+[!] Mira / Disconnected	[!] Mira / Dis bağlantılı
+[+] Everyone is ready. Sample lobby: no match will start.	[+] Herkes hazır. Örnek lobi: maç başlamayacak.
+[+] You / READY	[+] You / OKY
+^3Saber Trials ^7Local Review	^3Saber Denemeleri ^7Local Review
+^5Practice ^7Server %02d	^5Practice ^7Server%02d
+^7Akaza: ^2I'll be there soon.	^7Akaza: ^2 Yakında orada olacağım.
+^7Hisoka: ^2Meet by the stairs.	^7 Hisoka: ^2Meet by the merdivenler.
+^7Hisoka: ^2See you there.	^7 Hisoka: ^2 See you there.
+^7Sousuke Aizen: ^2Just passing through.	^7Sousuke Aizen: ^2 Sadece geçti.
+a whole number from 	Tüm bir sayıdan
+animation instance missing	animasyon örneği eksik
+applied.	Uygulandı.
+asdfghjkl-	Asdfghjkl-
+border lights ignore motion preference	sınır ışıkları hareket tercihi tercih etmeyi görmezden gelir
+cannot drag back to top	Yukarıya geri sürüklenemez
+cannot drag to bottom outside track	Dışarıdan aşağıya sürüklenemez
+click target missing	tıklama hedefi eksik
+controller menu missing	Kontrollü menü eksik
+dirty state	kirli devlet
+favorite selection missing	En sevdiğim seçim eksik
+favorite state	En sevdiğim devlet
+fixture has no overflow	fikstür aşırı akışı yok
+fixture requires private Favorites view	fikstür özel Favoriler manzarası gerektirir
+force-rank	güç-rank-rank
+game/st_stance_assets.h	Oyun/st_stance_assets.h
+game/st_stance_runtime.h	Oyun/st_stance_runtime.h
+ghost off	hayalet hayalet
+ghost on	hayalet hayalet
+hover does not light native button	hover, yerel düğmeye ışık değil
+keeps dragging after mouse release	fare serbest bırakılmasından sonra sürüklenmeye devam edin
+keyboard menu missing	klavye menüsü eksik
+layout context	düzeni bağlamı
+legacy action missing	mirası eksik
+levelshots/%s	Seviyeler /%s
+live value mismatch	Canlı değer yanlış
+local browser reply was not displayed	yerel tarayıcı cevabı görüntülenmedi
+main-menu alias missing	main-menu alias eksik
+menu destination	menü destinasyonu
+metadata display name mismatch	metadata ekran adı yanlış eşleştirme
+metadata franchise mismatch	metadata franchise yanlış
+missing Speed rank picker	Kayıp Hız rütbesi seçici
+missing selection	Eksik seçim
+missing server list	Eksik sunucu listesi
+missing target %s	Eksik hedef %s
+motion state mismatch	Hareket durumu yanlış
+native Force rank purchase changed	yerli Kuvvet rütbesi satın alındı
+native Jedi role selector missing	Yerli Jedi rolü seçici veya eksik
+native Jedi role transition failed	Yerli Jedi rolü geçiş başarısız oldu
+native destination mismatch	Yerli destinasyon yanlış
+native scrollbar did not drag	yerli kaydırmabar sürüklenmedi
+native target missing	Yerli hedef eksik eksik
+not enough server fixtures	yeterli sunucu fikstürleri değil
+or propose a change to this server.	veya bu sunucuya bir değişiklik önerebilir.
+ordinary Apply changed Jedi role	Sıradan Uygulama Jedi rolünü değiştirdi
+pending model mismatch	Beklenmeyen model yanlış
+players/_humanoid/	Oyuncular /_insanoid /
+preview unavailable	Retrospek bulunamadı
+result count	Sonuç count count
+scanning creates one cvar per model	Tarama, model başına bir cvar oluşturur
+scrolling changed active model	kaydırma aktif model değiştirdi
+st-controls-save.tmp	st-kontroller-save.tmp
+staged name	Sahne adı
+stale preview survived failed load	stale önizleme başarısız oldu yük
+status mismatch	Durum yanlış
+stock fallback mistaken for custom voice	Özel ses için stok geri dönüş yanlış
+stock portrait fixture missing	Borsa eksik fikstür
+theme did not paint %s	tema %s boyamadı
+thumb grab jumps	Ayırmaları
+tournament bracket	Turnuvalar
+tournament status	turnuva statüsü
+track click does not scroll	Takip etmek kaydırmaz
+unexpected connection state	Beklenmeyen bağlantı devleti
+unknown QA operation	Bilinmeyen QA operasyonu
+unknown scrollbar fixture	Bilinmeyen kaydırmabar fikstür
+virtual keyboard state	Sanal klavye devleti
+weapon 1	1 silah 1
+weapon 10	10 silah
+weapon 11	11 silah 11
+weapon 12	12 silah 12
+weapon 2	silahı 2 silah
+weapon 3	3 silah 3
+weapon 4	4 silah 4
+weapon 5	Silah 5 silahı
+weapon 6	6 silah 6
+weapon 7	7 silah 7 silah
+weapon 8	8 silah 8
+weapon 9	9 Silah 9

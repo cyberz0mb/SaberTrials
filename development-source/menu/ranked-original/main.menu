@@ -1,0 +1,190 @@
+{
+assetGlobalDef {
+ font "ergoec" 18 smallFont "ocr_a" 18 bigFont "anewhope" 20 small2Font "arialnb" 14
+ cursor "ui/assets/sabertrials/cursor" gradientBar "ui/assets/gradientbar2.tga"
+ itemFocusSound "sound/interface/menuroam.wav"
+ fadeClamp 1 fadeCycle 1 fadeAmount 0.1 shadowColor 0 0 0 .6
+}menuDef { name "main" rect 0 0 640 480 visible 0 fullscreen 1
+ focusColor 1 1 1 1 disableColor .35 .42 .47 1
+ onOpen { uiScript stMenuInit ; setfocus play ; } onESC { open st_main_exit ; }
+itemDef { name "arena" rect 0 0 640 480 style 3 background "ui/assets/sabertrials/arena.tga" forecolor 1 1 1 1 visible 1 decoration  }
+itemDef { name "shade" rect 0 0 640 480 style 1 backcolor .005 .018 .032 .27 visible 1 decoration  }
+itemDef { name "movie" rect 0 0 640 480 style 5 cinematic "video/sabertrials_menu.roq" visible 1 decoration cvarTest "st_uiMenuMovie" showCvar { "1" } }
+itemDef { name "movie_shade" rect 0 0 640 480 style 1 backcolor .005 .018 .032 .18 visible 1 decoration  }
+itemDef { name "hologram" rect 290 178 272 272 style 3 background "ui/assets/sabertrials/hologram" forecolor 1 1 1 1 visible 1 decoration  }
+itemDef { name "rail" rect 18 165 195 272 style 3 background "ui/assets/sabertrials/pause_rail" forecolor 1 1 1 1 visible 1 decoration  }
+itemDef { name "rail_edge" rect 18.0 165.0 1.0 272.0 style 3 background "ui/assets/sabertrials/pause_edge" forecolor 1 1 1 1 visible 1 decoration  }
+itemDef { name "brand_line" rect 155 24 425 1 style 1 backcolor .22 .64 .93 .8 visible 1 decoration  }
+itemDef { name "starwars" type 0 rect 135 34 460 22 text "STAR WARS" font 3 textscale 2.3 textalign 1 textalignx 230.0 textaligny 0 forecolor .85 .93 1 1 visible 1 decoration  }
+itemDef { name "brand" type 0 rect 135 98 460 22 text "S A B E R   T R I A L S" font 3 textscale 0.97 textalign 1 textalignx 230.0 textaligny 0 forecolor .30 .78 1 1 visible 1 decoration  }
+itemDef { name "multiplayer" type 0 rect 135 135 460 22 text "M U L T I P L A Y E R" font 4 textscale 0.66 textalign 1 textalignx 230.0 textaligny 0 forecolor .76 .86 .93 1 visible 1 decoration  }
+itemDef { name "focus_glow" rect 0 0 1 1 style 3 background "ui/assets/sabertrials/focus" forecolor 1 1 1 1 visible 0 decoration group focus }
+itemDef { name "side_focus_glow" rect 0 0 1 1 style 3 background "ui/assets/sabertrials/pause_focus" forecolor 1 1 1 1 visible 0 decoration group focus }
+itemDef { name "play_line" rect 20.0 223.0 192.0 0.5 style 3 background "ui/assets/sabertrials/pause_line" forecolor 1 1 1 1 visible 1 decoration  }
+itemDef { name "play_icon" rect 32 191.0 20 20 style 3 background "ui/assets/sabertrials/play" forecolor 1 1 1 1 visible 1 decoration  }
+itemDef { name "play" rect 20 178 192 46 type 1 style 0 text "Play"
+ font 2 textscale .85 textalignx 48 textaligny 13.0
+ forecolor .76 .86 .93 1 visible 1
+ onFocus { show side_focus_glow ; setitemrect side_focus_glow 20 178 192 46 ; }
+ leaveFocus { hide side_focus_glow ; }
+ action { play "sound/interface/button1.wav" ; close main ; open multiplayermenu ; }  }
+itemDef { name "profile_line" rect 20.0 273.0 192.0 0.5 style 3 background "ui/assets/sabertrials/pause_line" forecolor 1 1 1 1 visible 1 decoration  }
+itemDef { name "profile_icon" rect 32 241.0 20 20 style 3 background "ui/assets/sabertrials/player" forecolor 1 1 1 1 visible 1 decoration  }
+itemDef { name "profile" rect 20 228 192 46 type 1 style 0 text "Profile"
+ font 2 textscale .85 textalignx 48 textaligny 13.0
+ forecolor .76 .86 .93 1 visible 1
+ onFocus { show side_focus_glow ; setitemrect side_focus_glow 20 228 192 46 ; }
+ leaveFocus { hide side_focus_glow ; }
+ action { play "sound/interface/button1.wav" ; close main ; open playerMenu ; }  }
+itemDef { name "controls_line" rect 20.0 323.0 192.0 0.5 style 3 background "ui/assets/sabertrials/pause_line" forecolor 1 1 1 1 visible 1 decoration  }
+itemDef { name "controls_icon" rect 32 291.0 20 20 style 3 background "ui/assets/sabertrials/controls" forecolor 1 1 1 1 visible 1 decoration  }
+itemDef { name "controls" rect 20 278 192 46 type 1 style 0 text "Controls"
+ font 2 textscale .85 textalignx 48 textaligny 13.0
+ forecolor .76 .86 .93 1 visible 1
+ onFocus { show side_focus_glow ; setitemrect side_focus_glow 20 278 192 46 ; }
+ leaveFocus { hide side_focus_glow ; }
+ action { play "sound/interface/button1.wav" ; close main ; open controlsMenu ; }  }
+itemDef { name "setup_line" rect 20.0 373.0 192.0 0.5 style 3 background "ui/assets/sabertrials/pause_line" forecolor 1 1 1 1 visible 1 decoration  }
+itemDef { name "setup_icon" rect 32 341.0 20 20 style 3 background "ui/assets/sabertrials/settings" forecolor 1 1 1 1 visible 1 decoration  }
+itemDef { name "setup" rect 20 328 192 46 type 1 style 0 text "Setup"
+ font 2 textscale .85 textalignx 48 textaligny 13.0
+ forecolor .76 .86 .93 1 visible 1
+ onFocus { show side_focus_glow ; setitemrect side_focus_glow 20 328 192 46 ; }
+ leaveFocus { hide side_focus_glow ; }
+ action { play "sound/interface/button1.wav" ; close main ; open setup_menu ; }  }
+itemDef { name "exit_line" rect 20.0 423.0 192.0 0.5 style 3 background "ui/assets/sabertrials/pause_line" forecolor 1 1 1 1 visible 1 decoration  }
+itemDef { name "exit_icon" rect 32 391.0 20 20 style 3 background "ui/assets/sabertrials/exit" forecolor 1 1 1 1 visible 1 decoration  }
+itemDef { name "exit" rect 20 378 192 46 type 1 style 0 text "Exit"
+ font 2 textscale .85 textalignx 48 textaligny 13.0
+ forecolor .76 .86 .93 1 visible 1
+ onFocus { show side_focus_glow ; setitemrect side_focus_glow 20 378 192 46 ; }
+ leaveFocus { hide side_focus_glow ; }
+ action { play "sound/interface/button1.wav" ; open st_main_exit ; }  }
+itemDef { name "motion_line" rect 458 473 160 0.5 style 1 backcolor .38 .64 .78 .28 visible 1 decoration  }
+itemDef { name "motion" rect 458 452 160 22 type 1 style 0 cvar "st_uiMenuMotionLabel"
+ font 2 textscale .85 textalignx 14 textaligny 1.0
+ forecolor .76 .86 .93 1 visible 1
+ onFocus { show focus_glow ; setitemrect focus_glow 458 452 160 22 ; }
+ leaveFocus { hide focus_glow ; }
+ action { play "sound/interface/button1.wav" ; uiScript stMenuMotion ; } textscale .65 }
+itemDef { name "edition" type 0 rect 22 457 330 22 text "SABER TRIALS  /  MULTIPLAYER" font 2 textscale 0.58 textalign 0 textalignx 0 textaligny 0 forecolor .54 .69 .79 1 visible 1 decoration  }
+
+}
+menuDef { name "mainMenu" rect 0 0 640 480 visible 0 fullscreen 1
+ focusColor 1 1 1 1 disableColor .35 .42 .47 1
+ onOpen { uiScript stMenuInit ; setfocus play ; } onESC { open st_main_exit ; }
+itemDef { name "arena" rect 0 0 640 480 style 3 background "ui/assets/sabertrials/arena.tga" forecolor 1 1 1 1 visible 1 decoration  }
+itemDef { name "shade" rect 0 0 640 480 style 1 backcolor .005 .018 .032 .27 visible 1 decoration  }
+itemDef { name "movie" rect 0 0 640 480 style 5 cinematic "video/sabertrials_menu.roq" visible 1 decoration cvarTest "st_uiMenuMovie" showCvar { "1" } }
+itemDef { name "movie_shade" rect 0 0 640 480 style 1 backcolor .005 .018 .032 .18 visible 1 decoration  }
+itemDef { name "hologram" rect 290 178 272 272 style 3 background "ui/assets/sabertrials/hologram" forecolor 1 1 1 1 visible 1 decoration  }
+itemDef { name "rail" rect 18 165 195 272 style 3 background "ui/assets/sabertrials/pause_rail" forecolor 1 1 1 1 visible 1 decoration  }
+itemDef { name "rail_edge" rect 18.0 165.0 1.0 272.0 style 3 background "ui/assets/sabertrials/pause_edge" forecolor 1 1 1 1 visible 1 decoration  }
+itemDef { name "brand_line" rect 155 24 425 1 style 1 backcolor .22 .64 .93 .8 visible 1 decoration  }
+itemDef { name "starwars" type 0 rect 135 34 460 22 text "STAR WARS" font 3 textscale 2.3 textalign 1 textalignx 230.0 textaligny 0 forecolor .85 .93 1 1 visible 1 decoration  }
+itemDef { name "brand" type 0 rect 135 98 460 22 text "S A B E R   T R I A L S" font 3 textscale 0.97 textalign 1 textalignx 230.0 textaligny 0 forecolor .30 .78 1 1 visible 1 decoration  }
+itemDef { name "multiplayer" type 0 rect 135 135 460 22 text "M U L T I P L A Y E R" font 4 textscale 0.66 textalign 1 textalignx 230.0 textaligny 0 forecolor .76 .86 .93 1 visible 1 decoration  }
+itemDef { name "focus_glow" rect 0 0 1 1 style 3 background "ui/assets/sabertrials/focus" forecolor 1 1 1 1 visible 0 decoration group focus }
+itemDef { name "side_focus_glow" rect 0 0 1 1 style 3 background "ui/assets/sabertrials/pause_focus" forecolor 1 1 1 1 visible 0 decoration group focus }
+itemDef { name "play_line" rect 20.0 223.0 192.0 0.5 style 3 background "ui/assets/sabertrials/pause_line" forecolor 1 1 1 1 visible 1 decoration  }
+itemDef { name "play_icon" rect 32 191.0 20 20 style 3 background "ui/assets/sabertrials/play" forecolor 1 1 1 1 visible 1 decoration  }
+itemDef { name "play" rect 20 178 192 46 type 1 style 0 text "Play"
+ font 2 textscale .85 textalignx 48 textaligny 13.0
+ forecolor .76 .86 .93 1 visible 1
+ onFocus { show side_focus_glow ; setitemrect side_focus_glow 20 178 192 46 ; }
+ leaveFocus { hide side_focus_glow ; }
+ action { play "sound/interface/button1.wav" ; close mainMenu ; open multiplayermenu ; }  }
+itemDef { name "profile_line" rect 20.0 273.0 192.0 0.5 style 3 background "ui/assets/sabertrials/pause_line" forecolor 1 1 1 1 visible 1 decoration  }
+itemDef { name "profile_icon" rect 32 241.0 20 20 style 3 background "ui/assets/sabertrials/player" forecolor 1 1 1 1 visible 1 decoration  }
+itemDef { name "profile" rect 20 228 192 46 type 1 style 0 text "Profile"
+ font 2 textscale .85 textalignx 48 textaligny 13.0
+ forecolor .76 .86 .93 1 visible 1
+ onFocus { show side_focus_glow ; setitemrect side_focus_glow 20 228 192 46 ; }
+ leaveFocus { hide side_focus_glow ; }
+ action { play "sound/interface/button1.wav" ; close mainMenu ; open playerMenu ; }  }
+itemDef { name "controls_line" rect 20.0 323.0 192.0 0.5 style 3 background "ui/assets/sabertrials/pause_line" forecolor 1 1 1 1 visible 1 decoration  }
+itemDef { name "controls_icon" rect 32 291.0 20 20 style 3 background "ui/assets/sabertrials/controls" forecolor 1 1 1 1 visible 1 decoration  }
+itemDef { name "controls" rect 20 278 192 46 type 1 style 0 text "Controls"
+ font 2 textscale .85 textalignx 48 textaligny 13.0
+ forecolor .76 .86 .93 1 visible 1
+ onFocus { show side_focus_glow ; setitemrect side_focus_glow 20 278 192 46 ; }
+ leaveFocus { hide side_focus_glow ; }
+ action { play "sound/interface/button1.wav" ; close mainMenu ; open controlsMenu ; }  }
+itemDef { name "setup_line" rect 20.0 373.0 192.0 0.5 style 3 background "ui/assets/sabertrials/pause_line" forecolor 1 1 1 1 visible 1 decoration  }
+itemDef { name "setup_icon" rect 32 341.0 20 20 style 3 background "ui/assets/sabertrials/settings" forecolor 1 1 1 1 visible 1 decoration  }
+itemDef { name "setup" rect 20 328 192 46 type 1 style 0 text "Setup"
+ font 2 textscale .85 textalignx 48 textaligny 13.0
+ forecolor .76 .86 .93 1 visible 1
+ onFocus { show side_focus_glow ; setitemrect side_focus_glow 20 328 192 46 ; }
+ leaveFocus { hide side_focus_glow ; }
+ action { play "sound/interface/button1.wav" ; close mainMenu ; open setup_menu ; }  }
+itemDef { name "exit_line" rect 20.0 423.0 192.0 0.5 style 3 background "ui/assets/sabertrials/pause_line" forecolor 1 1 1 1 visible 1 decoration  }
+itemDef { name "exit_icon" rect 32 391.0 20 20 style 3 background "ui/assets/sabertrials/exit" forecolor 1 1 1 1 visible 1 decoration  }
+itemDef { name "exit" rect 20 378 192 46 type 1 style 0 text "Exit"
+ font 2 textscale .85 textalignx 48 textaligny 13.0
+ forecolor .76 .86 .93 1 visible 1
+ onFocus { show side_focus_glow ; setitemrect side_focus_glow 20 378 192 46 ; }
+ leaveFocus { hide side_focus_glow ; }
+ action { play "sound/interface/button1.wav" ; open st_main_exit ; }  }
+itemDef { name "motion_line" rect 458 473 160 0.5 style 1 backcolor .38 .64 .78 .28 visible 1 decoration  }
+itemDef { name "motion" rect 458 452 160 22 type 1 style 0 cvar "st_uiMenuMotionLabel"
+ font 2 textscale .85 textalignx 14 textaligny 1.0
+ forecolor .76 .86 .93 1 visible 1
+ onFocus { show focus_glow ; setitemrect focus_glow 458 452 160 22 ; }
+ leaveFocus { hide focus_glow ; }
+ action { play "sound/interface/button1.wav" ; uiScript stMenuMotion ; } textscale .65 }
+itemDef { name "edition" type 0 rect 22 457 330 22 text "SABER TRIALS  /  MULTIPLAYER" font 2 textscale 0.58 textalign 0 textalignx 0 textaligny 0 forecolor .54 .69 .79 1 visible 1 decoration  }
+
+}
+menuDef { name "st_main_exit" rect 0 0 640 480 visible 0 fullscreen 0
+ popup
+ focusColor 1 1 1 1 disableColor .35 .42 .47 1
+ onOpen { setfocus back ; } onESC { close st_main_exit ; }
+itemDef { name "panel" rect 236 62 380 275 style 1 backcolor .008 .026 .044 .94 visible 1 decoration border 1 borderSize 1 bordercolor .30 .78 1 1  }
+itemDef { name "heading" type 0 rect 256 80 340 22 text "EXIT SABER TRIALS" font 4 textscale 1.02 textalign 0 textalignx 0 textaligny 0 forecolor .30 .78 1 1 visible 1 decoration  }
+itemDef { name "copy0" type 0 rect 256 113 340 22 text "Quit the game and return to your desktop?" font 2 textscale 0.77 textalign 0 textalignx 0 textaligny 0 forecolor .76 .86 .93 1 visible 1 decoration  }
+itemDef { name "focus_glow" rect 0 0 1 1 style 3 background "ui/assets/sabertrials/focus" forecolor 1 1 1 1 visible 0 decoration group focus }
+itemDef { name "confirm_line" rect 250 209 352 0.5 style 1 backcolor .38 .64 .78 .28 visible 1 decoration  }
+itemDef { name "confirm" rect 250 178 352 32 type 1 style 0 text "Quit game"
+ font 2 textscale .85 textalignx 14 textaligny 6.0
+ forecolor .76 .86 .93 1 visible 1
+ onFocus { show focus_glow ; setitemrect focus_glow 250 178 352 32 ; }
+ leaveFocus { hide focus_glow ; }
+ action { play "sound/interface/button1.wav" ; uiScript quit ; }  }
+itemDef { name "back_line" rect 250 326 352 0.5 style 1 backcolor .38 .64 .78 .28 visible 1 decoration  }
+itemDef { name "back" rect 250 299 352 28 type 1 style 0 text "Back"
+ font 2 textscale .85 textalignx 14 textaligny 4.0
+ forecolor .76 .86 .93 1 visible 1
+ onFocus { show focus_glow ; setitemrect focus_glow 250 299 352 28 ; }
+ leaveFocus { hide focus_glow ; }
+ action { play "sound/interface/button1.wav" ; close st_main_exit ; } textscale .8 }
+
+}
+menuDef { name "st_main_ranked" rect 0 0 640 480 visible 0 fullscreen 1
+ popup
+ focusColor 1 1 1 1 disableColor .35 .42 .47 1
+ onOpen { setfocus back ; } onESC { close st_main_ranked ; open multiplayermenu ; }
+itemDef { name "arena" rect 0 0 640 480 style 3 background "ui/assets/sabertrials/arena.tga" forecolor 1 1 1 1 visible 1 decoration  }
+itemDef { name "shade" rect 0 0 640 480 style 1 backcolor .005 .018 .032 .27 visible 1 decoration  }
+itemDef { name "brand_line" rect 155 24 425 1 style 1 backcolor .22 .64 .93 .8 visible 1 decoration  }
+itemDef { name "starwars" type 0 rect 135 34 460 22 text "STAR WARS" font 3 textscale 2.3 textalign 1 textalignx 230.0 textaligny 0 forecolor .85 .93 1 1 visible 1 decoration  }
+itemDef { name "brand" type 0 rect 135 98 460 22 text "S A B E R   T R I A L S" font 3 textscale 0.97 textalign 1 textalignx 230.0 textaligny 0 forecolor .30 .78 1 1 visible 1 decoration  }
+itemDef { name "multiplayer" type 0 rect 135 135 460 22 text "M U L T I P L A Y E R" font 4 textscale 0.66 textalign 1 textalignx 230.0 textaligny 0 forecolor .76 .86 .93 1 visible 1 decoration  }
+itemDef { name "panel" rect 225 184 390 275 style 1 backcolor .008 .026 .044 .94 visible 1 decoration border 1 borderSize 1 bordercolor .30 .78 1 1  }
+itemDef { name "heading" type 0 rect 245 202 350 22 text "RANKED PLAY" font 4 textscale 1.02 textalign 0 textalignx 0 textaligny 0 forecolor .30 .78 1 1 visible 1 decoration  }
+itemDef { name "copy0" type 0 rect 245 235 350 22 text "Online ranked play is not available yet." font 2 textscale 0.77 textalign 0 textalignx 0 textaligny 0 forecolor .76 .86 .93 1 visible 1 decoration  }
+itemDef { name "copy1" type 0 rect 245 255 350 22 text "Your account, team and world rank will live" font 2 textscale 0.77 textalign 0 textalignx 0 textaligny 0 forecolor .76 .86 .93 1 visible 1 decoration  }
+itemDef { name "copy2" type 0 rect 245 275 350 22 text "on the Saber Trials website when it launches." font 2 textscale 0.77 textalign 0 textalignx 0 textaligny 0 forecolor .76 .86 .93 1 visible 1 decoration  }
+itemDef { name "copy3" type 0 rect 245 295 350 22 text "Ranked Duel + Challenge Duel share a ladder." font 2 textscale 0.77 textalign 0 textalignx 0 textaligny 0 forecolor .76 .86 .93 1 visible 1 decoration  }
+itemDef { name "copy4" type 0 rect 245 315 350 22 text "Ranked TFFA uses registered teams." font 2 textscale 0.77 textalign 0 textalignx 0 textaligny 0 forecolor .76 .86 .93 1 visible 1 decoration  }
+itemDef { name "focus_glow" rect 0 0 1 1 style 3 background "ui/assets/sabertrials/focus" forecolor 1 1 1 1 visible 0 decoration group focus }
+itemDef { name "back_line" rect 239 448 362 0.5 style 1 backcolor .38 .64 .78 .28 visible 1 decoration  }
+itemDef { name "back" rect 239 421 362 28 type 1 style 0 text "Back"
+ font 2 textscale .85 textalignx 14 textaligny 4.0
+ forecolor .76 .86 .93 1 visible 1
+ onFocus { show focus_glow ; setitemrect focus_glow 239 421 362 28 ; }
+ leaveFocus { hide focus_glow ; }
+ action { play "sound/interface/button1.wav" ; close st_main_ranked ; open multiplayermenu ; } textscale .8 }
+
+}
+}

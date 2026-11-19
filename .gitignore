@@ -1,0 +1,90 @@
+# Generated packages
+dist/*.pk3
+/dlc/emotes/*.pk3
+
+# Locally installed character conversion test package
+/luffy.pk3
+/t800.pk3
+/bender.pk3
+/trunks.pk3
+/ulquiorra.pk3
+/talon.pk3
+/talon_rend2.pk3
+/fem_trooper.pk3
+/fem_trooper_rend2.pk3
+dist/*.zip
+dist/Cyber_ZomB_Talon_JKA_v1.0/
+__pycache__/
+
+# Compiled game modules belong in GitHub Releases, not source history
+*.dll
+*.so
+*.dylib
+
+# Superseded development snapshots retained only on the local machine
+development-source/guard-monitor/
+
+# Local game state and logs
+*.log
+*.dmp
+crashlog.txt
+jampconfig.cfg
+openjk*.cfg
+
+# Editor and operating-system files
+.vs/
+.vscode/
+Thumbs.db
+Desktop.ini
+/Saber Trials.lnk
+*.tmp
+*.bak
+
+# Server-only private configuration and moderation data
+server/private/
+serverbans.dat
+ipwhitelist.dat
+security.log
+
+# Local overhaul runtime and verification captures
+/client/
+/dist/backups/
+/dist/verification/
+*.dm_26
+
+# Isolated staff dependency caches and native builds (lock/source scripts tracked)
+/dist/staff-deps/
+/dist/staff-build*/
+/dist/staff-work/
+
+# Personal one-time staff enrollment; never ship with the mod
+/staff-setup.cfg
+/server.cfg
+/dist/*-templates/
+
+# Account service runtime data and isolated deployment dependencies
+/dist/accounts-deps/
+/dist/accounts-tools/
+/dist/accounts-staging/
+/dist/account-native-tests/
+/dist/account-client-staging/
+/services/accounts/private/
+/services/accounts/.env
+*.sqlite
+*.sqlite-wal
+*.sqlite-shm
+
+# Isolated handedness source extraction and native build outputs
+/dist/handedness-*/
+
+# Generated build trees, packaged snapshots, and downloaded toolchains
+/dist/*
+!/dist/.gitkeep
+
+# Local graphics-driver cache
+/optix7cache.db
+
+# Installed packages and local asset inputs
+/zz*_sabertrials_*.pk3
+/assets/stance-inputs/
+/docs/local/

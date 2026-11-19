@@ -1,0 +1,1802 @@
+ is assigned to: 	に割り当てられます:
+%d B/s max	最高 %d B/s
+%s | default %s | edit range %.4g to %.4g	%s | デフォルト %s | 編集範囲 %.4g ～ %.4g
+')!=std::string::npos)){error=	')!=std::string::npos){error=
++  Advanced video	+ 高度なビデオ
++altattack	+altattack(アルタタック)
++attack	+attackの
++back	+バック
++forward	+前方へ
++left	+左へ
++lookdown	+見直し
++lookup	+見栄え
++movedown	+監視
++moveleft	+moveleft(モーヴレフ)
++moveright	+著作権について
++moveup	+キャンペーン
++right	+右へ
++scores	+スコア
++speed	+速度
++strafe	+ストラフェ
++use	+使用
++useforce	+ユースフォース
+-  Advanced video	- 高度なビデオ
+-2=Desktop|-1=Custom	-2=Desktop|-1=カスタム
+.cfg	.cfgの特長
+.jpg	. . .jpg
+.png	.png からのコメント
+.skin	.skinの
+.tga	ツイート
+/default	/デフォルト
+/misc	/misc(ミスク)
+/model.glm	/モデル.glm
+/st_profile.ini	/st_profile.ini はコメントを受け付けていません。
+10 minutes: reconnect or substitute	10分:再接続または置換
+10 rounds per match	試合ごとの10ラウンド
+16 bit	16ビット
+1v1 TOURNAMENT	1v1 トーナメント
+22 kHz	22 kHzの
+2v2 / 20 kills	2v2 / 20 キル
+32 bit	32ビット
+3v3 / 30 kills	3v3/30 キル
+44 kHz	44 kHzの
+4v4 / 40 kills	4v4 / 40 キルズ
+5 minutes to reconnect	再接続する5分
+5-5 tie: one deciding round	5-5 タイ: 1 つの決定ラウンド
+5v5 / 50 kills	5v5 / 50 キルズ
+8-32 players / even entries	8-32 選手 / エントリー
+: unsupported value.	: サポートされていない値。
+; engine directory limit reached	; エンジンのディレクトリの限界に達しました
+; engine range 	;エンジンの範囲
+< Profile	< プロフィール
+@MENUS_ABSORB	ステンレス
+@MENUS_ACROBATICS	アクロバティックス
+@MENUS_ADD_BOT	Bot を追加
+@MENUS_ADD_FAVORITE	お気に入りに追加
+@MENUS_ADD_SELECTED_SERVER_TO	選択したサーバーをお気に入りに追加します。
+@MENUS_ADJUSTS_THE_DIFFICULTY	ゲームの人工的な理性的なボットの難しさのレベルを調節して下さい。
+@MENUS_ADV_GAME_RULES	アドバンスドゲームルール
+@MENUS_ALL	すべて すべて
+@MENUS_ALLOWS_YOU_TO_SELECT	再生したいサーバーのゲームの種類を選択できるようにします。
+@MENUS_ALLOW_SABER_CHALLENGE	サバーチャレンジを許可する:
+@MENUS_AN_ATTACK_DRONE_SIMILAR	シーカードローン\nJediが使用したトレーニングドローンに似た攻撃ドローンは、自分のライトバーのスキルを練習し、シーカーはユーザーの周りのホバーを探し、敵を攻撃します。 ドローンは、限られた時間のために自動的に動作し、その電力が枯渇したときに自己破壊します。
+@MENUS_AN_ELEGANT_WEAPON_FOR	ライター\nより文明的な年齢のためのエレガントな武器、Lightaberは、ジェディナイトの好まれた武器です。 Lightaberは、攻撃と防衛の両方のために、ウィルダーによって使用できる素晴らしい電力のエネルギーブレードです。\n\n第一次火 - 攻撃をスラッシュとスイング\n二次火災 - 強制動力を与えられたsaberスロー\n防御能力 - 爆撃機とエネルギーの武器の火を防いで、敵のラッパー攻撃を解析\nアモタイプ - N/A
+@MENUS_APPEARANCE	導入事例
+@MENUS_APPLY	申し込み
+@MENUS_APPLY_CHANGES	アップルチャング
+@MENUS_APPLY_CHANGES_AND_JOIN	変更を適用し、進行中のゲームに参加してください。
+@MENUS_APPLY_CHANGES_AND_THEN	変更を適用し、メインメニューに移動します。
+@MENUS_APPLY_PLAYER_SABER	プレイヤーの変更を適用し、saber 選択に移動します。
+@MENUS_APPLY_POWERS	パワーを適用する
+@MENUS_APPLY_SABER_CHANGES	saberの変更を適用し、メインメニューに戻ります。
+@MENUS_APPLY_THESE_CHANGES_OR	これらの変更または廃棄を申し立てますか?
+@MENUS_ASSIST_ME	支援する
+@MENUS_ATTACK_THE_ENEMY_S_BASE	敵の基地を攻撃する。
+@MENUS_ATTACK_TITLE	攻撃
+@MENUS_AUTO_DOWNLOAD	自動ダウンロード:
+@MENUS_AUTO_JOIN	自動結合:
+@MENUS_AUTO_JOIN_DESC	チームとクラスを選択するサーバーを許可します。
+@MENUS_AUTO_MAP_CYCLE	自動地図周期:
+@MENUS_AUTO_MAP_CYCLE_DESC	試合完了時に次のマップへ。
+@MENUS_AUTO_TEAM	オートチーム
+@MENUS_AWAITING_CHALLENGE	チャレンジを待って...%i
+@MENUS_AWAITING_CONNECTION	接続を待って...%i
+@MENUS_AWAITING_GAMESTATE	待ち受けるゲーム状態...
+@MENUS_A_DEDICATED_SERVER_IS	専用のサーバーは、他のゲームのみを実行するコンピュータです。
+@MENUS_A_DETONATION_PACK_IS	デトネーションパック\nデトネーションパックは、基本的にリモートデトネーショントリガーを備えた小さな爆薬装置です。 パックは配置または捨てられ、ユーザーに意志で解毒することができます。 解毒パックは、一般的にアンブス敵または封印ドアに使用されます。\n\n第一次火 - ユーザーの足で投げる充満\n二次火災 - すべてのセット料金を爆発
+@MENUS_BACKTOMAIN	メインメニューへ戻る
+@MENUS_BACKTORULES	ルールメニューへ戻る
+@MENUS_BACKUP_ONE_MENU	1つのメニューをバックアップします。
+@MENUS_BACK_2_PROFILE	プロフィールメニューへ戻る
+@MENUS_BACTA_CANISTERS_ARE_PORTABLE	バイオテクノロジー・バクタ・キャニスターズ\nバクタキャニスターは、バクタ軟膏と緊急ケアツールのポータブル、使い捨てパックです。 フィールドで使用するために設計されたバクタキャニスターは、医療回復中に傷を癒し、活力を回復するために使用することができます。 フィールドの薬は、それらなしですべきではありません。
+@MENUS_BACTA_CAPS	バクタ
+@MENUS_BECOME_A_NEARLY_UNSTOPPABLE	ほぼ止まらないジューガーナットになる。
+@MENUS_BEGIN_PLAYING_THE_DEMO	選択したファイルからデモを再生します。
+@MENUS_BLADE_COLOR	BLADEカラー
+@MENUS_BLADE_COLOR_DESC	ライターブレードのカラーを選択します。
+@MENUS_BLASTER_PISTOL	ブラスター・ピストル
+@MENUS_BLASTER_PISTOL_DESC	DL-44 重いブスター ピストル\n銀河の中で最も一般的な武器の1つであるDL-44ヘビーブラスターピストルは、火の遅い速度を持っていますが、非常に正確です。\n\n第一次火 - 打撃、大きい正確さおよび損傷の単一の打撃\n二次火災 - 増加された損傷ブラストのためのエネルギー蓄積を充電\nアムモタイプ - ブラスターパック
+@MENUS_BLASTER_RIFLE	ブラスター・ライフル
+@MENUS_BOTS	キャスト
+@MENUS_BOWCASTER_CAPS	ボワカスター
+@MENUS_CALL_FOR_VOTES	Votes の呼び出し
+@MENUS_CANCEL	ダンスル
+@MENUS_CANCEL_DESC	チームを変えずにゲームに戻る。
+@MENUS_CAPTURE_LIMIT	キャプチャ制限:
+@MENUS_CAPTURE_THE_FLAG_RULES	フラグゲームルールをキャプチャします。
+@MENUS_CAP_AUTO_JOIN	オートジョイント
+@MENUS_CHANNEL_THE_FORCE_TO	あなたの味方を癒すために力を運びます。
+@MENUS_CHARACTER_CREATION	キャラクタークリエーション
+@MENUS_CHOOSE_A_PRE_MADE_ALLOCATION	パワーパワーの既製の割り当てを選択します。
+@MENUS_CHOOSE_CLASS	クラスを選ぶ
+@MENUS_CHOOSE_MOVE_DESC	移動タイプを選択します。
+@MENUS_CHOOSE_RULES	ゲームルールの選択
+@MENUS_CHOOSE_SOURCE_OF_SERVERS	サーバーのソースを選択します。
+@MENUS_CHOOSE_SPECIES	種を選択してください。
+@MENUS_CHOOSE_THE_PATH_OF_THE	ライトサイドまたはダークサイドのパスを選択します。
+@MENUS_CHOOSE_YOUR_FORCE_TRAINING	フォーストレーニングを選択
+@MENUS_CHOOSE_YOUR_GAME	ゲームを選ぶ
+@MENUS_CLASS_CHOICE_DESC	クラスを選択します。
+@MENUS_CLASS_FORCEPOWERS	このクラスの力力。
+@MENUS_CLASS_INVENTORY	このクラスの在庫
+@MENUS_CLASS_WEAPONS	このクラスの武器。
+@MENUS_CLICK_FOR_HUMAN_BOTS	人間、ボット、または閉じたスロットをクリックします。
+@MENUS_CLIENTS_CAN_DOWNLOAD	クライアントは、新しいデータとコードをダウンロードすることができます。
+@MENUS_CLIENT_MUST_HAVE_EXACT	クライアントとサーバーは、同じコードとデータを持っている必要があります。
+@MENUS_CLOAK_CAPS	クロアキング・シールド
+@MENUS_CLOAK_DESC	クローキングシールド\nクロークシールドは、他人に見えないウェアラをレンダリングし、ステルシーな動きを可能にします。しかし、デバイスに電力を供給するために必要な巨大なエネルギーのために、クロークは短時間持続します。\n\nDEMP 2 銃からの直接ヒットは、シールドを一時的に無効にします。さらに、DEMP 2 の二次火災からのヒットは、シールドを永久に無効にします。\n\nクロークシールドは、シージゲームタイプでのみ使用可能です。
+@MENUS_COLOR	カラー
+@MENUS_COLOR1_DESC	ブレードカラーを選択します。
+@MENUS_COLOR2	カラー2
+@MENUS_COLOR2_DESC	2番目のブレードカラーを選択します。
+@MENUS_COMBAT_RULES	コンバットルール
+@MENUS_COMMONLY_REFERRED_TO	破壊的な電気磁気脈拍2銃\n一般的にDEMP 2と呼ばれ、このパルスライフルは、主にドロイドや電気機器に使用されます。 DEMP 2は、電気システムを破壊し、個人的なシールドに対して最も効果的である高出力イオンバーストを発射します。 以前の武器の発生とは異なり、DEMP 2のイオン充電は、生きた材料を傷つけることができます。\n\n第一次火 - シングルショット、人間への損傷、シールドへの余分な損傷\n二次火災 - 敵を倒すことができるほぼ瞬発の衝撃波を解除する電撃ショット\nアムモタイプ - パワーセル
+@MENUS_COMPLETE_THE_CURRENT	現在の目的を完了して下さい。
+@MENUS_CONC_RIFLE	コンシェルジュ・ライフル
+@MENUS_CONC_RIFLE_DESC	ストーカー・コンカッション・ライフル\nStoukerは、直径4メートルくらいの爆発を発する対立爆破を発射します。\n\n第一次火 - 単一のショット、すべてのダメージを与える大きな爆発効果、低速発射速度\n二次火災 - より小さい爆発性半径を持っているが、その半径にはるかにダメージを与え、より厳しい残油を有するより小さな投射ショットを火災します\nアムモタイプ - メタリックボルト
+@MENUS_CONFIGURE_GAME_CONTROLS	ゲームコントロールの設定
+@MENUS_CONFIGURE_GAME_SETTINGS	ゲームの設定。
+@MENUS_CONNECTING_TO	%s への接続
+@MENUS_CONNECTION_RULES	接続ルール
+@MENUS_CREATE_AN_AURA_THAT_PROTECTS	物理的な攻撃から保護するオーラを作成します。
+@MENUS_CTF_CAPS	フラッグを運ぶ
+@MENUS_CUSTOM_CHARACTER	カスタムキャラクター
+@MENUS_DARK_RAGE	ダーク レイジ:
+@MENUS_DATAPAD	データパッド:
+@MENUS_DATA_RATE	データ転送速度:
+@MENUS_DATA_RATE_DESC	インターネット上の情報転送接続速度。
+@MENUS_DATA_TRANSFER_RATE_TO	顧客へのデータ転送速度。
+@MENUS_DEDICATED_SERVER	専用サーバー:
+@MENUS_DEFAULT	デフォルト
+@MENUS_DEFEND_OUR_BASE	拠点を守る
+@MENUS_DEFEND_TITLE	防衛
+@MENUS_DELETE_SELECTED_SERVER	お気に入りから選択したサーバーを削除します。
+@MENUS_DEL_FAVORITE	デル. お気に入り
+@MENUS_DEMP_2_1	DEMP 2 の特長
+@MENUS_DESCRIPTION_OF_A_FORCE	力の記述。
+@MENUS_DESCRIPTION_OF_A_WEAPON	武器の種類の説明。
+@MENUS_DESCRIPTION_OF_ITEM_TYPE	項目タイプの説明。
+@MENUS_DETPACK	デパック
+@MENUS_DISABLE_FORCE	無効な力:
+@MENUS_DISABLE_FORCE_INFO	再生中の任意の力の使用を禁止します。
+@MENUS_DISCARD	ディスクガード
+@MENUS_DISPLAY_SERVER_INFORMATION	サーバー情報を表示します。
+@MENUS_DISRUPTOR	ディスラプター
+@MENUS_DONE	ログイン
+@MENUS_DONE_CAPS	DONE(ドンドン)
+@MENUS_DONE_DESC	サーバーファインダーに戻ります。
+@MENUS_DO_NOT_APPLY_CHANGES	変更を加え、ビデオメニューに戻りません。
+@MENUS_DRAIN	ドレイン
+@MENUS_DRAIN_THE_FORCE_POWER	対戦相手の力力を鍛え、健康に加わります。
+@MENUS_DUALSABERS	デュアル・ザーバー
+@MENUS_DUALSABERS_DESC	ワンハンドのサビールを2個使用し、戦闘スタイルを1つだけ使用してください。
+@MENUS_DUAL_SABERS	デュアル・ザーバー
+@MENUS_DUEL_CAPS	デュエル
+@MENUS_DUEL_GAMETYPE	デュエルゲームのルール。
+@MENUS_DUEL_LIMIT	デュエルの限界:
+@MENUS_DURATION_5_SECONDS_NAREA	力の速度\n期間: 変数(10 - 20秒)\n効果の区域: ジェディ\n効果: ジーディはスピードをあげます。\n\nランク1 - Jediは10秒間通常より25%速く動きます\nランク2 - ジェディは15秒間通常より50%速く動きます\nランク3 - ジェディは20秒間通常より75%速く動きます
+@MENUS_DURATION_CONTINUOUS_NAREA	力の吸収\n期間:連続\n効果の区域: ジェディだけ\n効果:あらゆる直接力の力から保護して下さい。\n\nウィルダーに指示された力能力からの損傷を吸収し、そのエネルギーを使用可能な力に変えます。\n\nランク1 - ランク1のフォース攻撃を数値化し、ランクフォース攻撃の効果を低下させます。 いくつかのフォースパワーを返します。\nランク2 - ランク2のフォース攻撃を数値化し、ランクフォース攻撃の効果を大幅に削減します。 パワーパワーを大きく戻します。\nランク3 - すべてのフォース攻撃を数値化します。 パワーをさらに高めます。
+@MENUS_DURATION_IMMEDIATE_NAREA	強制ジャンプ\n期間:即時\n効果の区域: ジェディだけ\n効果: Jedi が途方もない縦の飛躍を作ることを可能にします。\n\nランク1 - ジェディは、通常のジャンプ高さ2倍まで飛躍することができます。\nランク2 - ジェディは、通常のジャンプ高さの4倍まで飛躍することができます。\nランク3 - ジェディは、通常のジャンプ高さの8倍まで飛躍することができます。
+@MENUS_DURATION_INSTANTANEOUS	強制プッシュ\nデュレーション: 瞬間的な効果\n効果の区域: 目的か人\n効果:ジェディがオブジェクトを自分自身から押し、ミサイルをデフラグし、フォースグリップとフォースプッシュ攻撃から防御することを可能にします。\n\nランク1 - ジェディは、力を使用して、特定の敵またはオブジェクトを集中的にプッシュします。\nランク2 - ジェディは、強制を使用して複数の敵または限られたアークのオブジェクトをプッシュします。\nランク3 - ジェディは、敵を固体表面に押し込むか、ledgesをオフすることによって、ダメージをするために十分な力で複数の敵をプッシュすることができます。
+@MENUS_DURATION_INSTANTANEOUS_NAREA	力のグリップ\n期間:瞬間\n効果の領域: 生きている人だけ\n効果: ジェディが生きた臓器をチョークまたは収縮させることを可能にします。\n\nランク1 - 感染した敵は、グリップされ、未だに保持されますが、5秒間移動します。 ジェディは静止状態のままでなければなりません。\nランク2 - Enemyは、ランク1と同様に影響を受けていますが、グリップは、グリップの長期焦点で敵を損傷し、持ち上げることができます。 Jediは静止状態のままでなければなりません。\nランク3 - Enemyは2のランクに似ていますが、Jediは自由に動き、敵を壁や他の障害物に粉砕したり、チョークの損傷をやっている間、敵をシールドとして使用したりすることができます。
+@MENUS_DURATION_VARIABLE_10	力のおり\n期間: 変数(10 - 30秒)\n効果の区域: 暗いジェディだけ\n効果: ジェディは一定期間の速度の不潔に行きますが、その後回復しなければなりません。 アクティブな間、健康を排出し、持続期間後にまたは健康が当たるとき1を失います。\n\nダークレイジ:火災33%高速、100%高速移動、50%の被害を減少させ、ウィエルダーは死ぬことができません(健康は1にとどまります)。\nダークレイジ回復:火災50%遅く、75%速度で移動\n\nランク1 - 10秒、10秒の回復のためのRage\nランク2 - レイジ20秒、10秒の回復\nランク3 - 30秒のRage、10秒の回復
+@MENUS_DURATION_VARIABLE_20	マインドトリック\n期間: 変数(5 - 15秒)\n効果の区域: 他のプレーヤー\n効果: ジェディが他のプレイヤーに見えないようにすることを可能にします。\n\nランク1 - ジェディは5秒間単一のターゲット敵に見えない。\nランク2 - ジェディは10秒間適度な距離の前方アークで敵に見えない。\nランク3 - ジェディは15秒間適度な距離ですべての敵に見えない。
+@MENUS_DURATION_VARIABLE_NAREA	力の保護\nデュレーション: 変数\n効果の区域: ジェディだけ\n効果: 物理的な攻撃から保護します。\n\n身体の攻撃からジェディへのダメージは、健康スコアではなく、強制力プールから取られます。\n\nランク1 - 50%ダメージブロック、フォースプールから100%削除、最大100ダメージ\nランク2 - 75%ダメージブロック、フォースプールから50%、最大200ダメージ\nランク3 - 87.5%ダメージブロック、フォースプールから25%除去、最大400ダメージ
+@MENUS_EFFECT_JEDI_ALLIES_NEFFECT	チーム・エンアジャイズ\nデュレーション: 瞬間的な効果\n効果の区域: ジェディの同盟国\n効果: ジェディは、強制エネルギーで同盟国を阻害する能力を持っています。\n\n力チームは、Jediが自分の体の特定の半径内の彼の同盟国に一定の量の力エネルギーを回復させることを可能にします。Jediは50の強制ポイントを1つの味方に復元できます、33の強制ポイントは2つの同盟国または25の強制ポイントを3つ以上の同盟国に回復できます。\n\nランク1 - ノーマルレンジ\nランク2 - 1回半数の通常の範囲\nランク3 - 二重正常な範囲
+@MENUS_EFFECT_NAREA_OF_EFFECT	パワーセンス\nデュレーション: 瞬間的な効果\n効果の領域: ビューのジェディフィールド\n効果: ジェディの素晴らしいと広い視野を許します。\n\n力見ると、ジェディは照明条件に関係なく、すべての敵を明らかに見ることができ、見やすくなります。また、ジェディがジェディ・マインド・トリック・フォース・パワーを対抗することを可能にします。ジェディを見る最も高いレベルの力は、彼がスナイパーの火を投じることを可能にする6番目の感覚を開発します。\n\nランク1 - プレイヤーのオーラが通常の時間の長さで強調表示されていることを参照してください。\nランク2 - プレーヤーのオーラを眺め、そして二重時間の持続時間の壁を通して見て下さい。\nランク3 - プレーヤーのオーラを眺め、任意の範囲で3回の長さで壁を通して参照してください。 プレイヤーは、自動的にこのレベルでスナイパーショットを投影することができます。
+@MENUS_ENABLE_VOTING	投票を有効にする:
+@MENUS_ENDGAME_RULES	エンドゲームルール
+@MENUS_ENTER_IP_ADDRESS	IP アドレスを入力してください:
+@MENUS_ENTER_IP_ADDRESS_OF_FAVORITE	お気に入りのサーバーのIPアドレスを入力します。
+@MENUS_ENTER_PASSWORD	エントリーパスワード
+@MENUS_ENTER_THE_NAME_FOR_YOUR	サーバの名前を入力します。
+@MENUS_ENTER_THE_TITLE_FOR_YOUR	フォーステンプレートのタイトルを入力してください(Alphanumericのみ)。
+@MENUS_ERROR	エラー:
+@MENUS_ESTABLISH_THE_NUMBER	マッチを獲得するために必要なキルの数。
+@MENUS_EVEN_TEAMS	チームでも:
+@MENUS_EWEB_CAPS	E-WEB(イープラス)
+@MENUS_EWEB_DESC	E-Webサイト\nE-Webは、パワー三脚レーザーキャノンです。 強力な防御的な位置を作成するのに役立つために、戦闘フィールドに展開することができます。\n\nE-WebはSiegeのゲームタイプでのみ使用可能です。
+@MENUS_EXIT_TO_MAIN_MENU	メインメニューへ。
+@MENUS_FASTEST_CLIENT_ALLOWED	接続を許可する最速のクライアント。
+@MENUS_FAVORITE_SERVER_INFO	FAVORITE SERVER インフォメーション
+@MENUS_FFA_CAPS	全て無料
+@MENUS_FILENAME	ファイル名:
+@MENUS_FILTER_FOR_SPECIFIC_GAME	特定のゲームタイプにフィルターを設定します。
+@MENUS_FIND_PLAYER	プレイヤーを探す
+@MENUS_FINISHED_INPUTTING_INFO	完成品の入力情報。
+@MENUS_FLECHETTE_1	フリケッテ
+@MENUS_FOLLOW_ME	お問い合わせ
+@MENUS_FORCEDESC_DARK	ダーク
+@MENUS_FORCEDESC_LIGHT	ライトライト
+@MENUS_FORCE_ABSORB	吸収:
+@MENUS_FORCE_DRAIN	ドレイン:
+@MENUS_FORCE_GRIP	グリップ:
+@MENUS_FORCE_HEAL	ヒール:
+@MENUS_FORCE_JUMP	ジャンプ:
+@MENUS_FORCE_LIGHTNING	ライトニング:
+@MENUS_FORCE_MASTERY	力 マスター:
+@MENUS_FORCE_MASTERY_INFO	パワーを強制するために割り当てられるポイントの数を定義します。
+@MENUS_FORCE_MINDTRICK	マインドトリック:
+@MENUS_FORCE_POWERS_TITLE	力の力:
+@MENUS_FORCE_POWERS_TITLE_DESC	力力を有効にし、力力を無効にするか、またはジャンプ、プッシュ、プル、およびサバースローを有効にするだけです。
+@MENUS_FORCE_PROTECT	保護して下さい:
+@MENUS_FORCE_PULL	引き:
+@MENUS_FORCE_PUSH	プッシュ:
+@MENUS_FORCE_RULES	フォースルール。
+@MENUS_FORCE_SIDE	力の側面:
+@MENUS_FORCE_SIGHT	参照:
+@MENUS_FORCE_SPEED	速度:
+@MENUS_FORCE_TEAM_HEAL	チーム ヒール:
+@MENUS_FORCE_TEAM_REPLENISH	チーム エンゲージメント:
+@MENUS_FORCE_TEMPLATES	フォーステンプレート
+@MENUS_FREE_FOR_ALL_GAME_RULES	ゲームのルールは全て無料です。
+@MENUS_FRIENDLY_FIRE	友好的な火:
+@MENUS_GAME	ゲーム:
+@MENUS_GAME_RULES	ゲームルール。
+@MENUS_GAME_TYPE	タイプ:
+@MENUS_GENERAL_RULES	ジェネラルルール
+@MENUS_GET_ENEMY_FLAG_BACK_TO	敵のフラグをベースに戻します。
+@MENUS_GET_NEW_LIST	新規登録
+@MENUS_GET_OUR_FLAG_BACK	フラグを戻します。
+@MENUS_GET_SERVER_INFO	サーバー情報
+@MENUS_GET_UPDATED_SERVER_LIST	更新されたサーバーリストを入手してください。
+@MENUS_GO_BACK_TO_STANDARD_SETTINGS	標準設定に戻ります。
+@MENUS_GO_TO_MAIN_MENU	メインメニューへ
+@MENUS_GRIP	グラップ
+@MENUS_GUARD_OUR_FLAG_CARRIER	フラグキャリアを監視します。
+@MENUS_HEAD	ヘッド
+@MENUS_HEAL	ヘルスケア
+@MENUS_HEAL_YOUR_BODY_WITH_THE	身体を強制的に癒します。
+@MENUS_HILT1	HILT(ハイト)
+@MENUS_HILT1_DESC	ヒュルトを選択します。
+@MENUS_HILT2	HILT 2の特長
+@MENUS_HILT2_DESC	2番目のハイルトを選択します。
+@MENUS_IMMOBILIZE_OPPONENTS	死のアゴナイズグリップで相手を動員させる。
+@MENUS_INCLUDE_EMPTY_SERVERS	リストに空のサーバーを含める。
+@MENUS_INCLUDE_FULL_SERVERS	リストにフルサーバーを含める。
+@MENUS_INPUT_IP_ADDRESS_OF_SERVER	サーバのIPアドレスを入力します。
+@MENUS_INPUT_PASSWORD	パスワードを入力してください。
+@MENUS_INPUT_PASSWORD_1	パスワードを入力してください
+@MENUS_INPUT_PLAYER_NAME	入力プレーヤー名。
+@MENUS_INSTANTANEOUS_EFFECT_NAREA	力の引き\nデュレーション: 瞬間的な効果\n効果の区域: 目的か人\n効果: ジェディが敵を相手を武装させるチャンスで敵を引っ張ることを可能にします。 また、フォースプル攻撃に対して防御します。\n\nランク1 - ジェディは、力を使用して、焦点を絞った特定の敵を引っ張ります。\nランク2 - ジェディは、限られたアークで複数の敵を引っ張る力を使用しています。\nランク3 - ジェディは、ターゲットを閉じた範囲でノックダウンするのに十分な力で複数の敵を引っ張ることができます。
+@MENUS_INTERNET	インターネット
+@MENUS_IN_CAPTURE_THE_FLAG_CTF	Capture The Flag(CTF)では、2つのチームは、オプポーズチームのフラグをキャプチャし、ホームベースに戻ります。 チームの任意のメンバーは、オプポーズチームのフラグをピックアップできます。 フラグが取られたら、マップ上のすべてのプレーヤーがイベントに警告されます。 フラグキャリアは、敵の領域から脱出し、自分のベースにフラグを返してスコアを上げなければなりません。\n\nフラグキャリアが排除されると、フラグは除去の点でドロップされます。フラグオーナーのチームのメンバーがフラグに触れると、自動的にそのベースに戻ります。 排除されたプレーヤーのチームのメンバーがそれを拾うと、彼らは引き続き自分のホームベースにそれを戻すように試みることができます。 フラグキャリアの独自のフラグは、反対側のチームのフラグでスコアを上げるために、キャリアのベースポジションで「ホーム」でなければなりません。\n\nチーム・スキャリング\n敵の旗を捕獲する:+1ポイント\n\n産業用スキャリング\n敵の旗を拾う:+10ポイント\n敵の旗を捕獲:+100ポイント\n敵のフラグをキャプチャするチーム: +25 ポイント\nフラグを回復する: +10 ポイント\n- チームのための即時のキャプチャを許可する: +10 ポイント\n敵のフラッグキャリアを排除:+20ポイント\n- チームのための即時のキャプチャを許可する: +10 ポイント\n旗のキャリアを保護する:+5ポイント\nフラグベースを保護する:+10ポイント\n\n試合終了時に最高得点を持つチームが勝ちます。
+@MENUS_ISDN	ISDN(イスドン)
+@MENUS_ITEM_RULES	アイテムのルール。
+@MENUS_JETPACK_CAPS	ジェットパック
+@MENUS_JETPACK_DESC	ジェットパック\nジェットパックは、着用者が短時間で飛んで、他の人に戦術的な利点を与えることを可能にします。 ユーザーがロケットを発射しない場合、彼らはゆっくりと高度を失うでしょう。\n\nジェットパックは、シージゲームタイプでのみ使用可能です。\n\n(注意: ジェットパックをアクティブにするには、ジャンプして、空気中に「使用」を押します。'jump' を保持すると、ユーザーは高度を獲得することができます。'crouch' を保持すると、高度が低下します。)
+@MENUS_JOIN	参加申し込み
+@MENUS_JOIN_A_TEAM	チームをジョイント
+@MENUS_JOIN_CAPS	ログイン
+@MENUS_JOIN_CHOSEN_SERVER	選択したサーバーに参加します。
+@MENUS_JOIN_GAME	ゲームに参加する
+@MENUS_JOIN_PLAYER_DESC	このプレイヤーでサーバーに参加してください。
+@MENUS_JOIN_TEAM_DESC	チームに参加する
+@MENUS_JUMP	ジュムプ
+@MENUS_KILL_LIMIT	キル限界:
+@MENUS_LAN	中国語(簡体)
+@MENUS_LEAP_TO_AMAZING_HEIGHTS	ジャンプボタンを押しながら、驚くほどの高さに跳躍します。
+@MENUS_LEGS	レッグス
+@MENUS_LIGHTNING	照明
+@MENUS_LIGHTSABER_CAPS	ライバル
+@MENUS_LIGHTSABER_CREATION	LIGHTSABER クリエーション
+@MENUS_LIGHTSABER_ONLY	Lightsaber のみ:
+@MENUS_LIGHT_DARK_INFO	暗い側面力力、青いを使用して軽い側面を使用するために赤いチームを強制して下さい。
+@MENUS_LIGHT_DARK_TEAMS	ライト/ダーク チーム:
+@MENUS_LIMITED	限定商品
+@MENUS_LOADING_MAPNAME	ローディング... %s
+@MENUS_MAIN_MENU	メインメニュー
+@MENUS_MAKE_THESE_CHANGES_TO	キャラクターのフォース・アビリティーに変更を加える。
+@MENUS_MAP_LISTING	サイトマップ
+@MENUS_MATCH	マッチを再起動しますか?
+@MENUS_MATCHING_NAMES	マッチング名は上書きされます。
+@MENUS_MAXIMUM_PING	最高のPing:
+@MENUS_MAXIMUM_PLAYERS	最高のプレーヤー:
+@MENUS_MAX_RATE	最高率:
+@MENUS_MEDPAC	メダパック
+@MENUS_MERRSONN	メルトソン
+@MENUS_MIND_TRICK	MIND TRICK(ミニドトライク)
+@MENUS_MINIMUM_PING	最低のPing:
+@MENUS_MINIMUM_TIME_ALLOWED	接続の試み間で許可される最低の時間。
+@MENUS_MISSION	ミッション:
+@MENUS_MISSION_OBJECTIVES	ミッション・オブ・ジェ
+@MENUS_MOVE_AT_AN_ACCELERATED	加速速度で移動。
+@MENUS_MOVE_DESC2	クリックして、移動説明を表示してください。
+@MENUS_MOVE_RULES	運動規則。
+@MENUS_MOVE_TYPES	移動タイプ
+@MENUS_MUST_ACQUIRE_A_MINIMUM	セーバー攻撃で最低1位を獲得し、ライターを獲得する必要があります。
+@MENUS_NAME	お名前 (必須)
+@MENUS_NAME1	名称:
+@MENUS_NAME_TITLE	名称:
+@MENUS_NEW_FAVORITE	新しいお気に入り
+@MENUS_NO	ノーザン
+@MENUS_NO_LIGHTSABER	ライターなし
+@MENUS_OBJECTIVE_1	客観的 #1 / 71
+@MENUS_OBJECTIVE_2	客観的な #2
+@MENUS_OBJECTIVE_3	客観的な #3
+@MENUS_OBJECTIVE_4	客観的な #4
+@MENUS_OBJECTIVE_5	客観的な #5
+@MENUS_OBJECTIVE_6	客観的な #6
+@MENUS_OBJECTIVE_7	客観的な #7
+@MENUS_OBJECTIVE_8	客観的な #8
+@MENUS_OBJECTIVE_COMPLETED	完了しました。
+@MENUS_OF_EFFECT_JEDI_ALLIES_NEFFECT	Heal その他\nデュレーション: 瞬間的な効果\n効果の区域: ジェディの同盟国\n効果: ジェディは傷害の後で味方を癒す機能があります。\n\n力 Heal その他は、ジェディが自分の体の特定の半径内の自分の味方に一定の健康を回復させることを可能にします。 ジェディは50の健康を1つの味方に回復できます、\n33 健康で2つの味方または 25 健康で3つ以上の味方に。\n\nランク1 - ノーマルレンジ\nランク2 - 1回半数の通常の範囲\nランク3 - 二重正常な範囲
+@MENUS_OF_EFFECT_JEDI_ONLY_NEFFECT	強制ヒール\nデュレーション: 瞬間的な効果\n効果の区域: ジェディだけ\n効果: 怪我の後のジェディの治癒。\n\nランク1 - ジェディは即座に最大5つの健康を回復します。\nランク2 - ジェディは即座に10までの健康を回復します。\nランク3 - ジェディは即座に25までの健康を回復します。
+@MENUS_OF_EFFECT_LIVING_PERSONS	力の避雷\nデュレーション: 変数\n効果の領域: 生きている人だけ\n効果: ジェディが敵に対する破壊的な電気攻撃をハローできるようにする。\n\nランク1 - ジェディは、瞬間ダメージをやめる、前方に火をかける単一のボルトを発売します。\nランク2 - ジェディは、持続的なフォワード攻撃のためにパワーライトニングを維持することができます。\nランク3 - ジェディは、大きな前方アークで電力の持続的なファンを浮上させ、それらの前に何かを傷つけます。
+@MENUS_OKAY	オケーン
+@MENUS_ONLY_HUMANS	人だけが包囲で許可される
+@MENUS_PASSWORD	パスワード
+@MENUS_PASSWORD_1	パスワード:
+@MENUS_PERSONAL_SHIELD_ARMOR	パーソナルシールド(アーマー)
+@MENUS_PLAYERS	最低のボット/プレーヤー:
+@MENUS_PLAYERS_INFO	サーバがアクティブな人間プレーヤーのこの数よりも少ない場合、ボットを追加します。
+@MENUS_POINTS_REMAINING	ポイントの残量:
+@MENUS_POWER	パワー:
+@MENUS_POWERDUEL_CAPS	パワー・デュエル
+@MENUS_POWERDUEL_GAME_RULES	パワー・デュエルのゲーム規則。
+@MENUS_PREVENT_THE_ENEMY_FROM	敵が現在の目的を補完しないようにします。
+@MENUS_PRIMARY_OBJECTIVES	第一次ミッション 目的
+@MENUS_PROFILE_DESC	文字の設定を行います。
+@MENUS_PROGRAM	プログラムを終了しますか?
+@MENUS_PROTECT	プロテクト
+@MENUS_PROTECT_AGAINST_FORCE	力攻撃から保護し、それらから力を得る。
+@MENUS_PULL	パンフレット
+@MENUS_PULL_YOUR_FOES_TO_YOU	あなたの敵をあなたに引きます。
+@MENUS_PURE_SERVER	純粋なサーバー:
+@MENUS_PUSH	プッシュ
+@MENUS_PUSH_YOUR_FOES_AWAY_AND	敵を離れ、敵を逆転させる。
+@MENUS_QUIT_PROGRAM	終了プログラム
+@MENUS_RAGE_1	スタッフ
+@MENUS_RECONNECT_LIMIT	限界を再接続して下さい:
+@MENUS_REFRESH_LIST	リフレッシュリスト
+@MENUS_REFRESH_SERVER_LIST	サーバーリストをリフレッシュします。
+@MENUS_REGROUP	リグループ。
+@MENUS_RENDER_YOURSELF_INVISIBLE	選択したターゲットに見えない自分自身をレンダリングします。
+@MENUS_REPEATER	リピーター
+@MENUS_REPLY_TITLE	返信
+@MENUS_REQUEST_TITLE	リクエスト
+@MENUS_RESTART_MATCH	マッチを再起動する
+@MENUS_RETURN_PREVIOUS	前のメニューに戻る
+@MENUS_SABERLOCKING	セーバー ロックを許可して下さい:
+@MENUS_SABERLOCKING_DESC	プレイヤーがサバーをロックできるようにします。
+@MENUS_SABERSTAFF	二つの手作業のサバー
+@MENUS_SABERSTAFF_DESC	1つの2つの手持ちのsaber、唯一の1つの戦い様式を使用して下さい。
+@MENUS_SABER_ATTACK	サバー攻撃:
+@MENUS_SABER_CHALLENGE_INFO	プレイヤーは、プライベートライトアバーのデュルに別の挑戦することができます。
+@MENUS_SABER_DEFEND	サザー・ディフェンド:
+@MENUS_SABER_HILTS_DESC	saber hilt(s) を選択します。
+@MENUS_SABER_ONLY_INFO	すべてのプレーヤーは、ライトワーズを拭き取り、すべての銃は削除されます。
+@MENUS_SABER_STAFF	スタッフ
+@MENUS_SABER_THROW	サバー・スロー:
+@MENUS_SABER_TYPE	セイバータイプ
+@MENUS_SABER_TYPE_DESC	saberタイプを選択します。
+@MENUS_SAVE_CURRENT_FORCE_SETUP	別のテンプレートとして現在のフォース設定を保存します。
+@MENUS_SAVE_FILE	ファイルを保存する
+@MENUS_SEARCHING	%d/%d の検索
+@MENUS_SEARCH_CAPS	リクルート
+@MENUS_SEARCH_CURRENT_SERVER	友人の現在のサーバーリストを検索します。
+@MENUS_SEARCH_DESC	このプレーヤーのすべてのサーバーを検索します。
+@MENUS_SECONDARY_OBJECTIVES	二次目的
+@MENUS_SEEKER_CAPS	シーカードローン
+@MENUS_SEE_ENEMIES_AT_ALL_TIMES	敵を常に見、さらにはドッジスナイパーショット。
+@MENUS_SELECT_BOTS	ボットを選択
+@MENUS_SELECT_BOTS_DESC	対戦するカスタムボットを選択する
+@MENUS_SELECT_HEAD	ヘッドスタイルを選択します。
+@MENUS_SELECT_LEGS	脚のスタイルを選択します。
+@MENUS_SELECT_TORSO	トルソスタイルを選択します。
+@MENUS_SENTRY_CAPS	セントリー
+@MENUS_SERVER_INFORMATION	サーバー情報
+@MENUS_SERVER_NAME_1	サーバー名:
+@MENUS_SERVER_RULES	サーバールール
+@MENUS_SETS_PASSWORD_FOR_YOUR	サーバのパスワードを設定します。パスワードを入力すると、プレイヤーが参加できます。
+@MENUS_SETS_THE_MAXIMUM_NUMBER	サーバに参加する権限を持つプレイヤーの最大数を設定します。
+@MENUS_SET_FILTER_FOR_SPECIFIC	特定のゲームモッド用のフィルタを設定します。
+@MENUS_SET_TO_ON_TO_HAVE_PLAYERS	プレイヤーは、スペクターモードにとどまるのではなく、参加できるように強制します。
+@MENUS_SHOW_GAME_CREDITS	ゲームクレジットを表示
+@MENUS_SIEGE_ASSAULT	アッソール
+@MENUS_SIEGE_CAPS	スイージ
+@MENUS_SIEGE_DEMOLITIONS	コンテンツ
+@MENUS_SIEGE_GAME_RULES	ゲームのルールをシージします。
+@MENUS_SIEGE_GAME_RULES_DESC	Siege は、互いに2つのチームを離れ、チームが犯罪と防衛上の他のチームに反するタイムードマッチで、お互いに向かいます。 どちらのチームも目標を持っていますが、攻撃的なチームは勝つために彼らの主な目的を完了しなければなりません。\n\nそれぞれのチームは、それぞれ独自の専門性を持つキャラクターの数から構成されています。各キャラクターは、独自のユニークなスキルセットで貢献できます。\n\nオプションのサーバールールは、チーム切り替えを可能にします。このオプションを有効にすると、チームは最初の試合後に切り替えます。攻撃側のチームが最初の試合を獲得した場合、新しい攻撃チームは最初のチームが勝つために最初のチームを取った時間に等しい時間制限を持っています。攻撃側のチームが短い時間制限ですべての目的を完了した場合、彼らはゲームを勝ちます。\n\nWIN 条件 - 割引\n時間が切れる前にすべての第一次目的を完了して下さい。\n\nWIN 条件 - デフェンゼ\n時間が切れる前に、すべての主観的な目的を完了することを防ぐ。\n攻撃的なチームが主観的な目的を補完するのを防ぐことができる完全な目的。
+@MENUS_SIEGE_HEAVY_WEAPS	ヘビーウェイプ
+@MENUS_SIEGE_JEDI	ジェディ
+@MENUS_SIEGE_SCOUT	コース
+@MENUS_SIEGE_TECH	テクノロジー
+@MENUS_SIGHT	観光案内
+@MENUS_SINGLESABER	スタンダード・サバー
+@MENUS_SINGLESABER_DESC	3つの戦闘スタイルの選択、ワンハンドのセーバーを使用してください。
+@MENUS_SKILL	スキルアップ
+@MENUS_SKILL1	スキル:
+@MENUS_SLOWEST_CLIENT_ALLOWED	接続を許可するクライアントを遅くします。
+@MENUS_SORT_BY_GAME_TYPE	ゲームの種類でソートします。
+@MENUS_SORT_BY_MAP_NAME	地図名でソートします。
+@MENUS_SORT_BY_NUMBER_OF_PLAYERS	プレイヤーの人数でソートする
+@MENUS_SORT_BY_PING_TIME	ping の時間によって分類して下さい。
+@MENUS_SORT_BY_SERVER_NAME	サーバ名でソートします。
+@MENUS_SOURCE	ソース:
+@MENUS_SPECIES	仕様
+@MENUS_SPECTATE	スペック
+@MENUS_SPECTATOR	スペクター
+@MENUS_SPEED	スペイド
+@MENUS_SPEND_YOUR_POINTS_BY	下のフォースパワーをクリックすると、ポイントをスペンドできます。
+@MENUS_SPOTTED_TITLE	スポット
+@MENUS_STARTING_UP	スタート...
+@MENUS_START_PLAYING_NOW	今すぐプレイを始めよう!
+@MENUS_START_SERVER	サーバを起動します。
+@MENUS_STATIONARY_SHIELD_CAPS	ステーションリー・シールド
+@MENUS_TACTICS_TITLE	戦術
+@MENUS_TEAM	チーム:
+@MENUS_TEAM_BLUE	チームブルー
+@MENUS_TEAM_HEAL	チームヘルス
+@MENUS_TEAM_POWER_1	チーム・エナージゼ
+@MENUS_TEAM_RED	チームRED
+@MENUS_TEAM_SWITCHING	チームの切換え:
+@MENUS_TEAM_SWITCHING_DESC	チームが競争するゲームモードをトグルして、少なくとも時間内にマップを完了します。
+@MENUS_THERMAL_DETONATOR	サーム・デトネーター
+@MENUS_THE_FORCE_TO_BOOST_THE	味方の力を高めるために力を運びます。
+@MENUS_THE_GAME_OF_DUEL_IS_ALSO	デュエルは、小さな封じられたアリーナで2つの戦闘員を下し、Lightabersと戦う。両方の競合他社は、完全な健康、そのサビア、および爆撃者ピストル(サーバーオプション)でラウンドを開始し、互いに対峙しなければなりません。\n\nプレイヤーの数は、Duelに参加することができますが、与えられた時点では2人だけがアリーナにいます。プレイヤーの残りは、試合が完了するまで観察します。 1人のプレーヤーが排除されると、敗者はオブザーバーのキューの最後に置き、次の行は勝者と戦うために持ち込まれます。\n\n再び、両方の競合他社は健康に完全に補充されます。 勝者は、彼または彼女が排除されるか、マッチの限界に達しているまで、新しい対戦相手と競争し続けています。\n\nSCORING(スコリング)\n敵を排除する:+1ポイント\n自分を排除:相手に+1\n\n試合終了時に最高得点のプレイヤーが勝ちます。
+@MENUS_THE_MEDPAC_IS_A_SMALL	メデパック\nmedpacは小さい標準的な分野の医学のキットです。得られたとき、medpacは直ちに失われた健康を取り戻し、傷つけられたティッシュを癒します。
+@MENUS_THE_PERSONAL_SHIELD_IS	パーソナルシールド(アーマー)\nパーソナルシールドは、着用者の周りの保護力分野をプロジェクトするベルトマウントデバイスです。シールドが損傷を受けるにつれて、その保護評価が低下します。シールドがその評価に等しい損傷を受けたら、シールドは再充電できるまで無効化します。シールドは、ほとんどの攻撃ダメージタイプを吸収しますが、落下や損傷を破棄するのを防ぐことはできません。個人シールドはシールド電池によって補充されます。
+@MENUS_THE_PLX_2M_IS_AN_EXTREMELY	Merr-Sonn PLX-2Mポータブルミサイルシステム\nPLX-2Mは、Arakyd 3T3ミサイルを発射する非常に強力な武器です。 PLX-2Mのせん断爆パワーは、近接四半期に目隠しを発射するのに危険になりますが、'smart'追跡武器として使用したときに非常に効果的です。\n\n第一次火 - シングル、フォワードファイリング爆薬ミサイルを火災します\n二次火災 - 取得およびロックされたターゲットを追跡する単一の「スマート」ミサイルを火災します\nアモタイプ - ロケット
+@MENUS_THE_PRIMARY_WEAPON_OF	E-11 ブラスター・ライフル\nインペリアルフォースの第一次兵器であるE-11は、その小型にもかかわらず、大きな損傷を注入することができる丈夫で致命的な爆撃機のライフルです。 E-11のコンパクトな設計により、持ち運びが容易で隠すことができます。\n\n第一次火 - ゆっくりと、適度な正確さおよび大きい損傷の単一の打撃\n二次火災 - 迅速で、低精度で破裂した火災と発射面積を拡大\nアムモタイプ - ブラスターパック
+@MENUS_THE_THERMAL_DETONATOR	サーマルデトネーター\nサーマルデトネーターは、周囲のあらゆる問題を崩壊させることができる熱エネルギーの残量を解放する半径損傷の榴弾です。\n\n第一次火 - 短時間後にグレンデド爆発\nセカンダリー火災 - 接触上でグレンデ爆発
+@MENUS_THIS_ALLOWS_PLAYERS_TO	これにより、プレイヤーがプレイヤーを蹴る投票、マップの変更などを呼び出すことができます。
+@MENUS_THIS_ARCHAIC_LOOKING	Wookiee Bowcaster(ウィッキー・ボウキャスター)\nこのアーキシーに見える武器は、エネルギーのポケットに刻まれた金属の強力なボルトを発射します。信じられないほどの損傷を膨らませることができる、弓道は火に途方もない物理的強度を必要とします。Wookiee homeworldの外で販売されているほとんどの弓道は、物理的に弱い生き物がそれらを発射できるように、自己cockingアクションが装備されています。\n\n第一次火-複数のショットのための満たされたエネルギー蓄積\n二次火災 - 非常に正確で、リコチェット-キャパブルシングルショット\nアムモタイプ - パワーセル
+@MENUS_THIS_DEADLY_WEAPON_IS	ポータブルアサルトの先生\nこの致命的な武器は大幅なバックパックのサイズですが、そのサイズがあなたを防いでいません。 活性化したら、武器は膨らみを解除し、敵の脅威を自動ターゲットに設定されます。 戦国は加速された速度でバッテリー寿命を排出し、それがデプロイされたら、元のポータブル状態に戻すことはできません。
+@MENUS_THIS_DESTRUCTIVE_PROJECTILE	インペリアル・ヘビー・リピータとコンカッション・ランチャー\nこの破壊的なプロファイヤ武器は非常に致命的であり、金属の弾丸の急速なストリームを発射します。帝国部隊は、重度のリピーターの致命的な火災と混雑制御のためのコンカッションランチャーを使用し、重火を上回る\n大きい区域。\n\n第一次火 - フル オートの投射不能の火\n二次火災 - シングルショット、コンカッション爆破ラウンド\nアムモタイプ - メタリックボルト
+@MENUS_THIS_GAME_IS_BEST_SUMMED	プレイヤーのスコアポイントは、他のプレイヤーを排除し、誰も同盟国と見なすことはできません。\n\nサーバで指定しない限り、フィールドで武器や装置が取得されます。 一部のオプションには、強制力が許さないか、最大強制レベルが利用できるかが含まれます。\n\nSCORING(スコリング)\n敵を排除する:+1ポイント\n自分自身を排除:-1ポイント\n\n試合終了時に最高得点を獲得したプレイヤーは、ゲームを獲得します。
+@MENUS_THIS_GAME_PITS_TWO_JEDI	チームフリー すべてのために 2 ジェディ チームと他の各チームと supremacy の戦いで. 各選手は、相手を排除するためのポイントを獲得します。, しかし、同じチーム上のプレーヤーは、厳しい敵を排除するために一緒に働くことができます. チーム上のすべての選手は、単一のチームスコアのための自分のスコアを組み合わせます.\n\nサーバで指定しない限り、フィールドで武器や装置が取得されます。 一部のオプションには、強制力が許さないか、最大強制レベルが利用できるかが含まれます。\n\nSCORING(スコリング)\n敵チームのメンバーを排除する:+1ポイント\n自分自身やチームメンバーを排除:-1ポイント\n\nラウンドの最後に最高のスコアを持つチームは、ゲームを獲得します。
+@MENUS_THIS_IS_THE_NUMBER_OF	ゲームに勝つためにフラグをキャプチャしなければならない回数です。
+@MENUS_THIS_NEFARIOUS_WEAPON	テナスDXR-6 消火器ライフル\nこの近道兵器は、分子レベルで問題に影響を及ぼし、生きた素材を容易にリッピングします。武器の不湿気の性質のために、DXR-6は銀河全体に違法であり、一般的には散らばされたドロイドとレマント力によってのみ使用されます。\n\n第一次火 - 遅い火力率および即刻の攻撃と単一ショット\n二次火災 - スコープドモード:最初の充電、増加された損傷を引き起こし、高エネルギー消費を要求しなければならない単一のショット\nアムモタイプ - パワーセル
+@MENUS_THIS_OPTION_RE_BALANCES	このオプションは、チームをアンバランスさせれば、プレイヤーがチームに参加しないようにします。
+@MENUS_THIS_STATIONARY_ENERGY	静止シールド\nこの静止エネルギーフィールドは、敵の火をブロックできる大きなフラットシールドをデプロイする任意の場所でドロップすることができます。味方はシールドを通過することができますが、敵ははできません。デフレクタシールドは、電源を露出した後、または一定のダメージを耐えた後に消えます。
+@MENUS_THIS_VALUE_ADJUSTS_THE	マッチした回数が終了します。
+@MENUS_THROW_YOUR_LIGHTSABER	遠くのターゲットを傷つけるためにあなたのlightaberを投げて下さい。
+@MENUS_TIME_LIMIT	時間制限:
+@MENUS_TORSO	トーソ
+@MENUS_TRIP_MINE	トリップ・マイン
+@MENUS_TRIP_MINES_CONSIST_OF	トリップ鉱山\nトリップ鉱山は、形状の爆発的な包装に貼られたビームプロジェクターで構成されています。 鉱山が配置され、そのパスを交差する最も近い表面に充電からビームを拡張するときにレーザーが活性化します。 ビームが壊れているか、充電が発射された場合、鉱山は、範囲内の何かに大根の損傷を引き起こします。\n\n第一次火 - 置いたら、ビームが壊れているか、鉱山が破壊されると解毒します\n二次火災 - 置いたら、誰かがその近接または鉱山が破壊されている場合、それは解毒します。ビームがないと、それはユーザーのためにdetonateしません
+@MENUS_UNAPPLIED_VIDEO_CHANGES	未適用のビデオ変更
+@MENUS_UNLEASH_DEADLY_ELECTRICAL	あなたの敵に対する致命的な電気攻撃を脱いでください。
+@MENUS_UPDATE_ADVANCED_SERVER	高度なサーバー設定を更新します。
+@MENUS_USE_MORE_POWERFUL_LIGHTSABER	より強力なライター攻撃を使用してください。 (saber を持っている必要があります)
+@MENUS_USE_THE_LIGHTSABER_TO	lightaber を使用して、saber 攻撃とプロファイリングを解除します。
+@MENUS_VALUE_ADJUSTS_THE_TOTAL	試合に勝つために必要な成功したラウンドの数(デュール)。
+@MENUS_VARIABLE_NAREA_OF_EFFECT	強制的な排水\nデュレーション: 変数\n効果の領域: 生きている人だけ\n効果: 力力を排出し、生命を補充するためにそれを使用して下さい。\n\nランク1 - 火を先に発射する単一ボルトを進水させ、毎秒10の強制ポイントを排出し、その量を癒します。\nランク2 - 1秒あたりの15の強制ポイントを排出する、未愛の、連続的な攻撃。\nランク3 - 持続的なファンを大きな前方アークで管理し、毎秒20のフォースポイントの前で任意のターゲットを排出します。
+@MENUS_VC_ATT	1. 攻撃
+@MENUS_VC_ATT_POSITION	3. 攻撃位置
+@MENUS_VC_ATT_PRIMARY	1. 第一次目的を攻撃する
+@MENUS_VC_ATT_SECONDARY	2. 攻撃二次的目的
+@MENUS_VC_CANCEL	キャンセル
+@MENUS_VC_DEF	2. 防衛
+@MENUS_VC_DEF_GUNS	4. 銃の位置
+@MENUS_VC_DEF_POSITION	3. 位置を防衛して下さい
+@MENUS_VC_DEF_PRIMARY	1. 第一次目的の定義
+@MENUS_VC_DEF_SECONDARY	2. 二次目的の定義
+@MENUS_VC_REPLY	4. 返信
+@MENUS_VC_REPLY_COMING	3. 来ること
+@MENUS_VC_REPLY_GO	4. 犯罪
+@MENUS_VC_REPLY_NO	2. 否定的
+@MENUS_VC_REPLY_STAY	5. 防衛
+@MENUS_VC_REPLY_YES	1. ロジャー
+@MENUS_VC_REQ	3. リクエスト
+@MENUS_VC_REQ_ASSIST	1. 支援
+@MENUS_VC_REQ_DEMO	6. 解体
+@MENUS_VC_REQ_HVY	5. 重い武器
+@MENUS_VC_REQ_MEDIC	2. 薬
+@MENUS_VC_REQ_SUPPLY	3. 供給
+@MENUS_VC_REQ_TECH	4. テック
+@MENUS_VC_SPOT	5. スポッティング
+@MENUS_VC_SPOT_DEF	1. 防衛
+@MENUS_VC_SPOT_EMPLACED	4. 交換式武器
+@MENUS_VC_SPOT_SNIPER	3. スナイパー
+@MENUS_VC_SPOT_TROOP	2. トロップ
+@MENUS_VC_TACTIC	6. 戦術
+@MENUS_VC_TAC_COVER	1. カバー
+@MENUS_VC_TAC_FALLBACK	4. リトリート
+@MENUS_VC_TAC_FOLLOW	3. フォロー
+@MENUS_VC_TAC_HOLD	2. ホールド
+@MENUS_VC_TAC_SPLIT	6. 分割アップ
+@MENUS_VC_TAC_TOGETHER	5. 一緒に泊まる
+@MENUS_VC_TITLE	ボイスチャット
+@MENUS_VIEW_EMPTY	空室状況を見る:
+@MENUS_VIEW_FULL	完全な眺め:
+@MENUS_WATCH_DESC	ミッションを見る
+@MENUS_WEAPON_RULES	武器の規則。
+@MENUS_WHEN_ON_IT_MEANS_TEAMMATES	時、チームメイトは、武器や力で互いに怪我をして殺すことができます。\n
+@MENUS_WIDELY_USED_BY_THE_CORPORATE	ゴランアームズ FC1 フラネット武器\nコーポレート・セクターの警察の部隊によって広く利用された、FC1は広範囲にわたるパターンの金属の固まりを始動させました。武器は、近い範囲で複数のターゲットを打つように設計されていますが、暴風被害を避けるために大きな注意を払わなければなりません。\n\n第一次火 - シングルショット、スプレッド火災\n二次火災 - 二重爆発シュラプネル充電\nアムモタイプ - メタリックボルト
+@MENUS_YES	はい はい
+@MENUS_YOU_DECIDE	あなたを決める
+@MENUS_YOU_HAVE_MADE_CHANGES	ビデオ設定を変更しました
+@MENUS__REQUIRES_SABER_ATTACK	(サバイア攻撃が必要です)
+@MP_INGAME_GETTINGINFOFORSERVERS	サーバの情報を取得する...
+@MP_INGAME_JOIN_DOUBLE	ダブル
+@MP_INGAME_JOIN_SINGLE	スイングル
+@MP_INGAME_SERVER_REFRESHTIME	サーバーは時間を更新します
+@MP_SVGAME_CANCEL_PASSWORD	メニューを閉じる、接続を試みない
+A / Cross confirms, B / Circle goes back	A / 十字は、B /サークルが戻って確認します
+A disconnect pauses the match for up to 10 minutes.	接続解除は、最大10分間試合を中断します。
+A passed game-type vote is queued for the next round boundary.	渡されたゲームタイプの投票は、次のラウンド境界線でキュートされます。
+A setting or binding changed outside the editor. Cancel and reopen to refresh; nothing applied.	エディタの外で設定やバインディングが変更されました。 削除して、リフレッシュするために再開します。 何も適用されません。
+ACTION DETAILS / RESET	アクションディテール/リセット
+ADD A BOT	ADD Aボット
+ASSISTS	アシスト
+About	新着情報
+Acceleration	アクセラレーション
+Acceleration amount; zero disables it	アクセラレーション量; ゼロは無効にします
+Acceleration curve	加速カーブ
+Acceleration curve: 0 legacy, 1 power	加速曲線: 0 の遺産、1 力
+Acceleration offset	加速のオフセット
+Account / Log in	口座/ログイン
+Accounts and match reporting are not connected yet.	口座とマッチングレポートはまだ接続されていません。
+Action	アクション
+Adaptive	適応性
+Add Berserker	Berserker を追加
+Add Defender	ディフェンダーを追加
+Add Duelist	デュースリストの追加
+Add Flag Catcher	Add フラグキャッチャー
+Add Saber Master	サブザーマスターを追加
+Add Sentinel	ゼンチネルを追加
+Add Trickster	トリックスターを追加
+Add bots	ボットを追加
+Address	郵便番号
+Adjust how fast the left stick moves the menu pointer.	左棒がメニューポインタを移動させる速度を調整します。
+Adjusts how many chat lines fit.	チャットラインが何本あるかを調整します。
+Adjusts the width across the screen.	画面全体に幅を調整します。
+Advanced	アドバンスト
+Advanced Input	高度な入力
+Advanced settings	高度な設定
+Advanced video	高度なビデオ
+Advances to the next round	次のラウンドに進む
+All	すべて すべて
+Allow downloads	ダウンロードを許可する
+Alternate attack	代替攻撃
+Alternate weapon action / saber throw	代替武器アクション/サバースロー
+Always	常に
+Always run	常に実行
+Analog joystick axes	アナログジョイスティック斧
+Angle	アングル
+Anime	アニメ アニメ
+Anisotropic filtering	異方性フィルタリング
+Anisotropic filtering unavailable.	無水濾過可能。
+Antialiasing	アンチエイリアス
+Applies on next spawn.	次のスプーンに適用されます。
+Apply	申し込み
+Apply and continue	申請と継続
+Apply camera	応用カメラ
+Apply changes	変更を適用
+Apply or cancel pending edits before switching mods.	変更を切り替える前に、ペインディング編集を適用またはキャンセルします。
+Apply or discard before leaving?	退去前に、または廃棄しますか?
+Arabic	アラカルト
+Assets missing or overridden. Showing Stock; Apply cannot save.	資産が欠落または過度に。 株式を表示; 保存することはできません適用します。
+Assignment staged	課題段階
+Attack	攻撃
+Autoexposure	オートエクスポージャー
+Automatic	オートマチック
+Automatic controller detection	自動コントローラーの検出
+Automatic opens for gamepad when no keyboard is detected.	キーボードが検出されないとき自動ゲームパッドのために開きます。
+Available display modes are added automatically.	利用できる表示モードは自動的に加えられます。
+Average mouse movement between frames.	フレーム間の平均マウスの動き。
+Awaiting reply	返信をお待ちしています
+B / Circle confirms, A / Cross goes back	B/サークルが確認し、A/十字は戻ります
+BLUE	ブルージュ
+BLUE FLAG	ブルーフラッグ
+BOT	ツイート
+BOTS	キャスト
+BRACKET\nA random draw sets the single-elimination bracket. Byes advance unpaired entrants. Both full lineups must be connected, in the arena and ready before play starts.\n\n1v1 TOURNAMENT\nAn even field of 8 to 32 verified players enters. Play all 10 scored rounds. Each elimination wins a round. Simultaneous deaths replay the round. At 5-5, play one deciding round.\n\nTEAM TOURNAMENT\n2 to 8 teams enter at a fixed size, from 2v2 to 5v5. Players respawn. The first team to 20, 30, 40 or 50 kills respectively wins. After 10 minutes of play, the leader wins. If tied, play until one team takes the lead.\n\nRECONNECTS AND RESERVES\nA missing player pauses play. Each player has 5 minutes to reconnect in 1v1. Each team has 10 minutes to reconnect or fill the slot with a registered reserve from its own team. Repeat drops use the remaining time. Everyone readies again when the lineup is complete. Time expiry forfeits the match. If both sides expire, both are eliminated.	ブラケット\nランダムな描画は、単一エリミネーションブラケットを設定します。バイアスは、未完成のエンチャントを事前に設定します。フルラインナップの両方が接続されなければなりません。アリーナでは、プレイを開始する前に準備が整います。\n\n1v1 トーナメント\n8〜32の検証されたプレーヤーのフィールドが入る。すべての10のスコアリングラウンドを再生します。各除去はラウンドを獲得します。同時死はラウンドを再生します。 5-5で、ラウンドを決める1を再生します。\n\nチームトーナメント\n2から8チームは、2v2から5v5までの固定サイズで入力します。 プレイヤーは再開します。 第一チームから20、30、40、50はそれぞれ勝ちます。 プレーの10分後に、リーダーは勝ちます。 結ばれた場合、ワンチームがリードを取るまで再生します。\n\n接続と予約\nプレイヤーが一時停止します。各プレイヤーは1v1で再接続する5分を持っています。各チームは、各チームから登録済みリザーブでスロットを再接続または埋めるために10分を持っています。リピートドロップは残りの時間を使用します。すべてのリピートは、ラインアップが完了したときに再び読みます。タイムオーバーフィードマッチします。両方の側面が有効期限切れた場合、両方は削除されます。
+Back	戻る
+Back to Play	再生に戻る
+Back to ready room	既設の客室に戻る
+Backhand preview:	バックハンドプレビュー:
+Backspace	バックスペース
+Balanced	バランスの取れた
+Base	ベース
+Basic Settings	基本設定
+Begin match	試合開始
+Bilinear	バイリンガル
+Binding staged; command was not executed	ステージを結合する; コマンドが実行されていない
+Bindlist	ビンズリスト
+Black	ブラック
+Blade %d / %d	刃 %d/%d
+Blade off	ブレードオフ
+Blade on	ブレード
+Blaster rifle	ブラスターライフル
+Blob	ブロブ
+Blue	ブルージュ
+Blue team	ブルーチーム
+Blue, Yellow and Red selected. Apply to save.	青、黄色、赤、青、赤、青、黄色、赤、赤、青、黄色、赤、青、赤、赤、赤、青、黄色、赤、赤、赤、青、黄色、赤、赤、赤、青、黄色、赤、赤、赤、赤、青、黄色、赤、赤、赤、白、赤、白、白、白、白、白、白、白、白、白、白、白、白、白、白、白、白、白、白、白、白、白、白、白、白、白、白、白、白、白、白、白、白、白、白、白、白、白、白、白、白、白、白、白、白、白、白、白、白、白、白、白、白、白、白、白、白、白、白、白、白、白、白、白、白、白、白、白、白、白、白、白
+Bottom left	左下
+Bottom right	右下
+Bowcaster	バウキャスター
+Bracket	ブラケット
+Brightness	明るさ
+Browse unranked servers	ランクされていないサーバーを閲覧する
+Bumpers move the caret	バンパーは、ケアトを動かします
+Bumpers: command history   Triggers: scroll	Bumpers: コマンド履歴 トリガー: スクロール
+Button labels	ボタンラベル
+Button labels: 0 Xbox, 1 PlayStation, 2 generic	ボタンラベル: 0 Xbox、1 プレイステーション、2 ジェネリック
+Button mapping	ボタンマッピング
+CALL GAME TYPE VOTE	ボール ゲームの種類 VOTE
+CALL KICK VOTE	CALL KICK VOTE(ケール キック ヴォート)
+CALL MAP VOTE	ボールマップ VOTE
+CAST YOUR VOTE	あなたのVOTEをキャスト
+CHAT	チャット
+CHOOSE AN ACTION	アクションを選ぶ
+CONTROLLER DEFAULTS?	コントローラーの欠陥か。
+CTY	チャティ
+Call a vote	投票を呼びます
+Camera	カメラカメラ
+Camera / UI	カメラ/UI
+Camera FOV	カメラFOV
+Camera damping	カメラのダンピング
+Camera settings applied.	カメラの設定が適用されます。
+Camera smoothing	カメラのスムース
+Camera tilt	カメラの傾き
+Cancel	キャンセル
+Cancel changes	変更のキャンセル
+Cannot preserve the current custom renderer safely.	現在のカスタムレンダラーを安全に保存することはできません。
+Capture	キャプチャ
+Capture Limit:	キャプチャ制限:
+Capture limit	キャプチャ制限
+Cast your vote	あなたの投票をキャスト
+Center view	センタービュー
+Center your view	あなたの視点を集中
+Changes the chat background. Text stays readable.	チャットの背景を変更します。テキストは読みやすくなります。
+Changes the language of menus.	メニューの言語変更
+Changing this restarts mouse input.	マウス入力を再起動します。
+Character shadows	キャラクターシャドウ
+Chat	チャット
+Chat box height (%)	チャットボックスの高さ (%)
+Chat box opacity (%)	チャットボックスの不透明度 (%)
+Chat box size (%)	チャットボックスサイズ (%)
+Chat box width (%)	チャットボックスの幅 (%)
+Chat sound	チャットサウンド
+Chat with the current audience	現在の聴衆とチャット
+Chat with your team	チームとのチャット
+Chinese (Simplified)	中国語(簡体)
+Chinese (Traditional)	中国語(繁体)
+Choose Custom resolution.	カスタム解像度を選択します。
+Choose a format to preview its tournament lobby.	トーナメントロビーをプレビューするフォーマットを選択します。
+Choose a language if short messages or regional variants are misidentified.	短いメッセージや地域的な変種が誤認されている場合は、言語を選択してください。
+Choose a style	スタイルを選択
+Choose a style for each of the three slots.	3つのスロットごとにスタイルを選択します。
+Choose a whole-number option.	全番号オプションを選択します。
+Choose an installed map for the current game type.	現在のゲームタイプのインストールマップを選択します。
+Choose each style's ready pose separately in Stances.	スタンスごとに各スタイルの準備可能なポーズを選択します。
+Choose named action	名前付きアクションを選択
+Choose three different styles to complete your cycle.	サイクルを完了するために3つの異なるスタイルを選択します。
+Choose three different styles. Each style can fill only one slot.	3つの異なるスタイルを選択します。各スタイルは1つのスロットのみを埋めることができます。
+Choose your arena.	アリーナを選択します。
+Choose your saber hand, then select Apply Changes.	saber ハンドを選択し、Apply Changes を選択します。
+Circle	サークル
+Clean Capture	クリーンなキャプチャ
+Clean Capture is on.	クリーン・キャプチャーがオンになっています。
+Clear	クリア
+Clear assignment	明確な割り当て
+Client command packets per second.	1秒あたりのクライアントコマンドパケット。
+Close	ふるさと
+Close registration and start the Tournament.	参加登録を閉じてトーナメントを開始してください。
+Color depth	色の深さ
+Combat	コンバット
+Combat styles	戦闘スタイル
+Combat styles...	戦闘スタイル...
+Comics	コミック
+Communication	コミュニケーション
+Compat.	コンバット。
+Complete	完全予約制
+Composition grid: 	構成の格子:
+Config applied.	Config を適用します。
+Config loaded into editor. Review, then Apply.	エディタに読み込まれた設定。レビュー、適用。
+Config write verification failed; existing config retained.	書込み確認の失敗を構成します。既存のコンフィグは保持されます。
+Confirm	確認する
+Connect	コネクト
+Connection	コネクション
+Console	コンソール
+Console keyboard	コンソール キーボード
+Console opacity	コンソールのオパシティ
+Console overlay	コンソールオーバーレイ
+Controller	コントローラー
+Controller defaults staged; review before Apply	コントローラーのデフォルトは段階的に;適用の前に検討して下さい
+Controller detection	コントローラーの検出
+Controls	操作設定
+Controls what you see when the server allows dismemberment.	サーバが退会を許可したときに表示されるものを制御します。
+Could not confirm the display settings; recovery file could not be removed.	ディスプレイの設定が確認できません。復元ファイルが削除できません。
+Could not finish saving; existing config retained.	保存を終了できません。既存のコンフィグは保持されます。
+Could not open config for writing.	書き込み用のコンフィグを開くことができません。
+Could not read config	config を読まなかった
+Could not save display recovery.	ディスプレイの回復を保存できませんでした。
+Count up	カウントアップ
+Cross	クロスフォー
+Crosshair	クロスヘア
+Crosshair and interface	クロスヘアとインターフェイス
+Crouch	クローク
+Crouch / swim downward	カウチ/下方に泳ぐ
+Crystal	クリスタル
+Cubemap bounces	Cubemap バウンス
+Cubemapping	キューブマッピング
+Current custom character	現在のカスタム文字
+Current dual/staff combat; variants are planned.	現行のデュアル/スタッフの戦闘。バリアントが計画されています。
+Current style	現在のスタイル
+Curve subdivisions	曲線のサブディビジョン
+Custom	カスタマイズ
+Custom height	注文の高さ
+Custom sounds	カスタムの音
+Custom width	カスタム幅
+Customize	カスタマイズ
+Cycle saber style	サイクル saber スタイル
+Cycle your selected combat loadout	選択した戦闘ロードアウトをサイクル
+Cycle: %s > %s > %s > repeat	サイクル: %s > %s > %s > 繰り返し
+D-pad down	Dパッドダウン
+D-pad left	Dパッド左
+D-pad moves the pointer  /  Bumpers scroll	D-pad はポインタ/バンパーのスクロールを動かします
+D-pad right	Dパッド右
+D-pad up	Dパッドアップ
+DEMP2	DEMP2の特長
+DISCARD PENDING EDITS?	ディスクカードのペンディングは?
+DISCONNECT?	ディスコネクト?
+DUEL STANDINGS	DUEL STANDINGS _ デューエル・スタンディングズ
+DUEL W/L	ディーゼル W/L
+Damage reactions	ダメージ反応
+Default	デフォルト
+Default movement speed.	デフォルトの移動速度。
+Default staged	デフォルトステージ
+Defaults selected. Click Apply Input to save.	デフォルトを選択します。 [入力を適用する] をクリックして保存します。
+Defer player models	プレイヤーモデルのデファー
+Deluxe mapping	デラックスマッピング
+Deluxe specular	デラックス スペキュラー
+Desktop	デスクトップ
+Det pack	デットパック
+Detailed shaders	詳細なシェーダー
+Detect compatible gamepads as you connect them.	それらを接続するので多用性があるゲームパッドを検出して下さい。
+Detected	検出される
+Deutsch	日本語 / English / 中文
+Device preferences	デバイスの設定
+Disable authenticated ghost mode	認証されたゴーストモードを無効にする
+Disable warmup.	温暖化を抑制します。
+Discard	ディスクガード
+Discard and continue	廃棄・継続
+Discard pending changes?	保留中の変更を破棄しますか?
+Discard pending controls changes and open Saved Configs?	保留中のコントロールの変更を破棄し、保存された設定を開きますか?
+Discard pending controls changes and return?	保留管理の変更とリターンを破棄しますか?
+Disconnect	接続解除
+Dismemberment	ディスカッション
+Display	ディスプレイ
+Display recovery could not be verified; settings were not changed.	表示回復は確認できませんでした。設定は変更できませんでした。
+Disruptor	ディスラプター
+Distance	アクセス
+Distance behind the player. Walls can bring the camera closer.	プレイヤーの後ろからの距離。壁はカメラを近づけることができます。
+Dominant hand...	ドミナントハンド...
+Dominant hand:	ドミナントの手:
+Done	ログイン
+Drag or right stick to orbit  /  Scroll or bumpers to zoom	ドラッグまたは右は軌道に固執します / スクロールまたはズームするバンパー
+Drag or type a value, then Apply. Size: 75-125%.	値をドラッグするか、またはタイプして下さい、それから適用して下さい。 サイズ: 75-125%。
+Drag or type values, then Apply camera.	値をドラッグするか、またはタイプして下さい、それからカメラを適用して下さい。
+Drag to orbit  /  Scroll to zoom	ドラッグ・トゥ・オービット/スクロール・トゥ・ズーム
+Driver info	ドライバー情報
+Driver information	ドライバー情報
+Dual sabers	デュアルサバイアス
+Duel	デュエル
+Duel ladder	デュエル梯子
+Duel limit	デュエルの限界
+Dynamic crosshair	ダイナミッククロスチェア
+Dynamic glow	ダイナミックスロー
+Dynamic lights	ダイナミックライト
+EDIT ASSIGNED COMMAND	EDITは、コマンドを割り当てました
+EXIT	エントリー
+Edit	編集する
+Edit a proposal, then call its vote. Limits apply to the current mode.	提案を編集し、投票を呼びます。制限は現在のモードに適用されます。
+Editing stages a binding; the command is never executed here.	ステージのバインディングを編集します。コマンドはここで実行されません。
+Effects	効果
+Effects volume	効果の容積
+Enable all Force powers, including Saber Throw.	サバー・スローを含む全てのフォースパワーを有効にします。
+Enable warmup.	ウォームアップを有効にします。
+English	中国語(簡体)
+Enter 	エントリーフォーム
+Enter %s0 to %d.	%s0 を %d に入力します。
+Enter a finite number.	有限番号を入力してください。
+Enter a player name.	プレイヤー名を入力してください。
+Enter a size from 48 to 144.	48から144までのサイズを入力してください。
+Enter individual lobby	個別のロビーを入力
+Enter size 75-125 and panel opacity 0-100.	サイズ75-125とパネルの不透明度0-100を入力します。
+Enter your name	お名前を入力してください
+Equal, complete lineups required	エクアル、完全ラインナップ必須
+Esc  /  Back	Esc / バック
+Español	スペイン語
+Every active player selects Ready.	アクティブプレーヤーは、すべてのReadyを選択します。
+Existing voice-command menu; not proximity voice	ボイスコマンドメニューを既存の; 接近音声ではなく
+Exit	終了
+Exit Photo Mode	出口の写真モード
+Experimental preview only. Apply keeps your regular selection.	実験プレビューのみ。 定期的に選択してください。
+Extra button	余分なボタン
+FFA K/D	FFA K/Dの特長
+FLAG	フリガナ
+FORCE POWERS	フォースパワー
+Fantasy	ファンタシー
+Favorites	お気に入り
+Field of view	視野の見える
+Find a Server	サーバーを探す
+Find a server	サーバーを探す
+Fine-tune input settings without typing console commands.	コンソールコマンドを入力することなく、入力設定を微調整します。
+Flechette	Flechette(フリヒレット)
+Footsteps	フットステップ
+Force	パワーアップ
+Force Training	フォーストレーニング
+Force absorb	力の吸収
+Force drain	力の下水管
+Force enabled in restricted gametype	制限されたゲームタイプで強制的に有効
+Force enabled while all powers disabled	すべての電力が無効にしている間、強制的に有効
+Force grip	力のグリップ
+Force heal	強制ヒール
+Force lightning	力の電光
+Force player models	フォースプレーヤーモデル
+Force powers	力の力 力
+Force protect	力は保護します
+Force pull	力の引き
+Force push	強制押し
+Force rage	強制的な怒り
+Force rules, map rotation, Tournament, and team entry.	フォースルール、マップの回転、トーナメント、チームエントリー。
+Force sense	フォースセンス
+Force speed	力の速度
+Force team energize	力のチーム 活気づけて下さい
+Force team heal	強制チーム ヒール
+Force: restricted	力:制限される
+Force: unrestricted	力: 制限される
+Forward movement scale	前進移動スケール
+Fov	フォフフ
+Frag Limit:	限界を断ち切って下さい:
+Frag limit	フラグの限界
+Français	フランチャイズ
+Free Camera	自由なカメラ
+Free For All	全て無料
+Free mouse look	無料のマウスルック
+Freecam speed	Freecam速度
+Freeze	フリーズ
+Freeze is available in local solo games, including bots.	ボットを含むローカルのソロゲームでフリーズが利用できます。
+French	フレンチ
+Full Force	完全な力
+Fullscreen	フルスクリーン
+GAME RULES	ゲームルール
+GAME TYPE	ゲームの種類
+GAME TYPES	ゲームの種類
+GENERAL	ジェネラル
+GLOBAL RANK: unavailable	グローバル・ランク:利用不可
+Game Options	ゲームオプション
+Game rules	ゲームルール
+Game sounds	ゲーム音
+Game type	ゲームの種類
+Game types	ゲームの種類
+Generate normal maps	通常のマップを生成する
+Generic	ジェネリック
+Geometry detail	幾何学の細部
+German	ドイツ語
+Ghost off	ゴーストオフ
+Ghost on	ゴースト に
+Green	グリーングリーン
+Guide	ガイドガイド
+HDR	HDRの特長
+HDR lightmaps	HDR のライトマップ
+Have your say on the current vote,	現在の投票であなたの言う,
+Health and ammo	健康とアンモ
+Height	ハイランド
+Hide HUD, radar, chat and spectator overlays.	HUD、レーダー、チャット、スペクターのオーバーレイを隠します。
+High	高知県 高知市
+Hilt	ヒュルト
+Hilt preview unavailable	ヒルトのプレビューは使用できません
+Hindi	ヒンディー語
+Hold for Drain when available	利用できる場合のドレインのための把握
+Hold for Grip when available	利用できるときグリップを握って下さい
+Hold for Lightning when available	利用できる場合の避雷のための把握
+Hold for legacy mouse/keyboard strafe	レガシーマウス/キーボードストレイフの保持
+Hold to change walking/running speed	歩く/走行速度を変えるために握って下さい
+Hold to show match scores	マッチスコアを表示するホールド
+Holocron	ホロクロン
+Holster / draw saber	ホルスター/引くsaber
+Holster or draw your saber	ホルスターまたはあなたのsaberを引く
+Horizontal look sensitivity	横の一見の感受性
+Horizontal mouse scale	水平マウススケール
+Horizontal scale	横のスケール
+Horizontal sensitivity	水平感度
+Horizontal turn speed	横の回転速度
+Horror	ホラー
+Host a match	マッチをホストする
+Host name	ホスト名
+INDIVIDUAL	インディバイド
+ITEMS	コンテンツ
+Ignore small legacy axis movements.	小さなレガシー軸の動きを無視します。
+Ignore small stick movements.	小さな棒の動きを無視します。
+Illustration only. This result does not update your account.	イラストのみ。この結果はアカウントを更新しません。
+Input settings applied.	入力設定が適用されます。
+Inspect hilt	インスペクト・ヒルト
+Inspect off-hand	オフハンドを調べる
+Inspect primary	プライマリを調べる
+Installed mods	インストールされたmods
+Installing the mod alone does not make a server official.	mod だけをインストールしても、サーバを公式にしません。
+Interact with usable world objects	使用可能な世界オブジェクトとの相互作用
+Interface	インターフェース
+Invalid QA key	無効なQAキー
+Invalid action	無効なアクション
+Invalid assignment	無効な代入
+Invalid key	無効なキー
+Invalid personal config filename	無効な個人設定ファイル名
+Invalid setting	無効な設定
+Invert controller vertical look	インバーター コントローラーの縦の一見
+Invert mouse	マウスを反転
+Invert vertical look	垂直方向の外観を反転
+Italian	イタリアン
+Italiano	新宿区 新宿区 新宿 1-2-3
+Items	アイテム
+JOIN	ログイン
+JOIN THE MATCH	時計のジョイント
+Japanese	日本語 English
+Jedi Master	ジェディマスター
+Join	参加申し込み
+Join game	ゲームに参加する
+Joystick deadzone	ジョイスティック・デッドゾーン
+Jump	ジャンプ
+Jump / swim upward	ジャンプ/上方に泳いで下さい
+Jump sounds	ジャンプ音
+KEY ALREADY ASSIGNED	キーワード 既に割り当てられる
+KICK	KICK(キック)
+Keep Jump and Speed; disable other general powers.	ジャンプおよび速度を保って下さい;他の一般的な力を無効にして下さい。
+Keep changes	変化を保ち続ける
+Keep display changes?	ディスプレイの変更を保って下さいか。
+Keep or revert the display change first.	最初に表示変更を保ち、または逆転させます。
+Key Bindings	主結合
+Key change staged	鍵交換段階
+Keyboard	キーボード
+Keyboard horizontal turn speed	キーボードの横の回転速度
+Keyboard turning	キーボードの回転
+Keyboard vertical look	キーボードの縦の一見
+Keyboard vertical look speed	キーボードの縦の一見の速度
+Keys	キー
+Kill feed	キルフィード
+Korean	韓国人
+LB	アルバム
+LEAVE THE MATCH?	時計を手に入れる?
+LOAD SAVED SETTINGS?	ロード・セーブド・セッティング?
+LT	フリガナ
+Labels do not change assignments.	ラベルは代入を変更しません。
+Lagometer	ラガノメータ
+Language	言語
+Language pack unavailable; showing original chat	言語パックは利用できません。元のチャットを表示
+Leader	リーダー
+Leave lobby	ロビー
+Leave this server and return to the main menu?	このサーバーを離れ、メインメニューに戻りますか?
+Leave this server and return to your desktop?	このサーバーを離れ、デスクトップに戻りますか?
+Left hand	左手
+Left stick click	左の棒のかちりと言う音
+Legacy	レガシー
+Legacy joystick	レガシージョイスティック
+Legacy joystick analog axes	レガシージョイスティックアナログ軸
+Legacy joystick deadzone	レガシージョイスティックデッドゾーン
+Legacy joystick input; restarts input	レガシージョイスティック入力;入力を再起動します
+Legacy mouse forward-movement scale	レガシーマウス前面スケール
+Legacy mouse strafe scale	レガシーマウスのstrafeスケール
+Legacy or power acceleration.	レガシーまたは電力加速。
+Letterbox	ニュースレター
+Letters	ニュースレター
+Light flares	軽い火炎
+Lighting	照明照明
+Limbs only	墓のみ
+Limits affect the current mode.  0 = unlimited.	制限は現在のモードに影響します。 0 = 無制限。
+Lit preview	リットプレビュー
+Live	ライブライブ
+Live preview	ライブプレビュー
+Load	ロード
+Load into the editor for review, then Apply.	エディタに読み込まれてレビューを行い、適用します。
+Load the next map from the server rotation.	サーバの回転から次のマップをロードします。
+Local server	ローカルサーバー
+Lock Teams	チームを締めて下さい
+Log in with Discord	Discordでログイン
+Log out / Cancel	ログアウト / キャンセル
+Logged in as %.100s.	%.100s でログオンしました。
+Logged out.	ログアウト
+Look and movement	見て、動きます
+Look down	見下ろす
+Look up	探す
+Looking with bound up / down keys.	限界/下のキーを見て下さい。
+Low	ダウンロー
+Low health pulse	低い健康の脈拍
+Lower values make curved surfaces smoother.	より低い価値は曲げられた表面をより滑らかにします。
+Lyra  /  Registered reserve (sample)	ライラ / 登録済み予約(サンプル)
+MAP	サイトマップ
+MATCH RECORDINGS	時計の記録
+MATCH TOOLS	MATCHツール
+MULTIPLAYER	ムルティップレイター
+Main menu	メインメニュー
+Map	サイトマップ
+Map not reported	地図が報告されていない
+Map preview unavailable	地図のプレビューは利用できません
+Maps for the current game type	現在のゲームタイプの地図
+Master Mode	マスターモード
+Match clock	マッチクロック
+Match scores are separate from global rank.	マッチスコアはグローバルランクとは別々です。
+Match timer	マッチタイマー
+Match tools	マッチツール
+Matches	マッチ
+Matching stance assets are missing. Choices were not saved.	マッチングスタンスアセットが欠落しています。選択肢は保存されません。
+Matching style assets are missing. Blue, Yellow and Red remain available.	マッチングスタイルアセットが欠落しています。ブルー、イエロー、レッドは利用できます。
+Matching style assets are missing. Your choices were not saved.	スタイルアセットの一致が欠落しています。選択肢は保存されません。
+Max packets	最大パケット
+Max players	最高のプレーヤー
+Medium	ミディミアム
+Menu	メニュー
+Menu buttons	メニューボタン
+Menu confirm and back buttons	メニューの確認とバックボタン
+Menu cursor speed	メニューカーソル速度
+Menu language	メニュー言語
+Menu motion	メニューモーション
+Menu motion: Off	メニューの動き: オフ
+Menu motion: On	メニュー モーション: オン
+Message language	メッセージ言語
+Message the last player who attacked you	攻撃したプレイヤーのメッセージ
+Message the player under your crosshair	相手の十字架の下にプレイヤーをメッセージする
+Min players	最小限の選手
+Mind trick	マインド・トリック
+Minutes, 0 to 1440. Zero means unlimited. Applies after passing; may end the round.	議事録、0から1440。 ゼロは無制限を意味します。 通過後に適用されます。 ラウンドを終了することができます。
+Mod switching is unavailable in this isolated test profile.	Mod の切換えはこの隔離されたテスト プロフィールで利用できません。
+Mode	モード
+Model preview unavailable	モデル プレビュー 利用不可
+Mods	ログアウト
+Motion:	モーション:
+Mouse	マウス
+Mouse buttons and wheel are supported. Escape cancels.	マウスボタンとホイールがサポートされています。エスケープ解除。
+Mouse input mode	マウス入力モード
+Mouse input: 0 off, 1 raw, 2 compatibility; restarts input	マウス入力: 0 オフ、1 生、2 互換性; 入力を再起動します
+Mouse movement when free look is off.	自由な一見が消えるときマウスの動き。
+Mouse movement while strafing.	打たれながらマウスの動き。
+Mouse sensitivity	マウス感度
+Mouse smoothing	マウスのスムース
+Move backward	後方に移動
+Move forward	転送する
+Move left without turning	回転せずに左に移動
+Move right without turning	回転せずに右に移動
+Move the mouse to look around.	マウスを移動して見てみる。
+Movement	活動内容
+Movement and legacy input	動きおよび遺産の入力
+Movement effects	運動効果
+Moves	移動する
+Multiplayer built around pro saber dueling.	プロセーバーのデュリングの周りに構築されたマルチプレイヤー。
+Multiplier while walk / run is held.	散策・走行中マルチプライヤーを開催。
+Music volume	音楽の音量
+NOW = current match   /   WAIT = upcoming	NOW = 現在のマッチ / WAIT = 今後
+Name	お名前 (必須)
+Names / scores	氏名・スコア
+Negative m_pitch inverts vertical look.	ネガティブ m_pitch は縦の外観を反転します。
+Negative shifts left. Positive shifts right. Zero centers the view.	ネガティブシフト左。ポジティブシフト右。ゼロはビューを中心とする。
+Network	ネットワーク
+Network / FPS settings belong under Setup > Network.	ネットワーク/ FPS の設定は、セットアップ > ネットワーク に帰属します。
+Next	次へ »
+Next Force power	次 パワーパワー
+Next Map	サイトマップ
+Next Player	次のプレーヤー
+Next item	次の項目
+Next opponent: awaiting the other match winner	次 対戦相手: 他の試合の勝者を待っています
+Next weapon	次の兵器
+No files	ファイルなし
+No matching entries.	マッチングエントリーはありません。
+No matching hilts	一致のヒルツ無し
+No matching settings.	マッチングの設定はありません。
+No models match these filters.	これらのフィルタにマッチするモデルはありません。
+No official servers listed	正式なサーバーがリストされていない
+No password	パスワードなし
+No pending changes	終わりの変更無し
+No saved personal configs.	保存された個人的なコンフィグは使用できません。
+No standings available	立たない
+Non-ASCII command preserved. This text editor supports ASCII; use change-key or clear.	非 ASCII コマンドは保存されます。このテキストエディタは ASCII をサポートしており、変更キーまたはクリアを使用します。
+Not a personal setting: 	個人的な設定ではありません。
+Not reported	報告しない
+OFFICIAL RANKED SERVERS	オフィシャル・ランケード・サーヴェルズ
+Off	オフ
+Official 1v1 matches on a Ranked Duel server.	1v1 は、ランク上の Duel サーバーでマッチします。
+Offset used by the power curve.	パワーカーブで使われるオフセット。
+Older joystick path; restarts input.	古いジョイスティックパス。入力を再起動します。
+On	にほんご
+On-screen keyboard	画面上のキーボード
+One or more default keys have another command. Confirm to replace them.	デフォルトキーの1つ以上は別のコマンドがあります。 それらを置き換えることを確認してください。
+Online free camera uses your normal spectator movement.	オンライン無料カメラは、通常の分光器の動きを使用します。
+Only official registered teams enter this ladder.	正式に登録されたチームのみがこの梯子に入ります。
+Only reserves registered with this team may replace a player.	このチームに登録した予約は、プレイヤーを交換することができます。
+Open / collapse chat	チャットを開く / チャットを破る
+Open or close the in-game menu	ゲーム内メニューの開閉
+Open the console	コンソールを開く
+OpenAL	オープニング
+Opponent	オプレント
+Options	オプション
+Orange	オレンジ
+Orbit angle	軌道の角度
+Ordinary matches remain unranked.	普通の試合は無ランクのままです。
+Original Blue style.	オリジナルブルースタイル。
+Original JKA	オリジナルJKA
+Original Red style.	オリジナルレッドスタイル。
+Original Yellow style.	オリジナルイエロースタイル。
+Overall mouse response.	マウスの全体的な応答。
+Overview	プロフィール
+PHOTO MODE	フォトモード
+PING	ピンセット
+PLAY	プレイ
+PLAYER	プレイヤー
+PRESS A KEY OR CONTROLLER BUTTON	キーかコントローラーのボタンを押して下さい
+PS	プッシー
+Packet duplication	パケット重複排除
+Pages rotate every 10s. Your row stays visible.	10秒ごとにページが回転します。 行は表示されません。
+Panel opacity (%)	パネルの不透明度 (%)
+Parallax mapping	パララックスマッピング
+Password required	パスワード必須
+Pause menu	メニュー
+Pending changes	終わりの変更
+Pending edits discarded	レンダリングされた編集
+Performance	パフォーマンス
+Perspective	パースペクティブ
+Photo Mode	フォトモード
+Pick different styles. Your normal style-switch control follows this order.	異なるスタイルを選択します。通常のスタイルスイッチ制御はこの順序に従います。
+Ping	ピン
+Ping  %d ms	ピン %d ms
+Pistol	ピストル
+Pitch	ピッチ
+Pitch sway	ピッチスウェイ
+Play	プレイ
+Play recording	録音を再生する
+PlayStation	プレイステーション
+Playback	プレイバック
+Player	プレイヤー
+Player labels	プレーヤーのラベル
+Player name	プレイヤー名
+Player settings changed outside this menu. Reopen Profile to refresh.	プレイヤーの設定は、このメニューの外で変更されます。 プロフィールをリオープンしてリフレッシュしてください。
+Players	プレイヤー
+Players  %s / %s	プレイヤー %s / %s
+Players and world	プレイヤーと世界
+Polish	ポーランド語
+Polski	ポーランド
+Portrait	ポートレート
+Portrait size	ポートレートサイズ
+Portrait size applied.	ポートレートサイズが適用されます。
+Portraits	ポートレイト
+Portuguese	ポルトガル語
+Portuguese (Brazil)	ポルトガル語(ブラジル)
+Português	日 時
+Português (Brasil)	スタッフ(ブラジル)
+Power	パワーパワー
+Power Duel	パワー・デュエル
+Power acceleration offset	パワーアクセラレーションオフセット
+Precise crosshair trace	精密な十字架の跡
+Preview disconnect	プレビュー切断
+Preview hand:	プレビューハンド:
+Preview how a missing teammate appears in the ready room.	準備が整った部屋に欠落しているチームメイトがどのように表示されるかをプレビューします。
+Preview unavailable	プレビューは利用できません
+Preview:	プレビュー:
+Previous	過去の投稿
+Previous Force power	前の力力力
+Previous Player	前のプレーヤー
+Previous item	前のアイテム
+Previous weapon	前の兵器
+Primary	プライマー
+Primary attack; movement and style still govern saber moves	第一次攻撃; 動きとスタイルはまだsaberの動きを支配します
+Private chat with last attacker	最後の攻撃者とプライベートチャット
+Private chat with target	ターゲットとのプライベートチャット
+Private message	プライベートメッセージ
+Profile	プロフィール
+Projected	プロジェクト
+Projectile trails	プロピエール・トレイル
+Purple	パープル
+QUIT GAME?	クイックゲーム?
+Quality	品質・品質
+Quick combinations; more weight than Blue.	クイックコンビネーション。ブルーよりも重量が大きい。
+Quit game	クイズゲーム
+Quit the game and return to your desktop?	ゲームを終了し、デスクトップに戻りますか?
+RANKED PLAY  /  DUEL LADDER	並んだプレー / DUEL LADDER
+RANKED PLAY  /  OVERVIEW	ランクプレイ / 概要
+RANKED PLAY  /  SERVER DIRECTORY	限定プレイ/SERVER DIRECTORY
+RANKED PLAY  /  TEAM LADDER	限定プレイ / TEAM LADDER
+RATIO	ラティオ
+RB	RBの特長
+READY	フィードバック
+READY STANCE	READY STANCE(プレッディ・スタンス)
+RECONNECTS AND RESERVES	接続と予約
+RECORDINGS	研究開発
+RED	レッド
+RED %d     /     BLUE %d	レッド %d / ブルー %d
+RED FLAG	レッドフラッグ
+REPLACE DEFAULT KEY ASSIGNMENTS?	主の課題を解決する?
+REPLACE SAVED CONFIG?	リプレース・セーブ・コンフィグ?
+RT	ツイート
+Radar	レーダー
+Raise or lower the camera target.	カメラターゲットを上げたり下げたりします。
+Rank	ランキング
+Ranked Challenge Duel	ランク上のチャレンジ・デュエル
+Ranked Duel	ランクデュエル
+Ranked Duel and Ranked Challenge Duel share this ladder.	ランク上のDuelとランク上のチャレンジDuelはこの梯子を共有します。
+Ranked Play	ランクプレイ
+Ranked connection: not configured	ランク接続: 設定されていない
+Ranked mode	ランクモード
+Ranked servers	ランキングサーバー
+Ranked services are coming soon.	ランク上のサービスが近日公開されます。
+Rankings appear after verified official results are connected.	検証済みの公式結果が接続された後にランキングが表示されます。
+Rate	レート
+Rating	評価基準
+Rating change: unavailable. No verified ranked result received.	格付け変更:利用できません。 確認済みのランク結果が受信されていません。
+Rating: unavailable / no verified ranked result	評価: 利用不可 / 検証済み結果なし
+Raven Software	ラベンソフトウェア
+Raw	スタッフ
+Ready	レディー
+Ready - offline	Ready - オフライン
+Ready cleared.	準備が整いました。
+Ready for chat - offline	チャットのための準備 - オフライン
+Ready selected.	選択された準備。
+Ready-pose choice only. Choose combat behavior in Combat styles.	Ready-pose の選択のみ。Combat スタイルの戦闘動作を選択します。
+Record match	レコードマッチ
+Recording	レコーディング
+Recordings	レコーディング
+Red	レッド
+Red team	レッドチーム
+Registered teams compete on their own team ladder.	登録されたチームは、自分のチーム梯子に競争しています。
+Release capture in windowed mode.	ウィンドウモードでキャプチャを解放します。
+Release mouse capture in windowed mode	ウィンドウモードでマウスキャプチャを解放する
+Release window capture	リリースウィンドウキャプチャ
+Renderer	レンダー
+Repeat commands in outgoing packets.	パケット外出中のコマンドを繰り返します。
+Repeater	リピーター
+Replace	リプレース
+Replace 	リプレース
+Replace pending config edits?	pending config の編集を置換しますか?
+Replace pending edits with this config?	この設定でpending編集を置き換える?
+Replace saved config?	保存したコンフィグを置換しますか?
+Replace the controller's button assignments with defaults?	コントローラーのボタンの割り当てをデフォルトで置換しますか?
+Requested bytes per second; server limits apply.	1秒あたりのリクエストバイト数。サーバーの制限が適用されます。
+Requested snapshots per second.	1秒あたりのスナップショットをリクエストしました。
+Requires Rend2.	Rend2 が必要です。
+Requires Streamer mode with Clean Capture off.	クリーンキャプチャオフでストライマーモードが必要です。
+Requires authenticated server permission	認証されたサーバーの許可が必要です
+Requires server permission. Add a player argument using Edit command if needed.	サーバ権限が必要です。必要に応じて、Edit コマンドを使用して、プレーヤー引数を追加します。
+Requires server permission. Use the server's target syntax.	サーバ権限が必要です。サーバーのターゲット構文を使用してください。
+Reserves	予約する
+Reset	リセット
+Reset all to Stock	全てを在庫にリセットする
+Reset camera	リセットカメラ
+Reset filters	フィルターをリセットする
+Reset preview	リセットプレビュー
+Reset this tab	このタブをリセットする
+Reset this tab?	このタブをリセットしますか?
+Reset to originals	オリジナルへのリセット
+Reset view	リセットビュー
+Resolution	ソリューション
+Respawn	リスペーン
+Respawn now	今すぐご予約
+Restart Map	再スタートマップ
+Restart the current map after the vote passes.	投票が通過した後に現在のマップを再起動します。
+Restarts the renderer.	レンダラーを再起動します。
+Restore action defaults	アクションのデフォルトを復元する
+Restricted Force	制限された力
+Result preview	結果プレビュー
+Resume  /  Esc	履歴書/Esc
+Return to editing to keep your pending changes.	変更を保ちながら編集に戻る。
+Return to tournament selection?	大会選考に戻る
+Reverse right-stick vertical look.	逆転右スティック垂直外観。
+Revert	リバート
+Reverting in %d seconds.	%d 秒で反転します。
+Review this change. Nothing changes until you confirm.	この変更を見直します。確認するまでは変更はありません。
+Right hand	右手
+Right stick click	右スティック クリック
+Right-stick horizontal look speed.	右棒の横の一見の速度。
+Right-stick vertical look speed.	右棒の縦の一見の速度。
+Rocket launcher	ロケットランチャー
+Role: Jedi	役割: ジェディ
+Role: Non-Jedi	役割: 非ジェディ
+Roll	ロールロール
+Roll sway	ロールスウェイ
+Rotate:	回転:
+Run command	コマンドを実行する
+Run pitch	ピッチの実行
+Run roll	走るロール
+Russian	ロシア人
+SABER TRIALS  /  SOLO MATCH	SABER TRIALS/SOLO MATCH(ソーロマッチ)
+SABER TRIALS / COMBAT STYLES	SABER TRIALS/コンバットスタイル
+SABERTRIALS	サバトリアル
+SABER_SINGLE	SABER_SINGLE(セイバー)
+SAMPLE WINNER	シャンプルワインナー
+SCORE	ストーレ
+SERVER INFORMATION	会員情報
+SINGLE SABER / CHOOSE THREE	シングル・セイバー / シュート・スリー
+SPEC	スペック
+SSAO	スワオ
+ST_CONTROLS_FAIL binding mismatch	ST_CONTROLS_FAIL 結合ミスマッチ
+ST_CONTROLS_FAIL hit visibility	ST_CONTROLS_FAIL ヒット可視性
+ST_CONTROLS_FAIL variable mismatch	ST_CONTROLS_FAIL 変数の不一致
+Saber / melee	サバー/ミーリー
+Saber 1	サザー 1
+Saber 2	サザー2
+Saber trail	サザー・トレイル
+Saber workbench	サバーワークベンチ
+Sabers	サワーズ
+Sample players and events. No live registration or match starts.	プレイヤーやイベントをサンプル化します。ライブ登録や試合開始はありません。
+Save a PNG screenshot	PNGスクリーンショットを保存
+Save current settings	現在の設定を保存
+Saved 	保存済み
+Saved Configs	保存された構成
+Saved choices take effect next spawn on supporting servers.	保存された選択肢は、サポートサーバーの次のスポーンに影響します。
+Saved config could not be verified.	保存されたコンフィグは検証できませんでした。
+Scale horizontal mouse movement.	水平マウスの動きをスケールします。
+Scales the panel and text together.	パネルとテキストをまとめて表示します。
+Scene: 	シーン:
+Sci-Fi	Sci-Fiの特長
+Scoreboard	スコアボード
+Screenshot	スクリーンショット
+Search Setup settings or console names...	セットアップ設定またはコンソール名を検索する...
+Search actions...	アクションを検索する...
+Search current keys or commands...	現在のキーまたはコマンドを検索します。
+Search hilts	ヒルトを検索
+Search input settings or console names...	入力設定またはコンソール名を検索...
+Search models or outfits...	モデルや衣装を検索する...
+Secondary	第2次選考
+Select DEMP2 when available	利用可能なDEMP2を選択
+Select a game type. Changing this choice does not change the match.	ゲームの種類を選択します。この選択肢を変更しても、マッチを変更しません。
+Select a player or bot	プレーヤーまたはボットを選択します。
+Select a server	サーバを選択
+Select an available map for the current game type.	現在のゲームの種類は、利用可能なマップを選択します。
+Select blaster rifle when available	利用可能な場合、ブラスト ライフルを選択します。
+Select bowcaster when available	利用可能な場合、ボウキャスターを選択します。
+Select det packs	デットパックを選択
+Select disruptor when available	利用できる場合の中断器を選ぶ
+Select flechette when available	利用可能な場合は、flechetteを選択します。
+Select next Force power	次のフォースパワーを選択
+Select next available weapon	次の利用可能な武器を選択
+Select next inventory item	次の在庫項目を選択
+Select one of the six styles.	6つのスタイルのいずれかを選択します。
+Select pistol when available	利用可能なピストールを選択します。
+Select previous Force power	前の強制電力を選択
+Select previous available weapon	利用可能な以前の武器を選択
+Select previous inventory item	前の在庫項目を選択
+Select repeater when available	利用可能な場合、リピーターを選択
+Select rockets when available	利用可能なロッカーを選択
+Select saber or melee	saber または melee を選択
+Select thermal detonators	サーマルデトネータを選択
+Select tournament	トーナメントを選択
+Select trip mines	旅行鉱山の選択
+Send message	送信メッセージ
+Sensitivity	フィードバック
+Sensitivity / settings	感度/設定
+Server	サーバ
+Server Management	サーバー管理
+Server information	サーバー情報
+Server location	サーバーの場所
+Server staff protection still applies.	サーバスタッフの保護は依然として適用します。
+Server tournament verification is coming next.	次回はサーバーのトーナメントの検証が行われます。
+Setting is protected: 	設定は保護されます:
+Setting staged	ステージの設定
+Settings applied.	設定が適用されます。
+Settings applied. Video/sound changes may require a restart.	設定が適用されます。ビデオ/サウンドの変更は、再起動を必要とする場合があります。
+Settings changed outside the editor. Cancel and reopen before applying.	設定はエディタの外で変更されます。 申し込み前にキャンセルと再オープン。
+Setup	設定
+Share / Create	共有/作成
+Shift	シフト
+Shoulder offset	ショルダーオフセット
+Show controls: 	制御を表示して下さい:
+Show current bracket	現在のブラケットを表示
+Show current tournament status	現在の大会ステータスを表示
+Show original message	オリジナルメッセージを表示
+Show score	スコアを表示する
+Show the original above its marked translation. Originals remain in the console.	マークされた翻訳の上に、オリジナルを提示します。 オリジナルはコンソールに残ります。
+Show weapon	兵器を見る
+Shows the weapon model in first person.	武器のモデルを1人目に見せる。
+Siege	サイゲ
+Siege objectives	Siege の目的
+Siege voice commands	音声コマンドのシージ
+Signed in with Discord.	Discord でサインインします。
+Signed out.	サインアウト
+Simple items	シンプルなアイテム
+Single	シングル
+Size: 48-144. Drag or type a number, then Apply size.	サイズ: 48-144. ドラッグまたは番号を入力, その後、サイズを適用します.
+Slot 1:	スロット1:
+Slot 2:	スロット2:
+Slot 3:	スロット3:
+Smooth follow	スムーズなフォロー
+Smoothing	スムース
+Smooths changes to camera position.	カメラの位置の変更を滑らかにします。
+Smooths changes to the point the camera follows.	カメラが次の点に変化を滑らかにします。
+Snapshot timing offset; normally session-only.	スナップショットのタイミングオフセット; 通常セッションのみ。
+Snapshots	スナップショット
+Solo / replay speed	ソロ / 再生速度
+Solo match	ソロマッチ
+Solo, spectator and replay camera. Online matches stay live.	ソロ, 観客と再生カメラ. オンラインの試合は、ライブ滞在.
+Some weapons and modes choose the view automatically.	武器やモードは、自動的にビューを選択します。
+Sort A-Z	A-Zをソートする
+Sort Z-A	Z-Aをソートする
+Sound	サウンド
+Sound quality	音質の質
+Sounds	サウンド
+Sounds + effects	音 + 効果
+Sounds + effects + marks	音 + 効果 + マーク
+Space	スペース
+Spanish	スペイン語
+Spectate	スペック
+Spectator camera	分光器のカメラ
+Speed	スピード
+Speed trail	スピードトレイル
+Square	スクエア
+Staff	スタッフ
+Stage controller defaults	ステージコントローラーのデフォルト
+Stage defaults	ステージのデフォルト
+Stage edit	ステージ編集
+Stances	スタンス
+Stances saved. Applies next spawn on a supporting server.	スタンス保存。サポートサーバーに次々のスポーンが適用されます。
+Stances...	スタンス...
+Standard	スタンダード
+Start / Resume	スタート/再開
+Start Tournament	スタートトーナメント
+Starting rating: 1000   |   Results and opponent strength decide changes.	開始評価:1000 | 結果と対戦相手の強さは変化を決めます。
+Static	静電容量
+Status notifications	ステータス通知
+Stay here	詳しくはこちら
+Stay in ready room	既設の客室に泊まる
+Stencil	ステンシル
+Stick deadzone	スティックデッドゾーン
+Stock	株式について
+Stock action defaults staged (unassigned when no stock default exists)	ストックアクションのデフォルトでは、ステージング(ストックのデフォルトが存在しない場合に割り当てられた)
+Stock defaults unavailable	在庫のデフォルトは利用できません
+Strafe left	ストラフェ左
+Strafe modifier	Strafeの修飾子
+Strafe movement scale	Strafeの動きのスケール
+Strafe right	シュトラフ 右
+Streamer mode	Streamerモード
+Streamer presentation	ストリーム・プレゼンテーション
+Style:	スタイル:
+Subject	演題名:
+Supporting servers use this selection. Saber Offense requirements still apply.	支持サーバーは、この選択を使用します。 セーバー犯罪要件はまだ適用されます。
+Swap	スワップ
+Swap Confirm and Back for menus.	メニューの確認とバックアップ。
+Swapped	スワッピング
+Switch mod	スイッチMOD
+Switch mod?	スイッチMOD?
+Switch mods from the disconnected main menu.	切断されたメインメニューからmods を切り替えます。
+Symbols	シンボル
+TEAM STANDINGS	チーム・スタンディング
+TEAM TOURNAMENT	チームトーナメント
+TEAMS	チーム
+TFFA: lock or reopen joining and team switching.	TFFA: 結合およびチーム スイッチを締めるか、または再開して下さい。
+TIME	タイム
+TOURNAMENT	ツアーガイド
+TOURNAMENT  /  BRACKET	トーナメント/ブラケット
+TOURNAMENT  /  LEAVE LOBBY?	トーナメント/リーブ・ロビー
+TOURNAMENT  /  MATCH RESULT	トーナメント/時計の修理
+TOURNAMENT  /  READY ROOM	ツアー・客室
+TOURNAMENT  /  SELECT A FORMAT	トーナメント/フォーマットを選択
+TOURNAMENT  /  TEAM RESERVES	トーナメント/チーム予約
+Take photo	写真を撮る
+Target damping	ターゲット減衰
+Target names	ターゲット名
+Team / tag	チーム/タグ
+Team Free For All	チーム全員無料
+Team appearance	チーム外観
+Team chat	チームチャット
+Team chat only	チームチャットのみ
+Team chat sound	チームチャットサウンド
+Team color lightsabers	チームカラーライター
+Team color skins	チームカラースキン
+Team ladder	チーム梯子
+Team overlay	チームオーバーレイ
+Team skin: Blue	チーム スキン: 青
+Team skin: Default	チーム スキン: デフォルト
+Team skin: Red	チーム スキン: 赤
+Text language	テキスト言語
+Texture compression	テクスチャ圧縮
+Texture depth	テクスチャの深さ
+Texture detail	テクスチャの詳細
+Texture filter	テクスチャフィルタ
+Texture intensity	テクスチャ強度
+The complete lineup must ready up again before play resumes.	プレイ再開前に、完全ラインナップを新たに準備する必要があります。
+The missing player may reconnect, or a reserve takes their place.	欠落しているプレイヤーは再接続するか、または予約がその場所を取ることができます。
+The original style keeps its original combat behavior.	オリジナルのスタイルは、本来の戦闘行動を保ちます。
+The previous display recovery has not been saved yet.	以前の表示回復はまだ保存されていません。
+The ranked server directory is not connected yet.	ランクされたサーバーディレクトリは、まだ接続されていません。
+The ranking service is not connected.	ランキングサービスは接続されません。
+The selected model files are no longer available.	選択したモデルファイルが利用できなくなりました。
+The server checks that the map is installed and supports the current mode.	サーバは、マップがインストールされていることを確認し、現在のモードをサポートしています。
+Themes	テーマ
+Themes: 	テーマ:
+Thermal detonator	サーマルデトネーター
+Third person	第三者
+Third-person framing	第三者のフラミング
+This character selection is unavailable.	キャラクターの選定はできません。
+This command is too long for the text editor; it is preserved. Use change-key or clear.	このコマンドはテキストエディタで長すぎます。保存されます。変更キーまたはクリアを使用してください。
+This ends your current life.	これは、あなたの現在の人生を終わらせます。
+This model does not support a mirrored preview	このモデルは、ミラーされたプレビューをサポートしていません
+This outfit has no matching team skin.	マッチングチームスキンがなくてもOK!
+This restarts the game client.	ゲームクライアントを再起動します。
+This slot has no key to swap. Choose Replace or Cancel.	このスロットはスワップするキーはありません。 置換またはキャンセルを選択します。
+Three styles saved. Use your normal style-switch control to cycle them.	保存された3つのスタイル。 通常のスタイルスイッチ制御を使用して、それらを循環させます。
+Three ways to compete	3つの競争方法
+Tilt the camera up or down.	カメラを上下に傾けます。
+Time Limit:	時間制限:
+Time Nudge	タイムナッジ
+Time limit	時間制限
+Time remaining	残り時間
+Timing and downloads	タイミングとダウンロード
+Toggle camera view	カメラビューをトグルする
+Toggle console	コンソールをトグル
+Toggle existing match recording	既存のマッチ記録をトグルする
+Toggle supported first/third-person view	初めて/第3人目の視聴をサポート
+Toggle the chat panel and recent messages	チャットパネルと最近のメッセージの切り替え
+Tonemapping	トンマッピング
+Top right	右上のトップ
+Tournament	トーナメント
+Tournament bracket	トーナメントブラケット
+Tournament rules did not replace the previous description	トーナメントルールは前の説明を置き換えなかった
+Tournament rules did not scroll	トーナメントルールはスクロールしませんでした
+Tournament rules headings did not load as separate lines	トーナメントルールヘッディングは別行としてロードしなかった
+Tournament status	トーナメントステータス
+Translate into	翻訳する
+Translate received public, team and private chat offline.	オフラインで公開、チーム、プライベートチャットを翻訳します。
+Translating - offline	翻訳 - オフライン
+Translation	トランスフォーメーション
+Translation - %s	翻訳 - %s
+Translator unavailable; showing original chat	Translator が利用できなくなった; 元のチャットを表示
+Triangle	トライアングル
+Trilinear	トリリナー
+Trip mine	トリップ鉱山
+Turkish	トルコ語 トルコ語
+Turn left	左折
+Turn right	右折
+Turn the camera around the player.	プレーヤーの周りのカメラを回して下さい。
+Turn-speed modifier	回転速度修飾子
+Turn-speed modifier while walk/run is held	歩行・走行中の回転速度修飾子を保有
+Turning with bound left / right keys.	左/右キーの境界で回転します。
+Two precise swings; vulnerable recovery.	2つの精密な振動;脆弱な回復。
+Type:	タイプ:
+Ukrainian	ウクライナ語
+Unassigned	不割り当て
+Unavailable in this client or server.	クライアントまたはサーバーで利用できません。
+Uncategorized	カテゴリーなし
+Unfreeze	ノーフリーズ
+Universal translator	ユニバーサル翻訳者
+Universe: 	宇宙:
+Unknown Setup operation	未知のセットアップ操作
+Unknown quality preset	未知の質のプリセット
+Unknown setting	未知の設定
+Unlimited	無制限
+Unlock Teams	チームをアンロックする
+Unready	未読
+Unsaved changes	未保存の変更
+Unsupported Controls operation	サポートされていない制御操作
+Unsupported value for 	サポートされていない値
+Up to 8 registered teams	8チームまでの登録チーム数
+Use 	利用条件
+Use / interact	使用/相互作用
+Use Absorb when available	利用できる場合の吸収を使用して下さい
+Use FOV 20-120, tilt -45 to 45, speed 20-800.	FOV 20-120を使用して下さい、-45から45まで、速度20-800を傾けて下さい。
+Use Heal when available	利用できる場合のHealを使用して下さい
+Use Mind Trick when available	利用できるときMindのトリックを使用して下さい
+Use Protect when available	利用できるとき保護を使用して下さい
+Use Pull when available	利用できる場合のプルを使用して下さい
+Use Push when available	利用できる場合のプッシュを使用して下さい
+Use Rage when available	利用できる場合のRageを使用して下さい
+Use Sense when available	利用できる場合の感覚を使用して下さい
+Use Speed when available	利用できる場合の速度を使用して下さい
+Use a new personal config name (letters, numbers, spaces, _ or -).	新しい個人的な設定名(文字、数字、スペース、 _ または -) を使用します。
+Use analog axes on the legacy path.	従来のパスにアナログ軸を使用します。
+Use fixed 50-point saber strikes and stronger timed parries.	固定50ポイントのセーバーストライキを使用し、より強力なタイムリーなパーriesを使用します。
+Use inventory item	在庫項目を使用する
+Use selected Force power	選択したフォースパワーを使用する
+Use team Energize when available	利用可能な場合、チームを有効活用
+Use team Heal when available	利用可能な場合、チームヒールを使用する
+Use team blade colors. Off shows chosen colors.	チームブレードの色を使用してください。 オフショー選択した色。
+Use team skins when available. Off shows chosen outfits.	チーム スキンを利用できるとき使用して下さい。 ショーによって選ばされる衣服を断って下さい。
+Use the selected available Force power	選択可能なフォースパワーを使用する
+Use the selected inventory item	選択した在庫項目を使用する
+Use turn speed 0-10000 and accel 0-100.	回転速度 0-10000 および加速 0-100 を使用して下さい。
+Used for Custom resolution.	習慣の決断のために使用される。
+VISUAL PREVIEW	ビジュアルレビュー
+VOTE	VOTE(ヴォーテ)
+VOTING	ボーティング
+VS	VSシリーズ
+Value outside the supported edit range.	サポートされている編集範囲外の値。
+Vanilla	バニラ
+Vehicle lead indicator	車の鉛の表示器
+Version	バージョン
+Vertex lighting	Vertex照明
+Vertical look sensitivity	縦の一見の感受性
+Vertical look speed	縦の一見の速度
+Vertical mouse scale	縦マウススケール
+Vertical mouse scale; negative means inverted	縦マウススケール; 負は反転を意味します
+Vertical sensitivity	垂直感度
+Vertical sway	縦の揺れ
+Very high	非常に高い
+Video	ビデオビデオ
+View	プロフィール
+Visual effects	視覚効果
+Voice commands	音声コマンド
+Voice language	音声言語
+Voice volume	音声ボリューム
+Volume	ボリューム
+Vote / Call Vote	投票 / コール投票
+Vote to add a role supported by the current game type.	現在のゲームタイプでサポートするロールを追加するために投票します。
+Vote to remove a player or bot.	プレイヤーまたはボットを削除する投票。
+WEAPONS	ウェポン
+Waiting for the server's player list...	サーバのプレーヤーリストを待って...
+Walk / run	ウォーク/ラン
+Wall marks	壁の印
+Warmup Off	ウォームアップオフ
+Warmup On	ウォームアップオン
+Weapon FOV	武器FOV
+Weapon's own ready pose overrides this preview in play.	Weapon 独自の既定のポーズは、このプレビューをプレイ中にオーバーライドします。
+Weapon:	ウェポン:
+Weapons	ウェポン
+Weapons: restricted	武器:制限される
+Weapons: unrestricted	武器:制限なし
+Weightier attacks; less wind-up than Red.	重力攻撃;赤よりも風力が低下します。
+White	ホワイト
+White core: Off	白い中心: オフ
+White core: On	白い中心:オン
+Whole number, 0 to 999. Zero means unlimited. Applies after passing; may end the round.	全番号 0 から 999 まで。 ゼロ は無制限を意味します。 通過後に適用されます。 ラウンドを終了できます。
+Xbox	Xboxの特長
+YOU	お問い合わせ
+Yellow	イエロー
+You / Blue Horizon	You / ブルーホライゾン
+Your character	あなたのキャラクター
+Your preferred reading language. Requires the matching offline packs.	お好みの読書言語。 マッチするオフラインパックが必要です。
+Your sample ready status will reset when you select another event.	別のイベントを選択すると、サンプルの既定のステータスがリセットされます。
+Your selection is remembered while using dual sabers or a staff.	デュアル・サビールやスタッフを使って、お好きなものをお選びください。
+Your server chooses the combat rules.	サーバは戦闘ルールを選択します。
+Your server may deduct a point.	サーバがポイントを差し引くことがあります。
+Zero disables acceleration.	ゼロは加速を無効にします。
+Zero disables this component of view swaying.	Zero はビュースウェイリングのこのコンポーネントを無効にします。
+Zero removes the client frame-rate limit.	ゼロはクライアントフレームレート制限を解除します。
+Zero uses your field of view.	ゼロは、あなたの視野を使っています。
+[ ] Waiting for you. Click Ready when prepared.	[ ] お待ちしています。準備したら、[Ready] をクリックします。
+[ ] You / Waiting	[ ] あなた / 待たせ
+[!] Match paused / missing teammate. Reconnect window: 10:00 (sample).	[!] マッチパユース / チームメイト不足。 再接続ウィンドウ: 10:00 (サンプル).
+[!] Mira / Disconnected	[!] みみみ / 切断
+[+] Everyone is ready. Sample lobby: no match will start.	[+] 誰もが準備が整っています。 ロビーのサンプル: マッチは始まりません。
+[+] You / READY	[+] あなた / READY
+\\translator	\\トランスレーター
+\\translator\\fonts	\\translator\\fonts を \\translator\\fonts
+^3Saber Trials ^7Local Review	^3Saber トライアル ^7Local 見直し
+^7Akaza: ^2I'll be there soon.	^7Akaza:^2もうすぐそこです。
+^7Akaza: ^2Ready when you are.	^7Akaza:^2Ready です。
+^7Hisoka: ^2Meet by the stairs.	^7比岡:^2階段で食事する。
+^7Hisoka: ^2See you there.	^7こんにちは岡:^2そこに見て下さい。
+^7Sousuke Aizen: ^2Just passing through.	^7Sousuke Aizen:^2Just通過。
+_st_setup_recovery.tmp	_st_setup_recovery.tmp _ リードエグジビションジャパン
+a whole number from 	数字全体から
+alora/default	alora/デフォルト
+animation instance missing	アニメーションインスタンスの欠落
+applied.	応用。
+asdfghjkl-	アスフッホジカル-
+border lights ignore motion preference	境界線ライト 無視 動作 設定
+cannot drag back to top	上にドラッグバックできない
+cannot drag to bottom outside track	下部の外側のトラックにドラッグできない
+cg_drawStatus	cg_drawStatus の一覧
+cg_thirdPerson !	cg_thirdPerson ! は、
+cl_timeNudge	cl_timeNudge の一覧
+click target missing	クリック ターゲット 欠落
+controller menu missing	コントローラー メニュー 欠落
+dirty state	汚れた状態
+expected %s got %s	%s が %s に
+favorite selection missing	お気に入り 選択 欠落
+favorite state	好きな状態
+fixture has no overflow	据え付け品に流出がない
+fixture requires private Favorites view	備品は、プライベートのお気に入りビューが必要です
+force-rank	パワーランク
+g_forcePowerDisable	g_forcePowerDisable(パワーディスク)
+game/st_stance_assets.h	ゲーム/st_stance_assets.h
+game/st_stance_runtime.h	ゲーム/st_stance_runtime.h
+ghost off	ゴースト オフ
+ghost on	ゴースト 上の
+hover does not light native button	ホバーはネイティブボタンを軽くしない
+keeps dragging after mouse release	マウスリリース後にドラッグし続ける
+keyboard menu missing	キーボード メニュー 欠落
+kyle/default	kyle/デフォルト
+layout context	レイアウトのコンテキスト
+legacy action missing	レガシーアクション欠落
+levelshots/%s	レベルショット/%s
+live value mismatch	ライブ値の不一致
+local browser reply was not displayed	ローカルブラウザの返信が表示されない
+luffy/missing_profile_fixture	luffy/missing_profile_fixture ディレクティブ
+main-menu alias missing	メインメニュー alias 欠落
+menu destination	メニューの宛先
+metadata display name mismatch	メタデータ表示名 不一致
+metadata franchise mismatch	メタデータのフランチャイズの不一致
+missing Speed rank picker	欠損速度ランクピッカー
+missing selection	選択を欠く
+missing server list	サーバリストの欠落
+missing target %s	%s を欠落させる
+motion state mismatch	モーション状態の不一致
+native Force rank purchase changed	ネイティブフォースランク購入変更
+native Jedi role selector missing	ネイティブジェディロールセレクター欠落
+native Jedi role transition failed	ネイティブのJediロールの移行が失敗しました
+native destination mismatch	ネイティブの目的地の不一致
+native scrollbar did not drag	ネイティブスクロールバーがドラッグしませんでした
+native target missing	ネイティブターゲットの欠落
+not enough server fixtures	十分なサーバフィクスチャではなく
+or propose a change to this server.	変更をサーバに提案する。
+ordinary Apply changed Jedi role	普通は変更されたJediの役割を適用します
+pending model mismatch	終了モデルの不一致
+players/_humanoid/	プレイヤー/_humanoid/
+preview unavailable	プレビュー 利用不可
+result count	結果のカウント
+scanning creates one cvar per model	スキャンはモデルごとの1つのcvarを作成します
+scrolling changed active model	スクロール変更されたアクティブなモデル
+st-controls-save.tmp	st コントロール save.tmp
+st_chatSize	st_chatSize の使い方
+st_controllerDeadzone	st_controllerDeadzone の使い方
+st_controllerDevice	st_controllerDevice の使い方
+st_controllerEnabled	st_controllerEnabled ディレクティブ
+st_controllerHorizontal	st_controllerHorizontal(ストコントロールラホライゾンタール)
+st_controllerInvert	st_controllerInvert の使い方
+st_controllerMenuLayout	st_controllerMenuLayout の使い方
+st_controllerMenuSpeed	st_controllerMenuSpeed の使い方
+st_hudPulse	st_hudPulse は、
+st_hudScale	st_hudScale(スカル)
+st_hybridAssets	st_hybridAssets(ハイブリッドアセット)
+st_photoFov	st_photoFov(ストフォトフォフ)
+st_presentation_draw.inc	st_presentation_draw.inc _ 株式会社ドリテック
+st_presentation_notices.inc	st_presentation_notices.inc _ 株式会社エス・エス・エス・エス・エス
+st_presentation_policy.inc	st_presentation_policy.inc _ 株式会社 エス・エス・エス・エス・エス・エス・エス・エス・エス・エス・エス・エス・エス・エス・エス・エス・エス・エス・エス・エス・エス・エス・エス・エス・エス・エス・エス・エス・エス・エス・エス・エス・エス・エス・エス・エス・エス・エス・エス・エス・エス・エス・エス・エス・エス・エス・エス・エス・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・
+st_stanceProtocol	st_stanceProtocol(スタントコール)
+st_translationStatus	st_translationStatus の使い方
+st_uiCurrentGametype	st_uiCurrentGametype の使い方
+st_uiHudOpacity	st_uiHudOpacity(スイフドオパシティ)
+st_uiHudScale	st_uiHudScale(スズ)
+st_uiHudStatus	st_uiHudStatus の検索結果
+st_uiInputStatus	st_uiInputStatus の一覧
+st_uiMouseAccel	st_uiMouseAccel(スイマウスアクセル)
+st_uiPadClick	st_uiPadClick の使い方
+st_uiPortraitStatus	st_uiPortraitStatus の検索結果
+st_uiRightStickY	st_uiRightStickY(スイリエイトスティッキー)
+st_uiVoteCaptures	st_uiVoteCaptures(スイヴェート)
+st_uiVoteError	st_uiVoteError(スイ・ヴェートエラー)
+st_uiVoteGametype	st_uiVoteGametype の使い方
+st_uiVoteTime	st_uiVoteTime(イヴェットタイム)
+staged name	ステージ名
+stale preview survived failed load	スタイルプレビューは、失敗した負荷を生き延ばしました
+status mismatch	ステータスの不一致
+stock fallback mistaken for custom voice	カスタムボイスの株式のフォールバックミス
+stock portrait fixture missing	株式の肖像画の据え付け品の欠落
+sys/sys_public.h	sys/sys_public.h の一覧です。
+thumb grab jumps	親指のつかみは跳びます
+tournament bracket	トーナメントブラケット
+tournament status	大会ステータス
+track click does not scroll	トラック クリックはスクロールしません
+ui_Name	ui_Name の名称
+ui_currentNetMap	ui_currentNetMap 一覧
+ui_handAttack	ui_handAttack(イハンドアタック)
+ui_netGametype	ui_netGametype の使い方
+ui_sabertrials_hud.inc	ui_sabertrials_hud.inc _ 株式会社アイ・エス・ビー・ジャパン
+ui_sabertrials_photo.inc	ui_sabertrials_photo.inc _ 株式会社 日米
+ui_sabertrials_presentation.inc	ui_sabertrials_presentation.inc _ 日米協会
+ui_sabertrials_profile.inc	ui_sabertrials_profile.inc _ 株式会社ドリテック
+ui_stProfilePreviewAvailable	ui_stProfilePreviewAvailable (イストプロファイル)
+ui_st_about_server.inc	ui_st_about_server.inc _ サーバ・サーバー・サーバー・サーバー・サーバー・サーバー
+ui_st_brand.inc	ui_st_brand.inc _ 株式会社イ・スト・ブランド
+ui_st_chat_preview.inc	ui_st_chat_preview.inc _ 株式会社アイ・エス
+ui_st_controls_draw.inc	ui_st_controls_draw.inc _ 株式会社ドリテック
+ui_st_controls_modals.inc	ui_st_controls_modals.inc _ 株式会社ドリテック
+ui_st_crystal_controls.inc	ui_st_crystal_controls.inc _ 株式会社ドリスティック
+ui_st_handedness.inc	ui_st_handedness.inc _ 株式会社アイ・エス
+ui_st_hybrid.inc	ui_st_hybrid.inc _ 株式会社アイブリド
+ui_st_menu_style.inc	ui_st_menu_style.inc _ 株式会社 宇都宮
+ui_st_profile_actions.inc	ui_st_profile_actions.inc _ 株式会社アイ・エス
+ui_st_profile_catalog.inc	ui_st_profile_catalog.inc.inc _ 株式会社ドリテック
+ui_st_profile_draw.inc	ui_st_profile_draw.inc _ 株式会社ドリテック
+ui_st_rich.inc	ui_st_rich.inc _ 株式会社ドリテック
+ui_st_setup.inc	ui_st_setup.inc _ 株式会社アイ・エス
+ui_st_setup_draw.inc	ui_st_setup_draw.inc _ 株式会社ドリテック
+ui_st_stances.inc	ui_st_stances.inc _ 株式会社アイ・エス
+ui_stanceHand	ui_stanceHand(イスタンハンド)
+ui_stanceStyle	ui_stanceStyle(イ・スタンス・スタイル)
+unexpected connection state	予期しない接続状態
+unknown QA operation	不明なQA運用
+unknown scrollbar fixture	未知のスクロールバーの備品
+value%d	値%d
+virtual keyboard state	仮想キーボードの状態
+weapon 1	武器1
+weapon 10	武器10
+weapon 11	武器11
+weapon 12	武器12
+weapon 2	武器2
+weapon 3	武器3
+weapon 4	武器4
+weapon 5	武器5
+weapon 6	武器 6
+weapon 7	武器 7
+weapon 8	武器8
+weapon 9	武器9

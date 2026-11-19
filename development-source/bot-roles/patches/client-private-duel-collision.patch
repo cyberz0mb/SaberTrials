@@ -1,0 +1,37 @@
+diff --git a/codemp/cgame/cg_predict.c b/codemp/cgame/cg_predict.c
+index 9ef7c3e9..ac15c3f5 100644
+--- a/codemp/cgame/cg_predict.c
++++ b/codemp/cgame/cg_predict.c
+@@ -220,6 +220,21 @@ static QINLINE qboolean CG_VehicleClipCheck(centity_t *ignored, trace_t *trace)
+ 	return qtrue;
+ }
+ 
++static qboolean CG_IgnorePrivateDuelCollision( const entityState_t *other ) {
++	if ( !other || other->eType != ET_PLAYER ||
++		other->number < 0 || other->number >= MAX_CLIENTS ||
++		other->number == cg.predictedPlayerState.clientNum ||
++		(other->eFlags & EF_DEAD) ) {
++		return qfalse;
++	}
++
++	if ( cg.predictedPlayerState.duelInProgress ) {
++		return other->number != cg.predictedPlayerState.duelIndex;
++	}
++
++	return other->bolt1 != 0;
++}
++
+ /*
+ ====================
+ CG_ClipMoveToEntities
+@@ -253,6 +268,10 @@ static void CG_ClipMoveToEntities ( const vec3_t start, const vec3_t mins, const
+ 			continue;
+ 		}
+ 
++		if ( CG_IgnorePrivateDuelCollision( ent ) ) {
++			continue;
++		}
++
+ 		if ( ent->number > MAX_CLIENTS &&
+ 			 (ent->genericenemyindex-MAX_GENTITIES==cg.predictedPlayerState.clientNum || ent->genericenemyindex-MAX_GENTITIES==cg.predictedVehicleState.clientNum) )
+ //		if (ent->number > MAX_CLIENTS && cg.snap && ent->genericenemyindex && (ent->genericenemyindex-MAX_GENTITIES) == cg.snap->ps.clientNum)

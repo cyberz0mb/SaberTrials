@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.16)
+project(PresentationTests C)
+enable_testing()
+add_executable(presentation_tests test_presentation.c)
+target_include_directories(presentation_tests PRIVATE ../../development-source/bot-roles/codemp/ui)
+add_test(NAME presentation_policy COMMAND presentation_tests)

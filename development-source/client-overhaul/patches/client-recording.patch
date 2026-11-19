@@ -1,0 +1,81 @@
+--- a/codemp/client/cl_main.cpp
++++ b/codemp/client/cl_main.cpp
+@@ -242,7 +242,8 @@
+ 	clc.demofile = 0;
+ 	clc.demorecording = qfalse;
+ 	clc.spDemoRecording = qfalse;
+-	Com_Printf ("Stopped demo.\n");
++	Cvar_Set( "st_recording", "0" );
++	Com_Printf( "Saved recording: demos/%s.dm_%d\n", clc.demoName, PROTOCOL_VERSION );
+ }
+ 
+ /*
+@@ -297,6 +298,11 @@
+ 		return;
+ 	}
+ 
++	if ( clc.demoplaying ) {
++        Com_Printf( "Cannot record while playing a replay.\n" );
++        return;
++    }
++
+ 	// sync 0 doesn't prevent recording, so not forcing it off .. everyone does g_sync 1 ; record ; g_sync 0 ..
+ 	if ( NET_IsLocalAddress( &clc.serverAddress ) && !Cvar_VariableValue( "g_synchronousClients" ) ) {
+ 		Com_Printf (S_COLOR_YELLOW "WARNING: You should set 'g_synchronousClients 1' for smoother demo recording\n");
+@@ -312,10 +318,17 @@
+ 
+ 		Com_sprintf (name, sizeof(name), "demos/%s.dm_%d", demoName, PROTOCOL_VERSION );
+ 
+-		if ( FS_FileExists( name ) ) {
+-			Com_Printf( "Record: Couldn't create a file\n");
+-			return;
+- 		}
++        // Rapid stop/start must create another file, never overwrite a replay.
++        char baseName[MAX_QPATH];
++        Q_strncpyz( baseName, demoName, sizeof( baseName ) );
++        for ( int suffix = 1; FS_FileExists( name ); ++suffix ) {
++            if ( suffix > 9999 ) {
++                Com_Printf( "Record: No unused recording filename available.\n" );
++                return;
++            }
++            Com_sprintf( demoName, sizeof( demoName ), "%s_%04d", baseName, suffix );
++            Com_sprintf( name, sizeof( name ), "demos/%s.dm_%d", demoName, PROTOCOL_VERSION );
++        }
+ 	}
+ 
+ 	// open the demo file
+@@ -327,6 +340,7 @@
+ 		return;
+ 	}
+ 	clc.demorecording = qtrue;
++	Cvar_Set( "st_recording", "1" );
+ 	if (Cvar_VariableValue("ui_recordSPDemo")) {
+ 	  clc.spDemoRecording = qtrue;
+ 	} else {
+@@ -394,6 +408,16 @@
+ 	FS_Write (buf.data, buf.cursize, clc.demofile);
+ 
+ 	// the rest of the demo file will be copied from net messages
++}
++
++// One bindable action, backed by the real engine state rather than an alias.
++static void ST_Record_f( void ) {
++    if ( Cmd_Argc() != 1 ) {
++        Com_Printf( "st_record toggles match recording; no arguments needed.\n" );
++        return;
++    }
++    if ( clc.demorecording ) CL_StopRecord_f();
++    else CL_Record_f();
+ }
+ 
+ /*
+@@ -2869,6 +2893,9 @@
+ 	Cmd_AddCommand ("globalservers", CL_GlobalServers_f, "Query the masterserver for serverlist" );
+ 	Cmd_AddCommand( "addFavorite", CL_AddFavorite_f, "Add server to favorites" );
+ 	Cmd_AddCommand ("record", CL_Record_f, "Record a demo" );
++	Cvar_Get( "st_recording", "0", CVAR_ROM );
++	Cvar_Set( "st_recording", "0" );
++	Cmd_AddCommand( "st_record", ST_Record_f, "Start or stop a Saber Trials match recording" );
+ 	Cmd_AddCommand ("demo", CL_PlayDemo_f, "Playback a demo" );
+ 	Cmd_SetCommandCompletionFunc( "demo", CL_CompleteDemoName );
+ 	Cmd_AddCommand ("stoprecord", CL_StopRecord_f, "Stop recording a demo" );

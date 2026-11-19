@@ -1,0 +1,65 @@
+#include <cstdio>
+#include <cstring>
+#include <cstdlib>
+#include <cstdarg>
+#include <string>
+#include <vector>
+using qboolean=int;
+enum { qfalse=0,qtrue=1,RDF_NOWORLDMODEL=1,ST_TOURNAMENT_OFF=0 };
+struct trRefdef_t { int x,y,width,height,rdflags; };
+struct viewParms_t { int viewportX,viewportY,viewportWidth,viewportHeight; };
+struct { int viewCount; void *world; viewParms_t viewParms; } tr;
+struct { int vidHeight; } glConfig;
+#define Com_Memset std::memset
+struct gentity_t { int unused; } g_entities[4];
+struct { int gametype,stPendingGametype,stTournamentPhase; char voteString[256],voteDisplayString[256],voteStringClean[256]; } level;
+static int resets,clears,saves,failures,checks;
+static std::vector<std::string> messages;
+static void send(int,const char *s) { messages.emplace_back(s); }
+struct Trap { void (*SendServerCommand)(int,const char*); } calls={send},*trap=&calls;
+static void ST_TournamentResetAllClients() { ++resets; }
+static void ST_TournamentClearLevelState() { ++clears; level.stTournamentPhase=ST_TOURNAMENT_OFF; }
+static void ST_TournamentSaveState() { ++saves; }
+static qboolean ST_IsSupportedGametype(int v) { return v==0||v==3||v==6||v==7; }
+static int ST_ParseGametype(const char *s) { int n=std::atoi(s); return std::strcmp(s,"invalid")&&ST_IsSupportedGametype(n)?n:-1; }
+static const char *ST_GametypeName(int v) { return v==0?"FFA":v==3?"Duel":v==6?"TFFA":"CTF"; }
+static void Com_sprintf(char *s,size_t n,const char *f,...) { va_list a;va_start(a,f);std::vsnprintf(s,n,f,a);va_end(a); }
+static void Q_strncpyz(char *s,const char *v,size_t n) { std::snprintf(s,n,"%s",v); }
+static const char *va(const char *f,...) { static char s[1024];va_list a;va_start(a,f);std::vsnprintf(s,sizeof(s),f,a);va_end(a);return s; }
+static void check(bool ok,const char *label) { ++checks;if(!ok){++failures;std::printf("FAIL %s\n",label);} }
+/* ACTUAL FUNCTIONS */
+int main() {
+    // Map presence must not invert transparent head/menu viewports.
+    for(int height:{720,1080,1380})for(bool loaded:{false,true})for(int flags:{0,1,9})for(int y:{5,90,320}) {
+        glConfig.vidHeight=height;tr.world=loaded?&tr:nullptr;
+        trRefdef_t rd={620,y,180,180,flags};R_SetupViewParms(&rd);
+        int expected=(!loaded||(flags&RDF_NOWORLDMODEL))?height-y-180:y;
+        check(tr.viewParms.viewportY==expected,"viewport remains top-anchored for a head with a map loaded");
+        check(tr.viewParms.viewportX==620&&tr.viewParms.viewportWidth==180&&tr.viewParms.viewportHeight==180,"viewport dimensions unchanged");
+    }
+    for(int gt:{0,3,6,7})for(int phase:{0,1,2,3,4}) {
+        level.gametype=gt==0?3:0;level.stPendingGametype=-1;level.stTournamentPhase=phase;
+        resets=clears=saves=0;messages.clear();char value[12];std::snprintf(value,sizeof(value),"%d",gt);
+        check(G_VoteGametype(g_entities,2,"g_gametype",value),"valid vote accepted");
+        check(std::string(level.voteString)==std::string("st_queue_gametype ")+value,"vote executes only gametype command");
+        check(std::string(level.voteStringClean)==std::string("Game Type: ")+ST_GametypeName(gt),"announcements use readable vote label");
+        check(!resets&&!clears&&!saves&&messages.empty(),"starting a vote cannot alter tournament state");
+        ST_QueueGametype(gt);
+        check(level.stPendingGametype==gt,"change still queues for round boundary");
+        check(messages.size()==1&&messages[0].find("queued for the next round")!=std::string::npos&&messages[0].find("Tournament reset")==std::string::npos,"one relevant queue notification");
+        check(resets==(phase!=0)&&clears==resets&&saves==resets,"only real tournament state is cleared and saved");
+    }
+    resets=clears=saves=0;messages.clear();level.stPendingGametype=-1;level.stTournamentPhase=2;
+    ST_QueueGametype(99);
+    check(!resets&&!clears&&!saves&&messages.empty()&&level.stPendingGametype==-1,"invalid changes cannot reset a tournament");
+    level.gametype=6;
+    check(!G_VoteGametype(g_entities,2,"g_gametype","6"),"already active gametype rejected");
+    check(!G_VoteGametype(g_entities,2,"g_gametype","invalid"),"invalid vote rejected");
+    level.stPendingGametype=3;
+    check(G_VoteGametype(g_entities,2,"g_gametype","6"),"can replace a pending change");
+    // Tournament state may change during the vote; cleanup uses execution-time state.
+    level.stTournamentPhase=0;ST_QueueGametype(6);check(!resets,"already closed tournament is not reset again");
+    level.stTournamentPhase=2;ST_QueueGametype(0);check(resets==1&&clears==1&&saves==1,"newly active tournament is closed when change executes");
+    std::printf("%d checks, %d failures; no map or server started.\n",checks,failures);
+    return failures?1:0;
+}

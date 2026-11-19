@@ -1,0 +1,26 @@
+// Saber Trials in-game server information. Values are drawn from serverinfo.
+{
+ menuDef {
+  name "ingame_about"
+  rect 28 62 568 306
+  fullscreen 0
+  visible 0
+  outOfBoundsClick
+  focusColor 1 1 1 1
+  onESC { close ingame_about ; }
+  itemDef {
+   name back
+   rect 20 275 105 23
+   type ITEM_TYPE_BUTTON
+   text "Back"
+   textalign ITEM_ALIGN_CENTER
+   textalignx 52
+   textaligny 4
+   font 2
+   textscale .64
+   forecolor .76 .86 .93 1
+   visible 1
+   action { close ingame_about ; }
+  }
+ }
+}

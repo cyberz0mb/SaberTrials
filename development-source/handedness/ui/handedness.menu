@@ -1,0 +1,24 @@
+// Staged with saber.menu; installed only after complete combat verification.
+menuDef {
+ name st_handedness
+ fullScreen 1 rect 0 0 640 480 visible 1
+ focusColor 1 1 1 1
+ onESC { close st_handedness; open saberMenu; }
+ itemDef { name arena rect 0 0 640 480 style 3 background "ui/assets/sabertrials/arena.tga" forecolor 1 1 1 1 visible 1 decoration }
+ itemDef { name bg rect 0 0 640 480 style 1 backcolor .004 .014 .025 .88 visible 1 decoration }
+ itemDef { name title rect 34 22 570 32 text "SABER TRIALS / DOMINANT HAND" font 2 textscale .95 forecolor .30 .78 1 1 visible 1 decoration }
+ itemDef { name stage rect 24 76 592 330 style 1 backcolor .02 .045 .066 1 visible 1 decoration }
+ itemDef { name st_hand_preview type ITEM_TYPE_MODEL rect 110 76 420 330
+  model_g2anim BOTH_STAND2 model_angle 180 model_g2mins -40 -40 -26 model_g2maxs 40 40 42
+  model_fovx 50 model_fovy 50 isCharacter 1 isSaber 1 visible 1 decoration }
+ itemDef { name hand text "Dominant hand:" rect 38 64 245 23 type ITEM_TYPE_MULTI cvar ui_saberHand
+  cvarFloatList { "Right" 0 "Left" 1 } font 2 textscale .7 textalignx 0 textaligny 0 forecolor .76 .86 .93 1 visible 1 }
+ itemDef { name animation text "Preview:" rect 370 64 235 23 type ITEM_TYPE_MULTI cvar ui_handAttack
+  cvarFloatList { "Stance" 0 "Attack" 1 } font 2 textscale .7 forecolor .76 .86 .93 1 visible 1 }
+ itemDef { name note rect 40 414 560 18 text "Applies next spawn on supported Saber Trials servers." font 4 textscale .65 textalign 1 textalignx 280 forecolor .55 .72 .83 1 visible 1 decoration cvarTest ui_handSupported showCvar { "1" } }
+ itemDef { name unsupported rect 40 414 560 18 text "This model does not support a mirrored preview" font 2 textscale .6 textalign 1 textalignx 280 forecolor 1 .75 .4 1 visible 1 decoration cvarTest ui_handSupported showCvar { "0" } }
+ itemDef { name back text "Back" rect 40 446 120 24 font 2 textscale .8 forecolor .76 .86 .93 1 type ITEM_TYPE_BUTTON visible 1
+ action { close st_handedness; open saberMenu; } }
+ itemDef { name apply text "Apply" rect 480 446 120 24 font 2 textscale .8 forecolor .76 .86 .93 1 type ITEM_TYPE_BUTTON visible 1
+ action { uiScript updatesabercvars; setcvar st_uiPresentationNotice "Dominant hand saved. Applies on next spawn."; close st_handedness; open saberMenu; } }
+}

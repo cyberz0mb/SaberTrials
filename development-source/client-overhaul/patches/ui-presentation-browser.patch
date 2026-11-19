@@ -1,0 +1,20 @@
+--- a/codemp/ui/ui_main.c
++++ b/codemp/ui/ui_main.c
+@@ -8381,7 +8381,7 @@
+ 				case SORT_MAP :
+ 					return Info_ValueForKey(info, "mapname");
+ 				case SORT_CLIENTS :
+-					Com_sprintf( clientBuff, sizeof(clientBuff), "%s (%s)", Info_ValueForKey(info, "clients"), Info_ValueForKey(info, "sv_maxclients"));
++					Com_sprintf( clientBuff, sizeof(clientBuff), "%s / %s", Info_ValueForKey(info, "clients"), Info_ValueForKey(info, "sv_maxclients"));
+ 					return clientBuff;
+ 				case SORT_GAME :
+ 					game = atoi(Info_ValueForKey(info, "gametype"));
+@@ -8389,7 +8389,7 @@
+ 					if (game >= 0 && game < numGameTypes) {
+-						Q_strncpyz( needPass, gameTypes[game], sizeof( needPass ) );
++						Q_strncpyz( needPass, STP_Mode(game,0,0), sizeof( needPass ) );
+ 					} else {
+ 						if ( ping <= 0 )
+ 							Q_strncpyz( needPass, "Inactive", sizeof( needPass ) );
+ 						Q_strncpyz( needPass, "Unknown", sizeof( needPass ) );
+ 					}

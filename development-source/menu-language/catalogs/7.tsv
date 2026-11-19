@@ -1,0 +1,1486 @@
+ is assigned to: 	مكلف بما يلي:
+')!=std::string::npos)){error=	{y: i} {y: i} {y: i}
++  Advanced video	+ الفيديو المتقدم
++altattack	+altack
++back	+ ظهر
++forward	+
++movedown	+تحرك
++moveright	+ الإفراط
++moveup	+ التحرك
++right	+ right
++speed	+ عجل
++use	+
++useforce	+القوى
+-  Advanced video	- فيديو متقدم
+.cfg	(ج)
+.jpg	(يوغ)
+.png	"بنغ"
+.skin	الجلد.
+.tga	. .
+/default	/العجز
+/misc	/
+/model.glm	/ عارضة.
+10 minutes: reconnect or substitute	10 دقائق: إعادة الاتصال أو استبدالها
+10 rounds per match	10 طلقات لكل مباراة
+16 bit	16 مرة
+22 kHz	22 كيلوهرتز
+2v2 / 20 kills	2v2 / 20 قتل
+32 bit	32 مرة
+3v3 / 30 kills	3v3 / 30 قتل
+5 minutes to reconnect	5 دقائق لإعادة الاتصال
+5-5 tie: one deciding round	5-5 عنق: جولة قرار واحدة
+8-32 players / even entries	8-32 لاعباً/حتى مداخل
+: unsupported value.	: قيمة غير مدعومة.
+; engine directory limit reached	:: الوصول إلى حد دليل المحرك
+; engine range 	; محرك متحرك
+< Profile	▪ Profile
+@MENUS_ADD_BOT	أضف
+@MENUS_ADD_FAVORITE	مضافا إليه:
+@MENUS_ADD_SELECTED_SERVER_TO	أضف خادم مختار إلى المفضّلات
+@MENUS_ADJUSTS_THE_DIFFICULTY	يُعدّل مستوى الصعوبة في الأحذية الذكية الاصطناعية في اللعبة.
+@MENUS_ADV_GAME_RULES	ADVANCED GAME
+@MENUS_ALL	كل شيء
+@MENUS_ALLOWS_YOU_TO_SELECT	يسمح لك باختيار نوع اللعبة للخادم الذي تود اللعب به
+@MENUS_ALLOW_SABER_CHALLENGE	السماح لتحدي سابر:
+@MENUS_AN_ATTACK_DRONE_SIMILAR	الباحث رقم\nطائرة بدون طيار هجومية مماثلة للتدريب الذي استخدمه (جيداي) لممارسة مهاراتها في مجال السطوح الضوئي والباحث حول مستخدمها ويهاجم أي عدو يشعل النار على المستعمل، وتدير الطائرة الآلية تلقائيا لفترة محدودة ثم تدمر نفسها عندما تستنفد طاقتها.
+@MENUS_AN_ELEGANT_WEAPON_FOR	Lightsaber\nسلاح أنيق لعمر متحضر أكثر، الفيلق هو السلاح المفضل للفارس الجاداي، الشعلة هي نصل طاقة من الطاقة العظيمة التي يمكن أن يستخدمها الوادر للهجوم والدفاع على السواء.\n\nالحرائق الأولية - الاصطدام والهجمات المتأرجحة\nحريق ثانوي - قوارب قاذفة\nالقدرة الدفاعية - انحرافات إطلاق النار وأسلحة الطاقة، والبارات التي يهاجمها الأعداء\nطراز Ammo Type - N/A
+@MENUS_APPEARANCE	الإنجازات
+@MENUS_APPLY	التطبيق
+@MENUS_APPLY_CHANGES	التغييرات الواضحة
+@MENUS_APPLY_CHANGES_AND_JOIN	تطبيق التغييرات والانضمام إلى اللعبة الجارية.
+@MENUS_APPLY_CHANGES_AND_THEN	تطبيق التغييرات ثم الذهاب إلى ماين مينو.
+@MENUS_APPLY_PLAYER_SABER	تطبيق التغييرات على اللاعبين والذهاب إلى اختيار السابر.
+@MENUS_APPLY_POWERS	الدول التطبيقية
+@MENUS_APPLY_SABER_CHANGES	تطبيق تغيرات في السابر والعودة إلى مينو.
+@MENUS_APPLY_THESE_CHANGES_OR	تطبيق هذه التغييرات أو الاسترخاء؟
+@MENUS_ASSIST_ME	ساعديني
+@MENUS_ATTACK_THE_ENEMY_S_BASE	هاجموا قاعدة العدو
+@MENUS_ATTACK_TITLE	هجوم
+@MENUS_AUTO_DOWNLOAD	حمولة السيارات:
+@MENUS_AUTO_JOIN	أوتوم يوين:
+@MENUS_AUTO_JOIN_DESC	إسمح للخادم باختيار فريقك و صفك
+@MENUS_AUTO_MAP_CYCLE	مركبة خريطة السيارات:
+@MENUS_AUTO_MAP_CYCLE_DESC	اذهب إلى الخريطة القادمة في كل مرة يتم فيها المباراة.
+@MENUS_AWAITING_GAMESTATE	في انتظار لعبة بلاد...
+@MENUS_A_DEDICATED_SERVER_IS	الخادم المكرس هو كمبيوتر يدير لعبة للآخرين
+@MENUS_A_DETONATION_PACK_IS	حزم التفجير\nفحزمة التفجير هي أساساً عبوة ناسفة صغيرة تحمل مفجراً عن بعد، وتوضع أو تُلقى الحزمة ويمكن أن يفجرها المستعمل ويستخدم عبوات التفجير عادة في كمين أعداء أو فتح أبواب مغلقة.\n\nحريق رئيسي - يلقي التهمة على قدمي المستعمل\nحريق ثانوي - تفجير جميع التهم
+@MENUS_BACKTOMAIN	العودة إلى قائمة الطعام الرئيسية.
+@MENUS_BACKTORULES	العودة إلى القواعد منو
+@MENUS_BACKUP_ONE_MENU	ارجع قائمة واحدة
+@MENUS_BACK_2_PROFILE	العودة إلى قائمة البيانات.
+@MENUS_BACTA_CANISTERS_ARE_PORTABLE	BioTech Bacta Canisters\nإن عبوات البكاتا محمولة، وحزمة من أوعية البكاتا وأدوات الرعاية الطارئة، مصممة للاستخدام في الميدان، ويمكن استخدام عبوات البكاتا في معالجة الجروح وإعادة الحيوية أثناء التعافي الطبي، ولا ينبغي أن يكون هناك أي طب ميداني بدونها.
+@MENUS_BECOME_A_NEARLY_UNSTOPPABLE	تصبحين مبتذلة لا يمكن إيقافها
+@MENUS_BEGIN_PLAYING_THE_DEMO	ابدأي بلعب دور الـ (دي آر) من ملف مختار
+@MENUS_BLADE_COLOR_DESC	إختار لون نصلك الخفيف
+@MENUS_BLASTER_PISTOL	بلاستر
+@MENUS_BLASTER_PISTOL_DESC	DL-44\nواحد من أكثر الأسلحة شيوعا في المجرة مسدس "دي إل-44" الثقيل ذو معدل حريق بطيء لكنه دقيق للغاية\n\nحريق ابتدائي - بطيء، طلقة واحدة بدقّة كبيرة وضرر كبير\nحريق ثانوي - بناء طاقة مجهزة لزيادة الضرر\nنوع الذخيرة - عبوة بلاستر
+@MENUS_CALL_FOR_VOTES	نداء من أجل الأصوات
+@MENUS_CANCEL_DESC	العودة إلى اللعبة دون تغيير الفرق.
+@MENUS_CAPTURE_LIMIT	كبسولة حدود:
+@MENUS_CAPTURE_THE_FLAG_RULES	إلتقط قواعد لعبة العلم
+@MENUS_CHANNEL_THE_FORCE_TO	قُم بتوصيل القوة لتشفي حلفائك
+@MENUS_CHARACTER_CREATION	الكره
+@MENUS_CHOOSE_A_PRE_MADE_ALLOCATION	اختر تخصيصا مسبقا لقوى القوة.
+@MENUS_CHOOSE_MOVE_DESC	اختر من النوع الذي يتحرك
+@MENUS_CHOOSE_RULES	قواعد لعبة الاختيار
+@MENUS_CHOOSE_SOURCE_OF_SERVERS	إختر مصدر الخواديم
+@MENUS_CHOOSE_SPECIES	اختر نوعًا ما
+@MENUS_CHOOSE_THE_PATH_OF_THE	اختر طريق الجانب الخفيف أو الجانب المظلم
+@MENUS_CHOOSE_YOUR_FORCE_TRAINING	اختر تدريبك على القوة
+@MENUS_CHOOSE_YOUR_GAME	اختر لعبتك
+@MENUS_CLASS_CHOICE_DESC	إختارْ a فصل.
+@MENUS_CLASS_FORCEPOWERS	قوة لهذه الدرجة
+@MENUS_CLASS_INVENTORY	قائمة حصرية لهذا الفصل
+@MENUS_CLASS_WEAPONS	أسلحة لهذا الفصل
+@MENUS_CLICK_FOR_HUMAN_BOTS	إضغط على البشر أو الأحذية أو الطوابق المغلقة.
+@MENUS_CLIENTS_CAN_DOWNLOAD	العملاء يمكنهم تحميل بيانات وشفرة جديدة
+@MENUS_CLIENT_MUST_HAVE_EXACT	العملاء و (سيرفر) يجب أن يكون لديهم نفس الشفرة والبيانات
+@MENUS_CLOAK_CAPS	"أصرخ"
+@MENUS_CLOAK_DESC	كلواك شيلد\nدرع التنظيف يجعل الملبس غير مرئي للآخرين، مما يسمح بالحركة الخفية، ولكن نظراً للطاقة الهائلة اللازمة لتوليد الجهاز، فإن القماش يستمر لفترة قصيرة.\n\nوضربة مباشرة من بندقية من طراز DEMP 2 ستعطل الدرع مؤقتاً، بالإضافة إلى أن ضربة من الحريق الثانوي لجهاز إدارة مكافحة المخدرات 2 ستزيل الدرع بشكل دائم.\n\nدرع التنظيف قابل للاستخدام فقط في نموذج لعبة الحصار.
+@MENUS_COLOR1_DESC	إختار لون شفرة
+@MENUS_COLOR2_DESC	إختار لون شفرة ثانية
+@MENUS_COMBAT_RULES	قوارب السلع الأساسية
+@MENUS_COMMONLY_REFERRED_TO	طلقات من طراز Electro-Magnetic 2\nيُشار إليه بشكل عام بـ (دي بي إم 2) هذه البندقية النبضية تستخدم في المقام الأول ضد الكويكبات والأجهزة الكهربائية، و(دي بي إم 2) يُطلق النار على طلقات إيون عالية الطاقة تعطل الأنظمة الكهربائية، و الأكثر فعالية ضد الدروع الشخصية، وخلافاً لشحنات السلاح السابقة، فإن رسوم إيون (دي إم بي 2) قادرة على تدمير المواد الحية.\n\nحريق رئيسي - طلقة واحدة، تلحق بالبشر أضراراً إضافية بالدروع\nحريق ثانوي - طلقة مُتهمة تُطلق موجة صدمات فوريّة تقريباً\nنوع الذخيرة - خلية السلطة
+@MENUS_COMPLETE_THE_CURRENT	أنجز الهدف الحالي.
+@MENUS_CONC_RIFLE	الخلاصة
+@MENUS_CONC_RIFLE_DESC	Stouker Concussion Rifle\nيشعل (ستوكر) إنفجاراً مسبباً إنفجاراً ينشر حوالي 4 أمتار في قطره\n\nحريق رئيسي، طلقة واحدة، تأثير متفجر كبير يلحق الضرر بكل شيء، معدل إطلاق نار بطيء\nحريق ثانوي - أطلق طلقة قذيفة أصغر حجماً تحتوي على نصف قطري متفجر أصغر ولكنها تلحق ضرراً أكبر بكثير في هذا النطاق وتحتوي على أشعة أكثر حدة\nنوع الذخيرة - الفولط المميت
+@MENUS_CONFIGURE_GAME_CONTROLS	التحكم في المباراه
+@MENUS_CONFIGURE_GAME_SETTINGS	-مباراة الإتمان .
+@MENUS_CONNECTION_RULES	قواعد السلوك
+@MENUS_CREATE_AN_AURA_THAT_PROTECTS	إنشاء آورا تحمي من الهجمات الجسدية.
+@MENUS_CTF_CAPS	طَرَبَة الـ "فلاغ"
+@MENUS_CUSTOM_CHARACTER	السمسرة
+@MENUS_DARK_RAGE	(دارك رايج)
+@MENUS_DATA_RATE	معدل البيانات:
+@MENUS_DATA_RATE_DESC	سرعة وصل نقل المعلومات عبر الإنترنت.
+@MENUS_DATA_TRANSFER_RATE_TO	معدل نقل البيانات إلى العملاء.
+@MENUS_DEDICATED_SERVER	مكرس لـ (سيرفر)
+@MENUS_DEFAULT	التقصير
+@MENUS_DEFEND_OUR_BASE	دفاع عن قاعدتنا.
+@MENUS_DELETE_SELECTED_SERVER	تحذف خادم من المفضّلات
+@MENUS_DESCRIPTION_OF_A_FORCE	وصف القوة.
+@MENUS_DESCRIPTION_OF_A_WEAPON	وصف نوع من الأسلحة.
+@MENUS_DESCRIPTION_OF_ITEM_TYPE	وصف نوع البند.
+@MENUS_DISABLE_FORCE	القوة المعطلة:
+@MENUS_DISABLE_FORCE_INFO	تعطل استخدام أي قوة أثناء اللعب
+@MENUS_DISPLAY_SERVER_INFORMATION	اعرض معلومات الخادم
+@MENUS_DISRUPTOR	المفرزة
+@MENUS_DONE	تم
+@MENUS_DONE_CAPS	المبلغ
+@MENUS_DONE_DESC	عُد إلى "سيرفر واينر".
+@MENUS_DO_NOT_APPLY_CHANGES	لا تُطبّقُ التغييراتَ وتُعيدُ إلى قائمةِ الفيديو.
+@MENUS_DRAIN_THE_FORCE_POWER	حطموا قوة الخصم لإضافة صحتكم
+@MENUS_DUALSABERS_DESC	استخدمي صالين واحدين فقط أسلوب قتال واحد
+@MENUS_DUEL_GAMETYPE	قواعد لعبة الدويل.
+@MENUS_DUEL_LIMIT	دفـع الـقـيـم
+@MENUS_DURATION_5_SECONDS_NAREA	قوة السرعة\nالمدة: قابلة للتغير (10-20 ثانية)\nمنطقة الأثر: جيدي\n(جيداى) يسرع\n\nالرنك 1 - الجاداي يتحركون بسرعة 25% أسرع من المعتاد لمدة 10 ثواني\nالرنك 2 - الجاداي يتحركون بسرعة 50% أسرع من الطبيعي لمدة 15 ثانية\nالـ (جيداي) يتحرك بسرعة 75 % أسرع من الطبيعي لـ 20 ثانية
+@MENUS_DURATION_CONTINUOUS_NAREA	استيعاب القوة\nالمدة: مستمرة\nمنطقة الأثر: الجاداي فقط\nالأثر: الحماية من أي قوة مباشرة.\n\nيُلحق ضرراً من قدرات القوة الموجهة نحو الأسلاك ويحول تلك الطاقة إلى قوة عاملة صالحة للاستخدام.\n\nالركن 1 - يصنف نوليفي في المرتبة الأولى من الهجمات التي تشنها القوة، ويقلل من أثر الهجمات التي تشنها القوات ذات الرتب العليا، ويعيد بعض القوة.\nالرنك 2 - يصنف نوليفي 2 هجوماً من القوات، ويقلل إلى حد كبير من أثر هجمات القوات ذات الرتب الأعلى، ويعيد قوة أكبر.\nالرنك 3 - يزيل جميع هجمات القوات ويعيد قوة أكبر
+@MENUS_DURATION_IMMEDIATE_NAREA	القفزة\nالمدة: مباشرة\nمنطقة الأثر: الجاداي فقط\nالأثر: يسمح لجاداي أن يقفز عموديا هائلا.\n\nالراقصة 1 - الجاداي يمكن أن يقفزوا إلى ضعف طول القفز العادي\nالرانك 2 - الجاداي يمكن أن يقفز حتى أربع مرات طول القفز العادي.\nالراقصة 3 - الجاداي يمكن أن يقفزوا حتى ثماني مرات طول القفز العادي.
+@MENUS_DURATION_INSTANTANEOUS	القوة\nالمدة: الأثر غير المستقر\nمنطقة الأثر: الأجسام أو الأشخاص\nالأثر: يسمح لجاداي بأن يبعدوا الأجسام عن أنفسهم، وأن يدمروا القذائف، وأن يدافعوا عن هجمات القوة الغريب وقوة بوش.\n\n(الرنك 1) - (جيداى) يستخدم القوة لضغط عدو معين أو جسم محدد يركز عليه\n(الرنك 2) - (جيداي) يستخدم القوة لسحب أعداء أو أشياء متعددة في قوس محدود\nالرنّة 3 - الجاداي يُمْكِنُ أَنْ يَدْفعَ أعداءَ متعددينَ مَع قوةِ كافيةِ لتَحْطيمهم بدفع الأعداءِ إلى أسطح صلبةِ أَو مِنْ الحشودِ.
+@MENUS_DURATION_INSTANTANEOUS_NAREA	Force Grip\nالمدة: غير محددة\nمنطقة الأذى: لا يعيش إلا\nالتأثير: يسمح لـ (جيداي) أن يخنق أو يقحم أعضاء كائن حي.\n\n-العدو المصاب 1 - يُحبط ويُحتجز دون أن يُدمَر، ولكن لا يُعتد به لمدة 5 ثوان، ويجب أن يظل (جيداي) ثابتاً.\nالرنك 2 - العدو متأثر بنفس الدرجة من الدرجة 1، ولكن يمكن للقبض أن يلحق الضرر ويرفع الأعداء مع التركيز المطول للقبضة، ويجب أن يظل الجاداي ثابتا.\nالرنك 3 - العدو متأثر بنفس الدرجة الثانية، لكن الجاداي يمكن أن يتحركوا بحرية ويحطموا العدو إلى جدران وحواجز أخرى أو يستخدموا العدو كدرع بينما لا يزالون يتلفون الخنق.
+@MENUS_DURATION_VARIABLE_10	حصص القوة\nالمدة: قابلة للتغير (10-30 ثانية)\nمنطقة الأثر: الجاداي القاتم فقط\n(أ) ينتقل (جيدي) إلى سرعته لمدة معينة، ولكن يجب أن يستعيدها بعد ذلك، وتُعدّ الصحة أثناء نشاطها، وتنتهي بعد انقضاء المدة أو عندما تصل الصحة إلى 1.\n\nدارك: حريق 33 في المائة أسرع، حرك 100 في المائة أسرع، وتقلل من الأضرار التي تُصاب بنسبة 50 في المائة، ولا يمكن أن يموت الأسلاك (الصحة تبقى عند 1).\nتعافي الرفات المظلم: حريق أبطأ بنسبة 50٪، تتحرك بسرعة 75٪\n\nالرنك 1 - الرنة لمدة 10 ثوان، 10 ثانية\nالرنك 2 - الجرعة لمدة 20 ثانية، 10 ثانية\nالرنك 3 - الجرعة لمدة 30 ثانية، 10 ثانية
+@MENUS_DURATION_VARIABLE_20	العقل ريك\nالمدة: قابلة للتغير (5-15 ثانية)\nمنطقة الأثر: لاعبون آخرون\nالأثر: يسمح لجاداي بأن يجعلوا أنفسهم غير مرئيين للاعبين آخرين.\n\nالرن 1 - الجاداي غير مرئية لعدو واحد مستهدف لمدة 5 ثواني\nالرنك 2 - الجاداي غير مرئي للأعداء في قوس للأمام من مسافة متوسطة لمدة 10 ثواني\nالرنك 3 - الجاداي غير مرئي لجميع الأعداء في مسافة معتدلة لمدة 15 ثانية
+@MENUS_DURATION_VARIABLE_NAREA	حماية القوة\nالمدة: قابلة للتغيير\nمنطقة الأثر: الجاداي فقط\nحمايه من هجوم جسدي\n\nالأضرار التي لحقت بـ (جيدي) من الهجمات الجسدية أخذت من مجمع القوة بدلاً من النتيجة الصحية.\n\nسدّت الأضرار بنسبة تتراوح بين 1 و50 في المائة، و100 في المائة أزيلت من مجمع القوة، و100 ضرر.\nسدّ ما بين 2 و75 في المائة من الأضرار، و50 في المائة أُزيلت من مجمع القوة، و200 في المائة من الأضرار\nسدت الأضرار بنسبة تتراوح بين 3 و87.5 في المائة، و25 في المائة أزيلت من مجمع القوة، و400 ضرر كحد أقصى
+@MENUS_EFFECT_JEDI_ALLIES_NEFFECT	فريق إنرج\nالمدة: الأثر غير المستقر\nمنطقة الأثر: حلفاء الجاداي\nالجاداي لديه القدرة على حرق الحلفاء بالطاقة\n\nويسمح فريق القوة Energize للجيداي بإعادة كمية معينة من الطاقة للقوة إلى حلفائه في نطاق معين من جسمه، ويمكن للجاداي أن يعيد 50 نقطة قوة إلى حليف واحد، و 33 نقطة قوة إلى حليفين أو 25 نقطة قوة إلى 3 أو أكثر من الحلفاء.\n\nالرنك 1 - النطاق العادي\nالرنك 2 - واحد ونصف المرّات العادية\nالرنك 3 - النطاق الطبيعي المزدوج
+@MENUS_EFFECT_NAREA_OF_EFFECT	القوة\nالمدة: الأثر غير المستقر\nمنطقة الأثر: مجال رؤية الجاداي\nالأثر: يسمح لجاداي برؤية عظيمة وواسعة.\n\nكما أن رؤية القوة تسمح للجيداي برؤية جميع الأعداء بوضوح، بغض النظر عن ظروف الإضاءة، من خلال محيطهم بآورا مُتوهجة بسهولة، كما أن القوة تُتيح لجاداي أن يُقاوم قوة خدع العقل الجاداي، وعلى أعلى مستوى من القوة، فإن رؤية الجاداي تُطوّر إحساساً سادساً يسمح له بقصف قناص.\n\nالرنين 1 - انظر إلى أورام اللاعبين المسلط عليها بالنظر إلى الوقت العادي.\nالرنك 2 - انظر إلى أورام اللاعبين من حيث النظر ومن خلال الجدران مع مضاعف من الوقت -\nالرنك 3 - انظر إلى أورام اللاعبين من حيث النظر و من خلال الجدران في أي مدى مع ثلاث فترات زمنية، اللاعبون يمكنهم تلقائياً تحطيم لقطات القناص على هذا المستوى
+@MENUS_ENDGAME_RULES	نهاية اللعبة
+@MENUS_ENTER_IP_ADDRESS_OF_FAVORITE	أدخل عنوان آي بي للخادم المفضل
+@MENUS_ENTER_THE_NAME_FOR_YOUR	أدخلي اسم خادمك
+@MENUS_ENTER_THE_TITLE_FOR_YOUR	أدخل العنوان لنموذج قوتك (ألبانوميريك) فقط
+@MENUS_ERROR	-صحيح
+@MENUS_ESTABLISH_THE_NUMBER	عدد القتلى المطلوب للفوز بالمباراة
+@MENUS_EVEN_TEAMS	حتى الأفرقة:
+@MENUS_EWEB_DESC	E-Web\nالشبكة الإلكترونية هي مدفع ليزر ثلاثي الطاقة، ويمكن نشره في ميدان المعركة للمساعدة في خلق موقف دفاعي قوي.\n\n"الـ "إي-ويب" لا يُستَخدم إلاّ في نموذج لعبة الحصار.
+@MENUS_EXIT_TO_MAIN_MENU	(إخرج إلى (مينو
+@MENUS_FASTEST_CLIENT_ALLOWED	أضعف عميل يسمح له بالتواصل
+@MENUS_FFA_CAPS	"فريز" للجميع
+@MENUS_FILENAME	الاسم:
+@MENUS_FILTER_FOR_SPECIFIC_GAME	جهزوا مرشحاً لأنواع محددة من اللعبة
+@MENUS_FIND_PLAYER	اعثر على اللاعب
+@MENUS_FINISHED_INPUTTING_INFO	انتهى من إدخال المعلومات.
+@MENUS_FOLLOW_ME	اتبعني
+@MENUS_FORCEDESC_DARK	الظلام
+@MENUS_FORCEDESC_LIGHT	الضوء
+@MENUS_FORCE_GRIP	غريب:
+@MENUS_FORCE_HEAL	الشفاء:
+@MENUS_FORCE_JUMP	اقفز
+@MENUS_FORCE_LIGHTNING	البرق:
+@MENUS_FORCE_MASTERY	القوة الماجستير:
+@MENUS_FORCE_MASTERY_INFO	يحدد عدد النقاط التي يمكن تخصيصها للقوة.
+@MENUS_FORCE_MINDTRICK	العقل تريك:
+@MENUS_FORCE_POWERS_TITLE_DESC	قوّات قوة مُمكنة، قوّة مُنْقَلة، أَو فقط يُمكّنُ القفز، الدفع، الدفع، سحب، رمية سابر.
+@MENUS_FORCE_PROTECT	الحماية:
+@MENUS_FORCE_PULL	سحب:
+@MENUS_FORCE_PUSH	ادفع:
+@MENUS_FORCE_RULES	قواعد القوة
+@MENUS_FORCE_SIDE	جانب القوة:
+@MENUS_FORCE_SIGHT	انظر:
+@MENUS_FORCE_SPEED	السرعة:
+@MENUS_FORCE_TEAM_HEAL	فريق الشفاء:
+@MENUS_FORCE_TEAM_REPLENISH	فريق إنرجيز:
+@MENUS_FORCE_TEMPLATES	نماذج القوة
+@MENUS_FREE_FOR_ALL_GAME_RULES	حرّ لكلّ قواعد اللعبة.
+@MENUS_FRIENDLY_FIRE	النار الصديقة:
+@MENUS_GAME	اللعبة:
+@MENUS_GAME_RULES	قواعد اللعبة.
+@MENUS_GAME_TYPE	النوع:
+@MENUS_GET_ENEMY_FLAG_BACK_TO	ارجع علم العدو إلى القاعدة
+@MENUS_GET_NEW_LIST	الحصول على قائمة جديدة
+@MENUS_GET_OUR_FLAG_BACK	ارجع علمنا
+@MENUS_GET_UPDATED_SERVER_LIST	الحصول على تحديث قائمة موظفي الخدمة.
+@MENUS_GO_BACK_TO_STANDARD_SETTINGS	عودي إلى وضع المعايير.
+@MENUS_GO_TO_MAIN_MENU	الذهاب إلى ماين مينو؟
+@MENUS_GUARD_OUR_FLAG_CARRIER	أحرسوا ناقل العلم
+@MENUS_HEAL	الصحة
+@MENUS_HEAL_YOUR_BODY_WITH_THE	شفاء جسدك مع القوة
+@MENUS_HILT1_DESC	إختار خلية.
+@MENUS_HILT2_DESC	إختار خلية ثانية.
+@MENUS_IMMOBILIZE_OPPONENTS	حرق الخصم في قبضة مرعبة من الموت.
+@MENUS_INCLUDE_EMPTY_SERVERS	إدراج الخواديم الفارغة في القائمة.
+@MENUS_INCLUDE_FULL_SERVERS	إدراج الخواديم الكاملة في القائمة.
+@MENUS_INPUT_IP_ADDRESS_OF_SERVER	-أدخل عنوان "آي بي" للخادم
+@MENUS_INPUT_PASSWORD	كلمة سر للدخول
+@MENUS_INPUT_PASSWORD_1	كلمة سر
+@MENUS_INPUT_PLAYER_NAME	اسم لاعب المدخل.
+@MENUS_INSTANTANEOUS_EFFECT_NAREA	اسحب القوة\nالمدة: الأثر غير المستقر\nمنطقة الأثر: الأجسام أو الأشخاص\n(يسمح لـ(جيداي أن يسحب الأعداء نحو أنفسهم مع فرصة نزع سلاح الخصم، ويدافع أيضاً عن هجمات السحب التي تشنها القوة\n\n(الرنك 1) يستخدم (جيداى) القوة لسحب عدو محدد يركز على\nالرنك 2 - الجاداي يستخدم القوة لسحب أعداء متعددين في قوس محدود\nالرنّة 3 - الجاداي يُمْكِنُ أَنْ يَسْحبَ عدّة أعداءَ بقوّة كافيةِ لإسْقاط الأهدافِ أسفل في المدىِ القريبِ.
+@MENUS_INTERNET	الإنترنت
+@MENUS_ITEM_RULES	البند القواعد.
+@MENUS_JETPACK_DESC	حقيبة طائرة\nوتسمح حقيبة الطائرات بالطيران لمدد قصيرة، مما يعطيها ميزة تكتيكية على الآخرين، وإذا لم يطلق المستخدم الصواريخ، فإنها ستفقد الارتفاع ببطء.\n\nحقيبه النفاثة لا تُستخدم إلا في نموذج لعبة الحصار\n\nلتنشيط حقيبه النفاثة، اقفز، ثم اضغط، استعمل وقتك في الهواء
+@MENUS_JOIN	الانضمام
+@MENUS_JOIN_CAPS	جون
+@MENUS_JOIN_CHOSEN_SERVER	إنضم إلى خادم مختار
+@MENUS_JOIN_GAME	لعبة الانضمام
+@MENUS_JOIN_PLAYER_DESC	انضم إلى خادم هذا اللاعب
+@MENUS_JOIN_TEAM_DESC	انضموا إلى هذا الفريق
+@MENUS_KILL_LIMIT	قتل Limit:
+@MENUS_LEAP_TO_AMAZING_HEIGHTS	تقفز إلى مرتفعات مذهلة بضغط زر القفز
+@MENUS_LIGHTNING	محاربة
+@MENUS_LIGHTSABER_CAPS	LightsABER
+@MENUS_LIGHTSABER_CREATION	LightsABER CREATION
+@MENUS_LIGHTSABER_ONLY	لايتزابر فقط:
+@MENUS_LIGHT_DARK_INFO	يُجبر الفريق الأحمر على استخدام قوّة الجانب المظلمة، زرقاء لإستخدام الجانب الخفيف.
+@MENUS_LIGHT_DARK_TEAMS	فريق النور/الدارك:
+@MENUS_MAKE_THESE_CHANGES_TO	إجعل هذه التغييرات في مسؤولياتك الخاصة
+@MENUS_MATCH	إعادة ماتش؟
+@MENUS_MATCHING_NAMES	تطابق الأسماء سيكون مكتوباً جداً
+@MENUS_MAXIMUM_PING	الحد الأقصى للرنين:
+@MENUS_MAXIMUM_PLAYERS	أكبر لاعبين:
+@MENUS_MAX_RATE	(ماكس رايت)
+@MENUS_MINIMUM_PING	الحد الأدنى للقصف:
+@MENUS_MINIMUM_TIME_ALLOWED	الحد الأدنى من الوقت المسموح به بين محاولات الاتصال.
+@MENUS_MISSION	البعثة:
+@MENUS_MISSION_OBJECTIVES	أهداف البعثة
+@MENUS_MOVE_AT_AN_ACCELERATED	تحرك بسرعة.
+@MENUS_MOVE_DESC2	اضغطي على مواصفات الحركة
+@MENUS_MOVE_RULES	قواعد الحركة.
+@MENUS_MOVE_TYPES	حركة المركبات
+@MENUS_MUST_ACQUIRE_A_MINIMUM	يجب أن تحصل على رتبة دنيا من 1 في هجوم سابر للحصول على الشعلة الخفيفة.
+@MENUS_NAME	الاسم
+@MENUS_NAME1	الاسم:
+@MENUS_NAME_TITLE	الاسم:
+@MENUS_NEW_FAVORITE	نابع جديد
+@MENUS_NO	لا
+@MENUS_NO_LIGHTSABER	لا ضوء
+@MENUS_OBJECTIVE_1	الهدف 1
+@MENUS_OBJECTIVE_2	الهدف 2
+@MENUS_OBJECTIVE_3	الهدف 3
+@MENUS_OBJECTIVE_4	الهدف رقم 4
+@MENUS_OBJECTIVE_5	الهدف 5
+@MENUS_OBJECTIVE_6	الهدف 6
+@MENUS_OBJECTIVE_7	الهدف رقم 7
+@MENUS_OBJECTIVE_8	الهدف 8
+@MENUS_OBJECTIVE_COMPLETED	أُنجز.
+@MENUS_OF_EFFECT_JEDI_ALLIES_NEFFECT	تكاليف أخرى\nالمدة: الأثر غير المستقر\nمنطقة الأثر: حلفاء الجاداي\nالجاداي لديه القدرة على شفاء الحلفاء بعد الإصابة\n\n(الطاقة العلاجية الأخرى تسمح لـ(جيداى أن يعيد كمية معينة من الصحة إلى حلفاءهم فى نطاق معين من جسمهم\n33 صحة لحلفاء أو 25 صحة لـ 3 أو أكثر من الحلفاء\n\nالرنك 1 - النطاق العادي\nالرنك 2 - واحد ونصف المرّات العادية\nالرنك 3 - النطاق الطبيعي المزدوج
+@MENUS_OF_EFFECT_JEDI_ONLY_NEFFECT	التعافي للقوة\nالمدة: الأثر غير المستقر\nمنطقة الأثر: الجاداي فقط\nالجاداي يلتئم بعد الإصابة\n\n(الرنك 1) - (جيداى) يستعيد صحتها على الفور\n(الرنك 2) - (جيداى) يستعيد 10 صحه فوراً\nالراقصة 3 - جيداي يستعيدون ما يصل إلى 25 صحة فوراً
+@MENUS_OF_EFFECT_LIVING_PERSONS	قوة البرق\nالمدة: قابلة للتغيير\nمنطقة الأذى: لا يعيش إلا\nالأثر: يسمح لجاداي بشن هجوم كهربي مدمر على الأعداء.\n\n(الرنك 1) - (جيداى) يطلق حزمة واحدة تشعل النيران فى الأمام و تلحق أضراراً فورية\n(الرنك 2) - (جيداى) يمكنه أن يحافظ على قوة البرق من أجل هجوم متقدم مستمر\n(الرنك 3) - (جيداى) يولد مروحة مستمرة من الكهرباء فى قوس كبير للأمام و يدمر أى شئ أمامهم
+@MENUS_OKAY	حسناً
+@MENUS_ONLY_HUMANS	فقط البشر مسموح لهم بالحاصر
+@MENUS_PASSWORD	كلمة السر
+@MENUS_PASSWORD_1	كلمة السر:
+@MENUS_PLAYERS	الحد الأدنى للقوارب/القاذفات:
+@MENUS_PLAYERS_INFO	أضف الأحذية إذا كان الخادم لديه أقل من هذا العدد من اللاعبين البشريين النشطين
+@MENUS_POINTS_REMAINING	النقاط المتبقية:
+@MENUS_POWER	السلطة:
+@MENUS_POWERDUEL_GAME_RULES	قواعد لعبة لعبة الـ (باور دول)
+@MENUS_PREVENT_THE_ENEMY_FROM	منع العدو من إكمال هدفه الحالي.
+@MENUS_PRIMARY_OBJECTIVES	هدف البعثة الابتدائية
+@MENUS_PROFILE_DESC	ظروف الثقة.
+@MENUS_PROGRAM	برنامج الإنسحاب؟
+@MENUS_PROTECT	الحماية
+@MENUS_PROTECT_AGAINST_FORCE	حماية من هجمات القوة وكسب الطاقة منها
+@MENUS_PULL	PUL
+@MENUS_PULL_YOUR_FOES_TO_YOU	اسحبوا أعصابكم
+@MENUS_PURE_SERVER	الخادم النقي:
+@MENUS_PUSH_YOUR_FOES_AWAY_AND	ادفعي أعصابك بعيداً و اعيدي القذيفة
+@MENUS_REFRESH_LIST	قائمة التجديدات
+@MENUS_REFRESH_SERVER_LIST	قائمة موظفي التجديد.
+@MENUS_REGROUP	إعادة التجمع.
+@MENUS_RENDER_YOURSELF_INVISIBLE	اظهر نفسك غير مرئي لغايات مختارة.
+@MENUS_REPLY_TITLE	الرد
+@MENUS_REQUEST_TITLE	الطلب
+@MENUS_RETURN_PREVIOUS	عد إلى قائمة الطعام السابقة
+@MENUS_SABERLOCKING	اسمح لـ(سابر لوك)
+@MENUS_SABERLOCKING_DESC	السماح لللاعبين لقفل السابر.
+@MENUS_SABERSTAFF	(سابر)
+@MENUS_SABERSTAFF_DESC	استخدمي صالون ذو وجهين فقط أسلوب قتال واحد
+@MENUS_SABER_ATTACK	هجوم سابر:
+@MENUS_SABER_CHALLENGE_INFO	اللاعب يمكن أن يتحدى آخر إلى مبارزة خاصة للضوء.
+@MENUS_SABER_DEFEND	(سابر ديفد)
+@MENUS_SABER_HILTS_DESC	اختر خليط عظمة القدّس خاصتك
+@MENUS_SABER_ONLY_INFO	جميع اللاعبين يشعلون الأضواء، وجميع الأسلحة يتم إزالتها.
+@MENUS_SABER_STAFF	موظفو سابر
+@MENUS_SABER_THROW	رمية سابر:
+@MENUS_SABER_TYPE_DESC	إختار نوعك السابرى
+@MENUS_SAVE_CURRENT_FORCE_SETUP	انقذوا القوة الحالية كنموذج منفصل
+@MENUS_SAVE_FILE	انقذوا (فايف)
+@MENUS_SEARCHING	البحث %d/%d...
+@MENUS_SEARCH_CURRENT_SERVER	ابحث عن قائمة الخادم الحالية للأصدقاء
+@MENUS_SEARCH_DESC	فتشوا جميع الخواديم لهذا اللاعب
+@MENUS_SECONDARY_OBJECTIVES	الأهداف الثانوية
+@MENUS_SEE_ENEMIES_AT_ALL_TIMES	شاهد الأعداء في جميع الأوقات، وحتى طلقات قناص مُتدمّرة.
+@MENUS_SELECT_BOTS	القوارب المختارة
+@MENUS_SELECT_BOTS_DESC	اختيار الحزمة العرفية للعب ضد
+@MENUS_SELECT_HEAD	إختار أسلوب الرأس.
+@MENUS_SELECT_LEGS	إختار أسلوب أرجل.
+@MENUS_SELECT_TORSO	إختاري أسلوب الجذع
+@MENUS_SERVER_INFORMATION	سيرفر المعلومات
+@MENUS_SERVER_NAME_1	اسم السيرفر:
+@MENUS_SERVER_RULES	خنازير
+@MENUS_SETS_PASSWORD_FOR_YOUR	يضع كلمة سر لخادمك اللاعبون ينضمون لو دخلوا كلمة السر
+@MENUS_SETS_THE_MAXIMUM_NUMBER	يحدد العدد الأقصى من اللاعبين المسموح لهم بالانضمام الى خادمكم
+@MENUS_SET_FILTER_FOR_SPECIFIC	جهزوا مرشحاً لمباراة محددة
+@MENUS_SET_TO_ON_TO_HAVE_PLAYERS	اللاعبون الجبارون على الانضمام بدلاً من البقاء في وضعية المشاهدين
+@MENUS_SHOW_GAME_CREDITS	-أظهروا قروض اللعبة .
+@MENUS_SIEGE_DEMOLITIONS	إزالة الألغام
+@MENUS_SIEGE_GAME_RULES	قواعد لعبة الحصار
+@MENUS_SIEGE_GAME_RULES_DESC	الحصار يحفر فريقين ضد بعضهما البعض في مباراة موقوتة يكون فيها فريق واحد في حالة إهانة والآخر في مجال الدفاع\n\nكل فريق مكون من عدد من الشخصيات، كل واحد من ذوي تخصصه الخاص، كل شخصية يمكن أن تسهم بمهاراتها الفريدة الخاصة.\n\nفقاعدة الخادم الاختيارية تسمح بتبديل الفريق، مع إتاحة هذا الخيار، تبدل الفرق بعد المباراة الأولى، وإذا فاز الفريق الهجومي الجديد بالمباراة الأولى، فإن الفريق الهجومي الجديد لديه مهلة زمنية تعادل الوقت الذي استغرقه الفريق الأول للفوز، وإذا أكمل الفريق الهجومي جميع الأهداف في الأجل الأقصر، فإنه يفوز باللعبة.\n\nقضايا الحرب -\nأنجز جميع الأهداف الرئيسية قبل أن يمضي الوقت\n\nاتفاقية النواة -\nمنع الجريمة من إنجاز جميع الأهداف الرئيسية قبل أن يمضي الوقت.\n(ب) الأهداف الكاملة التي قد تمنع الفريق الهجومي من إنجاز أي من أهدافه الرئيسية.
+@MENUS_SIEGE_HEAVY_WEAPS	شبكــة إسبــاع القــاعــة
+@MENUS_SIGHT	مشاهدة
+@MENUS_SINGLESABER	طراز Saber
+@MENUS_SINGLESABER_DESC	إستخدمي صالون واحد، واختيار 3 أساليب قتالية
+@MENUS_SKILL	سكايل
+@MENUS_SKILL1	سكايل:
+@MENUS_SLOWEST_CLIENT_ALLOWED	أبطأ عميل سمح له بالتواصل
+@MENUS_SORT_BY_GAME_TYPE	نوعاً ما من نوع اللعبة
+@MENUS_SORT_BY_MAP_NAME	نوعاً ما بإسم الخريطة
+@MENUS_SORT_BY_NUMBER_OF_PLAYERS	نوعاً ما من عدد اللاعبين
+@MENUS_SORT_BY_PING_TIME	نوعاً ما في وقت الرنين
+@MENUS_SORT_BY_SERVER_NAME	نوعاً ما من قبل (سيرفر)
+@MENUS_SOURCE	المصدر:
+@MENUS_SPECIES	بـاء - الجوانب
+@MENUS_SPECTATE	المنبوذة
+@MENUS_SPECTATOR	مقسم
+@MENUS_SPEND_YOUR_POINTS_BY	أنفقوا على نقاطكم بالنقر على الدول الأعضاء في القوة أدناه.
+@MENUS_STARTING_UP	بدءًا...
+@MENUS_START_PLAYING_NOW	ابدأي باللعب الآن
+@MENUS_START_SERVER	ابدأوا السيرفر
+@MENUS_STATIONARY_SHIELD_CAPS	صهريج
+@MENUS_TACTICS_TITLE	التكتيكات
+@MENUS_TEAM	الفريق:
+@MENUS_TEAM_BLUE	فريق BLUE
+@MENUS_TEAM_FFA_GAMETYPE	قواعد اللعبة للفريق FFA.
+@MENUS_TEAM_POWER_1	TEAM
+@MENUS_TEAM_RED	فريق RED
+@MENUS_TEAM_SWITCHING	فريق التبديل:
+@MENUS_TEAM_SWITCHING_DESC	أسلوب لعبة الضحك حيث تتنافس الفرق لإنهاء الخريطة على الأقل كم من الوقت
+@MENUS_THERMAL_DETONATOR	المحررة العسكرية
+@MENUS_THE_FORCE_TO_BOOST_THE	قُم بإقناع القوة لتقوية قوة حلفائك
+@MENUS_THE_GAME_OF_DUEL_IS_ALSO	يحفر الدويل مقاتلين في ساحة صغيرة مغلقة للمعركة مع المصابيح، ويبدأ المنافسان في جولة مع الصحة الكاملة، وسواهما، ومسدس مفجر (خيار الخزان)، ويجب أن يواجها بعضهما البعض.\n\nأي عدد من اللاعبين يمكنهم المشاركة في (دويل)، لكن اثنين فقط في الساحة في أي وقت من الأوقات، ويراقب اللاعبون المتبقيون حتى تكتمل المباراة، وعندما يتم القضاء على لاعب واحد، يوضع الخاسر في نهاية طابور المراقب، ويأتي الشخص التالي في الصف ليقاتل الفائز.\n\nومرة أخرى، يُعاد تجديد صحة المنافسين بالكامل، ولا يزال الفائز يتنافس على المعارضين الجدد، ونقاط الالتقاء إلى أن يُلغى أو يتم بلوغ الحد الأقصى للمباراة.\n\nSCORING\nلإزالة العدو: +1 نقطة\nتزيل نفسك: +1 إلى خصمك\n\nاللاعب الذي لديه أعلى درجة في نهاية المباراة يفوز
+@MENUS_THE_MEDPAC_IS_A_SMALL	Medpac\nإن الميدباك هو مجموعة طبية ميدانية قياسية صغيرة، وعندما يتم الحصول عليها، فإن الميدباك يستعيد فوراً فقدان الصحة ويعالج الأنسجة المضرورة.
+@MENUS_THE_PERSONAL_SHIELD_IS	الدرع الشخصي (المحرقة)\nالدرع الشخصي هو جهاز مجهز بالحزام يُعدّ حقلًا للحماية حول الملبس، حيث يُلحق الضرر بالدرع، يتم تخفيض درجة حمايته، وحالما يُلحق الدرع ضرراً مساوياً لتصنيفه، يُبطل مفعول الدرع إلى أن يُعاد شحنه.
+@MENUS_THE_PLX_2M_IS_AN_EXTREMELY	Merr-Sonn PLX-2M نظام القذائف المحمولة\nالـ "بي إل إكس-2M" سلاح قوي للغاية يُطلق صواريخ "أراكيد 3 تي 3" ، القوة المتفجرة لـ "بي إل إكس-2M" تجعل من الخطر أن تُطلق النار بشكل أعمى في أماكن قريبة، لكنّها فعالة للغاية عندما تُستخدم كسلاح تتبع ذكى\n\nالحريق الأولي - أطلق صاروخاً متفجراً واحداً متقدماً\nحريق ثانوي أطلق قذيفة ذكية واحدة تتعقب الأهداف المحجوزة\nطراز Ammo Type - Rockets
+@MENUS_THE_PRIMARY_WEAPON_OF	E-11 Blaster Rifle\nالسلاح الرئيسي للقوات الامبراطورية E-11 هو بندقية قوية ومميتة قادرة على إلحاق ضرر كبير على الرغم من حجمها الصغير تصميم E-11 يجعل من السهل حمل وإخفاء.\n\nحريق ابتدائي - بطيء، طلقة واحدة بدرجات معتدلة من الدقة والأضرار الكبيرة\nحريق ثانوي - سريع، إطلاق نار منخفض الدقة، ومساحة إطفاء موسعة\nنوع الذخيرة - عبوة بلاستر
+@MENUS_THE_THERMAL_DETONATOR	التفجير الحراري\nالمفجر الحراري هو قنبلة يدوية نصف قطرية تُطلق بركة من الطاقة الحرارية القادرة على تفكك جميع الأمور حولها\n\nحريق ابتدائي - انفجار قنبلة بعد مدة قصيرة\nحريق ثانوي - تنفجر قنبلة على اتصال
+@MENUS_THIS_ALLOWS_PLAYERS_TO	وهذا يسمح لللاعبين بأن يدعوا إلى التصويت لضرب اللاعبين، وتغيير الخرائط، وما إلى ذلك.
+@MENUS_THIS_ARCHAIC_LOOKING	ووكي بوكاستي\nهذا السلاح المظهر الأرخائي يشعل حرائق قوية من المعادن المتطورة في جيوب الطاقة، وقادر على إلحاق ضرر لا يصدق، يحتاج المذيع إلى قوة مادية هائلة لإطلاق النار، فمعظم المذيعين الذين يباعون خارج عالم ووكي يجهزون بأفعال ذاتية تتيح للمخلوقات الأضعف جسديا أن تطردهم.\n\nالحريق الأولي - بناء الطاقة المشحونة لطلقات متعددة\nحريق ثانوي - دقيق جدا، طلقة واحدة قابلة للكسر\nنوع الذخيرة - خلية السلطة
+@MENUS_THIS_DEADLY_WEAPON_IS	وحدة التخزين المحمول\nهذا السلاح المميت هو تقريباً حجم حقيبة ظهر كبيرة لكن لا تدع حجمه يخدعك بمجرد أن يتم تفعيله، السلاح يكشف عن أي تهديد للعدو
+@MENUS_THIS_DESTRUCTIVE_PROJECTILE	جهاز قاذفة ثقيلة إمبراطورية مع جهاز إطلاق ارتجاج\nسلاح الصواريخ المدمر هذا مميت جداً، يطلق مسارات سريعة من الرصاص المعدني، تستخدم قوات الإمبراطورية النار المميت وقاذفة ارتجاج للسيطرة على الحشود، ولنشر النار الثقيلة فوق الحشود\nمناطق كبيرة.\n\nالحريق الأولي - إطلاق الصواريخ التلقائية الكاملة\nحريق ثانوي - طلقة واحدة، متفجرات ارتجاج\nنوع الذخيرة - المذيبات المعدنية
+@MENUS_THIS_GAME_IS_BEST_SUMMED	فكل شخص على ما يرام، فاللاعبون يسجلون نقاطاً من خلال القضاء على اللاعبين الآخرين ولا يمكن اعتبار أحد حليفاً.\n\nويجري اقتناء الأسلحة والمعدات في الميدان ما لم يحدد خلاف ذلك في الخادم، وتشمل بعض الخيارات ما إذا كان يسمح بسلطات القوة أو لا، والمستوى الأقصى للقوة المتاح.\n\nSCORING\nلإزالة العدو: +1 نقطة\nتزيلين نفسك:\n\nاللاعب الذي لديه أعلى درجات في نهاية المباراة يفوز باللعبة
+@MENUS_THIS_GAME_PITS_TWO_JEDI	فريق "فري" للجميع يحفر فريقين من فريق "جيداي" ضد بعضهم البعض في معركة من أجل التفوق كل لاعب يسجل نقاطاً للقضاء على الخصوم لكن اللاعبين في نفس الفريق يمكنهم العمل معاً للقضاء على الأعراض الأقوى\n\nويجري اقتناء الأسلحة والمعدات في الميدان ما لم يحدد خلاف ذلك في الخادم، وتشمل بعض الخيارات ما إذا كان يسمح بسلطات القوة أو لا، والمستوى الأقصى للقوة المتاح.\n\nSCORING\nتصفية عضو في فريق العدو: +1 نقطة\nاستئصال نفسك أو عضو الفريق:\n\nالفريق الذي لديه أعلى درجات في نهاية الجولة يفوز باللعبة
+@MENUS_THIS_IS_THE_NUMBER_OF	هذا هو عدد المرات التي يجب أن يقبض على العلم للفوز في اللعبة.
+@MENUS_THIS_NEFARIOUS_WEAPON	بندقية من طراز DXR-6\nهذا السلاح الشنيع يؤثر على المادة على المستوى الجزيئي يمزّق المواد الحية بسهولة بسبب الطبيعة اللاإنسانية للسلاح\n\nحريق رئيسي - طلقة واحدة مع معدل حريق بطيء، وهجوم فوري\nحريق ثانوي - نطاق: طلقة واحدة يجب أن تُحمَّل أولاً، تسبب ضرراً متزايداً وترتفع استهلاك الطاقة\nنوع الذخيرة - خلية السلطة
+@MENUS_THIS_OPTION_RE_BALANCES	ويمنع هذا الخيار اللاعب من الانضمام إلى فريق إذا كان سيبطل التوازن بين الفرق.
+@MENUS_THIS_STATIONARY_ENERGY	الدرع القرطاسية\nيمكن إسقاط حقل الطاقة الثابتة هذا في أي موقع، وعندها ينشر درعاً مسطحاً كبيراً يمكنه أن يحجب إطلاق النار من العدو، ويمكن للحلفاء المرور عبر الدرع، ولكن لا يمكن للأعداء، وسيختفي الدرع المنبعث بعد أن ينفق إمداداته من الطاقة أو بعد أن يلحق بكمية معينة من الضرر.
+@MENUS_THIS_VALUE_ADJUSTS_THE	عدد الدقائق التي ستستمر فيها المباراة
+@MENUS_THROW_YOUR_LIGHTSABER	أرمي جهازك الخفيف ليدمر أهدافاً بعيدة
+@MENUS_TIME_LIMIT	الحد الزمني:
+@MENUS_TRIP_MINES_CONSIST_OF	الألغام المضادة للأفراد\nوتتكون الألغام من مُسجِّل للشعاع مُنَفَّق إلى غلاف متفجر مُشكَّل، وتُنشَّط الليزر عندما يوضع المنجم وتُمدد الشعاع من الشحنة إلى أقرب سطح يتداخل مساره، وإذا تم كسر الشعاع أو تم إطلاق اللوم عليه، تفجر الألغام وتتسبب في أضرار مشعة لأي شيء في المدى.\n\nحريق رئيسي - بمجرد وضعه، ينفجر إذا تم كسر الشعاع أو تم تدمير المنجم\nحريق ثانوي - عندما يتم وضعه، ينفجر إذا كان شخص ما على مقربة منه أو تم تدمير المنجم، فلا يوجد شعاع ولن ينفجر بالنسبة للمستخدم
+@MENUS_UNAPPLIED_VIDEO_CHANGES	تغيرات فيديو غير مستغلة
+@MENUS_UNLEASH_DEADLY_ELECTRICAL	إطلاق هجمات كهربائية قاتلة ضد أعصابك
+@MENUS_UPDATE_ADVANCED_SERVER	تحديث أماكن الخادم المتطورة
+@MENUS_USE_MORE_POWERFUL_LIGHTSABER	إستخدموا المزيد من الهجمات الخفيفة القوية
+@MENUS_USE_THE_LIGHTSABER_TO	استخدموا جهاز الإضاءة لكشف هجمات السابر والقذائف القادمة
+@MENUS_VALUE_ADJUSTS_THE_TOTAL	عدد الطلقات الناجحة (الدوائر) المطلوبة للفوز بالمباراة.
+@MENUS_VARIABLE_NAREA_OF_EFFECT	القوة Drain\nالمدة: قابلة للتغيير\nمنطقة الأذى: لا يعيش إلا\nالتأثير: قوة القطارات وتستخدمها لتجديد الحياة\n\nالركن 1 - يُطلق حزمة واحدة تُشعل النار للأمام، تُستنزف 10 نقاط قوة في الثانية، وتُشفى ذلك المبلغ.\nالرنك 2 - هجوم غير متعمد ومستمر، يصرف 15 نقطة قوة في الثانية.\nالرنك 3 - يُطلق على مروحة مستمرة في قوس كبير للأمام، يُستنزف أي هدف أمامه من 20 نقطة قوة في الثانية.
+@MENUS_VC_ATT	1 - الهجوم
+@MENUS_VC_ATT_POSITION	3 - موقع الهجوم
+@MENUS_VC_ATT_PRIMARY	1 - الهجوم على الهدف الابتدائي
+@MENUS_VC_ATT_SECONDARY	2 - الهدف الثانوي للهجوم
+@MENUS_VC_CANCEL	الغاء
+@MENUS_VC_DEF	2 - الدفاع
+@MENUS_VC_DEF_GUNS	4 - مواقع الأسلحة
+@MENUS_VC_DEF_POSITION	3 - موقف المدّعي
+@MENUS_VC_DEF_PRIMARY	1 - الدفاع عن الهدف الابتدائي
+@MENUS_VC_DEF_SECONDARY	2 - الدفاع عن الهدف الثانوي
+@MENUS_VC_REPLY	4 - الرد
+@MENUS_VC_REPLY_COMING	3 - قادمون
+@MENUS_VC_REPLY_GO	4 - الهجوم
+@MENUS_VC_REPLY_NO	2 - سلبي
+@MENUS_VC_REPLY_STAY	5- الدفاع
+@MENUS_VC_REPLY_YES	1- روجر
+@MENUS_VC_REQ	3 - الطلب
+@MENUS_VC_REQ_ASSIST	1- المساعدة
+@MENUS_VC_REQ_DEMO	6 - إزالة الألغام
+@MENUS_VC_REQ_HVY	5 - الأسلحة الثقيلة
+@MENUS_VC_REQ_MEDIC	2 - المسعفون
+@MENUS_VC_REQ_SUPPLY	اللوازم
+@MENUS_VC_REQ_TECH	4- التكنولوجيا
+@MENUS_VC_SPOT	5 - المقبوض عليه
+@MENUS_VC_SPOT_DEF	1- الدفاعات
+@MENUS_VC_SPOT_EMPLACED	4 - الأسلحة المزروعة
+@MENUS_VC_SPOT_SNIPER	3 - القناص
+@MENUS_VC_SPOT_TROOP	2 - القوات
+@MENUS_VC_TACTIC	٦ - الأساليب
+@MENUS_VC_TAC_COVER	1 - التغطية
+@MENUS_VC_TAC_FALLBACK	4 - الإعادة
+@MENUS_VC_TAC_FOLLOW	3- المتابعة
+@MENUS_VC_TAC_HOLD	2 - عقد العقد
+@MENUS_VC_TAC_SPLIT	6 - انفصال
+@MENUS_VC_TAC_TOGETHER	5 - البقاء معا
+@MENUS_VIEW_EMPTY	فيو فارغتي:
+@MENUS_VIEW_FULL	فيو فول:
+@MENUS_WATCH_DESC	راقب المهمة
+@MENUS_WEAPON_RULES	قواعد الأسلحة.
+@MENUS_WHEN_ON_IT_MEANS_TEAMMATES	عندما يكون هناك فريق يستطيع أن يصيب ويقتل بعضهم البعض بأسلحة وقوى\n
+@MENUS_WIDELY_USED_BY_THE_CORPORATE	أسلحة الجولان FC1\n"أستعملت على نطاق واسع من قبل فرق شرطة "هيئة الشركات حرائق "إف سي 1" تقطع من المعدن في نمط واسع\n\nحريق رئيسي - طلقة واحدة، أطلق النار\nحريق ثانوي - رسوم شظايا متفجرة مزدوجة\nنوع الذخيرة - الفولط المميت
+@MENUS_YES	نعم
+@MENUS_YOU_DECIDE	أنت تقرر
+@MENUS_YOU_HAVE_MADE_CHANGES	لقد قمت بتغييرات في أسطوانات الفيديو
+@MENUS__REQUIRES_SABER_ATTACK	(يتطلب هجوم سابر 1)
+@MP_INGAME_GETTINGINFOFORSERVERS	الحصول على معلومات للخوادم...
+@MP_INGAME_SERVER_REFRESHTIME	وقت التجديد
+@MP_SVGAME_CANCEL_PASSWORD	لا تحاولي ربط القائمة
+A / Cross confirms, B / Circle goes back	/ الصليب يؤكد، B / الدائرة يعود
+A disconnect pauses the match for up to 10 minutes.	قطع الإتصال يوقف المباراة لمدة 10 دقائق
+A passed game-type vote is queued for the next round boundary.	صوت من نوع اللعبة تم تعديله من أجل الحدود الجولة القادمة
+A setting or binding changed outside the editor. Cancel and reopen to refresh; nothing applied.	تغير وضع أو إلزامي خارج المحرِّر، وألغى وأعيد فتح باب التجديد؛ ولم يُطبَّق أي شيء.
+ACTION DETAILS / RESET	خطط العمل/الاحتياطيات
+About	عن
+Acceleration	التعجيل
+Acceleration amount; zero disables it	مقدار التسارع؛ صفر من العصيان
+Acceleration curve	منحنى التعجيل
+Acceleration curve: 0 legacy, 1 power	منحنى التعجيل: صفر من الإرث، قوة واحدة
+Acceleration offset	معادلة التعجيل
+Accepted 1v1 challenges inside FFA. Shares the Duel ladder.	قُبِلت 1v1 تحديات داخل FFA. Shares the Duel ladder.
+Account / Log in	الحساب/النسبة المئوية
+Accounts and match reporting are not connected yet.	ولم يتم بعد ربط الحسابات والإبلاغ عن المطابقة.
+Action	الإجراء
+Adaptive	التأديب
+Add Berserker	يضاف Berserker
+Add Defender	مدافع
+Add Duelist	مضافا إليه قائمة المستحقات
+Add Flag Catcher	(أضف (فلاغ كاتش
+Add Saber Master	أضف سيد سابر
+Add Trickster	أضف (تريكستر)
+Add bots	أضف الطلقات
+Address	العنوان
+Adjust how fast the left stick moves the menu pointer.	فقط كم سرعة العصا اليسرى تحرك ملصق قائمة الطعام
+Adjusts how many chat lines fit.	عدّل كم عدد خطوط الدردشة المناسبة.
+Adjusts the width across the screen.	يُعدّلُ المستعارَ عبر الشاشةِ.
+Advanced	السلف
+Advanced Input	الناتج المتقدم
+Advanced settings	البيئات المتقدمة
+Advanced video	فيديو متقدم
+Advances to the next round	التقدم المحرز في الجولة التالية
+All	كل شيء
+Allow downloads	السماح بالتنزيلات
+Alternate attack	هجوم بديل
+Alternate weapon action / saber throw	/ رمية / صالون
+Always	دائماً
+Always run	اركضي دائما
+Analog joystick axes	محارم الفطر
+Angle	أنغل
+Anisotropic filtering	تصفية الأنسوستروبيك
+Anisotropic filtering unavailable.	التصفيق غير متاح.
+Applies on next spawn.	يَعتمدُ على السباونِ القادمِ.
+Apply	التطبيق
+Apply and continue	التطبيق والاستمرار
+Apply camera	آلة تصوير التطبيق
+Apply changes	تطبيق التغييرات
+Apply or cancel pending edits before switching mods.	تطبيق أو إلغاء التعديلات قبل تغيير العوارض.
+Apply or discard before leaving?	تطبيق أو ردة فعل قبل المغادرة؟
+Arabic	العربية
+Assets missing or overridden. Showing Stock; Apply cannot save.	الأصول المفقودة أو المغطاة بالمخزونات المُظهرة، لا يمكن للطالبة أن تنقذ.
+Assignment staged	الاستقالة
+Attack	هجوم
+Autoexposure	التعرض للسيارات
+Automatic controller detection	الكشف عن أجهزة التحكم الآلي
+Automatic opens for gamepad when no keyboard is detected.	فتحات آليّة لـ (باور باد) عندما لا يُكتشف لوحة مفاتيح.
+Available display modes are added automatically.	وتضاف أساليب العرض المتاحة تلقائيا.
+Average mouse movement between frames.	متوسط حركة الفأر بين الإطارات
+Awaiting reply	في انتظار الرد
+B / Circle confirms, A / Cross goes back	B / الدائرة تؤكد، A / الصليب يعود
+BRACKET\nA random draw sets the single-elimination bracket. Byes advance unpaired entrants. Both full lineups must be connected, in the arena and ready before play starts.\n\n1v1 TOURNAMENT\nAn even field of 8 to 32 verified players enters. Play all 10 scored rounds. Each elimination wins a round. Simultaneous deaths replay the round. At 5-5, play one deciding round.\n\nTEAM TOURNAMENT\n2 to 8 teams enter at a fixed size, from 2v2 to 5v5. Players respawn. The first team to 20, 30, 40 or 50 kills respectively wins. After 10 minutes of play, the leader wins. If tied, play until one team takes the lead.\n\nRECONNECTS AND RESERVES\nA missing player pauses play. Each player has 5 minutes to reconnect in 1v1. Each team has 10 minutes to reconnect or fill the slot with a registered reserve from its own team. Repeat drops use the remaining time. Everyone readies again when the lineup is complete. Time expiry forfeits the match. If both sides expire, both are eliminated.	BRACKET\nرسم عشوائي يضع بين معقوفتي النسيج الواحد، وداعًا يُقدّمُ الوافدين غير المدفوعين، وكلا الخطين الكاملين يجب أن يكونا متصلين، في الساحة، وجاهزين قبل بدء اللعب.\n\n1v1 TOURNAMENT\nحتى في الميدان من 8 إلى 32 لاعباً مُحقّقاً، ألعبوا كلّ الـ 10 طلقات مُسجلة، كلّ استئصال يفوز بجولة.\n\nTEAM TOURNAMENT\nمن 2 إلى 8 فرق تدخل بحجم ثابت من 2v2 إلى 5v5، ويعاد فرز اللاعبين، ويفوز الفريق الأول بـ 20 أو 30 أو 40 أو 50 على التوالي، وبعد 10 دقائق من اللعب، يفوز الزعيم، إذا ما تم ربطه، ليلعب حتى يقوم فريق واحد بدور القيادة.\n\nRECONNECT AND RESERVES\nيتوقّف اللاعب المفقود عن اللعب، ويمتلك كل لاعب 5 دقائق لإعادة الاتصال في 1-15، ويمتلك كل فريق 10 دقائق لإعادة ربط أو ملء الفتحة باحتياطي مُسجّل من فريقه الخاص، ويُعاد استخدام الوقت المتبقي، ويقرأ الجميع مرة أخرى عندما يكتمل الخط، ويخسر الوقت المنتهي المباراة، وإذا انقضى كلا الجانبين، يُلغى كلاهما.
+Back	رجوع
+Back to Play	العودة إلى اللعب
+Back to ready room	العودة إلى الغرفة جاهزة
+Backhand preview:	-النظرة التمهيدية لليد الخلفي
+Backspace	الفضاء الخلفي
+Balanced	الرصيد
+Base	القاعدة
+Basic Settings	الأساسيات
+Begin match	بداية المباراة
+Binding staged; command was not executed	تم وضع الملزمات؛ ولم يتم تنفيذ الأوامر
+Bindlist	القائمة الموحدة
+Black	أسود
+Blade off	نُطلق
+Blade on	تلميع
+Blaster rifle	بندقية بلاستر
+Blue	الأزرق
+Blue team	الفريق الأزرق
+Blue, Yellow and Red selected. Apply to save.	أزرق وأصفر وأحمر إختيروا
+Bottom left	الجزء الأيسر
+Bottom right	الجزء الأيمن
+Brightness	الصدق
+Browse unranked servers	خوادم مكتظة
+Bumpers move the caret	يحرك المغفلون المهتمين
+Bumpers: command history   Triggers: scroll	المصاريف: تجار تاريخ القيادة:
+Button labels: 0 Xbox, 1 PlayStation, 2 generic	Button labels: 0 Xbox, 1 PlayStation, 2 general
+Button mapping	رسم خرائط بوتون
+CALL GAME TYPE VOTE	"اللعبة الصغيرة"
+CAST YOUR VOTE	إحتفظ بفراشك
+CHOOSE AN ACTION	اتخاذ إجراء
+CONTROLLER DEFAULTS?	مُراقبة (ديفول)؟
+Call a vote	التصويت
+Camera	آلة تصوير
+Camera / UI	آلة تصوير / UI
+Camera FOV	كاميرا FOV
+Camera damping	آلة تصوير
+Camera settings applied.	ممرات الكاميرات مطبقة
+Camera smoothing	آلة تصوير سلسة
+Camera tilt	نظام كاميرا
+Cancel	الغاء
+Cancel changes	التغييرات في الغاء
+Cannot preserve the current custom renderer safely.	لا يمكن الحفاظ على العتاد الحالي بأمان.
+Capture	التقاط
+Capture Limit:	كبسولة حدود:
+Capture limit	الحد الأقصى للقدرات
+Cast your vote	إلتقط صوتك
+Center view	منظر مركزي
+Center your view	ضعي وجهة نظرك
+Changes the chat background. Text stays readable.	يغير خلفية الدردشة النص يبقى قابلاً للقراءة
+Changes the language of menus.	يغيّر لغة السحايا.
+Changing this restarts mouse input.	تغيير هذه المُدخلات من الفأر.
+Character shadows	الظلال السماوية
+Chat box height (%)	ارتفاع صندوق الشظايا (%)
+Chat box opacity (%)	العجز في صندوق الشظايا (%)
+Chat box size (%)	حجم صندوق الشظايا (%)
+Chat box width (%)	صندوق الشات (نسبة مئوية)
+Chat sound	صوت الثرثرة
+Chat with the current audience	تحدّى مع الجمهور الحالي
+Chat with your team	تقاطع مع فريقك
+Chinese (Simplified)	الصينية (مبسطة)
+Chinese (Traditional)	الصينيون (الرادعيون)
+Choose Custom resolution.	اختر القرار العرفي.
+Choose a format to preview its tournament lobby.	اختر نموذجاً لفحص ردهة البطولة
+Choose a language if short messages or regional variants are misidentified.	اختر لغة إذا كانت الرسائل القصيرة أو المتغيرات الإقليمية غير محددة.
+Choose a style	اختر أسلوباً
+Choose a style for each of the three slots.	اختر اسلوبا لكل واحد من الارقام الثلاثة
+Choose a whole-number option.	اختر خياراً كاملاً
+Choose an installed map for the current game type.	اختر خريطة مركبه من نوع اللعبة الحالي
+Choose each style's ready pose separately in Stances.	اختر كل أسلوب جاهز في ستانسيس
+Choose named action	اختر اسماً
+Choose three different styles to complete your cycle.	اختر ثلاثة اساليب مختلفة لإكمال دورتك
+Choose three different styles. Each style can fill only one slot.	اختر ثلاثة اساليب مختلفة كل اسلوب يمكن ان يملأ فقط مكان واحد
+Choose your arena.	اختر ميدانك
+Choose your saber hand, then select Apply Changes.	اختر يداك السارقه ثم اختاري (آبلي) للتغييرات
+Circle	الدائرة
+Clean Capture	التنظيف
+Clean Capture is on.	التنظيف جاهز
+Clear	خالي
+Clear assignment	مهمة واضحة
+Client command packets per second.	حزمة قيادة العملاء في الثانية.
+Close	اقترب
+Close registration and start the Tournament.	اغلق التسجيل وابدأ البطولة
+Color depth	العمق البارد
+Combat	القتال
+Combat styles	أساليب القتال
+Combat styles...	أساليب القتال...
+Comics	كوميديا
+Communication	الاتصال
+Compat.	تطابق.
+Complete	اكتمل
+Composition grid: 	شبكة التكوين:
+Config applied.	تم تطبيقه.
+Config loaded into editor. Review, then Apply.	تم تحميله إلى المحرّر، استعراض، ثم تطبيقه.
+Config write verification failed; existing config retained.	وفشل التحقق في كتابة الكونفدج؛ واستبقيت المحكمة القائمة.
+Console keyboard	لوحة مفاتيح كونسول
+Console opacity	عدم الأهلية
+Console overlay	فائض كونسول
+Controller	المراقب المالي
+Controller defaults staged; review before Apply	رتبت المتأخرات المستحقة على المراقب المالي؛ استعراض قبل التطبيق
+Controller detection	المراقب المالي
+Controls	التحكم
+Controls what you see when the server allows dismemberment.	يتحكم بما تراه عندما يسمح الخادم بتقطيع الأعضاء
+Could not confirm the display settings; recovery file could not be removed.	لم يكن بمقدوره تأكيد أماكن العرض؛ ولم يكن من الممكن إزالة ملف الاسترداد.
+Could not finish saving; existing config retained.	لا يمكن أن ينهي الادخار؛ والثقة القائمة محتفظ بها.
+Could not open config for writing.	لا يمكن فتح الثقب للكتابة.
+Could not read config	لا يمكن قراءة الوصية
+Could not save display recovery.	لا يمكن أن ينقذ استعادة العرض.
+Count up	عد
+Cross	الصليب الأحمر
+Crosshair	الصليب
+Crosshair and interface	الصليب والوصلة البينية
+Crouch	كروا
+Crouch / swim downward	/ يسبح في الأسفل
+Crystal	كريستال
+Cubemap bounces	مكافأة التعبئة
+Cubemapping	التكبيل
+Current custom character	العرف الحالي
+Current dual/staff combat; variants are planned.	:: القتال الحالي المزدوج/الموظفون؛ ومن المقرر إجراء متغيرات.
+Current style	الأسلوب الحالي
+Curve subdivisions	شُعب فرعية
+Custom	العرف
+Custom height	ارتفاع الذرة
+Custom sounds	أصوات العوالم
+Custom width	الاستعارة العرفية
+Customize	الذرة
+Cycle saber style	أسلوب سابر العنق
+Cycle your selected combat loadout	قم بتجميع مُختارة من مُكافحتك
+D-pad down	D-pad أسفل
+D-pad moves the pointer  /  Bumpers scroll	(د-باد) يحرك المؤشر / (بامبرز)
+DISCARD PENDING EDITS?	المفرقعات التي تنتهي؟
+DISCONNECT?	مُشوّه؟
+Damage reactions	ردود الفعل على الأضرار
+Default	التقصير
+Default movement speed.	سرعة الحركة الافتراضية
+Default staged	التخلف عن السداد
+Defaults selected. Click Apply Input to save.	قُبِل مُختَرَبَرَة، إضغطي على مُدخل "آبلي" لإنقاذه.
+Defer player models	نماذج للاعبين مختصين
+Deluxe mapping	رسم الخرائط الأساسية
+Desktop	حاسوب مكتبي
+Det pack	حزمة Det
+Detailed shaders	مظلات مفصَّلة
+Detect compatible gamepads as you connect them.	تشخيص المباريات المتوافقة بينما تربطهم
+Detected	تم كشفها
+Device preferences	أفضليات النبائط
+Disable authenticated ghost mode	نمط الشبح غير الموثق
+Disable warmup.	دفء غير قابل للاشتعال
+Discard and continue	التخلّص من المعلومات والاستمرار
+Discard pending changes?	هل تم التخلص منها ريثما يتم تغييرها؟
+Discard pending controls changes and open Saved Configs?	نتخلص من الضوابط ريثما يتم تغييرها ونفتح المؤمنين المنقذين؟
+Discard pending controls changes and return?	تلغي الضوابط في انتظار التغييرات والعودة؟
+Disconnect	العزل
+Dismemberment	التمزيق
+Display	التصويب
+Display recovery could not be verified; settings were not changed.	ولم يكن من الممكن التحقق من التعافي من التلاعب؛ ولم تتغير الظروف.
+Disruptor	المخالفة
+Distance behind the player. Walls can bring the camera closer.	المسافة وراء اللاعب الجدران يمكنها أن تُقرب الكاميرا
+Dominant hand...	يد مهيمنة...
+Dominant hand:	اليد المهيمنة:
+Done	تم
+Drag or right stick to orbit  /  Scroll or bumpers to zoom	السحب أو العصي اليمنى للمدار / التمساح أو المضرب إلى زووم
+Drag or type a value, then Apply. Size: 75-125%.	"إسحب أو صنف قيمة، ثمّ "أطبق" الحجم: 75-125%
+Drag or type values, then Apply camera.	قِيَمَاً مِنْ النوعِ، ثمّ كاميرا التطبيق.
+Drag to orbit  /  Scroll to zoom	تسحب إلى المدار/تحتل إلى زووم
+Driver info	معلومات السائق
+Driver information	معلومات السائقين
+Dual sabers	ساحات دوامة
+Duel ladder	سلالم الدودة
+Duel limit	الحد الأدنى للدبابات
+Dynamic glow	زهرة الديناميكية
+Dynamic lights	الأضواء الديناميكية
+Edit a proposal, then call its vote. Limits apply to the current mode.	حرر اقتراحاً، ثم تصوت عليه، وتطبق القيود على الطريقة الحالية.
+Editing stages a binding; the command is never executed here.	تحرير مراحل إلزامية القيادة لا تنفذ هنا أبداً
+Effects	الآثار
+Effects volume	حجم الآثار
+Enable all Force powers, including Saber Throw.	(تمكّن من جميع القوى، بما في ذلك (سابر
+Enable warmup.	دفء قابل للنقاش
+English	الإنكليزية
+Enter 	Enter
+Enter a finite number.	أدخل رقما محدودا
+Enter a player name.	أدخلي اسم لاعب
+Enter a size from 48 to 144.	أدخل حجماً من 48 إلى 144
+Enter individual lobby	الدخول في ردهة فردية
+Enter size 75-125 and panel opacity 0-100.	حجم الدخول من 75 إلى 125 و عدم قدرة الفريق من 0 إلى 100
+Enter your name	أدخل اسمك
+Equal, complete lineups required	التسلسل الكامل المطلوب
+Esc  /  Back	Esc / Back
+Every active player selects Ready.	كل لاعب نشط يختار جاهزاً
+Existing voice-command menu; not proximity voice	القائمة القائمة التي تحمل الصوت؛ وليس الصوت القريب
+Exit	خروج
+Experimental preview only. Apply keeps your regular selection.	عرض تجريبي فقط التطبيق يبقي اختيارك المعتاد
+Extra button	زر إضافي
+FORCE POWERS	أسرى القوات
+FPS counter	FPS
+Favorites	المفضّلين
+Field of view	مجال النظر
+Find a Server	ابحث عن خادم
+Find a server	البحث عن خادم
+Fine-tune input settings without typing console commands.	مدخلات جيدة بدون تحديد أوامر التآمر.
+Footsteps	الخطوات
+Force	القوة
+Force Training	التدريب على القوة
+Force absorb	استيعاب القوة
+Force drain	الصرف الصحي
+Force enabled in restricted gametype	القوة الممكّنة من نموذج اللعبة المقيد
+Force enabled while all powers disabled	القوة مكنت في حين أن جميع السلطات معوقة
+Force grip	قبضة القوة
+Force heal	شفاء القوة
+Force lightning	برق القوة
+Force player models	نماذج لاعبي القوة
+Force powers	السلطات
+Force protect	حماية القوة
+Force pull	سحب القوة
+Force push	دفع القوة
+Force rage	غضب القوة
+Force rules, map rotation, Tournament, and team entry.	قواعد القوة، تناوب الخرائط، البطولة، ودخول الفريق.
+Force sense	إحساس القوة
+Force speed	سرعة القوة
+Force team energize	تطهير فريق القوة
+Force team heal	تعافي فريق القوة
+Force: restricted	القوة: مقيدة
+Force: unrestricted	القوة: غير مقيدة
+Forward movement scale	مقياس التحركات المقبلة
+Frag Limit:	-ماذا؟
+Frag limit	الحد الأقصى للاحتجاز
+Free Camera	كاميرا مجانية
+Free For All	مجان للجميع
+Free mouse look	الفأر المجاني
+Freecam speed	السرعة الحرام
+Freeze	مكانك
+Freeze is available in local solo games, including bots.	وتتاح التجمد في ألعاب منفردة محلية، بما في ذلك الفول.
+French	الفرنسية
+Full Force	القوة الكاملة
+Fullscreen	الشاشة الكاملة
+GAME RULES	قواعد اللعبة
+GAME TYPE	صنف اللعبة
+GAME TYPES	جمل اللعبة
+Game Options	الخيارات المتعلقة بالألعاب
+Game rules	قواعد اللعبة
+Game sounds	أصوات اللعبة
+Game type	نوع اللعبة
+Game types	أنواع الألعاب
+Generate normal maps	إنتاج خرائط طبيعية
+Generic	الوراثة
+Geometry detail	تفاصيل الهندسة
+German	ألمانيا
+Ghost off	اغرب عن وجهي
+Ghost on	الشبح
+Green	الأخضر
+Guide	الدليل
+HDR lightmaps	مصباحاً من طراز HDR
+HUD style	أسلوب HUD
+Have your say on the current vote,	هل لديك رأي في التصويت الحالي،
+Health and ammo	الصحة والذخائر
+Height	مرتفع
+High	عالية
+Hilt preview unavailable	"النظرة التمهيدية" "غير متاحة"
+Hold for Drain when available	تماسك عند توافرها
+Hold for Grip when available	عقد لجريب عندما يكون متاح
+Hold for Lightning when available	عقد البرق عندما يكون متاحا
+Hold for legacy mouse/keyboard strafe	التمسك بتركة الفأر/اللوحة الرملية
+Hold to change walking/running speed	تمهّل بتغيير سرعة المشي/الركض
+Hold to show match scores	تماسكي لتظهري نتائج المباراة
+Holster / draw saber	هولستر / يسحب النقانق
+Holster or draw your saber	(هولستر) أو إسحب سكيرك
+Horizontal look sensitivity	حساسية النظرة الأفقية
+Horizontal mouse scale	نطاق استخدام الفأر الأفقي
+Horizontal scale	الجدول الأفقي
+Horizontal sensitivity	الحساسية الأفقية
+Horizontal turn speed	سرعة التحول الأفقي
+Horror	الرعب
+Host a match	يستضيف مباراة
+Host name	الاسم المضيف
+ITEMS	البنود
+Ignore small legacy axis movements.	تجاهل حركات الإرث الصغيرة.
+Ignore small stick movements.	تجاهل حركات عصا صغيرة
+Illustration only. This result does not update your account.	المثالية فقط هذه النتيجة لا تستكمل حسابك
+Input settings applied.	تطبيق أطر المدخلات.
+Inspect off-hand	التفتيش خارج اليد
+Installed mods	العصى المثبتة
+Installing the mod alone does not make a server official.	تركيب العصابة وحدها لا يجعل خادماً رسمياً
+Interact with usable world objects	التفاعل مع الأجسام العالمية الصالحة للاستخدام
+Interface	الواجهة
+Invalid QA key	مفتاح التردد العالي
+Invalid action	الإجراءات غير السليمة
+Invalid assignment	عدم الانتداب
+Invalid key	المفتاح غير المستقر
+Invalid personal config filename	الـمـلف الشخصيـة المـُـنـزوحـة
+Invert controller vertical look	نظرة عمودية
+Invert mouse	الفئران الخفية
+Invert vertical look	نظرة عمودية منحرفة
+Italian	إيطاليا
+Italiano	إيطالي
+Items	البنود
+JOIN	جون
+JOIN THE MATCH	(جوين)
+Japanese	اليابان
+Jedi Master	جيداي ماستر
+Join	الانضمام
+Join game	لعبة الانضمام
+Joystick deadzone	جوستيك ميتزون
+Jump	اقفز
+Jump / swim upward	إقفزْ/ يَسْبحُ فوق
+Jump sounds	صوت القفز
+Keep Jump and Speed; disable other general powers.	حافظ على القفز و السرعة وقطع القوى العامة الأخرى
+Keep changes	إستمروا بالتغييرات
+Keep display changes?	-أستمر بتغييرات العرض؟
+Keep or revert the display change first.	أبق أو أرجع تغيير العرض أولاً.
+Key Bindings	الملزمات الرئيسية
+Key change staged	التغيير الرئيسي المرحل
+Keyboard	لوحة مفاتيح
+Keyboard horizontal turn speed	سرعة التحول الأفقي لللوحات الرئيسية
+Keyboard turning	لوحة مفاتيح
+Keyboard vertical look	مظهر عمودي
+Keyboard vertical look speed	المحركات العمودية
+Keys	المفاتيح
+Kill feed	إقتلْ إطعامَ
+Korean	كوريا
+LEAVE THE MATCH?	أترك المحفظة؟
+LOAD SAVED SETTINGS?	-الحياة المُتخفية؟
+Labels do not change assignments.	لا تُغيّرْ المُهمّاتَ.
+Language	اللغة
+Language pack unavailable; showing original chat	حزمة لغوية غير متاحة؛ إظهار الدردشة الأصلية
+Leader	قائد
+Leave lobby	ارحلوا
+Leave this server and return to the main menu?	أتركوا هذا الخادم وعودوا إلى القائمة الرئيسية؟
+Leave this server and return to your desktop?	اتركي هذا الخادم وعودي إلى مكتبكِ؟
+Left hand	اليد اليسرى
+Left stick click	نقرة العصي اليسارية
+Legacy joystick	مرحة الجلنسية
+Legacy joystick analog axes	محاكاة مُعدة مُتَعَلِّقة
+Legacy joystick deadzone	"ليغايسي بويستيك ميتزون"
+Legacy joystick input; restarts input	مدخلات حشرة في الفرح الجانسي؛ وإعادة استخدام المدخلات
+Legacy mouse forward-movement scale	مقياس الحد من استخدام الغازات الأمامية
+Legacy mouse strafe scale	مقياس فروة الفأر
+Legacy or power acceleration.	الإرث أو تسارع الطاقة
+Letterbox	رمز الرسالة
+Letters	الرسائل
+Light flares	شعلات خفيفة
+Lighting	الإضاءة
+Limbs only	الخرافات فقط
+Limits affect the current mode.  0 = unlimited.	وتؤثر القيود على الطريقة الحالية 0 = غير محدود.
+Live	الحياة
+Live preview	مباشرة
+Load into the editor for review, then Apply.	اتجه إلى المحرّر لاستعراضه، ثمّ تطبيقه.
+Load the next map from the server rotation.	ضع الخريطة التالية من تناوب الخادم
+Local server	خادوم محلي
+Lock Teams	فرق القفل
+Log in with Discord	اركب مع الشقاق
+Log out / Cancel	/ Cancel
+Logged out.	تم سحبها
+Look and movement	أنظروا وتحركوا
+Look down	انظر إلى
+Look up	انظر
+Looking with bound up / down keys.	أبحث عن المفاتيح المُقيدة
+Low	منخفض
+Low health pulse	نبضات صحية منخفضة
+Lower values make curved surfaces smoother.	القيم الدنيا تجعل من السطحات المنحنية أكثر سلاسة
+Lyra  /  Registered reserve (sample)	ليرا/احتياطي مسجل (عينة)
+MATCH RECORDINGS	محاضر ميكانيكية
+Main menu	القائمة الرئيسية
+Map	خريطة
+Map not reported	الخريطة غير المبلغ عنها
+Map preview unavailable	استعراض مسبق للخرائط غير متاح
+Maps for the current game type	خرائط لنوع اللعبة الحالي
+Master Mode	المعلم (مود)
+Match clock	الساعة المتطابقة
+Match scores are separate from global rank.	وسجلات المصيد منفصلة عن المرتبة العالمية.
+Match timer	توقيت المصيد
+Match tools	أدوات المطابقة
+Matches	ماشي
+Matching stance assets are missing. Choices were not saved.	تطابق أصول المواهب مفقودة لم يتم إنقاذ الخيارات
+Matching style assets are missing. Blue, Yellow and Red remain available.	اصول نمطية متطابقة مفقودة الأزرق والأصفر والحمراء لا تزال متاحة
+Matching style assets are missing. Your choices were not saved.	مطابقه اصول الاسلوب مفقوده خياراتك لم تنقذ
+Max packets	أكياس ماكس
+Max players	(ماكس) لاعبين
+Medium	متوسطة
+Menu buttons	أزرار منو
+Menu confirm and back buttons	مينو تأكد و أزرار الظهر
+Menu cursor speed	سرعة الضمادات المنوية
+Menu language	لغة القوائم
+Menu motion	اقتراح مينو
+Menu motion: Off	اقتراح مينو:
+Menu motion: On	اقتراح مينو:
+Message language	لغة الرسالة
+Message the last player who attacked you	رسالة آخر لاعب هاجمك
+Message the player under your crosshair	أرسل اللاعب تحت مروحيتك
+Min players	لاعبين مصغرين
+Mind trick	خدعة العقل
+Minutes, 0 to 1440. Zero means unlimited. Applies after passing; may end the round.	لا حدود لها، لا يمكن أن تكون محدودة، بل يمكن أن تنهي الجولة
+Mod switching is unavailable in this isolated test profile.	التحويل المتنقل غير متاح في هذا التحليل المعزول للاختبار
+Model preview unavailable	استعراض أولي نموذجي غير متاح
+Mouse	(ماوس)
+Mouse buttons and wheel are supported. Escape cancels.	أزرار وعجلات الفأر مدعومة الهروب يلغى
+Mouse input mode	أسلوب المدخلات
+Mouse input: 0 off, 1 raw, 2 compatibility; restarts input	مدخلات الفئران: صفر، خام واحد، خامان، تطابقان؛ إعادة استخدام المدخلات
+Mouse movement when free look is off.	حركة الفأر عندما تكون مُطلقة.
+Mouse movement while strafing.	حركة الفأر بينما تتدلى
+Mouse sensitivity	حساسية الفم
+Mouse smoothing	نسيج الفأر
+Move backward	تراجعوا
+Move forward	المضي قدما
+Move left without turning	تحرك يساراً دون أن تتحول
+Move right without turning	تحركوا من دون أن يتحولوا
+Move the mouse to look around.	حرّك الفأر لينظر حوله.
+Movement	الحركة
+Movement and legacy input	الحركة والمدخلات القديمة
+Movement effects	آثار الحركة
+Moves	التحركات
+Multiplayer built around pro saber dueling.	مُتعدد المُبارزات مُبنية حول مُبارزة السّابر.
+Multiplier while walk / run is held.	مضاعف بينما تمشي/تجري
+Music volume	حجم الموسيقى
+NOW = current match   /   WAIT = upcoming	الآن = تطابق / WAIT = قادم
+Name	الاسم
+Names / scores	الأسماء/العشرات
+Negative shifts left. Positive shifts right. Zero centers the view.	نوبات سلبية باقية، نوبات إيجابية يميناً، لا يُركز على المنظر
+Network	الشبكة
+Next	التالي
+Next Force power	قوة القوة التالية
+Next Map	الخريطة التالية
+Next Player	اللاعب التالي
+Next item	البند التالي
+Next opponent: awaiting the other match winner	المنافس التالي: في انتظار فائز المباراة الآخر
+Next weapon	السلاح التالي
+No files	لا توجد ملفات
+No matching entries.	لا يوجد تطابق في القيد
+No matching hilts	لا تطابق
+No matching settings.	لا مطابقات.
+No models match these filters.	لا يوجد عارضات تطابق هذه المرشّحات
+No official servers listed	لا توجد خواديم رسمية مدرجة
+No password	لا كلمة سر
+No pending changes	لا توجد تغييرات معلقة
+No saved personal configs.	لا توجد مقابض شخصية منقذة
+No standings available	لا توجد أماكن متاحة
+Non-ASCII command preserved. This text editor supports ASCII; use change-key or clear.	وحافظت القيادة غير التابعة للجنة الدائمة على ذلك، ويؤيد محرر النص هذا النظام؛ واستخدام مفتاح التغيير أو الوضوح.
+Not a personal setting: 	ليس مكان شخصي:
+Not reported	لم يبلغ عنها
+OFFICIAL RANKED SERVERS	المراقب المالي
+Off	متوقف
+Official 1v1 matches on a Ranked Duel server.	"الرسم 1F1 يطابق على خادم "راندل
+Offset used by the power curve.	مُطلقة تستخدم من قبل منحنى الطاقة
+Older joystick path; restarts input.	طريق الفرح الأكبر سناً؛ إعادة إدخال المدخلات.
+On	على
+On-screen keyboard	لوحة المفاتيح على الشاشة
+One TFFA match / respawns	تطابق واحد من TFFA/ respawns
+One or more default keys have another command. Confirm to replace them.	مفتاح واحد أو أكثر غير مقصود لديه أمر آخر تأكد من استبداله
+Online free camera uses your normal spectator movement.	الكاميرا المجانية على الانترنت تستخدم حركة المشاهدين العادية.
+Only official registered teams enter this ladder.	فقط الفرق الرسمية المسجلة تدخل هذا السلم
+Only reserves registered with this team may replace a player.	فقط الإحتياطات المسجلة لدى هذا الفريق يمكن أن تحل محل اللاعب
+Open / collapse chat	دردشة مفتوحة/انهيار
+Open or close the in-game menu	افتح أو أغلق قائمة الطعام في اللعبة
+Open the console	إفتحي الضمادات
+OpenAL	مفتوح
+Opponent	المعارضون
+Options	الخيارات
+Orange	غريب الأطوار
+Orbit angle	زاوية المدار
+Ordinary matches remain unranked.	المباريات العادية لا تزال غير مهزومة.
+Original Blue style.	الأسلوب الأزرق الأصلي.
+Original Red style.	أسلوب أحمر أصلي
+Original Yellow style.	اسلوب أصفر
+Overall mouse response.	رد الفأر العام.
+Overview	لمحة عامة
+PRESS A KEY OR CONTROLLER BUTTON	أو متحكم
+Packet duplication	الازدواج
+Pages rotate every 10s. Your row stays visible.	الصفحات تدور كل 10 رتبتك تبقى مرئية
+Panel opacity (%)	عدم الأهلية في الفريق (نسبة مئوية)
+Parallax mapping	رسم الخرائط الموازية
+Password required	كلمة السر المطلوبة
+Pause menu	قائمة الطعام
+Pending changes	التغييرات المعلقة
+Pending edits discarded	حتى يتم التخلص من المحررات
+Performance	الأداء
+Perspective	المنظور
+Pick different styles. Your normal style-switch control follows this order.	اختر اساليب مختلفة التحكم في اسلوبك الطبيعي يتبع هذا الترتيب
+Pistol	مسدس
+Pitch	بيتش
+Pitch sway	ممر بيتش
+Play	العب
+Play recording	تسجيل اللعب
+Playback	"بلاي باك"
+Player	اللاعب
+Player labels	بطاقات الملاعب
+Player name	اسم اللاعب
+Player settings changed outside this menu. Reopen Profile to refresh.	لقد تغيرت أماكن اللعب خارج قائمة الطعام هذه
+Players	لاعبون
+Players and world	اللاعبون والعالم
+Polish	بولندا
+Portrait size	حجم الموانئ
+Portrait size applied.	مقاس البوابة مطبق
+Portuguese	البرتغال
+Portuguese (Brazil)	البرتغالية (البرازيل)
+Português (Brasil)	بورتوغويس (برازيل)
+Power	القوة
+Power acceleration offset	معادلة تسارع الطاقة
+Precise crosshair trace	تتبع مفترقة
+Preview disconnect	قطع وصلة سابقة
+Preview hand:	اليد التمهيدية:
+Preview how a missing teammate appears in the ready room.	افحص كيف يبدو زميل الفريق المفقود في الغرفة المستعدة
+Preview unavailable	استعراض غير متاح
+Previous	ما قبل
+Previous Force power	القوة السابقة
+Previous Player	اللاعب السابق
+Previous item	البند السابق
+Previous weapon	السلاح السابق
+Primary	الابتدائي
+Primary attack; movement and style still govern saber moves	الهجوم الأولي؛ الحركة والأسلوب لا يزالان يحكمان تحركات السرب
+Private chat with last attacker	محادثة خاصة مع آخر مهاجم
+Private chat with target	دردشة خاصة مع الهدف
+Private message	رسالة خاصة
+Profile	الملف الشخصي
+Projected	مسقطة
+Projectile trails	مسارات الصواريخ
+QUIT GAME?	لعبة QUIT؟
+Quality	النوعية
+Quick combinations; more weight than Blue.	تركيبات سريعة، وزن أكثر من الأزرق.
+Quit game	كفي عن اللعب
+Quit the game and return to your desktop?	توقف عن اللعب والعودة إلى مكتبك؟
+RANKED PLAY  /  DUEL LADDER	RANKED PLAY / DUEL LADDER
+RANKED PLAY  /  OVERVIEW	RANKED PLAY/VERVIEW
+RANKED PLAY  /  SERVER DIRECTORY	RANKED PLAY / SERVER DIRECTORY
+RANKED PLAY  /  TEAM LADDER	RANKED PLAY /TEAM LADDER
+READY STANCE	المرحلة السابقة
+RECONNECTS AND RESERVES	RECONNECT AND RESERVES
+RECORDINGS	المحاضر
+REPLACE SAVED CONFIG?	REPLACE SAVED CONFIG؟
+RESPAWN?	RESPAWN؟
+Raise or lower the camera target.	رفع أو خفض هدف الكاميرا.
+Rank	رانك
+Ranked Duel	ران دويل
+Ranked Duel and Ranked Challenge Duel share this ladder.	طارد (دويل) و (دويل) المُتعارك يتشاركون هذا السلم
+Ranked Play	"اللعب المهجور"
+Ranked connection: not configured	راندال : ليس مزيف
+Ranked mode	طريقة مُشوّهة
+Ranked servers	خوادم مرشَّحة
+Ranked services are coming soon.	الخدمات المرتجعة ستأتي قريباً
+Rankings appear after verified official results are connected.	تظهر الركائز بعد أن يتم التحقق من النتائج الرسمية
+Rate	المعدل
+Rating	راتنج
+Rating change: unavailable. No verified ranked result received.	التغيير في التقييم: غير متاح، لم ترد أي نتيجة متحقق منها في الرتبة.
+Rating: unavailable / no verified ranked result	الرات: غير متوافر/لم يتم التحقق من وجود نتيجة مرتبة
+Raven Software	برامج رافين
+Raw	راو
+Ready	جاهز
+Ready - offline	جاهزة - خارج الخط
+Ready cleared.	جاهز
+Ready for chat - offline	جاهز للدردشة - خارج الخط
+Ready selected.	جاهزين مختارين
+Ready-pose choice only. Choose combat behavior in Combat styles.	اختيار العرض المستعد فقط اختيار السلوك القتالي في أساليب القتال
+Record match	تطابق السجل
+Recording	التسجيل
+Recordings	التسجيلات
+Red	أحمر
+Red team	الفريق الأحمر
+Registered teams compete on their own team ladder.	فرق مسجلة تتنافس على سلم فريقها الخاص
+Release capture in windowed mode.	أطلقوا النار في وضع مُنافذ.
+Release mouse capture in windowed mode	أطلقوا القبض على فأر في وضع نوافذ
+Release window capture	نوافذ إطلاق النار
+Repeat commands in outgoing packets.	أكرر الأوامر في مجموعات من الخارج.
+Replace	يستعاض عن عبارة &quot;
+Replace 	يستعاض عن عبارة &quot;
+Replace ordinary HUD	يستعاض عن كلمة &quot; HUD &quot; العادية
+Replace pending config edits?	أستبدلوا المثقفين المنتظرين؟
+Replace pending edits with this config?	يستعاض عن العناوين المعلقة بهذا الشعار؟
+Replace saved config?	إستبدلت الوصية المنقذة؟
+Replace the controller's button assignments with defaults?	أستبدلت أزرار المتحكم بأخطاء؟
+Requested bytes per second; server limits apply.	تطلبها من طرف واحد في الثانية؛ وتطبق حدود الخواديم.
+Requested snapshots per second.	طلب طلقات في الثانية.
+Requires Streamer mode with Clean Capture off.	يتطلب أسلوباً مُستعجلاً مع "القبضة النظيفة".
+Requires authenticated server permission	الحصول على إذن بالخادم الموثق
+Requires server permission. Add a player argument using Edit command if needed.	يتطلب إذن خادم أضف حجّة اللاعبين باستخدام قيادة (إديت) إذا لزم الأمر
+Requires server permission. Use the server's target syntax.	يتطلب إذن الخادم، استخدم هدف الخادم
+Reserves	الاحتياطيات
+Reset	إعادة التوطين
+Reset all to Stock	إعادة كل شيء إلى المخزون
+Reset camera	آلة تصوير
+Reset filters	مرشحات إعادة التشكيل
+Reset preview	إعادة النظر في المرحلة السابقة
+Reset this tab	أعيدي هذا التمثال
+Reset this tab?	إعادة ترتيب هذا التابوت؟
+Reset to originals	Reset to original
+Reset view	إعادة النظر
+Resolution	القرار
+Respawn now	إعادة البناء الآن
+Restart Map	خريطة استئناف العمل
+Restart the current map after the vote passes.	أعيدي الخريطة الحالية بعد أن يفوت التصويت
+Restarts the renderer.	يُعيدُ طباعة الصدر.
+Restore action defaults	تقصير الإجراءات الوقائية
+Restricted Force	القوة المقيدة
+Result preview	الاستعراض الأولي
+Resume  /  Esc	Resume / Esc
+Return to editing to keep your pending changes.	العودة إلى التحرير للحفاظ على التغييرات المعلقة الخاصة بك.
+Return to tournament selection?	إعادة اختيار البطولة؟
+Reverse right-stick vertical look.	نظرة عمودية عكسية
+Review this change. Nothing changes until you confirm.	قم بمراجعة هذا التغيير لا شيء يتغير حتى تؤكد ذلك
+Right hand	اليد اليمنى
+Right stick click	النقرة
+Right-stick horizontal look speed.	مظهر أفقي سليم.
+Right-stick vertical look speed.	المظهر العمودي الأيمن السريع
+Rocket launcher	قاذفة الصخور
+Role: Jedi	الدور: جيدي
+Role: Non-Jedi	الدور: غيرجيدي
+Roll	رول
+Roll sway	ممر رول
+Rotate:	تناوب:
+Run command	اديروا القيادة
+Run pitch	اركض
+Run roll	اركض
+Russian	الروسية
+SABER TRIALS  /  	SABER TRIALS /
+SABER TRIALS  /  MOVES	SABER TRIALS / MOVES
+SABER TRIALS  /  SOLO MATCH	SABER TRIALS / SOLO MATCH
+SABER TRIALS / 	SABER TRIALS /
+SABER TRIALS / ACCOUNT	SABER TRIALS/ ACCOUNT
+SABERTRIALS	المساهمات المقدمة
+SCORE	سكوتر
+SERVER INFORMATION	معلومات عن الشركات
+ST_CONTROLS_FAIL status mismatch	ST_CONTROLS_FAIL Status mismatch
+Saber / melee	سابر/مليل
+Saber 2	سابر 2
+Saber trail	مسار سابر
+Saber workbench	عمـل سابر
+Sample players and events. No live registration or match starts.	اللاعبون والأحداث لا يوجد تسجيل مباشر أو مباراة تبدأ
+Save a PNG screenshot	انقذوا شاشه PNG
+Save current settings	توفير الظروف الراهنة
+Saved 	منقذة
+Saved Configs	Conigs المنقذ
+Saved choices take effect next spawn on supporting servers.	الخيارات المنقذة ستبدأ في العمل في الخزنة التالية على الخواديم الداعمة
+Saved config could not be verified.	لا يمكن التحقق من الثقة المنقذة.
+Scale horizontal mouse movement.	حركة الفأر الأفقي
+Scales the panel and text together.	يُسجّلُ الفريقَ ويَسْتَرْسُ سوية.
+Scene: 	Scene:
+Scoreboard	لوح خشبي
+Search Setup settings or console names...	فتشوا أماكن الإنشاءات أو أسماء الـ(كونولي)...
+Search actions...	فتشوا في الأعمال...
+Search current keys or commands...	ابحث عن المفاتيح أو الأوامر الحالية
+Search hilts	باحثاً
+Search input settings or console names...	ابحثي عن مدخلات أو اسماء (كونولي)...
+Search models or outfits...	عارضات البحث أو الزي...
+Secondary	المرحلة الثانوية
+Select a game type. Changing this choice does not change the match.	اختيار نوع من الألعاب تغيير هذا الخيار لا يغير المباراة
+Select a player or bot	نختار لاعباً أو مضرباً
+Select a server	اختيار خادم
+Select an available map for the current game type.	اختار خريطة متاحة لنوع اللعبة الحالي.
+Select blaster rifle when available	بندقية من طراز Select blaster عند توافرها
+Select bowcaster when available	مركب مختار عند توافره
+Select det packs	حزمة مقطعية مختارة
+Select disruptor when available	مسببة للاضطرابات عند توافرها
+Select flechette when available	شعلة مختارة عند توافرها
+Select next Force power	إختار القوة التالية
+Select next available weapon	اختيار السلاح المتاح المقبل
+Select next inventory item	اختيار بند الجرد المقبل
+Select one of the six styles.	إختار واحدة من ستة اساليب
+Select pistol when available	مسدس حشري عند توافره
+Select previous Force power	السلطة السابقة
+Select previous available weapon	بيع سلاح سابق متاح
+Select previous inventory item	بند الجرد السابق
+Select repeater when available	إعادة إرسال مختارة عند توافرها
+Select rockets when available	صواريخ مختارة عند توافرها
+Select saber or melee	صالون مختارون أو ملي
+Select thermal detonators	مفجرات حرارية
+Select tournament	البطولة المختارة
+Select trip mines	الألغام المتحركة المختارة
+Send message	رسالة
+Sensitivity	الحساسية
+Sensitivity / settings	الحساسية/الأوضاع
+Server	سيرفر
+Server Management	موظف إداري
+Server information	معلومات السيرفر
+Server location	موقع سيرفر
+Server staff protection still applies.	ولا تزال حماية الموظفين سارية المفعول.
+Server tournament verification is coming next.	التحقّق من بطولة السيرفر قادم
+Setting is protected: 	المُنشأة محمية:
+Setting staged	الإعداد
+Settings applied.	تمّ تطبيق المُخططات.
+Settings applied. Video/sound changes may require a restart.	وقد تُطبَّق المواضع، وقد تتطلب التغييرات الفيديوية/الصوتية استئنافاً.
+Settings changed outside the editor. Cancel and reopen before applying.	تغيرت المُنشأات خارج المحرّر، ألغيها وأعيد فتحها قبل التّقدّم.
+Setup	الإعدادات
+Share / Create	الحصة/الملكية
+Shoulder offset	عوض الأكتاف
+Show controls: 	ضوابط العرض:
+Show current bracket	عرض بين قوسين
+Show current tournament status	بيان حالة البطولة الحالية
+Show original message	اظهر رسالة أصلية
+Show score	نتائج العرض
+Show the original above its marked translation. Originals remain in the console.	اظهري النسخة الأصلية من الترجمة المميزة والأصليات لا تزال في النقابة
+Show weapon	سلاح
+Shows the weapon model in first person.	يُظهر نموذج السلاح في الشخص الأول.
+Siege	الحصار
+Siege objectives	أهداف الحصار
+Siege voice commands	الأوامر الصوتية الحصارية
+Signed in with Discord.	تم التوقيع مع التناقض.
+Signed out.	تمّ التوقيع.
+Simple items	البنود البسيطة
+Single	العازبة
+Size: 48-144. Drag or type a number, then Apply size.	الحجم: 48-144، السحب أو الطبع رقم، ثم حجم التطبيق.
+Smooth follow	اتبعني
+Smoothing	التشويق
+Smooths changes to camera position.	تغيرات السجق إلى موقع الكاميرا
+Smooths changes to the point the camera follows.	تغيرت الملابس إلى النقطة التي تليها الكاميرا.
+Snapshot timing offset; normally session-only.	معادلة توقيت الناموسيات؛ وعادة ما تكون الدورة فقط.
+Snapshots	طلقات نارية
+Solo / replay speed	/ اعادة تشغيل السرعة
+Solo match	عوده منفرده
+Solo, spectator and replay camera. Online matches stay live.	تقريبًا، مُتفرج وكاميرا إعادة عزف، تطابق على الإنترنت يبقى حيًا.
+Some weapons and modes choose the view automatically.	وتختار بعض الأسلحة والطرائق وجهة النظر تلقائيا.
+Sound	الصوت
+Sound quality	نوعية الصوت
+Sounds	الأصوات
+Sounds + effects	أصوات + تأثيرات
+Sounds + effects + marks	أصوات + تأثيرات + علامات
+Space	الفضاء
+Spanish	الإسبانية
+Spectate	المنبوذة
+Spectator camera	آلة تصوير
+Speed	السرعة
+Speed trail	مسار سريع
+Staff	الموظفون
+Stage controller defaults	تقصير المتحكم في المرحلة
+Stage defaults	تقصير في المرحلة
+Stage edit	مرحلة التحرير
+Stances	سترات
+Stances saved. Applies next spawn on a supporting server.	ستانز) أنقذنا) - (يُظهر في (الخادم الداعم -
+Stances...	(ستانس)
+Standard	المعيار
+Start / Resume	البداية/العائد
+Start Tournament	بدء البطولة
+Starting rating: 1000   |   Results and opponent strength decide changes.	بدء التقييم: 1000 من النتائج وقوام الخصوم يقررون التغييرات.
+Status notifications	الإخطارات المتعلقة بالوضع
+Stay here	ابقى هنا
+Stay in ready room	إبقوا في غرفة جاهزة
+Stick deadzone	ستيك ميتزون
+Stock	المخزون
+Stock action defaults staged (unassigned when no stock default exists)	حالات التخلف عن السداد في المخزونات (أُبرمت في حالة عدم وجود عجز في المخزون)
+Stock defaults unavailable	تخلف المخزونات غير متاح
+Strafe left	مضيق اليسار
+Strafe modifier	مُحدِّد المضيق
+Strafe right	المضيق
+Streamer mode	نمط ثابت
+Streamer presentation	عرض مخططي
+Subject	الموضوع
+Supporting servers use this selection. Saber Offense requirements still apply.	(أ) استخدام الخواديم الداعمة لهذا الاختيار، ولا تزال متطلبات الجرائم السابر سارية.
+Swap Confirm and Back for menus.	اثبتوا وعودوا إلى الوحل.
+Switch mod	ممسحة
+Switch mod?	بدلة؟
+Switch mods from the disconnected main menu.	ابدلوا الطوابق من القائمة الرئيسية المفصولة
+Symbols	الرمز
+TFFA: lock or reopen joining and team switching.	TFFA: lock or reopen joining and team shifting.
+TOURNAMENT	ثانيا -
+TOURNAMENT  /  BRACKET	الموارد/المحرقة
+TOURNAMENT  /  LEAVE LOBBY?	-الحشد/المغادرة؟
+TOURNAMENT  /  MATCH RESULT	تجديد الموارد/البعثة
+TOURNAMENT  /  READY ROOM	الموارد/المكتب الإقليمي
+TOURNAMENT  /  SELECT A FORMAT	التعبئة/الحركة
+TOURNAMENT  /  TEAM RESERVES	/ملاحظات فريق التكنولوجيا والتقييم الاقتصادي
+Take photo	التقط صورة
+Target damping	الرطوبة المستهدفة
+Target names	الأسماء المستهدفة
+Team / tag	الفريق/العلامة
+Team Free For All	فريق الحرية للجميع
+Team appearance	مظهر الفريق
+Team chat	ثرثرة الفريق
+Team chat only	دردشة الفريق
+Team chat sound	صوت دردشة الفريق
+Team color lightsabers	أضواء لون الفريق
+Team color skins	لون الفريق
+Team ladder	سلم الفريق
+Team overlay	نفقات الفريق
+Team skin: Blue	بشرة الفريق: الأزرق
+Team skin: Default	بشرة الفريق:
+Team skin: Red	جلد الفريق: أحمر
+Text language	لغة النص
+Texture compression	ضغط النسيج
+Texture depth	عمق النص
+Texture detail	التفاصيل المتعلقة بالنص
+Texture filter	مرشح للنص
+Texture intensity	كثافة المنسوجات
+The complete lineup must ready up again before play resumes.	التسلسل الكامل يجب أن يكون جاهزاً مرة أخرى قبل أن يستأنف اللعب
+The missing player may reconnect, or a reserve takes their place.	اللاعب المفقود قد يعيد التواصل أو يُتخذ الإحتياط مكانه
+The original style keeps its original combat behavior.	الطريقة الأصلية تبقي سلوكها القتالي الأصلي.
+The previous display recovery has not been saved yet.	ولم يتم بعد إنقاذ عملية التعافي السابقة من العرض.
+The ranked server directory is not connected yet.	دليل الخادم المصنف غير متصل بعد
+The ranking service is not connected.	خدمة الترتيب ليست مرتبطة.
+The selected model files are no longer available.	ولم تعد الملفات النموذجية المختارة متاحة.
+The server checks that the map is installed and supports the current mode.	ويتحقق الخادم من أن الخريطة قد رُكبت وتدعم الطريقة الحالية.
+Themes	المواضيع
+Themes: 	المواضيع:
+Thermal detonator	التفجير الحراري
+Third person	الشخص الثالث
+Third-person framing	شخص ثالث يرسم
+This character selection is unavailable.	هذا الاختيار الشخصي غير متاح.
+This command is too long for the text editor; it is preserved. Use change-key or clear.	وهذه القيادة طويلة جدا بالنسبة لمحرر النص؛ وهي محمية، تستخدم مفتاح التغيير أو واضحة.
+This ends your current life.	هذا ينهي حياتك الحالية
+This model does not support a mirrored preview	هذا النموذج لا يدعم العرض الأولي المرئي
+This outfit has no matching team skin.	هذا الزي ليس به جلد فريق متطابق
+This restarts the game client.	هذا يعيد تشغيل اللعبة.
+This slot has no key to swap. Choose Replace or Cancel.	هذا المكان ليس لديه مفتاح للمبادلات اختر بديلاً أو إلغاء
+Three styles saved. Use your normal style-switch control to cycle them.	ثلاثة اساليب انقذت استعملي التحكم في اسلوبك
+Three ways to compete	ثلاث طرق للتنافس
+Tilt the camera up or down.	أربط الكاميرا أو أسفل.
+Time Limit:	الحد الزمني:
+Time Nudge	الزمن
+Time limit	الحد الزمني
+Time remaining	الوقت المتبقي
+Timing and downloads	التوقيت والتنزيل
+Toggle camera view	مشاهده الكاميرا
+Toggle existing match recording	تنظير التسجيلات الحالية للتطابق
+Toggle supported first/third-person view	تهذيب النظرة الأولى/الثالثة
+Toggle the chat panel and recent messages	جذب فريق الدردشة والرسائل الأخيرة
+Tonemapping	اللغم
+Top right	اليمين
+Tournament	البطولة
+Tournament bracket	القوسين المعقوفين
+Tournament rules did not replace the previous description	لم تحل قواعد المسابقة محل الوصف السابق
+Tournament rules did not scroll	قواعد البطولة لم تُخرِج
+Tournament rules headings did not load as separate lines	لم تكن العناوين الرئيسية لقواعد البطولة محمولة كخطوط منفصلة
+Tournament status	حالة البطولة
+Translate into	ترجمة
+Translate received public, team and private chat offline.	"الترجمة" إستلمت علناً، فريقاً و دردشة خاصة.
+Translating - offline	الترجمة التحريرية - خارج الخط
+Translation	الترجمة التحريرية
+Translator unavailable; showing original chat	مترجم غير متاح؛ مظهر الدردشة الأصلية
+Triangle	المثلث
+Trip mine	منجم تريب
+Turkish	تركية
+Turn left	استدر لليسار
+Turn right	استدر يمينا
+Turn the camera around the player.	شغل الكاميرا حول اللاعب.
+Turn-speed modifier	مُحدِّد السرعة
+Turn-speed modifier while walk/run is held	مُحدِّد سريع أثناء سير العمل/الركض
+Turning with bound left / right keys.	تتحول مع مفاتيح اليسار/المفاتيح اليمنى
+Two precise swings; vulnerable recovery.	قفزتان دقيقتان؛ التعافي ضعيف.
+Type:	النوع:
+Ukrainian	أوكرانيا
+Unassigned	غير موقّعة
+Unavailable in this client or server.	غير متاح في هذا العميل أو الخادم
+Uncategorized	غير المصنفة حسب الفئة
+Unfreeze	غير مجمدة
+Universal translator	الترجمة التحريرية العالمية
+Universe: 	الكون:
+Unknown Setup operation	عملية إنشاء غير معروفة
+Unknown quality preset	الجودة غير المعروفة
+Unknown setting	غير معروف
+Unlimited	غير محدود
+Unlock Teams	فرق الفتح
+Unready	غير مرئية
+Unsaved changes	التغييرات غير المنسَّقة
+Unsupported Controls operation	عمليات المراقبة غير المدعومة
+Unsupported value for 	القيمة غير المدعمة
+Up to 8 registered teams	ما يصل إلى 8 أفرقة مسجلة
+Use 	الاستخدام
+Use / interact	الاستخدام/التفاعل
+Use FOV 20-120, tilt -45 to 45, speed 20-800.	استعملوا "فيو 20 120" من "الفولط 45" إلى 45 سرعة 20-800"
+Use Heal when available	التعاطي عند توافره
+Use Mind Trick when available	استخدام خدع العقل عند توافرها
+Use Protect when available	الحماية عند توافرها
+Use Pull when available	استعمل السحب عندما يكون متاحا
+Use Push when available	استعملي الدفع عند توافره
+Use Rage when available	استخدام الراتج عند توافره
+Use Sense when available	الحساسية المستخدمة عند توافرها
+Use Speed when available	استخدام السرعة عند توافرها
+Use a new personal config name (letters, numbers, spaces, _ or -).	(ب) استخدام اسم مستعار شخصي جديد (الرسائل، الأرقام، الأماكن، _ أو -).
+Use analog axes on the legacy path.	استخدمي فؤساً مدوّنة على المسار المُتراثي
+Use fixed 50-point saber strikes and stronger timed parries.	استخدموا ضربات سابر ثابتة من 50 نقطة و قطع موقوتة أقوى
+Use inventory item	بند الجرد المستخدم
+Use selected Force power	استخدام قوة مختارة
+Use team Energize when available	فريق الاستخدام
+Use team Heal when available	معالجة الفريق عند توافرها
+Use team blade colors. Off shows chosen colors.	استعملوا ألوانا الألوان المتحركة من العروض المختاره
+Use team skins when available. Off shows chosen outfits.	استعملوا جلد الفريق عندما يكون متاحاً عرض من الملابس المختاره
+Use the selected available Force power	استخدام القوة المتاحة المختارة
+Use the selected inventory item	استخدام بند الجرد المختار
+Use turn speed 0-10000 and accel 0-100.	استعمل السرعة 0-10000 و العجلة 0-100
+Used for Custom resolution.	تستخدم في القرار العرفي.
+VOTING	التصويت
+Value outside the supported edit range.	القيمة خارج نطاق التحرير المدعوم.
+Vehicle lead indicator	مؤشر قيادة المركبات
+Version	الإصدار
+Vertex lighting	إضاءة فيرتكس
+Vertical look sensitivity	حساسية النظرات الفلكية
+Vertical look speed	سرعة النظرات الصوتية
+Vertical mouse scale	مقياس الفأر الرأسي
+Vertical mouse scale; negative means inverted	مقياس الفأر الرأسي؛ الوسائل السلبية المحفورة
+Vertical sensitivity	الحساسية الفلكية
+Vertical sway	طريق تصويري
+Very high	عالية جداً
+Visual effects	الآثار البصرية
+Voice commands	أوامر التصويت
+Voice language	لغة الصوت
+Voice volume	حجم الصوت
+Vote to add a role supported by the current game type.	صوتوا لإضافة دور يدعمه نوع اللعبة الحالي.
+Vote to remove a player or bot.	صوت لإزالة اللاعب أو الفول.
+WEAPONS	الأسلحة
+Waiting for the server's player list...	في انتظار قائمة لاعبي الخادم...
+Walk / run	امشي/اركض
+Wall marks	علامات الجدار
+Warmup Off	Warmup
+Warmup On	تحذير
+Weapon FOV	سلاح FOV
+Weapon's own ready pose overrides this preview in play.	وضعية السلاح جاهزة تتعدى على هذا العرض التمهيدي في المسرحية
+Weapon:	السلاح:
+Weapons	الأسلحة
+Weapons: restricted	الأسلحة: مقيدة
+Weapons: unrestricted	الأسلحة: غير مقيدة
+Weightier attacks; less wind-up than Red.	هجمات أضعف؛ أقل تصفية من (ريد).
+White	أبيض
+White core: Off	النواة البيضاء:
+White core: On	النواة البيضاء:
+Whole number, 0 to 999. Zero means unlimited. Applies after passing; may end the round.	الرقم الكلي من صفر إلى 999 لا يعني شيئاً غير محدوداً، بل يُطبق بعد مروره، وقد ينهي الجولة.
+YOU	أنت
+Yellow	أصفر
+You / Blue Horizon	أنت / أزرق هوريزون
+Your character	شخصيتك
+Your preferred reading language. Requires the matching offline packs.	لغة القراءة المفضلة لديكِ، تتطلب حزمة مناظرة
+Your sample ready status will reset when you select another event.	عينتك جاهزة ستستعيدها عندما تختار حدثاً آخر
+Your selection is remembered while using dual sabers or a staff.	إختيارك يُذكر بينما يُستخدم السجق المزدوج أو الموظفين.
+Your server chooses the combat rules.	خادمك يختار قواعد القتال
+Your server may deduct a point.	خادمك قد يقتطع نقطة
+Zero disables acceleration.	تسارع لا يصيبه أحد
+Zero disables this component of view swaying.	لا يُعيق هذا المكوّن من المشاهد.
+Zero removes the client frame-rate limit.	صفر يزيل الحد الأقصى لإطار عمل العملاء
+Zero uses your field of view.	صفر يستعمل حقل مشاهدتك
+[ ] Waiting for you. Click Ready when prepared.	أنتظرك، إضغط على نفسك عندما تجهز
+[ ] You / Waiting	أنتِ تنتظرين
+[!] Match paused / missing teammate. Reconnect window: 10:00 (sample).	/ زميل الفريق المفقود، إعادة ربط النافذة: 10:
+[+] Everyone is ready. Sample lobby: no match will start.	الجميع مستعدون، ردهة العينات لن تبدأ المباراة
+\\g_gametype\\0\\g_forcePowerDisable\\262143	g_gametype/0/g_forcePowerDisable/262143
+\\translator	الترجمة التحريرية
+\\translator\\fonts	الترجمة التحريرية
+_st_setup_recovery.tmp	__st_setup_recovery.tmp
+a whole number from 	عدد كامل من
+alora/default	الأب/العجز
+animation instance missing	حالة الارتداد المفقودة
+applied.	مطبق.
+asdfghjkl-	(أدفج جل)
+border lights ignore motion preference	تتجاهل أضواء الحدود تفضيل الحركة
+cannot drag back to top	لا يمكن أن يسحب إلى القمة
+cannot drag to bottom outside track	لا يمكن سحب إلى أسفل خارج المسار
+click target missing	النقر الهدف المفقود
+controller menu missing	قائمة المتحكمين المفقودة
+dirty state	الولاية القذرة
+favorite selection missing	الاختيار المفضل
+favorite state	الولاية المفضلة
+fixture has no overflow	لا يوجد تدفق زائد
+fixture requires private Favorites view	يتطلب التثبيت رؤية خاصة للمفضلين
+force-rank	القوة - اللصوص
+ghost off	شبح
+ghost on	شبح
+hover does not light native button	لا يضيء الزر الأصلي
+keeps dragging after mouse release	يَستمرُّ بسحب بعد إطلاق الفأرِ
+keyboard menu missing	قائمة المفاتيح المفقودة
+layout context	سياق التصميم
+legacy action missing	الأعمال المفقودة
+live value mismatch	القيمة الحيّة
+local browser reply was not displayed	لم يُعرض رد المستنقعات المحلية
+main-menu alias missing	الإسم الرئيسي مفقود
+menu destination	مقصد قائمة الطعام
+metadata display name mismatch	"البيانات الفوقية"
+metadata franchise mismatch	سوء فهم
+missing Speed rank picker	مُختل مُتسرع مفقود
+missing selection	الاختيار المفقود
+missing server list	قائمة الخادم المفقودة
+motion state mismatch	طلب عدم مطابقة الدولة
+native Force rank purchase changed	تغيرت مشتريات القوات الأصلية
+native Jedi role selector missing	مختار دور الـ (جيداي) الأصلي مفقود
+native Jedi role transition failed	تحول دور الجاداي الأصليين فشل
+native destination mismatch	مقصد الشعوب الأصلية
+native scrollbar did not drag	السكان الأصليون لم يسحبوا
+native target missing	الهدف المحلي المفقود
+not enough server fixtures	لا يكفي تركيبات الخواديم
+or propose a change to this server.	أو اقتراح تغيير لهذا الخادم.
+ordinary Apply changed Jedi role	تغيير دور (جيداي) العادي
+pending model mismatch	الأخطاء النموذجية المعلقة
+players/_humanoid/	اللاعبون/الإنسانيون/
+preview unavailable	استعراض مسبق غير متاح
+result count	عدد النتائج
+scanning creates one cvar per model	الفحوصات تُحدث مركب واحد لكل نموذج
+scrolling changed active model	تغيير النموذج النشط
+st-controls-save.tmp	"التحكم"
+staged name	الاسم المسرحي
+stale preview survived failed load	"النظرة التمهيدية" نجت من الحمولة الفاشلة
+status mismatch	سوء فهم الحالة
+stock fallback mistaken for custom voice	سطو على الأسهم خطأ لصوت العرف
+stock portrait fixture missing	تركيبات مخزون مفقودة
+sys/sys_public.h	Sys/sys_public.h
+thumb grab jumps	قفزات الإبهام
+tournament bracket	القوسين المعقوفين
+tournament status	حالة البطولة
+track click does not scroll	النقرة لا تهتز
+unexpected connection state	اتصال غير متوقع
+unknown QA operation	عملية غير معروفة لوكالة QA
+unknown scrollbar fixture	تركيبة غير معلومة
+virtual keyboard state	لوحة مفاتيح افتراضية
+weapon 1	السلاح 1
+weapon 10	السلاح 10
+weapon 11	السلاح 11
+weapon 12	السلاح 12
+weapon 2	السلاح 2
+weapon 3	السلاح 3
+weapon 4	السلاح 4
+weapon 5	السلاح 5
+weapon 6	السلاح 6
+weapon 7	السلاح 7
+weapon 8	السلاح 8
+weapon 9	السلاح 9

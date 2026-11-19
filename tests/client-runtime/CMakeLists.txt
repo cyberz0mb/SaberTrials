@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.15)
+project(SaberTrialsClientRuntimeTests LANGUAGES CXX)
+enable_testing()
+add_executable(st-controller-config controller_config.cpp)
+target_compile_features(st-controller-config PRIVATE cxx_std_17)
+add_test(NAME controller-config COMMAND st-controller-config)

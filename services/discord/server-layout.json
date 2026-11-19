@@ -1,0 +1,168 @@
+{
+  "schemaVersion": 1,
+  "verifiedDate": "2026-10-12",
+  "server": {
+    "id": "1559258720699940894",
+    "name": "Saber Trials",
+    "welcomeUrl": "https://discord.com/channels/1559258720699940894/1559259670437306478"
+  },
+  "categoryOrder": [
+    "START HERE",
+    "COMMUNITY",
+    "RANKED & SERVERS",
+    "VOICE"
+  ],
+  "textChannels": [
+    {
+      "name": "welcome",
+      "id": "1559259670437306478",
+      "url": "https://discord.com/channels/1559258720699940894/1559259670437306478"
+    },
+    {
+      "name": "rules",
+      "id": "1559259751324454972",
+      "url": "https://discord.com/channels/1559258720699940894/1559259751324454972"
+    },
+    {
+      "name": "announcements",
+      "id": "1559259756479258634",
+      "url": "https://discord.com/channels/1559258720699940894/1559259756479258634"
+    },
+    {
+      "name": "downloads",
+      "id": "1559259761013432451",
+      "url": "https://discord.com/channels/1559258720699940894/1559259761013432451"
+    },
+    {
+      "name": "general",
+      "id": "1559258721836605452",
+      "url": "https://discord.com/channels/1559258720699940894/1559258721836605452"
+    },
+    {
+      "name": "looking-for-match",
+      "id": "1559259862993604799",
+      "url": "https://discord.com/channels/1559258720699940894/1559259862993604799"
+    },
+    {
+      "name": "screenshots-clips",
+      "id": "1559259872288055397",
+      "url": "https://discord.com/channels/1559258720699940894/1559259872288055397"
+    },
+    {
+      "name": "feedback",
+      "id": "1559259880622260356",
+      "url": "https://discord.com/channels/1559258720699940894/1559259880622260356"
+    },
+    {
+      "name": "bug-reports",
+      "id": "1559259889933484143",
+      "url": "https://discord.com/channels/1559258720699940894/1559259889933484143"
+    },
+    {
+      "name": "support",
+      "id": "1559259898947178568",
+      "url": "https://discord.com/channels/1559258720699940894/1559259898947178568"
+    },
+    {
+      "name": "in-game-chat",
+      "id": "1559259908174651512",
+      "url": "https://discord.com/channels/1559258720699940894/1559259908174651512"
+    },
+    {
+      "name": "ranked-info",
+      "id": "1559259981482561659",
+      "url": "https://discord.com/channels/1559258720699940894/1559259981482561659"
+    },
+    {
+      "name": "server-status",
+      "id": "1559259988680249396",
+      "url": "https://discord.com/channels/1559258720699940894/1559259988680249396"
+    },
+    {
+      "name": "duel-leaderboard",
+      "id": "1559259995588005898",
+      "url": "https://discord.com/channels/1559258720699940894/1559259995588005898"
+    },
+    {
+      "name": "team-leaderboard",
+      "id": "1559260006321225804",
+      "url": "https://discord.com/channels/1559258720699940894/1559260006321225804"
+    }
+  ],
+  "voiceChannels": [
+    "General",
+    "Duel Room",
+    "Team Red",
+    "Team Blue"
+  ],
+  "communityRoles": [
+    {
+      "name": "Team Captain",
+      "color": "#f1c40f",
+      "assignedMembers": 0
+    },
+    {
+      "name": "Duelist",
+      "color": "#3498db",
+      "assignedMembers": 0
+    },
+    {
+      "name": "Content Creator",
+      "color": "#9b59b6",
+      "assignedMembers": 0
+    }
+  ],
+  "integration": {
+    "botConnected": false,
+    "gameChatConnected": false,
+    "serverStatusConnected": false,
+    "rankedResultsConnected": false,
+    "accountLinkingConnected": false,
+    "paidServicesCreated": false
+  },
+  "verification": {
+    "memberPreviewRole": "Duelist",
+    "readOnlyChannels": [
+      {
+        "channel": "welcome",
+        "readOnly": true
+      },
+      {
+        "channel": "rules",
+        "readOnly": true
+      },
+      {
+        "channel": "announcements",
+        "readOnly": true
+      },
+      {
+        "channel": "downloads",
+        "readOnly": true
+      },
+      {
+        "channel": "ranked-info",
+        "readOnly": true
+      },
+      {
+        "channel": "server-status",
+        "readOnly": true
+      },
+      {
+        "channel": "duel-leaderboard",
+        "readOnly": true
+      },
+      {
+        "channel": "team-leaderboard",
+        "readOnly": true
+      }
+    ],
+    "communityGeneralWritable": true,
+    "welcomePinned": true
+  },
+  "notes": [
+    "Roles are community labels with no additional permission grants or ranked eligibility.",
+    "START HERE and RANKED & SERVERS deny regular-member posting, thread creation/replies, mass mentions and external app posts.",
+    "COMMUNITY and VOICE deny regular-member mass mentions.",
+    "No game binaries, installed menus or accepted Photo Mode build changed."
+  ]
+}

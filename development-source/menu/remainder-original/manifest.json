@@ -1,0 +1,16 @@
+{
+  "rules.menu": "61453571b626e108919e219619705248111964d7d587c9efa2c6e7fda79cb309",
+  "rules_games.menu": "1426640ba6825d2873c422a9ef9c28f80d522a12593dcb2f7e2cbb76823d55c3",
+  "rules_force.menu": "8d28994fe42ebfaa6f33d73d388e87d2c9ea354a6b925e437b4632894deea24b",
+  "rules_weapons.menu": "1844fcde43336c62a70e45e8de6741eb1653b05caaceadbbbfbd6327c55ad03e",
+  "rules_items.menu": "d381caad7096cb31ac695caa48a41e3e99b277afc790cd72d6070464328bcbcc",
+  "rules_moves.menu": "1791df58c579f8daa70163389619a296d9413161bfcae438b721b750db81a683",
+  "ingame_join.menu": "45d50807a4bbebe91fd338e59e59d3e5af1396a85e41f30448901befd066a5c2",
+  "ingame_about.menu": "1d5dd35a7a0485e3375e921315c6693147de6a7b5a38d3f7b5f127b181f96d52",
+  "ingame_addbot.menu": "de98d69929ad75e6e687e2d95dff1a0c1f01bb5fde78b1b499c384d515f7cc78",
+  "ingame_vote.menu": "94a02a75e14d56e55683f9a9dfccfcdb45131064242fe4d742cd6f104b60ec1f",
+  "ingame_callvote.menu": "6e2dcc24d404caf4f359ae95dd27ac33e54a7c4deba88e1e6f33edfb9fd48c22",
+  "ingame_voicechat.menu": "24e58718c757ff2129735c50b811ec43224927f70d977492ee797eb3049cda41",
+  "ingame_objectives.menu": "95b8c325a745482be0718424690f97533a67a1b6f493d569f8c09d9ef21812b2",
+  "quit.menu": "15dff063aa770551d31e10030ed1ba3dce05842072f847c95069fbc9c5315346"
+}

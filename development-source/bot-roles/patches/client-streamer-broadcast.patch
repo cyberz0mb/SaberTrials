@@ -1,0 +1,76 @@
+diff --git a/codemp/cgame/cg_xcvar.h b/codemp/cgame/cg_xcvar.h
+--- a/codemp/cgame/cg_xcvar.h
++++ b/codemp/cgame/cg_xcvar.h
+@@ -165,4 +165,9 @@
+ XCVAR_DEF( st_streamerMode,					"0",					NULL,					CVAR_ARCHIVE|CVAR_USERINFO )
+ XCVAR_DEF( st_streamerCleanHud,				"1",					NULL,					CVAR_ARCHIVE )
+ XCVAR_DEF( st_streamerOverlay,				"1",					NULL,					CVAR_ARCHIVE )
++XCVAR_DEF( st_streamerKillFeed,				"1",					NULL,					CVAR_ARCHIVE )
++XCVAR_DEF( st_streamerPlayerNames,			"1",					NULL,					CVAR_ARCHIVE )
++XCVAR_DEF( st_streamerCameraSmooth,			"1",					NULL,					CVAR_ARCHIVE )
++XCVAR_DEF( st_streamerTeamOverlay,			"1",					NULL,					CVAR_ARCHIVE )
++XCVAR_DEF( st_streamerMatchClock,			"2",					NULL,					CVAR_ARCHIVE )
+ XCVAR_DEF( st_streamerLetterbox,			"0",					NULL,					CVAR_ARCHIVE )
+diff --git a/codemp/cgame/cg_local.h b/codemp/cgame/cg_local.h
+--- a/codemp/cgame/cg_local.h
++++ b/codemp/cgame/cg_local.h
+@@ -1701,5 +1701,6 @@
+ void CG_AddBufferedSound( sfxHandle_t sfx);
+ 
+ void CG_DrawActiveFrame( int serverTime, stereoFrame_t stereoView, qboolean demoPlayback );
++void ST_AddKillFeedEntry( int attacker, int target, int mod );
+ /*
+ Ghoul2 Insert Start
+diff --git a/codemp/cgame/cg_event.c b/codemp/cgame/cg_event.c
+--- a/codemp/cgame/cg_event.c
++++ b/codemp/cgame/cg_event.c
+@@ -152,5 +152,6 @@
+ 	targetInfo = CG_ConfigString( CS_PLAYERS + target );
+ 	if ( !targetInfo ) {
+ 		return;
+ 	}
++	ST_AddKillFeedEntry( attacker, target, mod );
+ 	Q_strncpyz( targetName, Info_ValueForKey( targetInfo, "n" ), sizeof(targetName) - 2);
+diff --git a/codemp/cgame/cg_view.c b/codemp/cgame/cg_view.c
+--- a/codemp/cgame/cg_view.c
++++ b/codemp/cgame/cg_view.c
+@@ -2618,3 +2618,39 @@
+ 	// build cg.refdef
+ 	inwater = CG_CalcViewValues();
++	{
++		static vec3_t stSmoothAngles;
++		static int stSmoothClient = -1;
++		static int stSmoothTime;
++		qboolean smoothFollow = st_streamerMode.integer &&
++			st_streamerCameraSmooth.integer && cg.snap &&
++			cg.snap->ps.persistant[PERS_TEAM] == TEAM_SPECTATOR &&
++			( cg.snap->ps.pm_flags & PMF_FOLLOW );
++
++		if ( smoothFollow ) {
++			int followedClient = cg.snap->ps.clientNum;
++			int elapsed = cg.time - stSmoothTime;
++
++			if ( stSmoothClient != followedClient || elapsed <= 0 || elapsed > 250 ) {
++				VectorCopy( cg.refdef.viewangles, stSmoothAngles );
++			}
++			else {
++				float blend = Com_Clamp( 0.08f, 0.5f, elapsed / 90.0f );
++				int axis;
++
++				for ( axis = 0; axis < 3; axis++ ) {
++					stSmoothAngles[axis] = AngleNormalize180( stSmoothAngles[axis] +
++						AngleNormalize180( cg.refdef.viewangles[axis] - stSmoothAngles[axis] ) * blend );
++				}
++				VectorCopy( stSmoothAngles, cg.refdef.viewangles );
++				AnglesToAxis( cg.refdef.viewangles, cg.refdef.viewaxis );
++			}
++
++			stSmoothClient = followedClient;
++			stSmoothTime = cg.time;
++		}
++		else {
++			stSmoothClient = -1;
++			stSmoothTime = cg.time;
++		}
++	}
+ 	CG_SetupFrustum();

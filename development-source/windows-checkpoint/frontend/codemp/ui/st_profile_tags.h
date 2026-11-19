@@ -1,0 +1,27 @@
+// Curated fallback metadata; optional installed st_profile.ini takes priority.
+struct SPTag {const char *model,*text;};
+static const SPTag spTags[]={
+{"luffy","displayName=Monkey D. Luffy\nuniverse=One Piece\nthemes=Anime,Fantasy\ngroup=luffy\n"},
+{"akaza","displayName=Akaza\nuniverse=Demon Slayer\nthemes=Anime,Fantasy\n"},
+{"aizen","displayName=Sosuke Aizen\nuniverse=Bleach\nthemes=Anime,Fantasy\n"},
+{"jedi_alien","displayName=Alien\nuniverse=Alien\nthemes=Sci-Fi,Horror\n"},
+{"boba_fett","displayName=Boba Fett\nuniverse=Star Wars\nthemes=Sci-Fi\n"},
+{"darkmagiciangirl","displayName=Dark Magician Girl\nuniverse=Yu-Gi-Oh!\nthemes=Anime,Fantasy\n"},
+{"denji","displayName=Denji\nuniverse=Chainsaw Man\nthemes=Anime,Horror\n"},
+{"hisoka","displayName=Hisoka\nuniverse=Hunter x Hunter\nthemes=Anime,Fantasy\n"},
+{"hk47","displayName=HK-47\nuniverse=Star Wars\nthemes=Sci-Fi\n"},
+{"chewbacca","displayName=Chewbacca\nuniverse=Star Wars\nthemes=Sci-Fi\n"},
+{"joker","displayName=Joker\nuniverse=DC\nthemes=Comics\n"},
+{"kyle","displayName=Kyle Katarn\nuniverse=Star Wars\nthemes=Sci-Fi\n"},
+{"leia","displayName=Leia Organa\nuniverse=Star Wars\nthemes=Sci-Fi\n"},
+{"okarun","displayName=Okarun\nuniverse=Dandadan\nthemes=Anime,Sci-Fi\n"},
+{"padme","displayName=Padme Amidala\nuniverse=Star Wars\nthemes=Sci-Fi\n"},
+{"spacewolves","displayName=Space Wolves Champion\nuniverse=Warhammer 40,000\nthemes=Sci-Fi,Fantasy\n"},
+{"stormtrooper","displayName=Stormtrooper\nuniverse=Star Wars\nthemes=Sci-Fi\n"},
+{"sunraku","displayName=Sunraku\nuniverse=Shangri-La Frontier\nthemes=Anime,Fantasy\n"},
+{"talon","displayName=Darth Talon\nuniverse=Star Wars\nthemes=Sci-Fi,Comics\n"},
+{"t800_human","displayName=T-800\nuniverse=Terminator\nthemes=Sci-Fi\n"},
+{"luffy_wano","displayName=Monkey D. Luffy\nuniverse=One Piece\nthemes=Anime,Fantasy\ngroup=luffy\n"},
+{"luffy_newworld","displayName=Monkey D. Luffy\nuniverse=One Piece\nthemes=Anime,Fantasy\ngroup=luffy\n"},
+{"luffy_g5","displayName=Monkey D. Luffy\nuniverse=One Piece\nthemes=Anime,Fantasy\ngroup=luffy\n"},
+};

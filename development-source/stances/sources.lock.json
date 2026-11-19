@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "base_archive_sha256": "e4ea0047b963c1a9b56e1ca008b170ed937a585bad795968d750a52e961f94d4",
+  "base_gla_sha256": "db1a73e1b6ea5bf8f65e5b760e2e1d247f1fada5dc5d97a4407f0ac595933097",
+  "donors": {
+    "kotor_stances_2.0/KOTOR Stances 2.0/ZZzzZZzzZZKOTORSTANCES 2.0.pk3": "571c5006ac04df8fa3eccee876aefd1ef269087b59a0201fd69a31c241cdde4b",
+    "stances_v2/zzzsaberstances_v2zzzz.pk3": "9535dfe73a207537f444d817e61fb29de5e47032f3394032db2c50a5b9b3444e",
+    "aps_japlus_stances/z_apollyon_stances_japlus.pk3": "e4ef7f04793871c829297d883949f9d3cddc067807b65df86b493db1062f1a1d",
+    "stancesanimations/Stances&Animations.pk3": "20e9591b89af6212d94f985a720dfced25aa19cd3dc6f5af5119d70a2f7a66cf",
+    "backhand_saber_stance_hq/backhand_saber_stance_hq/Stance_v1.pk3": "0d807b32e2284b76b8d0f877c5f4403c74645e4957ac8ee5a561fce1d75e9fb9"
+  }
+}

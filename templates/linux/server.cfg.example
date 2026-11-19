@@ -1,0 +1,54 @@
+// SABER TRIALS - LINUX SERVER
+// Copy to server.cfg in this same SaberTrials folder and edit the quoted values.
+// The start script creates that copy only when server.cfg does not already exist.
+// Use your hosting panel/start script for the allocated port, not this file.
+set sv_hostname "Saber Trials Server"
+// set sv_location "Ashburn, US" // Optional city and country in Server information.
+set sv_maxclients "16" // Up to 32 connected players and spectators.
+set g_password ""     // Optional join password.
+set g_gametype "0"    // 0 FFA, 3 Duel, 6 Team FFA, 8 CTF.
+set timelimit "0"
+set fraglimit "0"
+set capturelimit "8"
+set g_friendlyFire "0"
+
+// Combat: 1 Saber Trials combat, 0 Original JKA.
+set st_combatMode "1"
+set st_activeDefense "1"
+set st_parryRecovery "1"
+set st_shields "1"
+set st_noFallDamage "1"
+set st_forceSpeed "1"
+set st_fastForceRegen "1"
+set st_masterModeActive "0"
+set st_forceModeActive "0" // 0 Restricted Force, 1 Full Force.
+set st_weaponsActive "0"   // TFFA/CTF: 0 sabers only, 1 all weapons.
+set bot_minplayers "0"
+set st_botSkill "4"
+set sv_floodProtect "1"
+set sv_guardJoinRate "32"    // Remote challenge and connect requests per second, per phase. 0 disables.
+set sv_guardCommandRate "32" // Reliable commands per connected remote client per second. 0 disables.
+set sv_allowDownload "0"
+set sv_pure "0" // Development build; players need the matching Saber Trials client.
+set g_allowVote "16383"
+set st_voteCooldown "60"
+set st_voteMaxCalls "3"
+set st_anticheatMode "1" // Observations only, no automatic penalties.
+
+// Optional remote console. Keep your real password private.
+// set rconPassword "CHOOSE_YOUR_OWN_STRONG_PASSWORD"
+
+// Staff roles persist separately. Run your edited staff-setup.cfg manually once.
+// Do not exec staff-setup.cfg from startup: it could restore revoked roles.
+// Central Discord accounts require separate server enrollment and a private
+// credential import. Never put the credential/token into this file or a PK3.
+
+// New tournament commands run manually after account enrollment:
+// tournament open individual   (8-32 entrants, 10 rounds; tie = deciding round)
+// tournament open 2            (2v2; use 3/4/5 for larger team sizes)
+// tournament start             (after registration; every active player readies)
+// Team kill limits: 20 / 30 / 40 / 50. Events do not survive map/server restarts.
+// Tournament rank rewards and Discord leaderboards are not connected yet.
+
+// Keep map last. Choose a map compatible with g_gametype.
+map mp/ffa3
