@@ -33,6 +33,14 @@ int main(void)
     CHECK(stb_humans(15, "5") == 5 && stb_humans(15, "") == -1);
     CHECK(stb_humans(0, "") == 0 && stb_humans(15, "16") == -1);
     CHECK(stb_humans(15, "5bots") == -1 && stb_humans(15, "-1") == -1);
+    CHECK(stb_humans_from_counts(6, "", "6") == 0);
+    CHECK(stb_humans_from_counts(6, "", "4") == 2);
+    CHECK(stb_humans_from_counts(6, "1", "6") == 1);
+    CHECK(stb_humans_from_counts(6, "invalid", "6") == 0);
+    CHECK(stb_humans_from_counts(6, "", "") == -1);
+    CHECK(stb_humans_from_counts(6, "", "7") == -1);
+    CHECK(stb_humans_from_counts(6, "", "-1") == -1);
+    CHECK(stb_humans_from_counts(0, "", "") == 0);
     CHECK(stb_number("9999999999999999999", 64) == -1);
     CHECK(stb_number("5", 1) == -1);
     CHECK(stb_direct_address("127.0.0.1:29070") && stb_direct_address("jka.example.com"));
