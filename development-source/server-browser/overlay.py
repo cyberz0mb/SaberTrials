@@ -120,7 +120,7 @@ qboolean NET_ResolveBrowserMaster(const char *input, netadr_t *address)
         text = replace(text, '''server->humans = atoi( Info_ValueForKey( info, "g_humanplayers" ) );
 \t\t\tserver->bots = atoi( Info_ValueForKey( info, "bots" ) );''',
                        '''server->humans = stb_humans_from_counts(server->clients, Info_ValueForKey(info, "g_humanplayers"), Info_ValueForKey(info, "bots"));
-\t\t\tserver->bots = server->humans < 0 ? -1 : server->clients - server->humans;
+\t\t\tserver->bots = server->humans < 0 ? stb_number(Info_ValueForKey(info, "bots"), server->clients) : server->clients - server->humans;
 \t\t\tserver->combatMode = stb_number(Info_ValueForKey(info, "st_combatMode"), 1);''')
         for cap, count, array in (("MAX_OTHER_SERVERS", "numlocalservers", "localServers"),
                                   ("MAX_OTHER_SERVERS", "numfavoriteservers", "favoriteServers"),
@@ -224,7 +224,7 @@ void LAN_SaveServersToCache() {
                        "CL_InitServerInfo(&cls.favoriteServers[cls.numfavoriteservers], &adr);")
         text = replace(text, 'Info_SetValueForKey( info, "needpass", va("%i", server->needPassword ) );',
                        '''Info_SetValueForKey( info, "needpass", va("%i", server->passwordKnown ? server->needPassword : -1) );
-\t\tInfo_SetValueForKey(info, "st_combatMode", va("%i", server->combatMode));''')
+\t\tInfo_SetValueForKey(info, "st_combatMode", va("%i", server->combatMode));\n\t\tInfo_SetValueForKey(info, "bots", va("%i", server->bots));''')
         text = between(text, "\t\tcase SORT_CLIENTS:", "\n\t\tcase SORT_GAME:",
                        '''\t\tcase SORT_CLIENTS:
 \t\t\tif ((server1->humans < 0) != (server2->humans < 0))
