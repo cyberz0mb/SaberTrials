@@ -41,6 +41,20 @@ static inline int stb_humans(int occupied, const char *value)
     return stb_number(value, occupied);
 }
 
+/* Prefer a reported human count; fall back to advertised bot occupancy.
+ * Unknown counts must remain unknown rather than displaying a false zero. */
+static inline int stb_humans_from_counts(int occupied, const char *humans, const char *bots)
+{
+    int count = stb_humans(occupied, humans);
+    int bot_count;
+    if (count >= 0)
+        return count;
+    if (occupied < 0)
+        return -1;
+    bot_count = stb_number(bots, occupied);
+    return bot_count >= 0 ? occupied - bot_count : -1;
+}
+
 /* The engine's connect command accepts a hostname or IPv4 with optional port. */
 static inline int stb_direct_address(const char *text)
 {

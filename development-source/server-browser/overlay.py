@@ -119,7 +119,7 @@ qboolean NET_ResolveBrowserMaster(const char *input, netadr_t *address)
 \t\t\tserver->needPassword = (needPass > 0) ? qtrue : qfalse;''')
         text = replace(text, '''server->humans = atoi( Info_ValueForKey( info, "g_humanplayers" ) );
 \t\t\tserver->bots = atoi( Info_ValueForKey( info, "bots" ) );''',
-                       '''server->humans = stb_humans(server->clients, Info_ValueForKey(info, "g_humanplayers"));
+                       '''server->humans = stb_humans_from_counts(server->clients, Info_ValueForKey(info, "g_humanplayers"), Info_ValueForKey(info, "bots"));
 \t\t\tserver->bots = server->humans < 0 ? -1 : server->clients - server->humans;
 \t\t\tserver->combatMode = stb_number(Info_ValueForKey(info, "st_combatMode"), 1);''')
         for cap, count, array in (("MAX_OTHER_SERVERS", "numlocalservers", "localServers"),

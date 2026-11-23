@@ -91,7 +91,8 @@ static stb_server UI_BrowserServer(const char *info, int ping)
     server.ping = ping;
     server.occupied = stb_number(Info_ValueForKey(info, "clients"), 1024);
     server.capacity = stb_number(Info_ValueForKey(info, "sv_maxclients"), 1024);
-    server.humans = ping > 0 ? stb_humans(server.occupied, Info_ValueForKey(info, "g_humanplayers")) : -1;
+    server.humans = ping > 0 ? stb_humans_from_counts(server.occupied,
+        Info_ValueForKey(info, "g_humanplayers"), Info_ValueForKey(info, "bots")) : -1;
     server.game = stb_number(Info_ValueForKey(info, "gametype"), 255);
     server.password = stb_number(Info_ValueForKey(info, "needpass"), 1);
     server.combat = stb_number(Info_ValueForKey(info, "st_combatMode"), 1);
