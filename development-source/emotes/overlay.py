@@ -15,6 +15,15 @@ def copy(name, destination):
     shutil.copyfile(HERE/name, destination/name)
 
 
+def wire_pad_wheel(sdl):
+    edit(sdl,'static bool STPadFrame(bool focused) {',
+         'extern bool CL_EmoteWheelActive();\n\nstatic bool STPadFrame(bool focused) {')
+    edit(sdl,' if((menu||consoleKeyboard)&&focused){',
+         ' if(focused&&CL_EmoteWheelActive()){\n'
+         '  STPadPointer(values[2],values[3],Sys_Milliseconds(),Com_Clamp(1,10,cursorSpeed->value));\n'
+         ' }else if((menu||consoleKeyboard)&&focused){')
+
+
 def apply(engine, frontend, game):
     for root in (engine,frontend,game):
         copy('st_emotes.h', root/'codemp/qcommon')
@@ -49,13 +58,7 @@ def apply(engine, frontend, game):
          '\tif (CL_EmoteWheelActive()) { UIVM_MouseEvent(dx,dy); return; }')
     edit(client/'cl_st_controller.inc',' cl.viewangles[YAW]-=',
          ' if(CL_EmoteWheelActive())return true;\n cl.viewangles[YAW]-=')
-    sdl = engine/'shared/sdl/st_controller.inc'
-    edit(sdl,'static bool STPadFrame(bool focused) {',
-         'extern bool CL_EmoteWheelActive();\n\nstatic bool STPadFrame(bool focused) {')
-    edit(sdl,' if((menu||consoleKeyboard)&&focused){',
-         ' if(focused&&CL_EmoteWheelActive()){\n'
-         '  STPadPointer(values[2],values[3],Sys_Milliseconds(),Com_Clamp(1,10,cursorSpeed->value));\n'
-         ' }else if((menu||consoleKeyboard)&&focused){')
+    wire_pad_wheel(engine/'shared/sdl/st_controller.inc')
     edit(client/'cl_main.cpp','void CL_Init( void ) {','extern void CL_EmotesInit();\nvoid CL_Init( void ) {')
     edit(client/'cl_main.cpp','\tCL_InitInput ();','\tCL_InitInput ();\n\tCL_EmotesInit();')
     edit(client/'cl_scrn.cpp','\tif ( Key_GetCatcher( ) & KEYCATCH_UI && cls.uiStarted ) {',

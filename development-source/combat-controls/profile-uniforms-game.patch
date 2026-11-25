@@ -1,0 +1,25 @@
+--- a/codemp/game/g_client.c
++++ b/codemp/game/g_client.c
+@@ -23,6 +23,7 @@
+ */
+ 
+ #include "g_local.h"
++#include "st_stock_uniform.h"
+ #include "st_crystal.h"
+ #include "ghoul2/G2.h"
+ #include "bg_saga.h"
+@@ -2578,7 +2579,13 @@
+ 		}
+ 	}
+ 
+-	// Older clients still receive the native team tint through entity state.
++	// The user's optional uniform is separate from their actual team and outfit.
++    int uniformSlot = ST_UniformSlot(Info_ValueForKey(userinfo, "st_uniform"));
++    if (uniformSlot &&
++        strlen(buf) + sizeof("us\\8\\") <= sizeof(buf))
++        Q_strcat(buf, sizeof(buf), va("us\\%d\\", uniformSlot));
++
++    // Older clients still receive the native team tint through entity state.
+ 	if (teamTint && strlen(buf) + sizeof("outfitrgb\\000000\\") <= sizeof(buf))
+ 		Q_strcat(buf, sizeof(buf), va("outfitrgb\\%06X\\", outfitRGB));
+ 

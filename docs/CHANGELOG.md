@@ -1,6 +1,24 @@
 # Saber Trials changelog
 
-## November 2026
+## November 25, 2026
+
+- Added dedicated Block, Attack-timed parries, single-saber feints, and saved
+  Match Rules presets. Hosts can configure combat, Force, weapons, bots, and
+  map rotation.
+- Added PUG queues, Ladder series, and TFFA with up to eight teams. Account
+  points require an enrolled server and a matching account service.
+- Improved controller detection, menu navigation, chat and translation.
+  Added a Classic JKA menu theme and adaptive network settings.
+- Expanded compatibility with base JKA, OpenJK and JA+ servers. Added
+  player-facing HUD and cosmetic options and updated server-browser population
+  display. Rendering and availability depend on the connected server and
+  installed content.
+- Added Vulkan support for enhanced maps, high-detail character geometry, and
+  materials shared with Rend2.
+- Added optional anti-script monitoring and enforcement. Hosted verification
+  is still needed before using enforcement.
+
+## Earlier November 2026 changes
 
 - Added Worldwide server discovery, search, direct connect and Quick Match
   recommendations based on mode, ping and population.

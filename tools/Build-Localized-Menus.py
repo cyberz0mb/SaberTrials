@@ -37,6 +37,7 @@ def prepare():
     overlay = util.module_from_spec(spec)
     spec.loader.exec_module(overlay)
     overlay.apply(OUT/'engine',OUT/'frontend')
+    import_module('compat_renderers').stage_texture_decoding(OUT/'engine')
     embed_catalogs()
     write(RECEIPT,dict(installed=installed,sources={role:tree(OUT/role) for role in ('engine','frontend')}))
     print('Prepared menu localization on the current client')

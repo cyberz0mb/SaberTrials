@@ -19,6 +19,10 @@ uint64_t epoch=0;bool attempted=false;
 double Wall(){return std::chrono::duration<double>(std::chrono::system_clock::now().time_since_epoch()).count();}
 double Mono(){return std::chrono::duration<double>(std::chrono::steady_clock::now().time_since_epoch()).count();}
 bool Human(int i){return i>=0&&i<sv_maxclients->integer&&i<MAX_CLIENTS&&svs.clients[i].state==CS_ACTIVE&&svs.clients[i].netchan.remoteAddress.type!=NA_BOT;}
+bool NeedsBridge(){
+ const int mode=Cvar_VariableIntegerValue("sv_stAntiScript");
+ return GVM_AccountAvailable() || mode==1 || mode==2;
+}
 void ClearGame(int i){if(!applied[i].empty()){GVM_AccountClear(i);applied[i].clear();}}
 bool Ready(){
  if(bridge)return true;if(attempted)return false;attempted=true;
@@ -36,10 +40,12 @@ void Sync(double now){
   }
  }
 }
-void Publish(){
+void Publish(bool (*allowGamePublish)(int)){
+ if(!GVM_AccountAvailable())return;
  for(int i=0;i<MAX_CLIENTS;i++){
   auto p=bridge->Profile(i);
   if(p.account.empty()){ClearGame(i);continue;}
+  if(allowGamePublish && !allowGamePublish(i))continue;
   std::string key=p.account+"\n"+p.name+"\n"+p.team+"\n"+p.tag;
   if(key==applied[i])continue;
   unsigned char generation[16];STEProfile profile={};
@@ -51,19 +57,26 @@ void Publish(){
  }
 }
 }
+std::string SV_VerifiedPlayerAccount(int slot){
+ unsigned char generation[16];
+ if(!bridge||!Human(slot)||!SV_StaffGeneration(slot,generation)||
+    generations[slot]!=st::Hex(generation,16))return {};
+ bridge->Tick(Mono());
+ return bridge->Profile(slot).account;
+}
 void SV_AccountReset(){
  for(int i=0;i<MAX_CLIENTS;i++){ClearGame(i);generations[i].clear();sentChallenge[i].clear();nextOffer[i]=0;}
  bridge.reset();attempted=false;++epoch; // outstanding workers cannot affect the next map
 }
-void SV_AccountFrame(){
+void SV_AccountFrame(bool (*allowGamePublish)(int)){
  const double wall=Wall(),now=Mono();
  // Drain even when the next map has no compatible game extension.
  for(auto&w:workers)if(w.result.valid()&&w.result.wait_for(std::chrono::seconds(0))==std::future_status::ready){
   staccount::Response r;try{r=w.result.get();}catch(...){}
   if(bridge&&w.epoch==epoch)bridge->Complete(w.job,r,wall,now);w.job={};
  }
- if(!GVM_AccountAvailable()||!Ready())return;
- Sync(now);bridge->Tick(now);Publish();
+ if(!NeedsBridge()||!Ready())return;
+ Sync(now);bridge->Tick(now);Publish(allowGamePublish);
  for(int i=0;i<MAX_CLIENTS;i++)if(!generations[i].empty()){
   const auto challenge=bridge->Challenge(i);
   if(!challenge.empty()&&challenge!=sentChallenge[i]){
@@ -80,7 +93,7 @@ void SV_AccountFrame(){
 bool SV_AccountCommand(int slot){
  const std::string cmd=Cmd_Argv(0);
  if(cmd!="staccount_begin"&&cmd!="staccount_ready"&&cmd!="staccount_clear")return false;
- if(Cmd_Argc()!=2||!Human(slot)||!GVM_AccountAvailable()||!Ready())return true;
+ if(Cmd_Argc()!=2||!Human(slot)||!NeedsBridge()||!Ready())return true;
  const double now=Mono();Sync(now);const std::string nonce=Cmd_Argv(1);
  if(cmd=="staccount_begin"){if(bridge->Begin(slot,nonce,now)){ClearGame(slot);sentChallenge[slot].clear();}}
  else if(cmd=="staccount_ready")bridge->Ready(slot,nonce,now);

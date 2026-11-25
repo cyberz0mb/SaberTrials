@@ -1,0 +1,333 @@
+--- a/codemp/game/CMakeLists.txt
++++ b/codemp/game/CMakeLists.txt
+@@ -33,6 +33,8 @@
+ set(MPGameDefines ${MPSharedDefines} "_GAME" )
+ set(MPGameGameFiles
+     "${MPDir}/game/g_staff.c"
++    "${MPDir}/game/g_event.c"
++    "${MPDir}/game/st_event.c"
+ 	"${MPDir}/game/ai_main.c"
+ 	"${MPDir}/game/ai_util.c"
+ 	"${MPDir}/game/ai_wpnav.c"
+--- a/codemp/game/g_active.c
++++ b/codemp/game/g_active.c
+@@ -491,7 +491,7 @@
+ ==============
+ */
+ void ClientImpacts( gentity_t *ent, pmove_t *pmove ) {
+-    if (ST_StaffBlocked(ent)) return;
++    if (ST_EventBlocked(ent) || ST_StaffBlocked(ent)) return;
+ 	int		i, j;
+ 	trace_t	trace;
+ 	gentity_t	*other;
+@@ -530,7 +530,7 @@
+ ============
+ */
+ void	G_TouchTriggers( gentity_t *ent ) {
+-    if (ST_StaffBlocked(ent)) return;
++    if (ST_EventBlocked(ent) || ST_StaffBlocked(ent)) return;
+ 	int			i, num;
+ 	int			touch[MAX_GENTITIES];
+ 	gentity_t	*hit;
+@@ -1966,7 +1966,7 @@
+ void ClientThink_real( gentity_t *ent ) {
+     G_ST_HybridThink(ent);
+     G_STFeintStoppedState(ent);
+-    if (ST_StaffThink(ent)) return;
++    if (ST_EventThink(ent) || ST_StaffThink(ent)) return;
+ 	gclient_t	*client;
+ 	pmove_t		pmove;
+ 	int			oldEventSequence;
+@@ -3845,7 +3845,7 @@
+ 
+     G_ST_HybridThink(ent);
+     G_STFeintStoppedState(ent);
+-    if (ST_StaffThink(ent)) return;
++    if (ST_EventThink(ent) || ST_StaffThink(ent)) return;
+ 	int			i;
+ 	qboolean isNPC = qfalse;
+ 
+--- a/codemp/game/g_client.c
++++ b/codemp/game/g_client.c
+@@ -4197,6 +4197,7 @@
+ extern void G_EmoteInterrupt(gentity_t* ent);
+ void ClientDisconnect( int clientNum ) {
+ 	G_EmoteInterrupt(&g_entities[clientNum]);
++    ST_EventDisconnect(clientNum);
+     ST_StaffClearClient(clientNum);
+ 	gentity_t	*ent;
+ 	gentity_t	*tent;
+@@ -4271,7 +4272,7 @@
+ 
+ 	qboolean stMvpLeaving=ST_MvpDuelDisconnect(clientNum);
+ 	// if we are playing in tourney mode, give a win to the other player and clear his frags for this round
+-	if ( !stMvpLeaving && level.gametype == GT_DUEL && !level.intermissiontime && !level.warmupTime ) {
++	if ( !stMvpLeaving && !ST_EventActive() && level.gametype == GT_DUEL && !level.intermissiontime && !level.warmupTime ) {
+ 		if ( level.sortedClients[1] == clientNum ) {
+ 			level.clients[ level.sortedClients[0] ].ps.persistant[PERS_SCORE] = 0;
+ 			level.clients[ level.sortedClients[0] ].sess.wins++;
+@@ -4284,7 +4285,7 @@
+ 		}
+ 	}
+ 
+-	if ( level.gametype == GT_DUEL && ent->client->sess.sessionTeam == TEAM_FREE && level.intermissiontime && !ST_MvpHoldIntermission() ) {
++	if ( !ST_EventActive() && level.gametype == GT_DUEL && ent->client->sess.sessionTeam == TEAM_FREE && level.intermissiontime && !ST_MvpHoldIntermission() ) {
+ 		trap->SendConsoleCommand( EXEC_APPEND, "map_restart 0\n" );
+ 		level.restarted = qtrue;
+ 		level.changemap = NULL;
+--- a/codemp/game/g_cmds.c
++++ b/codemp/game/g_cmds.c
+@@ -664,7 +664,7 @@
+ 
+ 	clientNum = client - level.clients;
+ 	// Check before balance, deaths, or other team-change side effects.
+-	if ( level.gametype == GT_TEAM && level.stTeamsLocked &&
++	if ( !ST_EventPlacing() && level.gametype == GT_TEAM && level.stTeamsLocked &&
+ 		Q_stricmp( s, "scoreboard" ) && Q_stricmp( s, "score" ) &&
+ 		Q_stricmp( s, "follow1" ) && Q_stricmp( s, "follow2" ) &&
+ 		Q_stricmp( s, "spectator" ) && Q_stricmp( s, "s" ) ) {
+@@ -717,7 +717,7 @@
+ 			//}
+ 		}
+ 
+-		if ( g_teamForceBalance.integer && !g_jediVmerc.integer ) {
++		if ( !ST_EventPlacing() && g_teamForceBalance.integer && !g_jediVmerc.integer ) {
+ 			int		counts[TEAM_NUM_TEAMS];
+ 
+ 			//JAC: Invalid clientNum was being used
+@@ -785,6 +785,7 @@
+ 		team = TEAM_FREE;
+ 	}
+ 
++	if (!ST_EventCanJoin(clientNum,team))return;
+ 	if ( ST_TournamentControlsDuel() && team != TEAM_SPECTATOR &&
+ 		!ST_TournamentCanEnterArena( clientNum ) ) {
+ 		trap->SendServerCommand( clientNum,
+@@ -852,7 +853,7 @@
+ 	}
+ 
+ 	// override decision if limiting the players
+-	if ( (level.gametype == GT_DUEL)
++	if ( !ST_EventPlacing() && (level.gametype == GT_DUEL)
+ 		&& level.numNonSpectatorClients >= 2 )
+ 	{
+ 		team = TEAM_SPECTATOR;
+@@ -862,13 +863,15 @@
+ 	{
+ 		team = TEAM_SPECTATOR;
+ 	}
+-	else if ( g_maxGameClients.integer > 0 &&
++	else if ( !ST_EventPlacing() && g_maxGameClients.integer > 0 &&
+ 		level.numNonSpectatorClients >= g_maxGameClients.integer )
+ 	{
+ 		team = TEAM_SPECTATOR;
+ 	}
+ 
+ 	//
++	// Check the final choice too: capacity rules may have changed it.
++	if (!ST_EventCanJoin(clientNum,team))return;
+ 	// decide if we will allow the change
+ 	//
+ 	if ( team == oldTeam && team != TEAM_SPECTATOR ) {
+@@ -1989,6 +1992,7 @@
+ }
+ 
+ qboolean G_VoteTournament( gentity_t *ent, int numArgs, const char *arg1, const char *arg2 ) {
++	if(ST_EventActive()){trap->SendServerCommand(ent-g_entities,"print \"Tournament registration and start are managed by the event operator.\\n\"");return qfalse;}
+ 	if ( !Q_stricmp( arg2, "open" ) ) {
+ 		if ( level.stTournamentPhase == ST_TOURNAMENT_REGISTRATION ||
+ 			level.stTournamentPhase == ST_TOURNAMENT_RUNNING ||
+@@ -2279,6 +2283,10 @@
+ 	char			arg1[MAX_CVAR_VALUE_STRING] = {0};
+ 	char			arg2[MAX_CVAR_VALUE_STRING] = {0};
+ 	voteString_t	*vote = NULL;
++	if (ST_EventActive()) {
++		trap->SendServerCommand(ent-g_entities,"print \"Tournament: votes are unavailable while the event is open. Staff can intervene.\\n\"");
++		return;
++	}
+ 
+ 	// not allowed to vote at all
+ 	if ( !g_allowVote.integer ) {
+@@ -3598,6 +3606,7 @@
+ 	}
+ 
+ 	trap->Argv( 0, cmd, sizeof( cmd ) );
++	if(!ST_EventAllowCommand(clientNum,cmd))return;
+ 
+     if (ST_MvpNetCommand(clientNum,cmd)) return;
+     if (ST_StaffBlocked(ent) && Q_stricmp(cmd,"say") && Q_stricmp(cmd,"say_team") && Q_stricmp(cmd,"tell") && Q_stricmp(cmd,"score")) {
+--- a/codemp/game/g_combat.c
++++ b/codemp/game/g_combat.c
+@@ -4508,7 +4508,7 @@
+ vec3_t gPainPoint;
+ 
+ void G_Damage( gentity_t *targ, gentity_t *inflictor, gentity_t *attacker, vec3_t dir, vec3_t point, int damage, int dflags, int mod ) {
+-    if (ST_StaffBlocked(targ) || ST_StaffBlocked(attacker) || ST_StaffBlocked(inflictor)) return;
++    if (ST_EventBlocked(targ) || ST_EventBlocked(attacker) || ST_EventBlocked(inflictor) || ST_StaffBlocked(targ) || ST_StaffBlocked(attacker) || ST_StaffBlocked(inflictor)) return;
+ 	gclient_t	*client;
+ 	int			take, asave, max, subamt = 0, knockback;
+ 	float		famt = 0, hamt = 0, shieldAbsorbed = 0;
+--- a/codemp/game/g_local.h
++++ b/codemp/game/g_local.h
+@@ -1744,3 +1744,4 @@
+ qboolean ST_MvpDuelDisconnect(int client);
+ 
+ #include "game/st_dlc_weapons.h"
++#include "g_event.h"
+--- a/codemp/game/g_main.c
++++ b/codemp/game/g_main.c
+@@ -1961,6 +1961,7 @@
+ 	char *sKillLimit;
+ 	qboolean printLimit = qtrue;
+ 	int stKillLimit = ST_TournamentControlsDuel() ? 1 : fraglimit.integer;
++	if(ST_EventActive())return;
+ 	// if at the intermission, wait for all non-bots to
+ 	// signal ready, then go to next level
+ 	if ( level.intermissiontime ) {
+@@ -2317,6 +2318,7 @@
+ int g_duelPrintTimer = 0;
+ void CheckTournament( void ) {
+ 	ST_TournamentFrame();
++	if(ST_EventActive())return;
+ 
+ 	// check because we run 3 game frames before calling Connect and/or ClientBegin
+ 	// for clients on a map_restart
+@@ -2626,6 +2628,13 @@
+ ==================
+ */
+ void CheckVote( void ) {
++	if (ST_EventActive()) {
++		if (level.voteTime || level.voteExecuteTime) {
++			level.voteTime=level.voteExecuteTime=0;
++			trap->SetConfigstring(CS_VOTE_TIME, "");
++		}
++		return;
++	}
+ 	if ( level.voteExecuteTime && level.voteExecuteTime < level.time ) {
+ 		level.voteExecuteTime = 0;
+ 		trap->SendConsoleCommand( EXEC_APPEND, va( "%s\n", level.voteString ) );
+@@ -3131,6 +3140,8 @@
+ 	//
+ 	ent = &g_entities[0];
+ 	for (i=0 ; i<level.num_entities ; i++, ent++) {
++		if(ST_EventHoldEntity(ent))continue;
++		if(ent->inuse && i<MAX_CLIENTS && ST_EventThink(ent))continue;
+ 		if ( !ent->inuse ) {
+ 			continue;
+ 		}
+--- a/codemp/game/g_sabertrials.c
++++ b/codemp/game/g_sabertrials.c
+@@ -407,7 +407,9 @@
+ 		trap->Cvar_Set( "g_allowVote", "16383" );
+ 		trap->Cvar_Update( &g_allowVote );
+ 	}
+-	ST_TournamentLoadState();
++	ST_EventInit();
++	if (ST_EventActive()) ST_TournamentClearLevelState();
++	else ST_TournamentLoadState();
+ 	if ( level.gametype == GT_DUEL && level.stTournamentPhase != ST_TOURNAMENT_OFF ) {
+ 		trap->Cvar_Set( "fraglimit", "1" );
+ 		trap->Cvar_Update( &fraglimit );
+@@ -802,6 +804,7 @@
+ }
+ 
+ qboolean ST_TournamentControlsDuel( void ) {
++	if(ST_EventActive())return level.gametype==GT_DUEL;
+ 	return level.gametype == GT_DUEL &&
+ 		(level.stTournamentPhase == ST_TOURNAMENT_REGISTRATION ||
+ 		level.stTournamentPhase == ST_TOURNAMENT_RUNNING ||
+@@ -810,6 +813,7 @@
+ }
+ 
+ qboolean ST_TournamentCanEnterArena( int clientNum ) {
++	if(ST_EventActive())return ST_EventCanJoin(clientNum,TEAM_FREE);
+ 	return level.stTournamentPhase == ST_TOURNAMENT_RUNNING &&
+ 		(clientNum == level.stTournamentActiveA || clientNum == level.stTournamentActiveB);
+ }
+@@ -1414,6 +1418,7 @@
+ }
+ 
+ void ST_TournamentFrame( void ) {
++	if(ST_EventActive()){ST_EventFrame();return;}
+ 	qboolean firstConnected;
+ 	qboolean secondConnected;
+ 	int i;
+@@ -1508,6 +1513,7 @@
+ }
+ 
+ void Cmd_STTournament_f( gentity_t *ent ) {
++	if(ST_EventClientCommand(ent))return;
+ 	char action[MAX_TOKEN_CHARS];
+ 	int clientNum = ent - g_entities;
+ 
+@@ -1539,6 +1545,7 @@
+ }
+ 
+ void Svcmd_STTournament_f( void ) {
++	if(ST_EventActive()){ST_EventConsole();return;}
+ 	char action[MAX_TOKEN_CHARS];
+ 	char value[MAX_CVAR_VALUE_STRING];
+ 	gclient_t *client;
+--- a/codemp/game/g_staff.c
++++ b/codemp/game/g_staff.c
+@@ -9,11 +9,13 @@
+ static staffState_t states[MAX_CLIENTS];
+ static const STStaffImports* engine;
+ int ST_StaffRoleForClient(int slot){return engine?engine->RoleForClient(slot):0;}
++int ST_StaffGenerationForClient(int slot,unsigned char generation[16]){return engine?engine->GenerationForClient(slot,generation):0;}
+ static void StaffTrace(trace_t* result,const vec3_t start,const vec3_t mins,const vec3_t maxs,const vec3_t end,int pass,int mask){trap->Trace(result,start,mins,maxs,end,pass,mask,qfalse,0,0);}
+ static qboolean Player(const gentity_t* ent){return ent&&ent->inuse&&ent->client&&ent->s.number>=0&&ent->s.number<MAX_CLIENTS&&ent->client->pers.connected==CON_CONNECTED;}
+ qboolean ST_StaffBlocked(const gentity_t* ent){return Player(ent)&&states[ent->s.number].mode!=0;}
+ static qboolean Competing(const gentity_t* ent){
+  if(!Player(ent))return qtrue;
++ if(ST_EventActive()&&ST_EventCanJoin(ent->s.number,ent->client->sess.sessionTeam)&&ent->client->sess.sessionTeam!=TEAM_SPECTATOR)return qtrue;
+  if(ent->client->ps.duelInProgress)return qtrue;
+  if((level.gametype==GT_DUEL||level.gametype==GT_POWERDUEL)&&ent->client->sess.sessionTeam!=TEAM_SPECTATOR)return qtrue;
+  if(level.stTournamentPhase==ST_TOURNAMENT_RUNNING&&(level.stTournamentActiveA==ent->s.number||level.stTournamentActiveB==ent->s.number))return qtrue;
+@@ -118,6 +120,7 @@
+  if(!action||!result)return 0;memset(result,0,sizeof(*result));Q_strncpyz(result->message,"Action denied",sizeof(result->message));
+  if(!engine||action->actorSlot<0||action->actorSlot>=level.maxclients||engine->RoleForClient(action->actorSlot)!=action->role||action->role<1)return 1;
+  actor=&g_entities[action->actorSlot];if(!Player(actor))return 1;
++ if(action->command==ST_CMD_TOURNAMENT)return ST_EventStaff(action,result);
+  if(action->command==ST_CMD_GHOST_OFF){if(states[actor->s.number].mode!=2){Q_strncpyz(result->message,"Ghost is already off",sizeof(result->message));return 1;}ST_StaffClearClient(actor->s.number);result->ok=1;Q_strncpyz(result->message,"Ghost off",sizeof(result->message));return 1;}
+  if(ST_StaffBlocked(actor)||Competing(actor)||Carrier(actor)||actor->health<=0||actor->client->sess.sessionTeam==TEAM_SPECTATOR){Q_strncpyz(result->message,"Leave combat, objectives and restricted movement before intervening",sizeof(result->message));return 1;}
+  if(action->command==ST_CMD_RESOLVE_AIM){
+--- a/codemp/game/g_staff.h
++++ b/codemp/game/g_staff.h
+@@ -4,6 +4,7 @@
+ #include "../staff/st_staff_movement.h"
+ qboolean ST_StaffBlocked(const gentity_t* ent);
+ int ST_StaffRoleForClient(int slot);
++int ST_StaffGenerationForClient(int slot,unsigned char generation[16]);
+ qboolean ST_StaffThink(gentity_t* ent);
+ void ST_StaffFrame(void);
+ void ST_StaffClearClient(int slot);
+--- a/codemp/game/g_svcmds.c
++++ b/codemp/game/g_svcmds.c
+@@ -630,6 +630,8 @@
+ 
+ svcmd_t svcmds[] = {
+ 	{ "st_botnav", Svcmd_STBotNav_f, qfalse },
++    { "tournament", ST_EventConsole, qfalse },
++    { "st_event", ST_EventConsole, qfalse },
+ 	{ "addbot",						Svcmd_AddBot_f,						qfalse },
+ 	{ "addip",						Svcmd_AddIP_f,						qfalse },
+ 	{ "botlist",					Svcmd_BotList_f,					qfalse },
+--- a/codemp/game/g_xcvar.h
++++ b/codemp/game/g_xcvar.h
+@@ -183,6 +183,7 @@
+ XCVAR_DEF( sv_cheats,					"1",			NULL,						CVAR_NONE,										qfalse )
+ XCVAR_DEF( sv_location, "", NULL, CVAR_ARCHIVE|CVAR_SERVERINFO, qfalse )
+ XCVAR_DEF( sv_fps,						"40",			NULL,						CVAR_ARCHIVE|CVAR_SERVERINFO,					qtrue )
++XCVAR_DEF( sv_location, "", NULL, CVAR_ARCHIVE|CVAR_SERVERINFO, qfalse )
+ XCVAR_DEF( sv_maxclients,				"8",			NULL,						CVAR_SERVERINFO|CVAR_LATCH|CVAR_ARCHIVE,		qfalse )
+ XCVAR_DEF( timelimit,					"0",			NULL,						CVAR_SERVERINFO|CVAR_ARCHIVE|CVAR_NORESTART,	qtrue )
+ XCVAR_DEF( st_combatMode, "1", NULL, CVAR_ARCHIVE|CVAR_LATCH|CVAR_SERVERINFO, qfalse )
+@@ -202,6 +203,7 @@
+ XCVAR_DEF( st_shieldRegenDelay,		"5000",			NULL,						CVAR_ARCHIVE,				qfalse )
+ XCVAR_DEF( st_shieldRegenAmount,		"2",			NULL,						CVAR_ARCHIVE,				qfalse )
+ XCVAR_DEF( g_stEmotes, "1", NULL, CVAR_ARCHIVE, qfalse )
++XCVAR_DEF( st_tournamentMode, "0", NULL, CVAR_ARCHIVE|CVAR_SERVERINFO, qfalse )
+ XCVAR_DEF( st_tournamentBestOf,			"3",			NULL,						CVAR_ARCHIVE,							qfalse )
+ XCVAR_DEF( st_tournamentFinalBestOf,	"5",			NULL,						CVAR_ARCHIVE,							qfalse )
+ XCVAR_DEF( st_tournamentArenas,			"mp/duel1 mp/duel2 mp/duel3 mp/duel4", NULL,				CVAR_ARCHIVE,						qfalse )

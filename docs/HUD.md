@@ -1,9 +1,13 @@
 # Saber Trials HUD
 
 The gameplay HUD follows the accepted dark glass/cyan concept. Health and armor
-sit at the lower left, saber style and Force at the lower right, and score above
-the live head portrait. Panels, icons and original geometric lettering stay
+sit at the lower left. Saber style, personal score and team scores share a
+right edge in the lower right during play. Panels, icons and original geometric lettering stay
 proportional across screen sizes. The central fighting area remains clear.
+
+Enable `st_netStats 1` for a compact two-line connection readout at the top
+left. `cg_drawFPS 1` shows frame rate at the top right. `cg_lagometer 1`
+places the snapshot graph above health. Each display can be toggled independently.
 
 Open **Setup > UI Settings > HUD appearance** from either menu. Choose Saber
 Trials or Original JKA, toggle the score or low-health pulse, and set HUD size

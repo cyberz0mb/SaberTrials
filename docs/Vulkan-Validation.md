@@ -1,5 +1,8 @@
 # Windows Vulkan verification
 
-The separate Vulkan build passed local startup, renderer switching, classic
-and custom map loading, translated chat, and a loopback client/server match.
-This is a renderer preview. See the [renderer guide](Vulkan-Renderer.md).
+Local Windows checks covered startup and renderer switching, rendering classic
+and enhanced maps, high-detail character geometry, translated chat, and a
+dedicated server on loopback. Tests exercised geometry caching and direct draws.
+
+Use the matching renderer module from the same client build. See the
+[renderer guide](Vulkan-Renderer.md) for how to select Vulkan.

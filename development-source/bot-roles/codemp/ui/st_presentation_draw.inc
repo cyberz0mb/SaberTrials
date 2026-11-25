@@ -31,7 +31,14 @@ static void STP_DrawRow(const STPPainter*p,const STPBoard*b,int index,float y) {
  p->text(74,y,200,.69f,r->name,stpText,0);
  /* Local position and readiness are independent of global rank. */
  p->text(278,y,55,.58f,r->ready?"READY":r->flag==1?"RED FLAG":r->flag==2?"BLUE FLAG":r->flag==3?"FLAG":you?"YOU":r->team==3?"SPEC":r->team==1?"RED":r->team==2?"BLUE":"",accent,0);
- if(b->mode==6){
+ if(b->classicStats){
+  snprintf(value,sizeof(value),"%d",r->score);
+  p->text(334,y,56,.66f,r->team==3?"--":value,stpText,1);
+  if(b->mode==3||b->mode==4){
+   snprintf(value,sizeof(value),"%d / %d",r->wins,r->losses);
+   p->text(405,y,80,.63f,r->team==3?"--":value,stpMuted,1);
+  }
+ }else if(b->mode==6){
   int hasKd=r->hasTffaKd && r->team!=3 && r->ping>=0;
   snprintf(value,sizeof(value),"%d / %d",r->kills,r->deaths);
   p->text(334,y,56,.66f,hasKd?value:"--",stpText,1);
@@ -58,8 +65,9 @@ static void STP_DrawRow(const STPPainter*p,const STPBoard*b,int index,float y) {
   p->text(444,y,56,.63f,r->team==3?"--":value,stpMuted,1);
  }
  snprintf(value,sizeof(value),"%d",r->ping);
- p->text(b->mode==6?535:510,y,b->mode==6?55:43,.63f,r->bot?"BOT":r->ping<0?"JOIN":value,r->ping>150?stpGold:stpText,1);
- if(b->mode!=6){
+ const int teamStats=b->mode==6&&!b->classicStats;
+ p->text(teamStats?535:510,y,teamStats?55:43,.63f,r->bot?"BOT":r->ping<0?"JOIN":value,r->ping>150?stpGold:stpText,1);
+ if(!teamStats){
   snprintf(value,sizeof(value),"%dm",r->minutes);
   p->text(560,y,30,.60f,value,stpMuted,1);
  }
@@ -86,7 +94,12 @@ static void STP_DrawBoard(const STPPainter*p,const STPBoard*b) {
  p->text(48,88,544,.76f,b->result?b->outcome:"GLOBAL RANK: unavailable",b->result?stpGold:stpMuted,0);
  p->fill(48,112,544,.5f,stpCyan);
  p->text(74,115,200,.53f,"PLAYER",stpMuted,0);
- if(b->mode==6){
+ if(b->classicStats){
+  p->text(334,115,56,.53f,"SCORE",stpMuted,1);
+  if(b->mode==3||b->mode==4)p->text(405,115,80,.53f,"DUEL W/L",stpMuted,1);
+  p->text(510,115,43,.53f,"PING",stpMuted,1);
+  p->text(560,115,30,.53f,"TIME",stpMuted,1);
+ }else if(b->mode==6){
   p->text(334,115,56,.53f,"K/D",stpMuted,1);
   p->text(400,115,56,.53f,"RATIO",stpMuted,1);
   p->text(466,115,56,.53f,"ASSISTS",stpMuted,1);

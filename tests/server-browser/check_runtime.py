@@ -63,16 +63,18 @@ def master(*ports, movie=False):
     return lambda query: packet if query == PREFIX + b"getservers 26 full empty" else None
 
 
-def info(name, delay=0, protocol=26, clients=3, humans=None):
+def info(name, delay=0, protocol=26, clients=3, humans=None, bots=None, capacity=6):
     def reply(query):
         if not query.startswith(PREFIX + b"getinfo "):
             return None
         time.sleep(delay)
         challenge = query.split()[1].decode("ascii")
         data = dict(challenge=challenge, protocol=protocol, hostname=name, mapname="mp/ffa3",
-                    clients=clients, sv_maxclients=6, gametype=0, needpass=0, game="SaberTrials")
+                    clients=clients, sv_maxclients=capacity, gametype=0, needpass=0, game="SaberTrials")
         if humans is not None:
             data["g_humanplayers"] = humans
+        if bots is not None:
+            data["bots"] = bots
         return PREFIX + b"infoResponse\n" + "".join(f"\\{key}\\{value}" for key, value in data.items()).encode("ascii")
     return reply
 
@@ -90,8 +92,15 @@ def native_has_bot(server_port):
         return False
 
 
-def stage(run, renderer, server=False):
+def stage(run, renderer, server=False, compatibility=False):
     exe, mod = runtime.stage(run, renderer, server=server, use_pack=False)
+    if compatibility and not server:
+        compat = ROOT / "dist/compat"
+        ui = compat / "ui-build/Release/uix86_64.dll"
+        shutil.copyfile(compat / "build/Release/openjk.x86_64.exe", exe)
+        shutil.copyfile(ui, mod / "uix86_64.dll")
+        shutil.copyfile(ui, exe.parent / "SaberTrialsUI.x86_64.dll")
+        return exe, mod
     role, binary = ("dedicated", "openjkded.x86_64.exe") if server else ("engine", "openjk.x86_64.exe")
     shutil.copyfile(BUILD / f"build-{role}/Release" / binary, exe)
     if not server:
@@ -120,11 +129,13 @@ def fixture_menu(mod):
                     exec "exec browser-finish.cfg" ; } }
             menuDef { name "st_test_clear" rect 0 0 0 0 visible 0
                 onOpen { close st_test_clear ; open joinserver ; open st_quickmatch ; uiScript QuickClear ; } }
+            menuDef { name "st_test_population_refresh" rect 0 0 0 0 visible 0
+                onOpen { close st_test_population_refresh ; uiScript RefreshServers ; } }
         '''
         overlay.writestr(name, menu[:end] + fixtures + menu[end:])
 
 
-def main(renderer, protected):
+def main(renderer, protected, compatibility):
     evidence = Path(mkdtemp(prefix="runtime-", dir=BUILD))
     print(evidence, flush=True)
     with ExitStack() as stack:
@@ -139,7 +150,7 @@ def main(renderer, protected):
         responder(wrong, info("Wrong Protocol Fixture", protocol=25))
         server, client = evidence / "server", evidence / "client"
         server_exe, server_mod = stage(server, renderer, server=True)
-        client_exe, client_mod = stage(client, renderer)
+        client_exe, client_mod = stage(client, renderer, compatibility=compatibility)
         fixture_menu(client_mod)
         (server_mod / "scripts").mkdir()
         (server_mod / "scripts/st_browser_fixture.bot").write_text(
@@ -193,6 +204,84 @@ def main(renderer, protected):
     print(f"{renderer}: browser, missing master, overlapping lists, high ping, filters and {access} passed")
 
 
+def players(bots, humans):
+    return (b'0 0 "Bot"\n' * bots) + (b'1 150 "Human"\n' * humans)
+
+
+def legacy_info(name, clients, statuses, requests, *, echo=True, ping_delay=0,
+                status_delay=0, human_count=None, bot_count=None):
+    short_reply = info(name, delay=ping_delay, clients=clients, humans=human_count,
+                       bots=bot_count, capacity=32)
+
+    def reply(query):
+        if not query.startswith(PREFIX + b"getstatus "):
+            return short_reply(query)
+        requests.append(query)
+        if not statuses:
+            return None
+        roster = statuses[min(len(requests) - 1, len(statuses) - 1)]
+        challenge = query.split()[1]
+        header = b"\\protocol\\26\\sv_maxclients\\32"
+        if echo:
+            header += b"\\challenge\\" + (challenge if echo is True else echo)
+        time.sleep(status_delay)
+        return PREFIX + b"statusResponse\n" + header + b"\n" + roster
+    return reply
+
+
+def population(renderer, compatibility):
+    evidence = Path(mkdtemp(prefix="population-", dir=BUILD))
+    print(evidence, flush=True)
+    with ExitStack() as stack:
+        listing, missing = udp(stack), udp(stack)
+        cases = [
+            ("Legacy bots only", 10, [players(10, 0)], {"echo": False}),
+            ("Legacy mixed", 13, [players(10, 3), players(9, 4)], {"ping_delay": 0.8, "status_delay": 0.7}),
+            ("Legacy humans only", 9, [players(0, 9)], {}),
+            ("Empty", 0, [], {}),
+            ("Advertised humans", 3, [], {"human_count": 2, "bot_count": 3}),
+            ("Advertised bots", 13, [], {"human_count": "invalid", "bot_count": 12}),
+            ("Status refused", 2, [], {}),
+            ("Malformed roster", 2, [b'0 0 "Bot"\n0 invalid "Player"\n'], {}),
+            ("Roster mismatch", 2, [players(0, 1)], {}),
+            ("Wrong challenge", 2, [players(0, 2)], {"echo": b"stp-stale"}),
+        ]
+        requests = [[] for _ in cases]
+        ports = [port(missing)]
+        for (name, clients, statuses, options), queried in zip(cases, requests):
+            sock = udp(stack)
+            ports.append(port(sock))
+            responder(sock, legacy_info(name, clients, statuses, queried, **options))
+        responder(listing, master(*ports))
+
+        exe, mod = stage(evidence, renderer, compatibility=compatibility)
+        fixture_menu(mod)
+        lines = [f'set sv_master{i} ""' for i in range(1, 6)] + [
+            'set cl_browserBackupMaster ""', f'set sv_master1 127.0.0.1:{port(listing)}',
+            'set ui_netSource 1', 'set ui_browserShowEmpty 1', 'wait 60',
+            'ui_openmenu joinserver', 'wait 550', 'set ui_browserShowEmpty 0',
+            'ui_openmenu st_test_population_refresh', 'wait 550', 'echo POPULATION_COMPLETE', 'quit',
+        ]
+        with socket.socket(socket.AF_INET, socket.SOCK_DGRAM) as reserved:
+            reserved.bind(("127.0.0.1", 0))
+            client_port = port(reserved)
+        game = runtime.launch(evidence, exe, mod, lines, client_port, renderer)
+        stack.callback(stop, game)
+        if game.wait(timeout=55) != 0:
+            raise RuntimeError("Candidate client exited with an error")
+        output = runtime.log(mod)
+        for expected in ("10 servers listed with 15 known human players.",
+                         "8 servers listed with 16 known human players.", "POPULATION_COMPLETE"):
+            if expected not in output:
+                raise AssertionError((expected, mod / "qconsole.log"))
+        for i, queries in enumerate(requests):
+            refreshes = 0 if i in (3, 4, 5) else 2
+            assert len(set(queries)) == refreshes, (cases[i][0], queries)
+            # Each unresolved roster gets one retry with the original challenge.
+            assert len(queries) == refreshes * (2 if i >= 6 else 1), (cases[i][0], queries)
+    print(f"{renderer}: human-only, bot-only, mixed, empty, delayed, and unknown populations passed")
+
+
 def stop(process):
     if process.poll() is None:
         process.terminate()
@@ -203,5 +292,10 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("renderer", nargs="?", default="rd-vanilla", choices=("rd-vanilla", "rd-rend2"))
     parser.add_argument("--protected", action="store_true")
+    parser.add_argument("--compat", action="store_true", help="Use the current Windows compatibility build")
+    parser.add_argument("--population", action="store_true", help="Run legacy population and refresh fixtures")
     args = parser.parse_args()
-    main(args.renderer, args.protected)
+    if args.population:
+        population(args.renderer, args.compat)
+    else:
+        main(args.renderer, args.protected, args.compat)

@@ -43,6 +43,11 @@ not guaranteed. Other non-English pairs translate through English, which can
 reduce accuracy. Machine translations need bilingual review, especially slang,
 short messages and mixed languages. Keep the original visible while testing.
 
+Automatic checks each incoming message separately. It ignores protected player
+names, game terms and links when identifying the language. Common short chat
+such as “hola amigos” or “guten Tag” can be recognized even when the general
+detector is uncertain. Ambiguous messages can still appear in the original.
+
 **Known quality limit:** English-to-Korean remains experimental: the current
 model mistranslated the simple help request in the test corpus. Korean-to-English
 uses the improved OPUS-MT pack and passes that regression. Model output existing

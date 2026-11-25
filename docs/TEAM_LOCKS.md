@@ -5,7 +5,7 @@ Console equivalents are `callvote lockteams on` and `callvote lockteams off`.
 The normal server-wide vote rules apply, including spectator votes, cooldowns,
 per-map call limits, and exclusion of bots from voting.
 
-A passed vote takes effect immediately. Both teams keep their current players,
+A passed vote takes effect immediately. All enabled teams keep their current players,
 who can continue fighting and respawning. New connections and spectators may
 watch but cannot join a team. Players cannot switch teams. Leaving for spectator
 is allowed, but rejoining requires an unlock; reconnecting does not reserve a
@@ -16,7 +16,7 @@ through RCON. `st_status` reports the current lock state and `st_cmdlist` lists
 the command. Unlock before using `forceteam` to move or admit a player.
 
 Locks reset on map changes and map restarts. They apply only to TFFA, not FFA,
-Duel, Tournament, or CTF. The feature locks both teams together; it does not
+Duel, Tournament, or CTF. The feature locks all enabled teams together; it does not
 create a password or prevent spectators from connecting to the server.
 
 The vote is appended at allow-vote index 13 (bit 8192), preserving existing

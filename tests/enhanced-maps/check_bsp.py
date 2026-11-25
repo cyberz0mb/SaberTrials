@@ -53,6 +53,13 @@ def check(checker, archives):
             kind = struct.unpack_from("<i", data, surface + 8)[0]
             struct.pack_into("<ii", repeated_indices, surface + 20, 0,
                              index_count if kind in (1, 3) else 0)
+        # The largest input can be a geometry-only map with an empty light array.
+        # Write an actual array element that references an empty light grid.
+        invalid_lightgrid = bytearray(data)
+        invalid_lightgrid.extend(bytes((-len(data)) % 4))
+        struct.pack_into("<i", invalid_lightgrid, 8 + 15 * 8 + 4, 0)
+        struct.pack_into("<ii", invalid_lightgrid, 8 + 17 * 8, len(invalid_lightgrid), 2)
+        invalid_lightgrid.extend(struct.pack("<H", 0))
         corruptions = {
             "short": (data[:100], "file length"),
             "signature": (change(data, 0, "<4s", b"IBSP"), "signature"),
@@ -71,7 +78,7 @@ def check(checker, archives):
             "out_of_world": (change(data, lump(data, 10)[0], "<f", 131073), "draw vertex"),
             "index": (change(data, lump(data, 11)[0], "<i", -1), "vertex index"),
             "vis_stride": (change(data, lump(data, 16)[0] + 4, "<i", 0x7fffffff), "visibility dimensions"),
-            "lightgrid": (change(data, lump(data, 17)[0], "<H", 65535), "light grid index"),
+            "lightgrid": (invalid_lightgrid, "light grid index"),
         }
         for name, (bad, message) in corruptions.items():
             path = stage / (name + ".bsp")

@@ -48,7 +48,7 @@ def stage(name):
     b.write(run/'inputs.json',{name:b.sha(source) for name,source in files.items()})
     return run,mod
 
-def launch(run,mod,renderer,lines,extra=None,environment=None):
+def launch(run,mod,renderer,lines,extra=None,environment=None,executable=None):
     (mod/'vulkan-test.cfg').write_text('\n'.join(lines)+'\n',encoding='utf-8')
     cvars=dict(fs_basepath=b.ROOT.parent,fs_homepath=run/'home',fs_game='SaberTrials',
         com_unpackLibraries=0,logfile=2,net_ip='127.0.0.1',net_port=29731,sv_pure=0,
@@ -56,7 +56,7 @@ def launch(run,mod,renderer,lines,extra=None,environment=None):
         r_customwidth=1280,r_customheight=720,cl_renderer=renderer,com_maxfps=125,
         con_notifytime=0,st_translate=0,r_renderScale=0,r_ext_supersample=0)
     cvars.update(extra or {})
-    command=[str(run/'bin/SaberTrials.x86_64.exe'),'+safe']
+    command=[str(executable or run/'bin/SaberTrials.x86_64.exe'),'+safe']
     for key,value in cvars.items():command+=['+set',key,str(value)]
     startup=subprocess.STARTUPINFO()
     startup.dwFlags|=subprocess.STARTF_USESHOWWINDOW

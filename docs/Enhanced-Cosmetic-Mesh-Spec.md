@@ -57,7 +57,8 @@ The pilot uses material assignments on its already-enabled body surfaces.
 
 ## Runtime behavior
 
-`r_enhancedModels 1` enables substitution **in Rend2**; the default is `0`.
+`r_enhancedModels 1` enables substitution in **Rend2 and Windows Vulkan**.
+The renderer default is `0`. A saved profile can enable the feature.
 Vanilla automatically keeps canonical geometry, even when this preference is on,
 and prints an explicit compatibility message. The tested twelve-character CPU
 path managed only 14.4 FPS with automatic LOD, and a coarsest-LOD diagnostic

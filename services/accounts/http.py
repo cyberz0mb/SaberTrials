@@ -189,6 +189,7 @@ class AccountApplication:
             '/v1/connection/authorize': ({'challenge'}, lambda d: store.authorize_connection(bearer(env), d['challenge'])),
             '/v1/server/challenge': ({'instance', 'slot', 'generation'}, lambda d: store.challenge(bearer(env), **d)),
             '/v1/server/redeem': ({'challenge', 'instance', 'slot', 'generation'}, lambda d: store.redeem(bearer(env), **d)),
+            '/v1/server/format-result': ({'event', 'mode', 'participants'}, lambda d: store.format_result(bearer(env), **d)),
             '/v1/server/renew': ({'lease_token'}, lambda d: store.renew(bearer(env), d['lease_token']))
         }
         if method != 'POST' or path not in routes:

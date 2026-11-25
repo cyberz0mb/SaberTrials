@@ -7,3 +7,6 @@ classic geometry. An enhanced package needs a matching classic model.
 
 See the [mesh format](Enhanced-Cosmetic-Mesh-Spec.md) for authoring details and
 the [installation guide](Enhanced-Models-Installation.md) for module requirements.
+
+The Windows Vulkan renderer also supports STCOS1 packages. See
+[renderer validation](Vulkan-Validation.md).

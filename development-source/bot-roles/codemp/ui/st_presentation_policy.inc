@@ -11,7 +11,7 @@ typedef struct {
 } STPRow;
 typedef struct {
  STPRow rows[STP_MAX_ROWS];
- int count,local,teams,mode,page,red,blue,result;
+ int count,local,teams,mode,page,red,blue,result,classicStats;
  char title[128],subtitle[160],outcome[160],event[192];
 } STPBoard;
 typedef struct {char text[192];int kind,started,active;} STPNotice;

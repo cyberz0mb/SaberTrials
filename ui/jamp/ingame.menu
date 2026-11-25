@@ -108,8 +108,18 @@ itemDef { name "resume" rect 20 354 210 24 type 1 style 0 text "Resume  /  Esc"
 itemDef { name account_link rect 34 400 148 26 type 1 text "Account / Log in" font 2 textscale .72
  forecolor .76 .86 .93 1 visible 1 cvarTest "st_uiPauseShell" showCvar { "1" }
  action { play "sound/interface/button1.wav" ; open st_pause_account ; } }
+itemDef { name pugqueue rect 250 353 160 25 type 1 cvarTest "st_uiPugQueue" showCvar { "1" } text "PUG Queue" font 2 textscale .78 forecolor .76 .86 .93 1 visible 1 action { open st_pause_pug_queue ; } }
 }
 
+menuDef { name st_pause_pug_queue rect 236 70 380 224 popup visible 0 fullscreen 0
+ focusColor 1 1 1 1 onESC { close st_pause_pug_queue ; } onOpen { setfocus join ; }
+ itemDef { name panel rect 0 0 380 224 style 1 backcolor .008 .026 .044 .97 border 1 bordercolor .30 .78 1 1 visible 1 decoration }
+ itemDef { name title rect 16 14 340 24 type 0 text "PUG QUEUE" font 2 textscale .9 visible 1 decoration }
+ itemDef { name join rect 18 51 344 30 type 1 text "Join Queue" textaligny 4 font 2 textscale .8 forecolor .76 .86 .93 1 visible 1 action { exec "cmd pug join" ; uiScript closeingame ; } }
+ itemDef { name leave rect 18 87 344 30 type 1 text "Leave Queue" textaligny 4 font 2 textscale .8 forecolor .76 .86 .93 1 visible 1 action { exec "cmd pug leave" ; uiScript closeingame ; } }
+ itemDef { name status rect 18 123 344 30 type 1 text "Queue Status" textaligny 4 font 2 textscale .8 forecolor .76 .86 .93 1 visible 1 action { exec "cmd pug status" ; uiScript closeingame ; } }
+ itemDef { name back rect 18 159 344 30 type 1 text "Back" textaligny 4 font 2 textscale .8 forecolor .76 .86 .93 1 visible 1 action { close st_pause_pug_queue ; } }
+}
 menuDef { name "st_pause_about" rect 0 0 640 480 visible 0 fullscreen 0
  popup
  focusColor 1 1 1 1 disableColor .35 .42 .47 1
@@ -171,6 +181,13 @@ itemDef { name "voice" rect 250 246 352 32 type 1 style 0 text "Siege voice comm
  onFocus { show focus_glow ; setitemrect focus_glow 250 246 352 32 ; }
  leaveFocus { hide focus_glow ; }
  action { play "sound/interface/button1.wav" ; open ingame_voicechat ; }  }
+itemDef { name "match_rules" rect 250 110 352 32 type 1 text "Match Rules (host)"
+ font 2 textscale .85 textalignx 14 textaligny 6 forecolor .76 .86 .93 1 visible 1
+ cvarTest "sv_running" showCvar { "1" }
+ onFocus { show focus_glow ; setitemrect focus_glow 250 110 352 32 ; }
+ leaveFocus { hide focus_glow ; }
+ action { play "sound/interface/button1.wav" ; open advancedcreateserver ; }
+}
 itemDef { name "back_line" rect 250 326 352 0.5 style 1 backcolor .38 .64 .78 .28 visible 1 decoration cvarTest "st_uiPauseShell" showCvar { "1" }  }
 itemDef { name "back" rect 250 299 352 28 type 1 style 0 text "Back"
  font 2 textscale .85 textalignx 14 textaligny 4.0

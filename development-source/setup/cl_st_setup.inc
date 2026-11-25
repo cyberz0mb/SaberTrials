@@ -161,11 +161,29 @@ static int STSetup_Controls(const stcRequest_t* q,stcReply_t* r){
     size->second=std::to_string((int)ST_ChatScalePercent(atof(size->second.c_str())));
   }return result;}
  case 112:ssReturnIngame=q->a!=0;if(!SS_Apply(stcDraft,error))say(error,-1);else {STC_Open();SS_Open();stcDraft.open(SS_Live());say("Config applied.");}break;
- case 113:{ // Scoped quality choices stage only their listed video properties.
-  const char* names[]={"r_lodbias","r_picmip","r_texturebits","r_colorbits","r_detailtextures"};
-  static const char* values[3][5]={{"2","3","16","16","0"},{"1","1","0","0","1"},{"0","0","32","32","1"}};
+ case 113:{
   if(q->a<0||q->a>2){say("Unknown quality preset",-1);break;}
-  for(int i=0;i<5;++i)ssDraft.value.vars[names[i]]=values[q->a][i];break;}
+  // Columns match the Performance, Balanced and Quality buttons. SS_Disabled
+  // also checks the renderer selected in the draft before staging Rend2 effects.
+  static const struct { const char* name; const char* values[3]; } settings[] = {
+   {"r_lodbias",        {"2", "1", "0"}},
+   {"r_picmip",         {"3", "1", "0"}},
+   {"r_texturebits",    {"16", "0", "32"}},
+   {"r_colorbits",      {"16", "0", "32"}},
+   {"r_detailtextures", {"0", "1", "1"}},
+   {"r_texturemode",    {"GL_LINEAR_MIPMAP_NEAREST", "GL_LINEAR_MIPMAP_LINEAR", "GL_LINEAR_MIPMAP_LINEAR"}},
+   {"r_ext_multisample",{"0", "2", "8"}},
+   {"r_dynamiclight",   {"0", "1", "1"}},
+   {"r_floatlightmap",  {"0", "0", "1"}},
+   {"r_cubemapping",    {"0", "0", "1"}},
+   {"r_parallaxmapping",{"0", "0", "1"}},
+   {"r_ssao",           {"0", "0", "1"}}
+  };
+  for(const auto& setting : settings){
+   int i=SS_Index(setting.name);
+   if(i>=0 && SS_Disabled(i).empty()) ssDraft.value.vars[setting.name]=setting.values[q->a];
+  }
+  break;}
  case 114:{
   int i=q->a;
   if(i<0||i>=SS_COUNT){say("Unknown setting",-1);break;}

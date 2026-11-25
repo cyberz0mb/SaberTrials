@@ -34,6 +34,9 @@ bool Profile(const json& j,View& view){
  const auto id=j.at("account").get<std::string>(),name=j.at("name").get<std::string>();
  const auto team=j.at("team").get<std::string>(),tag=j.at("teamName").get<std::string>();
  if(!Id(id)||!Text(name,63)||!Text(tag,63,true)||team.size()>128||team.find_first_not_of("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789_.:-")!=std::string::npos||(team.empty()!=tag.empty()))return false;
+ view.status="Signed in with Discord.";
+ if(j.contains("format_points") && j["format_points"].is_number_unsigned())
+  view.status="Format points: "+std::to_string(j["format_points"].get<uint64_t>());
  view.name=name;view.team=tag;view.signedIn=true;return true;
 }
 double Expires(const json& j,double now,double maximum){
@@ -116,7 +119,7 @@ void Client::Complete(const Job& job,const Response& response,double now){
    if(cancelled_){view_.busy=true;view_.status="Signing out...";due_=now;return;}
    if(!Profile(j.at("profile"),view_))throw std::runtime_error("profile");
   }else if(!Profile(j,view_))throw std::runtime_error("profile");
-  view_.busy=false;view_.status="Signed in with Discord.";due_=now+60;
+  view_.busy=false;due_=now+60;
  }catch(...){
   Fail("Invalid account response. Please try again.");
   if(!saved_.token.empty()){saved_.logout=true;++revision_;due_=now;}

@@ -83,7 +83,7 @@ public:
         for(const char *p=normalized;*p;) {
             if(p[0]=='^'&&p[1]>='0'&&p[1]<='9') {
                 if(text.size()>spanStart)spans.push_back({spanStart,(UINT32)text.size()-spanStart,color});
-                color=(p[1]-'0')&7;spanStart=(UINT32)text.size();p+=2;continue;
+                color=p[1]-'0';spanStart=(UINT32)text.size();p+=2;continue;
             }
             int n;unsigned cp=ST_UTF8Read(p,&n);p+=n;
             if(cp<32&&cp!='\n')continue;
@@ -139,9 +139,9 @@ public:
             D2D1::PixelFormat(DXGI_FORMAT_B8G8R8A8_UNORM,D2D1_ALPHA_MODE_PREMULTIPLIED),96,96);
         if(FAILED(draw->CreateWicBitmapRenderTarget(surface.Get(),props,&target)))return false;
         target->SetTextAntialiasMode(D2D1_TEXT_ANTIALIAS_MODE_GRAYSCALE);
-        static const float colors[8][3]={{.08f,.08f,.08f},{1,0,0},{0,1,0},{1,1,0},{.2f,.4f,1},{0,1,1},{1,0,1},{1,1,1}};
-        ComPtr<ID2D1SolidColorBrush> brushes[8];
-        for(int i=0;i<8;++i)if(FAILED(target->CreateSolidColorBrush(D2D1::ColorF(colors[i][0],colors[i][1],colors[i][2]),&brushes[i])))return false;
+        static const float colors[10][3]={{0,0,0},{1,0,0},{0,1,0},{1,1,0},{.2f,.4f,1},{0,1,1},{1,0,1},{1,1,1},{1,.5f,0},{.5f,.5f,.5f}};
+        ComPtr<ID2D1SolidColorBrush> brushes[10];
+        for(int i=0;i<10;++i)if(FAILED(target->CreateSolidColorBrush(D2D1::ColorF(colors[i][0],colors[i][1],colors[i][2]),&brushes[i])))return false;
         for(const auto& span:spans)layout->SetDrawingEffect(brushes[span.color].Get(),{span.start,span.length});
         target->BeginDraw();target->Clear(D2D1::ColorF(0,0,0,0));
         target->DrawTextLayout(D2D1::Point2F(2,1),layout.Get(),brushes[7].Get(),D2D1_DRAW_TEXT_OPTIONS_CLIP);

@@ -1,0 +1,328 @@
+--- a/codemp/ui/ui_main.c
++++ b/codemp/ui/ui_main.c
+@@ -10022,6 +10022,7 @@
+ 	UI_UpdateForcePowers();
+ 
+ 	UI_RegisterCvars();
++	trap->Cvar_Register(NULL, "st_uniform", "", CVAR_ARCHIVE | CVAR_USERINFO);
+ 	EM_Init();
+ 	trap->Cvar_Create(stMenuLanguageCvar,"1",CVAR_ARCHIVE | CVAR_NORESTART);
+ 	trap->Cvar_Create(ST_WHITE_CORE_CVAR, "0", CVAR_ARCHIVE);
+--- a/codemp/ui/ui_shared.c
++++ b/codemp/ui/ui_shared.c
+@@ -5478,6 +5478,8 @@
+ 			ent.shaderRGBA[1] = ui_char_color_green.integer;
+ 			ent.shaderRGBA[2] = ui_char_color_blue.integer;
+ 			ent.shaderRGBA[3] = 255;
++			extern void ST_ProfilePreviewDye(const itemDef_t*, byte*);
++			ST_ProfilePreviewDye(item,ent.shaderRGBA);
+ //			UI_TalkingHead(item);
+ 		}
+ 		if ( item->flags&ITF_ISANYSABER )
+--- a/codemp/ui/st_profile_core.h
++++ b/codemp/ui/st_profile_core.h
+@@ -62,7 +62,8 @@
+   if(found==groups.end()){row=int(models.size());groups[key]=row;Model m;m.key=key;m.name=meta.name.empty()?title(folder):meta.name;m.universe=meta.universe;m.themes=meta.themes;m.base=base;models.push_back(m);}
+   else row=found->second;
+   Skin variant;variant.id=id;variant.model=folder;variant.skin=skin;variant.label=meta.group.empty()?title(skin):title(folder)+" / "+title(skin);variant.icon=icon;
+-  variant.appearance=lower(skin)=="red"?1:lower(skin)=="blue"?2:0;
++  static const char* const colors[]={"red","blue","green","yellow","white","black","orange","purple"};
++  for(size_t i=0;i<sizeof(colors)/sizeof(*colors);++i)if(lower(skin)==colors[i]){variant.appearance=int(i)+1;break;}
+   auto& list=models[row].skins;list.push_back(variant);
+   ++skinCount;return true;
+  }
+@@ -83,7 +84,8 @@
+ };
+ struct Identity {
+  std::string model,name,red,green,blue;
+- bool operator==(const Identity& o)const{return model==o.model&&name==o.name&&red==o.red&&green==o.green&&blue==o.blue;}
++ int uniform=0;
++ bool operator==(const Identity& o)const{return model==o.model&&name==o.name&&red==o.red&&green==o.green&&blue==o.blue&&uniform==o.uniform;}
+  bool operator!=(const Identity& o)const{return !(*this==o);}
+ };
+ struct Draft {
+--- a/codemp/ui/ui_sabertrials_profile.inc
++++ b/codemp/ui/ui_sabertrials_profile.inc
+@@ -17,10 +17,19 @@
+ 	}
+ }
+ 
++#include "../game/st_stock_uniform.h"
++static bool SPUI_Exists(const std::string& path);
++static const itemDef_t *stProfileDyeItem;
++static const float *stProfileDye;
++void ST_ProfilePreviewDye(const itemDef_t *item, byte *rgba) {
++    if (item == stProfileDyeItem && stProfileDye)
++        for (int i = 0; i < 3; ++i) rgba[i] = (byte)(255 * stProfileDye[i]);
++}
+ extern void UI_ClearG2Pointer(void* ghoul2);
+ static void ST_UIProfilePreview( menuDef_t *menu ) {
+ 	static itemDef_t *cachedItem;
+ 	static char cachedSelection[MAX_QPATH];
++	static int cachedUniform;
+ 	static qboolean loaded;
+ 	itemDef_t *item;
+ 	modelDef_t *preview;
+@@ -30,6 +39,7 @@
+ 
+ 	if ( !menu || (Q_stricmp(menu->window.name,"playerMenu") && Q_stricmp(menu->window.name,"ingame_player")) ) {
+ 		cachedItem = NULL;
++		stProfileDyeItem = NULL;
+ 		return;
+ 	}
+ 	ST_UIProfileNameField(menu);
+@@ -47,31 +57,33 @@
+  if(!selection[0])trap->Cvar_VariableStringBuffer("model",selection,sizeof(selection));
+ 	if ( !selection[0] ) Q_strncpyz( selection, "kyle/default", sizeof(selection) );
+ 
+-	// The UI renderer's character tint comes from these presentation cvars.
+-	// Leave ui_char_model/skin and all saved character settings untouched.
+-	trap->Cvar_Set( "ui_char_color_red", UI_Cvar_VariableString("char_color_red") );
+-	trap->Cvar_Set( "ui_char_color_green", UI_Cvar_VariableString("char_color_green") );
+-	trap->Cvar_Set( "ui_char_color_blue", UI_Cvar_VariableString("char_color_blue") );
+-	trap->Cvar_Update( &ui_char_color_red );
+-	trap->Cvar_Update( &ui_char_color_green );
+-	trap->Cvar_Update( &ui_char_color_blue );
++    Q_strncpyz(model, selection, sizeof(model));
++    skin = strchr(model, '/');
++    if (skin) *skin++ = '\0'; else skin = "default";
++    const int slot = ST_UniformSlot(UI_Cvar_VariableString("ui_stProfileUniform"));
++    const int team = ST_TffaTeamAt(slot-1);
++    stProfileDyeItem = item;
++    stProfileDye = slot && ST_StockModularJedi(model) ? ST_UniformDye(team) : NULL;
++    trap->Cvar_Set("ui_char_color_red", UI_Cvar_VariableString("char_color_red"));
++    trap->Cvar_Set("ui_char_color_green", UI_Cvar_VariableString("char_color_green"));
++    trap->Cvar_Set("ui_char_color_blue", UI_Cvar_VariableString("char_color_blue"));
++    trap->Cvar_Update(&ui_char_color_red);
++    trap->Cvar_Update(&ui_char_color_green);
++    trap->Cvar_Update(&ui_char_color_blue);
+ 
+-	// Only reload when selection changes. Reinitializing every frame would
+-	// restart the walk instead of allowing the animation to loop.
+-	if ( cachedItem == item && !strcmp(cachedSelection,selection) && (!loaded || item->ghoul2) ) return;
+-	cachedItem = item;
+-	Q_strncpyz( cachedSelection, selection, sizeof(cachedSelection) );
+-	Q_strncpyz( model, selection, sizeof(model) );
+-	skin = strchr(model,'/');
+-	if ( skin ) *skin++ = '\0';
+-	else skin = "default";
+-
++    if (cachedItem == item && cachedUniform == slot && !strcmp(cachedSelection,selection) &&
++        (!loaded || item->ghoul2)) return;
++    cachedItem = item;
++    cachedUniform = slot;
++    Q_strncpyz(cachedSelection, selection, sizeof(cachedSelection));
+ 	preview->g2skin = 0;
+-	if ( strchr(skin,'|') ) {
+-		Com_sprintf( path, sizeof(path), "models/players/%s/|%s", model, skin );
+-	} else {
+-		Com_sprintf( path, sizeof(path), "models/players/%s/model_%s.skin", model, skin );
+-	}
++    char uniformPath[MAX_QPATH];
++    if (slot && !ST_StockModularJedi(model) && ST_StockUniformPath(model,skin,team,uniformPath) && SPUI_Exists(uniformPath))
++        Q_strncpyz(path, uniformPath, sizeof(path));
++    else if (strchr(skin,'|'))
++        Com_sprintf(path, sizeof(path), "models/players/%s/|%s", model, skin);
++    else
++        Com_sprintf(path, sizeof(path), "models/players/%s/model_%s.skin", model, skin);
+ 	preview->g2skin = trap->R_RegisterSkin( path );
+  if(!preview->g2skin){
+   // Unlink the old tracked instance before releasing it. A valid GLM with an
+--- a/codemp/ui/ui_st_profile.inc
++++ b/codemp/ui/ui_st_profile.inc
+@@ -17,16 +17,40 @@
+ static bool SPUI_IsMenu(){menuDef_t* m=Menu_GetFocused();return m&&(!Q_stricmp(m->window.name,"playerMenu")||!Q_stricmp(m->window.name,"ingame_player"));}
+ #include "ui_st_name_keyboard.inc"
+ static std::string SPUI_Var(const char* name){char value[512];trap->Cvar_VariableStringBuffer(name,value,sizeof(value));return value;}
+-static sp::Identity SPUI_Live(){sp::Identity i;i.model=SPUI_Var("model");i.name=SPUI_Var("name");i.red=SPUI_Var("char_color_red");i.green=SPUI_Var("char_color_green");i.blue=SPUI_Var("char_color_blue");return i;}
++static sp::Identity SPUI_Live(){sp::Identity i;i.model=SPUI_Var("model");i.name=SPUI_Var("name");i.red=SPUI_Var("char_color_red");i.green=SPUI_Var("char_color_green");i.blue=SPUI_Var("char_color_blue");i.uniform=ST_UniformSlot(SPUI_Var("st_uniform").c_str());return i;}
+ static void SPUI_Filter(){spui.scrollbar.dragging=false;spui.rows=spui.catalog.rows(spui.filter);spui.scroll=0;sp::Filter all=spui.filter;all.themes=0;std::fill(spui.themeCounts,spui.themeCounts+6,0);for(int row:spui.catalog.rows(all)){unsigned bits=spui.catalog.models[row].themes;for(int i=0;i<6;++i)if((bits?bits:unsigned(sp::Uncategorized))&spThemeBits[i])++spui.themeCounts[i];}}
++static bool SPUI_StockColors(){
++ static std::string previous;
++ static bool supported=false;
++ const auto& id=spui.draft.value.model;
++ if(previous!=id){
++  previous=id;
++  auto slash=id.find('/');
++  std::string folder=id.substr(0,slash), outfit=slash==std::string::npos?"default":id.substr(slash+1);
++  char path[MAX_QPATH];
++  supported=ST_StockModularJedi(folder.c_str()) ||
++   (ST_StockUniformPath(folder.c_str(),outfit.c_str(),TEAM_RED,path) && SPUI_Exists(path));
++ }
++ return supported;
++}
++static int SPUI_Color(){
++ if(SPUI_StockColors() && spui.draft.value.uniform)return spui.draft.value.uniform;
++ if(spui.selected>=0 && spui.variant>=0)return spui.catalog.models[spui.selected].skins[spui.variant].appearance;
++ return 0;
++}
++static void SPUI_PreviewSelection(){
++ trap->Cvar_Set("ui_stProfileSelection",spui.draft.value.model.c_str());
++ trap->Cvar_Set("ui_stProfileUniform",SPUI_StockColors() && spui.draft.value.uniform?va("%d",spui.draft.value.uniform):"");
++}
+ static void SPUI_Select(int row,int variant=-1){
+  if(row<0||row>=int(spui.catalog.models.size()))return;
+  auto& m=spui.catalog.models[row];if(m.skins.empty())return;
+  if(variant<0||variant>=int(m.skins.size()))variant=0;
+  spui.selected=row;spui.variant=variant;spui.draft.value.model=m.skins[variant].id;spui.status.clear();
+- trap->Cvar_Set("ui_stProfileSelection",spui.draft.value.model.c_str());
+-}
+-static void SPUI_SyncSelection(){std::string id=spui.draft.value.model;if(id.find('/')==std::string::npos)id+="/default";spui.catalog.find(id,spui.selected,spui.variant);trap->Cvar_Set("ui_stProfileSelection",spui.draft.value.model.c_str());}
++ if(!SPUI_StockColors() || m.skins[variant].appearance)spui.draft.value.uniform=0;
++ SPUI_PreviewSelection();
++}
++static void SPUI_SyncSelection(){std::string id=spui.draft.value.model;if(id.find('/')==std::string::npos)id+="/default";spui.catalog.find(id,spui.selected,spui.variant);SPUI_PreviewSelection();}
+ #include "ui_st_profile_catalog.inc"
+ static void SPUI_Start(){
+  menuDef_t* menu=Menu_GetFocused();if(!menu)return;
+--- a/codemp/ui/ui_st_profile_draw.inc
++++ b/codemp/ui/ui_st_profile_draw.inc
+@@ -100,11 +100,28 @@
+   const auto& model=spui.catalog.models[spui.selected];const auto& skin=model.skins[spui.variant];
+   auto variants=spui.catalog.variants(spui.selected,skin.appearance);
+   if(variants.size()>1){SPUI_Button(466,376,18,20,"<",410);SCUI_Fit(489,381,106,.44f,skin.label.c_str(),scuText);SPUI_Button(600,376,18,20,">",411);}
+-  std::string appearance=skin.appearance==1?"Team skin: Red":skin.appearance==2?"Team skin: Blue":"Team skin: Default";
+-  bool multiple=false;for(const auto& candidate:model.skins)if(candidate.appearance>0&&sp::lower(candidate.model)==sp::lower(skin.model))multiple=true;
+-  SPUI_Button(466,400,152,20,appearance.c_str(),412,0,false,multiple);
+   SPUI_Features();
+   SCUI_Text(466,425,.43f,"Custom sounds",scuMuted);SCUI_Fit(555,425,63,.43f,spui.sounds?"Detected":"No files",scuText);
++ }
++ if(spui.selected>=0 || SPUI_StockColors()){
++  bool enabled=SPUI_StockColors();
++  if(!enabled && spui.variant>=0){
++   const auto& skins=spui.catalog.models[spui.selected].skins;
++   for(const auto& candidate:skins)
++    if(candidate.appearance && sp::lower(candidate.model)==sp::lower(skins[spui.variant].model)){enabled=true;break;}
++  }
++  int slot=SPUI_Color();
++  std::string label;
++  if(slot<=2)label=slot==0?"Team skin: Default":slot==1?"Team skin: Red":"Team skin: Blue";
++  else {
++   // Reuse the current language's team-skin label and its existing color names.
++   label=STML_Translate("Team skin: Default");
++   const auto separator=label.find(':');
++   label=separator==std::string::npos?"Team skin: ":label.substr(0,separator+1)+" ";
++   const char *color=ST_TffaName(ST_TffaTeamAt(slot-1));
++   label+=STML_Translate(color);
++  }
++  SPUI_Button(466,400,152,20,label.c_str(),412,0,false,enabled);
+  }
+  SPUI_Button(22,447,68,18,"Back",500);
+  if(spui.wide)SPUI_Button(97,447,52,18,"Join",512);
+--- a/codemp/ui/ui_st_profile_actions.inc
++++ b/codemp/ui/ui_st_profile_actions.inc
+@@ -11,11 +11,26 @@
+   if(!SPUI_Exists("models/players/"+folder+"/model.glm")||!SPUI_Exists("models/players/"+folder+"/model_"+skin+".skin")){spui.status="The selected model files are no longer available.";return false;}
+   trap->Cvar_Set("model",id.c_str());
+  }
++ if(spui.draft.value.uniform!=spui.draft.base.uniform)
++  trap->Cvar_Set("st_uniform",spui.draft.value.uniform?va("%d",spui.draft.value.uniform):"");
+  if(spui.draft.value.name!=spui.draft.base.name)trap->Cvar_Set("name",spui.draft.value.name.c_str());
+  trap->Cvar_Set("ui_Name",spui.draft.value.name.c_str());
+  spui.draft.open(SPUI_Live());spui.field=0;spui.status.clear();return true;
+ }
+ static bool SPUI_Appearance(int appearance){
++ if(appearance<0 || appearance>ST_TFFA_MAX_TEAMS)return false;
++ if(SPUI_StockColors()){
++  // A previously saved native Red or Blue skin refers to the default outfit.
++  if(spui.variant>=0 && spui.selected>=0){
++   const auto& skin=spui.catalog.models[spui.selected].skins[spui.variant];
++   int row,variant;
++   if(skin.appearance && spui.catalog.find(skin.model+"/default",row,variant))SPUI_Select(row,variant);
++  }
++  spui.draft.value.uniform=appearance;
++  spui.status.clear();
++  SPUI_PreviewSelection();
++  return true;
++ }
+  if(spui.selected<0||spui.variant<0)return false;auto list=spui.catalog.variants(spui.selected,appearance);
+  const auto& skins=spui.catalog.models[spui.selected].skins;std::string folder=sp::lower(skins[spui.variant].model);
+  for(int index:list)if(sp::lower(skins[index].model)==folder){SPUI_Select(spui.selected,index);return true;}
+@@ -74,7 +89,11 @@
+  else if(id==410||id==411){
+   if(spui.selected>=0){int appearance=spui.catalog.models[spui.selected].skins[spui.variant].appearance;auto list=spui.catalog.variants(spui.selected,appearance);auto at=std::find(list.begin(),list.end(),spui.variant);if(!list.empty()){int next=int(at-list.begin())+(id==410?-1:1);next=(next+int(list.size()))%int(list.size());SPUI_Select(spui.selected,list[next]);}}
+  }
+- else if(id==412){if(spui.selected>=0){int current=spui.catalog.models[spui.selected].skins[spui.variant].appearance;for(int i=1;i<=3;++i)if(SPUI_Appearance((current+i)%3))break;}}
++ else if(id==412){
++  int current=SPUI_Color();
++  for(int i=1;i<=ST_TFFA_MAX_TEAMS+1;++i)
++   if(SPUI_Appearance((current+i)%(ST_TFFA_MAX_TEAMS+1)))break;
++ }
+  else if(id==420){spui.motion=!spui.motion;menuDef_t* m=Menu_GetFocused();if(itemDef_t* item=Menu_FindItemByName(m,"st_profile_preview")){if(item->typeData.model)item->typeData.model->rotationSpeed=spui.motion?100:0;}}
+  else if(id==500||id==510||id==511||id==421||id==520||id==522||id==523)SPUI_RequestNavigation(id);
+  else if(id==501)SPUI_Cancel();
+--- a/codemp/cgame/cg_players.c
++++ b/codemp/cgame/cg_players.c
+@@ -1856,6 +1856,13 @@
+ 	Q_strncpyz( newInfo.forcePowers, v, sizeof( newInfo.forcePowers ) );
+ 
+ 	CG_ApplyTeamSkin(newInfo.modelName, newInfo.skinName, newInfo.team, newInfo.colorOverride, newInfo.stUniformSkin);
++    // Assigned team uniforms take priority. Elsewhere, display the player's Profile selection.
++    int uniformSlot = ST_UniformSlot(Info_ValueForKey(configstring, "us"));
++    if (uniformSlot && !cg_forceModel.integer && cgs.gametype != GT_SIEGE &&
++        (cgs.gametype < GT_TEAM || !cg_teamColorSkins.integer)) {
++        CG_StockUniform(newInfo.modelName, newInfo.skinName, ST_TffaTeamAt(uniformSlot-1),
++                        newInfo.colorOverride, newInfo.stUniformSkin);
++    }
+ 
+ 	// scan for an existing clientinfo that matches this modelname
+ 	// so we can avoid loading checks if possible
+@@ -9133,7 +9140,7 @@
+ 
+     if (cent->currentState.eType == ET_PLAYER && cg_teamColorSkins.integer &&
+         cgs.tffaCount > 2 && ci->team >= TEAM_GREEN && ST_TffaEnabled(ci->team, cgs.tffaCount) &&
+-        !CG_StockModularJedi(ci->modelName) && !ci->stUniformSkin[0]) {
++        !ST_StockModularJedi(ci->modelName) && !ci->stUniformSkin[0]) {
+         const float *tint = ST_TffaColor(ci->team);
+         for (int channel = 0; channel < 3; ++channel) legs.shaderRGBA[channel] = (byte)(255*tint[channel]);
+         legs.shaderRGBA[3] = cent->currentState.customRGBA[3];
+--- a/codemp/cgame/cg_st_team_appearance.inc
++++ b/codemp/cgame/cg_st_team_appearance.inc
+@@ -10,35 +10,24 @@
+ 	return (strlen(model) > 5 && !Q_stricmpn(model, "jedi_", 5)) ? qtrue : qfalse;
+ }
+ 
+-static qboolean CG_StockModularJedi(const char *model)
++#include "../game/st_stock_uniform.h"
++
++static qboolean CG_StockUniform(const char *model, const char *skin, int team, vec3_t tint, char *uniform)
+ {
+-    static const char *const stock[] = {"jedi_hf","jedi_hm","jedi_kdm","jedi_rm","jedi_tf","jedi_zf"};
+-    for (size_t i=0; i<ARRAY_LEN(stock); ++i)
+-        if (!Q_stricmp(model,stock[i])) return qtrue;
++    if (ST_StockModularJedi(model)) {
++        VectorCopy(ST_UniformDye(team), tint);
++        return qtrue;
++    }
++    if (ST_StockUniformPath(model, skin, team, uniform) && BG_FileExists(uniform)) return qtrue;
++    uniform[0] = 0;
+     return qfalse;
+ }
+ 
+ static void CG_ApplyTeamSkin(const char *model, char *skin, int team, vec3_t tint, char *uniform)
+ {
+-    uniform[0]=0;
+-    if (cg_teamColorSkins.integer && cgs.gametype == GT_TEAM && ST_TffaEnabled(team,cgs.tffaCount)) {
+-        if (CG_StockModularJedi(model)) {
+-            static const float cloth[ST_TFFA_TEAM_IDS][3] = {
+-                {1,1,1},{.81f,.25f,.23f},{.24f,.43f,.81f},{1,1,1},{.25f,.70f,.35f},
+-                {.83f,.72f,.27f},{.84f,.85f,.86f},{.35f,.36f,.38f},{.88f,.50f,.23f},{.64f,.34f,.77f}
+-            };
+-            VectorCopy(cloth[team],tint);
+-            return;
+-        }
+-        const char *outfit = skin;
+-        if (!*outfit || !Q_stricmp(outfit,"red") || !Q_stricmp(outfit,"blue")) outfit="default";
+-        // Only installed stock outfit mappings receive a uniform. Personal data still use the original skin.
+-        const char *path = va("models/st_team/skins/%s/%s_%s.skin",model,outfit,ST_TffaName(team));
+-        if (strlen(path)<MAX_QPATH && !strchr(outfit,'|') && BG_FileExists(path)) {
+-            Q_strncpyz(uniform,path,MAX_QPATH);
+-            return;
+-        }
+-    }
++    uniform[0] = 0;
++    if (cg_teamColorSkins.integer && cgs.gametype == GT_TEAM && ST_TffaEnabled(team,cgs.tffaCount) &&
++        CG_StockUniform(model, skin, team, tint, uniform)) return;
+ 	if (!cg_teamColorSkins.integer || !CG_UsesTeamAppearance(team))
+ 		return;
+ 

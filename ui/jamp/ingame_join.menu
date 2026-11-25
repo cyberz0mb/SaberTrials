@@ -430,7 +430,46 @@ itemDef {
  visible 1
  decoration
 }
+
+        itemDef { name tffaMoreTeams type 1 rect 14 175 272 30 text "More teams"
+            cvarTest "ui_stTffaTeams" showCvar { "3" ; "4" ; "5" ; "6" ; "7" ; "8" }
+            textalignx 14 textaligny 4 font 2 textscale .74 forecolor .80 .90 .97 1 visible 1
+            action { play "sound/interface/button1" ; open st_tffa_join ; } }
 }
+
+    menuDef {
+        name "st_tffa_join" rect 28 62 300 270 popup visible 0
+        style WINDOW_STYLE_FILLED backcolor .025 .045 .065 1
+        border 1 bordersize 1 bordercolor .30 .65 .80 1
+        onESC { close st_tffa_join ; }
+        itemDef { name title rect 18 12 250 26 text "Choose a team" font 2 textscale .85 forecolor .82 .91 .98 1 visible 1 decoration }
+        itemDef { name joinGreen type 1 rect 14 43 272 28 text "Green"
+            cvarTest "ui_stTffaTeams" showCvar { "3" ; "4" ; "5" ; "6" ; "7" ; "8" }
+            textalignx 12 textaligny 3 font 2 textscale .74 forecolor .82 .92 .97 1 visible 1
+            action { exec "cmd team green" ; uiScript closeingame ; } }
+        itemDef { name joinYellow type 1 rect 14 74 272 28 text "Yellow"
+            cvarTest "ui_stTffaTeams" showCvar { "4" ; "5" ; "6" ; "7" ; "8" }
+            textalignx 12 textaligny 3 font 2 textscale .74 forecolor .82 .92 .97 1 visible 1
+            action { exec "cmd team yellow" ; uiScript closeingame ; } }
+        itemDef { name joinWhite type 1 rect 14 105 272 28 text "White"
+            cvarTest "ui_stTffaTeams" showCvar { "5" ; "6" ; "7" ; "8" }
+            textalignx 12 textaligny 3 font 2 textscale .74 forecolor .82 .92 .97 1 visible 1
+            action { exec "cmd team white" ; uiScript closeingame ; } }
+        itemDef { name joinBlack type 1 rect 14 136 272 28 text "Black"
+            cvarTest "ui_stTffaTeams" showCvar { "6" ; "7" ; "8" }
+            textalignx 12 textaligny 3 font 2 textscale .74 forecolor .82 .92 .97 1 visible 1
+            action { exec "cmd team black" ; uiScript closeingame ; } }
+        itemDef { name joinOrange type 1 rect 14 167 272 28 text "Orange"
+            cvarTest "ui_stTffaTeams" showCvar { "7" ; "8" }
+            textalignx 12 textaligny 3 font 2 textscale .74 forecolor .82 .92 .97 1 visible 1
+            action { exec "cmd team orange" ; uiScript closeingame ; } }
+        itemDef { name joinPurple type 1 rect 14 198 272 28 text "Purple"
+            cvarTest "ui_stTffaTeams" showCvar { "8" }
+            textalignx 12 textaligny 3 font 2 textscale .74 forecolor .82 .92 .97 1 visible 1
+            action { exec "cmd team purple" ; uiScript closeingame ; } }
+        itemDef { name back type 1 rect 14 231 272 26 text "Back" textalignx 12 textaligny 3 font 2 textscale .74
+            forecolor .68 .80 .88 1 visible 1 action { close st_tffa_join ; } }
+    }
 }
 
 

@@ -1,0 +1,994 @@
+--- a/codemp/cgame/cg_draw.c
++++ b/codemp/cgame/cg_draw.c
+@@ -2936,6 +2936,19 @@
+ 
+ 	if ( cgs.gametype >= GT_TEAM )
+ 	{
++        if (cgs.tffaCount > 2) {
++            for (int slot=0; slot<cgs.tffaCount; slot+=2) {
++                int left=ST_TffaTeamAt(slot);
++                Com_sprintf(temp,sizeof(temp),"%s %d",ST_TffaName(left),cgs.tffaScores[left]);
++                if (slot+1<cgs.tffaCount) {
++                    int right=ST_TffaTeamAt(slot+1);
++                    Q_strcat(temp,sizeof(temp),va("  /  %s %d",ST_TffaName(right),cgs.tffaScores[right]));
++                }
++                CG_Text_Paint(630-CG_Text_Width(temp,.58f,FONT_MEDIUM),y,.58f,colorWhite,temp,0,0,ITEM_TEXTSTYLE_SHADOWEDMORE,FONT_MEDIUM);
++                y+=14;
++            }
++            return y;
++        }
+ 		Q_strncpyz( temp, va( "%s: ", CG_GetStringEdString( "MP_INGAME", "RED" ) ), sizeof( temp ) );
+ 		Q_strcat( temp, sizeof( temp ), cgs.scores1 == SCORE_NOT_PRESENT ? "-" : (va( "%i", cgs.scores1 )) );
+ 		Q_strcat( temp, sizeof( temp ), va( " %s: ", CG_GetStringEdString( "MP_INGAME", "BLUE" ) ) );
+@@ -3708,7 +3721,7 @@
+ 		return y;
+ 	}
+ 
+-	if ( cg.snap->ps.persistant[PERS_TEAM] != TEAM_RED && cg.snap->ps.persistant[PERS_TEAM] != TEAM_BLUE ) {
++	if (!ST_TffaEnabled(cg.snap->ps.persistant[PERS_TEAM], cgs.tffaCount)) {
+ 		return y; // Not on any team
+ 	}
+ 
+@@ -3766,7 +3779,10 @@
+ 		ret_y = y;
+ 	}
+ 
+-	if ( cg.snap->ps.persistant[PERS_TEAM] == TEAM_RED ) {
++    if (cgs.tffaCount > 2) {
++        VectorCopy4(ST_TffaColor(cg.snap->ps.persistant[PERS_TEAM]), hcolor);
++        hcolor[3] = .33f;
++    } else if ( cg.snap->ps.persistant[PERS_TEAM] == TEAM_RED ) {
+ 		hcolor[0] = 1.0f;
+ 		hcolor[1] = 0.0f;
+ 		hcolor[2] = 0.0f;
+@@ -6270,6 +6286,9 @@
+ 	tcolor[0] = colorTable[baseColor][0];
+ 	tcolor[1] = colorTable[baseColor][1];
+ 	tcolor[2] = colorTable[baseColor][2];
++    if (cgs.tffaCount > 2 && cg.snap->ps.persistant[PERS_TEAM] == TEAM_SPECTATOR &&
++        cg.crosshairClientNum >= 0 && cg.crosshairClientNum < MAX_CLIENTS)
++        VectorCopy(ST_TffaColor(cgs.clientinfo[cg.crosshairClientNum].team), tcolor);
+ 	tcolor[3] = color[3]*0.5f;
+ 
+ 	if (isVeh)
+@@ -6280,7 +6299,10 @@
+ 	}
+ 	else
+ 	{
+-		CG_DrawProportionalString(320, 170, name, UI_CENTER, tcolor);
++		if (cgs.tffaCount > 2 && ST_TffaEnabled(cgs.clientinfo[cg.crosshairClientNum].team,cgs.tffaCount)) {
++            const char *teamName = ST_TffaName(cgs.clientinfo[cg.crosshairClientNum].team);
++            CG_DrawProportionalString(320, 170, va("%s ^7[%s]",name,teamName), UI_CENTER, tcolor);
++        } else CG_DrawProportionalString(320, 170, name, UI_CENTER, tcolor);
+ 	}
+ 
+ 	trap->R_SetColor( NULL );
+@@ -7794,6 +7816,7 @@
+ 			labelColor[1] = 0.68f;
+ 			labelColor[2] = 1.0f;
+ 		}
++		if (cgs.tffaCount > 2 && ST_TffaEnabled(ci->team,cgs.tffaCount)) VectorCopy4(ST_TffaColor(ci->team),labelColor);
+ 		Q_strncpyz( playerName, ci->name, sizeof( playerName ) );
+ 		width = CG_Text_Width( playerName, 0.4f, FONT_SMALL2 );
+ 		CG_Text_Paint( x - width * 0.5f, y, 0.4f, labelColor, playerName,
+@@ -7839,6 +7862,19 @@
+ 	if ( !st_streamerTeamOverlay.integer || cgs.gametype < GT_TEAM ) {
+ 		return qfalse;
+ 	}
++
++    if (cgs.tffaCount > 2) {
++        CG_FillRect(304, 30, 328, 48, panelColor);
++        for (int slot = 0; slot < cgs.tffaCount; ++slot) {
++            team = ST_TffaTeamAt(slot);
++            vec4_t color;
++            VectorCopy4(ST_TffaColor(team), color);
++            if (team == TEAM_BLACK) VectorSet(color, .70f, .72f, .75f);
++            CG_Text_Paint(310 + 81*(slot%4), 48 + 21*(slot/4), .44f, color,
++                va("%s %d", ST_TffaName(team), cgs.tffaScores[team]), 0, 0, ITEM_TEXTSTYLE_SHADOWEDMORE, FONT_SMALL2);
++        }
++        return qtrue;
++    }
+ 
+ 	for ( team = TEAM_RED; team <= TEAM_BLUE; team++ ) {
+ 		float x = team == TEAM_RED ? 304.0f : 472.0f;
+--- a/codemp/cgame/cg_local.h
++++ b/codemp/cgame/cg_local.h
+@@ -255,6 +255,7 @@
+ 	// gameplay
+ 	char			modelName[MAX_QPATH];
+ 	char			skinName[MAX_QPATH];
++    char stUniformSkin[MAX_QPATH];
+ //	char			headModelName[MAX_QPATH];
+ //	char			headSkinName[MAX_QPATH];
+ 	char			forcePowers[MAX_QPATH];
+@@ -1608,6 +1609,7 @@
+ 	int				levelStartTime;
+ 
+ 	int				scores1, scores2;		// from configstrings
++    int tffaCount, tffaScores[ST_TFFA_TEAM_IDS];
+ 	int				jediMaster;
+ 	int				duelWinner;
+ 	int				duelist1;
+@@ -2008,6 +2010,7 @@
+ //
+ void CG_ExecuteNewServerCommands( int latestSequence );
+ void CG_ParseServerinfo( void );
++void CG_ParseTffaTeams(const char *text);
+ void CG_SetConfigValues( void );
+ void CG_ShaderStateChanged(void);
+ 
+--- a/codemp/cgame/cg_main.c
++++ b/codemp/cgame/cg_main.c
+@@ -2605,6 +2605,7 @@
+ 
+ //	CG_LoadingString( "clients" );
+ 
++	CG_ParseTffaTeams(CG_ConfigString(CS_TFFA_TEAMS));
+ 	CG_RegisterClients();		// if low on memory, some clients will be deferred
+     if(atoi(Info_ValueForKey(CG_ConfigString(CS_SERVERINFO),"g_hybridStyles")) &&
+        (!ST_StanceAssetsAvailable() || !STH_AnimationsValid(bgAllAnims[0].anims)))
+--- a/codemp/cgame/cg_newDraw.c
++++ b/codemp/cgame/cg_newDraw.c
+@@ -251,6 +251,10 @@
+ 	}
+ 	else
+ 	{
++        if (cgs.tffaCount > 2) {
++            int leader = ST_TffaLeader(cgs.tffaScores, cgs.tffaCount);
++            return leader ? va("%s leads with %d", ST_TffaName(leader), cgs.tffaScores[leader]) : "Tied for first";
++        }
+ 		if ( cg.teamScores[0] == cg.teamScores[1] ) {
+ 			s = va("%s %i", CG_GetStringEdString("MP_INGAME", "TIEDAT"), cg.teamScores[0] );
+ 		} else if ( cg.teamScores[0] >= cg.teamScores[1] ) {
+--- a/codemp/cgame/cg_players.c
++++ b/codemp/cgame/cg_players.c
+@@ -455,7 +455,8 @@
+ 	char	surfOn[MAX_SURF_LIST_SIZE];
+ 	int		checkSkin;
+ 	char	*useSkinName;
+-	char fallbackSkin[MAX_QPATH];
++	char fallbackSkin[MAX_QPATH], fallbackUniform[MAX_QPATH];
++    const char *uniform;
+ 
+ retryModel:
+ 	if (badModel)
+@@ -483,9 +484,11 @@
+ 		skinName = "default";
+ 	}
+ 
++    uniform = ci->stUniformSkin;
+ 	if (Q_stricmp(modelName, ci->modelName)) {
+ 		Q_strncpyz(fallbackSkin, skinName, sizeof(fallbackSkin));
+-		CG_ApplyTeamSkin(modelName, fallbackSkin, ci->team, ci->colorOverride);
++		CG_ApplyTeamSkin(modelName, fallbackSkin, ci->team, ci->colorOverride, fallbackUniform);
++        uniform = fallbackUniform;
+ 		skinName = fallbackSkin;
+ 	}
+ 
+@@ -502,7 +505,7 @@
+ 		useSkinName = va("models/players/%s/model_%s.skin", modelName, skinName);
+ 	}
+ 
+-	checkSkin = trap->R_RegisterSkin(useSkinName);
++	checkSkin = trap->R_RegisterSkin(*uniform ? uniform : useSkinName);
+ 
+ 	if (checkSkin)
+ 	{
+@@ -1087,7 +1090,7 @@
+ 	*/
+ 
+ 	teamname[0] = 0;
+-	if( cgs.gametype >= GT_TEAM) {
++	if( cgs.gametype >= GT_TEAM && ci->team < TEAM_GREEN) {
+ 		if( ci->team == TEAM_BLUE ) {
+ 			Q_strncpyz(teamname, DEFAULT_BLUETEAM_NAME/*cg_blueTeamName.string*/, sizeof(teamname) );
+ 		} else {
+@@ -1114,7 +1117,7 @@
+ 			//Give it a chance to load default model for this client instead.
+ 
+ 			// fall back to default team name
+-			if( cgs.gametype >= GT_TEAM) {
++			if( cgs.gametype >= GT_TEAM && ci->team < TEAM_GREEN) {
+ 				// keep skin name
+ 				if( ci->team == TEAM_BLUE ) {
+ 					Q_strncpyz(teamname, DEFAULT_BLUETEAM_NAME, sizeof(teamname) );
+@@ -1345,6 +1348,7 @@
+ 			continue;
+ 		}
+ 		if ( ci->stHand==match->stHand && !Q_stricmp( ci->modelName, match->modelName )
++			&& !Q_stricmp(ci->stUniformSkin,match->stUniformSkin)
+ 			&& !Q_stricmp( ci->skinName, match->skinName )
+ 			&& !Q_stricmp( ci->saberName, match->saberName)
+ 			&& !Q_stricmp( ci->saber2Name, match->saber2Name)
+@@ -1452,7 +1456,7 @@
+ 		if ( !match->infoValid || match->deferred ) {
+ 			continue;
+ 		}
+-		if ( Q_stricmp( ci->skinName, match->skinName ) ||
++		if ( Q_stricmp(ci->stUniformSkin,match->stUniformSkin) || Q_stricmp( ci->skinName, match->skinName ) ||
+ 			 ci->stHand!=match->stHand || Q_stricmp( ci->modelName, match->modelName ) ||
+ //			 Q_stricmp( ci->headModelName, match->headModelName ) ||
+ //			 Q_stricmp( ci->headSkinName, match->headSkinName ) ||
+@@ -1481,7 +1485,7 @@
+ 				continue;
+ 			}
+ 			if ( ci->team != TEAM_SPECTATOR &&
+-				(Q_stricmp( ci->skinName, match->skinName ) ||
++				(Q_stricmp(ci->stUniformSkin,match->stUniformSkin) || Q_stricmp( ci->skinName, match->skinName ) ||
+ 				 (cgs.gametype >= GT_TEAM && ci->team != match->team)) ) {
+ 				continue;
+ 			}
+@@ -1851,7 +1855,7 @@
+ 	v = Info_ValueForKey( configstring, "forcepowers" );
+ 	Q_strncpyz( newInfo.forcePowers, v, sizeof( newInfo.forcePowers ) );
+ 
+-	CG_ApplyTeamSkin(newInfo.modelName, newInfo.skinName, newInfo.team, newInfo.colorOverride);
++	CG_ApplyTeamSkin(newInfo.modelName, newInfo.skinName, newInfo.team, newInfo.colorOverride, newInfo.stUniformSkin);
+ 
+ 	// scan for an existing clientinfo that matches this modelname
+ 	// so we can avoid loading checks if possible
+@@ -4605,6 +4609,14 @@
+ 	ent.customShader = shader;
+ 	ent.radius = 10;
+ 	ent.renderfx = rf;
++    if (shader == cgs.media.whiteShader && cent->currentState.number < MAX_CLIENTS && cgs.tffaCount > 2) {
++        const float *color = ST_TffaColor(cgs.clientinfo[cent->currentState.number].team);
++        ent.radius = 3.5f;
++        for (int i=0; i<3; ++i) ent.shaderRGBA[i] = (byte)(255*color[i]);
++        ent.shaderRGBA[3] = 255;
++        trap->R_AddRefEntityToScene(&ent);
++        return;
++    }
+ 	ent.shaderRGBA[0] = 255;
+ 	ent.shaderRGBA[1] = 255;
+ 	ent.shaderRGBA[2] = 255;
+@@ -5325,6 +5337,13 @@
+ {
+ 	if (cent->currentState.eType == ET_NPC || cgs.gametype == GT_SIEGE)
+ 		return NULL;
++    // White and Black use RGB blades since the stock saber palette has six entries.
++    if (cg_teamColorSabers.integer && cgs.tffaCount > 2) {
++        static const int white[MAX_BLADES] = {0xffffff,0xffffff,0xffffff,0xffffff,0xffffff,0xffffff,0xffffff,0xffffff};
++        static const int black[MAX_BLADES] = {0};
++        if (client->team == TEAM_WHITE) return white;
++        if (client->team == TEAM_BLACK) return black;
++    }
+ 	if (CG_TeamSaberColor(cent, client) >= 0)
+ 		return NULL;
+ 	return client->crystals[saber];
+@@ -5356,7 +5375,7 @@
+ {
+ 	saberInfo_t *saber = &client->saber[slot];
+ 	const int *crystals = CG_CrystalColors(cent, client, slot);
+-	const int preset = cent->currentState.eType != ET_NPC && CG_UsesTeamAppearance(client->team)
++	const int preset = cent->currentState.eType != ET_NPC && (CG_UsesTeamAppearance(client->team) || CG_TeamSaberColor(cent, client) >= 0)
+ 		? CG_PlayerSaberColor(cent, client, slot) : -1;
+ 	vec3_t		positions[MAX_BLADES*2], mid={0}, rgbs[MAX_BLADES*2], rgb={0};
+ 	float		lengths[MAX_BLADES*2]={0}, totallength = 0, numpositions = 0, dist, diameter = 0;
+@@ -9112,7 +9131,14 @@
+ 	legs.radius = CG_RadiusForCent( cent );
+ 	VectorClear(legs.angles);
+ 
+-	if (ci->colorOverride[0] != 0.0f ||
++    if (cent->currentState.eType == ET_PLAYER && cg_teamColorSkins.integer &&
++        cgs.tffaCount > 2 && ci->team >= TEAM_GREEN && ST_TffaEnabled(ci->team, cgs.tffaCount) &&
++        !CG_StockModularJedi(ci->modelName) && !ci->stUniformSkin[0]) {
++        const float *tint = ST_TffaColor(ci->team);
++        for (int channel = 0; channel < 3; ++channel) legs.shaderRGBA[channel] = (byte)(255*tint[channel]);
++        legs.shaderRGBA[3] = cent->currentState.customRGBA[3];
++    }
++	else if (ci->colorOverride[0] != 0.0f ||
+ 		ci->colorOverride[1] != 0.0f ||
+ 		ci->colorOverride[2] != 0.0f)
+ 	{
+@@ -9174,6 +9200,9 @@
+ 					}
+ 				}
+ 			}
++            else if (cgs.tffaCount > 2 && ST_TffaEnabled(team,cgs.tffaCount)) {
++                CG_PlayerFloatSprite(cent, cgs.media.whiteShader);
++            }
+ 			else
+ 			{ //generic teamplay
+ 				if (team == TEAM_RED)
+--- a/codemp/cgame/cg_sabertrials_hud.inc
++++ b/codemp/cgame/cg_sabertrials_hud.inc
+@@ -242,6 +242,17 @@
+         ST_HudCenteredText(x + 88*s, y + 7*s, 15*s, 42*s, number, st_hudWhite);
+         y += h + 4*s;
+     }
++    if (cgs.tffaCount > 2) {
++        int rows = (cgs.tffaCount + 1) / 2;
++        ST_HudPanel(x, y, w, (rows*12+12)*s, ST_HUD_TEAM);
++        for (int slot = 0; slot < cgs.tffaCount; ++slot) {
++            int team = ST_TffaTeamAt(slot);
++            Com_sprintf(number, sizeof(number), "%s %d", ST_TffaName(team), cgs.tffaScores[team]);
++            ST_HudFitText(x + (10 + 57*(slot%2))*s, y + (6 + 12*(slot/2))*s, 9*s, 53*s,
++                number, team == TEAM_BLACK ? st_hudWhite : ST_TffaColor(team));
++        }
++        return y + (rows*12+16)*s;
++    }
+     // Siege has its own objective/timer HUD; never mislabel its scores as TFFA.
+     if (cgs.gametype >= GT_TEAM && cgs.gametype != GT_SIEGE) {
+         ST_HudPanel(x, y, w, h, ST_HUD_TEAM);
+--- a/codemp/cgame/cg_sabertrials_presentation.inc
++++ b/codemp/cgame/cg_sabertrials_presentation.inc
+@@ -33,6 +33,8 @@
+ static void STP_CGBoard(STPBoard*b) {
+  int i,winner;char event[256];memset(b,0,sizeof(*b));
+  b->local=cg.clientNum;b->mode=cgs.gametype;b->teams=cgs.gametype>=GT_TEAM;
++ b->tffaCount=cgs.tffaCount;
++ memcpy(b->tffaScores,cgs.tffaScores,sizeof(b->tffaScores));
+  b->red=cg.teamScores[0];b->blue=cg.teamScores[1];
+  b->result=cg.predictedPlayerState.pm_type==PM_INTERMISSION;
+  trap->Cvar_VariableStringBuffer("ui_ste0",event,sizeof(event));
+@@ -58,6 +60,11 @@
+    Com_sprintf(b->outcome,sizeof(b->outcome),"Winner: %s",st_streamerMode.integer&&!st_streamerPlayerNames.integer?va("Player %d",cgs.duelWinner+1):cgs.clientinfo[cgs.duelWinner].name);
+   }else if(b->mode==GT_POWERDUEL||b->mode==GT_DUEL){Q_strncpyz(b->outcome,"Round complete / awaiting winner",sizeof(b->outcome));}
+   else if(b->mode==GT_SIEGE){Q_strncpyz(b->outcome,cg_siegeWinTeam==1?"Red team wins":cg_siegeWinTeam==2?"Blue team wins":"Match complete",sizeof(b->outcome));}
++  else if(b->tffaCount>2){
++   int leader=ST_TffaLeader(b->tffaScores,b->tffaCount);
++   if(leader)Com_sprintf(b->outcome,sizeof(b->outcome),"%s team wins / %d",ST_TffaName(leader),b->tffaScores[leader]);
++   else Q_strncpyz(b->outcome,"Draw / tied team scores",sizeof(b->outcome));
++  }
+   else if(b->teams){Com_sprintf(b->outcome,sizeof(b->outcome),"%s  /  %d - %d",b->red==b->blue?"Draw":b->red>b->blue?"Red team wins":"Blue team wins",b->red,b->blue);}
+   else{winner=STP_Winner(b);if(winner>=0)Com_sprintf(b->outcome,sizeof(b->outcome),"Winner: %s  /  %d points",b->rows[winner].name,b->rows[winner].score);
+    else Q_strncpyz(b->outcome,winner==-1?"Draw / tied final scores":"Match complete / no active scores",sizeof(b->outcome));}
+@@ -70,7 +77,9 @@
+ }
+ static void ST_DrawPresentationBoard(float fade) {
+  STPBoard b;if(!stpVisible){stpOpened=cg.time;stpPageOffset=0;}stpVisible=1;
+- stpFade=fade;STP_CGBoard(&b);STP_DrawBoard(&stpPainter,&b);stpFade=1;
++ STPPainter painter=stpPainter;
++ if(st_hudStyle.integer!=1)painter.art=NULL;
++ stpFade=fade;STP_CGBoard(&b);STP_DrawBoard(&painter,&b);stpFade=1;
+ }
+ void ST_CGNotifications(void) {
+  STP_ObserveNotices(trap->Cvar_VariableStringBuffer,cg.time);
+--- a/codemp/cgame/cg_scoreboard.c
++++ b/codemp/cgame/cg_scoreboard.c
+@@ -417,7 +417,7 @@
+ 		}
+ 		fade = fadeColor[3];
+ 	}
+-	if ( st_hudStyle.integer == 1 && cg.snap ) {
++	if ( (st_hudStyle.integer == 1 || cgs.tffaCount > 2) && cg.snap ) {
+ 		ST_DrawPresentationBoard(fade);
+ 		if (++cg.deferredPlayerLoading > 10) CG_LoadDeferredPlayers();
+ 		return qtrue;
+--- a/codemp/cgame/cg_servercmds.c
++++ b/codemp/cgame/cg_servercmds.c
+@@ -40,43 +40,38 @@
+ */
+ #define SCORE_OFFSET (18)
+ static void CG_ParseScores( void ) {
+-	int i, powerups, readScores;
+-
+-	cg.numScores = atoi( CG_Argv( 1 ) );
+-
+-	readScores = cg.numScores;
+-
+-	if (readScores > MAX_CLIENT_SCORE_SEND)
+-		readScores = MAX_CLIENT_SCORE_SEND;
+-
+-	if ( cg.numScores > MAX_CLIENTS )
+-		cg.numScores = MAX_CLIENTS;
+-
+-	cg.numScores = readScores;
+-
+-	cg.teamScores[0] = atoi( CG_Argv( 2 ) );
+-	cg.teamScores[1] = atoi( CG_Argv( 3 ) );
+-
+-	memset( cg.scores, 0, sizeof( cg.scores ) );
+-	for ( i=0; i<readScores; i++ ) {
+-		cg.scores[i].client				= atoi( CG_Argv( i*SCORE_OFFSET +  4 ) );
+-		cg.scores[i].score				= atoi( CG_Argv( i*SCORE_OFFSET +  5 ) );
+-		cg.scores[i].ping				= atoi( CG_Argv( i*SCORE_OFFSET +  6 ) );
+-		cg.scores[i].time				= atoi( CG_Argv( i*SCORE_OFFSET +  7 ) );
+-		cg.scores[i].scoreFlags			= atoi( CG_Argv( i*SCORE_OFFSET +  8 ) );
+-		powerups						= atoi( CG_Argv( i*SCORE_OFFSET +  9 ) );
+-		cg.scores[i].accuracy			= atoi( CG_Argv( i*SCORE_OFFSET + 10 ) );
+-		cg.scores[i].impressiveCount	= atoi( CG_Argv( i*SCORE_OFFSET + 11 ) );
+-		cg.scores[i].excellentCount		= atoi( CG_Argv( i*SCORE_OFFSET + 12 ) );
+-		cg.scores[i].gauntletCount		= atoi( CG_Argv( i*SCORE_OFFSET + 13 ) );
+-		cg.scores[i].defendCount		= atoi( CG_Argv( i*SCORE_OFFSET + 14 ) );
+-		cg.scores[i].assistCount		= atoi( CG_Argv( i*SCORE_OFFSET + 15 ) );
+-		cg.scores[i].perfect			= atoi( CG_Argv( i*SCORE_OFFSET + 16 ) );
+-		cg.scores[i].captures			= atoi( CG_Argv( i*SCORE_OFFSET + 17 ) );
+-		cg.scores[i].stMatchKills		= atoi( CG_Argv( i*SCORE_OFFSET + 18 ) );
+-		cg.scores[i].stMatchDeaths		= atoi( CG_Argv( i*SCORE_OFFSET + 19 ) );
+-		cg.scores[i].stPrivateDuelWins	= atoi( CG_Argv( i*SCORE_OFFSET + 20 ) );
+-		cg.scores[i].stPrivateDuelLosses	= atoi( CG_Argv( i*SCORE_OFFSET + 21 ) );
++    const int append = !Q_stricmp(CG_Argv(0), "scoresmore");
++    int first = append ? atoi(CG_Argv(2)) : 0;
++    int rows = atoi(CG_Argv(1));
++    if (first < 0 || first > MAX_CLIENTS || rows < 0 || rows > MAX_CLIENT_SCORE_SEND ||
++        rows > MAX_CLIENTS - first || (append && trap->Cmd_Argc() != 4 + rows * SCORE_OFFSET) ||
++        (append && (cgs.tffaCount <= 2 || first != cg.numScores))) return;
++    if (!append) {
++        cg.teamScores[0] = atoi(CG_Argv(2));
++        cg.teamScores[1] = atoi(CG_Argv(3));
++        memset(cg.scores, 0, sizeof(cg.scores));
++    }
++    cg.numScores = first + rows;
++    for (int row = 0; row < rows; ++row) {
++        int i = first + row, powerups;
++		cg.scores[i].client				= atoi( CG_Argv( row*SCORE_OFFSET +  4 ) );
++		cg.scores[i].score				= atoi( CG_Argv( row*SCORE_OFFSET +  5 ) );
++		cg.scores[i].ping				= atoi( CG_Argv( row*SCORE_OFFSET +  6 ) );
++		cg.scores[i].time				= atoi( CG_Argv( row*SCORE_OFFSET +  7 ) );
++		cg.scores[i].scoreFlags			= atoi( CG_Argv( row*SCORE_OFFSET +  8 ) );
++		powerups						= atoi( CG_Argv( row*SCORE_OFFSET +  9 ) );
++		cg.scores[i].accuracy			= atoi( CG_Argv( row*SCORE_OFFSET + 10 ) );
++		cg.scores[i].impressiveCount	= atoi( CG_Argv( row*SCORE_OFFSET + 11 ) );
++		cg.scores[i].excellentCount		= atoi( CG_Argv( row*SCORE_OFFSET + 12 ) );
++		cg.scores[i].gauntletCount		= atoi( CG_Argv( row*SCORE_OFFSET + 13 ) );
++		cg.scores[i].defendCount		= atoi( CG_Argv( row*SCORE_OFFSET + 14 ) );
++		cg.scores[i].assistCount		= atoi( CG_Argv( row*SCORE_OFFSET + 15 ) );
++		cg.scores[i].perfect			= atoi( CG_Argv( row*SCORE_OFFSET + 16 ) );
++		cg.scores[i].captures			= atoi( CG_Argv( row*SCORE_OFFSET + 17 ) );
++		cg.scores[i].stMatchKills		= atoi( CG_Argv( row*SCORE_OFFSET + 18 ) );
++		cg.scores[i].stMatchDeaths		= atoi( CG_Argv( row*SCORE_OFFSET + 19 ) );
++		cg.scores[i].stPrivateDuelWins	= atoi( CG_Argv( row*SCORE_OFFSET + 20 ) );
++		cg.scores[i].stPrivateDuelLosses	= atoi( CG_Argv( row*SCORE_OFFSET + 21 ) );
+ 
+ 		if ( cg.scores[i].client < 0 || cg.scores[i].client >= MAX_CLIENTS )
+ 			cg.scores[i].client = 0;
+@@ -270,11 +265,28 @@
+ Called on load to set the initial values from configure strings
+ ================
+ */
++void CG_ParseTffaTeams(const char *text) {
++    const char *cursor = text;
++    int count = atoi(COM_Parse(&cursor));
++    memset(cgs.tffaScores, 0, sizeof(cgs.tffaScores));
++    cgs.tffaCount = 2;
++    if (cgs.gametype == GT_TEAM && count > 2 && count <= ST_TFFA_MAX_TEAMS) {
++        for (int slot = 0; slot < count; ++slot) {
++            const char *value = COM_Parse(&cursor);
++            if (!*value) break;
++            cgs.tffaScores[ST_TffaTeamAt(slot)] = atoi(value);
++            if (slot + 1 == count) cgs.tffaCount = count;
++        }
++    }
++    trap->Cvar_Set("ui_stTffaTeams", va("%d", cgs.tffaCount));
++}
++
+ void CG_SetConfigValues( void )
+ {
+ 	const char *s;
+ 	const char *str;
+ 
++	CG_ParseTffaTeams(CG_ConfigString(CS_TFFA_TEAMS));
+ 	cgs.scores1 = atoi( CG_ConfigString( CS_SCORES1 ) );
+ 	cgs.scores2 = atoi( CG_ConfigString( CS_SCORES2 ) );
+ 	cgs.levelStartTime = atoi( CG_ConfigString( CS_LEVEL_START_TIME ) );
+@@ -761,6 +773,8 @@
+ 		CG_ParseServerinfo();
+ 	} else if ( num == CS_WARMUP ) {
+ 		CG_ParseWarmup();
++	} else if ( num == CS_TFFA_TEAMS ) {
++        CG_ParseTffaTeams(str);
+ 	} else if ( num == CS_SCORES1 ) {
+ 		cgs.scores1 = atoi( str );
+ 	} else if ( num == CS_SCORES2 ) {
+@@ -1645,6 +1659,7 @@
+ 	{ "sb",					CG_SiegeBriefingDisplay_f },
+ 	{ "scl",				CG_SiegeClassSelect_f },
+ 	{ "scores",				CG_ParseScores },
++	{ "scoresmore",           CG_ParseScores },
+ 	{ "spc",				CG_SiegeProfileMenu_f },
+ 	{ "sxd",				CG_ParseSiegeExtendedData },
+ 	{ "tchat",				CG_Chat_f },
+--- a/codemp/cgame/cg_st_team_appearance.inc
++++ b/codemp/cgame/cg_st_team_appearance.inc
+@@ -10,8 +10,35 @@
+ 	return (strlen(model) > 5 && !Q_stricmpn(model, "jedi_", 5)) ? qtrue : qfalse;
+ }
+ 
+-static void CG_ApplyTeamSkin(const char *model, char *skin, int team, vec3_t tint)
++static qboolean CG_StockModularJedi(const char *model)
+ {
++    static const char *const stock[] = {"jedi_hf","jedi_hm","jedi_kdm","jedi_rm","jedi_tf","jedi_zf"};
++    for (size_t i=0; i<ARRAY_LEN(stock); ++i)
++        if (!Q_stricmp(model,stock[i])) return qtrue;
++    return qfalse;
++}
++
++static void CG_ApplyTeamSkin(const char *model, char *skin, int team, vec3_t tint, char *uniform)
++{
++    uniform[0]=0;
++    if (cg_teamColorSkins.integer && cgs.gametype == GT_TEAM && ST_TffaEnabled(team,cgs.tffaCount)) {
++        if (CG_StockModularJedi(model)) {
++            static const float cloth[ST_TFFA_TEAM_IDS][3] = {
++                {1,1,1},{.81f,.25f,.23f},{.24f,.43f,.81f},{1,1,1},{.25f,.70f,.35f},
++                {.83f,.72f,.27f},{.84f,.85f,.86f},{.35f,.36f,.38f},{.88f,.50f,.23f},{.64f,.34f,.77f}
++            };
++            VectorCopy(cloth[team],tint);
++            return;
++        }
++        const char *outfit = skin;
++        if (!*outfit || !Q_stricmp(outfit,"red") || !Q_stricmp(outfit,"blue")) outfit="default";
++        // Only installed stock outfit mappings receive a uniform. Personal data still use the original skin.
++        const char *path = va("models/st_team/skins/%s/%s_%s.skin",model,outfit,ST_TffaName(team));
++        if (strlen(path)<MAX_QPATH && !strchr(outfit,'|') && BG_FileExists(path)) {
++            Q_strncpyz(uniform,path,MAX_QPATH);
++            return;
++        }
++    }
+ 	if (!cg_teamColorSkins.integer || !CG_UsesTeamAppearance(team))
+ 		return;
+ 
+@@ -46,6 +73,15 @@
+ 
+ static int CG_TeamSaberColor(const centity_t *cent, const clientInfo_t *client)
+ {
++    if (cg_teamColorSabers.integer && cent->currentState.eType == ET_PLAYER && cgs.tffaCount > 2) {
++        switch (client->team) {
++        case TEAM_GREEN: return SABER_GREEN;
++        case TEAM_YELLOW: return SABER_YELLOW;
++        case TEAM_ORANGE: return SABER_ORANGE;
++        case TEAM_PURPLE: return SABER_PURPLE;
++        default: break;
++        }
++    }
+ 	if (!cg_teamColorSabers.integer || cent->currentState.eType == ET_NPC ||
+ 		!CG_UsesTeamAppearance(client->team))
+ 		return -1;
+--- a/codemp/game/bg_public.h
++++ b/codemp/game/bg_public.h
+@@ -1081,8 +1081,16 @@
+ 	TEAM_BLUE,
+ 	TEAM_SPECTATOR,
+ 
+-	TEAM_NUM_TEAMS
++	TEAM_NUM_TEAMS,  // stock NPC tables use this bound
++	TEAM_GREEN = TEAM_NUM_TEAMS, TEAM_YELLOW, TEAM_WHITE, TEAM_BLACK, TEAM_ORANGE, TEAM_PURPLE
+ } team_t;
++
++#include "st_tffa_teams.h"
++// The emote catalog and its MAX_CLIENTS entries occupy the preceding slots.
++#define CS_TFFA_TEAMS (CS_MAX + 1 + MAX_CLIENTS)
++#if CS_TFFA_TEAMS >= MAX_CONFIGSTRINGS
++#error no configstring available for TFFA standings
++#endif
+ 
+ typedef enum {
+ 	DUELTEAM_FREE,
+--- a/codemp/ui/st_presentation_draw.inc
++++ b/codemp/ui/st_presentation_draw.inc
+@@ -21,7 +21,7 @@
+ }
+ static void STP_DrawRow(const STPPainter*p,const STPBoard*b,int index,float y) {
+  const STPRow*r=&b->rows[index];char value[80];float own[4]={.035f,.23f,.34f,.90f};
+- const float*accent=r->team==1?stpRed:r->team==2?stpCyan:stpMuted;
++ const float*accent=b->tffaCount>2 && ST_TffaEnabled(r->team,b->tffaCount)?ST_TffaColor(r->team):r->team==1?stpRed:r->team==2?stpCyan:stpMuted;
+  int you=r->id==b->local;
+  if(you){p->fill(40,y-2,560,19,own);p->fill(43,y-2,554,.45f,stpCyan);}
+  else if(index%2==0){float stripe[4]={.15f,.22f,.26f,.19f};p->fill(40,y-2,560,20,stripe);}
+@@ -30,7 +30,7 @@
+  else p->text(50,y,16,.55f,"?",stpMuted,0);
+  p->text(74,y,200,.69f,r->name,stpText,0);
+  /* Local position and readiness are independent of global rank. */
+- p->text(278,y,55,.58f,r->ready?"READY":r->flag==1?"RED FLAG":r->flag==2?"BLUE FLAG":r->flag==3?"FLAG":you?"YOU":r->team==3?"SPEC":r->team==1?"RED":r->team==2?"BLUE":"",accent,0);
++ p->text(278,y,55,.58f,r->ready?"READY":r->flag==1?"RED FLAG":r->flag==2?"BLUE FLAG":r->flag==3?"FLAG":b->tffaCount>2 && ST_TffaEnabled(r->team,b->tffaCount)?ST_TffaName(r->team):you?"YOU":r->team==3?"SPEC":r->team==1?"RED":r->team==2?"BLUE":"",accent,0);
+  if(b->mode==6){
+   int hasKd=r->hasTffaKd && r->team!=3 && r->ping>=0;
+   snprintf(value,sizeof(value),"%d / %d",r->kills,r->deaths);
+@@ -82,7 +82,14 @@
+   p->text(48,40,380,.94f,b->title,stpCyan,0);
+  }
+  p->text(48,65,544,.62f,b->subtitle,stpMuted,0);
+- if(b->teams){snprintf(text,sizeof(text),"RED %d     /     BLUE %d",b->red,b->blue);p->text(388,43,204,.65f,text,stpText,1);}
++ if(b->tffaCount>2){
++  int teams[ST_TFFA_MAX_TEAMS],count=STP_TeamOrder(b,teams);
++  for(int slot=0;slot<count;slot++){
++   int team=teams[slot];
++   snprintf(text,sizeof(text),"%s %d",ST_TffaName(team),b->tffaScores[team]);
++   p->text(353+(slot%4)*60,39+(slot/4)*13,57,.55f,text,team==7?stpMuted:ST_TffaColor(team),1);
++  }
++ }else if(b->teams){if(b->mode==6 && b->blue>b->red)snprintf(text,sizeof(text),"BLUE %d     /     RED %d",b->blue,b->red);else snprintf(text,sizeof(text),"RED %d     /     BLUE %d",b->red,b->blue);p->text(388,43,204,.65f,text,stpText,1);}
+  p->text(48,88,544,.76f,b->result?b->outcome:"GLOBAL RANK: unavailable",b->result?stpGold:stpMuted,0);
+  p->fill(48,112,544,.5f,stpCyan);
+  p->text(74,115,200,.53f,"PLAYER",stpMuted,0);
+--- a/codemp/ui/st_presentation_policy.inc
++++ b/codemp/ui/st_presentation_policy.inc
+@@ -3,6 +3,7 @@
+ #define ST_PRESENTATION_POLICY
+ #include <string.h>
+ #include <stdio.h>
++#include "../game/st_tffa_teams.h"
+ #define STP_MAX_ROWS 64
+ #define STP_PAGE_ROWS 14
+ typedef struct {
+@@ -12,6 +13,7 @@
+ typedef struct {
+  STPRow rows[STP_MAX_ROWS];
+  int count,local,teams,mode,page,red,blue,result;
++ int tffaCount,tffaScores[ST_TFFA_TEAM_IDS];
+  char title[128],subtitle[160],outcome[160],event[192];
+ } STPBoard;
+ typedef struct {char text[192];int kind,started,active;} STPNotice;
+@@ -19,10 +21,32 @@
+  if(deaths>0)snprintf(out,size,"%.2f",(double)kills/deaths);
+  else snprintf(out,size,"--");
+ }
++static int STP_TeamOrder(const STPBoard *board, int *teams) {
++ int count=ST_TffaCount(board->tffaCount);
++ for(int slot=0;slot<count;++slot) {
++  int team=ST_TffaTeamAt(slot), pos=slot;
++  int score=board->tffaCount>2?board->tffaScores[team]:(team==1?board->red:board->blue);
++  while(board->mode==6 && pos>0) {
++   int prev=teams[pos-1];
++   int other=board->tffaCount>2?board->tffaScores[prev]:(prev==1?board->red:board->blue);
++   if(other>=score)break;
++   teams[pos]=prev;
++   --pos;
++  }
++  teams[pos]=team;
++ }
++ return count;
++}
+ static int STP_Order(const STPBoard*b,int*out) {
+  int n=0,team,i,limit=b->count;
+  if(limit<0)limit=0;if(limit>STP_MAX_ROWS)limit=STP_MAX_ROWS;
+- for(team=0;team<4;team++)for(i=0;i<limit;i++)if(b->rows[i].team==team)out[n++]=i;
++ int teams[ST_TFFA_MAX_TEAMS],count=STP_TeamOrder(b,teams);
++ for(int group=0;group<count+2;group++) {
++  if(group==count+1) team=3;
++  else if(b->mode==6) team=group<count?teams[group]:0;
++  else team=group?teams[group-1]:0;
++  for(i=0;i<limit;i++)if(b->rows[i].team==team)out[n++]=i;
++ }
+  return n;
+ }
+ static int STP_PageCount(int count){return count>0?(count+STP_PAGE_ROWS-1)/STP_PAGE_ROWS:1;}
+--- a/codemp/ui/ui_main.c
++++ b/codemp/ui/ui_main.c
+@@ -532,6 +532,7 @@
+ const char *UI_GetStringEdString(const char *refSection, const char *refName);
+ 
+ const char *UI_TeamName(int team) {
++    if (team >= TEAM_GREEN && team <= TEAM_PURPLE) return ST_TffaName(team);
+ 	if (team==TEAM_RED)
+ 		return "RED";
+ 	else if (team==TEAM_BLUE)
+@@ -1979,6 +1980,84 @@
+ 	}
+ }
+ 
++static int UI_HostTeamSlots(void)
++{
++    int index = (int)trap->Cvar_VariableValue("ui_netGametype");
++    int size = (int)trap->Cvar_VariableValue("ui_stHostTeamSize");
++    if (!size || index < 0 || index >= uiInfo.numGameTypes || uiInfo.gameTypes[index].gtEnum != GT_TEAM)
++        return 0;
++    return ST_TffaCount((int)trap->Cvar_VariableValue("ui_stHostTeams")) * Com_Clampi(2, 4, size);
++}
++
++static int UI_HostMaxClients(void)
++{
++    int current = (int)trap->Cvar_VariableValue("sv_maxClients");
++    int slots = UI_HostTeamSlots();
++    return current > slots ? current : slots;
++}
++
++static void UI_TffaHostSlots(void)
++{
++    int slots = UI_HostTeamSlots();
++    trap->Cvar_SetValue("ui_stTeamSlots", slots);
++    trap->Cvar_SetValue("ui_stFixedSlots", slots > 0);
++    int index=(int)trap->Cvar_VariableValue("ui_netGametype");
++    bool tffa=index>=0 && index<uiInfo.numGameTypes && uiInfo.gameTypes[index].gtEnum==GT_TEAM;
++    trap->Cvar_SetValue("ui_stOpenTffa", tffa && !slots);
++    if(tffa && trap->Cvar_VariableValue("ui_stTffaOpenSlots")<1)
++        trap->Cvar_SetValue("ui_stTffaOpenSlots", Com_Clampi(1,MAX_CLIENTS,(int)trap->Cvar_VariableValue("sv_maxClients")));
++}
++
++// All 32 TFFA slots share the same selection and team mapping at draw and launch time.
++#define UI_TFFA_ROSTER_SLOT 991
++static int UI_TffaPlayableSlots(void)
++{
++    int fixed = UI_HostTeamSlots();
++    int open = (int)trap->Cvar_VariableValue("ui_stTffaOpenSlots");
++    return fixed ? fixed : Com_Clampi(1, MAX_CLIENTS, open ? open : UI_HostMaxClients());
++}
++
++static int UI_TffaSlotTeam(int slot)
++{
++    int count = ST_TffaCount((int)trap->Cvar_VariableValue("ui_stHostTeams"));
++    if (count == 2) return slot % 2 ? TEAM_RED : TEAM_BLUE;
++    return ST_TffaTeamAt(slot % count);
++}
++
++static const char *UI_TffaSlotCvar(int slot)
++{
++    return va(slot % 2 ? "ui_redteam%d" : "ui_blueteam%d",1+slot/2);
++}
++
++static void UI_DrawTffaSlot(const rectDef_t *rect, int slot, const vec4_t focus)
++{
++    if (slot<0 || slot>=MAX_CLIENTS) return;
++    int team = UI_TffaSlotTeam(slot);
++    bool open = slot < UI_TffaPlayableSlots();
++    int value = (int)trap->Cvar_VariableValue(UI_TffaSlotCvar(slot));
++    const char *choice = !open ? UI_GetStringEdString("MENUS","CLOSED") :
++        value>=2 && value<UI_GetNumBots()+2 ? UI_GetBotNameByNumber(value-2) : UI_GetStringEdString("MENUS","HUMAN");
++    vec4_t ink, bar, panel = {.043f,.082f,.11f,.88f};
++    VectorCopy4(ST_TffaColor(team), bar);
++    VectorCopy4(bar, ink);
++    if (team==TEAM_BLACK) VectorSet(ink,.65f,.69f,.74f);
++    if (!open) { VectorSet(ink,.45f,.50f,.54f); bar[3]=.35f; }
++    bool hovered = (uiInfo.uiDC.cursorx>=rect->x && uiInfo.uiDC.cursorx<rect->x+rect->w && uiInfo.uiDC.cursory>=rect->y && uiInfo.uiDC.cursory<rect->y+rect->h);
++    if (open && (hovered || focus[0] > .78f)) VectorSet(panel,.10f,.19f,.24f);
++    UI_FillRect(rect->x,rect->y,rect->w-2,rect->h-1,panel);
++    UI_FillRect(rect->x,rect->y,1.6f,rect->h-1,bar);
++    char label[32];
++    Com_sprintf(label,sizeof(label),"%02d   %s",slot+1,ST_TffaName(team));
++    const int font=MenuFontToHandle(4);
++    trap->R_Font_DrawString(rect->x+4,rect->y,label,ink,font,-1,.48f);
++    float scale=.64f;
++    int width=trap->R_Font_StrLenPixels(choice,font,scale);
++    if(width>rect->w-7) scale *= (rect->w-7)/width;
++    vec4_t nameColor = {.85f,.90f,.93f,1};
++    if (!open) VectorSet(nameColor,.42f,.46f,.49f);
++    trap->R_Font_DrawString(rect->x+4,rect->y+8,choice,nameColor,font,-1,scale);
++}
++
+ static void UI_DrawTeamMember(rectDef_t *rect, float scale, vec4_t color, qboolean blue, int num, int textStyle, int iMenuFont)
+ {
+ 	// 0 - None
+@@ -1986,7 +2065,7 @@
+ 	// 2..NumCharacters - Bot
+ 	int value = trap->Cvar_VariableValue(va(blue ? "ui_blueteam%i" : "ui_redteam%i", num));
+ 	const char *text;
+-	int maxcl = trap->Cvar_VariableValue( "sv_maxClients" );
++	int maxcl = UI_HostMaxClients();
+ 	vec4_t finalColor;
+ 	int numval = num;
+ 
+@@ -3009,6 +3088,10 @@
+ 	rect.y = y + text_y;
+ 	rect.w = w;
+ 	rect.h = h;
++    if (ownerDraw == UI_TFFA_ROSTER_SLOT) {
++        UI_DrawTffaSlot(&rect, (int)special, color);
++        return;
++    }
+ 
+   switch (ownerDraw)
+   {
+@@ -3802,6 +3885,7 @@
+ 		trap->Cvar_Update(&ui_currentNetMap);
+ 		UI_MapCountByGameType(qfalse);
+ 		Menu_SetFeederSelection(NULL, FEEDER_ALLMAPS, 0, NULL);
++		UI_TffaHostSlots();
+ 		return qtrue;
+ 	}
+ 	return qfalse;
+@@ -3910,7 +3994,7 @@
+ 		// 2..NumCharacters - Bot
+ 		char *cvar = va(blue ? "ui_blueteam%i" : "ui_redteam%i", num);
+ 		int value = trap->Cvar_VariableValue(cvar);
+-		int maxcl = trap->Cvar_VariableValue( "sv_maxClients" );
++		int maxcl = UI_HostMaxClients();
+ 		int numval = num;
+ 
+ 		numval *= 2;
+@@ -3920,7 +4004,7 @@
+ 			numval -= 1;
+ 		}
+ 
+-		if (numval > maxcl)
++		if (numval > (uiInfo.gameTypes[ui_netGametype.integer].gtEnum==GT_TEAM ? UI_TffaPlayableSlots() : maxcl))
+ 		{
+ 			return qfalse;
+ 		}
+@@ -4139,6 +4223,11 @@
+ */
+ 
+ static qboolean UI_OwnerDrawHandleKey(int ownerDraw, int flags, float *special, int key) {
++    if (ownerDraw == UI_TFFA_ROSTER_SLOT) {
++        int slot = (int)*special;
++        if (slot<0 || slot>=UI_TffaPlayableSlots()) return qfalse;
++        return UI_TeamMember_HandleKey(flags,special,key,(slot%2==0)?qtrue:qfalse,1+slot/2);
++    }
+ 	int findex, iUse = 0;
+ 
+   switch (ownerDraw) {
+@@ -5901,6 +5990,7 @@
+ #include "ui_st_saber_inspect.inc"
+ #include "ui_st_workbench.inc"
+ 
++
+ static void UI_RunMenuScript(char **args)
+ {
+ 	const char *name, *name2;
+@@ -5909,6 +5999,7 @@
+ 	if (String_Parse(args, &name))
+ 	{
+ 		if ( ST_UIMenuScript( name ) ) { return; }
++        if (!Q_stricmp(name, "tffaHostSlots")) { UI_TffaHostSlots(); return; }
+ 		if (Q_stricmp(name, "StartServer") == 0)
+ 		{
+ 			int i, added = 0;
+@@ -5932,6 +6023,14 @@
+ 				trap->Cvar_SetValue( "dedicated", Com_Clamp( 0, 2, ui_dedicated.integer ) );
+ 			}
+ 			trap->Cvar_SetValue( "g_gametype", Com_Clamp( 0, GT_MAX_GAME_TYPE, uiInfo.gameTypes[ui_netGametype.integer].gtEnum ) );
++            if (uiInfo.gameTypes[ui_netGametype.integer].gtEnum == GT_TEAM) {
++                int count = ST_TffaCount((int)trap->Cvar_VariableValue("ui_stHostTeams"));
++                int size = (int)trap->Cvar_VariableValue("ui_stHostTeamSize");
++                size = size ? Com_Clampi(2, 4, size) : 0;
++                trap->Cvar_SetValue("g_tffaTeams", count);
++                trap->Cvar_SetValue("g_tffaTeamSize", size);
++                trap->Cvar_SetValue("sv_maxClients", size ? UI_HostMaxClients() : UI_TffaPlayableSlots());
++            }
+ 			//trap->Cvar_Set("g_redTeam", UI_Cvar_VariableString("ui_teamName"));
+ 			//trap->Cvar_Set("g_blueTeam", UI_Cvar_VariableString("ui_opponentName"));
+ 			trap->Cmd_ExecuteText( EXEC_APPEND, va( "wait ; wait ; map %s\n", uiInfo.mapList[ui_currentNetMap.integer].mapLoadName ) );
+@@ -5961,10 +6060,22 @@
+ 				trap->Cvar_Set("timelimit", "0");
+ 			}
+ 
++            if (uiInfo.gameTypes[ui_netGametype.integer].gtEnum == GT_TEAM) {
++                int slots = UI_TffaPlayableSlots();
++                int available = ui_dedicated.integer ? slots : Com_Clampi(0,MAX_CLIENTS-1,slots);
++                for (int slot=0; slot<slots && added<available; ++slot) {
++                    int bot=(int)trap->Cvar_VariableValue(UI_TffaSlotCvar(slot))-2;
++                    if (bot<0 || bot>=UI_GetNumBots()) continue;
++                    trap->Cmd_ExecuteText(EXEC_APPEND,va("addbot \"%s\" %f %s\n",
++                        UI_GetBotNameByNumber(bot),skill,ST_TffaName(UI_TffaSlotTeam(slot))));
++                    ++added;
++                }
++                return;
++            }
+ 			for (i = 0; i < PLAYERS_PER_TEAM; i++)
+ 			{
+ 				int bot = trap->Cvar_VariableValue( va("ui_blueteam%i", i+1));
+-				int maxcl = trap->Cvar_VariableValue( "sv_maxClients" );
++				int maxcl = UI_HostMaxClients();
+ 
+ 				if (bot > 1)
+ 				{
+@@ -5977,7 +6088,7 @@
+ 					if (numval <= maxcl)
+ 					{
+ 						if (ui_actualNetGametype.integer >= GT_TEAM) {
+-							Com_sprintf( buff, sizeof(buff), "addbot \"%s\" %f %s\n", UI_GetBotNameByNumber(bot-2), skill, "Blue");
++							Com_sprintf( buff, sizeof(buff), "addbot \"%s\" %f %s\n", UI_GetBotNameByNumber(bot-2), skill, uiInfo.gameTypes[ui_netGametype.integer].gtEnum == GT_TEAM && ui_stHostTeams.integer > 2 ? "auto" : "Blue");
+ 						} else {
+ 							Com_sprintf( buff, sizeof(buff), "addbot \"%s\" %f \n", UI_GetBotNameByNumber(bot-2), skill);
+ 						}
+@@ -5994,7 +6105,7 @@
+ 					if (numval <= maxcl)
+ 					{
+ 						if (ui_actualNetGametype.integer >= GT_TEAM) {
+-							Com_sprintf( buff, sizeof(buff), "addbot \"%s\" %f %s\n", UI_GetBotNameByNumber(bot-2), skill, "Red");
++							Com_sprintf( buff, sizeof(buff), "addbot \"%s\" %f %s\n", UI_GetBotNameByNumber(bot-2), skill, uiInfo.gameTypes[ui_netGametype.integer].gtEnum == GT_TEAM && ui_stHostTeams.integer > 2 ? "auto" : "Red");
+ 						} else {
+ 							Com_sprintf( buff, sizeof(buff), "addbot \"%s\" %f \n", UI_GetBotNameByNumber(bot-2), skill);
+ 						}
+--- a/codemp/ui/ui_st_chat_preview.inc
++++ b/codemp/ui/ui_st_chat_preview.inc
+@@ -52,13 +52,7 @@
+    if(message.back()=='^')message.pop_back();
+    message+="...";
+   }
+-  if(i==0&&chatColor==0){
+-   vec4_t rim={.63f,.74f,.79f,1};
+-   const float bodyX=textX+Text_Width("You: ",messageScale,FONT_SMALL2);
+-   const char* body=message.c_str()+9; // ^7You: ^0
+-   for(int dy=-1;dy<=1;++dy)for(int dx=-1;dx<=1;++dx)
+-    if(dx||dy)Text_Paint(bodyX+dx*.35f,textY+dy*.35f,messageScale,rim,body,0,0,ITEM_TEXTSTYLE_NORMAL,FONT_SMALL2);
+-  }
+-  Text_Paint(textX,textY,messageScale,textColor,message.c_str(),0,0,ITEM_TEXTSTYLE_OUTLINED,FONT_SMALL2);
++  Text_Paint(textX,textY,messageScale,textColor,message.c_str(),0,0,
++   i==0&&chatColor==0?ITEM_TEXTSTYLE_NORMAL:ITEM_TEXTSTYLE_OUTLINED,FONT_SMALL2);
+  }
+ }
+--- a/codemp/ui/ui_st_profile.inc
++++ b/codemp/ui/ui_st_profile.inc
+@@ -50,7 +50,7 @@
+  const bool focus=SPUI_Over(x,y,w,h)||(!spui.mouse&&spui.focus==id);
+  const bool collection=id>=110&&id<=112;
+  const bool centered=collection||(id>=500&&id<=502)||id>=1000;
+- const bool modalAction=spui.modal&&id>=1000&&id<=1013;
++ const bool modalAction=spui.modal&&id>=1000&&id<1020+ST_TFFA_MAX_TEAMS;
+  vec4_t color;MSUI_Color(color,selected,focus,enabled||selected);
+  if(modalAction||(id<520&&w>=32&&(id<130||id==137||id>=410))){
+   const bool compact=id==121||id==137||id==412;
+--- a/codemp/ui/ui_st_profile_actions.inc
++++ b/codemp/ui/ui_st_profile_actions.inc
+@@ -23,6 +23,18 @@
+ }
+ static void SPUI_Navigate(int destination){
+  menuDef_t* menu=Menu_GetFocused();if(!menu)return;spui.field=0;spui.modal=0;spui.active=false;
++ if(destination>=600 && destination<600+ST_TFFA_MAX_TEAMS){
++  int slot=destination-600, count=(int)trap->Cvar_VariableValue("ui_stTffaTeams");
++  if(!SPUI_TeamGame() || count<=2 || slot>=count)return;
++  const char *team=ST_TffaName(ST_TffaTeamAt(slot));
++  itemDef_t *join=Menu_FindItemByName(menu,"sp_action_join");
++  if(join){
++   extern qboolean gTouchedForce;
++   if(!gTouchedForce)trap->Cmd_ExecuteText(EXEC_APPEND,va("cmd team %s\n",team));
++   Item_RunScript(join,va("play sound/interface/button1 ; uiScript setForce %s ; uiScript closeingame ;",team));
++  }
++  return;
++ }
+  const char* action=destination==510?"sp_action_saber":destination==511?"sp_action_force":destination==421?"sp_action_custom":destination==512?"sp_action_join":destination==513?"sp_action_spectate":destination==514?"sp_action_red":destination==515?"sp_action_blue":NULL;
+  if(action){
+   itemDef_t* item=Menu_FindItemByName(menu,action);
+@@ -71,7 +83,12 @@
+   // Role changes are an explicit native action, independent of Profile Apply.
+   float special=0;UI_OwnerDrawHandleKey(UI_JEDI_NONJEDI,0,&special,A_MOUSE1);
+  }
+- else if(id==512){spui.modal=2;spui.focus=SPUI_TeamGame()?1011:1010;spui.hits.clear();}
++ else if(id==512){spui.modal=2;spui.focus=SPUI_TeamGame()?(trap->Cvar_VariableValue("ui_stTffaTeams")>2?1020:1011):1010;spui.hits.clear();}
++ else if(id>=1020 && id<1020+ST_TFFA_MAX_TEAMS && spui.modal==2){
++  int slot=id-1020;
++  if(!SPUI_TeamGame() || slot>=(int)trap->Cvar_VariableValue("ui_stTffaTeams"))return;
++  SPUI_RequestNavigation(600+slot);
++ }
+  else if(id>=1010&&id<=1013){if((id==1010&&SPUI_TeamGame())||((id==1011||id==1012)&&!SPUI_TeamGame()))return;spui.modal=0;SPUI_RequestNavigation(id==1010?512:id==1011?514:id==1012?515:513);}
+  else if(id==1000){if(SPUI_Apply())SPUI_Navigate(spui.destination);}
+  else if(id==1001){SPUI_Cancel();SPUI_Navigate(spui.destination);}
+--- a/codemp/ui/ui_st_profile_draw.inc
++++ b/codemp/ui/ui_st_profile_draw.inc
+@@ -126,7 +126,12 @@
+   }else{
+    SCUI_Fit(160,184,320,.70f,"Join",scuCyan);
+    RUI_Divider(160,210,320);
+-   if(SPUI_TeamGame()){
++   int count=ST_TffaCount((int)trap->Cvar_VariableValue("ui_stTffaTeams"));
++   if(SPUI_TeamGame() && count>2){
++    for(int slot=0;slot<count;slot++)
++     SPUI_Button(156+83*(slot%4),216+29*(slot/4),78,24,ST_TffaName(ST_TffaTeamAt(slot)),1020+slot);
++    SPUI_Button(184,282,124,24,"Spectate",1013);SPUI_Button(332,282,124,24,"Cancel",1002);
++   }else if(SPUI_TeamGame()){
+     SPUI_Button(184,225,124,24,"Red team",1011);SPUI_Button(332,225,124,24,"Blue team",1012);
+     SPUI_Button(184,269,124,24,"Spectate",1013);SPUI_Button(332,269,124,24,"Cancel",1002);
+    }else{
+--- a/codemp/ui/ui_st_rich.inc
++++ b/codemp/ui/ui_st_rich.inc
+@@ -30,12 +30,6 @@
+  float unit=scale*.43f,aspect=uiInfo.uiDC.yscale/uiInfo.uiDC.xscale;vec4_t c;memcpy(c,color,sizeof(c));trap->R_SetColor(c);
+  for(;*s;++s){if(Q_IsColorString(s)){int n=ColorIndex(s[1]);c[0]=g_color_table[n][0];c[1]=g_color_table[n][1];c[2]=g_color_table[n][2];trap->R_SetColor(c);++s;continue;}
+   int i=*s-32;float u=(i%16)*64.f/1024,v=(i/16)*80.f/1024;
+-  if(c[0]==0&&c[1]==0&&c[2]==0){
+-   const vec4_t rim={.63f,.74f,.79f,c[3]*.82f};trap->R_SetColor(rim);
+-   for(int dy=-1;dy<=1;++dy)for(int dx=-1;dx<=1;++dx)if(dx||dy)
+-    trap->R_DrawStretchPic(x-6*unit*aspect+dx*.35f*aspect,y-3*unit+dy*.35f,64*unit*aspect,80*unit,u,v,u+64.f/1024,v+80.f/1024,shader);
+-   trap->R_SetColor(c);
+-  }
+   trap->R_DrawStretchPic(x-6*unit*aspect,y-3*unit,64*unit*aspect,80*unit,u,v,u+64.f/1024,v+80.f/1024,shader);
+   x+=richAdvance[i]*unit*aspect;
+  }trap->R_SetColor(NULL);
+--- a/codemp/ui/ui_xcvar.h
++++ b/codemp/ui/ui_xcvar.h
+@@ -104,6 +104,25 @@
+ XCVAR_DEF( ui_lastServerRefresh_6,			"",						NULL,				CVAR_ARCHIVE|CVAR_INTERNAL )
+ XCVAR_DEF( ui_mapIndex,						"0",					NULL,				CVAR_ARCHIVE|CVAR_INTERNAL )
+ XCVAR_DEF( ui_menuFilesMP,					"ui/jampmenus.txt",		NULL,				CVAR_ARCHIVE|CVAR_INTERNAL )
++XCVAR_DEF( ui_redteam9, "1", NULL, CVAR_ARCHIVE|CVAR_INTERNAL )
++XCVAR_DEF( ui_blueteam9, "1", NULL, CVAR_ARCHIVE|CVAR_INTERNAL )
++XCVAR_DEF( ui_redteam10, "1", NULL, CVAR_ARCHIVE|CVAR_INTERNAL )
++XCVAR_DEF( ui_blueteam10, "1", NULL, CVAR_ARCHIVE|CVAR_INTERNAL )
++XCVAR_DEF( ui_redteam11, "1", NULL, CVAR_ARCHIVE|CVAR_INTERNAL )
++XCVAR_DEF( ui_blueteam11, "1", NULL, CVAR_ARCHIVE|CVAR_INTERNAL )
++XCVAR_DEF( ui_redteam12, "1", NULL, CVAR_ARCHIVE|CVAR_INTERNAL )
++XCVAR_DEF( ui_blueteam12, "1", NULL, CVAR_ARCHIVE|CVAR_INTERNAL )
++XCVAR_DEF( ui_redteam13, "1", NULL, CVAR_ARCHIVE|CVAR_INTERNAL )
++XCVAR_DEF( ui_blueteam13, "1", NULL, CVAR_ARCHIVE|CVAR_INTERNAL )
++XCVAR_DEF( ui_redteam14, "1", NULL, CVAR_ARCHIVE|CVAR_INTERNAL )
++XCVAR_DEF( ui_blueteam14, "1", NULL, CVAR_ARCHIVE|CVAR_INTERNAL )
++XCVAR_DEF( ui_redteam15, "1", NULL, CVAR_ARCHIVE|CVAR_INTERNAL )
++XCVAR_DEF( ui_blueteam15, "1", NULL, CVAR_ARCHIVE|CVAR_INTERNAL )
++XCVAR_DEF( ui_redteam16, "1", NULL, CVAR_ARCHIVE|CVAR_INTERNAL )
++XCVAR_DEF( ui_blueteam16, "1", NULL, CVAR_ARCHIVE|CVAR_INTERNAL )
++XCVAR_DEF( ui_stTffaOpenSlots, "0", NULL, CVAR_ARCHIVE|CVAR_INTERNAL )
++XCVAR_DEF( ui_stHostTeams, "2", NULL, CVAR_ARCHIVE|CVAR_INTERNAL )
++XCVAR_DEF( ui_stHostTeamSize, "0", NULL, CVAR_ARCHIVE|CVAR_INTERNAL )
+ XCVAR_DEF( ui_netGametype,					"0",					NULL,				CVAR_ARCHIVE|CVAR_INTERNAL )
+ XCVAR_DEF( ui_netSource,					"1",					NULL,				CVAR_ARCHIVE|CVAR_INTERNAL )
+ XCVAR_DEF( ui_opponentName,					DEFAULT_BLUETEAM_NAME,	NULL,				CVAR_ARCHIVE|CVAR_INTERNAL )

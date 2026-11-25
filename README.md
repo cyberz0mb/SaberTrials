@@ -13,6 +13,11 @@ OpenJK. It expands competitive saber play for newcomers and longtime players.
   Match recommendations. The client supports text chat, optional local
   translation, controllers and an on-screen keyboard.
 
+The current source also includes [Match Rules](docs/Match-Rules.md),
+[PUG and Ladder](docs/PUG-and-Ladder.md), [multi-team TFFA](docs/TFFA-Teams.md),
+and [client compatibility options](docs/Client-Compatibility.md). On Windows,
+[Vulkan](docs/Vulkan-Renderer.md) is available alongside Vanilla and Rend2.
+
 Use a legal Jedi Academy installation and keep Saber Trials separate from
 `GameData/base`. Online play requires compatible client and server builds.
 

@@ -161,6 +161,36 @@ class AccountHTTPTests(unittest.TestCase):
         r = self.request('POST', '/v1/server/renew', {'lease_token': lease['lease_token']}, auth=key)
         self.assertEqual(r['status'], 200)
 
+    def test_completed_format_points_require_server_and_verified_lease(self):
+        login = self.sign_in()
+        store = AccountStore(self.path, clock=lambda: self.now)
+        try:
+            key = store.enroll_server('temple', 'Temple')
+            other_key = store.enroll_server('academy', 'Academy')
+            binding = dict(instance='host-1', slot=4, generation='a' * 32)
+            challenge = store.challenge(key, **binding)['challenge']
+            store.authorize_connection(login['session_token'], challenge)
+            lease = store.redeem(key, challenge, **binding)['lease_token']
+        finally:
+            store.close()
+        route = '/v1/server/format-result'
+        event = dict(event='b' * 32, mode='pug', participants=[dict(lease=lease, won=True)])
+        for invalid in ('', other_key, login['session_token']):
+            self.assertEqual(self.request('POST', route, event, auth=invalid)['status'], 403)
+        for partial in ([], [dict(lease='guest', won=False)]):
+            self.assertEqual(self.request('POST', route, dict(event, participants=partial), auth=key)['status'], 403)
+        for _ in range(2):
+            self.assertEqual(self.request('POST', route, event, auth=key)['status'], 200)
+        event['participants'][0]['won'] = False
+        self.assertEqual(self.request('POST', route, event, auth=key)['status'], 403)
+        event.update(event='c' * 32, mode='ladder')
+        self.assertEqual(self.request('POST', route, event, auth=key)['status'], 200)
+        self.now += 61
+        self.assertEqual(self.request('POST', route, event, auth=key)['status'], 200)
+        self.assertEqual(self.request('POST', route, dict(event, event='d'*32), auth=key)['status'], 403)
+        me = self.request('GET', '/v1/me', auth=login['session_token'])
+        self.assertEqual(json.loads(me['body'])['format_points'], 3)
+
     def test_v2_connection_checks_observed_address_nonce_and_slot(self):
         login = self.sign_in()
         store = AccountStore(self.path, clock=lambda: self.now)

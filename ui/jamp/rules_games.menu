@@ -115,54 +115,19 @@ itemDef {
  visible 1
  decoration
 }
-itemDef {
- name "st_editor_nav"
- rect 20 77 600 29
- style 1
- backcolor .02 .075 .115 .8
- visible 1
- decoration
-}
-itemDef {
- name "st_editor_navline"
- rect 20 106 600 0.5
- style 1
- backcolor .22 .49 .64 .65
- visible 1
- decoration
-}
-itemDef {
- name "st_editor_active"
- rect 21 104 102 1
- style 1
- backcolor .30 .78 1 1
- visible 1
- decoration
-}
+
+
+
 itemDef {
  name "st_editor_rulecategories"
- rect 32 146 186 267
+ rect 28 141 184 274
  style 1
  backcolor .008 .026 .044 .85
  visible 1
  decoration
 }
-itemDef {
- name "st_editor_ruledetails"
- rect 228 146 380 267
- style 1
- backcolor .008 .026 .044 .85
- visible 1
- decoration
-}
-itemDef {
- name "st_editor_ruleedge"
- rect 218 146 0.5 267
- style 1
- backcolor .22 .49 .64 .65
- visible 1
- decoration
-}
+
+
 itemDef 
 
 		{
@@ -392,7 +357,7 @@ itemDef
 
 			type				ITEM_TYPE_BUTTON
 
-			rect 7 78 130 27.8919
+			rect 28 77 140 27
 
 			text "Play"
 
@@ -488,7 +453,7 @@ itemDef
 
 			type				ITEM_TYPE_BUTTON
 
-			rect 170 78 130 27.8919
+			rect 176 77 140 27
 
 			textaligny			0
 
@@ -578,7 +543,7 @@ itemDef
 
 			style				WINDOW_STYLE_EMPTY
 
-			rect 340 78 130 27.8919
+			rect 324 77 140 27
 
 			font 2
 
@@ -670,7 +635,7 @@ itemDef
 
 			style				WINDOW_STYLE_EMPTY
 
-			rect 502 78 130 27.8919
+			rect 472 77 140 27
 
 			font 2
 
@@ -993,164 +958,31 @@ itemDef
 
 
 		                   
-		itemDef 
+		
 
-		{
 
-			group				mainhighlight
 
-			name				mainhighlight1
+		
 
-			style				WINDOW_STYLE_SHADER
 
-			rect 40 146.568 170 34.8649
 
-			background "ui/assets/sabertrials/focus"
-			forecolor			1 1 1 1
+		
 
-			visible				0
 
-			decoration
 
-		}
+		
 
 
 
-		itemDef 
+		
 
-		{
 
-			group				mainhighlight
 
-			name				mainhighlight2
+		
 
-			style				WINDOW_STYLE_SHADER
 
-			rect 40 181.432 170 34.8649
 
-			background "ui/assets/sabertrials/focus"
-			forecolor			1 1 1 1
-
-			visible				0
-
-			decoration
-
-		}
-
-
-
-		itemDef 
-
-		{
-
-			group				mainhighlight
-
-			name				mainhighlight3
-
-			style				WINDOW_STYLE_SHADER
-
-			rect 40 216.297 170 34.8649
-
-			background "ui/assets/sabertrials/focus"
-			forecolor			1 1 1 1
-
-			visible				0
-
-			decoration
-
-		}
-
-
-
-		itemDef 
-
-		{
-
-			group				mainhighlight
-
-			name				mainhighlight4
-
-			style				WINDOW_STYLE_SHADER
-
-			rect 40 251.162 170 34.8649
-
-			background "ui/assets/sabertrials/focus"
-			forecolor			1 1 1 1
-
-			visible				0
-
-			decoration
-
-		}
-
-
-
-		itemDef 
-
-		{
-
-			group				mainhighlight
-
-			name				mainhighlight5
-
-			style				WINDOW_STYLE_SHADER
-
-			rect 40 286.027 170 34.8649
-
-			background "ui/assets/sabertrials/focus"
-			forecolor			1 1 1 1
-
-			visible				0
-
-			decoration
-
-		}
-
-
-
-		itemDef 
-
-		{
-
-			group				mainhighlight
-
-			name				mainhighlight6
-
-			style				WINDOW_STYLE_SHADER
-
-			rect 40 320.892 170 34.8649
-
-			background "ui/assets/sabertrials/focus"
-			forecolor			1 1 1 1
-
-			visible				0
-
-			decoration
-
-		}
-
-
-
-		itemDef 
-
-		{
-
-			group				mainhighlight
-
-			name				mainhighlight7
-
-			style				WINDOW_STYLE_SHADER
-
-			rect 40 355.757 170 34.8649
-
-			background "ui/assets/sabertrials/focus"
-			forecolor			1 1 1 1
-
-			visible				0
-
-			decoration
-
-		}
+		
 
 
 
@@ -1169,15 +1001,15 @@ itemDef
 
 			style				WINDOW_STYLE_EMPTY
 
-			rect 40 146.568 170 34.8649
+			rect 38 149 164 25
 
 			font				2
 
-			textscale			0.8
+			textscale			.72
 
 			textalignx 10
 
-			textaligny			5
+			textaligny			3
 
 			textalign ITEM_ALIGN_LEFT
 
@@ -1187,25 +1019,18 @@ itemDef
 
 			visible				1
 
-			descText			@MENUS_FREE_FOR_ALL_GAME_RULES
 
 
 
 			mouseEnter 
 
 			{ 
-
-				show			mainhighlight1
-
-			}
+}
 
 			mouseExit 
 
 			{ 
-
-				hide			mainhighlight1
-
-			}	  	  
+}	  	  
 
 			action 
 
@@ -1248,15 +1073,15 @@ itemDef
 
 			style				WINDOW_STYLE_EMPTY
 
-			rect 40 181.432 170 34.8649
+			rect 38 178 164 25
 
 			font				2
 
-			textscale			0.8
+			textscale			.72
 
 			textalignx 10
 
-			textaligny			5
+			textaligny			3
 
 			textalign ITEM_ALIGN_LEFT
 
@@ -1266,25 +1091,18 @@ itemDef
 
 			visible				1
 
-			descText			@MENUS_DUEL_GAMETYPE
 
 
 
 			mouseEnter 
 
 			{ 
-
-				show			mainhighlight2
-
-			}
+}
 
 			mouseExit 
 
 			{ 
-
-				hide			mainhighlight2
-
-			}	  	  
+}	  	  
 
 			action 
 
@@ -1324,15 +1142,15 @@ itemDef
 
 			style				WINDOW_STYLE_EMPTY
 
-			rect 40 216.297 170 34.8649
+			rect 38 207 164 25
 
 			font				2
 
-			textscale			0.8
+			textscale			.72
 
 			textalignx 10
 
-			textaligny			5
+			textaligny			3
 
 			textstyle			0
 
@@ -1342,25 +1160,18 @@ itemDef
 
 			visible				1
 
-			descText			@MENUS_POWERDUEL_GAME_RULES
 
 
 
 			mouseEnter 
 
 			{ 
-
-				show			mainhighlight3
-
-			}
+}
 
 			mouseExit 
 
 			{ 
-
-				hide			mainhighlight3
-
-			}	  	  
+}	  	  
 
 			action 
 
@@ -1400,15 +1211,15 @@ itemDef
 
 			style				WINDOW_STYLE_EMPTY
 
-			rect 40 251.162 170 34.8649
+			rect 38 236 164 25
 
 			font				2
 
-			textscale			0.8
+			textscale			.72
 
 			textalignx 10
 
-			textaligny			5
+			textaligny			3
 
 			textstyle			0
 
@@ -1418,25 +1229,18 @@ itemDef
 
 			visible				1
 
-			descText			@MENUS_TEAM_FFA_GAMETYPE
 
 
 
 			mouseEnter 
 
 			{ 
-
-				show			mainhighlight4
-
-			}
+}
 
 			mouseExit 
 
 			{ 
-
-				hide			mainhighlight4
-
-			}	  	  
+}	  	  
 
 			action 
 
@@ -1477,15 +1281,15 @@ itemDef
 
 			style				WINDOW_STYLE_EMPTY
 
-			rect 40 286.027 170 34.8649
+			rect 38 265 164 25
 
 			font				2
 
-			textscale			0.8
+			textscale			.72
 
 			textalignx 10
 
-			textaligny			5
+			textaligny			3
 
 			textalign ITEM_ALIGN_LEFT
 
@@ -1495,25 +1299,18 @@ itemDef
 
 			visible				1
 
-			descText			@MENUS_CAPTURE_THE_FLAG_RULES
 
 
 
 			mouseEnter 
 
 			{ 
-
-				show			mainhighlight5
-
-			}
+}
 
 			mouseExit 
 
 			{ 
-
-				hide			mainhighlight5
-
-			}	  	  
+}	  	  
 
 			action 
 
@@ -1554,15 +1351,15 @@ itemDef
 
 			style				WINDOW_STYLE_EMPTY
 
-			rect 40 320.892 170 34.8649
+			rect 38 294 164 25
 
 			font				2
 
-			textscale			0.8
+			textscale			.72
 
 			textalignx 10
 
-			textaligny			5
+			textaligny			3
 
 			textalign ITEM_ALIGN_LEFT
 
@@ -1572,25 +1369,18 @@ itemDef
 
 			visible				1
 
-			descText			@MENUS_SIEGE_GAME_RULES
 
 
 
 			mouseEnter 
 
 			{ 
-
-				show			mainhighlight6
-
-			}
+}
 
 			mouseExit 
 
 			{ 
-
-				hide			mainhighlight6
-
-			}	  	  
+}	  	  
 
 			action 
 
@@ -1621,9 +1411,9 @@ itemDef
 			group game_submenu
 			text "TOURNAMENT"
 			type ITEM_TYPE_BUTTON
-			rect 40 355.7569 170 34.8649
+			rect 38 323 164 25
 			font 2
-			textscale 0.8
+			textscale .72
 			textalign ITEM_ALIGN_LEFT
 			forecolor .76 .86 .93 1
 			visible 1
@@ -1634,50 +1424,122 @@ itemDef
 				hide gamedesc ;
 				show tournament_desc ;
 			}
-		}
+		
+ textalignx 10
 
-		itemDef {
+ textaligny 3
+}
+
+		
+        itemDef {
+            name pugmenubutton
+            group game_submenu
+            type ITEM_TYPE_BUTTON
+            text "PUG"
+            font 2
+            forecolor .76 .86 .93 1
+            visible 1
+            action {
+                play "sound/interface/button1.wav" ;
+                setitemcolor game_submenu forecolor .76 .86 .93 1 ;
+                setitemcolor pugmenubutton forecolor 1 1 1 1 ;
+                hide gamedesc ;
+                show pug_desc ;
+            }
+        
+ rect 38 352 164 25
+
+ textscale .72
+
+ textalign ITEM_ALIGN_LEFT
+
+ textalignx 10
+
+ textaligny 3
+}
+        itemDef {
+            name pug_desc
+            group gamedesc
+            type ITEM_TYPE_TEXTSCROLL
+            text "PICKUP GAMES\nPlayers start as spectators. Open Pause > PUG Queue > Join Queue to play. The server fills the smallest teams first. Bots can hold places until a human is waiting.\n\nROUND ROTATION\nAt round end, a waiting player replaces a team's lowest scorer. Ties rotate the player who has held a spot longer. Benched players move to the back of the queue. With an empty queue, the teams stay in.\n\nINACTIVITY\nIdle players return to spectator after a warning. Waiting and watching preserve your queue position.\n\nACCOUNT POINTS\nOn an enrolled server with account scoring, signed-in players earn one point for finishing a round they started, plus one for winning."
+            font 4
+            visible 0
+        
+ rect 224 141 388 274
+
+ textscale .88
+
+ textalignx 7
+
+ textaligny 9
+
+ lineHeight 15
+
+ forecolor .85 .92 .96 1
+}
+
+        itemDef {
+            name laddermenubutton
+            group game_submenu
+            type ITEM_TYPE_BUTTON
+            text "LADDER"
+            font 2
+            forecolor .76 .86 .93 1
+            visible 1
+            action {
+                play "sound/interface/button1.wav" ;
+                setitemcolor game_submenu forecolor .76 .86 .93 1 ;
+                setitemcolor laddermenubutton forecolor 1 1 1 1 ;
+                hide gamedesc ;
+                show ladder_desc ;
+            }
+        
+ rect 38 381 164 25
+
+ textscale .72
+
+ textalign ITEM_ALIGN_LEFT
+
+ textalignx 10
+
+ textaligny 3
+}
+        itemDef {
+            name ladder_desc
+            group gamedesc
+            type ITEM_TYPE_TEXTSCROLL
+            text "FIRST TO TEN\nTwo players fight for ten duel-round wins. Everyone else waits. New arrivals enter at the bottom. An asterisk means a player has yet to finish a series.\n\nMOVING UP\nThe arena rotates through neighboring ranks. The first pass pairs 1 vs 2, 3 vs 4, and so on. The next pass starts at 2 vs 3. The lower-ranked player takes the higher spot by winning.\n\nLEAVING AND RETURNING\nA disconnect cancels an unfinished series. Players below the vacated spot move up. A returning player enters at the bottom.\n\nACCOUNT POINTS\nOn an enrolled server with account scoring, signed-in players earn one point for finishing a series they started, plus one for winning. Ladder position belongs to this server session."
+            font 4
+            visible 0
+        
+ rect 224 141 388 274
+
+ textscale .88
+
+ textalignx 7
+
+ textaligny 9
+
+ lineHeight 15
+
+ forecolor .85 .92 .96 1
+}
+itemDef {
 			name tournament_desc
 			group gamedesc
 			text "BRACKET\nA random draw sets the single-elimination bracket. Byes advance unpaired entrants. Both full lineups must be connected, in the arena and ready before play starts.\n\n1v1 TOURNAMENT\nAn even field of 8 to 32 verified players enters. Play all 10 scored rounds. Each elimination wins a round. Simultaneous deaths replay the round. At 5-5, play one deciding round.\n\nTEAM TOURNAMENT\n2 to 8 teams enter at a fixed size, from 2v2 to 5v5. Players respawn. The first team to 20, 30, 40 or 50 kills respectively wins. After 10 minutes of play, the leader wins. If tied, play until one team takes the lead.\n\nRECONNECTS AND RESERVES\nA missing player pauses play. Each player has 5 minutes to reconnect in 1v1. Each team has 10 minutes to reconnect or fill the slot with a registered reserve from its own team. Repeat drops use the remaining time. Everyone readies again when the lineup is complete. Time expiry forfeits the match. If both sides expire, both are eliminated."
 			type ITEM_TYPE_TEXTSCROLL
-			rect 235 148.892 360 261.486
+			rect 224 141 388 274
 			font 4
-			textscale .85
+			textscale .88
 			textalignx 7
-			textaligny 12
+			textaligny 9
 			forecolor .85 .92 .96 1
-			lineHeight 13
+			lineHeight 15
 			visible 0
 		}
 
-		itemDef 
-
-		{
-
-			name				setup_background
-
-			group				none
-
-			style				WINDOW_STYLE_FILLED
-
-			rect 225 144.243 370 267.297
-
-			backcolor .008 .026 .044 .91
-
-			forecolor			1 1 1 1
-
-			border				1
-
-			bordercolor .22 .49 .64 .65
-
-			visible				1
-
-			decoration
-
 		
- bordersize .5
-}
 
 		itemDef
 
@@ -1695,19 +1557,19 @@ itemDef
 
 			visible				0
 
-			rect 235 148.892 360 261.486
+			rect 224 141 388 274
 
 			font				4
 
-			textscale			1
+			textscale			.88
 
 			textalign			ITEM_ALIGN_LEFT	
 
-			textaligny			12
+			textaligny			9
 
 			backcolor			0 0 1 0
 
-			forecolor .30 .78 1 1
+			forecolor .85 .92 .96 1
 
 
 
@@ -1715,7 +1577,9 @@ itemDef
 
 			maxLineChars			45
 
-		}
+		
+ textalignx 7
+}
 
 
 
@@ -1735,19 +1599,19 @@ itemDef
 
 			visible				0
 
-			rect 235 148.892 360 261.486
+			rect 224 141 388 274
 
 			font				4
 
-			textscale			1
+			textscale			.88
 
 			textalign			ITEM_ALIGN_LEFT	
 
-			textaligny			12
+			textaligny			9
 
 			backcolor			0 0 1 0
 
-			forecolor .30 .78 1 1
+			forecolor .85 .92 .96 1
 
 
 
@@ -1755,7 +1619,9 @@ itemDef
 
 			maxLineChars			45
 
-		}
+		
+ textalignx 7
+}
 
 
 
@@ -1775,19 +1641,19 @@ itemDef
 
 			visible				0
 
-			rect 235 148.892 360 261.486
+			rect 224 141 388 274
 
 			font				4
 
-			textscale			1
+			textscale			.88
 
 			textalign			ITEM_ALIGN_LEFT	
 
-			textaligny			12
+			textaligny			9
 
 			backcolor			0 0 1 0
 
-			forecolor .30 .78 1 1
+			forecolor .85 .92 .96 1
 
 
 
@@ -1795,7 +1661,9 @@ itemDef
 
 			maxLineChars			45
 
-		}
+		
+ textalignx 7
+}
 
 
 
@@ -1815,19 +1683,19 @@ itemDef
 
 			visible				0
 
-			rect 235 148.892 360 261.486
+			rect 224 141 388 274
 
 			font				4
 
-			textscale			1
+			textscale			.88
 
 			textalign			ITEM_ALIGN_LEFT	
 
-			textaligny			12
+			textaligny			9
 
 			backcolor			0 0 1 0
 
-			forecolor .30 .78 1 1
+			forecolor .85 .92 .96 1
 
 
 
@@ -1835,7 +1703,9 @@ itemDef
 
 			maxLineChars			45
 
-		}
+		
+ textalignx 7
+}
 
 
 
@@ -1855,19 +1725,19 @@ itemDef
 
 			visible				0
 
-			rect 235 148.892 360 261.486
+			rect 224 141 388 274
 
 			font				4
 
-			textscale			1
+			textscale			.88
 
 			textalign			ITEM_ALIGN_LEFT	
 
-			textaligny			12
+			textaligny			9
 
 			backcolor			0 0 1 0
 
-			forecolor .30 .78 1 1
+			forecolor .85 .92 .96 1
 
 
 
@@ -1875,7 +1745,9 @@ itemDef
 
 			maxLineChars			45
 
-		}
+		
+ textalignx 7
+}
 
 
 
@@ -1895,19 +1767,19 @@ itemDef
 
 			visible				0
 
-			rect 235 148.892 360 261.486
+			rect 224 141 388 274
 
 			font				4
 
-			textscale			1
+			textscale			.88
 
 			textalign			ITEM_ALIGN_LEFT	
 
-			textaligny			12
+			textaligny			9
 
 			backcolor			0 0 1 0
 
-			forecolor .30 .78 1 1
+			forecolor .85 .92 .96 1
 
 
 
@@ -1915,7 +1787,9 @@ itemDef
 
 			maxLineChars			45
 
-		}					
+		
+ textalignx 7
+}					
 
 	}
 

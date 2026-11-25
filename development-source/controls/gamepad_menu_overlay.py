@@ -7,6 +7,20 @@ def swap(path, old, new):
     assert source.count(old) == 1, (path, old)
     path.write_text(source.replace(old, new), encoding='utf8')
 
+def wire_pad_events(sdl):
+    swap(sdl, 'static void IN_ProcessEvents( void )',
+         'static void STPadHandleEvent(const SDL_Event& event, bool focused);\n'
+         'static void IN_ProcessEvents( void )')
+    swap(sdl, '\t\t\tcase SDL_KEYDOWN:', '''            case SDL_CONTROLLERDEVICEADDED:
+            case SDL_CONTROLLERDEVICEREMOVED:
+            case SDL_CONTROLLERBUTTONDOWN:
+            case SDL_CONTROLLERBUTTONUP:
+            case SDL_CONTROLLERAXISMOTION:
+                STPadHandleEvent(e, (SDL_GetWindowFlags(SDL_window) & SDL_WINDOW_INPUT_FOCUS) != 0);
+                break;
+\t\t\tcase SDL_KEYDOWN:''')
+    swap(sdl, '\tIN_JoyMove( );', '\tSTPadBeginFrame();')
+    swap(sdl, '\tIN_ProcessEvents( );', '\tIN_ProcessEvents( );\n\tIN_JoyMove( );')
 
 def wire(engine, frontend, source):
     controls = source/'controls'
@@ -16,6 +30,8 @@ def wire(engine, frontend, source):
         shutil.copyfile(controls/'st_controls_catalog.h', tree/'codemp/ui/st_controls_catalog.h')
     shutil.copyfile(source/'client-runtime/st_controller_move.inc', client/'cl_st_controller.inc')
     shutil.copyfile(controls/'st_controller.inc', engine/'shared/sdl/st_controller.inc')
+    shutil.copyfile(controls/'st_pad_devices.inc', engine/'shared/sdl/st_pad_devices.inc')
+    wire_pad_events(engine/'shared/sdl/sdl_input.cpp')
     shutil.copyfile(controls/'cl_st_pad_menu.inc', client/'cl_st_pad_menu.inc')
     swap(engine/'shared/sdl/sdl_input.cpp', 'if (STPadFrame()) return;',
          'if (STPadFrame((SDL_GetWindowFlags(SDL_window) & SDL_WINDOW_INPUT_FOCUS) != 0)) return;')
