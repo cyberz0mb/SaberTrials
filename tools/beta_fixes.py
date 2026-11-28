@@ -88,6 +88,25 @@ def make_fix(release, current, baselines):
             raise ValueError(f"Missing {ed} baseline")
         for previous in baselines[ed]:
             changed.update(changed_files(previous, current[ed]))
+    # Models added to Full can be installed individually by either edition.
+    # Only omit them from the common update after checking their delivered ZIPs.
+    optional = {}
+    packs_used = []
+    model_prefix = "SaberTrials/client/translator/models/"
+    full_only = {n for n in changed if n in current["Full"] and n not in current["Lite"]}
+    if full_only:
+        for pack in sorted((release / "Language-Packs").glob("SaberTrials-Language-*.zip")):
+            with ZipFile(pack) as archive:
+                contents = {i.filename: [i.file_size, i.CRC] for i in archive.infolist()
+                            if not i.is_dir() and i.filename != "README.txt"}
+                if not (full_only & contents.keys()):
+                    continue
+                if (not all(n.startswith(model_prefix) and current["Full"].get(n) == sig
+                            and n not in current["Lite"] for n, sig in contents.items()) or archive.testzip()):
+                    raise ValueError(f"Invalid optional model delivery: {pack.name}")
+                optional.update(contents)
+                packs_used.append(pack.name)
+    changed.difference_update(optional)
     # Unchanged presets introduced after 1.11 also belong in the cumulative ZIP.
     # An actual change to an existing default requires a separate migration.
     for name in sorted(changed):
@@ -107,6 +126,10 @@ def make_fix(release, current, baselines):
             "folder and replace matching game files. Keep any tournament presets you edited.\r\n"
             f"Start SaberTrials.x86_64.exe in GameData. The startup label should show {target}.\r\n"
             "Keep your installed language packs. A first install requires a complete edition.\r\n")
+    if packs_used:
+        note += ("Menus and on-screen keyboards are included. For the additional offline chat models,\r\n"
+                 "extract the desired files from Language-Packs into GameData. To match Full, add all of these:\r\n"
+                 + "\r\n".join(packs_used) + "\r\n")
     with tempfile.TemporaryDirectory(dir=folder) as tmp:
         pending = Path(tmp) / output.name
         with ZipFile(release / beta_release.LITE) as source, ZipFile(pending, "w", ZIP_DEFLATED, compresslevel=6) as patch:
@@ -120,7 +143,8 @@ def make_fix(release, current, baselines):
                 raise ValueError(f"Failed ZIP verification: {output.name}")
             for ed, copies in baselines.items():
                 for previous in copies:
-                    if previous | actual != current[ed]:
+                    models = optional if ed == "Full" else {}
+                    if previous | actual | models != current[ed]:
                         raise ValueError(f"Update does not reproduce {ed} {target}")
         os.replace(pending, output)
     print(f"{output.name}  {len(changed)} updated files  {output.stat().st_size / 1e6:.2f} MB", flush=True)

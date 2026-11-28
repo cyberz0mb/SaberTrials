@@ -1,0 +1,1674 @@
+ (includes humans, bots and spectators)	(inkluderar människor, bots och åskådare)
+ (stored preference)	(lagrade preferenser)
+ / skill 	/ Skicklighet
+ / team 	/ team
+ [restart / next boundary]	[omstart / nästa gräns]
+ is assigned to: 	tilldelas:
+ maximum: 	maximalt:
+ pending, not armed	I väntan, inte beväpnad
+ queued for next round/map	Kö för nästa runda/karta
+ | password change queued	| lösenordsändring queued
+%d model	%d modell
+%d models	%d-modeller
+%s   Ping %s ms   Jitter %s ms   Loss %s%%	%s   Ping %s Ms Jitter %s Ms Loss %s%%
+%s  Ping %s ms  Jitter %s ms  In loss %s%%	%s  Ping %s Ms Jitter %s Ms Förlust %s%%
+%s | default %s | edit range %.4g to %.4g	%s | standard %s | redigeringsområde %.4g att %.4g
+(empty)	(Töm)
++  Advanced video	Avancerad video
+-  Advanced video	Avancerad video
+-1=Default|1=Red|2=Green|3=Yellow|4=Blue|5=Cyan|6=Magenta|7=White|8=Orange|9=Gray|0=Black	-1= Standard | 1=Red | 2=Green | 3 = Gul | 4 = Blå | 5 = Cyan | 6 = Magenta | 7 = Vit | 8 = Orrange | 9 = Gray | 0 = svart
+0 - Disabled	0 - Inaktiverad
+0=Automatic|1=English|2=Spanish|3=Russian|4=Japanese|5=Chinese (Simplified)|6=Chinese (Traditional)|7=Arabic|8=German|9=French|10=Italian|11=Portuguese|12=Portuguese (Brazil)|13=Korean|14=Hindi|15=Polish|16=Turkish|17=Ukrainian|18=Dutch|19=Swedish|20=Finnish	0=Automatisk|1=English|2=Spanish|3=Russian|4=Japanese|5=Kinesiska (förenklad)|6=kinesiska (traditionell)|7=Arabiska|8=tyska|9=Franska|10=Italian|11=Portuguese|12=Portuguese (Brazil)|13=Korean|14=Hindi|15=Polish|16=Turkish|17=Ukrainian|18=
+0=Classic JKA|1=Saber Trials	0=Klassisk JKA|1=Saber Trials
+0=Leader|1=Your character|2=Opponent	0=Ledare|1=Din karaktär|2=Opponent
+0=Off|1=Count up|2=Time remaining	0=Off|1=Count up|2=Time resting
+0=Off|1=Sounds|2=Sounds + effects|3=Sounds + effects + marks	0=Off|1=Sounds|2=Sounds + Effects|3=Sounds + Effekter + märken
+0=Off|1=Top right|2=Bottom right|3=Bottom left	0=Off|1=Topp höger | 2=Bottom höger | 3=Bottom vänster
+0=Original JKA|1=Saber Trials|2=Simple HUD|3=Jedi Outcast|4=Elegance|5=Quake	0=Original JKA|1=Saber Trials|2=Enkel HUD|3=Jedi Outcast|4=Elegance|5=Quake
+1=English|2=Spanish|3=Russian|4=Japanese|5=Chinese (Simplified)|6=Chinese (Traditional)|7=Arabic|8=German|9=French|10=Italian|11=Portuguese|12=Portuguese (Brazil)|13=Korean|14=Hindi|15=Polish|16=Turkish|17=Ukrainian|18=Dutch|19=Swedish|20=Finnish	1=English|2=Spanish|3=Russian|4=Japanese|5=Kinesiska (förenklad)|6=Kinesiska (traditionell)|7=Arabiska|8=German|9=French|10=Italian|11=Portuguese|12=Portuguese (Brazil)|13=Korean|14=Hindi|15=Polish|16=Turkish|17=Ukrainian|18=Dutch|19=
+2=Auto (recommended)|1=Manual|0=Off	2=Auto (rekommenderas)|1=Manual|0=Off
+32 bit	32 bitar
+3=Low|2=Medium|1=High|0=Very high	3=Low|2=Medium|1=High|0=Very High
+: unsupported value.	Ostödda värde.
+; engine directory limit reached	; motorkatalog gräns nått
+; engine range 	; motorområde
+< Profile	< Profil
+@MENUS_ACROBATICS	Akrobatik
+@MENUS_ADD_BOT	Lägg till Bot
+@MENUS_ADD_FAVORITE	Lägg till favorit
+@MENUS_ADD_SELECTED_SERVER_TO	Lägg till vald server till favoriter.
+@MENUS_ADJUSTS_THE_DIFFICULTY	Justerar svårighetsgraden för de artificiellt intelligenta botsna i spelet.
+@MENUS_ALL	Allt allt allt
+@MENUS_ALLOWS_YOU_TO_SELECT	Låter dig välja vilken typ av spel för servern du vill spela.
+@MENUS_AN_ATTACK_DRONE_SIMILAR	Söker Drone\nEn attack drönare som liknar träning drönare som används av Jedi för att öva sina ljussabel färdigheter, Seeker hoppar runt sin användare och attackerar någon fiende användaren bränder på. Drönaren fungerar automatiskt under en begränsad tid och sedan självförstöringar när dess kraft är utarmad.
+@MENUS_AN_ELEGANT_WEAPON_FOR	Lightsaber\nEtt elegant vapen för en mer civiliserad ålder, ljussabeln är Jedi Knights föredragna vapen. Ljussabern är ett energiblad av stor kraft som kan användas av wielder för både attack och försvar.\n\nPrimär eld - Slashing och swingingattacker\nSekundär eld - Force drivna sabelkast\nDefensiv förmåga - Defects blaster och energivapenbrand, parries Fienden Lightsaber attacker\nAmmotyp - N/A
+@MENUS_APPEARANCE	Förklaring
+@MENUS_APPLY	Applicera
+@MENUS_APPLY_CHANGES	Applicera Changes
+@MENUS_APPLY_CHANGES_AND_JOIN	Applicera ändringar och gå med i spelet pågår.
+@MENUS_APPLY_CHANGES_AND_THEN	Applicera ändringar och gå sedan till huvudmenyn.
+@MENUS_APPLY_PLAYER_SABER	Applicera ändringar i spelaren och gå till saberval.
+@MENUS_APPLY_POWERS	Applicera krafter
+@MENUS_APPLY_SABER_CHANGES	Applicera saberförändringar och återgå till huvudmenyn.
+@MENUS_APPLY_THESE_CHANGES_OR	Applicera dessa ändringar eller kassera?
+@MENUS_ASSIST_ME	Hjälp mig.
+@MENUS_ATTACK_THE_ENEMY_S_BASE	Angrip fiendens bas.
+@MENUS_AUTO_JOIN_DESC	Låt servern välja ditt lag och klass.
+@MENUS_AWAITING_CHALLENGE	Väntar på utmaningen... %i
+@MENUS_AWAITING_CONNECTION	Väntar på anslutning...%i
+@MENUS_AWAITING_GAMESTATE	Väntar på gametate...
+@MENUS_A_DETONATION_PACK_IS	Detonation Packs\nEtt detonationspaket är i huvudsak en liten explosiv enhet med en fjärrdetonationsutlösare. Packet placeras eller kastas och kan detoneras efter behag av användaren. Detonationspaket används vanligen för att bakhålla fiender eller öppna förseglade dörrar.\n\nPrimär eld - Kasta avgift vid användarens fötter\nSekundär eld - exploderar alla angivna avgifter
+@MENUS_BACKTOMAIN	Tillbaka till huvudmenyn.
+@MENUS_BACKTORULES	Tillbaka till Rules Menu
+@MENUS_BACKUP_ONE_MENU	Tillbaka upp en meny
+@MENUS_BACK_2_PROFILE	Tillbaka till profilmenyn.
+@MENUS_BACTA_CANISTERS_ARE_PORTABLE	BioTech Bacta Canisters\nBacta canisters är bärbara, disponibla förpackningar av bacta salvor och akutvårdsverktyg. Designad för användning i fältet, kan bacta canisters användas för att läka sår och återställa vitalitet under medicinsk återhämtning. Inget fältmedicin bör vara utan dem.
+@MENUS_BECOME_A_NEARLY_UNSTOPPABLE	Bli en nästan ostoppbar jongernaut.
+@MENUS_BEGIN_PLAYING_THE_DEMO	Börja spela demo från den valda filen.
+@MENUS_BLADE_COLOR	Slaget färg
+@MENUS_BLADE_COLOR_DESC	Välj färgen för ditt ljussaberblad.
+@MENUS_BLASTER_PISTOL_DESC	DL-44 Tung Blaster Pistol\nEtt av de vanligaste vapnen i galaxen, DL-44 Heavy Blaster pistol har en långsam eld, men är mycket exakt.\n\nPrimär eld - långsam, enda skott med stor noggrannhet och skada\nSekundär eld - laddad energiuppbyggnad för ökad skada sprängning\nAmmotyp - Blaster Pack
+@MENUS_BLASTER_RIFLE	Blaster Rifle
+@MENUS_CALL_FOR_VOTES	Ring för Votes
+@MENUS_CANCEL	Cancel
+@MENUS_CANCEL_DESC	Återgå till spel utan att ändra lag.
+@MENUS_CHANNEL_THE_FORCE_TO	Kanalisera kraften för att läka dina allierade.
+@MENUS_CHARACTER_CREATION	Karaktärsrelaterad
+@MENUS_CHOOSE_A_PRE_MADE_ALLOCATION	Välj en förhandstilldelning av krafter.
+@MENUS_CHOOSE_CLASS	Välj en clas
+@MENUS_CHOOSE_MOVE_DESC	Välj en flytttyp.
+@MENUS_CHOOSE_RULES	Välj spelregler
+@MENUS_CHOOSE_SOURCE_OF_SERVERS	Välj källa till servrar.
+@MENUS_CHOOSE_SPECIES	Välj en art.
+@MENUS_CHOOSE_THE_PATH_OF_THE	Välj vägen till ljussida eller den mörka sidan.
+@MENUS_CHOOSE_YOUR_FORCE_TRAINING	Välj din Force utbildning
+@MENUS_CHOOSE_YOUR_GAME	Välj ditt spel.
+@MENUS_CLASS_CHOICE_DESC	Välj en klass.
+@MENUS_CLASS_FORCEPOWERS	Kraftkrafter för denna klass.
+@MENUS_CLASS_INVENTORY	Inventering för denna klass
+@MENUS_CLASS_WEAPONS	Vapen för denna klass.
+@MENUS_CLICK_FOR_HUMAN_BOTS	Klicka för mänskliga, bots eller stängda slots.
+@MENUS_CLOAK_CAPS	Kloaking shieeld
+@MENUS_CLOAK_DESC	Cloaking Shield\nDen cloaking skölden gör bäraren osynlig för andra, vilket möjliggör smygande rörelse. Men på grund av den enorma energi som krävs för att driva enheten, cloaken varar under en kort varaktighet.\n\nEn direkt hit från en DEMP 2-pistol kommer tillfälligt att inaktivera skölden. Dessutom kommer en hit från den sekundära elden i DEMP 2 permanent inaktivera skölden.\n\nDen cloaking skölden är endast användbar i Siege speltypen.
+@MENUS_COLOR	KOLOR
+@MENUS_COLOR1_DESC	Välj en bladfärg.
+@MENUS_COLOR2	KOLOR 2
+@MENUS_COLOR2_DESC	Välj en andra bladfärg.
+@MENUS_COMMONLY_REFERRED_TO	Destruktiv Electro-Magnetic Pulse 2 Gun\nVanligtvis kallas DEMP 2, denna puls gevär används främst mot droider och elektriska enheter. DEMP 2 bränder högdrivna jon sprickor som stör elektriska system, och är mest effektiva mot personliga sköldar. Till skillnad från tidigare inkarnationer av vapnet, DEMP 2: s jon avgifter är kapabla att skada levande material.\n\nPrimär eld - Enstaka skott, skadar människor, extra skador på sköldar\nSekundär eld - En laddad skott som frigör en nästan omedelbar chockvåg som kan slå fiender tillbaka\nAmmotyp - Power cell
+@MENUS_COMPLETE_THE_CURRENT	Slutföra det nuvarande målet.
+@MENUS_CONC_RIFLE	Koncissionen RIFLE
+@MENUS_CONC_RIFLE_DESC	Stouker Concussion Rifle\nStouker skjuter en konkusiv sprängning som skapar en explosion som sprider cirka 4 meter i diameter.\n\nPrimär eld - Enstaka skott, stor explosiv effekt som skadar allt, långsam skjuthastighet\nSekundär Eld - Eldar ett mindre projektilskott som har en mindre explosiv radie men gör mycket mer skada i den radien och har en svårare rekyl\nAmmotyp - Metallic Bolts
+@MENUS_CONFIGURE_GAME_CONTROLS	Konfigurera spelkontroller.
+@MENUS_CONFIGURE_GAME_SETTINGS	Konfigurera spelinställningar.
+@MENUS_CONNECTING_TO	Anslutning till %s
+@MENUS_CREATE_AN_AURA_THAT_PROTECTS	Skapa en aura som skyddar mot fysiska attacker.
+@MENUS_CTF_CAPS	Kapitel över lagen
+@MENUS_CUSTOM_CHARACTER	Anpassad karaktär
+@MENUS_DATA_RATE_DESC	Informationsöverföringsanslutningshastighet över Internet.
+@MENUS_DEFAULT	Standard
+@MENUS_DEFEND_OUR_BASE	Försvara vår bas
+@MENUS_DEFEND_TITLE	Försvar
+@MENUS_DELETE_SELECTED_SERVER	Ta bort vald server från favoriter.
+@MENUS_DEL_FAVORITE	Del. Favorit
+@MENUS_DESCRIPTION_OF_A_FORCE	Beskrivning av en kraftkraft.
+@MENUS_DESCRIPTION_OF_A_WEAPON	Beskrivning av en vapentyp.
+@MENUS_DESCRIPTION_OF_ITEM_TYPE	Beskrivning av objekttyp.
+@MENUS_DISABLE_FORCE	Inaktivera kraft:
+@MENUS_DISABLE_FORCE_INFO	Kassera användningen av någon kraftkraft under spel.
+@MENUS_DISPLAY_SERVER_INFORMATION	Visa serverinformation.
+@MENUS_DISRUPTOR	Direktör
+@MENUS_DONE	Klar
+@MENUS_DONE_DESC	Återgå till Server Finder.
+@MENUS_DO_NOT_APPLY_CHANGES	Applicera inte ändringar och återgå till videomenyn.
+@MENUS_DO_NOT_LEAVE_JEDI_KNIGHT	Lämna inte Jedi Academy.
+@MENUS_DRAIN	DRAIN DRAIN
+@MENUS_DRAIN_THE_FORCE_POWER	Dra in kraften hos motståndare för att lägga till din hälsa.
+@MENUS_DUALSABERS_DESC	Använd 2 enhands saber, bara en fightingstil.
+@MENUS_DURATION_5_SECONDS_NAREA	Force Speed\nVariabel (10 - 20 sekunder)\nEffektområde: Jedi\nEffekt: Jedi påskyndar.\n\nRank 1 - Jedi flyttar 25% snabbare än normalt i 10 sekunder\nRank 2 - Jedi flyttar 50% snabbare än normalt i 15 sekunder\nRank 3 - Jedi flyttar 75% snabbare än normalt i 20 sekunder
+@MENUS_DURATION_CONTINUOUS_NAREA	Force Absorption\nVaraktighet: kontinuerlig\nEffektområde: Jedi Endast\nEffekt: Skyddar från alla direkta krafter.\n\nAbsorber skador från Force förmågor riktade på wielder och förvandlar den energin till användbar Force Power.\n\nRank 1 - Nullifies rank 1 Force-attacker, minskar effekten av högre rang force-attacker. Returnerar någon kraftkraft.\nRank 2 - Nullifies rank 2 Force attacker, minskar kraftigt effekten av högre rang force attacker. Returnerar större kraftkraft.\nRank 3 - Nullifierar alla våldsattacker. Returnerar ännu större kraftkraft.
+@MENUS_DURATION_IMMEDIATE_NAREA	Force Jump\nVaraktighet: Omedelbart\nEffektområde: endast Jedi\nEffekt: Tillåter Jedi att göra ett enormt vertikalt språng.\n\nRank 1 - Jedi kan hoppa upp till två gånger sin normala hopphöjd.\nRank 2 - Jedi kan hoppa upp till fyra gånger sin normala hopphöjd.\nRank 3 - Jedi kan hoppa upp till åtta gånger sin normala hopphöjd.
+@MENUS_DURATION_INSTANTANEOUS	Force Push\nVaraktighet: omedelbar effekt\nEffektområde: Objekt eller personer\nEffekt: Låter Jedi att driva bort objekt från sig själva, avleda missiler och försvara mot Force Grip och Force Push-attacker.\n\nRank 1 - Jedi använder kraften för att driva en viss fiende eller ett objekt fokuserat på.\nRank 2 - Jedi använder kraften för att driva tillbaka flera fiender eller objekt i en begränsad båge.\nRank 3 - Jedi kan driva tillbaka flera fiender med tillräckligt kraft för att skada genom att driva fienderna i fasta ytor eller av ledges.
+@MENUS_DURATION_INSTANTANEOUS_NAREA	Force Grip\nVaraktighet: Instantan\nEffektområde: Levande personer endast\nEffekt: Tillåter Jedi att kväva eller begränsa organen i en levande varelse.\n\nRank 1 - Den drabbade fienden är gripen och hålls oskadlig, men orörlig i 5 sekunder.\nRank 2 - Fienden påverkas på samma sätt som rang 1, men greppet kan skada och lyfta fiender med långvarigt fokus på greppet. Jedi måste förbli stillastående.\nRank 3 - Fienden påverkas på samma sätt som rang 2, men Jedi kan röra sig fritt och krossa fienden i väggar och andra hinder eller använda fienden som en sköld medan du fortfarande gör choke-skador.
+@MENUS_DURATION_VARIABLE_10	Force Rage\nVariabel (10 - 30 sekunder)\nEffektområde: Dark Jedi\nEffekt: Jedi går in i en frenesi av hastighet under en viss varaktighet, men måste återhämta sig efteråt.Dränerar hälsa medan den är aktiv och löper ut efter varaktigheten eller när hälsan träffar.\n\nMörk Rage: Eld 33% snabbare, Flytta 100% snabbare, minska skadorna som tas med 50%, wielder kan inte dö (hälsa stannar vid 1).\nMörk Rage Recovery: Brand 50% långsammare, flytta med 75% hastighet\n\nRank 1 - Rage i 10 sekunder, 10 sekunders återhämtning\nRank 2 - Rage i 20 sekunder, 10 sekunders återhämtning\nRank 3 - Rage i 30 sekunder, 10 sekunders återhämtning
+@MENUS_DURATION_VARIABLE_20	Mind Trick\nVariabel (5-15 sekunder)\nEffektområde: andra spelare\nEffekt: Tillåter Jedi att göra sig osynliga för andra spelare.\n\nRank 1 - En jedi är osynlig för en enda riktad fiende i 5 sekunder.\nRank 2 - En Jedi är osynlig för fiender i en framåt båge av måttligt avstånd i 10 sekunder.\nRank 3 - En Jedi är osynlig för alla fiender på ett måttligt avstånd i 15 sekunder.
+@MENUS_DURATION_VARIABLE_NAREA	Force Protection\nVaraktighet: Variabel\nEffektområde: Jedi Endast\nEffekt: Skyddar från fysisk attack.\n\nSkador på Jedi från fysiska attacker tas från Force Power pool snarare än från hälsopoäng.\n\nRank 1 - 50% skada blockerad, 100% bort från Force pool, max 100 skada\nRank 2 - 75% skada blockerad, 50% bort från Force pool, max 200 skador\nRank 3 - 87,5% skada blockerad, 25% bort från Force pool, max 400 skada
+@MENUS_EFFECT_JEDI_ALLIES_NEFFECT	Team Energize\nVaraktighet: omedelbar effekt\nEffektområde: Jedi Allies\nEffekt: Jedi har förmågan att inkräkta allierade med kraftenergi.\n\nForce Team Energize gör det möjligt för Jedi att återställa en viss mängd kraftenergi till sina allierade inom en viss radie av hans kropp. Jedi kan återställa 50 Force poäng till en allierad, 33 Force pekar på två allierade eller 25 Force pekar på 3 eller fler allierade.\n\nRank 1 - Normalt sortiment\nRank 2 - Ett och ett halvt gånger normalt intervall\nRank 3 - Dubbelt normalt intervall
+@MENUS_EFFECT_NAREA_OF_EFFECT	Force Sense\nVaraktighet: omedelbar effekt\nArea of Effect: Jedi synfält\nEffekt: Tillåter Jedi stor och bred syn.\n\nForce seeing tillåter Jedi att se alla fiender tydligt, oavsett belysningsförhållanden, genom att omge dem med en lätt att se glödande aura. Force seeing tillåter också Jedi att motverka Jedi Mind Trick Force kraft. På den högsta nivån av Force Seeing the Jedi utvecklar en sjätte känsla som gör det möjligt för honom att undvika sniper brand.\n\nRank 1 - Se spelares auras markerade i sikte med normal tidsperiod.\nRank 2 - Se spelares aura i sikte och genom väggar med dubbeltidsperiod.\nRank 3 - Se spelarnas auras i sikte och genom väggar på alla områden med trippeltidsperiod. Spelare kan automatiskt undvika sniperskott på denna nivå.
+@MENUS_ENDGAME_RULES	SLUT GAME RULES
+@MENUS_ENTER_IP_ADDRESS	Ange IP-adress:
+@MENUS_ENTER_IP_ADDRESS_OF_FAVORITE	Ange IP-adressen till favoritservern.
+@MENUS_ENTER_PASSWORD	Enter Password
+@MENUS_ENTER_THE_NAME_FOR_YOUR	Ange namnet för din server.
+@MENUS_ENTER_THE_TITLE_FOR_YOUR	Ange titeln för din kraftmall (endast alfanumerisk).
+@MENUS_ERROR	Fel:
+@MENUS_ESTABLISH_THE_NUMBER	Antalet dödsfall som krävs för att vinna matchen.
+@MENUS_EVEN_TEAMS	Till och med team:
+@MENUS_EWEB_DESC	E-Web\nE-Web är en power tripod laserkanon. Det kan distribueras på slagfältet för att bidra till att skapa en stark defensiv position.\n\nE-Webben är endast användbar i Siege-speltypen.
+@MENUS_EXIT_TO_MAIN_MENU	Avsluta till huvudmenyn.
+@MENUS_FFA_CAPS	GRATIS för alla
+@MENUS_FILENAME	Filename:
+@MENUS_FILTER_FOR_SPECIFIC_GAME	Ange filter för specifika speltyper.
+@MENUS_FIND_PLAYER	Hitta spelare
+@MENUS_FINISHED_INPUTTING_INFO	Avslutad inputting info.
+@MENUS_FLECHETTE_1	Flechette
+@MENUS_FOLLOW_ME	Följ mig.
+@MENUS_FORCEDESC_DARK	Mörk
+@MENUS_FORCEDESC_LIGHT	Ljus ljus
+@MENUS_FORCE_JUMP	Hoppa:
+@MENUS_FORCE_LIGHTNING	Blixt:
+@MENUS_FORCE_MASTERY_INFO	Definierar antalet punkter som kan fördelas för att tvinga krafter.
+@MENUS_FORCE_PROTECT	Skydda:
+@MENUS_FORCE_SIDE	Force sida:
+@MENUS_FORCE_SIGHT	Att se:
+@MENUS_FORCE_SPEED	Hastighet:
+@MENUS_FORCE_TEMPLATES	Force Mallares
+@MENUS_GAME	Spel:
+@MENUS_GAME_RULES	Spelregler.
+@MENUS_GAME_TYPE	Typ:
+@MENUS_GENERAL_RULES	Generella regler
+@MENUS_GET_ENEMY_FLAG_BACK_TO	Få fiendens flagga tillbaka till basen.
+@MENUS_GET_OUR_FLAG_BACK	Få vår flagga tillbaka.
+@MENUS_GET_UPDATED_SERVER_LIST	Få uppdaterad serverlista.
+@MENUS_GO_TO_MAIN_MENU	Gå till Main Menu?
+@MENUS_GUARD_OUR_FLAG_CARRIER	Bevaka vår flaggbärare.
+@MENUS_HEAD	Head
+@MENUS_HEAL	Heal
+@MENUS_HEAL_YOUR_BODY_WITH_THE	Läka din kropp med kraften.
+@MENUS_HILT1_DESC	Välj en Hilt.
+@MENUS_HILT2_DESC	Välj en andra Hilt.
+@MENUS_IMMOBILIZE_OPPONENTS	Immobilisera motståndare i ett plågsamt grepp om döden.
+@MENUS_INCLUDE_EMPTY_SERVERS	Inkludera tomma servrar i listan.
+@MENUS_INCLUDE_FULL_SERVERS	Inkludera fullständiga servrar i listan.
+@MENUS_INPUT_IP_ADDRESS_OF_SERVER	Input IP-adress för servern.
+@MENUS_INPUT_PASSWORD	Input lösenord.
+@MENUS_INSTANTANEOUS_EFFECT_NAREA	Force Pull\nVaraktighet: omedelbar effekt\nEffektområde: Objekt eller personer\nEffekt: Låter Jedi dra fiender mot sig själva med en chans att avväpna motståndaren. Det försvarar också mot Force Pull-attacker.\n\nRank 1 - Jedi använder kraften för att dra en viss fiende fokuserad på.\nRank 2 - Jedi använder kraften för att dra flera fiender i en begränsad båge.\nRank 3 - Jedi kan dra flera fiender med tillräcklig kraft för att slå ner målen på nära håll.
+@MENUS_IN_CAPTURE_THE_FLAG_CTF	I Capture The Flag (CTF), två lag tävlar om att fånga flaggan av motsatta laget och returnera det till sin hemmabas. Alla medlemmar i ett lag kan plocka upp motsatta lagets flagga. När flaggan tas, är alla spelare på kartan varnade för händelsen. flaggbäraren måste sedan fly från fiendens territorium och återvända med flaggan till sin egen bas för att poäng.\n\nOm flaggbäraren elimineras, tappas flaggan vid elimineringspunkten. Om en medlem av flaggägarens lag rör flaggan, returneras den automatiskt till sin bas. Om en medlem av den eliminerade spelarens lag plockar upp det, kan de fortsätta att försöka returnera den till sin hemmabas. flaggbärarens egen flagga måste vara "hem" vid sin basposition för transportören att göra mål med motståndarlagets flagga.\n\nTeam SCORING\nFånga fiendens flagga: +1 poäng\n\nINDIVIDUAL SCORING\nPlocka upp fiendens flagga: +10 poäng\nFånga fiendens flagga: +100 poäng\nDitt lag fångar fiendens flagga: +25 poäng\nÅterställ din flagga: +10 poäng\n- möjliggör omedelbar infångning för lag: +10 poäng\nEliminera flaggbärare: +20 poäng\n- möjliggör omedelbar infångning för lag: +10 poäng\nSkydda din flaggbärare: +5 poäng\nSkydda din flaggbas: +10 poäng\n\nLaget med högsta poäng i slutet av matchen vinner spelet.
+@MENUS_ITEM_RULES	Punktregler.
+@MENUS_JEDI_KNIGHT_II	Lämna Jedi Academy
+@MENUS_JETPACK_DESC	Jetpack\nJetpacken gör att bäraren kan flyga under korta varaktigheter, vilket ger dem en taktisk fördel över andra. Om användaren inte skjuter raketerna, kommer de sakta att förlora höjden.\n\nJetpack är endast användbar i Siege-speltypen.\n\n(Obs: För att aktivera jetpacket, hoppa, tryck sedan på "användning" medan i luften. Holding "hoppa" gör det möjligt för användaren att få höjd, medan hålla "crouch" kommer att minska höjden.)
+@MENUS_JOIN	Gå med
+@MENUS_JOIN_CHOSEN_SERVER	Gå med i vald server.
+@MENUS_JOIN_GAME	Gå med i spelet
+@MENUS_JOIN_PLAYER_DESC	Gå med server med den här spelaren.
+@MENUS_JOIN_TEAM_DESC	Gå med i det här laget.
+@MENUS_LEAP_TO_AMAZING_HEIGHTS	hoppa till fantastiska höjder genom att hålla hoppknappen.
+@MENUS_LEAVE_JEDI_KNIGHT_II	Leave Jedi Academy Multiplayer spel.
+@MENUS_LIGHTNING	Ljusande
+@MENUS_LIGHTSABER_CAPS	Ljudsägare
+@MENUS_LIGHTSABER_ONLY	Lightsaber Endast:
+@MENUS_MAIN_MENU	Huvudmenyn
+@MENUS_MAKE_THESE_CHANGES_TO	Gör dessa ändringar till din karaktärs kraftförmågor.
+@MENUS_MATCHING_NAMES	Matchning namn kommer att skrivas över.
+@MENUS_MAXIMUM_PLAYERS	Maximala spelare:
+@MENUS_MEDPAC	Mediapac
+@MENUS_MERRSONN	Merr-sonn
+@MENUS_MIND_TRICK	Mind TRICK
+@MENUS_MISSION_OBJECTIVES	Mission OBJECTIVES
+@MENUS_MOVE_AT_AN_ACCELERATED	Flytta i en accelererad takt.
+@MENUS_MOVE_DESC2	Klicka för att visa en flyttbeskrivning.
+@MENUS_MOVE_RULES	Rörelseregler.
+@MENUS_MOVE_TYPES	Ämne TYPES
+@MENUS_MUST_ACQUIRE_A_MINIMUM	Måste förvärva en minsta rang på 1 i Saber Attack för att få ljussabel.
+@MENUS_NAME	Namnnamn
+@MENUS_NAME1	Namn:
+@MENUS_NAME_TITLE	Namn:
+@MENUS_NEW_FAVORITE	Ny favorit
+@MENUS_NO	Inget nej
+@MENUS_NO_LIGHTSABER	Inga Lightsaber
+@MENUS_OBJECTIVE_1	Objektiv #1
+@MENUS_OBJECTIVE_2	Objektiv #2
+@MENUS_OBJECTIVE_3	Objektiv #3
+@MENUS_OBJECTIVE_4	Objektiv #4
+@MENUS_OBJECTIVE_5	Objektiv #5
+@MENUS_OBJECTIVE_6	Objektiv #6
+@MENUS_OBJECTIVE_7	Objektiv #7
+@MENUS_OBJECTIVE_8	Objektiv #8
+@MENUS_OBJECTIVE_COMPLETED	Slutförd.
+@MENUS_OF_EFFECT_JEDI_ALLIES_NEFFECT	Heal Other\nVaraktighet: omedelbar effekt\nEffektområde: Jedi-allierade\nEffekt: Jedi har förmågan att läka allierade efter skada.\n\nForce Heal Other gör det möjligt för Jedi att återställa en viss mängd hälsa till sina allierade inom en viss radie av kroppen. Jedi kan återställa 50 hälsa till en allierad.\n33 Hälsa till två allierade eller 25 hälsa till 3 eller fler allierade.\n\nRank 1 - Normalt sortiment\nRank 2 - Ett och ett halvt gånger normalt intervall\nRank 3 - Dubbelt normalt intervall
+@MENUS_OF_EFFECT_JEDI_ONLY_NEFFECT	Force Heal\nVaraktighet: omedelbar effekt\nEffektområde: endast Jedi\nEffekt: Jedi läker efter skada.\n\nRank 1 - Jedi återfår upp till 5 hälsa omedelbart.\nRank 2 - Jedi återfår upp till 10 hälsa omedelbart.\nRank 3 - Jedi återfår upp till 25 hälsa omedelbart.
+@MENUS_OF_EFFECT_LIVING_PERSONS	Force Lightning\nVaraktighet: Variabel\nEffektområde: Levande personer endast\nEffekt: Tillåter Jedi att slänga en förödande elektrisk attack mot fiender.\n\nRank 1 - Jedi lanserar en enda bult som skjuter framåt, gör omedelbar skada.\nRank 2 - Jedi kan upprätthålla Force Lightning för en långvarig framåtattack.\nRank 3 - Jedi utstrålar en bestående fläkt av el i en stor framåtbåge, skadar allt framför dem.
+@MENUS_OKAY	Okej
+@MENUS_ONLY_HUMANS	Endast människor är tillåtna i belägring
+@MENUS_PASSWORD	Lösenord
+@MENUS_PLAYERS_INFO	Lägg till bots om servern har mindre än detta antal aktiva mänskliga spelare.
+@MENUS_POINTS_REMAINING	Poäng kvar:
+@MENUS_POWER	Kraft:
+@MENUS_PREVENT_THE_ENEMY_FROM	Förhindra att fienden slutför sitt nuvarande mål.
+@MENUS_PRIMARY_OBJECTIVES	Primärt uppdragsmål
+@MENUS_PROFILE_DESC	Konfigurera teckeninställningar.
+@MENUS_PROTECT	Protektion
+@MENUS_PROTECT_AGAINST_FORCE	Skydda mot våldsattacker och få makt från dem.
+@MENUS_PULL_YOUR_FOES_TO_YOU	Dra dina fiender till dig.
+@MENUS_PUSH_YOUR_FOES_AWAY_AND	Tryck dina fiender bort och avvisa projektiler.
+@MENUS_RENDER_YOURSELF_INVISIBLE	Gör dig osynlig för utvalda mål.
+@MENUS_REPLY_TITLE	Svar
+@MENUS_REQUEST_TITLE	Begäran
+@MENUS_RETURN_PREVIOUS	Återgå till tidigare meny.
+@MENUS_SABERSTAFF	Två-Handed Saber
+@MENUS_SABERSTAFF_DESC	Använd en tvåhands sabel, bara en fightingstil.
+@MENUS_SABER_DEFEND	Saberförsvar:
+@MENUS_SABER_HILTS_DESC	Välj din saber hilt(s).
+@MENUS_SABER_ONLY_INFO	Alla spelare bär ljussabers, och alla vapen tas bort.
+@MENUS_SABER_STAFF	Saber Personal
+@MENUS_SABER_TYPE_DESC	Välj din sabertyp.
+@MENUS_SAVE_CURRENT_FORCE_SETUP	Spara nuvarande kraftinställning som en separat mall.
+@MENUS_SAVE_FILE	Spara fil
+@MENUS_SEARCHING	Söka %d/%d...
+@MENUS_SEARCH_CAPS	SÄKER
+@MENUS_SEARCH_CURRENT_SERVER	Sök aktuell serverlista för vänner.
+@MENUS_SEARCH_DESC	Sök alla servrar för den här spelaren.
+@MENUS_SECONDARY_OBJECTIVES	Sekundära mål
+@MENUS_SEE_ENEMIES_AT_ALL_TIMES	Se fiender hela tiden, och även dodge sniper skott.
+@MENUS_SELECT_BOTS	Välj Bots
+@MENUS_SELECT_BOTS_DESC	Välj anpassade bots för att spela mot
+@MENUS_SELECT_HEAD	Välj en huvudstil.
+@MENUS_SELECT_LEGS	Välj en benstil.
+@MENUS_SELECT_TORSO	Välj en torso stil.
+@MENUS_SENTRY_CAPS	Entreprenad
+@MENUS_SERVERS_FOUNDWITH	%d Server server%s hittad hos spelare %s
+@MENUS_SERVER_NAME_1	Servernamn:
+@MENUS_SETS_THE_MAXIMUM_NUMBER	Anger det maximala antalet spelare som får ansluta till din server.
+@MENUS_SET_FILTER_FOR_SPECIFIC	Ställ in filter för specifika spelmods.
+@MENUS_SHOW_GAME_CREDITS	Visa spel krediter.
+@MENUS_SIEGE_DEMOLITIONS	Demolition
+@MENUS_SIEGE_GAME_RULES_DESC	Siege ställer två lag mot varandra i en tidsbestämd match där ett lag är på offensiv och det andra på försvar. Båda lagen har mål, men offensiv laget måste slutföra sina primära mål att vinna.\n\nVarje lag består av ett antal tecken, var och en med sin egen specialitet. Varje karaktär kan bidra med sin egen unika kompetens.\n\nEn valfri serverregel tillåter lagbyte. Med det här alternativet aktiverat, lagen slår efter den första matchen. Om offensive laget hade vunnit den första matchen, har det nya offensiva laget en tidsgräns som motsvarar den tid det tog det första laget att vinna. Om offensive laget slutför alla mål i kortare tidsgränsen, vinner de spelet.\n\nVinn kontroverser - OFFENSE\nSlutföra alla primära mål innan tiden går ut.\n\nVinn kontakter - Försvar\nFörhindra brott från att slutföra alla primära mål innan tiden går ut.\nFullständiga mål som kan hindra offensiven från att slutföra någon av deras primära mål.
+@MENUS_SIGHT	SEING
+@MENUS_SINGLESABER_DESC	Använd en enhands sabel, val av 3 stridsstilar.
+@MENUS_SKILL	Skicklighet
+@MENUS_SKILL1	Skicklighet:
+@MENUS_SORT_BY_GAME_TYPE	Sortera efter speltyp.
+@MENUS_SORT_BY_MAP_NAME	Sortera efter kartnamn.
+@MENUS_SORT_BY_NUMBER_OF_PLAYERS	Sortera efter antal spelare.
+@MENUS_SORT_BY_PING_TIME	Sortera efter ping tid.
+@MENUS_SORT_BY_SERVER_NAME	Sortera efter Server Name.
+@MENUS_SOURCE	Källa:
+@MENUS_SPEND_YOUR_POINTS_BY	Tillbringa dina poäng genom att klicka på Force Powers nedan.
+@MENUS_STARTING_UP	Börjar upp...
+@MENUS_START_PLAYING_NOW	Börja spela nu!
+@MENUS_STATIONARY_SHIELD_CAPS	Stationär sköld
+@MENUS_TACTICS_TITLE	Taktik
+@MENUS_TEAM_HEAL	Team Heal
+@MENUS_TEAM_POWER_1	Team Energize
+@MENUS_TEAM_SWITCHING_DESC	Växla spelläge där lag tävlar om att slutföra kartan i minst tid.
+@MENUS_THERMAL_DETONATOR	Termiska detonatören
+@MENUS_THE_FORCE_TO_BOOST_THE	Kanalisera kraften för att öka kraften hos dina allierade.
+@MENUS_THE_GAME_OF_DUEL_IS_ALSO	Duel gropar två stridande i en liten sluten arena för att slåss med ljussabers. Båda konkurrenterna startar en runda med full hälsa, sina saber och en blaster pistol (server alternativ) och måste möta mot varandra.\n\nVarje antal spelare kan delta i Duel, men bara två är i arenan vid en viss tidpunkt. Remaining spelare observera tills en match är klar. När en spelare elimineras, förloraren sätts i slutet av observatörskön, och nästa person i rad tas in för att bekämpa vinnaren.\n\nÅterigen är båda konkurrenterna fullt ut fyllda med hälsa. Vinnaren fortsätter att tävla mot nya motståndare, poäng tills han eller hon elimineras eller matchgränsen nås.\n\nSCORING\nEliminera en fiende: +1 poäng\nEliminera dig själv: +1 till din motståndare\n\nSpelaren med högsta poäng i slutet av matchen vinner.
+@MENUS_THE_MEDPAC_IS_A_SMALL	Medpac\nMedpac är ett litet standardfält medicinskt kit. När förvärvas, återfår medpac omedelbart förlorad hälsa och läker skadad vävnad.
+@MENUS_THE_PERSONAL_SHIELD_IS	Personlig sköld (Armor)\nDen personliga skölden är en bältemonterad enhet som projicerar ett skyddande kraftfält runt bäraren. Eftersom skölden tar skada minskar dess skyddsbetyg. När skölden har tagit skada lika med sitt betyg, avaktiverar skölden tills den kan laddas upp. Sköldar absorberar de flesta attackskador men skyddar inte bäraren mot fallande eller krossande skador. Personliga sköldar fylls av sköldbatterier.
+@MENUS_THE_PLX_2M_IS_AN_EXTREMELY	Merr-Sonn PLX-2M Portable Missile System\nPLX-2M är ett extremt kraftfullt vapen som eldar Arakyd 3T3-missiler. Den rena explosiva kraften hos PLX-2M gör det farligt att skjuta blint i nära kvartal, men är extremt effektivt när det används som ett "smart" spårningsvapen.\n\nPrimär eld - Eldar en enda, framåtbringande explosiv missil\nSekundär eld - Eldar en enda "smart" missil som spår förvärvade och låsta mål\nAmmo typ - raketer
+@MENUS_THE_PRIMARY_WEAPON_OF	E-11 Blaster Rifle\nDet primära vapnet av de kejserliga krafterna, E-11 är ett robust och dödligt blastergevär som kan orsaka stor skada trots sin lilla storlek. E-11: s kompakta design gör det enkelt att bära och dölja.\n\nPrimär eld - långsam, enda skott med måttlig noggrannhet och stor skada\nSekundär eld - Snabb, spräng eld med låg noggrannhet och expanderat skjutområde\nAmmotyp - Blaster Pack
+@MENUS_THE_THERMAL_DETONATOR	Thermal Detonator\nDen termiska detonatorn är en radie-skada grenat som frigör en spärr av termisk energi som kan desintegrera allt materia runt den.\n\nPrimär eld - Grenade exploderar efter kort tid\nSekundär eld - Grenade exploderar vid kontakt
+@MENUS_THIS_ARCHAIC_LOOKING	Wookiee Bowcaster\nDetta arkaiskt utseende vapen eldar kraftfulla bultar av metall inslag i fickor av energi. Kan orsaka otrolig skada, bowcaster kräver enorm fysisk styrka att avfyra. De flesta bowcasters som säljs utanför Wookiee hemvärlden kommer utrustade med självcockerande åtgärder som tillåter fysiskt svagare varelser att avfyra dem.\n\nPrimär eld - laddad energiuppbyggnad för flera skott\nSekundär eld - Extremt noggrann, ricochet-kompatibel enda skott\nAmmotyp - Power cell
+@MENUS_THIS_DEADLY_WEAPON_IS	Portable Assault Sentry\nDetta dödliga vapen är ungefär storleken på en stor ryggsäck, men låt inte dess storlek lura dig. När det är aktiverat, vapnet unfurls och är inställd på att automatiskt rikta någon fiende hot. Sentry dränerar batterilivslängd på en accelererad hastighet och, när den är utplacerad, kan inte återställas till sitt ursprungliga bärbara tillstånd.
+@MENUS_THIS_DESTRUCTIVE_PROJECTILE	Imperial Heavy Repeater med hjärnskakning\nDetta destruktiva projektilvapen är extremt dödligt, skjuter snabba strömmar av metallkulor. Imperialkrafter använder Heavy Repeaters dödliga undertryckande eld och hjärnskakningsstartare för folkmasskontroll och att sprida tung eld över\nstora områden.\n\nPrimär eld - Fullt automatisk projektil brand\nSekundär eld - Ensam skott, hjärnskakning explosiv runda\nAmmo typ - Metallic bultar
+@MENUS_THIS_GAME_IS_BEST_SUMMED	Gratis för alla är bäst sammanfattas som varje person för sig själva. Spelare poäng genom att eliminera andra spelare och ingen kan anses vara en allierad.\n\nVapen och utrustning förvärvas på fältet om inte annat anges på servern. Vissa alternativ inkluderar om du vill tillåta krafter eller inte och den maximala Force Level tillgänglig.\n\nSCORING\nEliminera en fiende: +1 poäng\nEliminera dig själv: -1 poäng\n\nSpelaren med högsta poäng i slutet av matchen vinner spelet.
+@MENUS_THIS_GAME_PITS_TWO_JEDI	Team Free för alla ställer två Jedi lag mot varandra i en kamp för överlägsenhet. Varje spelare poäng för att eliminera motståndare, men spelare på samma lag kan arbeta tillsammans för att eliminera hårdare fiender. Alla spelare på ett lag kombinerar sina poäng för ett enda lag poäng.\n\nVapen och utrustning förvärvas på fältet om inte annat anges på servern. Vissa alternativ inkluderar om du vill tillåta krafter eller inte och den maximala Force Level tillgänglig.\n\nSCORING\nEliminera en medlem av fiendens lag: +1 poäng\nEliminera dig själv eller en gruppmedlem: -1 poäng\n\nLaget med högsta poäng i slutet av rundan vinner spelet.
+@MENUS_THIS_IS_THE_NUMBER_OF	Detta är antalet gånger en flagga måste fångas för att vinna spelet.
+@MENUS_THIS_NEFARIOUS_WEAPON	Tenloss DXR-6 Disruptor gevär\nDetta skändliga vapen påverkar materia på molekylär nivå, rippa isär levande material med lätthet. På grund av vapnets omänskliga natur, är DXR-6 förbjudet i hela galaxen och används i allmänhet endast av spridda droid och kvarlevande krafter.\n\nPrimär eld - Enda skottet med långsam eldhastighet och omedelbar attack\nSekundär Eld - Avstängt läge: Enstaka skott som måste laddas upp först, orsakar ökad skada och har en hög energiförbrukning\nAmmotyp - Power cell
+@MENUS_THIS_OPTION_RE_BALANCES	Detta alternativ hindrar en spelare från att gå med i ett lag om det kommer att obalansera lagen.
+@MENUS_THIS_STATIONARY_ENERGY	Stationär Shield\nDetta stationära energifält kan släppas på vilken plats som helst, vid vilken tidpunkt det distribuerar en stor platt sköld som kan blockera fiendens eld. De allierade kan passera genom skölden, men fiender kan inte. Avblektorskölden kommer att försvinna efter att ha exponerat sin strömförsörjning eller efter att ha uthärdat en viss skada.
+@MENUS_THIS_VALUE_ADJUSTS_THE	Antalet minuter en match kommer att pågå.
+@MENUS_THROW_YOUR_LIGHTSABER	Kasta din ljussabel för att skada avlägsna mål.
+@MENUS_TIME_LIMIT	Tidsgräns:
+@MENUS_TRIP_MINE	Trupp min
+@MENUS_TRIP_MINES_CONSIST_OF	Trip Mines\nTrip gruvor består av en balk projektor anbringas till en formad explosiv hölje. Lasern aktiveras när gruvan är placerad och sträcker en stråle från anklagelsen till närmaste yta som skär sin väg. Om balken är trasig eller avgiften sparkas på, gruvan detonerar och orsakar radie skador på något i intervallet.\n\nPrimär eld - En gång placerad detonerar det om strålen är bruten eller gruvan förstörs\nSekundär eld - När den är placerad, detonerar den om någon är i närheten eller gruvan förstörs. Det finns ingen stråle och det kommer inte att detonera för användaren.
+@MENUS_UNAPPLIED_VIDEO_CHANGES	Olämpliga videoförändringar
+@MENUS_UNLEASH_DEADLY_ELECTRICAL	Släpp loss dödliga elektriska attacker mot dina fiender.
+@MENUS_USE_MORE_POWERFUL_LIGHTSABER	Använd mer kraftfulla ljussaberattacker. (Krävs att ha sabel)
+@MENUS_USE_THE_LIGHTSABER_TO	Använd ljussabeln för att avleda inkommande saberattacker och projektiler.
+@MENUS_VALUE_ADJUSTS_THE_TOTAL	Antalet framgångsrika rundor (dueller) som krävs för att vinna matchen.
+@MENUS_VARIABLE_NAREA_OF_EFFECT	Force Drain\nVaraktighet: Variabel\nEffektområde: Levande personer endast\nEffekt: Drains Force Power och använder den för att fylla på livet.\n\nRank 1 - Lanserar en enda bult som eldar framåt, dränerar 10 kraftpunkter per sekund och läker det beloppet.\nRank 2 - En oriktad, kontinuerlig attack, dränerar 15 kraftpunkter per sekund.\nRank 3 - Emanates en uppehållen fan i en stor framåtbåge, dränera något mål framför honom av 20 kraftpunkter per sekund.
+@MENUS_VC_ATT	1. angrepp
+@MENUS_VC_ATT_POSITION	3. Attack position
+@MENUS_VC_ATT_PRIMARY	1 Attack Primärt mål
+@MENUS_VC_ATT_SECONDARY	2. angripa sekundärt mål
+@MENUS_VC_CANCEL	Avbokning
+@MENUS_VC_DEF	2. försvar
+@MENUS_VC_DEF_GUNS	4. Gun positioner
+@MENUS_VC_DEF_POSITION	Försvara positionen
+@MENUS_VC_DEF_PRIMARY	1. Försvara primära mål
+@MENUS_VC_DEF_SECONDARY	2. försvara sekundärmålet
+@MENUS_VC_REPLY	4. Svara
+@MENUS_VC_REPLY_COMING	3. Kommer
+@MENUS_VC_REPLY_GO	4. Offense
+@MENUS_VC_REPLY_NO	2. Negativ
+@MENUS_VC_REPLY_STAY	5. Försvar
+@MENUS_VC_REPLY_YES	1. Roger
+@MENUS_VC_REQ	3. Begäran
+@MENUS_VC_REQ_ASSIST	1. bistånd
+@MENUS_VC_REQ_DEMO	6. Demolitioner
+@MENUS_VC_REQ_HVY	5. tunga vapen
+@MENUS_VC_REQ_MEDIC	2. Medicin
+@MENUS_VC_REQ_SUPPLY	3. Leveranser
+@MENUS_VC_REQ_TECH	4. Tech
+@MENUS_VC_SPOT	5. Spotted
+@MENUS_VC_SPOT_DEF	1. Försvar
+@MENUS_VC_SPOT_EMPLACED	Förberedda vapen
+@MENUS_VC_SPOT_SNIPER	Sniper
+@MENUS_VC_SPOT_TROOP	2. trupper
+@MENUS_VC_TACTIC	6. Taktik
+@MENUS_VC_TAC_COVER	1. Täck
+@MENUS_VC_TAC_FALLBACK	4. retreat
+@MENUS_VC_TAC_FOLLOW	3. Följ
+@MENUS_VC_TAC_HOLD	2. Hålla
+@MENUS_VC_TAC_SPLIT	6. dela upp
+@MENUS_VC_TAC_TOGETHER	5. Håll dig tillsammans
+@MENUS_VIEW_EMPTY	Visa Tomt:
+@MENUS_VIEW_FULL	Visa full:
+@MENUS_WATCH_DESC	Se uppdraget.
+@MENUS_WEAPON_RULES	Vapenregler.
+@MENUS_WIDELY_USED_BY_THE_CORPORATE	Golan Arms FC1 Flechette vapen\nAllmänt används av Corporate Sector Authority polis trupper, FC1 bränder skärvor av metall i ett utbrett mönster. Vapnet är utformat för att träffa flera mål i närheten, men stor försiktighet måste tas för att undvika ricochet skador.\n\nPrimär eld - Enstaka skott, sprid eld\nSekundär eld - Dubbla explosiva rullladdningar\nAmmotyp - Metallic Bolts
+@MENUS_YOU_DECIDE	Du bestämmer
+@MENUS_YOU_HAVE_MADE_CHANGES	Du har gjort ändringar i videoinställningarna
+@MENUS__REQUIRES_SABER_ATTACK	(Kräver Saber Attack 1)
+@MP_INGAME_GETTINGINFOFORSERVERS	Få information för servrar...
+@MP_INGAME_JOIN_DOUBLE	Dubbel
+@MP_INGAME_JOIN_SINGLE	Single
+@MP_SVGAME_CANCEL_PASSWORD	Nära menyn, försök inte att ansluta
+A / Cross confirms, B / Circle goes back	A / Cross bekräftar, B / Circle går tillbaka
+A live bot cannot be represented safely. Your preset and draft are unchanged.	En live bot kan inte representeras säkert. Din förinställda och utkast är oförändrade.
+A live bot's original definition cannot be recovered. Choose Replace existing bots with a complete roster before saving.	En live bots ursprungliga definition kan inte återvinnas. Välj Byta befintliga bots med en komplett roster innan du sparar.
+A passed game-type vote is queued for the next round boundary.	En passerad speltyp röst köas för nästa runda gräns.
+A setting or binding changed outside the editor. Cancel and reopen to refresh; nothing applied.	En inställning eller bindning ändrades utanför redaktören. Avbryt och öppnas för att uppdatera; ingenting tillämpas.
+About	Om
+Acceleration amount; zero disables it	Accelerationsbelopp; noll inaktiverar det
+Acceleration curve	Accelerationskurva
+Acceleration curve: 0 legacy, 1 power	Accelerationskurva: 0 arv, 1 kraft
+Accepted 1v1 challenges inside FFA. Shares the Duel ladder.	Godkända 1v1-utmaningar inom FFA. Delar Duel-stegen.
+Account / Log in	Konto / Logga in
+Accounts and match reporting are not connected yet.	Konton och matchrapportering är ännu inte anslutna.
+Action	Åtgärder
+Adaptive	Adaptiv
+Add Berserker	Lägg till Berserker
+Add Defender	Lägg till Defender
+Add Duelist	Lägg till duelist
+Add Flag Catcher	Lägg till Flag Catcher
+Add Saber Master	Lägg till Saber Master
+Add Sentinel	Lägg till Sentinel
+Add Trickster	Lägg till Trickster
+Add bot	Lägg till bot
+Add bots	Lägg till bots
+Add local files	Lägg till lokala filer
+Add roster without removing existing players: 	Lägg till roster utan att ta bort befintliga spelare:
+Add slot 	Lägg till slot
+Address	Adress
+Adjust framing for a live preview. Apply camera saves it.	Justera inramning för en levande förhandsgranskning. Apply kamera sparar den.
+Adjust how fast the left stick moves the menu pointer.	Justera hur snabbt den vänstra pinnen flyttar menyn pekaren.
+Adjusts how many chat lines fit.	Justerar hur många chattlinjer som passar.
+Adjusts the width across the screen.	Justerar bredden över skärmen.
+Advanced	Avancerad
+Advanced Input	Avancerad input
+Advanced settings	Avancerade inställningar
+Advanced video	Avancerad video
+Aim at a player and press to ignore or unignore their chat	Sikta på en spelare och tryck för att ignorera eller unignore deras chatt
+All	Allt allt allt
+All edits in this draft will be discarded. Existing server settings and any already queued server changes remain as they were.	Alla redigeringar i detta utkast kommer att kasseras. Befintliga serverinställningar och eventuella redan köade serverändringar kvar som de var.
+Allow downloads	Tillåt nedladdningar
+Allow vote: 	Tillåt röst:
+Alternate attack	Alternativ attack
+Alternate weapon action / saber throw	Alternativ vapenåtgärd / saberkast
+Always	Alltid alltid alltid
+Always run	Alltid springa
+Analog joystick axes	Analog joystick axlar
+Animation pack unavailable	Animationspaket otillgängligt
+Anisotropic filtering	Anisotropisk filtrering
+Anisotropic filtering unavailable.	Anisotrop filtrering otillgänglig.
+Appearance	Utseende
+Append a map	Appendera en karta
+Append map to rotation	Appendera karta till rotation
+Applies next spawn on supported Saber Trials servers.	Gäller nästa spawn på Saber Trials-servrar.
+Applies on next spawn.	Gäller på nästa spawn.
+Apply	Applicera
+Apply and continue	Applicera och fortsätta
+Apply and return	Applicera och returnera
+Apply camera	Applicera kamera
+Apply changes	Verkställ ändringar
+Apply next round / map	Applicera nästa runda / karta
+Apply now (restarts if needed)	Applicera nu (startar om det behövs)
+Apply now applies live changes and restarts only if needed, or loads a changed selected map. Apply next round/map leaves the current match running and queues changes. Roster commands are held for that apply.	Applicera nu levande förändringar och startar om endast om det behövs, eller laddar en ändrad vald karta. Applicera nästa runda / karta lämnar den aktuella matchen kör och kö ändringar. Roster kommandon hålls för det gäller.
+Apply or cancel pending edits before switching mods.	Applicera eller avbryta väntande ändringar innan du byter mods.
+Apply or discard before leaving?	Ansök eller kassera innan du lämnar?
+Apply these filters to browser	Applicera dessa filter till webbläsaren
+Apply to local server: 	Ansök till lokal server:
+Apply your controls before leaving?	Applicera dina kontroller innan du lämnar?
+Arabic	Arabiska arabiska
+Assets missing or overridden. Showing Stock; Apply cannot save.	Tillgångar som saknas eller överskrids. Visa lager; Applicera kan inte spara.
+Assign to slot	Tilldela till slot
+Assignment staged	Uppdrag iscensatt
+Auto	Auto Auto Auto Auto Auto
+Auto (%s)	Auto (bilaga)%s) )
+Auto (restored)	Auto (återställd)
+Auto (trial)	Auto (försök)
+Auto adapts after measuring the connection.	Auto anpassar sig efter mätning av anslutningen.
+Automatic	Automatisk
+Automatic controller detection	Automatisk styrenhetsdetektering
+Automatic opens for gamepad when no keyboard is detected.	Automatiska öppnar för gamepad när inget tangentbord upptäcks.
+Available display modes are added automatically.	Tillgängliga displaylägen läggs till automatiskt.
+Average mouse movement between frames.	Genomsnittlig mus rörelse mellan ramar.
+Awaiting reply	Väntar på svar
+B / Circle confirms, A / Cross goes back	B / Circle bekräftar, A / Cross går tillbaka
+BLUE	Blå
+BLUE %d     /     RED %d	BLUE %d/RED %d
+BRACKET\nA random draw sets the single-elimination bracket. Byes advance unpaired entrants. Both full lineups must be connected, in the arena and ready before play starts.\n\n1v1 TOURNAMENT\nAn even field of 8 to 32 verified players enters. Play all 10 scored rounds. Each elimination wins a round. Simultaneous deaths replay the round. At 5-5, play one deciding round.\n\nTEAM TOURNAMENT\n2 to 8 teams enter at a fixed size, from 2v2 to 5v5. Players respawn. The first team to 20, 30, 40 or 50 kills respectively wins. After 10 minutes of play, the leader wins. If tied, play until one team takes the lead.\n\nRECONNECTS AND RESERVES\nA missing player pauses play. Each player has 5 minutes to reconnect in 1v1. Each team has 10 minutes to reconnect or fill the slot with a registered reserve from its own team. Repeat drops use the remaining time. Everyone readies again when the lineup is complete. Time expiry forfeits the match. If both sides expire, both are eliminated.	BRACKET\nEn slumpmässig ritning sätter enkelelimineringsfästet. Byes förskott oparade deltagare. Båda fulla lineups måste vara anslutna, i arenan och redo innan spelet börjar.\n\n1v1 TOURNAMENT\nEtt jämnt fält av 8 till 32 verifierade spelare går in. Spela alla 10 poäng rundor. Varje eliminering vinner en runda. Samtidiga dödsfall spelar om rundan. Vid 5-5, spela en avgörande runda.\n\nTeam TOURNAMENT\n2 till 8 lag går in i en fast storlek, från 2v2 till 5v5. Spelare respawn. Det första laget till 20, 30, 40 eller 50 dödar respektive vinner. Efter 10 minuters spel vinner ledaren. Om bunden, spela tills ett lag tar ledningen.\n\nRekonstruktioner och rester\nEn saknad spelare pauser spela. Varje spelare har 5 minuter att återansluta i 1v1. Varje lag har 10 minuter att återansluta eller fylla sloten med en registrerad reserv från sitt eget lag. Repeat droppar använder resterande tid. Alla läser igen när lineupen är klar. Tidsutgång förverkar matchen. Om båda sidor löper ut, båda elimineras.
+Back	Tillbaka
+Back / discard draft	Back / discard utkast
+Back to Play	Tillbaka till Play
+Back to draft	Tillbaka till utkast
+Backhand preview:	Backhand förhandsgranskning:
+Backspace	Backsteg
+Balanced	Balanserad
+Basic Settings	Grundläggande inställningar
+Begin match	Börja matcha
+Bind key	Bind Key
+Binding staged; command was not executed	Binding iscensatt; kommandot avrättades inte
+Black	Svart svart
+Blade %d / %d	Blade %d/%d
+Blade off	Blade Off
+Blaster rifle	Blaster gevär
+Blue	Blå
+Blue team	Blå lag
+Blue, Yellow and Red selected. Apply to save.	Blå, Gul och Röd vald. Applicera för att spara.
+Bot definition is not installed: 	Bot definition är inte installerad:
+Bot model for slot 	Bot model för slot
+Bot roster: 	Bot roster:
+Bottom left	Bottom vänster
+Bottom right	Bottom rätt
+Brightness	Ljushet
+Browse unranked servers	Bläddra i orankade servrar
+Bumpers move the caret	Bumpers flyttar vakten
+Bumpers: history	Bumpers: historia
+Button labels	Knapp etiketter
+Button labels: 0 Xbox, 1 PlayStation, 2 generic	Knappmärken: 0 Xbox, 1 PlayStation, 2 generiska
+Button mapping	Knapp kartläggning
+CALL GAME TYPE VOTE	Spela spelet TYPE VOTE
+CAST YOUR VOTE	Ställ din röst
+CHAT	Chat
+CHOOSE AN ACTION	Kaos ett antagande
+CONTROLLER DEFAULTS?	Kontrollera brister?
+Call a vote	Ring en röst
+Camera	Kamera
+Camera / UI	Kamera / UI
+Camera FOV	Kamera FOV
+Camera damping	Kamera damping
+Camera settings applied.	Kamerainställningar tillämpas.
+Camera smoothing	Kamera smoothing
+Camera tilt	Kamera tilt
+Cancel	Avbokning
+Cancel all Match Rules changes waiting for the next round/map. Current active match rules remain in effect.	Annullera alla matchregler ändringar väntar på nästa omgång/karta. Aktuella matchregler kvarstår i kraft.
+Cancel changes	Avboka ändringar
+Cancel edits	Avbryt redigeringar
+Cancel field	Avboka fält
+Cannot preserve the current custom renderer safely.	Kan inte bevara den nuvarande anpassade givaren säkert.
+Capture limit	Fånga gräns
+Cast your vote	Gjut din röst
+Center view	Center View
+Center your view	Center din utsikt
+Changes the chat background. Text stays readable.	Ändra chatt bakgrund. Text förblir läsbar.
+Changes the language of menus.	Ändra språket i menyer.
+Changing this restarts mouse input.	Ändra denna omstart mus ingång.
+Character shadows	Karaktärskuggor
+Chat	Chatten
+Chat box height (%)	Chattboxhöjd (%)
+Chat box opacity (%)	Chattbox opacity (%)
+Chat box size (%)	Chattbox storlek (%)
+Chat box width (%)	Chattboxbredd (%)
+Chat text color	Chatt text färg
+Chat with the current audience	Chatta med den nuvarande publiken
+Chat with your team	Chatta med ditt team
+Chinese (Simplified)	Kinesiska (förenklad)
+Chinese (Traditional)	Kinesiska (traditionella)
+Choose Custom resolution.	Välj anpassad upplösning.
+Choose Manual to edit connection values.	Välj Manual för att redigera anslutningsvärden.
+Choose a language if short messages or regional variants are misidentified.	Välj ett språk om korta meddelanden eller regionala varianter är felaktiga.
+Choose a loaded bot definition, role, skill and team. During a match these are additions unless Replace existing bots is selected. Presets also include the current live bots. Always reserve a connection beyond your bots.	Välj en laddad bot definition, roll, skicklighet och lag. Under en match dessa är tillägg om inte Ersätt befintliga bots väljs. Förinställningar inkluderar också nuvarande live bots. Alltid reservera en anslutning utöver dina bots.
+Choose a style	Välj en stil
+Choose a style for each of the three slots.	Välj en stil för var och en av de tre slotsen.
+Choose a team	Välj ett team
+Choose a whole-number option.	Välj ett helnummer alternativ.
+Choose an installed map compatible with this game type, or enter an installed map name. The Host screen's existing map chooser remains available.	Välj en installerad karta som är kompatibel med denna speltyp eller ange ett installerat kartnamn. Värdskärmens befintliga kartväljare är fortfarande tillgänglig.
+Choose an installed map for the current game type.	Välj en installerad karta för den aktuella speltypen.
+Choose each style's ready pose separately in Stances.	Välj varje stils redo pose separat i Stances.
+Choose named action	Välj namngivna åtgärder
+Choose or enter a preset name (1 to 40 letters, numbers, _ or -).	Välj eller ange ett förinställt namn (1 till 40 bokstäver, siffror, _ eller -).
+Choose the appearance of the menus.	Välj utseendet på menyerna.
+Choose the chat display on this server.	Välj chattdisplayen på denna server.
+Choose the combat display on this server.	Välj stridsdisplayen på denna server.
+Choose the same squad number as your teammates.	Välj samma truppnummer som dina lagkamrater.
+Choose three different styles to complete your cycle.	Välj tre olika stilar för att slutföra din cykel.
+Choose three different styles. Each style can fill only one slot.	Välj tre olika stilar. Varje stil kan fylla endast en slot.
+Choose your arena.	Välj din arena.
+Choose your host in the server browser or enter its address.	Välj din värd i serverns webbläsare eller ange dess adress.
+Choose your saber hand, then select Apply Changes.	Välj din sabelhand och välj sedan Apply Changes.
+Circle	Cirkel
+Classic combat	Klassisk strid
+Clean Capture	Ren Capture
+Clean Capture is on.	Clean Capture är på.
+Clear	Rensa
+Clear assignment	Tydliga uppdrag
+Clear filters and search	Tydliga filter och sök
+Client command packets per second.	Kundkommandopaket per sekund.
+Close	Nära
+Color depth	Färgdjup
+Combat styles	Combat stilar
+Combat styles...	Stridstilar...
+Combat, Force, bots and server settings.	Combat, Force, bots och serverinställningar.
+Comics	Komiker
+Communication	Kommunikation
+Complete	Komplett
+Complete rules, map, rotation, server name and roster. Passwords are excluded. Loading replaces only this draft; gameplay changes after review.	Fullständiga regler, karta, rotation, servernamn och roster. Lösenord är uteslutna. Loading ersätter endast detta utkast; gameplay ändras efter granskning.
+Composition grid: 	Sammansättningsnät:
+Config applied.	Config tillämpad.
+Config loaded into editor. Review, then Apply.	Config laddade till redaktör. Review, sedan Apply.
+Config write verification failed; existing config retained.	Konfig skriver verifiering misslyckades; befintlig konfig behölls.
+Confirm	bekräfta
+Connect	Connect Connect Connect
+Connection	Anslutning
+Connection capacity: 	Anslutningskapacitet:
+Console	Konsol
+Console keyboard	Konsol tangentbord
+Console opacity	Konsol opacity
+Console overlay	Console Overlay
+Controller defaults staged; review before Apply	Kontrollenhetsstandarder iscensatta; översyn innan Apply
+Controller detection	Controller Detection
+Controls	Kontroller
+Controls this individual vote permission. Other vote permissions remain unchanged.	Kontrollerar detta individuella röstbehörighet. Andra röstbehörigheter förblir oförändrade.
+Controls what you see when the server allows dismemberment.	Kontrollerar vad du ser när servern tillåter nedmontering.
+Cosmetics	Kosmetika
+Could not confirm the display settings; recovery file could not be removed.	Kunde inte bekräfta bildinställningarna; återställningsfilen kunde inte tas bort.
+Could not finish saving; existing config retained.	Kunde inte sluta spara; befintlig konfig behållen.
+Could not load compatible renderer %s	Kunde inte ladda kompatibel renderer %s
+Could not open config for writing.	Kunde inte öppna konfig för att skriva.
+Could not read config	Kunde inte läsa konfig
+Could not save display recovery.	Kunde inte spara displayåterställning.
+Could not save wheel	Kunde inte spara hjul
+Could not write this preset.	Kunde inte skriva detta förinställda.
+Count up	Räkna upp
+Cross	Kors Kors Kors Kors
+Crosshair and interface	Crosshair och interface
+Crouch / swim downward	Crouch / simma nedåt
+Cubemap bounces	Cubemap studsar
+Current bots plus additions leave no connection for players.	Nuvarande bots plus tillägg lämnar ingen anslutning för spelare.
+Current custom character	Nuvarande anpassad karaktär
+Current dual/staff combat; variants are planned.	Nuvarande dubbla/staff strider; varianter är planerade.
+Current style	Nuvarande stil
+Curve subdivisions	Curve underavdelningar
+Custom	Anpassad
+Custom Force: maximum level 0 disables this power; 1 through 3 caps allocation and grants. Restricted keeps Jump, Speed, Saber Attack and Saber Defense.	Anpassad kraft: maximal nivå 0 inaktiverar denna kraft; 1 till 3 caps allokering och bidrag. Begränsad håller hoppa, hastighet, Saber Attack och Saber Defense.
+Custom cap preference saved; becomes active with Custom Force rules.	Anpassad cap preferens sparas; blir aktiv med anpassade kraftregler.
+Custom height	Anpassad höjd
+Custom sounds	Anpassade ljud
+Custom weapons: checked means available. Melee and Lightsaber always remain available. Preferences are retained while another weapon preset is active.	Anpassade vapen: kontrollerade medel tillgängliga. Melee och Lightsaber är alltid tillgängliga. Föreställningar behålls medan en annan vapenförinställning är aktiv.
+Custom width	Anpassad bredd
+Customize	Anpassa
+Cycle saber style	Cykel saber stil
+Cycle your selected combat loadout	Cykel din valda stridslast
+Cycle: %s > %s > %s > repeat	Cykel: %s > > > > > %s > > > > > %s > upprepa
+D-pad down	D-pad ner
+D-pad left	D-pad vänster
+D-pad moves the pointer  /  Bumpers scroll	D-pad flyttar pekaren / Bumpers scroll
+D-pad right	D-pad rätt
+D-pad up	D-pad upp
+DISCONNECT?	Diskonnektera?
+Damage reactions	Skada reaktioner
+Default	Standard
+Default movement speed.	Standard rörelse hastighet.
+Default staged	Standard iscensatt
+Defaults selected. Click Apply Input to save.	Standarder valda. Klicka på Apply Input för att spara.
+Delete preset: 	Radera förinställda:
+Delete selected	Radera vald
+Deluxe specular	Deluxe spekulär
+Detailed shaders	detaljerade shaders
+Detect compatible gamepads as you connect them.	Detektera kompatibla gamepads när du ansluter dem.
+Detected	Detekteras
+Device preferences	Enhetsinställningar
+Disable authenticated ghost mode	Inaktivera autentiserat spökläge
+Disable warmup.	Inaktivera uppvärmning.
+Discard and continue	Kassera och fortsätt
+Discard pending changes?	Kassera pågående förändringar?
+Discard pending controls changes and open Saved Configs?	Kassera pågående kontroller förändringar och öppna sparade konfiger?
+Discard the server's queued changes?	Kassera serverns köförändringar?
+Discard this Match Rules draft?	Kassera detta Match Rules utkast?
+Display recovery could not be verified; settings were not changed.	Visa återhämtning kunde inte verifieras; inställningarna ändrades inte.
+Distance	Avstånd
+Distance behind the player. Walls can bring the camera closer.	Avståndet bakom spelaren. Väggar kan föra kameran närmare.
+Done	Klar
+Down	Nedre
+Drag or right stick to orbit  /  Scroll or bumpers to zoom	Dra eller höger hålla sig till omlopp / Scroll eller stötfångare för att zooma
+Drag or type a value, then Apply. Size: 75-125%.	Dra eller skriv ett värde, sedan Applicera. Storlek: 75-125%.
+Drag to orbit  /  Scroll to zoom	Dra till omlopp / Scroll till zoom
+Dual sabers	Dubbla saber
+Duel	Duell
+Duel round: one kill	Duel round: En död
+During a private duel, mute sound from players outside your duel.	Under en privat duell ljud från spelare utanför din duell.
+During a private duel, show only you and your opponent.	Under en privat duell, visa bara dig och din motståndare.
+Dutch	Nederländska
+Dynamic crosshair	Dynamisk crosshair
+Dynamic glow	Dynamisk glöd
+Dynamic lights	Dynamiska ljus
+EXIT	Exit
+EXIT SABER TRIALS	Exit SABER TRIALS
+Edit a proposal, then call its vote. Limits apply to the current mode.	Redigera ett förslag och sedan ringa omröstningen. Begränsningar gäller för nuvarande läge.
+Edit rotation order	Redigera rotation order
+Edit up to 32 maps in order. The server uses this order when automatic map rotation is enabled.	Redigera upp till 32 kartor i ordning. Servern använder denna beställning när automatisk kartrotation är aktiverad.
+Editing stages a binding; the command is never executed here.	Redigera stadier en bindning; kommandot utförs aldrig här.
+Effects	effekter
+Effects volume	Effekter volym
+Electric	Elektrisk el
+Electric 2	Elektrisk 2
+Emote bound	Emote bunden
+Emote library	Emote bibliotek
+Empty	Tomma
+Enable all Force powers, including Saber Throw.	Aktivera alla krafter, inklusive Saber Throw.
+Enable warmup.	Aktivera uppvärmning.
+English	Engelska engelska engelska engelska
+Enter 	Enter
+Enter %s0 to %d.	Ange %s0 till %d.
+Enter 0 for any measured ping	Ange 0 för någon mätt ping
+Enter a finite number.	Ange ett ändligt nummer.
+Enter a map name such as mp/ffa3 using letters, numbers, /, _ or -.	Ange ett kartnamn som mp/ffa3 med bokstäver, siffror, /, _ eller -.
+Enter a player name.	Ange ett spelarnamn.
+Enter a preset name	Ange ett förinställt namn
+Enter a size from 48 to 144.	Ange en storlek från 48 till 144.
+Enter a whole number in the displayed range.	Ange ett helt nummer i det visade intervallet.
+Enter map name	Ange kartnamn
+Enter size 75-125 and panel opacity 0-100.	Ange storlek 75-125 och panel opacity 0-100.
+Enter to save. Esc to cancel.	Ange för att spara. Esc för att avbryta.
+Enter your name	Ange ditt namn
+Esc  /  Back	Esc / Tillbaka
+Existing voice-command menu; not proximity voice	Befintlig röstkommandomeny; inte närhetsröst
+Exit	Avsluta
+Experimental preview only. Apply keeps your regular selection.	Experimentell förhandsgranskning bara. Apply håller ditt vanliga val.
+Explicitly removes existing bots before spawning this draft's roster. Human players are never removed. With this off, roster entries are additions only.	Explicit avlägsnar befintliga bots innan du gynnar detta utkasts roster. Mänskliga spelare tas aldrig bort. Med detta är rosterposter bara tillägg.
+Extra button	Extra knapp
+FIRST TO TEN\nTwo players fight for ten duel-round wins. Everyone else waits. New arrivals enter at the bottom. An asterisk means a player has yet to finish a series.\n\nMOVING UP\nThe arena rotates through neighboring ranks. The first pass pairs 1 vs 2, 3 vs 4, and so on. The next pass starts at 2 vs 3. The lower-ranked player takes the higher spot by winning.\n\nLEAVING AND RETURNING\nA disconnect cancels an unfinished series. Players below the vacated spot move up. A returning player enters at the bottom.\n\nACCOUNT POINTS\nOn an enrolled server with account scoring, signed-in players earn one point for finishing a series they started, plus one for winning. Ladder position belongs to this server session.	Första meningen att tio\nTvå spelare slåss för tio duell-runda vinster. Alla andra väntar. Nyanlända går in längst ner. En asterisk betyder att en spelare ännu inte har avslutat en serie.\n\nFlytta UP\nArenan roterar genom angränsande led. Den första passparen 1 vs 2, 3 vs 4, och så vidare. Nästa pass börjar på 2 vs 3. Den lägre rankade spelaren tar högre plats genom att vinna.\n\nLÄS OCH RETURNING\nEn disconnect avbryter en oavslutad serie. Spelare under den avskilda platsen flyttar upp. En återvändande spelare går in längst ner.\n\nSamtliga roller\nPå en inskriven server med konto scoring, inloggade spelare tjänar en poäng för att avsluta en serie som de startade, plus en för att vinna. Ladder position hör till denna server session.
+FPS limit	FPS-gräns
+Fantasy	Fantasi
+Favorites	Favoriter
+Field of view	Fält av utsikt
+Find	Hitta Hitta
+Find a Server	Hitta en server
+Find a joinable server using your preferences	Hitta en ansluten server med dina preferenser
+Find a server	Hitta en server
+Find results	Hitta resultat
+Fine-tune input settings without typing console commands.	Fine-tune ingångsinställningar utan att skriva konsolkommandon.
+Finnish	Finska
+Force / Weapons	Force / vapen
+Force absorb	Force absorberar
+Force cap: 	Force cap:
+Force drain	Force Drain
+Force enabled in restricted gametype	Force aktiverad i begränsad speltyp
+Force enabled while all powers disabled	Force aktiverad medan alla krafter inaktiverade
+Force grip	Force grepp
+Force heal	Force Heal
+Force lightning	Force Lightning
+Force player models	Force player modeller
+Force powers	Force Powers
+Force protect	Force skydd
+Force rules	Kraftregler
+Force rules, map rotation and team entry.	Kraftregler, kart rotation och laginmatning.
+Force sense	Force känsla
+Force speed	Force hastighet
+Force: restricted	Kraft: begränsat
+Force: unrestricted	Force: obegränsad
+Forward movement scale	Framåt rörelse skala
+Forward, left, back, right, jump and crouch input.	Framåt, vänster, tillbaka, höger, hoppa och crouch ingång.
+Free Camera	Gratis kamera
+Free For All	Gratis för alla
+Free mouse look	Gratis mus ser
+Freecam speed	Freecam hastighet
+Freeze	Frys
+Freeze is available in local solo games, including bots.	Freeze finns i lokala solospel, inklusive bots.
+French	Franska franska
+GAME RULES	Spelregler
+GAME TYPE	Spela TYPE
+GAME TYPES	Spela TYPES
+GENERAL	Generellt
+GLOBAL RANK: unavailable	GLOBAL RANK: Otillgänglig
+Game Options	Spelalternativ
+Game mode	Spelläge
+Game rules	Spelregler
+Game sounds	Spelljud
+Game type	Speltyp
+Game types	Speltyper
+Generate normal maps	Generera normala kartor
+Generic	Generisk
+Geometry detail	Geometri detalj
+German	Tyska tyska
+Ghost off	Ghost Off
+Go to the previous track	Gå till föregående spår
+Green	Grönt grönt grönt
+Group %d	Gruppen %d
+Group name	Gruppnamn
+Guide	Guide guide
+HDR lightmaps	HDR-lampor
+HUD appearance applied.	HUD utseende tillämpas.
+HUD size (%)	HUD storlek (%)
+HUD style	HUD stil
+Have your say on the current vote,	Tala om den aktuella omröstningen,
+Health / Movement	Hälsa / rörelse
+Health and ammo	Hälsa och ammo
+Height	Höjdhöjd
+Hide HUD, radar, chat and spectator overlays.	Dölj HUD, radar, chatt och åskådare overlays.
+Hide outside players	Göm utanför spelare
+Hide players in other private duels when you're outside a duel.	Dölja spelare i andra privata dueller när du är utanför en duell.
+Hide private duelists	Dölj privata duelister
+High	Högt högt
+Hilt preview unavailable	Hilt förhandsvisning otillgänglig
+Hold for Drain when available	Håll för dränering när tillgängligt
+Hold for Grip when available	Håll för Grip när det är tillgängligt
+Hold for Lightning when available	Håll för blixt när det är tillgängligt
+Hold for legacy mouse/keyboard strafe	Håll dig för arv mus/keyboard strafe
+Hold to change walking/running speed	Hålla på att ändra gång / körhastighet
+Hold to guard while moving and aiming. Tap Attack at impact to parry.	Håll dig vakt medan du flyttar och siktar. Tap Attack på påverkan för att parry.
+Hold to show match scores	Håll dig för att visa matchresultat
+Holster / draw saber	Holster / Dra saber
+Holster or draw your saber	Holster eller rita din sabel
+Horizontal look sensitivity	Horisontellt utseende känslighet
+Horizontal mouse scale	Horisontell musskala
+Horizontal scale	Horisontell skala
+Horizontal sensitivity	Horisontell känslighet
+Horizontal speed in game units per second.	Horisontell hastighet i spelenheter per sekund.
+Horizontal turn speed	Horisontell vändhastighet
+Horizontal velocity rounding zones for your current movement step.	Horisontella hastighetsrundzoner för ditt nuvarande rörelsesteg.
+Horror	Skräck
+Host a match	Värd en match
+Host name	Värdnamn
+Host password	Värd lösenord
+Host password (never saved in presets)	Värd lösenord (aldrig sparat i förinställningar)
+Hosting process can only be selected before starting a new server.	Hostingprocessen kan endast väljas innan du startar en ny server.
+Hosting process is start-only.	Hosting process är start-only.
+Ignore player	Ignorera spelare
+Ignore small legacy axis movements.	Ignorera små arv axel rörelser.
+Ignore small stick movements.	Ignorera små stick rörelser.
+Input settings applied.	Ingångsinställningar tillämpas.
+Inspect	Inspekt
+Inspect off-hand	Inspektera off-hand
+Inspect primary	Inspekt primär
+Installed map name	Installerat kartnamn
+Installed mods	Installerade mods
+Installing the mod alone does not make a server official.	Installera mod ensam gör inte en server officiell.
+Interact with usable world objects	Interagera med användbara världsobjekt
+Interface	Gränssnitt
+Invalid QA key	Invalid QA nyckel
+Invalid action	Ogiltig åtgärd
+Invalid assignment	Invalid uppdrag
+Invalid key	Invalid nyckel
+Invalid personal config filename	Invalid personlig konfig filnamn
+Invalid setting	Invalid inställning
+Invert controller vertical look	Invert controller vertikalt utseende
+Invert mouse	Invert mus
+Invert vertical look	Invert vertikalt utseende
+Italian	Italienska Italien
+Italiano	Italienska
+Items	Föremål
+JA+ blade: %s	JA+ blad: %s
+JA+ wheel	JA+ hjul
+JAPro	JAPRO
+Japanese	Japansk Japansk Japansk
+Join	Gå med
+Join Queue	Följ Queue
+Join a tournament server	Gå med i en turneringsserver
+Join game	Gå med i spelet
+Join match	Gå med i match
+Join password: 	Gå med lösenord:
+Join squad	Gå med i Squad
+Jump	Hoppa över
+Jump / swim upward	Hoppa / simma uppåt
+Jump sounds	Hoppa ljud
+KICK	Kick Kick
+Keep / Back	Håll / Tillbaka
+Keep Jump and Speed; disable other general powers.	Håll hoppa och hastighet; inaktivera andra allmänna befogenheter.
+Keep changes	Håll förändringar
+Keep display changes?	Fortsätt visa ändringar?
+Keep or revert the display change first.	Håll eller återställ visningsändringen först.
+Key Bindings	Nyckelbindningar
+Key change staged	Key change iscensatt
+Keyboard horizontal turn speed	Keyboard horisontell vändhastighet
+Keyboard turning	Keyboard vändning
+Keyboard vertical look	Keyboard vertikalt utseende
+Keyboard vertical look speed	Keyboard vertikal look speed
+Keys	Nycklar
+Kick by client number	Kick av klientnummer
+Kick by name	Kick efter namn
+Korean	Koreanska
+LEAVE THE MATCH?	ÄLSKAR MATCHEN?
+LEAVE TOURNAMENT?	ÄLSKAR TOURNAMENT?
+Labels do not change assignments.	Etiketter ändrar inte uppdrag.
+Language	Språk
+Language pack unavailable; showing original chat	Språkpaket otillgängligt; visar originalchatt
+Leader	Ledare
+Leave	Lämna
+Leave Queue	Lämna Queue
+Leave event	Lämna event
+Leave this server and return to the main menu?	Lämna den här servern och återgå till huvudmenyn?
+Leave this server and return to your desktop?	Lämna den här servern och återgå till skrivbordet?
+Left hand	Vänsterhand
+Left stick click	Vänster stick Click
+Legacy joystick analog axes	Legacy joystick analoga axlar
+Legacy joystick input; restarts input	Legacy joystick input; startar om input
+Legacy mouse forward-movement scale	Legacy mus framåtrörelseskala
+Legacy mouse strafe scale	Legacy mouse strafe skala
+Legacy or power acceleration.	Legacy eller kraftacceleration.
+Light flares	Ljusa flares
+Lighting	Belysning
+Limbs only	Limbs endast
+Limits affect the current mode.  0 = unlimited.	Gränser påverkar det aktuella läget. 0 = obegränsat.
+Lit preview	Lit Preview
+Live	Livet Live
+Live bot roster is still updating. Wait a moment and save again.	Live bot roster är fortfarande uppdaterad. vänta ett ögonblick och spara igen.
+Live preview	Live Preview
+Load into the editor for review, then Apply.	Ladda in redaktören för granskning, sedan Applicera.
+Load preset: 	Load preset:
+Load replacement draft	Load ersättare utkast
+Load the complete rules and roster as a bots-only replacement draft. Applying after review replaces existing bots; human players are never removed. Current gameplay and password remain unchanged until Apply.	Ladda fullständiga regler och roster som en bots-bara ersättningsutkast. Applicera efter granskning ersätter befintliga bots; mänskliga spelare tas aldrig bort. Nuvarande gameplay och lösenord förblir oförändrade tills Apply.
+Load the next map from the server rotation.	Ladda nästa karta från serverns rotation.
+Loaded bot definitions; custom player models appear when they include a bot definition.	Loaded bot definitioner; anpassade spelarmodeller visas när de inkluderar en bot definition.
+Local	Lokalt
+Local files	Lokala filer
+Local host draft	Lokalt värdutkast
+Local library	Lokalt bibliotek
+Local server	Lokal server
+Local track name	Lokalt spårnamn
+Lock teams	Lås lag
+Log in with Discord	Logga in med Discord
+Log out / Cancel	Logga ut / Avbryt
+Logged in as %.100s.	Loggad in som %.100s.
+Logged out.	Loggad ut.
+Look and movement	Titta och rörelse
+Look down	Titta ner
+Look up	Titta upp
+Looking with bound up / down keys.	Titta med bunden upp / ner nycklar.
+Low	Låg
+Low health pulse	Låg hälsa puls
+Lower music volume by 5%	Lägre musikvolym med 5%
+Lower values make curved surfaces smoother.	Lägre värden gör böjda ytor jämnare.
+Main menu	Huvudmenyn
+Manual	Manual Manual
+Manual combat	Manuell strid
+Map	Karta
+Map chooser / Back	Karta väljare / Back
+Map preview unavailable	Karta förhandsvisning otillgänglig
+Maps for the current game type	Kartor för den aktuella speltypen
+Maps listed for the draft's game type. A custom installed map can be entered directly.	Kartor listade för utkastets speltyp. En anpassad installerad karta kan anges direkt.
+Match Rules	Match Regler
+Match clock	Match klocka
+Match scores are separate from global rank.	Matchpoäng är separerade från global rang.
+Match tools	Matchverktyg
+Matches	Matcher
+Matching stance assets are missing. Choices were not saved.	Matchande ställningstillgångar saknas. Val sparades inte.
+Matching style assets are missing. Blue, Yellow and Red remain available.	Matchning stil tillgångar saknas. Blue, Yellow och Red förbli tillgänglig.
+Matching style assets are missing. Your choices were not saved.	Matchning stil tillgångar saknas. Dina val sparades inte.
+Max packets	Max paket
+Max players	Max spelare
+Maximum level 	Maximal nivå
+Melee and Lightsaber always remain available.	Melee och Lightsaber är alltid tillgängliga.
+Menu	Menyn
+Menu Theme	Menu tema
+Menu buttons	Menyknappar
+Menu confirm and back buttons	Meny bekräftar och back knappar
+Menu cursor speed	Menu cursor hastighet
+Menu language	Menyspråk
+Menu motion	Menu rörelse
+Menu motion: Off	Menyrörelse: Off
+Menu motion: On	Menyrörelse: On
+Message language	Meddelandespråk
+Message the last player who attacked you	Meddela den sista spelaren som attackerade dig
+Message the player under your crosshair	Meddela spelaren under ditt crosshair
+Min players	Mina spelare
+Min. players	Mina spelare
+Minimum human players. Enter 0 for any population.	Minsta mänskliga spelare. Ange 0 för alla befolkningar.
+Minutes, 0 to 1440. Zero means unlimited. Applies after passing; may end the round.	Minuter, 0 till 1440. Zero betyder obegränsad. Gäller efter passering; kan avsluta rundan.
+Missing pack	Saknar pack
+Mod switching is unavailable in this isolated test profile.	Mod switching är otillgänglig i denna isolerade testprofil.
+Model preview unavailable	Modellförhandsvisning otillgänglig
+More teams	Fler team
+Mouse	Musen
+Mouse buttons and wheel are supported. Escape cancels.	Musknappar och hjul stöds. Escape avbryter.
+Mouse input: 0 off, 1 raw, 2 compatibility; restarts input	Musinmatning: 0 av, 1 rå, 2 kompatibilitet; startar om ingången
+Mouse movement when free look is off.	Mus rörelse när fritt utseende är avstängd.
+Mouse movement while strafing.	Musa rörelse medan strafing.
+Mouse sensitivity	Muskänslighet
+Move backward	Flytta bakåt
+Move forward	Flytta framåt
+Move left without turning	Flytta vänster utan att vända
+Move right without turning	Flytta rätt utan att vända
+Move the mouse to look around.	Flytta musen för att titta runt.
+Movement	Rörelse
+Movement and legacy input	Rörelse och arvsinput
+Movement effects	rörelseeffekter
+Movement keys	Rörelsenycklar
+Movement training	Rörelseutbildning
+Multiplayer built around pro saber dueling.	Multiplayer byggd kring pro saber dueling.
+Multiplier while walk / run is held.	Multiplikator medan promenad / spring hålls.
+Music player	Musikspelare
+Music volume	Musikvolym
+Music volume down	Musikvolymen ner
+Music volume up	Musik volym upp
+Mute outside players	Mute utanför spelare
+Mute player and combat sounds from private duels you're outside of.	Mute player och strida ljud från privata dueller du är utanför.
+Mute private duels	Mute privata dueller
+Name	Namnnamn
+Names / scores	Namn/poäng
+Negative m_pitch inverts vertical look.	Negativ m_pitch inverterar vertikalt utseende.
+Negative shifts left. Positive shifts right. Zero centers the view.	Negativa skift kvar. Positiva skift höger. Zero centrerar utsikten.
+Network	Nätverk
+Network / FPS settings belong under Setup > Network.	Nätverk / FPS-inställningar hör under Inställning > Nätverk.
+Network statistics	Network Statistik
+New match draft	Nytt matchutkast
+Next	Nästa Nästa
+Next Force power	Nästa Force Power
+Next Map	Nästa karta
+Next Player	Nästa spelare
+Next item	Nästa artikel
+Next map	Nästa karta
+Next music track	Nästa musikspår
+Next weapon	Nästa vapen
+No active session	Ingen aktiv session
+No addition / choose bot	Inget tillägg / välj bot
+No files	Inga filer
+No matching entries.	Inga matchande poster.
+No matching hilts	Inga matchande höjningar
+No matching settings.	Inga matchningsinställningar.
+No models match these filters.	Inga modeller matchar dessa filter.
+No official servers listed	Inga officiella servrar listade
+No pending changes	Inga pågående förändringar
+No rotation / Edit order	Ingen rotation / redigeringsorder
+No saved personal configs.	Inga räddade personliga konfiger.
+No saved presets.	Inga räddade förinställningar.
+No standings available	Inga ståenden tillgängliga
+Non-ASCII command preserved. This text editor supports ASCII; use change-key or clear.	Icke-ASCII-kommandot bevarat. Denna textredigerare stöder ASCII; använd förändringsnyckel eller tydlig.
+Not a personal setting: 	Inte en personlig inställning:
+Not advertised	Inte annonserad
+Not reported	Inte rapporterat
+Off	Off Off Off
+Official 1v1 matches on a Ranked Duel server.	Officiella 1v1 matcher på en Ranked Duel-server.
+Offset used by the power curve.	Offset används av kraftkurvan.
+Older joystick path; restarts input.	Äldre joystickbana; startar om ingång.
+On	På
+One or more default keys have another command. Confirm to replace them.	En eller flera standardnycklar har ett annat kommando. Bekräfta att ersätta dem.
+Online free camera uses your normal spectator movement.	Online gratis kamera använder din normala åskådare rörelse.
+Only official registered teams enter this ladder.	Endast officiella registrerade lag går in i denna stege.
+Open 	Öppet Öppet Öppet Öppet
+Open / choose bot	Öppna / välj bot
+Open / collapse chat	Öppen / kollapschatt
+Open access	Öppen åtkomst
+Open connection slot / Remove this bot	Öppen anslutning slot / Ta bort denna bot
+Open or close the in-game menu	Öppna eller stänga in-game menyn
+Open or close your music player	Öppna eller stänga din musikspelare
+Open server	Öppen server
+Open the console	öppna konsolen
+Opponent	Motståndare
+Optimization	Optimering
+Optional join password, held only for this draft; never saved in a preset.	Valfritt gå med lösenord, hålls endast för detta utkast; aldrig sparas i en förinställning.
+Options	Alternativ
+Orbit angle	Orbit vinkel
+Order is preserved in presets. Enable automatic rotation in Match to use this list.	Beställningen bevaras i förinställningar. Enable automatisk rotation i Match för att använda denna lista.
+Ordered map rotation	Beställd kartrotation
+Ordinary matches remain unranked.	Vanliga matcher förblir orankade.
+Original Blue style.	Ursprunglig blå stil.
+Original JKA	Ursprunglig JKA
+Original JKA and Saber Trials Combat are supported.	Original JKA och Saber Trials Combat stöds.
+Original Red style.	Original röd stil.
+Original Yellow style.	Ursprunglig gul stil.
+Overall mouse response.	Övergripande musrespons.
+Overview	Översikt
+PHOTO MODE	Foto-läge
+PICKUP GAMES\nPlayers start as spectators. Open Pause > PUG Queue > Join Queue to play. The server fills the smallest teams first. Bots can hold places until a human is waiting.\n\nROUND ROTATION\nAt round end, a waiting player replaces a team's lowest scorer. Ties rotate the player who has held a spot longer. Benched players move to the back of the queue. With an empty queue, the teams stay in.\n\nINACTIVITY\nIdle players return to spectator after a warning. Waiting and watching preserve your queue position.\n\nACCOUNT POINTS\nOn an enrolled server with account scoring, signed-in players earn one point for finishing a round they started, plus one for winning.	Pickup spel\nSpelare börjar som åskådare. Open Pause > PUG Queue > Gå med i Queue för att spela. Servern fyller de minsta lagen först. Bots kan hålla platser tills en människa väntar.\n\nROUND ROTATION\nI runda änden ersätter en väntespelare ett lags lägsta scorer. Ties roterar spelaren som har hållit en plats längre. Benched spelare flyttar till baksidan av könet. Med en tom kö stannar lagen i.\n\nINACTIVITY\nIdle spelare återvänder till åskådare efter en varning. Väntar och tittar på bevara din kö position.\n\nSamtliga roller\nPå en inskriven server med konto scoring, inloggade spelare tjänar en poäng för att avsluta en runda de började, plus en för att vinna.
+PING	Ping
+PLAY	Spela
+Packet duplication	Paket duplicering
+Pages rotate every 10s. Your row stays visible.	Sidorna roterar var 10: e plats. Din rad är synlig.
+Panel opacity (%)	Panelopacitet (%)
+Parallax mapping	Parallax kartläggning
+Password	Lösenord
+Password must be at most 64 characters and cannot contain quotes, backslashes, semicolons or control characters.	Lösenord måste vara högst 64 tecken och kan inte innehålla citat, bakslag, halvkoloner eller kontrollkaraktärer.
+Password required	Lösenord krävs
+Password unknown	Lösenord okänd
+Pause	Paus
+Pause menu	Paus meny
+Pause music	Pausa musik
+Pause the selected music source	Pausa den valda musikkällan
+Pending changes	I väntan på förändringar
+Pending edits discarded	I väntan på redigeringar kasserade
+Performance	Prestanda
+Perspective	Perspektiv
+Photo Mode	Fotoläge
+Pick different styles. Your normal style-switch control follows this order.	Välj olika stilar. Din normala stil-switch kontroll följer denna ordning.
+Play	Spela
+Play recording	Spela inspelning
+Play track	Spela spår
+Playback	Uppspelning
+Player	Spelare
+Player labels	Spelaretiketter
+Player name	Spelarnamn
+Player settings changed outside this menu. Reopen Profile to refresh.	Spelarinställningar ändrades utanför denna meny. Reopen Profile att uppdatera.
+Players	Spelare
+Players and world	Spelare och världen
+Players per team	Spelare per lag
+Polish	Polska
+Portrait	Porträtt
+Portrait size	Porträttstorlek
+Portrait size applied.	Porträttstorlek tillämpas.
+Portraits	Porträtt
+Portuguese	Portugisiska
+Portuguese (Brazil)	Portugisiska (Brasilien)
+Power	Kraftkraft
+Precise crosshair trace	Precise crosshair spår
+Preset deleted.	Förinställd raderad.
+Preset is missing, deleted or too large. Your draft is unchanged.	Förinställd saknas, tas bort eller för stor. Ditt utkast är oförändrat.
+Preset loaded into draft. Password unchanged; review before applying.	Förinställ dig laddad i utkast. Password oförändrad; översyn innan du ansöker.
+Preset name (letters, numbers, _ and -)	Förinställt namn (brev, siffror, _ och -)
+Preset read was incomplete. Your draft is unchanged.	Förinställd läsning var ofullständig. Ditt utkast är oförändrat.
+Preset saved. Password excluded.	Förinställt sparat. Lösenord exkluderat.
+Preset write was incomplete.	Förinställd skriva var ofullständig.
+Presets	Förinställningar
+Press an unassigned key or button. Esc cancels.	Tryck på en otilldelad nyckel eller knapp. Esc avbryter.
+Preview hand:	Förhandsgranskning hand:
+Preview unavailable	Förhandsvisning otillgänglig
+Preview unavailable for this model	Förhandsgranskning otillgänglig för denna modell
+Preview:	Förhandsgranskning:
+Previous	Föregående
+Previous Force power	Föregående Force Power
+Previous Player	Föregående Player
+Previous item	Föregående artikel
+Previous music track	Föregående musik track
+Previous weapon	Föregående vapen
+Primary	Primär
+Private chat with last attacker	Privat chatt med sista angriparen
+Private chat with target	Privat chatt med mål
+Private duels	Privata dueller
+Private message	Privat meddelande
+Profile	Profil
+Projected	Projekterad
+Projectile trails	Projektila stigar
+Public server name. Presets include this name.	Offentligt servernamn. Förinställningar inkluderar detta namn.
+Purple	lila
+Quality	Kvalitet kvalitet
+Quick Match	Snabb match
+Quick combinations; more weight than Blue.	Snabba kombinationer; mer vikt än blå.
+Quit the game and return to your desktop?	Avsluta spelet och återgå till skrivbordet?
+RANKED PLAY  /  DUEL LADDER	RANKED PLAY / DUEL LADDER
+RANKED PLAY  /  OVERVIEW	RANKED PLAY / OVERVIEW
+RANKED PLAY  /  SERVER DIRECTORY	RANKED PLAY / SERVER DIRECTORY
+RANKED PLAY  /  TEAM LADDER	RANKED PLAY / TEAM LADDER
+READY	LÄS OK
+READY STANCE	LÄS STANCE
+RECONNECTS AND RESERVES	Rekonstruktioner och rester
+RECORDINGS	Rörelser
+RED %d     /     BLUE %d	RED %d / BLUE %d
+RGB sabers are disabled by this JA+ server.	RGB-servrar är inaktiverade av denna JA+-server.
+Raise music volume by 5%	Höj musikvolymen med 5%
+Raise or lower the camera target.	Höj eller sänk kameramålet.
+Rank	Rankad
+Ranked Challenge Duel	Rankad utmaning Duel
+Ranked Duel	Rankad duell
+Ranked Duel and Ranked Challenge Duel share this ladder.	Rankad Duel och Ranked Challenge Duel delar denna stege.
+Ranked Play	Rankad lek
+Ranked TFFA	Rankad TFFA
+Ranked connection: not configured	Rankad anslutning: inte konfigurerad
+Ranked mode	Rankat läge
+Ranked servers	Rankade servrar
+Ranked services are coming soon.	Rankade tjänster kommer snart.
+Rankings appear after verified official results are connected.	Rankings visas efter att verifierade officiella resultat är anslutna.
+Rating change: unavailable. No verified ranked result received.	Betygsändring: otillgänglig. Inget verifierat rankat resultat mottaget.
+Ready - offline	Redo - offline
+Ready cleared.	Redo rensat.
+Ready for chat - offline	Redo för chatt - offline
+Ready room	Redo rum
+Ready selected.	Redo valt.
+Ready-pose choice only. Choose combat behavior in Combat styles.	Redo val bara. Välj stridsbeteende i stridsstilar.
+Record 1-6000 client frame-time samples	Rekord 1-6000 klientramtidsprover
+Recording	Inspelning
+Recordings	Inspelningar
+Red	Röd
+Red team	Röda laget
+Region	Region Region Region Region
+Region rule	Regionregel
+Registered teams compete on their own team ladder.	Registrerade lag tävlar på sin egen lagstege.
+Release capture in windowed mode.	Släpp tag i fönsterläge.
+Release mouse capture in windowed mode	Släpp musfånga i fönsterläge
+Release window capture	Släpp fönsterfångst
+Remove	Ta bort
+Remove this preset from the saved list. This cannot be undone; you can save a new preset under the same name later.	Ta bort detta förinställda från den sparade listan. Detta kan inte ångras; du kan spara en ny förinställd under samma namn senare.
+Remove your entry from this tournament?	Ta bort din post från den här turneringen?
+Rename group	Rename Group
+Repeat commands in outgoing packets.	Upprepa kommandon i utgående paket.
+Repeater	Repeter
+Replace	Ersätt
+Replace 	Ersätt
+Replace all non-secret rules, map, rotation, name and bot roster in this draft. Current gameplay and password remain unchanged until you review and apply.	Byt ut alla icke-hemliga regler, karta, rotation, namn och bot roster i detta utkast. Nuvarande gameplay och lösenord förblir oförändrade tills du granskar och tillämpar.
+Replace existing bots on apply	Ersätt befintliga bots på tillämplig
+Replace existing bots; new roster: 	Ersätt befintliga bots; ny roster:
+Replace ordinary HUD	Ersätt vanlig HUD
+Replace pending config edits?	Ersätt väntande konfig redigeringar?
+Replace pending edits with this config?	Ersätt väntande redigeringar med denna konfig?
+Replace saved config?	Ersätt frälsta konfig?
+Replace the controller's button assignments with defaults?	Byt ut styrenhetens knappuppdrag med standarder?
+Requested bytes per second; server limits apply.	Begärda byte per sekund; servergränser gäller.
+Requested cancellation of the server's queued changes.	Begärd avbokning av serverns köförändringar.
+Requested snapshots per second.	Begärda ögonblicksbilder per sekund.
+Requires Custom Force rules. 	Kräver anpassade kraftregler.
+Requires Custom weapon rules; Melee and Lightsaber stay available. 	Kräver anpassade vapenregler; Melee och Lightsaber stannar tillgängliga.
+Requires Rend2.	Kräver Rend2
+Requires Saber Trials spectator or camera support.	Kräver Saber Trials åskådare eller kamerastöd.
+Requires Streamer mode with Clean Capture off.	Kräver Streamer läge med Clean Capture av.
+Requires a Saber Trials server.	Kräver en Saber Trials server.
+Requires authenticated server permission	Kräver autentiserad servertillstånd
+Requires server permission. Add a player argument using Edit command if needed.	Kräver servertillstånd. Lägg till ett spelarargument med hjälp av Redigera kommandot om det behövs.
+Requires server permission. Use the server's target syntax.	Kräver servertillstånd. Använd serverns målsyntax.
+Reset	Återställ
+Reset all to Stock	Återställ allt till lager
+Reset camera	Återställ kamera
+Reset filters	Återställ filter
+Reset this tab	Återställ denna flik
+Reset this tab?	Återställ denna flik?
+Reset to originals	Återställ till original
+Reset view	Återställ vy
+Respawn	Återbetalning
+Respawn now	Respawn nu
+Restart map	Restart karta
+Restart the current map after the vote passes.	Starta om den aktuella kartan efter omröstningen.
+Restore action defaults	Återställ åtgärdsstandarder
+Restricted Force	Begränsad styrka
+Resume	Återkomma
+Resume  /  Esc	Resume / Esc
+Return to editing to keep your pending changes.	Återgå till redigering för att hålla dina pågående förändringar.
+Reverse right-stick vertical look.	Omvänd höger-stick vertikalt utseende.
+Revert	Revertera
+Reverting in %d seconds.	Återgå i %d sekunder.
+Review / Start	Recension / Starta
+Review before starting the match	Granska innan matchen startar
+Review changes	Granska förändringar
+Review changes to this local server	Granska ändringar av denna lokala server
+Review this change. Nothing changes until you confirm.	Granska denna förändring. Inget ändras tills du bekräftar.
+Right hand	Höger hand
+Right stick click	Höger klick klick
+Right-stick horizontal look speed.	Höger-stick horisontell look hastighet.
+Right-stick vertical look speed.	Höger-stick vertikal look hastighet.
+Role: Jedi	Roll: Jedi
+Role: Non-Jedi	Roll: Icke-Jedi
+Rotation already has 32 maps.	Rotation har redan 32 kartor.
+Rotation exceeds the safe command length. Shorten or remove a map name.	Rotation överstiger den säkra kommandolängden. Förkorta eller ta bort ett kartnamn.
+Rotation is empty.	Rotation är tom.
+Rotation map 	Rotationskarta
+Rotation map is not installed: 	Rotationskartan är inte installerad:
+Rotation: 	Rotation:
+Run command	Kör kommando
+Run pitch	Kör pitch
+Run roll	Run Roll
+SABER TRIALS  /  	SABER TRIALS /
+SABER TRIALS  /  FIND A SERVER	SABER TRIALS / FIND A SERVER
+SABER TRIALS  /  HOST A MATCH	SABER TRIALS / HOST A MATCH
+SABER TRIALS  /  MOVES	SABER TRIALS / MOVES
+SABER TRIALS  /  SOLO MATCH	SABER TRIALS / SOLO MATCH
+SABER TRIALS / 	SABER TRIALS /
+SABER TRIALS / ACCOUNT	SABER TRIALS / RÅDE
+SABERTRIALS	Sabertrik
+SINGLE SABER / CHOOSE THREE	Single SABER/CHOOSE ThREE
+ST_CONTROLS_FAIL binding mismatch	ST_CONTROLS_FAIL bindande felmatch
+ST_CONTROLS_FAIL hit visibility	ST_CONTROLS_FAIL träffar synlighet
+ST_CONTROLS_FAIL menu closed	ST_CONTROLS_FAIL menyn stängt
+ST_CONTROLS_FAIL page mismatch	ST_CONTROLS_FAIL-sida mismatch
+ST_CONTROLS_FAIL settings count	ST_CONTROLS_FAIL-inställningar räknas
+ST_CONTROLS_FAIL variable mismatch	ST_CONTROLS_FAIL variabel missmatchning
+Saber / melee	Saber / Melee
+Saber Trials wheel	Saber Trials hjul
+Saber trail	Saber Trail
+Saber workbench	Saber Workbench
+Sabers	Saber
+Save a PNG screenshot	Spara en PNG skärmdump
+Save current draft	Spara aktuellt utkast
+Save current settings	Spara aktuella inställningar
+Save preset: 	Spara förinställda:
+Save this complete match configuration and bot roster. An existing preset with this name will be replaced. The host password is excluded.	Spara denna fullständiga matchkonfiguration och bot roster. En befintlig förinställning med detta namn kommer att ersättas. Värdlösenordet är uteslutet.
+Saved	Sparad
+Saved 	Sparad
+Saved Configs	Räddade grisar
+Saved choices take effect next spawn on supporting servers.	Sparade val träder i kraft nästa spawn på att stödja servrar.
+Saved config could not be verified.	Sparad konfig kunde inte verifieras.
+Scale horizontal mouse movement.	Skala horisontell mus rörelse.
+Scales the panel and text together.	Skalar panelen och texten tillsammans.
+Scene: 	Scen:
+Search	Sök efter Sök
+Search Setup settings or console names...	Sök inställningar eller konsolnamn...
+Search actions...	Söka åtgärder...
+Search by artist, song or album	Sök efter artist, sång eller album
+Search by server name, game type, map, or address	Sök efter servernamn, speltyp, karta eller adress
+Search current keys or commands...	Sök aktuella nycklar eller kommandon...
+Search hilts	Sök Hilts
+Search input settings or console names...	Sök ingångsinställningar eller konsolnamn...
+Search models or outfits...	Sök modeller eller outfits...
+Search music	Sök musik
+Search the provider's catalog	Sök leverantörens katalog
+Secondary	Sekundär
+Select DEMP2 when available	Välj DEMP2 när det är tillgängligt
+Select a game type. Changing this choice does not change the match.	Välj en speltyp. Ändra detta val ändrar inte matchen.
+Select a player or bot	Välj en spelare eller bot
+Select a rule for its description. Mouse wheel scrolls; arrows / controller move focus. Left / right adjusts a focused value; Enter edits numbers.	Välj en regel för dess beskrivning. Mushjulsrulle; pilar / styrenhet flytta fokus. Vänster / rätt justerar ett fokuserat värde; Ange redigeringsnummer.
+Select a server	Välj en server
+Select an available map for the current game type.	Välj en tillgänglig karta för aktuell speltyp.
+Select blaster rifle when available	Välj blastergevär när det är tillgängligt
+Select bowcaster when available	Välj bowcaster när det är tillgängligt
+Select det packs	Välj Det Packs
+Select disruptor when available	Välj disruptor när det är tillgängligt
+Select flechette when available	Välj flechette när det är tillgängligt
+Select installed map	Välj installerad karta
+Select next Force power	Välj nästa kraft
+Select next available weapon	Välj nästa tillgängliga vapen
+Select next inventory item	Välj nästa lager objekt
+Select one of the six styles.	Välj en av de sex stilarna.
+Select pistol when available	Välj pistol när det är tillgängligt
+Select previous Force power	Välj tidigare Force Power
+Select previous available weapon	Välj tidigare tillgängliga vapen
+Select previous inventory item	Välj tidigare lager objekt
+Select repeater when available	Välj repeater när tillgänglig
+Select rockets when available	Välj raketer när de är tillgängliga
+Select saber or melee	Välj saber eller melee
+Select thermal detonators	Välj termiska detonatorer
+Select trip mines	Välj Tri Mines
+Selected map	Vald karta
+Selected map is not installed: 	Vald karta är inte installerad:
+Send message	Skicka meddelande
+Sensitivity	Känslighet
+Sensitivity / settings	Känslighet / inställningar
+Sent %s/s   Max %d   Snaps %d   Rate %d   Nudge %d   Dup %d	Sent %s/s Max %d   Snaps %d   Rate %d   Nudge %d   Dup %d
+Server	Server Server Server
+Server information	Serverinformation
+Server location	Server plats
+Server name	Servernamn
+Server staff protection still applies.	Serverpersonalskydd gäller fortfarande.
+Server state changed. Close and reopen Match Rules.	Serverstatus ändrades. Stäng och öppna matchregler.
+Server tournament verification is coming next.	Server-turneringsverifieringen kommer nästa.
+Server: 	Server:
+Setting is protected: 	Inställningen är skyddad:
+Setting staged	Inställning iscensatt
+Settings applied.	Inställningar tillämpas.
+Settings applied. Video/sound changes may require a restart.	Inställningar tillämpas. Video/ljud förändringar kan kräva en omstart.
+Settings changed outside the editor. Cancel and reopen before applying.	Inställningar ändrades utanför redaktören. Avbryt och öppna innan du ansöker.
+Setup	Inställningar
+Share / Create	Dela / Skapa
+Shift	Skift
+Shoulder offset	Axelkompensation
+Show controls: 	Visa kontroller:
+Show current bracket	Visa nuvarande fäste
+Show current tournament status	Visa aktuell turneringsstatus
+Show measured connection and current network settings	Visa uppmätt anslutning och aktuella nätverksinställningar
+Show original message	Visa originalmeddelande
+Show ping, jitter, incoming loss and live settings.	Visa ping, jitter, inkommande förlust och levande inställningar.
+Show the original above its marked translation. Originals remain in the console.	Visa originalet ovanför dess markerade översättning. Originals finns kvar i konsolen.
+Show weapon	Visa vapen
+Shows the weapon model in first person.	Visar vapenmodellen i första person.
+Siege objectives	Siege mål
+Siege voice commands	Siege röstkommandon
+Signed in with Discord.	Logga in med Discord.
+Signed out.	Logga ut.
+Simple items	Enkla objekt
+Size: 48-144. Drag or type a number, then Apply size.	Storlek: 48-144. Dra eller skriv ett nummer, sedan Applicera storlek.
+Skill 	Skicklighet
+Skip to the next track	Hoppa till nästa spår
+Slot 	Slot
+Smooth follow	Smooth Följ
+Smooths changes to camera position.	Smooths ändras till kameraposition.
+Smooths changes to the point the camera follows.	Smid ändras till den punkt kameran följer.
+Snapshot timing offset; normally session-only.	Snapshot timing offset; normalt session-bara.
+Solo / replay speed	Solo / replay hastighet
+Solo, spectator and replay camera. Online matches stay live.	Solo, åskådare och replay kamera. Online-matcher stannar live.
+Some weapons and modes choose the view automatically.	Vissa vapen och lägen väljer vyn automatiskt.
+Sort by region	Sortera efter region
+Sound	Ljud
+Sound quality	Ljudkvalitet
+Sounds	Ljud
+Sounds + effects	Ljud + effekter
+Sounds + effects + marks	Ljud + effekter + märken
+Source   	Källa
+Space	Mellanslag
+Spanish	Spanska spanska
+Spectator camera	Spectator kamera
+Speed	Hastighet
+Speed trail	Speed Trail
+Square	Square Square
+Staff	Personal
+Stage controller defaults	Stage controller standarder
+Stances saved. Applies next spawn on a supporting server.	Stances sparade. Applicerar nästa spawn på en stödjande server.
+Standard	Standard Standard
+Start / Resume	Start/Resume
+Start match: 	Startmatch:
+Start this match	Starta denna match
+Starting rating: 1000   |   Results and opponent strength decide changes.	Startbetyg: 1000 | Resultat och motståndare styrkor besluta ändringar.
+Static	Statisk
+Status notifications	Statusmeddelanden
+Stay here	Stanna här
+Stay registered	Håll dig registrerad
+Stock action defaults staged (unassigned when no stock default exists)	Aktieåtgärdsstandarder iscensatta (otilldelade när ingen lagerstandard existerar)
+Stock defaults unavailable	Stock defaults otillgängliga
+Strafe left	Strafe vänster
+Strafe modifier	Strafe modifierare
+Strafe movement scale	Strafe rörelse skala
+Strafe right	Strafe rätt
+Streamer mode	Streamer läge
+Style:	Stil:
+Subject	Ämne
+Substitute	Substitut
+Supporting servers use this selection. Saber Offense requirements still apply.	Stödjer servrar använder detta urval. Saber Offense krav gäller fortfarande.
+Supports Ranked Duel, Ranked TFFA and FFA challenge servers.	Stöder Ranked Duel, Ranked TFFA och FFA-utmaningsservrar.
+Swap Confirm and Back for menus.	Swap Bekräfta och Back för menyer.
+Swedish	Svenska
+Switch mod?	Växla mod?
+Switch mods from the disconnected main menu.	Byt mods från den bortkopplade huvudmenyn.
+Symbols	Symboler
+TEAM STANDINGS	Team strängings
+TEAM TOURNAMENT	Team TOURNAMENT
+TFFA: lock or reopen joining and team switching.	TFFA: låsa eller öppna igen och lagväxling.
+TIME	Tid
+TOURNAMENT  /  BRACKET     1 / 4	TOURNAMENT/BRACKET 1/4
+TOURNAMENT  /  BRACKET     2 / 4	TOURNAMENT/BRACKET 2/4
+TOURNAMENT  /  BRACKET     3 / 4	TOURNAMENT/BRACKET 3/4
+TOURNAMENT  /  BRACKET     4 / 4	TOURNAMENT/BRACKET 4/4
+TOURNAMENT  /  CHOOSE YOUR SQUAD	TOURNAMENT / Välj din kvadrat
+TOURNAMENT  /  READY ROOM	TOURNAMENT / READY ROOM
+TOURNAMENT  /  ROSTER     1 / 4	TOURNAMENT / ROSTER 1/4
+TOURNAMENT  /  ROSTER     2 / 4	TOURNAMENT/ROSTER 2/4
+TOURNAMENT  /  ROSTER     3 / 4	TOURNAMENT/ROSTER 3/4
+TOURNAMENT  /  ROSTER     4 / 4	TOURNAMENT/ROSTER 4/4
+TOURNAMENT  /  SUBSTITUTES	TOURNAMENT/SUBSTITUTES
+Take photo	Ta foto
+Tap during wind-up to cancel. Hold Attack to follow up; release to stop.	Tryck under vind-up för att avbryta. Håll attack för att följa upp; frigöra för att stoppa.
+Tap just before impact to parry, with or without holding Block.	Tryck strax före påverkan på parry, med eller utan att hålla Block.
+Target angles for standard JKA ground and air acceleration.	Målvinklar för standard JKA mark och luftacceleration.
+Target names	Målnamn
+Team / tag	Team / tagga
+Team Free For All	Team gratis för alla
+Team appearance	Team utseende
+Team chat only	Team chat bara
+Team color lightsabers	Team Color Lightsabers
+Team color skins	Team färg skins
+Team skin: Blue	Team skin: Blå
+Teams	Team
+Text color	Textfärg
+Text language	Textspråk
+Texture compression	Texture komprimering
+Texture depth	Texturdjup
+Texture detail	Texturdetaljer
+Texture intensity	Texturintensitet
+That key is already assigned. Choose another.	Den nyckeln är redan tilldelad. Välj en annan.
+The connected mod supplies this HUD.	Den anslutna mod levererar denna HUD.
+The original style keeps its original combat behavior.	Den ursprungliga stilen håller sitt ursprungliga stridsbeteende.
+The previous display recovery has not been saved yet.	Den tidigare visningsåterställningen har inte sparats ännu.
+The ranked server directory is not connected yet.	Den rankade serverkatalogen är inte ansluten ännu.
+The ranking service is not connected.	Rankingtjänsten är inte ansluten.
+The ready room opens when you connect to a tournament.	Det färdiga rummet öppnas när du ansluter till en turnering.
+The selected model files are no longer available.	De valda modellfilerna är inte längre tillgängliga.
+The server checks that the map is installed and supports the current mode.	Servern kontrollerar att kartan är installerad och stöder aktuellt läge.
+Themes	Teman
+Themes: 	Teman:
+Thermal detonator	Termisk detonator
+These are the complete match rules. Starting applies this draft, loads the selected map and adds the chosen bots.	Det här är de fullständiga matchreglerna. Början tillämpar detta utkast, laddar den valda kartan och lägger till de valda botsna.
+Third person	Tredje person
+Third-person framing	Tredjepersons inramning
+This character selection is unavailable.	Detta karaktärsval är otillgängligt.
+This command is too long for the text editor; it is preserved. Use change-key or clear.	Detta kommando är för länge för textredigeraren; det bevaras. Använd förändringsnyckel eller klart.
+This ends your current life.	Detta slutar ditt nuvarande liv.
+This is your chat color.	Detta är din chatt färg.
+This model does not support a mirrored preview	Denna modell stöder inte en speglad förhandsvisning
+This restarts the game client.	Detta startar om spelklienten.
+This slot has no key to swap. Choose Replace or Cancel.	Denna slot har ingen nyckel att byta. Välj Byta eller Avbryta.
+Three styles saved. Use your normal style-switch control to cycle them.	Tre stilar sparade. Använd din normala stil-switch kontroll för att cykla dem.
+Three ways to compete	Tre sätt att konkurrera
+Tilt the camera up or down.	Slå kameran upp eller ner.
+Time Limit:	Tidsgräns:
+Time Nudge	Tid Nudge
+Time limit	Tidsgräns
+Time remaining	Tid kvar
+Timing and downloads	Timing och nedladdningar
+Toggle camera view	Växla kameravy
+Toggle console	Växla konsol
+Toggle existing match recording	Växla befintlig matchinspelning
+Toggle supported first/third-person view	Toggle stödde första/tredjepersonsvy
+Toggle the chat panel and recent messages	Växla chattpanelen och de senaste meddelandena
+Top right	Top höger
+Tournament	Turnering
+Tournament bracket	Turneringsfäste
+Tournament lobby	Turneringslobbyn
+Tournament rules did not replace the previous description	Turneringsreglerna ersatte inte tidigare beskrivning
+Tournament rules did not scroll	Turneringsreglerna rullade inte
+Tournament rules headings did not load as separate lines	Turneringsreglerna laddades inte som separata linjer
+Tournament status	Turneringsstatus
+Translate into	Översätt till
+Translate received public, team and private chat offline.	Translate fick offentlig, lag och privat chatt offline.
+Translating - offline	Översättning - offline
+Translation	Översättning
+Translation - %s	Översättning - %s
+Translator unavailable; showing original chat	Översättare otillgänglig; visar originalchatt
+Triangle	Triangeln
+Trilinear	Trilinar
+Trip mine	Trip min
+Turn left	Turn vänster
+Turn right	Sväng höger
+Turn the camera around the player.	Vänd kameran runt spelaren.
+Turn-speed modifier	Turn-speed modifierare
+Turn-speed modifier while walk/run is held	Vridhastighetsmodifierare medan promenad / kör hålls
+Turning with bound left / right keys.	Turning med bundna vänster/högernycklar.
+Two precise swings; vulnerable recovery.	Två exakta svängningar; sårbar återhämtning.
+Type directly or use the controller keyboard. Enter confirms; Esc cancels this field.	Skriv direkt eller använd kontrolltangentbordet. Ange bekräftar; Esc avbryter detta fält.
+Type:	Typ:
+Ukrainian	Ukrainska
+Unavailable in this client or server.	Otillgänglig i denna klient eller server.
+Unavailable on this server	Otillgänglig på denna server
+Uncategorized	Okategoriserad
+Universal translator	Universalöversättare
+Universe: 	Universum:
+Unknown Setup operation	Okänd Setup-operation
+Unknown quality preset	Okänd kvalitet förinställd
+Unknown setting	Okänd inställning
+Unlimited	Obegränsad
+Unlock Teams	Lås upp team
+Unready	Olästa
+Unsaved changes	Osparade förändringar
+Unsupported Controls operation	Ostödda kontroller drift
+Unsupported value for 	Ogrundat värde för
+Up	Upp
+Use 	Användning
+Use / interact	Använd / interagera
+Use 1 to 40 letters, numbers, underscores or hyphens.	Använd 1 till 40 bokstäver, siffror, understruktioner eller hyphens.
+Use Absorb when available	Använd Absorb när det är tillgängligt
+Use FOV 20-120, tilt -45 to 45, speed 20-800.	Använd FOV 20-120, tilt -45 till 45, hastighet 20-800.
+Use Heal when available	Använd läkning när tillgänglig
+Use Mind Trick when available	Använd Mind Trick när det är tillgängligt
+Use Protect when available	Använd Skydda när det är tillgängligt
+Use Pull when available	Använd Pull när det är tillgängligt
+Use Push when available	Använd Push när det är tillgängligt
+Use Rage when available	Använd Rage när tillgängligt
+Use Sense when available	Använd Sense när tillgängligt
+Use Speed when available	Använd hastighet när tillgängligt
+Use a new personal config name (letters, numbers, spaces, _ or -).	Använd ett nytt personligt konfigurationsnamn (brev, nummer, utrymmen, _ eller -).
+Use analog axes on the legacy path.	Använd analoga axlar på arvsvägen.
+Use inventory item	Använd Inventory Item
+Use selected Force power	Använd vald kraft
+Use team Energize when available	Använd team Energize när tillgängligt
+Use team Heal when available	Använd team Heal när tillgängligt
+Use team blade colors. Off shows chosen colors.	Använd team blad färger. Off visar valda färger.
+Use team skins when available. Off shows chosen outfits.	Använd lag skins när det är tillgängligt. Off visar valda outfits.
+Use text without quotes, backslashes, semicolons or control characters.	Använd text utan citat, backslashes, semicolons eller kontrollkaraktärer.
+Use the selected available Force power	Använd den valda tillgängliga Force Power
+Use the selected inventory item	Använd det valda lager objektet
+Use this value	Använd detta värde
+Use turn speed 0-10000 and accel 0-100.	Använd svänghastighet 0-10000 och accel 0-100.
+Used for Custom resolution.	Används för anpassad resolution.
+Using %s: %s	Använda %s: : : :: %s
+VOTING	Att rösta
+Value outside the supported edit range.	Värde utanför det stödda redigeringsområdet.
+Vehicle lead indicator	Fordonsledindikator
+Vertex lighting	Vertex belysning
+Vertical look sensitivity	Vertikal look känslighet
+Vertical look speed	Vertikal look hastighet
+Vertical mouse scale	Vertikal musskala
+Vertical mouse scale; negative means inverted	Vertikal musskala; negativa medel inverterade
+Vertical sensitivity	Vertikal känslighet
+Vertical sway	Vertikal Sway
+Very high	Mycket hög
+View	Visa vy
+View pitch in degrees and a level marker.	Visa pitch i grader och en nivå markör.
+Visual effects	Visuella effekter
+Voice commands	Röstkommandon
+Voice language	Röstspråk
+Voice volume	Röstvolym
+Volume	Volymvolym
+Vote 	Röst
+Vote / Call Vote	Rösta / Röströst
+Vote to add a role supported by the current game type.	Rösta för att lägga till en roll som stöds av den aktuella speltypen.
+Vote to add this role. TFFA teams must be unlocked.	Rösta för att lägga till denna roll. TFFA-team måste låsas upp.
+Vote to remove a player or bot.	Rösta för att ta bort en spelare eller bot.
+Vulkan initialization entry point unavailable	Vulkan initialisering ingångspunkt otillgänglig
+WEAPONS	Vänner
+Waiting for the server's player list...	Väntar på serverns spelarlista...
+Wall marks	Väggmärken
+Warm-up	Varm-up
+Warmup On	Warmup på
+Weapon FOV	Vapen FOV
+Weapon preference saved; becomes active with Custom weapon rules.	Vapenpreferens sparas; blir aktiv med anpassade vapenregler.
+Weapon's own ready pose overrides this preview in play.	Vapens egen redo pose åsidosätter denna förhandsvisning i spel.
+Weapon:	Vapen:
+Weapons	Vapen
+Weapons: restricted	Vapen: begränsade
+Weapons: unrestricted	Vapen: obegränsad
+Weightier attacks; less wind-up than Red.	Viktigare attacker, mindre vind-up än Red.
+Wheel activation: Hold	Hjälteaktivering: Håll
+Wheel activation: Toggle	Hjälteaktivering: Toggle
+White	Vitvitt vit
+White core: Off	Vit kärna: Av
+White core: On	Vit kärna: On
+Whole number, 0 to 999. Zero means unlimited. Applies after passing; may end the round.	Hela numret, 0 till 999. Zero betyder obegränsat. Gäller efter att ha passerat; kan avsluta rundan.
+YOU	DU ÄR DU
+Yellow	Gul
+You can return to it from the pause menu during the event.	Du kan återvända till den från pausmenyn under evenemanget.
+Your character	Din karaktär
+Your preferred reading language. Requires the matching offline packs.	Dina föredragna lässpråk. Kräver matchande offline-paket.
+Your saved base color for public, team and private messages.	Din sparade basfärg för offentliga, team och privata meddelanden.
+Your selection is remembered while using dual sabers or a staff.	Ditt val kommer ihåg när du använder dubbla saber eller en personal.
+Your server chooses the combat rules.	Din server väljer stridsreglerna.
+Your server may deduct a point.	Din server kan dra av en punkt.
+Zero disables acceleration.	Zero inaktiverar acceleration.
+Zero disables this component of view swaying.	Zero inaktiverar denna komponent i visningssvängning.
+Zero removes the client frame-rate limit.	Zero tar bort klientens ramränta.
+Zero uses your field of view.	Zero använder ditt synfält.
+[ ] Disabled	[] Inaktiverad
+[ ] Keep existing bots	[ ] Håll befintliga bots
+[X] Allowed	[X] Tillåten
+[X] Available	[X] Tillgänglig
+[X] Replace bots only	[X] Ersätt bots endast
+\\translator	\\översättare
+^7Akaza: ^2I'll be there soon.	^7Akaza: ^2Jag kommer att vara där snart.
+^7Akaza: ^2Ready when you are.	^7Akaza: ^2Ready när du är.
+^7Hisoka: ^2Meet by the stairs.	^7Hisoka: ^2Meet av trappan.
+^7Hisoka: ^2See you there.	^7Hisoka: ^2Se dig där.
+^7Sousuke Aizen: ^2Just passing through.	^7Sousuke Aizen: ^2Bara passerar igenom.
+^7You: ^	^7Du: ^
+a whole number from 	ett helt nummer från
+animation instance missing	animation instans saknas
+applied.	tillämpad.
+border lights ignore motion preference	gränsljus ignorerar rörelsepreferens
+browser refresh changed the host menu	Webbläsare uppdaterade värdmenyn
+browser refresh collision fixture missing	Webbläsare uppdatera kollision fixtur saknas
+browser refresh did not reset its list	Webbläsare uppdaterade inte sin lista
+cannot drag back to top	Inte dra tillbaka till toppen
+cannot drag to bottom outside track	Inte dra till botten utanför spåret
+cg_thirdPerson !	cg_thirdPerson!
+click target missing	Klicka på mål saknas
+configured (never included in presets)	Konfigurerad (ingen ingår i förinställningar)
+controller menu missing	Controller meny saknas
+dirty state	Smutsig stat
+english=English|francais=French|deutsch=German|espanol=Spanish	English=English|francais=French|deutsch=German|espanol=Spanish
+english=English|french=French|german=German|spanish=Spanish	Engelska = Engelska |franska = franska | tyska = tyska | spanska = spanska
+exec st_music ;	exec st_music;
+expected %s got %s	förväntat förväntat %s Fick %s
+favorite selection missing	Favoritval saknas
+favorite state	favoritstatus
+fixture has no overflow	fixturen har inget överflöd
+fixture requires private Favorites view	fixtur kräver privata favoriter vy
+force-rank	Kraftrank
+game/st_stance_assets.h	Spel/st_stance_assets.h
+game/st_stance_runtime.h	Spel/st_stance_runtime.h
+ghost off	Spöket utanför
+ghost on	Spöket på
+hover does not light native button	Hover är inte lätt inbyggd knapp
+keeps dragging after mouse release	fortsätter att dra efter mus frisläppande
+keyboard menu missing	Tangentbordsmenyn saknas
+kyle/default	kyla/default
+layout context	layout kontext
+legacy action missing	Äktenskapsåtgärd saknas
+levelshots/%s	nivåer/%s
+live value mismatch	Live value mismatch
+local browser reply was not displayed	lokalt webbläsarsvar visades inte
+main-menu alias missing	Huvudmenyn alias saknas
+maps/	Kartor/
+menu destination	meny destination
+metadata display name mismatch	metadata visar namn mismatch
+missing Speed rank picker	Saknar Speed rank picker
+missing selection	saknas urval
+missing server list	Saknar server lista
+missing target %s	saknas mål %s
+motion state mismatch	Moion State mismatch
+musicvolume +5	musikvolym +5
+musicvolume -5	musikvolym -5
+native Force rank purchase changed	Infödda Force rank köp förändrats
+native Jedi role selector missing	infödda Jedi roll väljare saknas
+native Jedi role transition failed	infödda Jedi roll övergång misslyckades
+native destination mismatch	Infödd destination mismatch
+native scrollbar did not drag	Infödda scrollbar drack inte
+native target missing	Infödda mål saknas
+not enough server fixtures	Inte tillräckligt med server fixturer
+open server	Öppen server
+or propose a change to this server.	Eller föreslå en förändring till denna server.
+ordinary Apply changed Jedi role	Vanliga Apply ändrade Jedi roll
+pending model mismatch	I väntan på modell mismatch
+play sound/interface/button1 ; uiScript setForce %s ; uiScript closeingame ;	spela ljud/gränssnitt/button1; uiScript setForce %s; uiScript closeingame;
+players/_humanoid/	spelare/_humanoid/
+preview unavailable	Förhandsvisning otillgänglig
+rd-vanilla	RD-vanilla
+rd-vulkan	RD-vulkan
+refilter-host	Refilter-host
+result count	Resultaträkning
+scanning creates one cvar per model	Scanning skapar en cvar per modell
+scrolling changed active model	Bläddra ändrad aktiv modell
+st-controls-save.tmp	St-controls-save.tmp
+st_matchLive_bot%d_present	st_matchLive_bot%dFöreträdande
+st_matchLive_bot%d_unresolved	st_matchLive_bot%dOlöst
+st_match_apply later	st_match_apply senare
+st_match_apply now	st_match_apply Nu nu nu
+st_match_apply roster	st_match_apply Roster
+st_match_set st_weaponsActive 	st_match_set st_weaponsActive
+st_match_text hostname "	st_match_text Värdnamn "
+st_match_text map "	st_match_text Karta över "
+st_match_text password "	st_match_text Lösenord "
+st_music/ui/record	st_music/ui/Record
+staged name	Styrt namn
+stale preview survived failed load	Förhandsgranskning överlevde misslyckad last
+stock fallback mistaken for custom voice	stock fallback misstas för anpassad röst
+stock portrait fixture missing	Porträtt fixtur saknas
+sys/sys_public.h	Sys/sys_public.h
+tffaSlot3	TffaSlot3
+theme did not paint %s	Temat målade inte %s
+thumb grab jumps	Thumb grab hoppar
+tournament bracket	Turneringsfäste
+tournament status	Turneringsstatus
+track click does not scroll	Trailer Click Scroll
+unexpected connection state	oväntat anslutningstillstånd
+unexpected cosmetic layout	oväntad kosmetisk layout
+unknown QA operation	Okänd QA-operation
+unknown scrollbar fixture	Okänd scrollbar fixtur
+value%d	värdet%d
+virtual keyboard state	virtuellt tangentbord tillstånd
+wait; wait	Vänta; vänta; vänta; vänta;
+wait; wait; map 	Vänta; vänta; karta
+weapon 1	Vapen 1
+weapon 10	Vapen 10
+weapon 11	Vapen 11
+weapon 12	Vapen 12
+weapon 2	Vapen 2
+weapon 3	Vapen 3
+weapon 4	Vapen 4
+weapon 5	Vapen 5
+weapon 6	Vapen 6
+weapon 7	Vapen 7
+weapon 8	Vapen 8
+weapon 9	Vapen 9

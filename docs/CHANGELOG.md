@@ -1,5 +1,12 @@
 # Saber Trials changelog
 
+## Beta 1.15 · November 28, 2026
+
+- Type in Polish, Dutch, Swedish or Finnish from the on-screen keyboard. Select the language button to switch mid-message or choose **Auto** to follow the menu language. The layout is remembered across player names, public chat, team chat, private messages and the console.
+- Choose any of the four languages in the menus and offline chat translator. Existing Polish chat support carries over. New Dutch, Swedish and Finnish models translate in both directions through English. [Language settings](Universal-Translator.md).
+- Windows and Linux hosts preserve accented letters in player names, including **Łukasz**, **Loïs**, **Åsa** and **Väinö**.
+- Returning 1.11 testers can apply the 25.47 MB Windows Fix. Full includes every chat model. Lite and updated installations can add individual packs. [Update instructions](Windows-ZIP-Updates.md).
+
 ## November 28, 2026
 
 - Open the tournament lobby from Play or the pause menu to register, check

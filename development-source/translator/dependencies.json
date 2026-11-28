@@ -511,6 +511,66 @@
       "license": "OFL-1.1",
       "bytes": 4301,
       "sha256": "6a73f9541c2de74158c0e7cf6b0a58ef774f5a780bf191f2d7ec9cc53efe2bf2"
+    },
+    {
+      "file": "translate-nl_en-1_8.argosmodel",
+      "url": "https://argos-net.com/v1/translate-nl_en-1_8.argosmodel",
+      "kind": "model",
+      "pair": "nl-en",
+      "package_version": "1.8",
+      "bytes": 69944805,
+      "sha256": "f49ac90c5812e0cb86a2858f4cfa61accec8709612728e6f805f0771c9a91e0e",
+      "license": "CC-BY-4.0 (model README)"
+    },
+    {
+      "file": "translate-en_nl-1_8.argosmodel",
+      "url": "https://argos-net.com/v1/translate-en_nl-1_8.argosmodel",
+      "kind": "model",
+      "pair": "en-nl",
+      "package_version": "1.8",
+      "bytes": 71504559,
+      "sha256": "91406f040619fb519e16af9c304709e9f3195297e626eec6924d62c7c981a33b",
+      "license": "CC-BY-4.0 (model README)"
+    },
+    {
+      "file": "translate-en_fi-1_9.argosmodel",
+      "url": "https://argos-net.com/v1/translate-en_fi-1_9.argosmodel",
+      "kind": "model",
+      "pair": "en-fi",
+      "package_version": "1.9",
+      "bytes": 69132412,
+      "sha256": "172c32485b89233983d1bd4d9e73fc22924ec0cb59bae4c97e299fdd4f083e0e",
+      "license": "CC-BY-4.0 (model README)"
+    },
+    {
+      "file": "translate-en_sv-1_5.argosmodel",
+      "url": "https://argos-net.com/v1/translate-en_sv-1_5.argosmodel",
+      "kind": "model",
+      "pair": "en-sv",
+      "package_version": "1.5",
+      "bytes": 107585048,
+      "sha256": "d697224b443d212a04d24eb2ea0b615cb663eb24d4d21b70979673507b4d1e49",
+      "license": "Argos Translate model; see bundled README.md for training data credits"
+    },
+    {
+      "file": "translate-fi_en-1_9.argosmodel",
+      "url": "https://argos-net.com/v1/translate-fi_en-1_9.argosmodel",
+      "kind": "model",
+      "pair": "fi-en",
+      "package_version": "1.9",
+      "bytes": 69019776,
+      "sha256": "7be1ad3a02c160ac1a2a33697b59a20ae49cbfe92f4cb34fd6185841a7bd00fe",
+      "license": "CC-BY-4.0 (model README)"
+    },
+    {
+      "file": "translate-sv_en-1_5.argosmodel",
+      "url": "https://argos-net.com/v1/translate-sv_en-1_5.argosmodel",
+      "kind": "model",
+      "pair": "sv-en",
+      "package_version": "1.5",
+      "bytes": 94928329,
+      "sha256": "b4afa5e9ad1834e80bf3f87c74f497bab118d358dbf174320d3e5acdfcdae2f8",
+      "license": "Argos Translate model; see bundled README.md for training data credits"
     }
   ],
   "index_sha256": "a65ae909a97ddc89a01cbf0596932dc6415df9815a11d85fe8240b367926b7b0"

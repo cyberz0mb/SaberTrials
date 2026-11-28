@@ -4,6 +4,7 @@
 #include <unordered_map>
 #include <vector>
 #include "qcommon/st_utf8.h"
+#include "qcommon/st_translation_api.h"
 
 static constexpr const char *stMenuLanguageCvar = "st_menuLanguage";
 static bool stMenuLanguageRaw;
@@ -20,7 +21,7 @@ static const std::unordered_map<std::string, std::string>& STML_Catalog() {
 		return catalog;
 	active = language;
 	catalog.clear();
-	if (language < 2 || language > 17)
+	if (language < 2 || language > ST_TRANSLATION_LANGUAGES)
 		return catalog;
 
 	int size = 0;

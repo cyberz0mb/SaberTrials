@@ -121,3 +121,5 @@ Saber Trials is an unofficial community modification and is not affiliated
 with or endorsed by Lucasfilm, Disney, Activision, Raven Software, or id
 Software. Star Wars and related names and marks belong to their respective
 owners.
+
+Offline chat models for Dutch, Swedish and Finnish come from the Argos Open Tech package index (https://github.com/argosopentech/argospm-index). The six package versions, upstream URLs, hashes and per-package license notes are recorded in development-source/translator/dependencies.json. Runtime packs retain the upstream README and training-data credits.

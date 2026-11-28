@@ -6,7 +6,7 @@ import json
 SOURCE = Path(__file__).resolve().parent
 LANGUAGE_NAMES = ('English', 'Español', 'Русский', '日本語', '简体中文', '繁體中文', 'العربية',
                   'Deutsch', 'Français', 'Italiano', 'Português', 'Português (Brasil)',
-                  '한국어', 'हिन्दी', 'Polski', 'Türkçe', 'Українська')
+                  '한국어', 'हिन्दी', 'Polski', 'Türkçe', 'Українська', 'Nederlands', 'Svenska', 'Suomi')
 
 
 def edit(path, old, new, count=1):
@@ -31,7 +31,7 @@ def apply(engine, frontend):
         # Append so the existing camera and preset indices keep their meanings.
         choices = '|'.join(f'{index}={label}' for index,label in enumerate(LANGUAGE_NAMES,1))
         entry = (' {"st_menuLanguage","Menu language","Language","Changes the language of menus.",'
-                 +quoted(choices)+',"1",2,2,0,0,CVAR_ARCHIVE | CVAR_NORESTART,1,17},\n')
+                 +quoted(choices)+',"1",2,2,0,0,CVAR_ARCHIVE | CVAR_NORESTART,1,'+str(len(LANGUAGE_NAMES))+'},\n')
         edit(tree/'codemp/ui/st_setup_catalog.h','};\nstatic const int SS_COUNT=',entry+'};\nstatic const int SS_COUNT=')
 
     client = engine/'codemp/client'

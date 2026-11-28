@@ -1,9 +1,9 @@
 # Windows beta update
 
 **Already have Windows beta 1.11?** Download **SaberTrials-Windows-Fix.zip** to
-update directly to **1.14**. The same ZIP works for Full and Lite.
+update directly to **1.15**. The same ZIP works for Full and Lite.
 
-**First install?** Download the complete **1.14 Full** or **1.14 Lite** ZIP.
+**First install?** Download the complete **1.15 Full** or **1.15 Lite** ZIP.
 
 1. Close Saber Trials and any local Saber Trials dedicated server.
 2. Open your Jedi Academy installation. In Steam, use **Manage → Browse local files**.
@@ -12,7 +12,7 @@ update directly to **1.14**. The same ZIP works for Full and Lite.
 4. Start **SaberTrials.x86_64.exe** in **GameData** and check the version shown on startup.
 
 A Fix includes changed game files and any new bundled files. Your installed
-translation languages carry over. The 1.14 Fix includes the two tournament test
+translation languages carry over. The 25.47 MB Fix includes the new menus and keyboards. For Dutch, Swedish or Finnish offline chat, extract the desired language packs into the same GameData folder. The complete Full edition includes them. The Fix also includes the two tournament test
 presets introduced after 1.11. If you edited either preset, keep your copy when
 Windows asks about those files. The update notes are in `SaberTrials/docs/ZIP-update.txt`.
 

@@ -1,6 +1,7 @@
 """Real offline models plus failure, encoding and protection regressions."""
 import importlib.util
 import json
+import os
 from pathlib import Path
 import socket
 import tempfile
@@ -14,7 +15,7 @@ worker=importlib.util.module_from_spec(spec);spec.loader.exec_module(worker)
 class TranslationTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
-        cls.translator=worker.Translator(ROOT/'dist/translator-02/runtime')
+        cls.translator=worker.Translator(Path(os.environ.get('SABERTRIALS_TRANSLATOR_RUNTIME', ROOT/'dist/translator-02/runtime')))
 
     def test_real_spanish_and_multiple_sentences(self):
         status,text=self.translator.translate('¿Dónde está mi equipo? Necesito ayuda.'.encode('cp1252'),b'',2,1)
@@ -33,7 +34,7 @@ class TranslationTests(unittest.TestCase):
 
     def test_fallback_and_commands(self):
         self.assertEqual(self.translator.translate(b'/connect 127.0.0.1:29070',b'',1,2)[0],'skipped')
-        self.assertEqual(self.translator.translate(b'Waar is mijn team? Ik heb hulp nodig.',b'',0,1)[0],'unsupported')
+        self.assertEqual(self.translator.translate('Hol van a csapatom? Segítségre van szükségem.'.encode(),b'',0,1)[0],'unsupported')
         self.assertEqual(self.translator.translate(b'The red team is near our base.',b'',0,1)[0],'same')
         self.assertEqual(self.translator.translate(b'hello',b'',99,1)[0],'invalid')
         self.assertEqual(self.translator.translate(b'hello\x01world',b'',1,2)[0],'skipped')

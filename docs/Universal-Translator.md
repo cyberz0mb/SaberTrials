@@ -13,7 +13,7 @@ Open **Setup > Interface > Translation**, enable **Universal translator**, choos
 regional variants are misidentified. **Show original message** is on by default.
 Translation itself is off by default and your existing settings are preserved.
 
-There are **15 languages and 17 selectable variants**:
+There are **18 languages and 20 selectable variants**:
 
 | ID | Language | Pack code |
 | --- | --- | --- |
@@ -34,11 +34,14 @@ There are **15 languages and 17 selectable variants**:
 | 15 | Polish | pl |
 | 16 | Turkish | tr |
 | 17 | Ukrainian | uk |
+| 18 | Dutch | nl |
+| 19 | Swedish | sv |
+| 20 | Finnish | fi |
 
 Automatic detection identifies Portuguese generally as `pt` and Chinese as `zh`;
 it does not reliably distinguish Brazil/Portugal or Traditional/Simplified input.
 The chosen output variant uses its corresponding model. Manual source choices
-include all 17 variants. Arabic is general written Arabic; dialect accuracy is
+include all 20 variants. Arabic is general written Arabic; dialect accuracy is
 not guaranteed. Other non-English pairs translate through English, which can
 reduce accuracy. Machine translations need bilingual review, especially slang,
 short messages and mixed languages. Keep the original visible while testing.
@@ -81,10 +84,14 @@ chat automatically. Disconnect and language/on-off changes cancel pending work.
 
 ## Text and compatibility
 
-Chat input now accepts UTF-8, including committed IME text and clipboard paste.
+The on-screen keyboard starts in **Auto**. It follows the menu language for English, Polish, Dutch, Swedish and Finnish, and uses English for other menus. Select the button showing **Auto (language)** or the current language name to cycle layouts. The same choice carries between player names, public chat, team chat, private messages and the console. Switching layouts keeps the text you have already typed. Use **Shift** for capitals and **123 / #** for numbers and symbols. Chat translation has its own reading-language setting.
+
+Menus and keyboards are included in both editions. Full includes all offline chat models. With Lite, extract the Polish, Dutch, Swedish or Finnish language ZIP into GameData for each chat language you need.
+
+Chat input accepts UTF-8, including committed IME text and clipboard paste.
 Cursor movement, backspace, delete, overwrite and the existing 149-byte send
 limit respect complete code points. The byte limit allows fewer CJK characters
-than Latin characters. Menu/console input retains its previous encoding.
+than Latin characters. The on-screen keyboard also supports accented letters in console commands and player names.
 Received Western legacy chat is still decoded. Older clients may show garbled
 characters when receiving non-Western text from a new client.
 
@@ -98,14 +105,13 @@ under **Setup → Interface → Menu language** and select **Apply changes**.
 Real keyboard/IME composition and native-speaker acceptance remain user tests.
 
 The engine, cgame, UI and **both renderers** must be installed together: native
-cgame API **240**, renderer API **12**. The multiplayer network protocol and
-server game module are unchanged. A PK3 alone cannot install this feature.
+cgame API **240**, renderer API **12**. The multiplayer network protocol stays compatible. The 1.15 host update preserves accented Latin player names at character boundaries. A PK3 alone cannot install this feature.
 This packaging requires Windows 10 or later; Linux/macOS helpers are not built.
 
 ## Model packs and storage
 
-The full local installation contains 32 directed English model pairs, fonts and
-the isolated helper, about **3.93 GB / 3.66 GiB** in total. Files live beside the
+The full local installation contains 38 directed English translation models, fonts and
+the isolated helper, about **4.52 GB / 4.21 GiB** in total. Files live beside the
 executable in `client/translator`, under `models`, `fonts`, `terms` and
 `Lib/site-packages`, with `worker.py`, `languages.json` and the Python runtime.
 Only two translation models are cached in memory at once.
@@ -202,6 +208,14 @@ expected bytes, not universal model quality or permission to redistribute.
 No public model bundle is published by these local preparation/install steps.
 
 ## Building and verification
+
+For the beta 1.15 client, after assembling the compatibility engine, frontend
+and gameplay sources, run `development-source/menu-language/extend_client.py ENGINE FRONTEND CGAME`
+with Python. It installs the shared layouts, updates the language lists and embeds
+the four menu catalogs in the Windows client. Run
+`development-source/menu-language/player_name.py GAME_SOURCE` before rebuilding
+the Windows and Linux host gameplay modules. Run the `keyboard_layouts` and
+`unicode_chat_contracts` tests in `tests/translator` to check editing and rendering.
 
 Editable integration lives in `development-source/translator`. The Setup catalog
 is generated with `tools/Generate-Setup-Catalog.py`. Local preparation verifies

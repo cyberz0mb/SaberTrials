@@ -18,7 +18,7 @@ The current source also includes [Match Rules](docs/Match-Rules.md),
 and [client compatibility options](docs/Client-Compatibility.md). On Windows,
 [Vulkan](docs/Vulkan-Renderer.md) is available alongside Vanilla and Rend2.
 
-Windows testers on beta 1.11 can update directly to 1.14 with the [Fix ZIP](docs/Windows-ZIP-Updates.md). New testers should download Full or Lite 1.14.
+Windows beta 1.15 adds Polish, Dutch, Swedish and Finnish keyboard layouts. Both Full and Lite include the menus and keyboards. Full includes all offline chat models. Players on beta 1.11 can apply the 25.47 MB Windows Fix directly. [Update instructions](docs/Windows-ZIP-Updates.md) · [Language settings](docs/Universal-Translator.md).
 
 Use a legal Jedi Academy installation and keep Saber Trials separate from
 `GameData/base`. Online play requires compatible client and server builds.

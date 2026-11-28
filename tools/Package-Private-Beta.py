@@ -77,6 +77,7 @@ def package(platform, linux, vc_crt=None):
                 continue
             add_mod(path)
     if client_only:
+        add_mod(ROOT/"docs/Universal-Translator.md")
         add_mod(ROOT/"docs/Tournament-Playtest.md")
         add_mod(ROOT/"docs/Player-Ignore.md")
         for config in ("tournament-test.cfg", "tournament-teams-test.cfg"):

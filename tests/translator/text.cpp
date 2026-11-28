@@ -35,7 +35,8 @@ int wmain(int argc,wchar_t **argv) {
     stchat::Rasterizer raster;assert(raster.init(argv[1]));
     const char *texts[]={u8"^2日本語のチーム",u8"^5我的队伍在哪里？",u8"^6我的隊伍在哪裡？",
         u8"^7우리 팀은 어디에 있나요?",u8"^5[AR] Tester: أين فريقي؟ أحتاج إلى المساعدة.",
-        u8"^2मेरी टीम कहाँ है? मुझे मदद चाहिए।",u8"^5Где моя команда? Українська",u8"^2Gdzie jest mój zespół?"};
+        u8"^2मेरी टीम कहाँ है? मुझे मदद चाहिए।",u8"^5Где моя команда? Українська",u8"^2Gdzie jest mój zespół?",
+        u8"Zażółć gęślą jaźń",u8"Loïs, ideeën en één team",u8"Åsa är på Öland",u8"Väinö, yö, šakki ja ž"};
     for(auto text:texts){
         stchat::Bitmap bitmap;assert(raster.render(text,400,22,36,0,bitmap));
         assert(bitmap.lines>0 && bitmap.lines<=16 && bitmap.rgba.size()==bitmap.width*bitmap.height*4);

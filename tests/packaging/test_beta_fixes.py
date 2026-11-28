@@ -60,6 +60,30 @@ class BetaFixTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "obsolete"):
             fixes.changed_files({"removed": [1, 2]}, {})
 
+    def test_new_offline_models_use_verified_packs_and_stay_out_of_the_shared_fix(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            release = Path(tmp)
+            self.archives(release, "beta-1.11", "old")
+            previous = {e: [fixes.read_index(release / f"SaberTrials-{e}-beta-1.11.zip")[2]]
+                        for e in fixes.EDITIONS}
+            self.archives(release, beta_release.VERSION, "new")
+            model = "SaberTrials/client/translator/models/en-nl/model/model.bin"
+            with ZipFile(release / beta_release.FULL, "a") as archive:
+                archive.writestr(model, b"Dutch model")
+            current = fixes.current_indexes(release / beta_release.FULL, release / beta_release.LITE)
+            folder = release / "Language-Packs"
+            folder.mkdir()
+            pack = folder / "SaberTrials-Language-Dutch.zip"
+            with ZipFile(pack, "w") as archive:
+                archive.writestr(model, b"wrong contents")
+            with self.assertRaisesRegex(ValueError, "Invalid optional model delivery"):
+                fixes.make_fix(release, current, previous)
+            with ZipFile(pack, "w") as archive:
+                archive.writestr(model, b"Dutch model")
+            with ZipFile(fixes.make_fix(release, current, previous)) as archive:
+                self.assertNotIn(model, archive.namelist())
+                self.assertIn(pack.name, archive.read(fixes.NOTE).decode())
+
     def test_custom_configuration_and_full_only_changes_require_separate_handling(self):
         previous = {ed: [{"host.cfg": [1, 1]}] for ed in fixes.EDITIONS}
         current = {ed: {"host.cfg": [2, 2]} for ed in fixes.EDITIONS}

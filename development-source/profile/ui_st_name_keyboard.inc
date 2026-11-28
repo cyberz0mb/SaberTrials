@@ -1,7 +1,9 @@
 /* Profile name entry using the same pointer as the native menus. */
+#include "qcommon/st_keyboard_layout.h"
+#include "qcommon/st_utf8.h"
 struct SPNameKey {float x,y,w; int action; const char* label;};
 static bool SPUI_Over(float x,float y,float w,float h);
-enum {SPN_Shift=256,SPN_Symbols,SPN_Left,SPN_Right,SPN_Erase,SPN_Clear,SPN_Cancel,SPN_Done,SPN_Color=512};
+enum {SPN_Shift=0x110000,SPN_Symbols,SPN_Left,SPN_Right,SPN_Erase,SPN_Clear,SPN_Cancel,SPN_Done,SPN_Language,SPN_Color};
 static struct {
  bool active,shift,symbols,focusNavigation;
  size_t cursor;
@@ -19,10 +21,11 @@ static void SPN_Close(bool keep){
 }
 
 static void SPN_Open(){
+ trap->Cvar_Register(NULL,"st_keyboardLanguage","0",CVAR_ARCHIVE);
  spName={};
  spName.active=true;
  spName.focusNavigation=true;
- spName.focus=10;
+ spName.focus=stkeys::columns;
  spName.text=spui.draft.value.name;
  spName.cursor=spName.text.size();
  spui.field=0;
@@ -33,6 +36,13 @@ static void SPN_Open(){
 
 static bool SPN_ColorToken(size_t at){
  return at+1<spName.text.size()&&Q_IsColorString(spName.text.c_str()+at);
+}
+static int SPN_Layout(){
+ return stkeys::index((int)trap->Cvar_VariableValue("st_keyboardLanguage"),(int)trap->Cvar_VariableValue("st_menuLanguage"));
+}
+static size_t SPN_Previous(){
+ if(spName.cursor>=2&&SPN_ColorToken(spName.cursor-2))return spName.cursor-2;
+ return ST_UTF8Previous(spName.text.c_str(),(int)spName.cursor);
 }
 static bool SPN_HasName(){
  for(size_t i=0;i<spName.text.size();++i){
@@ -64,13 +74,16 @@ static void SPN_Action(int action){
  if(action==SPN_Cancel){SPN_Close(false);return;}
  if(action==SPN_Clear){spName.text.clear();spName.cursor=0;return;}
  if(action==SPN_Shift){spName.shift=!spName.shift;return;}
+ if(action==SPN_Language){trap->Cvar_Set("st_keyboardLanguage",va("%d",stkeys::next((int)trap->Cvar_VariableValue("st_keyboardLanguage"))));spName.symbols=false;return;}
  if(action==SPN_Symbols){spName.symbols=!spName.symbols;return;}
- if(action==SPN_Right){if(spName.cursor<spName.text.size())spName.cursor+=SPN_ColorToken(spName.cursor)?2:1;return;}
- if(action==SPN_Left){if(spName.cursor>0)spName.cursor-=spName.cursor>=2&&SPN_ColorToken(spName.cursor-2)?2:1;return;}
- if(action==SPN_Erase){if(spName.cursor>0){const size_t n=spName.cursor>=2&&SPN_ColorToken(spName.cursor-2)?2:1;spName.cursor-=n;spName.text.erase(spName.cursor,n);}return;}
+ if(action==SPN_Right){if(spName.cursor<spName.text.size()){int n;ST_UTF8Read(spName.text.c_str()+spName.cursor,&n);spName.cursor+=SPN_ColorToken(spName.cursor)?2:n;}return;}
+ if(action==SPN_Left){spName.cursor=SPN_Previous();return;}
+ if(action==SPN_Erase){const size_t prev=SPN_Previous();spName.text.erase(prev,spName.cursor-prev);spName.cursor=prev;return;}
  // These separators are rejected by the network user-info format.
- if(action<32||action>126||action=='\\'||action=='"'||action==';'||spName.text.size()>=MAX_NETNAME-1)return;
- spName.text.insert(spName.cursor++,1,char(action));
+ if(action<32||(action>=127&&action<160)||action=='\\'||action=='"'||action==';')return;
+ char bytes[4];const int n=ST_UTF8Write(action,bytes);
+ if(!n||spName.text.size()+n>MAX_NETNAME-1)return;
+ spName.text.insert(spName.cursor,bytes,n);spName.cursor+=n;
 }
 
 static int SPN_Hover(){
@@ -107,33 +120,33 @@ static void SPN_Draw(){
   const float caret=104+RUI_Width(spName.text.substr(0,spName.cursor).c_str(),.74f);
   if(caret<535)UI_FillRect(caret,145,1,17,scuCyan);
  }
- const char* rows[]= {"1234567890","qwertyuiop","asdfghjkl-","zxcvbnm_.!"};
- const char* symbols[]={"!@#$%^&*()","-_=+[]{}<>" ,"~`|:'?,./%","1234567890"};
  spName.keys.clear();
- for(int row=0;row<4;++row)for(int col=0;col<10;++col){
-  int c=(spName.symbols?symbols[row]:rows[row])[col];
-  if(spName.shift&&!spName.symbols&&c>='a'&&c<='z')c-='a'-'A';
-  spName.keys.push_back({93+46.f*col,182+33.f*row,40,c,nullptr});
+ const int layout=SPN_Layout();
+ for(int i=0;i<stkeys::count;++i){
+  const int c=stkeys::character(layout,i,spName.shift,spName.symbols);
+  spName.keys.push_back({93+41.5f*(i%stkeys::columns),182+33.f*(i/stkeys::columns),38,c,nullptr});
  }
+ static char languageLabel[40];
+ Com_sprintf(languageLabel,sizeof(languageLabel),trap->Cvar_VariableValue("st_keyboardLanguage")?"%s":"Auto (%s)",stkeys::layouts[layout].name);
  const SPNameKey utility[]={
-  {93,315,50,SPN_Shift,"Shift"},{149,315,67,SPN_Symbols,spName.symbols?"Letters":"Symbols"},
+  {93,315,50,SPN_Shift,"Shift"},{149,315,67,SPN_Symbols,spName.symbols?"ABC":"123 / #"},
   {222,315,36,SPN_Left,"<"},{264,315,84,' ',"Space"},{354,315,36,SPN_Right,">"},
   {396,315,81,SPN_Erase,"Backspace"},{483,315,64,SPN_Clear,"Clear"},
-  {93,393,94,SPN_Cancel,"Cancel"},{453,393,94,SPN_Done,"Done"}
+  {93,393,94,SPN_Cancel,"Cancel"},{235,393,150,SPN_Language,languageLabel},{453,393,94,SPN_Done,"Done"}
  };
  for(const auto& key:utility)spName.keys.push_back(key);
  for(int col=0;col<10;++col)spName.keys.push_back({93+46.f*col,352,40,SPN_Color+(col+1)%10,nullptr});
  SCUI_Text(93,342,.45f,"Text color",scuMuted);
- SCUI_Fit(201,400,238,.43f,"Applies from the caret",scuMuted);
  const int focus=spName.focusNavigation?spName.focus:SPN_Hover();
  for(int i=0;i<int(spName.keys.size());++i){
-  const auto& k=spName.keys[i];char letter[]={char(k.action),0};
+  const auto& k=spName.keys[i];char letter[5]={};
+  if(!k.label&&k.action<SPN_Shift)ST_UTF8Write(k.action,letter);
   const bool isColor=k.action>=SPN_Color&&k.action<SPN_Color+10;
   const bool selected=(k.action==SPN_Shift&&spName.shift)||(k.action==SPN_Symbols&&spName.symbols)||
    (isColor&&k.action-SPN_Color==SPN_CurrentColor());
   const bool enabled=k.action!=SPN_Done||SPN_HasName();
   vec4_t color;MSUI_Color(color,selected,i==focus,enabled);
-  RUI_Control(k.x,k.y,k.w,25,k.action<256||isColor?"field":"action",selected,i==focus&&enabled);
+  RUI_Control(k.x,k.y,k.w,25,k.action<SPN_Shift||isColor?"field":"action",selected,i==focus&&enabled);
   if(isColor){
    const int n=k.action-SPN_Color;
    const vec4_t rim={.65f,.78f,.84f,1};
@@ -145,6 +158,7 @@ static void SPN_Draw(){
    RUI_Text(x+RUI_Width("^",.52f),k.y+12,.52f,digit,color);
   }
   else if(k.label)SCUI_Centered(k.x,k.y,k.w,25,.55f,k.label,color);
+  else if(k.action>=128)SCUI_Centered(k.x,k.y,k.w,25,.75f,letter,color);
   else{
    constexpr float scale=.83f;
    const int width=Text_Width(letter,scale,FONT_SMALL2),height=Text_Height(letter,scale,FONT_SMALL2);

@@ -18,6 +18,9 @@ LITE_LANGUAGES = ("en", "ru", "es", "fr", "pt", "pb")
 GAME_GUIDE = """Enable Universal translator under Setup > Interface > Translation, choose
 your reading language, and select Apply changes.
 
+Both editions include all menu languages and the on-screen keyboard layouts.
+Choose Auto on the keyboard to follow the menu language, or select your typing language.
+
 To add another language to Lite, close the game and extract its language ZIP
 into Jedi Academy's GameData folder. Merge the SaberTrials folders when prompted."""
 
@@ -80,16 +83,25 @@ def split(full):
         readme = original_readme.rstrip() + "\n\nLite " + included_text + "\n\n" + GAME_GUIDE + "\n"
         write_zip(source, core, stage / LITE, readme)
         guide = [
-            f"Saber Trials | Windows x64 multiplayer downloads | {beta_release.VERSION}", "",
+            f"Saber Trials | Multiplayer beta downloads | {beta_release.VERSION}", "",
             f"Full ({full.stat().st_size / 1e9:.2f} GB) includes the client and all offline chat language packs.",
             f"Lite ({(stage / LITE).stat().st_size / 1e9:.2f} GB) {included_text}",
             "Both editions require Jedi Academy.",
-            f"Windows installer: run SaberTrials-Windows-{beta_release.VERSION}-Setup.exe and choose Lite or Full.",
             "Manual install: extract one edition's ZIP into GameData.",
             "Double-click SaberTrials.x86_64.exe to play or SaberTrialsDed.x86_64.exe to host.",
             "", GAME_GUIDE, "",
             "Optional language downloads for Lite", "",
         ]
+        linux_host = f"SaberTrials-Linux-Server-x86_64-{beta_release.VERSION}.zip"
+        installer = f"SaberTrials-Windows-{beta_release.VERSION}-Setup.exe"
+        if (output / "Windows-Installers" / installer).is_file():
+            guide.insert(guide.index("Manual install: extract one edition's ZIP into GameData."),
+                         f"Windows installer: run {installer} and choose Lite or Full.")
+        if (output / linux_host).is_file():
+            pos = guide.index(GAME_GUIDE)
+            guide[pos:pos] = [f"Linux server hosts: {linux_host}",
+                              "Follow READ ME FIRST.txt to install and Host-Playtest.md to test Guard and the match modes.",
+                              "Players can join open tournament playtests without a Discord account.", ""]
         for code in sorted(packs.keys() - set(LITE_LANGUAGES), key=labels.get):
             label = labels[code]
             pack = stage / "Language-Packs" / pack_name(label)

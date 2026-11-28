@@ -2,7 +2,7 @@
 const char *STML_MenuCatalog(int language, int *size) {
     *size = 0;
 #ifdef _WIN32
-    if (language < 2 || language > 17)
+    if (language < 2 || language > ST_TRANSLATION_LANGUAGES)
         return nullptr;
     const HMODULE module = GetModuleHandleW(nullptr);
     const HRSRC resource = FindResourceW(module, MAKEINTRESOURCEW(4100 + language), MAKEINTRESOURCEW(10));

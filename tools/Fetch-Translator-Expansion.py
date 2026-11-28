@@ -10,7 +10,7 @@ from zipfile import ZipFile
 ROOT=Path(__file__).resolve().parents[1]
 OUT=ROOT/'dist/translator-02'
 SOURCE=ROOT/'development-source/translator'
-CODES=('en','es','ru','ja','zh','zt','ar','de','fr','it','pt','pb','ko','hi','pl','tr','uk')
+CODES=tuple(row['code'] for row in json.loads((SOURCE/'languages.json').read_text(encoding='utf8')))
 
 
 def get(url):
