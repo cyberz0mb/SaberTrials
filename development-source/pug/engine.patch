@@ -1,0 +1,252 @@
+--- a/codemp/accounts/account.cpp
++++ b/codemp/accounts/account.cpp
+@@ -34,6 +34,9 @@
+  const auto id=j.at("account").get<std::string>(),name=j.at("name").get<std::string>();
+  const auto team=j.at("team").get<std::string>(),tag=j.at("teamName").get<std::string>();
+  if(!Id(id)||!Text(name,63)||!Text(tag,63,true)||team.size()>128||team.find_first_not_of("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789_.:-")!=std::string::npos||(team.empty()!=tag.empty()))return false;
++ view.status="Signed in with Discord.";
++ if(j.contains("format_points") && j["format_points"].is_number_unsigned())
++  view.status="Format points: "+std::to_string(j["format_points"].get<uint64_t>());
+  view.name=name;view.team=tag;view.signedIn=true;return true;
+ }
+ double Expires(const json& j,double now,double maximum){
+@@ -116,7 +119,7 @@
+    if(cancelled_){view_.busy=true;view_.status="Signing out...";due_=now;return;}
+    if(!Profile(j.at("profile"),view_))throw std::runtime_error("profile");
+   }else if(!Profile(j,view_))throw std::runtime_error("profile");
+-  view_.busy=false;view_.status="Signed in with Discord.";due_=now+60;
++  view_.busy=false;due_=now+60;
+  }catch(...){
+   Fail("Invalid account response. Please try again.");
+   if(!saved_.token.empty()){saved_.logout=true;++revision_;due_=now;}
+--- a/codemp/accounts/bridge.h
++++ b/codemp/accounts/bridge.h
+@@ -29,6 +29,8 @@
+     void Tick(double monotonic);
+     ServerWork Next(double wall,double monotonic);
+     void Complete(const ServerWork&,const Response&,double wall,double monotonic);
++    std::string AwardLease(int i) const { return i>=0 && i<64 && slots_[i].phase==Phase::Verified ? slots_[i].lease : std::string(); }
++    const std::string& Credential() const { return credential_; }
+     RankProfile Profile(int slot)const;
+     std::string Challenge(int slot)const;
+     std::string Nonce(int slot)const;
+--- a/codemp/client/cl_account.cpp
++++ b/codemp/client/cl_account.cpp
+@@ -72,7 +72,7 @@
+  // page. Announce state changes once so console users see the final result too.
+  std::string notice=status;
+  if(!storageFailed&&browserError.empty()){
+-  if(view.signedIn)notice="Logged in as "+view.name+".";
++  if(view.signedIn){notice="Logged in as "+view.name+".";if(view.status.find("Format points:")==0)notice+=" "+view.status;}
+   else if(view.status=="Signed out.")notice="Logged out.";
+   else if(saved.logout&&!view.busy)notice="Logged out on this device. Server sign-out will retry.";
+  }
+--- a/codemp/server/sv_account.cpp
++++ b/codemp/server/sv_account.cpp
+@@ -5,6 +5,9 @@
+ #include "server_storage.h"
+ #include "st_staff_types.h"
+ #include <array>
++#include <deque>
++#include <set>
++#include "../accounts/vendor/json.hpp"
+ #include <chrono>
+ #include <cstring>
+ #include <future>
+@@ -19,9 +22,31 @@
+ double Wall(){return std::chrono::duration<double>(std::chrono::system_clock::now().time_since_epoch()).count();}
+ double Mono(){return std::chrono::duration<double>(std::chrono::steady_clock::now().time_since_epoch()).count();}
+ bool Human(int i){return i>=0&&i<sv_maxclients->integer&&i<MAX_CLIENTS&&svs.clients[i].state==CS_ACTIVE&&svs.clients[i].netchan.remoteAddress.type!=NA_BOT;}
++bool formatBound=false;
++std::array<bool,MAX_CLIENTS> resumeGeneration={};
++struct Candidate { int side=-1; std::string lease,account; };
++std::array<Candidate,MAX_CLIENTS> entrants;
++int awardMode=0;
++struct PendingAward { staccount::Job job; double until=0, due=0; };
++std::deque<PendingAward> awards;
++std::future<staccount::Response> sending;
++void PumpAwards(double now){
++ if(sending.valid()){
++  if(sending.wait_for(std::chrono::seconds(0))!=std::future_status::ready)return;
++  int status=0;try{status=sending.get().status;}catch(...){}
++  if(status==200 || (status>=400 && status<500 && status!=429) || now>=awards.front().until){
++   if(status!=200)Com_Printf("Accounts: format points delivery failed (%d)\n",status);
++   awards.pop_front();
++  }else awards.front().due=now+2;
++ }
++ if(awards.empty() || now<awards.front().due)return;
++ auto job=awards.front().job;
++ try{sending=std::async(std::launch::async,[job]{return staccount::Send(job);});}
++ catch(...){if(now>=awards.front().until)awards.pop_front();else awards.front().due=now+2;}
++}
+ bool NeedsBridge(){
+  const int mode=Cvar_VariableIntegerValue("sv_stAntiScript");
+- return GVM_AccountAvailable() || mode==1 || mode==2;
++ return formatBound || GVM_AccountAvailable() || mode==1 || mode==2;
+ }
+ void ClearGame(int i){if(!applied[i].empty()){GVM_AccountClear(i);applied[i].clear();}}
+ bool Ready(){
+@@ -34,6 +59,11 @@
+  for(int i=0;i<MAX_CLIENTS;i++){
+   unsigned char generation[16];std::string current;
+   if(Human(i)&&SV_StaffGeneration(i,generation))current=st::Hex(generation,16);
++  if(resumeGeneration[i] && !generations[i].empty()){
++   if(current.empty() && i<sv_maxclients->integer && svs.clients[i].state>=CS_CONNECTED)continue;
++   if(!current.empty())generations[i]=current;
++  }
++  resumeGeneration[i]=false;
+   if(current!=generations[i]){
+    ClearGame(i);bridge->Disconnect(i);generations[i]=current;sentChallenge[i].clear();nextOffer[i]=now;
+    if(!current.empty())bridge->Connect(i,current);
+@@ -64,12 +94,55 @@
+  bridge->Tick(Mono());
+  return bridge->Profile(slot).account;
+ }
++void SV_FormatRestart(){
++ for(int i=0;i<MAX_CLIENTS;i++){resumeGeneration[i]=!generations[i].empty();applied[i].clear();}
++}
++void SV_FormatDrop(int i){
++ if(i<0||i>=MAX_CLIENTS)return;
++ entrants[i]={};resumeGeneration[i]=false;
++ if(bridge)bridge->Disconnect(i);
++ ClearGame(i);generations[i].clear();sentChallenge[i].clear();
++}
++void SV_FormatSignal(int op,int mode,int slot,int side){
++ if(op==5){formatBound=mode!=0;return;}
++ if(op==0){entrants={};awardMode=mode;return;}
++ if(op==2){if(slot>=0 && slot<MAX_CLIENTS)entrants[slot]={};return;}
++ if(!bridge || mode!=awardMode || (mode!=1 && mode!=2))return;
++ if(op==1 || op==3){
++  if(slot<0 || slot>=MAX_CLIENTS)return;
++  auto& c=entrants[slot];auto account=SV_VerifiedPlayerAccount(slot);
++  auto lease=bridge->AwardLease(slot);
++  if(op==1 && !account.empty() && !lease.empty()){c.side=side;c.lease=lease;c.account=account;}
++  if(op==3 && (side!=c.side || lease!=c.lease || account!=c.account))c={};
++  return;
++ }
++ if(op!=4)return;
++ awardMode=0;
++ nlohmann::json rows=nlohmann::json::array();
++ std::set<std::string> seen,ambiguous;
++ for(const auto& c:entrants)if(!c.account.empty()&&!seen.insert(c.account).second)ambiguous.insert(c.account);
++ for(int i=0;i<MAX_CLIENTS;i++){
++  const auto& c=entrants[i];
++  if(c.lease.empty() || ambiguous.count(c.account) || (mode==2 && i!=slot && i!=side))continue;
++  rows.push_back({{"lease",c.lease},{"won",mode==2?i==slot:c.side==slot}});
++ }
++ entrants={};
++ if(rows.empty())return;
++ unsigned char id[16];
++ if(!st::Random(id,16) || awards.size()>=64){Com_Printf("Accounts: format points queue unavailable\n");return;}
++ PendingAward item;
++ item.job.method="POST";item.job.path="/v1/server/format-result";item.job.bearer=bridge->Credential();
++ item.job.body=nlohmann::json({{"event",st::Hex(id,16)},{"mode",mode==1?"pug":"ladder"},{"participants",rows}}).dump();
++ item.until=Mono()+55;awards.push_back(item);
++}
+ void SV_AccountReset(){
++ awardMode=0;entrants={};resumeGeneration={};
+  for(int i=0;i<MAX_CLIENTS;i++){ClearGame(i);generations[i].clear();sentChallenge[i].clear();nextOffer[i]=0;}
+  bridge.reset();attempted=false;++epoch; // outstanding workers cannot affect the next map
+ }
+ void SV_AccountFrame(bool (*allowGamePublish)(int)){
+  const double wall=Wall(),now=Mono();
++ PumpAwards(now);
+  // Drain even when the next map has no compatible game extension.
+  for(auto&w:workers)if(w.result.valid()&&w.result.wait_for(std::chrono::seconds(0))==std::future_status::ready){
+   staccount::Response r;try{r=w.result.get();}catch(...){}
+--- a/codemp/server/sv_account.h
++++ b/codemp/server/sv_account.h
+@@ -4,6 +4,9 @@
+ std::string SV_VerifiedPlayerAccount(int slot);
+ void SV_AccountFrame(bool (*allowGamePublish)(int) = nullptr);
+ void SV_AccountReset();
++void SV_FormatSignal(int,int,int,int);
++void SV_FormatRestart();
++void SV_FormatDrop(int slot);
+ bool SV_AccountCommand(int slot);
+ void SV_AccountConsole_f();
+ bool GVM_AccountAvailable();
+--- a/codemp/server/sv_gameapi.cpp
++++ b/codemp/server/sv_gameapi.cpp
+@@ -73,7 +73,7 @@
+ //
+ 
+ void GVM_InitGame( int levelTime, int randomSeed, int restart ) {
+-    SV_AccountReset();
++    if(restart && Cvar_VariableIntegerValue("st_gameFormat")==2) SV_FormatRestart(); else SV_AccountReset();
+     SV_StaffReset();
+ 	if ( gvm->isLegacy ) {
+ 		VM_Call( gvm, GAME_INIT, levelTime, randomSeed, restart );
+@@ -85,7 +85,7 @@
+ }
+ 
+ void GVM_ShutdownGame( int restart ) {
+-    SV_AccountReset();
++    if(restart && Cvar_VariableIntegerValue("st_gameFormat")==2) SV_FormatRestart(); else SV_AccountReset();
+     SV_StaffReset();
+ 	if ( gvm->isLegacy ) {
+ 		VM_Call( gvm, GAME_SHUTDOWN, restart );
+@@ -98,6 +98,7 @@
+ 
+ char *GVM_ClientConnect( int clientNum, qboolean firstTime, qboolean isBot ) {
+     SV_ASReset(clientNum);
++    if(firstTime) SV_FormatDrop(clientNum);
+     SV_StaffConnect(clientNum,isBot!=qfalse);
+ 	if ( gvm->isLegacy )
+ 		return (char *)VM_Call( gvm, GAME_CLIENT_CONNECT, clientNum, firstTime, isBot );
+@@ -126,6 +127,7 @@
+ 
+ void GVM_ClientDisconnect( int clientNum ) {
+     SV_ASReset(clientNum);
++    SV_FormatDrop(clientNum);
+     SV_StaffDisconnect(clientNum);
+ 	if ( gvm->isLegacy ) {
+ 		VM_Call( gvm, GAME_CLIENT_DISCONNECT, clientNum );
+@@ -3202,6 +3204,10 @@
+         GetSaberTrialsStaffAPI_t staffExport=(GetSaberTrialsStaffAPI_t)Sys_LoadFunction(gvm->dllHandle,"GetSaberTrialsStaffAPI");
+         staffAPI=staffExport?staffExport(SV_StaffImports()):NULL;
+         if(!ST_ValidGameAPI(staffAPI))staffAPI=NULL;
++        typedef void (*FormatBind)(void (*)(int,int,int,int));
++        FormatBind formatBind=(FormatBind)Sys_LoadFunction(gvm->dllHandle,"ST_BindFormatAwards");
++        if(formatBind) formatBind(SV_FormatSignal);
++        SV_FormatSignal(5,formatBind!=NULL,0,0);
+         typedef const STEventAccountAPI* (*AccountExport)();
+         AccountExport accountExport=(AccountExport)Sys_LoadFunction(gvm->dllHandle,"GetSaberTrialsEventAccountAPI");
+         accountAPI=accountExport?accountExport():NULL;
+--- a/codemp/server/sv_main.cpp
++++ b/codemp/server/sv_main.cpp
+@@ -418,6 +418,15 @@
+ the simple info query.
+ ================
+ */
++// The browser has two extra game types. The simulation still uses native TFFA/Duel
++// so maps, bots and the existing client protocol use their normal rules.
++static int SV_BrowserGameType(void) {
++    const int format = Cvar_VariableIntegerValue("st_gameFormat");
++    if (sv_gametype->integer == GT_TEAM && format == 1) return 10;
++    if (sv_gametype->integer == GT_DUEL && format == 2) return 11;
++    return sv_gametype->integer;
++}
++
+ void SVC_Status( const netadr_t *from ) {
+ 	char	player[1024];
+ 	char	status[MAX_MSGLEN];
+@@ -440,6 +449,9 @@
+ 		return;
+ 
+ 	Q_strncpyz( infostring, Cvar_InfoString( CVAR_SERVERINFO ), sizeof( infostring ) );
++    if (SV_BrowserGameType() != sv_gametype->integer)
++        Info_SetValueForKey(infostring, "g_gametype", va("%i", SV_BrowserGameType()));
++
+ 
+ 	// echo back the parameter to status. so master servers can use it as a challenge
+ 	// to prevent timed spoofed reply packets that add ghost servers
+@@ -528,7 +540,7 @@
+ 	}
+ 	Info_SetValueForKey( infostring, "sv_maxclients",
+ 		va("%i", sv_maxclients->integer - sv_privateClients->integer ) );
+-	Info_SetValueForKey( infostring, "gametype", va("%i", sv_gametype->integer ) );
++	Info_SetValueForKey( infostring, "gametype", va("%i", SV_BrowserGameType() ) );
+ 	Info_SetValueForKey( infostring, "needpass", va("%i", sv_needpass->integer ) );
+ 	Info_SetValueForKey( infostring, "truejedi", va("%i", Cvar_VariableIntegerValue( "g_jediVmerc" ) ) );
+ 	if ( sv_gametype->integer == GT_DUEL || sv_gametype->integer == GT_POWERDUEL )

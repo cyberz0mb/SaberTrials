@@ -21,7 +21,7 @@ def apply(path, engine=False):
     for function,key in (('ST_LanguageTag','code'),('ST_LanguageLocale','locale')):
         values=[('PT-BR' if r['code']=='pb' else 'ZH-CN' if r['code']=='zh' else 'ZH-TW' if r['code']=='zt' else r['code'].upper())
                 if key=='code' else r[key] for r in languages]
-        header+='static const char *'+function+'(int id){static const char *values[]={'+','.join(json.dumps(v) for v in values)+'};return values[id>=1&&id<=17?id-1:0];}\n'
+        header+='static const char *'+function+'(int id){static const char *values[]={'+','.join(json.dumps(v) for v in values)+'};return values[id>=1&&id<=(int)(sizeof(values)/sizeof(*values))?id-1:0];}\n'
     header+='#endif\n'
     (tree/'qcommon/st_translation_languages.h').write_text(header)
     public=tree/'cgame/cg_public.h'

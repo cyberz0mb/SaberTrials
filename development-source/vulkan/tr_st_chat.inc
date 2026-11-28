@@ -8,7 +8,8 @@ static void ST_ChatResetImages() {
 qhandle_t RE_STChatUpload(int slot, int width, int height, const byte *rgba) {
     if (slot < 0 || slot >= 224 || width < 1 || height < 1 || width > 1024 || height > 1024 || !rgba)
         return 0;
-    R_IssueRenderCommands(qfalse);
+    // The Vulkan backend submits the staged uploads before drawing the frame.
+    // Flushing drawing here ends the render pass while later 3D views are pending.
     image_t *image = stChatImages[slot];
     if (!image) {
         char name[32];
@@ -28,6 +29,10 @@ qhandle_t RE_STChatUpload(int slot, int width, int height, const byte *rgba) {
         vk_bind(image);
         const bool resize = image->width != width || image->height != height;
         if (resize) {
+#ifdef USE_UPLOAD_QUEUE
+            // A second layout in one frame can replace an image with a pending upload.
+            vk_flush_staging_buffer(qfalse);
+#endif
             image->width = image->uploadWidth = width;
             image->height = image->uploadHeight = height;
             vk_create_image(image, width, height, 1);

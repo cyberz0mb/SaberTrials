@@ -7,10 +7,10 @@ a new proposal; changing a field alone does not alter the match.
 ## Call Vote
 
 - **General:** restart/next map, warmup on/off, Restricted/Full Force,
-  Tournament start, and TFFA Lock/Unlock Teams.
+  and TFFA Lock/Unlock Teams.
 - **Game Type:** enter a Time Limit and a Frag Limit, then click the matching
   **Vote** button. CTF shows Capture Limit instead of Frag Limit. The Type
-  selector offers FFA, Duel, TFFA, CTF, and Tournament; submit it with
+  selector offers FFA, Duel, Power Duel, TFFA, CTF, Siege, PUG, and Ladder. Submit it with
   **Call Game Type Vote**.
 - **Map:** select a locally installed map for the current game type and click
   **Call Map Vote**. The server must also have the map and accept its mode.

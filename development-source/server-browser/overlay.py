@@ -36,6 +36,53 @@ def server(root):
     edit(root, "server/sv_main.cpp", advertise)
 
 
+def population_engine(root):
+    for name in ("st_browser.h", "st_browser_population.inc"):
+        shutil.copyfile(SOURCE / name, root / "codemp/client" / name)
+
+    def discovery(text):
+        text = replace(text, 'Cvar_Get("cl_browserMasterReplies", "0", CVAR_ROM);',
+                       'Cvar_Get("cl_browserMasterReplies", "0", CVAR_ROM);\n'
+                       '\tCvar_Get("cl_browserPopulationDirty", "0", CVAR_ROM);')
+        text = replace(text, 'server->humans = server->bots = -1;',
+                       'server->humans = server->bots = -1;\n\tserver->populationProbed = 0;')
+        text = replace(text, 'server->humans = stb_humans(server->clients, Info_ValueForKey(info, "g_humanplayers"));',
+                       '''server->humans = stb_valid_occupancy(server->clients, server->maxClients)
+                ? stb_humans_from_counts(server->clients, Info_ValueForKey(info, "g_humanplayers"),
+                    Info_ValueForKey(info, "bots")) : -1;''')
+        text = replace(text, 'void CL_ServerStatusResponse( const netadr_t *from, msg_t *msg ) {',
+                       '#include "st_browser_population.inc"\n\n'
+                       'void CL_ServerStatusResponse( const netadr_t *from, msg_t *msg ) {')
+        text = replace(text, '\t// if we didn\'t request this server status\n',
+                       '\tif (CL_BrowserPopulationReply(from, msg, serverStatus && serverStatus->pending))\n'
+                       '\t\treturn;\n\t// if we didn\'t request this server status\n')
+        return replace(text, '\treturn status;\n}\n\n/*\n==================\nCL_ServerStatus_f',
+                       '\tconst bool populationPending = CL_BrowserPopulationFrame(source, status != qfalse);\n'
+                       '\treturn (status || populationPending) ? qtrue : qfalse;\n}\n\n/*\n==================\nCL_ServerStatus_f')
+
+    def lan(text):
+        text = replace(text, 'void LAN_ResetPings(int source) {',
+                       'extern void CL_BrowserResetPopulation(void);\n\n'
+                       'void LAN_ResetPings(int source) {\n\tCL_BrowserResetPopulation();')
+        text = replace(text, 'servers[i].ping = -1;',
+                       'servers[i].ping = -1;\n\t\t\tservers[i].populationProbed = 0;')
+        return replace(text, 'server.passwordKnown = 0;',
+                       'server.passwordKnown = 0;\n\t\tserver.populationProbed = 0;')
+
+    edit(root, 'client/client.h', lambda text: replace(text, 'int combatMode, passwordKnown;',
+                                                       'int combatMode, passwordKnown, populationProbed;'))
+    edit(root, 'client/cl_main.cpp', discovery)
+    edit(root, 'client/cl_lan.cpp', lan)
+
+
+def population_frontend(root):
+    for name in ("st_browser.h", "st_browser_ui.inc"):
+        shutil.copyfile(SOURCE / name, root / "codemp/ui" / name)
+    edit(root, 'ui/ui_main.c', lambda text: replace(text,
+         '\tUI_BuildServerDisplayList(2);\n\tUI_StopServerRefresh();',
+         '\tUI_BrowserFinishPopulationRefresh();\n\tUI_StopServerRefresh();'))
+
+
 def engine(root):
     for name in ("st_browser.h", "st_browser_discovery.inc"):
         shutil.copyfile(SOURCE / name, root / "codemp/client" / name)
@@ -241,6 +288,7 @@ void LAN_SaveServersToCache() {
     cmake = root / "codemp/CMakeLists.txt"
     cmake.write_text(replace(cmake.read_text(), '"winmm" "wsock32"', '"winmm" "ws2_32"'), newline="\n")
     server(root)
+    population_engine(root)
 
 
 def frontend(root):
@@ -263,6 +311,18 @@ XCVAR_DEF( ui_stDirectAddress, "", NULL, CVAR_TEMP|CVAR_INTERNAL )
 
     def ui(text):
         text = replace(text, '#include "ui_local.h"', '#include "ui_local.h"\n#include "st_browser.h"')
+        text = replace(text, 'static int QDECL UI_ServersQsortCompare( const void *arg1, const void *arg2 );',
+                       '''static int UI_BrowserCompareServers(int source, int column, int descending, int left, int right);
+static int QDECL UI_ServersQsortCompare( const void *arg1, const void *arg2 );''')
+        text = replace(text, 'return trap->LAN_CompareServers( UI_SourceForLAN(), uiInfo.serverStatus.sortKey,',
+                       'return UI_BrowserCompareServers( UI_SourceForLAN(), uiInfo.serverStatus.sortKey,')
+        text = replace(text, 'res = trap->LAN_CompareServers( UI_SourceForLAN(), uiInfo.serverStatus.sortKey,',
+                       'res = UI_BrowserCompareServers( UI_SourceForLAN(), uiInfo.serverStatus.sortKey,')
+        text = replace(text, '\t\t\t\t// make sure we sort again',
+                       '''\t\t\t\telse if (sortColumn == STB_SORT_REGION) {
+\t\t\t\t\tuiInfo.serverStatus.sortDir = 0;
+\t\t\t\t}
+\t\t\t\t// make sure we sort again''')
         text = replace(text, "void UI_Shutdown( void ) {", '''static void UI_BrowserFreeRegions(void);
 void UI_Shutdown( void ) {
 \tUI_BrowserFreeRegions();''')
@@ -414,8 +474,8 @@ static void UI_JoinServer(void)
 \t\t\t\t\t\tCom_sprintf(clientBuff, sizeof(clientBuff), "%d/%d", snapshot.humans, snapshot.capacity);
 \t\t\t\t\treturn clientBuff;
 \t\t\t\t}
-\t\t\t\tcase 5:
-\t\t\t\t\treturn stRegionNames[UI_BrowserRegion(Info_ValueForKey(info, "addr"))];
+\t\t\t\tcase STB_SORT_REGION:
+\t\t\t\t\treturn stb_region_name(UI_BrowserRegion(Info_ValueForKey(info, "addr")));
 ''')
         text = replace(text, 'return Info_ValueForKey(info, "ping");',
                        '''Com_sprintf(clientBuff, sizeof(clientBuff), "%d", ping);
@@ -490,11 +550,18 @@ static void UI_JoinServer(void)
  RUI_Divider(458,248,152);
  const int password=atoi(Info_ValueForKey(info,"needpass"));
  RUI_Text(458,257,.55f,password>0?"Password required":password==0?"Open access":"Password unknown",ruWhite);
+ const char *mod=Info_ValueForKey(info,"game");
+ if(!*mod) mod="Not advertised";
+ else if(!Q_stricmp(mod,"base")) mod="Base JKA";
+ else if(!Q_stricmp(mod,"japlus")) mod="JA+";
+ else if(!Q_stricmp(mod,"japro")) mod="JAPro";
+ else if(!Q_stricmp(mod,"SaberTrials")) mod="Saber Trials";
+ SCUI_Fit(458,276,154,.55f,va("Mod  %s",mod),ruWhite);
  const int combat=stb_number(Info_ValueForKey(info,"st_combatMode"),1);
  if(combat>=0)
-  RUI_Text(458,278,.55f,combat==1?"Manual combat":"Classic combat",ruCyan);
- RUI_Text(458,305,.53f,atoi(Info_ValueForKey(info,"wdisable"))?"Weapons: restricted":"Weapons: unrestricted",scuMuted);
- RUI_Text(458,326,.53f,atoi(Info_ValueForKey(info,"fdisable"))?"Force: restricted":"Force: unrestricted",scuMuted);
+  RUI_Text(458,295,.55f,combat==1?"Manual combat":"Classic combat",ruCyan);
+ RUI_Text(458,319,.53f,atoi(Info_ValueForKey(info,"wdisable"))?"Weapons: restricted":"Weapons: unrestricted",scuMuted);
+ RUI_Text(458,338,.53f,atoi(Info_ValueForKey(info,"fdisable"))?"Force: restricted":"Force: unrestricted",scuMuted);
 }
 ''')
 
@@ -505,3 +572,4 @@ static void UI_JoinServer(void)
          '\t\t\t(!Q_stricmp(g_editItem->cvar, "st_uiYawSpeed") ||',
          '\t\t\t(!Q_stricmp(g_editItem->cvar, "ui_stServerSearch") ||\n'
          '\t\t\t !Q_stricmp(g_editItem->cvar, "st_uiYawSpeed") ||'))
+    population_frontend(root)

@@ -1,18 +1,23 @@
 // The console keeps ownership of editing, command history and execution.
 #include "cl_st_console_pad.h"
+#include "qcommon/st_keyboard_layout.h"
+#include "qcommon/st_utf8.h"
 extern void Console_Key(int key);
 extern void Message_Key(int key);
 extern qboolean STCT_DrawInput(const char*,int,float,float);
+extern float STML_MenuText(const char*,float,float,float,const float*);
+extern const char *STML_Translate(const char*);
 
 namespace {
-enum PadConsoleAction { Shift=256, Symbols, CaretLeft, CaretRight, Erase, Clear, Complete, Execute };
+enum PadConsoleAction { Shift=0x110000, Symbols, CaretLeft, CaretRight, Erase, Clear, Complete, Execute, Language };
 struct PadConsoleKey { int x,y,width,action; const char* label; };
 constexpr int keyHeight=26;
-constexpr int gridSize=40;
+constexpr int gridSize=stkeys::count;
 constexpr PadConsoleKey actions[]={
  {56,415,50,Shift,"Shift"}, {112,415,64,Symbols,"Symbols"}, {182,415,34,CaretLeft,"<"},
  {222,415,100,' ',"Space"}, {328,415,34,CaretRight,">"}, {368,415,77,Erase,"Backspace"},
- {451,415,50,Clear,"Clear"}, {507,415,71,Complete,"Complete"}, {446,450,132,Execute,"Run command"}
+ {451,415,50,Clear,"Clear"}, {507,415,71,Complete,"Complete"}, {446,450,132,Execute,"Run command"},
+ {56,450,128,Language,"Language"}
 };
 constexpr int keyCount=gridSize+ARRAY_LEN(actions);
 struct PadConsoleState {
@@ -21,14 +26,13 @@ struct PadConsoleState {
  int x=81,y=314,focus=0;
 } padConsole;
 
+int Con_PadLayout() {
+ return stkeys::index(Cvar_VariableIntegerValue("st_keyboardLanguage"),Cvar_VariableIntegerValue("st_menuLanguage"));
+}
 PadConsoleKey Con_PadKey(int i) {
  if(i>=gridSize)return actions[i-gridSize];
- static constexpr const char* letters[]={"1234567890","qwertyuiop","asdfghjkl-","zxcvbnm_.,"};
- static constexpr const char* symbols[]={"!@#$%^&*()","-_=+[]{}<>","~`|:'?,./%","\\\";0123456"};
- const int row=i/10,col=i%10;
- int action=(padConsole.symbols?symbols[row]:letters[row])[col];
- if(padConsole.shift&&!padConsole.symbols&&action>='a'&&action<='z')action-='a'-'A';
- return {56+53*col,287+32*row,45,action,nullptr};
+ const int action=stkeys::character(Con_PadLayout(),i,padConsole.shift,padConsole.symbols);
+ return {56+48*(i%stkeys::columns),287+32*(i/stkeys::columns),43,action,nullptr};
 }
 
 void Con_PadMoveFocus(int dx,int dy) {
@@ -48,6 +52,7 @@ void Con_PadPress(int action) {
  const bool chat=padConsole.catcher==KEYCATCH_MESSAGE;
  field_t& field=chat?chatField:g_consoleField;
  switch(action){
+  case Language:Cvar_SetValue("st_keyboardLanguage",stkeys::next(Cvar_VariableIntegerValue("st_keyboardLanguage")));padConsole.symbols=false;break;
   case Shift:padConsole.shift=!padConsole.shift;break;
   case Symbols:padConsole.symbols=!padConsole.symbols;break;
   case CaretLeft:Field_KeyDownEvent(&field,A_CURSOR_LEFT);break;
@@ -76,7 +81,10 @@ bool Con_PadKeyboardActive() {
   (catcher&(KEYCATCH_CONSOLE|KEYCATCH_MESSAGE))==padConsole.catcher&&
   (padConsole.catcher==KEYCATCH_CONSOLE||!(catcher&(KEYCATCH_UI|KEYCATCH_CGAME)));
 }
-void Con_SetPadKeyboard(int catcher) {padConsole={};padConsole.catcher=catcher;}
+void Con_SetPadKeyboard(int catcher) {
+ Cvar_Get("st_keyboardLanguage","0",CVAR_ARCHIVE);
+ padConsole={};padConsole.catcher=catcher;
+}
 void Con_UpdatePadKeyboard(int catcher) {
  if(!(catcher&padConsole.catcher))Con_ClosePadKeyboard();
 }
@@ -108,6 +116,20 @@ void Con_PadKeyboardButton(int button,int confirm) {
 
 void Con_PadKeyboardMouseClick(){Con_PadKeyboardButton(0,0);}
 
+static void Con_PadText(const char *label,float x,float y,float width,float height,
+                        float scale,float *color,bool center) {
+ bool extended=false;
+ for(const unsigned char *p=(const unsigned char*)label;*p;++p)
+  if(*p>=128){extended=true;break;}
+ float span=extended?STML_MenuText(label,scale,0,0,nullptr):0;
+ const bool nativeFont=span>0;
+ if(!nativeFont)span=(float)re->Font_StrLenPixels(label,cls.menuFont,scale);
+ if(span>width-4){scale*=(width-4)/span;span=width-4;}
+ if(center)x+=(width-span)/2;
+ if(nativeFont)STML_MenuText(label,scale,x,y+(height-20*scale)/2,color);
+ else re->Font_DrawString(x,y+(height-re->Font_HeightPixels(cls.menuFont,scale))/2,label,color,cls.menuFont,-1,scale);
+}
+
 void Con_DrawPadKeyboard() {
  if(!Con_PadKeyboardActive())return;
  const bool chat=padConsole.catcher==KEYCATCH_MESSAGE;
@@ -117,12 +139,13 @@ void Con_DrawPadKeyboard() {
  SCR_FillRect(44,266,546,212,edge);
  SCR_FillRect(45,267,544,210,panel);
  const char* title=chat?(chat_playerNum>=0?"Private message":chat_team?"Team chat":"Chat"):"Console keyboard";
- re->Font_DrawString(56,272,title,text,cls.menuFont,-1,.66f);
- if(chat){
+ Con_PadText(STML_Translate(title),56,268,510,19,.66f,text,false);
+ if(chat || g_consoleField.buffer[0]){
   SCR_FillRect(45,220,544,42,panel);
   SCR_FillRect(45,220,544,1,edge);
-  if(!STCT_DrawInput(chatField.buffer,chatField.cursor,56,230))
-   Field_BigDraw(&chatField,56,230,qtrue,qtrue);
+  field_t& edit=chat?chatField:g_consoleField;
+  if(!STCT_DrawInput(edit.buffer,edit.cursor,56,230))
+   Field_BigDraw(&edit,56,230,qtrue,qtrue);
  }
  for(int i=0;i<keyCount;++i){
   const auto k=Con_PadKey(i);
@@ -130,14 +153,16 @@ void Con_DrawPadKeyboard() {
   const bool highlighted=i==padConsole.focus;
   SCR_FillRect(k.x,k.y,k.width,keyHeight,highlighted||selected?edge:idle);
   SCR_FillRect(k.x+1,k.y+1,k.width-2,keyHeight-2,highlighted||selected?focus:panel);
-  char glyph[]={static_cast<char>(k.action),0};
-  const char* label=chat&&k.action==Execute?"Send message":chat&&k.action==Complete?"Cancel":
-   k.action==Symbols&&padConsole.symbols?"Letters":k.label?k.label:glyph;
-  const float scale=k.label?.65f:.85f;
-  const int width=re->Font_StrLenPixels(label,cls.menuFont,scale),height=re->Font_HeightPixels(cls.menuFont,scale);
-  re->Font_DrawString(k.x+(k.width-width)/2,k.y+(keyHeight-height)/2,label,text,cls.menuFont,-1,scale);
+  char glyph[5]={};
+  if(!k.label)ST_UTF8Write(k.action,glyph);
+  const char* layoutName=stkeys::layouts[Con_PadLayout()].name;
+  const char* label=k.action==Language?(Cvar_VariableIntegerValue("st_keyboardLanguage")?layoutName:va("Auto (%s)",layoutName)):
+   chat&&k.action==Execute?"Send message":chat&&k.action==Complete?"Cancel":
+   k.action==Symbols?(padConsole.symbols?"ABC":"123 / #"):k.label?k.label:glyph;
+  if(k.label && k.action!=Language)label=STML_Translate(label);
+  Con_PadText(label,k.x,k.y,k.width,keyHeight,k.label?.65f:.85f,text,true);
  }
- re->Font_DrawString(56,457,chat?"Bumpers move the caret":"Bumpers: command history   Triggers: scroll",muted,cls.menuFont,-1,.64f);
+ Con_PadText(STML_Translate(chat?"Bumpers move the caret":"Bumpers: history"),192,450,246,26,.55f,muted,false);
  if(padConsole.pointer){
   SCR_FillRect(padConsole.x-2,padConsole.y-2,5,5,edge);
   SCR_FillRect(padConsole.x-1,padConsole.y-1,3,3,text);

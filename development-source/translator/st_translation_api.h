@@ -1,7 +1,7 @@
 #ifndef ST_TRANSLATION_API_H
 #define ST_TRANSLATION_API_H
 #define ST_TRANSLATION_TEXT 2048
-#define ST_TRANSLATION_LANGUAGES 17
+#define ST_TRANSLATION_LANGUAGES 20
 typedef struct {
     int source, target; /* Stable language IDs in languages.json; source 0=detect. */
     char text[512], names[2048];

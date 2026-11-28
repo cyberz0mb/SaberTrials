@@ -1,7 +1,9 @@
 # Photo Mode
 
-Open the pause menu and choose **Photo Mode**. Adjust field of view, camera tilt
-and movement speed with sliders or typed values, then choose **Apply camera**.
+In a Saber Trials game, open the pause menu and choose **Photo Mode**. On other
+servers the menu shows **Requires a Saber Trials server**. The scene previews field of view
+and tilt as you edit. **Apply camera**, **Start / Resume** and **Take photo**
+save valid values.
 **Start / Resume** closes the menu. **Take photo** saves a clean PNG after the
 menu closes, with no HUD, portrait, composition grid or control hints.
 
@@ -27,9 +29,18 @@ Freeze affects the local scene, not the operating system or audio playback.
 It does not pause a remote multiplayer server. Map changes, disconnects and
 leaving Photo Mode release any pause owned by Photo Mode.
 
-## Spectators and recordings
+## Playing on a live Saber Trials server
 
-In an online game, join Spectators first. Photo Mode uses the game's ordinary
+Choose **Photo Mode > Start / Resume** to orbit your character during ordinary
+on-foot play. Move the mouse or use the arrow keys to turn the camera around
+your character. Scroll to change the distance, press Enter or left-click to take
+a clean PNG, and press Escape to return to play. The match continues while
+you frame the shot. Orbit uses the mod's third-person camera and wall collision.
+Your saved camera distance, angles and key bindings are preserved.
+
+## Saber Trials spectators and recordings
+
+If you are already spectating, Photo Mode uses the game's ordinary
 spectator movement so the server sends the scene visible from that position.
 Use the Photo Mode menu to capture, change the lens/tilt, or exit. Online movement
 uses the normal spectator speed. The Scene toggle is unavailable online.

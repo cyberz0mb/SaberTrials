@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 3.16)
+project(format_checks LANGUAGES CXX)
+add_executable(format_fixture format_fixture.cpp)
+target_compile_features(format_fixture PRIVATE cxx_std_17)
+target_include_directories(format_fixture PRIVATE "${GAME_SOURCE}")

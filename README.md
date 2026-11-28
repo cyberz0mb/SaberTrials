@@ -13,11 +13,20 @@ OpenJK. It expands competitive saber play for newcomers and longtime players.
   Match recommendations. The client supports text chat, optional local
   translation, controllers and an on-screen keyboard.
 
+The current source also includes [Match Rules](docs/Match-Rules.md),
+[PUG and Ladder](docs/PUG-and-Ladder.md), [multi-team TFFA](docs/TFFA-Teams.md),
+and [client compatibility options](docs/Client-Compatibility.md). On Windows,
+[Vulkan](docs/Vulkan-Renderer.md) is available alongside Vanilla and Rend2.
+
+Windows beta 1.15 adds Polish, Dutch, Swedish and Finnish keyboard layouts. Both Full and Lite include the menus and keyboards. Full includes all offline chat models. Players on beta 1.11 can apply the 25.47 MB Windows Fix directly. [Update instructions](docs/Windows-ZIP-Updates.md) · [Language settings](docs/Universal-Translator.md).
+
 Use a legal Jedi Academy installation and keep Saber Trials separate from
 `GameData/base`. Online play requires compatible client and server builds.
 
 | What you need | Where to start |
 | --- | --- |
+| Play in a tournament | [Host and player instructions](docs/Tournament-Playtest.md) |
+| Manage chat and music | [Ignore players](docs/Player-Ignore.md), [Windows music player](docs/Music-Player.md) |
 | Launch or play | [Windows launcher](tools/launchers/README.md), [server browser](docs/Worldwide-Server-Browser.md) |
 | Build or contribute | [Windows source checkpoint](docs/WINDOWS-BUILD-CHECKPOINT.md), [contribution guide](CONTRIBUTING.md) |
 | Host | [Server administration](docs/ADMIN_GUIDE.md), [Linux build guide](docs/Linux-Server-Upload.md) |

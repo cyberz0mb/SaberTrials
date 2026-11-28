@@ -1,7 +1,7 @@
 # Saber Trials Linux server upload
 
 Use a compatible x86_64 Linux host with the matching Saber Trials dedicated
-engine and game module. Obtain Jedi Academy game data separately.
+engine and game module. Beta 1.15 preserves accented Latin letters in player names. Obtain Jedi Academy game data separately.
 
 ## Before uploading
 

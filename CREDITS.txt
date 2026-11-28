@@ -75,6 +75,19 @@ Blender Jedi Academy Plugin Suite
   v2.1.0, GPLv2 or later. Used for Ghoul2 compatibility checks.
 
 
+ADDITIONAL CLIENT PRESENTATION
+------------------------------
+
+TaystJK and its contributors supplied code for the Jedi Outcast and Quake-style
+HUD implementations and the wearable cosmetics system. DarthNormaN created
+Elegance and is credited in the Quake-style layout distributed with TaystJK.
+Raven Software created the original Jedi Academy and Jedi Outcast HUDs.
+https://github.com/taysta/TaystJK
+
+The OpenJK Vulkan renderer draws on work from the JKSunny, EternalJK, Quake3e,
+vkQuake3 and Kenny Edition contributors.
+https://github.com/JACoders/OpenJK/pull/1330
+
 ASSET POLICY
 ------------
 
@@ -108,3 +121,5 @@ Saber Trials is an unofficial community modification and is not affiliated
 with or endorsed by Lucasfilm, Disney, Activision, Raven Software, or id
 Software. Star Wars and related names and marks belong to their respective
 owners.
+
+Offline chat models for Dutch, Swedish and Finnish come from the Argos Open Tech package index (https://github.com/argosopentech/argospm-index). The six package versions, upstream URLs, hashes and per-package license notes are recorded in development-source/translator/dependencies.json. Runtime packs retain the upstream README and training-data credits.

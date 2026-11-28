@@ -1,0 +1,470 @@
+--- a/codemp/rd-vulkan/tr_bsp.cpp
++++ b/codemp/rd-vulkan/tr_bsp.cpp
+@@ -2387,7 +2387,8 @@
+ 	R_LoadVisibility( &header->lumps[LUMP_VISIBILITY], worldData );
+ 
+ #ifdef USE_VBO
+-	R_BuildWorldVBO(s_worldData.surfaces, s_worldData.numsurfaces);
++	if (!index)
++		R_BuildWorldVBO(worldData.surfaces, worldData.numsurfaces);
+ #endif
+ 
+ 	worldData.dataSize = (byte *)Hunk_Alloc(0, h_low) - startMarker;
+--- a/codemp/rd-vulkan/tr_ghoul2.cpp
++++ b/codemp/rd-vulkan/tr_ghoul2.cpp
+@@ -3693,120 +3693,17 @@
+ 	{
+ 		mdxmVBOMesh_t *surface = surf->vboMesh;
+ 
+-		if ( surface->vbo != NULL || surface->ibo != NULL ) {
+-
+-			int numIndexes = surface->numIndexes;
+-			int numVertexes = surface->numVertexes;
+-			int minIndex = surface->minIndex;
+-			int maxIndex = surface->maxIndex;
+-			int indexOffset = surface->indexOffset;
+-
+-	tess.surfType = SF_MDX;
+-
++		if (surface->vbo && surface->ibo) {
+ #ifdef _G2_GORE
+-	if ( surf->goreVBO && tr.goreVBO != NULL )
+-	{
+-		tess.vbo_model = tr.goreVBO;
+-		tess.ibo_model = tr.goreIBO;
+-
+-		srfG2GoreSurface_t* goreVBO = (srfG2GoreSurface_t*)surf->goreVBO;
+-
+-		numIndexes	= goreVBO->numIndexes;
+-		numVertexes = goreVBO->numVerts;
+-		minIndex	= goreVBO->firstVert;
+-		maxIndex	= goreVBO->firstVert + goreVBO->numVerts;
+-		indexOffset = goreVBO->firstIndex;
+-	}
+-	else
+-#endif
+-	{
+-		tess.vbo_model = surf->vboMesh->vbo;
+-		tess.ibo_model = surf->vboMesh->ibo;
+-	}
+-
+-			int i, mergeForward, mergeBack;
+-			GLvoid *firstIndexOffset, *lastIndexOffset;
+-
+-			// merge this into any existing multidraw primitives
+-			mergeForward = -1;
+-			mergeBack = -1;
+-			firstIndexOffset = BUFFER_OFFSET( indexOffset );
+-			lastIndexOffset = BUFFER_OFFSET( indexOffset + numIndexes );
+-
+-			//if (r_mergeMultidraws->integer)
+-			{
+-				i = 0;
+-
+-				//if (r_mergeMultidraws->integer == 1)
+-				{
+-					// lazy merge, only check the last primitive
+-					if (tess.multiDrawPrimitives)
+-					{
+-						i = tess.multiDrawPrimitives - 1;
+-					}
+-				}
+-
+-				for (; i < tess.multiDrawPrimitives; i++)
+-				{
+-					if (tess.multiDrawLastIndex[i] == firstIndexOffset)
+-					{
+-						mergeBack = i;
+-					}
+-
+-					if (lastIndexOffset == tess.multiDrawFirstIndex[i])
+-					{
+-						mergeForward = i;
+-					}
+-				}
+-			}
+-
+-			if (mergeBack != -1 && mergeForward == -1)
+-			{
+-				tess.multiDrawNumIndexes[mergeBack] += numIndexes;
+-				tess.multiDrawLastIndex[mergeBack] = tess.multiDrawFirstIndex[mergeBack] + tess.multiDrawNumIndexes[mergeBack];
+-				tess.multiDrawMinIndex[mergeBack] = MIN(tess.multiDrawMinIndex[mergeBack], minIndex);
+-				tess.multiDrawMaxIndex[mergeBack] = MAX(tess.multiDrawMaxIndex[mergeBack], maxIndex);
+-				//backEnd.pc.c_multidrawsMerged++;
+-			}
+-			else if (mergeBack == -1 && mergeForward != -1)
+-			{
+-				tess.multiDrawNumIndexes[mergeForward] += numIndexes;
+-				tess.multiDrawFirstIndex[mergeForward] = (glIndex_t *)firstIndexOffset;
+-				tess.multiDrawLastIndex[mergeForward] = tess.multiDrawFirstIndex[mergeForward] + tess.multiDrawNumIndexes[mergeForward];
+-				tess.multiDrawMinIndex[mergeForward] = MIN(tess.multiDrawMinIndex[mergeForward], minIndex);
+-				tess.multiDrawMaxIndex[mergeForward] = MAX(tess.multiDrawMaxIndex[mergeForward], maxIndex);
+-				//backEnd.pc.c_multidrawsMerged++;
+-			}
+-			else if (mergeBack != -1 && mergeForward != -1)
+-			{
+-				tess.multiDrawNumIndexes[mergeBack] += numIndexes + tess.multiDrawNumIndexes[mergeForward];
+-				tess.multiDrawLastIndex[mergeBack] = tess.multiDrawFirstIndex[mergeBack] + tess.multiDrawNumIndexes[mergeBack];
+-				tess.multiDrawMinIndex[mergeBack] = MIN(tess.multiDrawMinIndex[mergeBack], MIN(tess.multiDrawMinIndex[mergeForward], minIndex));
+-				tess.multiDrawMaxIndex[mergeBack] = MAX(tess.multiDrawMaxIndex[mergeBack], MAX(tess.multiDrawMaxIndex[mergeForward], maxIndex));
+-				tess.multiDrawPrimitives--;
+-
+-				if (mergeForward != tess.multiDrawPrimitives)
+-				{
+-					tess.multiDrawNumIndexes[mergeForward] = tess.multiDrawNumIndexes[tess.multiDrawPrimitives];
+-					tess.multiDrawFirstIndex[mergeForward] = tess.multiDrawFirstIndex[tess.multiDrawPrimitives];
+-				}
+-				//backEnd.pc.c_multidrawsMerged += 2;
+-			}
+-			else if (mergeBack == -1 && mergeForward == -1)
+-			{
+-				tess.multiDrawNumIndexes[tess.multiDrawPrimitives] = numIndexes;
+-				tess.multiDrawFirstIndex[tess.multiDrawPrimitives] = (glIndex_t *)firstIndexOffset;
+-				tess.multiDrawLastIndex[tess.multiDrawPrimitives] = (glIndex_t *)lastIndexOffset;
+-				tess.multiDrawMinIndex[tess.multiDrawPrimitives] = minIndex;
+-				tess.multiDrawMaxIndex[tess.multiDrawPrimitives] = maxIndex;
+-				tess.multiDrawPrimitives++;
+-			}
+-			
+-
+-			tess.numIndexes = numIndexes;
+-			tess.numVertexes = numVertexes;
+-			return;	
+-		}	
++			if (surf->goreVBO && tr.goreVBO && tr.goreIBO) {
++				const auto *gore = reinterpret_cast<const srfG2GoreSurface_t *>(surf->goreVBO);
++				RB_AddModelRange(tr.goreVBO, tr.goreIBO, SF_MDX, gore->firstIndex, gore->numIndexes, gore->numVerts);
++				return;
++			}
++#endif
++			RB_AddModelRange(surface->vbo, surface->ibo, SF_MDX, surface->indexOffset, surface->numIndexes, surface->numVertexes);
++			return;
++		}
+ 	}
+ #endif
+ 	
+@@ -4481,6 +4378,13 @@
+ 		return qfalse;
+ 	}
+ 
++#ifdef USE_VBO_GHOUL2
++	// The shipped skinning shader has 72 matrix slots. CPU rendering supports larger rigs.
++	if (vk.vboGhoul2Active && (bAlreadyCached ? pinmodel->numBones : LittleLong(pinmodel->numBones)) > 72) {
++		ri.Printf(PRINT_WARNING, "Vulkan GPU skinning supports 72 bones: %s\n", mod_name);
++		return qfalse;
++	}
++#endif
+ 	mod->type	   = MOD_MDXM;
+ 	mod->dataSize += size;
+ 
+--- a/codemp/rd-vulkan/tr_local.h
++++ b/codemp/rd-vulkan/tr_local.h
+@@ -2138,10 +2138,7 @@
+ 
+ 	int			multiDrawPrimitives;
+ 	GLsizei		multiDrawNumIndexes[MAX_MULTIDRAW_PRIMITIVES];
+-	glIndex_t	*multiDrawFirstIndex[MAX_MULTIDRAW_PRIMITIVES];
+-	glIndex_t	*multiDrawLastIndex[MAX_MULTIDRAW_PRIMITIVES];
+-	glIndex_t	multiDrawMinIndex[MAX_MULTIDRAW_PRIMITIVES];
+-	glIndex_t	multiDrawMaxIndex[MAX_MULTIDRAW_PRIMITIVES];
++	uint32_t	multiDrawFirstIndex[MAX_MULTIDRAW_PRIMITIVES];
+ 
+ #ifdef USE_PMLIGHT
+ 	const dlight_t	*light;
+@@ -2175,6 +2172,9 @@
+ 
+ void RB_BeginSurface( shader_t *shader, int fogNum );
+ void RB_EndSurface( void );
++#ifdef USE_VBO
++void RB_AddModelRange(VBO_t *vbo, IBO_t *ibo, surfaceType_t type, int firstIndex, int indexes, int vertices);
++#endif
+ void RB_CheckOverflow( int verts, int indexes );
+ #define RB_CHECKOVERFLOW( v , i ) if ( tess.numVertexes + ( v ) >= SHADER_MAX_VERTEXES || tess.numIndexes + ( i ) >= SHADER_MAX_INDEXES ) {RB_CheckOverflow( v , i );}
+ 
+@@ -2531,6 +2531,7 @@
+ 	bool mapDrawOverflow;
+ #ifdef USE_PMLIGHT
+ 	litSurf_t			litSurfs[MAX_LITSURFS];
++	litSurf_t *mapLitSurfs;
+ 	dlight_t			dlights[MAX_REAL_DLIGHTS];
+ #else
+ 	dlight_t			dlights[MAX_DLIGHTS];
+--- a/codemp/rd-vulkan/tr_main.cpp
++++ b/codemp/rd-vulkan/tr_main.cpp
+@@ -1181,6 +1181,9 @@
+ ===============
+ */
+ void R_ReserveMapDrawSurfaces(int surfaces) {
++#ifdef USE_PMLIGHT
++	backEndData->mapLitSurfs = nullptr;
++#endif
+ 	backEndData->mapDrawSurfs = nullptr;
+ 	backEndData->mapSortScratch = nullptr;
+ 	backEndData->mapDrawCapacity = MAX_DRAWSURFS;
+@@ -1189,6 +1192,9 @@
+ 		const int capacity = Q_min(ST_MAX_DRAWSURFS, MAX_DRAWSURFS + 2 * surfaces);
+ 		backEndData->mapDrawSurfs = static_cast<drawSurf_t *>(ri.Hunk_Alloc(capacity * sizeof(drawSurf_t), h_low));
+ 		backEndData->mapSortScratch = static_cast<drawSurf_t *>(ri.Hunk_Alloc(capacity * sizeof(drawSurf_t), h_low));
++#ifdef USE_PMLIGHT
++		backEndData->mapLitSurfs = static_cast<litSurf_t *>(ri.Hunk_Alloc(capacity * sizeof(litSurf_t), h_low));
++#endif
+ 		backEndData->mapDrawCapacity = capacity;
+ 	}
+ }
+@@ -1322,7 +1328,7 @@
+ {
+ 	struct litSurf_s *litsurf;
+ 
+-	if (tr.refdef.numLitSurfs >= ARRAY_LEN(backEndData->litSurfs))
++	if (tr.refdef.numLitSurfs >= (backEndData->mapLitSurfs ? backEndData->mapDrawCapacity : MAX_LITSURFS))
+ 		return;
+ 
+ 	tr.pc.c_lit_surfs++;
+@@ -1653,7 +1659,6 @@
+ */
+ void R_RenderView( const viewParms_t *parms ) {
+ 	int		firstDrawSurf;
+-	int		numDrawSurfs;
+ 
+ 	if ( parms->viewportWidth <= 0 || parms->viewportHeight <= 0 ) {
+ 		return;
+@@ -1673,13 +1678,6 @@
+ 	
+ 	R_GenerateDrawSurfs();
+ 
+-	// if we overflowed MAX_DRAWSURFS, the drawsurfs
+-	// wrapped around in the buffer and we will be missing
+-	// the first surfaces, not the last ones
+-	numDrawSurfs = tr.refdef.numDrawSurfs;
+-	if ( numDrawSurfs > MAX_DRAWSURFS ) {
+-		numDrawSurfs = MAX_DRAWSURFS;
+-	}
+-
+-	R_SortDrawSurfs( tr.refdef.drawSurfs + firstDrawSurf, numDrawSurfs - firstDrawSurf );
++	// Submission already bounds each insertion against this map's reservation.
++	R_SortDrawSurfs(tr.refdef.drawSurfs + firstDrawSurf, tr.refdef.numDrawSurfs - firstDrawSurf);
+ }
+\ No newline at end of file
+--- a/codemp/rd-vulkan/tr_scene.cpp
++++ b/codemp/rd-vulkan/tr_scene.cpp
+@@ -518,7 +518,7 @@
+ 
+ #ifdef USE_PMLIGHT
+ 	tr.refdef.numLitSurfs = r_firstSceneLitSurf;
+-	tr.refdef.litSurfs = backEndData->litSurfs;
++	tr.refdef.litSurfs = backEndData->mapLitSurfs ? backEndData->mapLitSurfs : backEndData->litSurfs;
+ #endif
+ 
+ 	tr.refdef.num_entities = r_numentities - r_firstSceneEntity;
+--- a/codemp/rd-vulkan/tr_surface.cpp
++++ b/codemp/rd-vulkan/tr_surface.cpp
+@@ -2253,97 +2253,41 @@
+ void RB_SurfaceSkip( void *surf ) {
+ }
+ 
++#ifdef USE_VBO
++// firstIndex and count are in elements, the units expected by VkDrawIndexedIndirectCommand.
++void RB_AddModelRange(VBO_t *vbo, IBO_t *ibo, surfaceType_t type, int firstIndex, int indexes, int vertices)
++{
++	if (indexes == 0) return;
++	if (tess.numIndexes && (tess.vbo_model != vbo || tess.ibo_model != ibo ||
++	    tess.surfType != type || tess.multiDrawPrimitives == MAX_MULTIDRAW_PRIMITIVES)) {
++		shader_t *shader = tess.shader;
++		int fog = tess.fogNum;
++		RB_EndSurface();
++		RB_BeginSurface(shader, fog);
++	}
++	tess.vbo_model = vbo;
++	tess.ibo_model = ibo;
++	tess.surfType = type;
++	const int last = tess.multiDrawPrimitives - 1;
++	if (last >= 0 && tess.multiDrawFirstIndex[last] + tess.multiDrawNumIndexes[last] == uint32_t(firstIndex)) {
++		tess.multiDrawNumIndexes[last] += indexes;
++	} else {
++		const int slot = tess.multiDrawPrimitives++;
++		tess.multiDrawFirstIndex[slot] = firstIndex;
++		tess.multiDrawNumIndexes[slot] = indexes;
++	}
++	tess.numIndexes = indexes;
++	tess.numVertexes = vertices;
++}
++#endif
++
+ #ifdef USE_VBO_MDV
+ void RB_SurfaceVBOMDVMesh( srfVBOMDVMesh_t *surf )
+ {
+ 	if ( !surf->vbo || !surf->ibo )
+ 		return;
+ 
+-	tess.surfType = surf->surfaceType;
+-	tess.vbo_model = surf->vbo;
+-	tess.ibo_model = surf->ibo;
+-
+-	int i, mergeForward, mergeBack;
+-	GLvoid *firstIndexOffset, *lastIndexOffset;
+-
+-	// merge this into any existing multidraw primitives
+-	mergeForward = -1;
+-	mergeBack = -1;
+-	firstIndexOffset = BUFFER_OFFSET( surf->indexOffset );
+-	lastIndexOffset = BUFFER_OFFSET( surf->numIndexes );
+-	//lastIndexOffset = BUFFER_OFFSET( surf->indexOffset + surf->numIndexes );
+-
+-	//if (r_mergeMultidraws->integer)
+-	{
+-		i = 0;
+-
+-		//if (r_mergeMultidraws->integer == 1)
+-		{
+-			// lazy merge, only check the last primitive
+-			if (tess.multiDrawPrimitives)
+-			{
+-				i = tess.multiDrawPrimitives - 1;
+-			}
+-		}
+-
+-		for (; i < tess.multiDrawPrimitives; i++)
+-		{
+-			if (tess.multiDrawLastIndex[i] == firstIndexOffset)
+-			{
+-				mergeBack = i;
+-			}
+-
+-			if (lastIndexOffset == tess.multiDrawFirstIndex[i])
+-			{
+-				mergeForward = i;
+-			}
+-		}
+-	}
+-
+-	if (mergeBack != -1 && mergeForward == -1)
+-	{
+-		tess.multiDrawNumIndexes[mergeBack] += surf->numIndexes;
+-		tess.multiDrawLastIndex[mergeBack] = tess.multiDrawFirstIndex[mergeBack] + tess.multiDrawNumIndexes[mergeBack];
+-		tess.multiDrawMinIndex[mergeBack] = MIN(tess.multiDrawMinIndex[mergeBack], surf->minIndex);
+-		tess.multiDrawMaxIndex[mergeBack] = MAX(tess.multiDrawMaxIndex[mergeBack], surf->maxIndex);
+-		//backEnd.pc.c_multidrawsMerged++;
+-	}
+-	else if (mergeBack == -1 && mergeForward != -1)
+-	{
+-		tess.multiDrawNumIndexes[mergeForward] += surf->numIndexes;
+-		tess.multiDrawFirstIndex[mergeForward] = (glIndex_t *)firstIndexOffset;
+-		tess.multiDrawLastIndex[mergeForward] = tess.multiDrawFirstIndex[mergeForward] + tess.multiDrawNumIndexes[mergeForward];
+-		tess.multiDrawMinIndex[mergeForward] = MIN(tess.multiDrawMinIndex[mergeForward], surf->minIndex);
+-		tess.multiDrawMaxIndex[mergeForward] = MAX(tess.multiDrawMaxIndex[mergeForward], surf->maxIndex);
+-		//backEnd.pc.c_multidrawsMerged++;
+-	}
+-	else if (mergeBack != -1 && mergeForward != -1)
+-	{
+-		tess.multiDrawNumIndexes[mergeBack] += surf->numIndexes + tess.multiDrawNumIndexes[mergeForward];
+-		tess.multiDrawLastIndex[mergeBack] = tess.multiDrawFirstIndex[mergeBack] + tess.multiDrawNumIndexes[mergeBack];
+-		tess.multiDrawMinIndex[mergeBack] = MIN(tess.multiDrawMinIndex[mergeBack], MIN(tess.multiDrawMinIndex[mergeForward], surf->minIndex));
+-		tess.multiDrawMaxIndex[mergeBack] = MAX(tess.multiDrawMaxIndex[mergeBack], MAX(tess.multiDrawMaxIndex[mergeForward], surf->maxIndex));
+-		tess.multiDrawPrimitives--;
+-
+-		if (mergeForward != tess.multiDrawPrimitives)
+-		{
+-			tess.multiDrawNumIndexes[mergeForward] = tess.multiDrawNumIndexes[tess.multiDrawPrimitives];
+-			tess.multiDrawFirstIndex[mergeForward] = tess.multiDrawFirstIndex[tess.multiDrawPrimitives];
+-		}
+-		//backEnd.pc.c_multidrawsMerged += 2;
+-	}
+-	else if (mergeBack == -1 && mergeForward == -1)
+-	{
+-		tess.multiDrawNumIndexes[tess.multiDrawPrimitives] = surf->numIndexes;
+-		tess.multiDrawFirstIndex[tess.multiDrawPrimitives] = (glIndex_t *)firstIndexOffset;
+-		tess.multiDrawLastIndex[tess.multiDrawPrimitives] = (glIndex_t *)lastIndexOffset;
+-		tess.multiDrawMinIndex[tess.multiDrawPrimitives] = surf->minIndex;
+-		tess.multiDrawMaxIndex[tess.multiDrawPrimitives] = surf->maxIndex;
+-		tess.multiDrawPrimitives++;
+-	}
+-
+-	tess.numIndexes = surf->numIndexes;
+-	tess.numVertexes = surf->numVerts;
++	RB_AddModelRange(surf->vbo, surf->ibo, surf->surfaceType, surf->indexOffset, surf->numIndexes, surf->numVerts);
+ }
+ #endif
+ 
+--- a/codemp/rd-vulkan/tr_world.cpp
++++ b/codemp/rd-vulkan/tr_world.cpp
+@@ -133,6 +133,14 @@
+ 
+ 	if ( *surface != SF_FACE ) {
+ 		return qfalse;
++	}
++
++	if (tr.currentEntityNum == REFENTITYNUM_WORLD && tr.world && tr.world->enhancedMap) {
++		auto *face = reinterpret_cast<srfSurfaceFace_t *>(surface);
++		for (int i = 0; i < 4; ++i) {
++			if (BoxOnPlaneSide(face->bounds[0], face->bounds[1], &tr.viewParms.frustum[i]) == 2)
++				return qtrue;
++		}
+ 	}
+ 
+ 	if ( shader->cullType == CT_TWO_SIDED ) {
+--- a/codemp/rd-vulkan/vk_instance.cpp
++++ b/codemp/rd-vulkan/vk_instance.cpp
+@@ -745,7 +745,11 @@
+ 			vk.fragmentStores = qtrue;
+ 		}
+ 
+-		if(device_features.multiDrawIndirect) {
++		vk.maxModelIndirectDraws = 0;
++		if (device_features.multiDrawIndirect) {
++			VkPhysicalDeviceProperties props;
++			qvkGetPhysicalDeviceProperties(physical_device, &props);
++			vk.maxModelIndirectDraws = props.limits.maxDrawIndirectCount;
+ 			features.multiDrawIndirect = VK_TRUE;
+ 		}
+ 
+--- a/codemp/rd-vulkan/vk_local.h
++++ b/codemp/rd-vulkan/vk_local.h
+@@ -918,6 +918,7 @@
+ 
+ 	uint32_t frame_count;
+ 	qboolean shaderStorageImageMultisample;
++	uint32_t maxModelIndirectDraws;
+ 	qboolean samplerAnisotropy;
+ 	qboolean fragmentStores;
+ 	qboolean dedicatedAllocation;
+--- a/codemp/rd-vulkan/vk_shade_geometry.cpp
++++ b/codemp/rd-vulkan/vk_shade_geometry.cpp
+@@ -189,7 +189,7 @@
+ 
+ 		if ( tess.multiDrawPrimitives && tess.multiDrawPrimitives <= 1 ) 
+ 		{
+-			offset = (glIndex_t)(size_t)(tess.multiDrawFirstIndex[0]) * sizeof(uint32_t);
++			offset = tess.multiDrawFirstIndex[0] * sizeof(uint32_t);
+ 			vk.cmd->num_indexes = tess.multiDrawNumIndexes[0];
+ 		}
+ 
+@@ -901,20 +901,21 @@
+ 		if ( tess.multiDrawPrimitives && tess.multiDrawPrimitives > 1 ) 
+ 		{
+ 			uint32_t i, firstOffset;
+-			size_t *index;
+-
+-			VkDrawIndexedIndirectCommand *cmd = vk_reserve_draw_indexed_indirect( tess.multiDrawPrimitives, &firstOffset );
+-
+-			if ( !cmd )
++
++			const uint32_t ranges = tess.multiDrawPrimitives;
++			auto *cmd = ranges <= vk.maxModelIndirectDraws
++				? vk_reserve_draw_indexed_indirect(ranges, &firstOffset) : nullptr;
++			if (!cmd) {
++				for (uint32_t range = 0; range < ranges; ++range)
++					vk_draw_indexed(tess.multiDrawNumIndexes[range], tess.multiDrawFirstIndex[range]);
+ 				return;
++			}
+ 
+ 			for ( i = 0; i < tess.multiDrawPrimitives; i++ ) 
+ 			{
+-				index = (size_t*)tess.multiDrawFirstIndex + i;
+-
+ 				cmd[i].indexCount		= tess.multiDrawNumIndexes[i];
+ 				cmd[i].instanceCount	= 1;
+-				cmd[i].firstIndex		= (uint32_t)(*index);
++				cmd[i].firstIndex		= tess.multiDrawFirstIndex[i];
+ 				cmd[i].vertexOffset		= 0;
+ 				cmd[i].firstInstance	= 0;
+ 			}

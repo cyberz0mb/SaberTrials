@@ -2,7 +2,7 @@
 static void uiText(int recipient,int line,const char*value) {
  int slot;char text[256];Q_strncpyz(text,value,sizeof(text));
  for(slot=0;slot<level.maxclients;slot++)if((recipient<0||slot==recipient)&&level.clients[slot].pers.connected==CON_CONNECTED){
-  if(strcmp(sentUI[slot][line],text)){
+  if(!(g_entities[slot].r.svFlags & SVF_BOT) && strcmp(sentUI[slot][line],text)){
    Q_strncpyz(sentUI[slot][line],text,sizeof(sentUI[slot][line]));
    trap->SendServerCommand(slot,va("steui %d \"%s\"",line,text));
   }
@@ -20,14 +20,20 @@ static void publish(int recipient) {
    Com_sprintf(text,sizeof(text),"%.27s | %s",m->profile.name,!m->profile.connected?"Disconnected":event.phase==STE_LIVE?"Playing":m->ready?"READY":"Not ready");
    uiText(recipient,line++,text);
   }
+  if(event.phase==STE_REGISTRATION){
+   for(i=side*5;i<event.count&&i<side*5+5;i++){
+    uiText(recipient,line++,va("%d. %.30s",i+1,event.entries[i].name));
+   }
+  }
   while(line<6+side*5)uiText(recipient,line++,"");
-  uiText(recipient,47+side,event.active[side]>=0?va("%.30s",event.entries[event.active[side]].name):side?"Opponent":"Current match");
+  uiText(recipient,47+side,event.active[side]>=0?va("%.30s",event.entries[event.active[side]].name):event.phase==STE_REGISTRATION?(side?"Entries 6-10":"Entries 1-5"):(side?"Opponent":"Current match"));
   uiText(recipient,49+side,event.active[side]>=0?va("%d/%d present | %d/%d ready",connected[side],required,ready[side],required):"Waiting for bracket");
   uiText(recipient,52+side,event.active[side]>=0&&connected[side]<required?
    va("Reconnect: %d:%02d",(int)((event.remaining[side]+999)/1000/60),(int)((event.remaining[side]+999)/1000%60)):"");
  }
  uiText(recipient,46,va("%d / %d %s registered",event.count,event.teamSize?8:32,event.teamSize?"teams":"players"));
- if(event.phase==STE_REGISTRATION)hint=event.teamSize?"2-8 full teams required. The operator locks the bracket.":"An even 8-32 players required. The operator locks the bracket.";
+ if(practice&&event.phase==STE_REGISTRATION)hint=event.teamSize?"Choose a squad. The host starts when at least two squads are full.":"Register here. The host starts with an even number of players (2-32).";
+ else if(event.phase==STE_REGISTRATION)hint=event.teamSize?"2-8 full teams required. The operator locks the bracket.":"An even 8-32 players required. The operator locks the bracket.";
  else if(event.phase==STE_COMPLETE)hint="Tournament complete. View the bracket for results.";
  else if(event.staffPaused)hint="Paused by staff. Wait for staff to resume, then ready again.";
  else if(connected[0]<required||connected[1]<required)hint="Match paused: waiting for reconnect or a registered substitute.";
@@ -44,13 +50,29 @@ static void publish(int recipient) {
  for(slot=0;slot<level.maxclients;slot++)if((recipient<0||recipient==slot)&&level.clients[slot].pers.connected==CON_CONNECTED){
   STEvent preview;int m=slotMember(slot),join=0,leave=0,canReady=0,count=0,targets[5]={0,0,0,0,0};
   const char*personal;char command[128];
-  if(profiles[slot].verified){
-   preview=event;join=!ST_StaffBlocked(&g_entities[slot])&&STE_Join(&preview,&profiles[slot]);
+  if(g_entities[slot].r.svFlags&SVF_BOT)continue;
+  for(i=0;i<32;i++){
+   char row[100]="";
+   if(i<event.memberCount){
+    STEMember *member=&event.members[i];
+    Com_sprintf(row,sizeof(row),"%d. %.25s%s%.16s | %s",i+1,member->profile.name,event.teamSize?" / ":"",
+      event.teamSize?member->profile.teamName:"",!member->profile.connected?"Away":!member->starter?"Reserve":member->ready?"Ready":"Entered");
+   }
+   if(strcmp(row,rosterCache[slot][i])){
+    Q_strncpyz(rosterCache[slot][i],row,sizeof(rosterCache[slot][i]));
+    trap->SendServerCommand(slot,va("stlobbyentry %d \"%s\"",i,row));
+   }
+  }
+  if(compatible[slot]&&profiles[slot].verified){
+   preview=event;
+   if(practice&&event.teamSize)join=m<0&&!ST_StaffBlocked(&g_entities[slot])&&event.phase!=STE_COMPLETE;
+   else join=!ST_StaffBlocked(&g_entities[slot])&&STE_Join(&preview,&profiles[slot]);
    leave=m>=0&&event.phase==STE_REGISTRATION;
    canReady=m>=0&&STE_Side(&event,m)>=0&&event.members[m].profile.connected&&
     (event.phase==STE_READY||event.phase==STE_PAUSED)&&!event.staffPaused&&(event.members[m].ready||arenaReady());
   }
-  if(!profiles[slot].verified)personal="Account not verified here. Open Account to sign in or check status.";
+  if(practice&&m<0)personal=join?"Open tournament. Register to enter.":"Spectating this tournament.";
+  else if(!profiles[slot].verified)personal="Account not verified here. Open Account to sign in or check status.";
   else if(m<0)personal=join?"Verified account: select Join tournament.":event.teamSize&&!profiles[slot].team[0]?
    "A registered team is required for this tournament.":"Registration is unavailable for your account in this event.";
   else if(event.phase==STE_REGISTRATION)personal=event.members[m].starter?"Registered as a starter. Waiting for the bracket.":"Registered as a reserve. Your team has a full starting lineup.";
@@ -66,7 +88,7 @@ static void publish(int recipient) {
   }
   for(i=count;i<5;i++)uiText(slot,56+i,"");
   uiText(slot,54,count?"Choose an absent teammate. The full lineup must ready again.":"No replacement available. Only reserves can replace absent teammates.");
-  Com_sprintf(command,sizeof(command),"steactions 1 %d %d %d %d %d %d %d %d %d %d",join,leave,canReady,!!profiles[slot].verified,targets[0],targets[1],targets[2],targets[3],targets[4],event.bracketSize?event.bracketSize-1:0);
+  Com_sprintf(command,sizeof(command),"steactions 1 %d %d %d %d %d %d %d %d %d %d",join,leave,canReady,!practice&&!!profiles[slot].verified,targets[0],targets[1],targets[2],targets[3],targets[4],event.bracketSize?event.bracketSize-1:0);
   if(strcmp(command,sentActions[slot])){Q_strncpyz(sentActions[slot],command,sizeof(sentActions[slot]));trap->SendServerCommand(slot,command);}
  }
 }

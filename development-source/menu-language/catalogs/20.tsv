@@ -1,0 +1,1941 @@
+ (includes humans, bots and spectators)	(sisältää ihmiset, botit ja katsojat)
+ (stored preference)	(varattu etuuskohtelu)
+ / skill 	/ taito
+ / team 	/ tiimi
+ [restart / next boundary]	[käynnistä uudelleen / seuraava raja]
+ is assigned to: 	on osoitettu
+ maximum: 	enintään:
+ pending, not armed	odottamassa, ei aseistettu
+ queued for next round/map	jonossa seuraavaa kierrosta varten/kartta
+ | password change queued	Salasanan muuttaminen jonossa
+%d model	%d-malli
+%d models	%d mallit
+%s   Ping %s ms   Jitter %s ms   Loss %s%%	%s   Ping %s ms Jitter %s Ms Tappio %s%%
+%s  Ping %s ms  Jitter %s ms  In loss %s%%	%s  Ping %s ms Jitter %s ms Menetys %s%%
+%s | default %s | edit range %.4g to %.4g	%s Oletus %s Muokkaa aluetta %.4g - %.4g
+(empty)	(tyhjä)
++  Advanced video	+ Advanced video
+-  Advanced video	- Advanced video
+-2=Desktop|-1=Custom	-2=Työpöytä...-1=Muokkaa
+-2=Desktop|-1=Custom|4=800 x 600|6=1024 x 768|10=1600 x 1200	- 2=Desktop...-1=asiakas...4=800 x 600...6=1024 x 768...10=1600 x 1200
+../game/st_stock_uniform.h	../peli/st_stock_uniform.h
+../game/st_tffa_teams.h	../Peli/st_tffa_teams.h
+.bsp	bsp
+.skin	iho
+/model.glm	/malli.glm
+0 - Disabled	0 - Vammaiset
+0=Classic JKA|1=Saber Trials	0=Classic JKA...1=Saber Trials
+0=Default|16=16 bit|32=32 bit	0=Default...16=16 bitti...32=32 bitti...
+0=Desktop|16=16 bit|32=32 bit	0=Työpöytä.16=16 bitti...32=32 bitti...
+0=Leader|1=Your character|2=Opponent	0=Leader...1=Syntymäsi
+0=Off|1=Blob|2=Stencil|3=Projected	0=Off...1=Blob...2=Stencil...3=Projekti
+0=Off|1=Count up|2=Time remaining	0=Off...1=Korjaa ylös...2=Aika jäljellä.
+0=Off|1=Limbs only|2=On	0=Off...1=Vain letkut...
+0=Off|1=Live|2=Static	0=Off...1=Live...2= Staattinen
+0=Off|1=On	0=Off...1=On
+0=Off|1=On|-1=Adaptive	0=Off...1=On...-1=Adaptive
+0=Off|1=Sounds|2=Sounds + effects|3=Sounds + effects + marks	0=Off...1=Sounds...2=Sounds + effects...3=Sounds + effects + marks
+0=Off|1=Standard|2=Stencil	0=Poikkeaa 1=Standard...2=Stencil
+0=Off|1=Top right|2=Bottom right|3=Bottom left	0=Pois tieltä1=Top right...2=Bottom right
+0=Off|2=2x|4=4x|8=8x	0=Off...2=2x...4=4x...8=8x
+0=Off|2=2x|4=4x|8=8x|16=16x	0=Off. 2=2x. 4x. 4x. 4x. 4x. 8x. 16=16x
+0=Original JKA|1=Saber Trials|2=Simple HUD|3=Jedi Outcast|4=Elegance|5=Quake	0=Original JKA.I1=Saber Trials...2=Simple HUD...3=Jedi...
+0=Server mod|1=Saber Trials|2=Simple HUD|3=Jedi Outcast|4=Elegance|5=Quake	0=Server mod. 1=Saber Trials...2=Simple HUD...3=Jedi...
+16 bit	16 bittiä
+1=Off|0=On	1=Off.0=On
+1=Saber Trials|0=Server mod	1=Saber Trials...
+1v1 TOURNAMENT	1v1 TURVAUS
+22=22 kHz|44=44 kHz	22=22 kHz.44=44 kHz
+2=Low|1=Medium|0=High	2=Low...1=Medium...0=High
+32 bit	32 bittiä
+3=Low|2=Medium|1=High|0=Very high	3=Low...2=Medium...1=Hyvä...
+: unsupported value.	: tueton arvo.
+; engine directory limit reached	; moottorihakemiston raja-arvo saavutettu
+; engine range 	; moottorin toimintasäde
+< Profile	< Profiili
+@MENUS_ACROBATICS	Akrobatia
+@MENUS_ADD_BOT	Lisää botti
+@MENUS_ADD_FAVORITE	Lisää suosikki
+@MENUS_ADD_SELECTED_SERVER_TO	Lisää valittu palvelin suosikkeihin.
+@MENUS_ADJUSTS_THE_DIFFICULTY	Säätää pelin keinotekoisesti älykkäiden bottien vaikeustasoa.
+@MENUS_ALL	Kaikki
+@MENUS_ALLOWS_YOU_TO_SELECT	Voit valita pelin tyypin palvelimelle, jota haluat pelata.
+@MENUS_AN_ATTACK_DRONE_SIMILAR	Etsijälennokki\nHyökkäyslennokki, joka on samanlainen kuin Jedin käyttämät harjoituslennokit, joka harjoittaa valosapelitaitojaan, Etsijä leijuu käyttäjän ympärillä ja hyökkää vihollisia vastaan, joita käyttäjä ampuu. Lennokki toimii automaattisesti rajoitetun ajan ja sitten itsetuhoaa, kun sen voima on loppunut.
+@MENUS_AN_ELEGANT_WEAPON_FOR	Valosapeli\nTyylikäs ase sivistyneen ajan, valosapeli on ensisijainen ase jedi ritari. Valosapeli on energia terä suuri voima, joka voidaan käyttää hitsaajan sekä hyökkäys ja puolustus.\n\nEnsisijainen tulipalo - viilto- ja swing-hyökkäykset\nSecondary Fire - Voimakäyttöinen sapeliheitto\nPuolustuskyky - Deflects blaster ja energia-ase tuli, kiellä vihollisen valosapeli hyökkäykset\nAmmusten tyyppi - Ei sovelleta
+@MENUS_APPEARANCE	OLTAVA VÄHINTÄÄN SEURAAVAT MERKINNÄT
+@MENUS_APPLY	Käytä
+@MENUS_APPLY_CHANGES	MUUTOKSET
+@MENUS_APPLY_CHANGES_AND_JOIN	Käytä muutoksia ja liity peliin käynnissä.
+@MENUS_APPLY_CHANGES_AND_THEN	Käytä muutoksia ja siirry sitten päävalikkoon.
+@MENUS_APPLY_PLAYER_SABER	Käytä muutoksia pelaajille ja siirry saber-valintaan.
+@MENUS_APPLY_POWERS	Käytä voimia
+@MENUS_APPLY_SABER_CHANGES	Käytä sapelin muutoksia ja palaa päävalikkoon.
+@MENUS_APPLY_THESE_CHANGES_OR	Käytä näitä muutoksia tai hävitä?
+@MENUS_ASSIST_ME	Auta minua.
+@MENUS_ATTACK_THE_ENEMY_S_BASE	Hyökätkää vihollisen tukikohtaan.
+@MENUS_ATTACK_TITLE	Hyökkäys
+@MENUS_AUTO_JOIN_DESC	Anna palvelimen valita joukkueesi ja luokkasi.
+@MENUS_AUTO_TEAM	Automaattinen TEAM
+@MENUS_AWAITING_CHALLENGE	Odotetaan haastetta... %i
+@MENUS_AWAITING_CONNECTION	Odotetaan yhteyttä...%i
+@MENUS_AWAITING_GAMESTATE	Odotan pelitilaa...
+@MENUS_A_DETONATION_PACK_IS	Räjäytyspakkaukset\nRäjäytyspakkaus on pohjimmiltaan pieni räjähde, jossa on kaukolaukaisin. Lauma on sijoitettu tai heitetty ja voidaan räjäyttää haluamallaan käyttäjän. Räjäytyspaketteja käytetään yleisesti väijyttämään vihollisia tai avaamaan suljettuja ovia.\n\nEnsisijainen tuli - Heittää veloitus käyttäjän jaloista\nSekundääripalo - Räjäyttää kaikki asetetut räjähteet
+@MENUS_BACKTOMAIN	Takaisin päävalikkoon.
+@MENUS_BACKTORULES	Takaisin sääntövalikkoon
+@MENUS_BACKUP_ONE_MENU	Peruuttakaa yksi ruokalista.
+@MENUS_BACK_2_PROFILE	Takaisin profiililistalle.
+@MENUS_BACTA_CANISTERS_ARE_PORTABLE	BioTech Bacta Canisters\nBacta-kanisterit ovat kannettavia, kertakäyttöisiä bacta-voiteita ja ensiapuvälineitä. Kentällä käytettäväksi suunniteltuja bacta-kanistereita voidaan käyttää haavojen parantamiseen ja elinvoiman palauttamiseen lääketieteellisen toipumisen aikana.
+@MENUS_BECOME_A_NEARLY_UNSTOPPABLE	Ryhdy lähes pysäyttämättömäksi juggernautiksi.
+@MENUS_BEGIN_PLAYING_THE_DEMO	Aloita valitun tiedoston demoa soitto.
+@MENUS_BLADE_COLOR	BLADE-VÄRI
+@MENUS_BLADE_COLOR_DESC	Valitse valomiekan väri.
+@MENUS_BLASTER_PISTOL_DESC	DL-44 Heavy Blaster Pistol\nYksi galaksin yleisimmistä aseista, DL-44 Heavy Blaster -pistoolissa on hidas tulinopeus, mutta se on erittäin tarkka.\n\nPrimary Fire - Hidas, yksi laukaus suurella tarkkuudella ja vaurioita\nToissijainen tulipalo - Ladattu energian kertyminen lisääntyneen vaurion räjähdys\nAmmustyyppi - Blaster Pack
+@MENUS_BLASTER_RIFLE	BLASTER RIIFLE
+@MENUS_BOTS	LENTOASEMAT
+@MENUS_CALL_FOR_VOTES	Äänestyspyyntö
+@MENUS_CANCEL_DESC	Palaa peliin vaihtamatta joukkueita.
+@MENUS_CHANNEL_THE_FORCE_TO	Kanavoi voima parantaa liittolaisesi.
+@MENUS_CHARACTER_CREATION	CHARACTER creATION
+@MENUS_CHOOSE_A_PRE_MADE_ALLOCATION	Valitse ennalta määrätty Voimanjako.
+@MENUS_CHOOSE_CLASS	VALITSE A-LUOKAN
+@MENUS_CHOOSE_MOVE_DESC	Valitse siirtotyyppi.
+@MENUS_CHOOSE_RULES	Valitse pelisäännöt
+@MENUS_CHOOSE_SOURCE_OF_SERVERS	Valitse palvelinten lähde.
+@MENUS_CHOOSE_SPECIES	Valitse laji.
+@MENUS_CHOOSE_THE_PATH_OF_THE	Valitse valo- tai pimeän puolen polku.
+@MENUS_CHOOSE_YOUR_FORCE_TRAINING	Valitse voimaharjoittelu
+@MENUS_CHOOSE_YOUR_GAME	Valitse pelisi.
+@MENUS_CLASS_CHOICE_DESC	Valitse kurssi.
+@MENUS_CLASS_FORCEPOWERS	Voimaa tälle luokalle.
+@MENUS_CLASS_INVENTORY	Tämän luokan inventointi
+@MENUS_CLASS_WEAPONS	Aseet tälle luokalle.
+@MENUS_CLICK_FOR_HUMAN_BOTS	Klikkaa ihmisiä, botteja tai suljettuja lähtö.
+@MENUS_CLOAK_CAPS	KULJETUKSEN KULJETTAMINEN
+@MENUS_CLOAK_DESC	Verhoilusuoja\nVerhoilusuoja tekee käyttäjästä näkymättömän muille, jolloin se voi liikkua salaa. Kuitenkin laitteen voimantarpeen vuoksi viitta kestää lyhyen ajan.\n\nSuora osuma DEMP 2 -aseesta sammuttaa suojakilven väliaikaisesti. Lisäksi osuma DEMP 2:n toissijaisesta tulesta sammuttaa suojan pysyvästi.\n\nVerhoilusuojaa voidaan käyttää vain piirityspelissä.
+@MENUS_COLOR	VÄRI
+@MENUS_COLOR1_DESC	Valitse terän väri.
+@MENUS_COLOR2	VÄRI 2
+@MENUS_COLOR2_DESC	Valitse toinen terän väri.
+@MENUS_COMMONLY_REFERRED_TO	Tuhoava sähkömagneettinen pulssi 2 ase\nYleisesti kutsutaan DEMP 2, tämä pulssikivääri käytetään pääasiassa vastaan droideja ja sähkölaitteita. DEMP 2 sytyttää korkean teho-ionipurkauksia, jotka häiritsevät sähköjärjestelmiä, ja ovat tehokkaimpia vastaan henkilökohtaisia kilpiä. Toisin kuin aiemmat inkarnaatiot ase, DEMP 2 ionipanokset voivat vahingoittaa elävää materiaalia.\n\nPrimary Fire - Yksi laukaus, tekee joitakin vahinkoja ihmisille, ylimääräisiä vaurioita kilvet\nSecondary Fire - Ladattu laukaus, joka vapauttaa lähes hetkellinen shokkiaalto, joka voi lyödä vihollisia takaisin\nAmmusten tyyppi - Tehokenno
+@MENUS_COMPLETE_THE_CURRENT	Täydennetään nykyistä tavoitetta.
+@MENUS_CONC_RIFLE	YHDENMUKAISUUSVAIHTO
+@MENUS_CONC_RIFLE_DESC	Stouker-aivotärähdys\nStouker laukaisee lievän räjähdyksen, - joka aiheuttaa noin 4 metrin halkaisijan räjähdyksen.\n\nPrimary Fire - Yksi laukaus, suuri räjähdysvaikutus, joka vahingoittaa kaikkea, hidas tulitusnopeus\nSecondary Fire - tulipalot pienempi ammus laukaus, joka on pienempi räjähtävä säde, mutta tekee paljon enemmän vahinkoa, että säde ja on vakavampi rekyyli\nAmmustyyppi - Metalliruuvit
+@MENUS_CONFIGURE_GAME_CONTROLS	Määrittele pelin ohjaimet.
+@MENUS_CONFIGURE_GAME_SETTINGS	Määrittele peliasetukset.
+@MENUS_CONNECTING_TO	Yhdistetään kohteeseen %s
+@MENUS_CREATE_AN_AURA_THAT_PROTECTS	Luo aura, joka suojaa fyysisiltä hyökkäyksiltä.
+@MENUS_CTF_CAPS	LANKENKAIDEN VALMIUS
+@MENUS_CUSTOM_CHARACTER	Oma merkki
+@MENUS_DARK_RAGE	Tumma raivo:
+@MENUS_DATAPAD	Datapad
+@MENUS_DATA_RATE	Datanopeus:
+@MENUS_DATA_RATE_DESC	Tiedonsiirtoyhteyden nopeus internetissä.
+@MENUS_DEFAULT	Oletus
+@MENUS_DEFEND_OUR_BASE	Puolustakaa tukikohtaamme.
+@MENUS_DEFEND_TITLE	Puolusta
+@MENUS_DELETE_SELECTED_SERVER	Poista valittu palvelin suosikeista.
+@MENUS_DEL_FAVORITE	Suosikki
+@MENUS_DESCRIPTION_OF_A_FORCE	Kuvaus Voiman voimasta.
+@MENUS_DESCRIPTION_OF_A_WEAPON	Asetyypin kuvaus.
+@MENUS_DESCRIPTION_OF_ITEM_TYPE	Tavaran tyypin kuvaus
+@MENUS_DETPACK	KESKUSTELU
+@MENUS_DISABLE_FORCE	Poista voima käytöstä:
+@MENUS_DISABLE_FORCE_INFO	Älä käytä mitään voimaa pelin aikana.
+@MENUS_DISCARD	Hävitä
+@MENUS_DISPLAY_SERVER_INFORMATION	Näytä palvelimen tiedot.
+@MENUS_DONE	Valmis
+@MENUS_DONE_CAPS	TEHTY
+@MENUS_DONE_DESC	Palatkaa Palvelin Finderiin.
+@MENUS_DO_NOT_APPLY_CHANGES	Älä käytä muutoksia ja palaa videovalikkoon.
+@MENUS_DO_NOT_LEAVE_JEDI_KNIGHT	Älä lähde Jedi Academy.
+@MENUS_DRAIN_THE_FORCE_POWER	Tyhjennä voima voimaa vastustajat lisätä terveyttä.
+@MENUS_DUALSABERS	Kaksisapelit
+@MENUS_DUALSABERS_DESC	Käytä kahta yksikätistä sapelia, vain yksi taistelutyyli.
+@MENUS_DUAL_SABERS	Kaksisapelit
+@MENUS_DUEL_LIMIT	Kaksintaisteluraja:
+@MENUS_DURATION_5_SECONDS_NAREA	Voimanopeus\nKesto: Muuttuja (10 - 20 sekuntia)\nVaikutusalue: jedi\nVaikutus: Jedi kiihdyttää.\n\nSija 1 - Jedi liikkuu 25% normaalia nopeammin 10 sekunnin ajan\nSija 2 - Jedi liikkuu 50% normaalia nopeammin 15 sekuntia\nSija 3 - Jedi liikkuu 75% normaalia nopeammin 20 sekunnin ajan
+@MENUS_DURATION_CONTINUOUS_NAREA	Voima Imeytyminen\nKesto: Jatkuva\nVaikutusalue: Vain jedit\nVaikutus: Suojaa miltä tahansa suoralta Voimalta.\n\nVauriot voimakyvyistä, jotka on suunnattu hitsaajalle, - muuttavat energian käyttökelpoiseksi Voimavoimaksi.\n\nRank 1 - Nullizes rank 1 Voima hyökkäykset, vähentää vaikutusta korkeampi asema Voima hyökkäykset. Palauttaa joitakin Voima Power.\nRank 2 - Nullizes sijoitus 2 Voiman hyökkäykset, vähentää huomattavasti vaikutusta korkeampi sijoitus Voiman hyökkäykset. Palauttaa suurempi Voiman valta.\nRank 3 - Nullizes kaikki voimahyökkäykset. Palauttaa vielä suurempi voima.
+@MENUS_DURATION_IMMEDIATE_NAREA	Voimahyppy\nKesto: välitön\nVaikutusalue: Vain jedit\nVaikutus: Sallii jedin tehdä valtavan pystysuoran harppauksen.\n\nSija 1 - Jedi voi hypätä jopa kaksinkertainen normaali hyppy korkeus.\nSija 2 - Jedi voi hypätä jopa neljä kertaa niiden normaali hyppy korkeus.\nSija 3 - Jedi voi hypätä jopa kahdeksan kertaa normaali hyppy korkeus.
+@MENUS_DURATION_INSTANTANEOUS	Työnnä\nKesto: Välittömät vaikutukset\nVaikutusalue: Esineet tai henkilöt\nVaikutus: antaa jedi työntää esineitä pois itsestään, torjua ohjuksia, ja puolustaa Force Grip ja Force Push hyökkäyksiä.\n\nSija 1 - Jedi käyttää voimaa työntää tietyn vihollisen tai esineen keskittynyt.\nSija 2 - Jedi käyttää voimaa työntää takaisin useita vihollisia tai esineitä rajoitetussa kaaressa.\nRank 3 - Jedi voi työntää takaisin useita vihollisia tarpeeksi voima tehdä vahinkoa työntämällä viholliset kiinteille pinnoille tai pois reunat.
+@MENUS_DURATION_INSTANTANEOUS_NAREA	Pakota Grip\nKesto: Välittömästi\nVaikutusalue: Vain elävät henkilöt\nVaikutus: Sallii jedin tukehtua tai rajoittaa elävän olennon elimiä.\n\nRank 1 - Koskee vihollista on tarttunut ja pidetty vahingoittumattomana, mutta liikkumatta 5 sekuntia. Jedin on pysyttävä paikallaan.\nRank 2 - Vihollinen vaikuttaa samalla sijalla 1, mutta pito voi vahingoittaa ja nostaa vihollisia pitkään keskittyä ote. Jedi on pysyttävä paikallaan.\nRank 3 - Vihollinen vaikuttaa samalla tavalla sijoitus 2, mutta jedit voivat liikkua vapaasti ja murskata vihollisen seiniin ja muihin esteisiin tai käyttää vihollista suojana tehden vielä tukehtumisvahinkoja.
+@MENUS_DURATION_VARIABLE_10	Pakota raivo\nKesto: Muuttuja (10-30 sekuntia)\nVaikutusalue: Vain pimeä jedi\nVaikutus: Jedi menee raivo nopeuden tietyn ajan, mutta on toipua jälkeenpäin. Viemäröinti terveys ollessaan aktiivinen, ja päättyy jälkeen kesto tai kun terveys osuu 1.\n\nTumma raivo: Tuli 33% nopeammin, Liiku 100% nopeammin, vähentää vahinkoa 50%, hitsaus ei voi kuolla (terveys pysyy 1).\nTumma raivo Recovery: Tuli 50% hitaammin, liikkuu 75% nopeudella\n\nSijoitus 1 - Rage 10 sekuntia, 10 sekuntia toipuminen\nSija 2 - Rage 20 sekuntia, 10 sekuntia toipuminen\nSija 3 - Rage 30 sekuntia, 10 sekuntia
+@MENUS_DURATION_VARIABLE_20	Mielen temppu\nKesto: Muuttuja (5-15 sekuntia)\nVaikutusalue: Muut pelaajat\nVaikutus: Sallii jedin tehdä itsensä näkymättömäksi muille pelaajille.\n\nSija 1 - Jedi on näkymätön yhdelle viholliselle 5 sekunnin ajan.\nSija 2 - Jedi on näkymätön vihollisille eteenpäin kaaren kohtalainen etäisyys 10 sekuntia.\nSija 3 - Jedi on näkymätön kaikille vihollisille kohtuullisella etäisyydellä 15 sekuntia.
+@MENUS_DURATION_VARIABLE_NAREA	Voimansuojaus\nKesto: Muuttuja\nVaikutusalue: Vain jedit\nVaikutus: Suojaa fyysisiltä hyökkäyksiltä.\n\nFyysisistä hyökkäyksistä Jedille aiheutuvat vahingot otetaan Voimapoolista eikä terveyspisteistä.\n\nRank 1 - 50% Vaurio estetty, 100% poistettu voimaaltaasta, enintään 100 Vahinkoa\nSija 2 - 75% Vauriot estetty, 50% poistettu Voima-altaasta, enintään 200 Vahingot\nSija 3 - 87,5% Vauriot estetty, 25% poistettu voimaaltaasta, enintään 400 Vahinkoa
+@MENUS_EFFECT_JEDI_ALLIES_NEFFECT	Team Käynnistä\nKesto: Välittömät vaikutukset\nVaikutusalue: Jedi-liittolaiset\nVaikutus: Jedi on kyky yhdistää liittolaisia Voima-energia.\n\nVoima Team Energize avulla jedi palauttaa tietyn määrän voima energiaa hänen liittolaisiaan tietyn säteellä hänen kehonsa. Jedi voi palauttaa 50 Voima pistettä yhteen liittolaiseen, 33 Voima pistettä kahteen liittolaiseen tai 25 Voima pistettä 3 tai useampia liittolaisia.\n\nSijoitus 1 - Normaali alue\nSija 2 - Puolitoista kertaa normaali\nSija 3 - Kahden normaalin alueen
+@MENUS_EFFECT_NAREA_OF_EFFECT	Voimaa aisti\nKesto: Välittömät vaikutukset\nVaikutusalue: jedikenttä\nVaikutus: Mahdollistaa jedi suuri ja laaja visio.\n\nVoima näkeminen mahdollistaa jedien nähdä kaikki viholliset selvästi, valaistusolosuhteista riippumatta, ympäröimällä heidät helposti nähtävällä hehkuvalla auralla. Voima näkeminen mahdollistaa myös jedien torjua jedi Mielen Trick Force -voimaa. Korkeimmalla voimatasolla Jedien näkeminen kehittää kuudennen aistin, jonka avulla hän voi väistellä tarkka-ampujan tulta.\n\nSija 1 - Katso pelaajien aurat korostettu normaalin ajan.\nSija 2 - Katso pelaajien aurat näkyvissä ja läpi seinien kaksinkertainen aika.\nRank 3 - Katso pelaajien aurat näkyvissä ja seinien kautta tahansa alueella kolminkertaisen ajan. Pelaajat voivat automaattisesti väistää tarkka-ampuja laukausta tällä tasolla.
+@MENUS_ENDGAME_RULES	LOPPUPELIN SÄÄNNÖT
+@MENUS_ENTER_IP_ADDRESS	Anna IP-osoite:
+@MENUS_ENTER_IP_ADDRESS_OF_FAVORITE	Anna suosikkipalvelimen IP-osoite.
+@MENUS_ENTER_PASSWORD	LIITÄNNÄISPASSI
+@MENUS_ENTER_THE_NAME_FOR_YOUR	Anna palvelimen nimi.
+@MENUS_ENTER_THE_TITLE_FOR_YOUR	Anna voimamallisi otsikko (vain Alphanumeerinen).
+@MENUS_ERROR	Virhe:
+@MENUS_ESTABLISH_THE_NUMBER	Ottelun voittamiseen tarvittava määrä tappoja.
+@MENUS_EVEN_TEAMS	Jopa joukkueet:
+@MENUS_EWEB_DESC	E-Web\nE-Web on teho kolmijalka lasertykki. Se voidaan ottaa käyttöön taistelukentällä auttaa luomaan vahva puolustusasento.\n\nE-Web on käyttökelpoinen vain piirityspelissä.
+@MENUS_EXIT_TO_MAIN_MENU	Poistu päävalikkoon.
+@MENUS_FAVORITE_SERVER_INFO	FAVORITE SERVENER INFO
+@MENUS_FFA_CAPS	ILMAINEN KAIKILLE
+@MENUS_FILENAME	Tiedostonimi:
+@MENUS_FILTER_FOR_SPECIFIC_GAME	Aseta suodatin tietyille pelityypeille.
+@MENUS_FIND_PLAYER	Etsi pelaaja
+@MENUS_FINISHED_INPUTTING_INFO	Syötetiedot ovat valmiit.
+@MENUS_FOLLOW_ME	Seuraa minua.
+@MENUS_FORCEDESC_DARK	Tumma
+@MENUS_FORCEDESC_LIGHT	Valo
+@MENUS_FORCE_DRAIN	Kuivatus:
+@MENUS_FORCE_GRIP	Tarra:
+@MENUS_FORCE_HEAL	Parannus:
+@MENUS_FORCE_JUMP	Hyppy:
+@MENUS_FORCE_LIGHTNING	Salama:
+@MENUS_FORCE_MASTERY	Voimanhallinta:
+@MENUS_FORCE_MASTERY_INFO	Määrittää niiden pisteiden määrän, jotka voidaan jakaa voimavoimavoimaan.
+@MENUS_FORCE_PROTECT	Suojaa:
+@MENUS_FORCE_PULL	Vedä:
+@MENUS_FORCE_PUSH	Paino:
+@MENUS_FORCE_RULES	Voimasäännöt.
+@MENUS_FORCE_SIDE	Voimapuoli:
+@MENUS_FORCE_SIGHT	Näkeminen:
+@MENUS_FORCE_SPEED	Nopeus:
+@MENUS_FORCE_TEAM_REPLENISH	Team Käynnistä:
+@MENUS_FORCE_TEMPLATES	Pakkomallit
+@MENUS_GAME	Peli:
+@MENUS_GAME_RULES	Pelisäännöt.
+@MENUS_GAME_TYPE	Tyyppi:
+@MENUS_GENERAL_RULES	YLEISET SÄÄNNÖKSET
+@MENUS_GET_ENEMY_FLAG_BACK_TO	Viekää vihollisen lippu takaisin tukikohtaan.
+@MENUS_GET_OUR_FLAG_BACK	Hae lippumme takaisin.
+@MENUS_GET_SERVER_INFO	Palvelintiedot
+@MENUS_GET_UPDATED_SERVER_LIST	Päivitä palvelinlista.
+@MENUS_GO_TO_MAIN_MENU	Menetkö Main Menulle?
+@MENUS_GUARD_OUR_FLAG_CARRIER	Vartioikaa lippulaivaamme.
+@MENUS_HEAD	PÄÄ
+@MENUS_HEAL	KUUKAUS
+@MENUS_HEAL_YOUR_BODY_WITH_THE	Paranna kehosi Voimalla.
+@MENUS_HILT1_DESC	Valitse kahva.
+@MENUS_HILT2_DESC	Valitse toinen kahva.
+@MENUS_IMMOBILIZE_OPPONENTS	Mobilisoi vastustajat tuskallisessa kuoleman otteessa.
+@MENUS_INCLUDE_EMPTY_SERVERS	Sisällytä tyhjät palvelimet luetteloon.
+@MENUS_INCLUDE_FULL_SERVERS	Merkitse kaikki palvelimet listaan.
+@MENUS_INPUT_IP_ADDRESS_OF_SERVER	Palvelimen IP-osoite.
+@MENUS_INPUT_PASSWORD	Syöttösalasana.
+@MENUS_INPUT_PASSWORD_1	Kirjoita salasana
+@MENUS_INPUT_PLAYER_NAME	Syötesoittimen nimi.
+@MENUS_INSTANTANEOUS_EFFECT_NAREA	Voimaveto\nKesto: Välittömät vaikutukset\nVaikutusalue: Esineet tai henkilöt\nVaikutus: antaa jedi vetää vihollisia itseään kohti mahdollisuus riisua vastustajan. Se myös puolustaa Force Vedä hyökkäyksiä.\n\nRank 1 - Jedi käyttää voimaa vetää tietyn vihollisen keskittynyt.\nSija 2 - Jedi käyttää Voima vetää useita vihollisia rajoitettu kaaressa.\nSija 3 - Jedi voi vetää useita vihollisia tarpeeksi voimaa kaataa maalit lähietäisyydeltä.
+@MENUS_IN_CAPTURE_THE_FLAG_CTF	Vuonna Capture The Flag (CTF), kaksi joukkuetta kilpailevat kaapata lipun vastapuolen joukkueen ja palauttaa sen kotiinsa. Jokainen joukkueen jäsen voi poimia vastustajan joukkueen lippu. Kun lippu on otettu, kaikki pelaajat kartalla ovat hälytettyjä tapahtumaan. Lippu operaattorin on sitten paeta vihollisen alueelta ja palata lipun oman pohjan pisteet.\n\nJos lipunkantaja eliminoidaan, lippu pudotetaan eliminointipisteeseen. Jos lipunomistajan tiimin jäsen koskettaa lippua, se palautetaan automaattisesti takaisin heidän tukikohtaansa. Jos eliminoidun pelaajan tiimin jäsen hakee sen, he voivat jatkaa sen palauttamista kotipesälleen. Lippualuksen oman lipun on oltava "koti" sen perusasemalla, jotta operaattori voi tehdä pisteet vastakkaisen joukkueen lipun kanssa.\n\nTEHTÄVÄNÄ\nVihollisen lipun kaappaus: +1 pistettä\n\nYKSITTÄINEN KUORMA\nVihollisen lipun noutaminen: +10 pistettä\nVihollisen lipun kaappaus: +100 pistettä\nTiimisi kaappaa vihollisen lipun: +25 pistettä\nLippusi takaisin: +10 pistettä\n- mahdollistaa välitön kaappaus ryhmälle: +10 pistettä\nVihollisen lippulaivan poistaminen: +20 pistettä\n- mahdollistaa välitön kaappaus ryhmälle: +10 pistettä\nLippualuksen suojaaminen: +5 pistettä\nLipputukikohdan suojaaminen: +10 pistettä\n\nPelin voittaa joukkue, jolla on korkeimmat pisteet ottelun lopussa.
+@MENUS_ITEM_RULES	Kohtasäännöt.
+@MENUS_JEDI_KNIGHT_II	Poistu Jedi Academy.
+@MENUS_JETPACK_DESC	Jetpack\nRakettirepun avulla käyttäjä voi lentää lyhyen ajan, antaa heille taktinen etu muihin. Jos käyttäjä ei ammu raketteja, he menettävät hitaasti korkeus.\n\nRakettireppu on käyttökelpoinen vain piirityspelissä.\n\n(Huomautus: Aktivoi jetpack, hyppää, sitten paina 'use' kun ilmassa. Pitämällä 'hyppää' mahdollistaa käyttäjän saada korkeus, samalla pitämällä 'crouch' alentaa korkeus.)
+@MENUS_JOIN	Liity
+@MENUS_JOIN_A_TEAM	YHDISTYSTEAM
+@MENUS_JOIN_CAPS	YHDISTYS
+@MENUS_JOIN_CHOSEN_SERVER	Liity valittuun palvelimeen.
+@MENUS_JOIN_GAME	Liity peliin
+@MENUS_JOIN_PLAYER_DESC	Liity palvelimeen tämän pelaajan kanssa.
+@MENUS_JOIN_TEAM_DESC	Liity tähän tiimiin.
+@MENUS_KILL_LIMIT	Tapporaja:
+@MENUS_LEAP_TO_AMAZING_HEIGHTS	Hyppää uskomattomiin korkeuksiin pitämällä Hyppy-painiketta.
+@MENUS_LEAVE_JEDI_KNIGHT_II	Jätä Jedi Academy Multiplayer peli.
+@MENUS_LIGHTSABER_CREATION	LIGHTSABERIEN LUOMINEN
+@MENUS_LIGHTSABER_ONLY	Vain valosapeli:
+@MENUS_LOADING_MAPNAME	Ladataan... %s
+@MENUS_MAIN_MENU	Päävalikko
+@MENUS_MAKE_THESE_CHANGES_TO	Tee nämä muutokset hahmosi Voima Kyvyt.
+@MENUS_MAP_LISTING	KARTONKILUETTELO
+@MENUS_MATCH	- Aloita Match uudestaan?
+@MENUS_MATCHING_NAMES	Täsmälliset nimet korvataan.
+@MENUS_MAXIMUM_PLAYERS	Suurin pelaaja:
+@MENUS_MISSION	Tehtävä:
+@MENUS_MISSION_OBJECTIVES	TEHTÄVÄN TAVOITTEET
+@MENUS_MOVE_AT_AN_ACCELERATED	Liikkuu nopeutettua vauhtia.
+@MENUS_MOVE_DESC2	Klikkaa nähdäksesi liikkeen kuvauksen.
+@MENUS_MOVE_RULES	Liikkumissäännöt.
+@MENUS_MOVE_TYPES	Liikkumistyypit
+@MENUS_MUST_ACQUIRE_A_MINIMUM	Täytyy hankkia vähintään arvo yksi Saber Attack saada valosaber.
+@MENUS_NAME	Nimi
+@MENUS_NAME1	Nimi:
+@MENUS_NAME_TITLE	Nimi:
+@MENUS_NEW_FAVORITE	Uusi suosikki
+@MENUS_NO	Ei.
+@MENUS_NO_LIGHTSABER	Ei valosapelia
+@MENUS_OBJECTIVE_1	Tavoite 1
+@MENUS_OBJECTIVE_2	Tavoite 2
+@MENUS_OBJECTIVE_3	Tavoite 3
+@MENUS_OBJECTIVE_4	Tavoite 4
+@MENUS_OBJECTIVE_5	Tavoite 5
+@MENUS_OBJECTIVE_6	Tavoite 6
+@MENUS_OBJECTIVE_7	Tavoite 7
+@MENUS_OBJECTIVE_8	Tavoite 8
+@MENUS_OBJECTIVE_COMPLETED	Valmista.
+@MENUS_OF_EFFECT_JEDI_ALLIES_NEFFECT	Parannus\nKesto: Välittömät vaikutukset\nVaikutusalue: Jedi-liittolaiset\nVaikutus: Jedi on kyky parantaa liittolaisia loukkaantumisen jälkeen.\n\nPakko Parannus Toinen sallii jedin palauttaa tietyn määrän terveyttä liittolaisilleen tietyn säteellä heidän kehonsa. Jedi voi palauttaa 50 terveyttä yhdelle liittolaiselle,\n33 terveyttä kaksi liittolaista tai 25 terveyttä kolme tai useampia liittolaisia.\n\nSijoitus 1 - Normaali alue\nSija 2 - Puolitoista kertaa normaali\nSija 3 - Kahden normaalin alueen
+@MENUS_OF_EFFECT_JEDI_ONLY_NEFFECT	Voiman parantuminen\nKesto: Välittömät vaikutukset\nVaikutusalue: Vain jedit\nVaikutus: Jedit paranevat loukkaantumisen jälkeen.\n\nSija 1 - Jedi palauttaa jopa 5 terveyttä välittömästi.\nSija 2 - Jedi palauttaa jopa 10 terveyttä välittömästi.\nSija 3 - Jedi palauttaa jopa 25 terveyttä välittömästi.
+@MENUS_OF_EFFECT_LIVING_PERSONS	Pakota salama\nKesto: Muuttuja\nVaikutusalue: Vain elävät henkilöt\nVaikutus: antaa jedi heittää tuhoisa sähköinen hyökkäys vihollisia vastaan.\n\nRank 1 - Jedi laukaisee yhden pultin, joka ampuu eteenpäin, tehden välitöntä vahinkoa.\nSija 2 - Jedi voi ylläpitää Force Lightning kestävä eteenpäin hyökkäys.\nRank 3 - Jedi säteilee pitkäjänteistä sähkötuuletinta suuressa kaaressa, vahingoittaen kaikkea heidän edessään.
+@MENUS_OKAY	Selvä.
+@MENUS_ONLY_HUMANS	Vain ihmiset saavat piirittää
+@MENUS_PASSWORD	Salasana
+@MENUS_PERSONAL_SHIELD_ARMOR	HENKILÖKILPAILU (ARMOR)
+@MENUS_PLAYERS	Minimi Bots/Players:
+@MENUS_PLAYERS_INFO	Lisää botit, jos palvelimella on vähemmän aktiivisia ihmispelaajia.
+@MENUS_POINTS_REMAINING	Jäljellä olevat pisteet:
+@MENUS_POWER	Teho:
+@MENUS_PREVENT_THE_ENEMY_FROM	Estä vihollista saavuttamasta nykyistä tavoitettaan.
+@MENUS_PRIMARY_OBJECTIVES	Päätavoite
+@MENUS_PROFILE_DESC	Määrittele merkkiasetukset.
+@MENUS_PROGRAM	Lopettaa ohjelman?
+@MENUS_PROTECT	SUOJA
+@MENUS_PROTECT_AGAINST_FORCE	Suojella voimahyökkäyksiä ja saada valtaa heiltä.
+@MENUS_PULL_YOUR_FOES_TO_YOU	Vetäkää vihollisenne.
+@MENUS_PUSH_YOUR_FOES_AWAY_AND	Työnnä vihollisesi pois ja torju ammukset.
+@MENUS_QUIT_PROGRAM	Lopeta ohjelma
+@MENUS_RAGE_1	KUUKAUS
+@MENUS_REFRESH_LIST	Päivitä luettelo
+@MENUS_REFRESH_SERVER_LIST	Päivitä palvelinluettelo.
+@MENUS_REGROUP	Kokoontukaa uudelleen.
+@MENUS_RENDER_YOURSELF_INVISIBLE	Renderöi itsesi näkymättömäksi valituille kohteille.
+@MENUS_REPEATER	KUMOJA
+@MENUS_REPLY_TITLE	Vastaus
+@MENUS_REQUEST_TITLE	Pyyntö
+@MENUS_RESTART_MATCH	Käynnistä ottelu uudelleen
+@MENUS_RETURN_PREVIOUS	Palaa edelliseen valikkoon.
+@MENUS_SABERSTAFF	Kaksikätinen Saber
+@MENUS_SABERSTAFF_DESC	Käytä yhtä kaksikätistä sapelia, vain yhtä taistelutyyliä.
+@MENUS_SABER_ATTACK	Saber-hyökkäys:
+@MENUS_SABER_HILTS_DESC	Valitse sapelin kahvasi.
+@MENUS_SABER_ONLY_INFO	Kaikki pelaajat käyttävät valosapelia, ja kaikki aseet on poistettu.
+@MENUS_SABER_STAFF	Saberin henkilökunta
+@MENUS_SABER_TYPE	SABER-TYYPPI
+@MENUS_SABER_TYPE_DESC	Valitse sapelityyppisi.
+@MENUS_SAVE_CURRENT_FORCE_SETUP	Tallenna nykyinen voiman asetus erillisenä mallina.
+@MENUS_SAVE_FILE	Tallenna tiedosto
+@MENUS_SEARCHING	etsii %d/%d...
+@MENUS_SEARCH_CAPS	HAKU
+@MENUS_SEARCH_CURRENT_SERVER	Etsi nykyinen palvelimen lista ystäville.
+@MENUS_SEARCH_DESC	Etsi kaikki palvelimet tätä pelaajaa.
+@MENUS_SECONDARY_OBJECTIVES	Toissijaiset tavoitteet
+@MENUS_SEEKER_CAPS	SEKEKER DRONE
+@MENUS_SEE_ENEMIES_AT_ALL_TIMES	Nähdä vihollisia koko ajan, ja jopa väistellä tarkka-ampuja laukausta.
+@MENUS_SELECT_BOTS	Valitse botit
+@MENUS_SELECT_BOTS_DESC	Valitse omat botit, joita vastaan pelata
+@MENUS_SELECT_HEAD	Valitse päätyyli.
+@MENUS_SELECT_LEGS	Valitse jalat tyyliin.
+@MENUS_SELECT_TORSO	Valitse torsotyyli.
+@MENUS_SENTRY_CAPS	TOIMITUS
+@MENUS_SERVERS_FOUNDWITH	%d-palvelin%s löytyi pelaajasta %s
+@MENUS_SERVER_INFORMATION	Palvelimen tiedot
+@MENUS_SERVER_NAME_1	Palvelimen nimi:
+@MENUS_SETS_THE_MAXIMUM_NUMBER	Asettaa maksimimäärän pelaajia, jotka saavat liittyä palvelimeesi.
+@MENUS_SET_FILTER_FOR_SPECIFIC	Aseta suodatin tietyille pelimodeille.
+@MENUS_SHOW_GAME_CREDITS	Näytä pelin opintopisteet.
+@MENUS_SIEGE_DEMOLITIONS	VÄITTEET
+@MENUS_SIEGE_GAME_RULES_DESC	Piiritys kuoppaa kaksi joukkuetta toisiaan vastaan ajoitettu ottelu, jossa yksi joukkue on hyökkäys ja toinen puolustus. Molemmat joukkueet ovat tavoitteita, mutta loukkaava joukkueen on täytettävä niiden ensisijainen tavoite voittaa.\n\nJokainen joukkue koostuu useita merkkejä, kukin omaa erikoisuutta. Jokainen merkki voi osallistua omalla ainutlaatuinen taito asettaa.\n\nValinnainen palvelinsääntö mahdollistaa joukkueen vaihdon. Tämän valinnan avulla joukkueet vaihtavat ensimmäisen ottelun jälkeen. Jos hyökkäävä joukkue oli voittanut ensimmäisen ottelun, uudella hyökkäävällä joukkueella on aikarajoitus, joka vastaa ensimmäistä joukkuetta voittaa. Jos hyökkäävä joukkue suorittaa kaikki tavoitteet lyhyemmässä ajassa, he voittavat pelin.\n\nVoittoehdot - OPETUS\nTäytä kaikki ensisijaiset tavoitteet ennen kuin aika loppuu.\n\nVOITTO-EDELLYTYKSET\nEstää rikkomuksen saavuttaa kaikki ensisijaiset tavoitteet ennen kuin aika loppuu.\nTäydelliset tavoitteet, jotka voivat estää hyökkäysryhmää toteuttamasta jotakin päätavoitteistaan.
+@MENUS_SIEGE_HEAVY_WEAPS	KIVENNÄISET ASEET
+@MENUS_SIGHT	NÄKÖKOHDAT
+@MENUS_SINGLESABER	Standardisapeli
+@MENUS_SINGLESABER_DESC	Käytä yksikätinen sapeli, valinta 3 taistelu tyylejä.
+@MENUS_SKILL	Taito
+@MENUS_SKILL1	Taito:
+@MENUS_SORT_BY_GAME_TYPE	Järjestä pelin tyypin mukaan.
+@MENUS_SORT_BY_MAP_NAME	Lajittele kartan nimi.
+@MENUS_SORT_BY_NUMBER_OF_PLAYERS	Lajittele pelaajien määrän mukaan.
+@MENUS_SORT_BY_PING_TIME	Järjestä ping-aika.
+@MENUS_SORT_BY_SERVER_NAME	Järjestä palvelinnimellä.
+@MENUS_SOURCE	Lähde:
+@MENUS_SPECIES	LAJI
+@MENUS_SPECTATE	Silmämääräinen
+@MENUS_SPEED	NOPEA
+@MENUS_SPEND_YOUR_POINTS_BY	Käytä pisteitä klikkaamalla Voima Powers alla.
+@MENUS_SPOTTED_TITLE	Täplikäs
+@MENUS_STARTING_UP	Aloitetaan...
+@MENUS_START_PLAYING_NOW	Ala soittaa nyt!
+@MENUS_START_SERVER	Käynnistä palvelin.
+@MENUS_STATIONARY_SHIELD_CAPS	TESTAUSKILPI
+@MENUS_TACTICS_TITLE	Taktiikka
+@MENUS_TEAM	Tiimi:
+@MENUS_TEAM_BLUE	BLUE-ryhmä
+@MENUS_TEAM_RED	Punainen ryhmä
+@MENUS_TEAM_SWITCHING	Tiiminvaihto:
+@MENUS_TEAM_SWITCHING_DESC	Valitse pelitila, jossa joukkueet kilpailevat kartan viimeistelystä vähiten aikaa.
+@MENUS_THERMAL_DETONATOR	THERMAALINEN DETONATORI
+@MENUS_THE_FORCE_TO_BOOST_THE	Kanavoikaa voimaa vahvistaaksenne liittolaistenne voimaa.
+@MENUS_THE_GAME_OF_DUEL_IS_ALSO	Kaksintaistelu kuoppaa kaksi taistelijaa pienellä suljetulla areenalla taistelemaan valosapelien kanssa. Molemmat kilpailijat aloittavat kierroksen täydellä terveydellä, sapelit, ja blaster pistooli (palvelija vaihtoehto), ja on kohdata toisiaan vastaan.\n\nMikä tahansa määrä pelaajia voi osallistua Duel, mutta vain kaksi ovat areenalla tahansa tiettynä ajankohtana. Jäljelle jäävät pelaajat tarkkailla kunnes ottelu on valmis. Kun yksi pelaaja on eliminoitu, häviäjä on asetettu loppuun tarkkailija jono, ja seuraava henkilö jonossa on tuotu taistelemaan voittaja.\n\nJälleen kerran molemmat kilpailijat ovat täysin täydentää terveyttä. Voittaja jatkaa kilpailua uusia vastustajia, pisteytys pisteitä kunnes hän on poistettu tai ottelun raja on saavutettu.\n\nSEURAAVA\nVihollisen eliminointi: +1 pistettä\nItsesi eliminointi: +1 vastustajallesi\n\nPelaaja, jolla on korkeimmat pisteet ottelun lopussa voittaa.
+@MENUS_THE_MEDPAC_IS_A_SMALL	Medpac\nLääkintäpakkaus on pieni standardi. Hankittaessa medpac palautuu välittömästi terveeksi ja parantaa vahingoittunutta kudosta.
+@MENUS_THE_PERSONAL_SHIELD_IS	Henkilösuoja (Armor)\nHenkilökohtainen suojakilpi on vyöhön kiinnitetty laite, joka projisoi suojavoimakentän käyttäjän ympärille. Kun suojakenttä vaurioituu, sen suojaluokitus pienenee. Kun kilpi on saanut yhtä paljon vahinkoa kuin sen luokitus, kilpi sammuu, kunnes se voidaan ladata uudelleen. Suojat imevät useimmat hyökkäysvauriotyypit, mutta eivät suojaa käyttäjää putoamiselta tai murskaamiselta. Henkilösuojat täytetään kilpiparistoilla.
+@MENUS_THE_PLX_2M_IS_AN_EXTREMELY	Merr-Sonn PLX-2M kannettava ohjusjärjestelmä\nPLX-2M on erittäin tehokas ase, joka laukaisee Arakyd 3T3-ohjuksia. PLX-2M:n räjähdysvoima tekee sokeasti ampumisen vaaralliseksi lähitiloissa, mutta on erittäin tehokas, kun sitä käytetään "älykkäänä" seuranta-aseena.\n\nPrimary Fire - laukaisee yhden, eteenpäin polttavan räjähdeohjuksen\nSekundaarinen tulipalo - laukaisee yhden "älykkään" ohjuksen, joka seuraa hankittuja ja lukittuja kohteita\nAmmustyyppi - Raketit
+@MENUS_THE_PRIMARY_WEAPON_OF	E-11 Blaster-kivääri\nKeisarillisten voimien ensisijainen ase, E-11 on tukeva ja tappava räjäytyskivääri, joka pystyy aiheuttamaan suuria vahinkoja pienestä koostaan huolimatta. E-11:n kompakti muotoilu tekee siitä helposti kuljetettavan ja piilotettavan.\n\nEnsisijainen Tuli - Hidas, yksi laukaus kohtalaisen tarkasti ja suuri vaurio\nToissijainen palo - Nopea, räjähtää tulipalon alhainen tarkkuus ja laajennettu ampuma-alue\nAmmustyyppi - Blaster Pack
+@MENUS_THE_THERMAL_DETONATOR	Lämpöräjähdys\nLämpösytytin on sädevahingollinen kranaatti, joka vapauttaa lämpöenergiaa, joka voi hajottaa kaiken materian.\n\nEnsisijainen tulipalo - Kranaatti räjähtää lyhyen ajan kuluttua\nSekundääripalo - Kranaatti räjähtää kosketuksessa
+@MENUS_THIS_ARCHAIC_LOOKING	Wookie Bowcaster\nTämä vanhan näköinen ase ampuu voimakkaita metallipultteja verhottu taskut energiaa. Kykenee aiheuttamaan uskomattomia vaurioita, bowcaster vaatii valtavaa fyysistä voimaa ampua. Useimmat bowcasters myydään ulkopuolella Wookie kotimaailmassa tulevat varustettu itse-laukaus toimia, jotka mahdollistavat fyysisesti heikompien olentojen ampua niitä.\n\nPrimary Fire - ladattu energia kertyy useita laukausta\nSekundaarinen palo - Erittäin tarkka, kimmoisa yksittäinen laukaus\nAmmusten tyyppi - Tehokenno
+@MENUS_THIS_DEADLY_WEAPON_IS	Kannettava pahoinpitely Sentry\nTämä tappava ase on suunnilleen suuren repun kokoinen, mutta älä anna sen koon hämätä sinua. Kun ase on aktivoitu, se purkautuu ja on asetettu automaattisesti kohdistumaan vihollisen uhkiin. Sentry tyhjentää akun eliniän kiihtyvällä nopeudella ja, kun se on otettu käyttöön, sitä ei voida palauttaa alkuperäiseen kannettavaan tilaan.
+@MENUS_THIS_DESTRUCTIVE_PROJECTILE	Keisarillinen Heavy Toistaja kanssa aivotärähdyksen laukaisin\nTämä tuhoisa ammus ase on erittäin tappava, ampua nopeasti virtaa metalli luoteja. Keisarilliset voimat käyttävät Heavy Toistajan tappava tukahduttava tuli ja aivotärähdyksen laukaisin väkijoukon hallintaan ja levittää raskaita tulipaloja yli\nsuuria alueita.\n\nEnsisijainen tulipalo - Täysin automaattinen ammuspalo\nSekundaarinen palo - Yksi laukaus, aivotärähdys räjähtää kierros\nAmmustyyppi - Metallipultit
+@MENUS_THIS_GAME_IS_BEST_SUMMED	Free For All on paras tiivistää kuin jokainen henkilö itselleen. Pelaajat pisteet poistamalla muita pelaajia ja kukaan ei voi pitää liittolainen.\n\nAseita ja laitteita hankitaan kentällä, ellei palvelimella ole muuta ilmoitettu. Jotkut vaihtoehdot sisältävät sen, sallitaanko Voiman voimat vai ei ja maksimivoimatason käytettävissä.\n\nSEURAAVA\nVihollisen eliminointi: +1 pistettä\nItsesi poistaminen: -1 pistettä\n\nPelaaja, jolla on korkeimmat pisteet ottelun lopussa voittaa pelin.
+@MENUS_THIS_GAME_PITS_TWO_JEDI	Team Free For All kuopat kaksi jedi joukkuetta toisiaan vastaan taistelussa herruudesta. Jokainen pelaaja tekee pisteitä poistaa vastustajat, mutta pelaajat samassa joukkueessa voivat työskennellä yhdessä poistaa kovempia vihollisia. Kaikki pelaajat joukkue yhdistää pisteet yhden joukkueen pisteet.\n\nAseet ja laitteet hankitaan kentältä, ellei palvelimella ole muuta ilmoitettu. Jotkut vaihtoehdot sisältävät sen, sallitaanko Voiman voimat vai ei ja maksimivoimatason käytettävissä.\n\nSEURAAVA\nVihollisryhmän jäsenen eliminointi: +1 piste\nItsesi tai tiimin jäsenen eliminointi: -1 pistettä\n\nPelin voittaa joukkue, jolla on korkeimmat pisteet kierroksen lopussa.
+@MENUS_THIS_IS_THE_NUMBER_OF	Tämä on useita kertoja lippu on kaapattava voittaa pelin.
+@MENUS_THIS_NEFARIOUS_WEAPON	Tenloss DXR-6 Häiriökivääri\nTämä paha ase vaikuttaa materiaan molekyylitasolla repimällä elävää materiaalia helposti. Aseen epäinhimillisen luonteen vuoksi DXR-6 on kielletty koko galaksissa ja sitä käyttävät yleensä vain hajallaan olevat droidi- ja jäännevoimat.\n\nPrimary Fire - yksi laukaus hidas tulinopeus, ja instant hyökkäys\nSecondary Fire - Laaja tila: Yksi laukaus, joka on ladattava ensin, aiheuttaa lisää vahinkoa ja on suuri energiankulutus\nAmmusten tyyppi - Tehokenno
+@MENUS_THIS_OPTION_RE_BALANCES	Tämä vaihtoehto estää pelaajaa liittymästä joukkueeseen, jos se tasapainottaa joukkueet.
+@MENUS_THIS_STATIONARY_ENERGY	Stationary Shield\nTämä kiinteä energiakenttä voidaan pudottaa mihin tahansa paikkaan, jolloin se ottaa käyttöön suuren tasaisen kilven, joka voi estää vihollisen tulen. Liittoutuneet voivat kulkea kilven läpi, mutta viholliset eivät voi. Suojakilpi katoaa sen jälkeen, kun sen virtalähde on käytetty tai sen jälkeen kestää tietyn määrän vahinkoa.
+@MENUS_THIS_VALUE_ADJUSTS_THE	Ottelun kesto minuutteja.
+@MENUS_THROW_YOUR_LIGHTSABER	Heitä valosapelisi vahingoittamaan kaukaisia kohteita.
+@MENUS_TIME_LIMIT	Aikarajoitus:
+@MENUS_TRIP_MINE	KULJETTU MINUN
+@MENUS_TRIP_MINES_CONSIST_OF	Matkakaivokset\nTrip kaivokset koostuvat säteen projektori kiinnitetty muotoinen räjähde kotelo. Laser aktivoituu, kun kaivos on sijoitettu ja laajentaa säteen latauksen lähimpään pintaan, joka leikkaa sen polku. Jos säde on rikki tai lataus on ammuttu, kaivos räjähtää ja aiheuttaa säteen vaurioita mitään alueella.\n\nEnsisijainen tulipalo - Kun se on asetettu, se räjähtää, jos säde on rikki tai kaivos tuhoutuu\nSekundääripalo - Kun se on sijoitettu, se räjähtää, jos joku on sen läheisyydessä tai kaivos on tuhoutunut. Ei ole säde eikä se räjäytä käyttäjälle
+@MENUS_UNAPPLIED_VIDEO_CHANGES	Sovellamattomat videomuutokset
+@MENUS_UNLEASH_DEADLY_ELECTRICAL	Vapauta tappavat sähköiskut vihollisiasi vastaan.
+@MENUS_USE_MORE_POWERFUL_LIGHTSABER	Käytä tehokkaampia valosapeli hyökkäyksiä. (Vaaditaan omistaa sapeli)
+@MENUS_USE_THE_LIGHTSABER_TO	Käytä valosapelia estämään saapuvat sapeli-iskut ja ammukset.
+@MENUS_VALUE_ADJUSTS_THE_TOTAL	Onnistuneiden kierrosten määrä (duels) tarvitaan voittaa ottelun.
+@MENUS_VARIABLE_NAREA_OF_EFFECT	Pakoviemäri\nKesto: Muuttuja\nVaikutusalue: Vain elävät henkilöt\nEffect: Drains Force Power ja käyttää sitä täydentää elämää.\n\nRank 1 - Laukaisee yhden pultin, joka ampuu eteenpäin, valuttaa 10 voimapistettä sekunnissa ja parantaa sen määrän.\nRank 2 - kohdentamaton, jatkuva hyökkäys, tyhjennys 15 voimapistettä sekunnissa.\nRank 3 - Emanates kestävä tuuletin suuri eteenpäin kaaren, valuttaen minkä tahansa maalin hänen edessään 20 Force pistettä sekunnissa.
+@MENUS_VC_ATT	1. Hyökkäys
+@MENUS_VC_ATT_POSITION	3. Hyökkäyspaikka
+@MENUS_VC_ATT_PRIMARY	1. Hyökkäys ensisijainen tavoite
+@MENUS_VC_ATT_SECONDARY	2. Hyökkäys Toissijainen tavoite
+@MENUS_VC_CANCEL	Peruuta
+@MENUS_VC_DEF	2. Puolusta
+@MENUS_VC_DEF_GUNS	4. Aseaseet
+@MENUS_VC_DEF_POSITION	3. Puolusta asema
+@MENUS_VC_DEF_PRIMARY	1. Puolusta ensisijainen tavoite
+@MENUS_VC_DEF_SECONDARY	2. Puolusta toissijainen tavoite
+@MENUS_VC_REPLY	4. Vastaa
+@MENUS_VC_REPLY_COMING	3. Tulossa
+@MENUS_VC_REPLY_GO	4. Hyökkäys
+@MENUS_VC_REPLY_NO	2. Ei
+@MENUS_VC_REPLY_STAY	5. Puolustus
+@MENUS_VC_REPLY_YES	1. Selvä.
+@MENUS_VC_REQ	3. Pyyntö
+@MENUS_VC_REQ_ASSIST	1. Tuki
+@MENUS_VC_REQ_DEMO	6. Purkamiset
+@MENUS_VC_REQ_HVY	5. Raskaat aseet
+@MENUS_VC_REQ_MEDIC	2. Lääkintämies
+@MENUS_VC_REQ_SUPPLY	3. Tarvikkeet
+@MENUS_VC_REQ_TECH	4. Tekniikka
+@MENUS_VC_SPOT	5. Huomattu
+@MENUS_VC_SPOT_DEF	1. Puolustukset
+@MENUS_VC_SPOT_EMPLACED	4. Siirretyt aseet
+@MENUS_VC_SPOT_SNIPER	3. Tarkka-ampuja
+@MENUS_VC_SPOT_TROOP	2. Joukot
+@MENUS_VC_TACTIC	6. Taktiikka
+@MENUS_VC_TAC_COVER	1. Suojaus
+@MENUS_VC_TAC_FALLBACK	4. Perääntykää.
+@MENUS_VC_TAC_FOLLOW	3. Seuraa
+@MENUS_VC_TAC_HOLD	2. Pysäytä
+@MENUS_VC_TAC_SPLIT	6. Hajaantukaa
+@MENUS_VC_TAC_TOGETHER	5. Pysykää yhdessä
+@MENUS_VIEW_EMPTY	Näytä tyhjä:
+@MENUS_VIEW_FULL	Näytä täysi:
+@MENUS_WATCH_DESC	Katsokaa tehtävää.
+@MENUS_WEAPON_RULES	Asesäännöt.
+@MENUS_WIDELY_USED_BY_THE_CORPORATE	Golan Arms FC1 Flechetten ase\nFC1-ryhmän poliisit käyttävät laajalti metallisirpaleita laajassa mittakaavassa. Ase on suunniteltu osumaan useisiin kohteisiin lähietäisyydeltä, mutta on varottava kimmoisia vaurioita.\n\nEnsisijainen Tuli - Yksi laukaus, levitä tulipalo\nSekundaariset palot - Kaksi räjähdettä sirpaleista\nAmmustyyppi - Metalliruuvit
+@MENUS_YES	Kyllä
+@MENUS_YOU_DECIDE	Sinä päätät.
+@MENUS_YOU_HAVE_MADE_CHANGES	Olet tehnyt muutoksia videoasetuksiin
+@MENUS__REQUIRES_SABER_ATTACK	(vaatii Saber hyökkäys 1)
+@MP_INGAME_GETTINGINFOFORSERVERS	Haen tietoa palvelimille...
+@MP_INGAME_JOIN_DOUBLE	KAKSIKUUTA
+@MP_INGAME_JOIN_SINGLE	YHTENÄINEN
+@MP_INGAME_SERVER_REFRESHTIME	Palvelin Päivitysaika
+@MP_SVGAME_CANCEL_PASSWORD	Sulje valikko, älä yritä yhdistää
+A / Cross confirms, B / Circle goes back	A / Cross vahvistaa, B / Circle menee takaisin
+A live bot cannot be represented safely. Your preset and draft are unchanged.	Elävää bottia ei voi edustaa turvallisesti.
+A live bot's original definition cannot be recovered. Choose Replace existing bots with a complete roster before saving.	Live-botin alkuperäistä määritelmää ei voida palauttaa. Valitse Korvaa olemassa olevat botit täydellisellä listalla ennen säästämistä.
+A passed game-type vote is queued for the next round boundary.	Seuraavalle kierrokselle on jonossa hyväksytty pelityyppinen äänestys.
+A setting or binding changed outside the editor. Cancel and reopen to refresh; nothing applied.	Asetus tai sitominen muuttui muokkaimen ulkopuolella. Peru ja avaa uudelleen virkistää; mitään ei sovellettu.
+ACTION DETAILS / RESET	TOIMIA KOSKEVAT TIEDOT / RESIT
+ASSISTS	ASISTS
+About	Tietoja
+Acceleration	Kiihdytys
+Acceleration amount; zero disables it	Kiihdytysmäärä; nolla poistaa sen käytöstä
+Acceleration curve	Kiihdytyskäyrä
+Acceleration curve: 0 legacy, 1 power	Kiihdytyskäyrä: 0 perintö, 1 teho
+Acceleration offset	Kiihtyvyysetäisyys
+Accepted 1v1 challenges inside FFA. Shares the Duel ladder.	Hyväksyi 1v1 haasteita sisällä FFA. Jaetaan duel tikkaat.
+Account / Log in	Tili / Kirjaudu sisään
+Accounts and match reporting are not connected yet.	Tilit ja otteluraportointi eivät ole vielä yhteydessä.
+Action	Toiminto
+Adaptive	Mukautuva
+Add Berserker	Lisää berserker
+Add Defender	Lisää puolustaja
+Add Duelist	Lisää duelista
+Add Flag Catcher	Lisää lipunsieppaaja
+Add Saber Master	Lisää sapelimestari
+Add Sentinel	Lisää Sentinel
+Add Trickster	Lisää temppuilija
+Add bot	Lisää botti
+Add bots	Lisää botteja
+Add local files	Lisää paikallisia tiedostoja
+Add roster without removing existing players: 	Lisää roster poistamatta nykyisiä pelaajia:
+Add slot 	Lisää korttipaikka
+Address	Osoite
+Adjust framing for a live preview. Apply camera saves it.	Säädä kehystys live-esikatselua varten. Käytä kameraa tallentaa sen.
+Adjust how fast the left stick moves the menu pointer.	Säädä, kuinka nopeasti vasen keppi siirtää valikon osoitinta.
+Adjusts how many chat lines fit.	Säätää kuinka monta chat-linjaa sopii.
+Adjusts the width across the screen.	Säätää leveyden näytölle.
+Advanced	Lisäasetukset
+Advanced settings	Lisäasetukset
+Aim at a player and press to ignore or unignore their chat	Tähtää pelaaja ja paina sivuuttaa tai unantore niiden chat
+All	Kaikki
+All edits in this draft will be discarded. Existing server settings and any already queued server changes remain as they were.	Kaikki tämän luonnoksen muokkaukset hylätään. Olemassa olevat palvelinasetukset ja jonotetut palvelimen muutokset pysyvät sellaisina kuin ne olivat.
+Allow downloads	Salli lataukset
+Allow vote: 	Äänestykset:
+Alternate attack	Varahyökkäys
+Alternate weapon action / saber throw	Vaihtoehtoinen ase toiminta / sapeli heittää
+Always	Aina
+Always run	Juokse aina
+Analog joystick axes	Analogiset joustikkin akselit
+Angle	Kulma
+Animation pack unavailable	Animaatiopakkausta ei ole saatavilla
+Anisotropic filtering	Anisotrooppinen suodatus
+Anisotropic filtering unavailable.	Anisotrooppista suodatusta ei ole saatavilla.
+Antialiasing	Antialiasointi
+Appearance	Ulkoasu
+Append a map	Lisää kartta
+Append map to rotation	Lisää kartta kiertoon
+Applies next spawn on supported Saber Trials servers.	Koskee seuraavaa spermaa tuetuilla Saber Trials -palvelimella.
+Applies on next spawn.	Koskee seuraavaa lasta.
+Apply	Käytä
+Apply and continue	Levitä ja jatka
+Apply and return	Hae ja palauta
+Apply camera	Käytä kameraa
+Apply changes	Käytä muutoksia
+Apply next round / map	Käytä seuraavaa kierrosta / karttaa
+Apply now (restarts if needed)	Levitä nyt (käynnistää tarvittaessa uudelleen)
+Apply now applies live changes and restarts only if needed, or loads a changed selected map. Apply next round/map leaves the current match running and queues changes. Roster commands are held for that apply.	Käytä nyt live-muutoksia ja käynnistä ne uudelleen vain tarvittaessa tai lataa valitun kartan. Levitä seuraava kierros/kartta jättää nykyisen ottelun käynnissä ja jonot muuttuvat.
+Apply or cancel pending edits before switching mods.	Käytä tai peruuta vireillä olevat muokkaukset ennen kuin vaihdat modeja.
+Apply or discard before leaving?	Levitä tai hävitä ennen lähtöä?
+Apply these filters to browser	Käytä näitä suodattimia selaimeen
+Apply to local server: 	Käytä paikallista palvelinta:
+Apply your controls before leaving?	Käytätkö hallintalaitteita ennen lähtöäsi?
+Arabic	arabia
+Assets missing or overridden. Showing Stock; Apply cannot save.	Varat puuttuvat tai ohitetaan. Näytetään varasto; Sovellus ei voi tallentaa.
+Assign to slot	Merkitse paikka
+Assignment staged	Tehtävä lavastettu
+Attack	Hyökkäys
+Auto	Automaattinen
+Auto (%s)	Automaattinen (%s)
+Auto (loopback)	Automaattinen (silmukkatausta)
+Auto (restored)	Automaattinen (palautettu)
+Auto (sampling)	Automaattinen (näytteenotto)
+Auto (trial)	Automaattinen (esittely)
+Auto adapts after measuring the connection.	Automaattinen säätö liitännän mittauksen jälkeen.
+Autoexposure	Autoaltistuminen
+Automatic	Automaattinen
+Automatic controller detection	Automaattinen ohjaimen havaitseminen
+Automatic opens for gamepad when no keyboard is detected.	Automaattinen aukeaa pelialustalle, kun näppäimistöä ei havaita.
+Available display modes are added automatically.	Käytettävissä olevat näyttötilat lisätään automaattisesti.
+Average mouse movement between frames.	Hiiren keskimääräinen liike kehysten välillä.
+Awaiting reply	Odotan vastausta
+B / Circle confirms, A / Cross goes back	B / Circle vahvistaa, A / Cross menee takaisin
+BLUE %d     /     RED %d	BLUE %d / RED %d
+BOTS	LENTOASEMAT
+BRACKET\nA random draw sets the single-elimination bracket. Byes advance unpaired entrants. Both full lineups must be connected, in the arena and ready before play starts.\n\n1v1 TOURNAMENT\nAn even field of 8 to 32 verified players enters. Play all 10 scored rounds. Each elimination wins a round. Simultaneous deaths replay the round. At 5-5, play one deciding round.\n\nTEAM TOURNAMENT\n2 to 8 teams enter at a fixed size, from 2v2 to 5v5. Players respawn. The first team to 20, 30, 40 or 50 kills respectively wins. After 10 minutes of play, the leader wins. If tied, play until one team takes the lead.\n\nRECONNECTS AND RESERVES\nA missing player pauses play. Each player has 5 minutes to reconnect in 1v1. Each team has 10 minutes to reconnect or fill the slot with a registered reserve from its own team. Repeat drops use the remaining time. Everyone readies again when the lineup is complete. Time expiry forfeits the match. If both sides expire, both are eliminated.	BRACKET\nSatunnainen veto asettaa yksi-poistaminen ryhmä. Byes etukäteen parittomat tulokkaat. Molemmat täydet kokoonpanot on liitettävä, areenalla ja valmis ennen pelata alkaa.\n\n1v1 TURVAUS\nTasainen kenttä 8-32 todennettu pelaajia tulee. Pelaa kaikki 10 maalia kierrosta. Jokainen eliminointi voittaa kierroksen. Samanaikainen kuolemat toistaa kierros. 5-5, pelata yksi ratkaiseva kierros.\n\nTEAM-TUNNUS\n2-8 joukkuetta syöttää kiinteä koko, 2v2-5v5. Pelaajat respawn. Ensimmäinen joukkue 20, 30, 40 tai 50 tappaa vastaavasti voittaa. Kun 10 minuutin pelin, johtaja voittaa. Jos sidottu, pelaa kunnes yksi joukkue ottaa johtoaseman.\n\nVARAUKSET JA VARAUKSET\nKadonnut pelaaja taukoa pelata. Jokaisella pelaajalla on 5 minuuttia uudelleen kytkeä 1v1. Jokaisella joukkueella on 10 minuuttia uudelleen kytkeä tai täyttää slot rekisteröity varaus omasta joukkueesta. Toista pudotukset käyttää jäljellä oleva aika. Jokainen redies uudelleen, kun kokoonpano on valmis. Aika päättyy menettää ottelun. Jos molemmat puolet vanhenevat, molemmat eliminoidaan.
+Back	Takaisin
+Back / discard draft	Takaisin / poisheittäminen
+Back to Play	Takaisin pelaamaan
+Back to draft	Takaisin luonnoksiin
+Backhand preview:	Backhand esikatselu:
+Backspace	Askelpalautin
+Balanced	Tasapainotettu
+Base	Perus
+Base JKA	Perus JKA
+Basic Settings	Perusasetukset
+Begin match	Aloita ottelu
+Bilinear	Bilineaarinen
+Bind key	Sido avain
+Binding staged; command was not executed	Sidottu; komentoa ei suoritettu
+Black	Musta
+Blade %d / %d	Lapa %d / %d
+Blade off	Terä poistettu
+Blade on	Lapa päällä
+Blaster rifle	Blaster-kivääri
+Blob	Möykky
+Block	Lohko
+Blue	Sininen
+Blue team	Sininen ryhmä
+Blue, Yellow and Red selected. Apply to save.	Sininen, keltainen ja punainen valittu.
+Bot definition is not installed: 	Botin määritelmää ei ole asennettu:
+Bot model for slot 	Bot-malli korttipaikkaan
+Bot roster: 	Bottilista:
+Bottom left	Alavasen
+Bottom right	Alaoikealla
+Bowcaster	BowcasterCity in Ontario Canada
+Bracket	Suljin
+Brightness	Kirkkaus
+Browse unranked servers	Selaa korkea-arvoisia palvelimia
+Bumpers move the caret	Puskurit siirtävät kalloa
+Bumpers: history	Puskurit: historia
+Button labels	Nappimerkit
+Button labels: 0 Xbox, 1 PlayStation, 2 generic	Nappitarrat: 0 Xbox, 1 PlayStation, 2 geneeristä
+Button mapping	Painikekartoitus
+CALL GAME TYPE VOTE	PELIOTYYPIN ÄÄNESTYS
+CALL KICK VOTE	ÄÄNESTYS
+CALL MAP VOTE	Soita MAP-ÄÄNESTYS
+CAST YOUR VOTE	ÄÄNESTYS
+CHAT	PUHEENJOHTAJA
+CHOOSE AN ACTION	VALITSE TOIMET
+CONTROLLER DEFAULTS?	HALLINNOLLISIA HALLINNOLLISIA KESKUSTELUJA?
+Call a vote	Äänestä
+Camera	Kamera
+Camera / UI	Kamera / käyttöliittymä
+Camera FOV	Kameran FOV
+Camera damping	Kameran vaimennus
+Camera settings applied.	Kameraasetukset käytössä.
+Camera smoothing	Kameran tasaus
+Camera tilt	Kameran kallistus
+Cancel	Peruuta
+Cancel all Match Rules changes waiting for the next round/map. Current active match rules remain in effect.	Peruuta kaikki Match Rules muutokset odottamassa seuraavaa kierrosta/kartta. Nykyiset aktiiviset ottelusäännöt pysyvät voimassa.
+Cancel changes	Peruuta muutokset
+Cancel edits	Peruuta muokkaukset
+Cancel field	Peruuta kenttä
+Cannot preserve the current custom renderer safely.	Nykyistä muokattua renderöintilaitetta ei voi säilyttää turvallisesti.
+Capture	Nappaa
+Capture limit	Nappaamisraja
+Cast your vote	Antakaa äänenne
+Center view	Keskinäkymä
+Center your view	Keskitä näkymäsi
+Changes the chat background. Text stays readable.	Muuttaa chat-taustaa. Teksti pysyy luettavissa.
+Changes the language of menus.	Muuttaa ruokalistan kieltä.
+Changing this restarts mouse input.	Tämän muuttaminen käynnistää hiiren syötteen uudelleen.
+Character shadows	Merkkivarjot
+Chat	Keskustelu
+Chat box	Keskusteluruutu
+Chat box height (%)	Chat-laatikon korkeus (%)
+Chat box opacity (%)	Chat-ruudun sameus (%)
+Chat box size (%)	Chat-laatikon koko (%)
+Chat box width (%)	Chat-laatikon leveys (%)
+Chat sound	Keskusteluääni
+Chat text color	Keskustele tekstin väristä
+Chat with the current audience	Keskustele nykyisen yleisön kanssa
+Chat with your team	Keskustele tiimisi kanssa
+Chinese (Simplified)	Kiina (Yksinkertaistettu)
+Chinese (Traditional)	Kiina (perinteinen)
+Choose Custom resolution.	Valitse oma resoluutio.
+Choose Manual to edit connection values.	Valitse yhteysarvojen muokkaamisen ohjekirja.
+Choose a language if short messages or regional variants are misidentified.	Valitse kieli, jos lyhyet viestit tai alueelliset vaihtoehdot on tunnistettu väärin.
+Choose a loaded bot definition, role, skill and team. During a match these are additions unless Replace existing bots is selected. Presets also include the current live bots. Always reserve a connection beyond your bots.	Valitse ladattu botti määritelmä, rooli, taito ja tiimi. Ottelun aikana nämä ovat lisäyksiä, ellei olemassa olevia botteja ole valittu. Esiasetuksiin sisältyy myös nykyiset live-botit. Varaa aina yhteys bottiesi ulkopuolelle.
+Choose a style	Valitse tyyli
+Choose a style for each of the three slots.	Valitse tyyli kunkin kolmen lähtö.
+Choose a team	Valitse tiimi
+Choose a whole-number option.	Valitse kokonumeron vaihtoehto.
+Choose an installed map compatible with this game type, or enter an installed map name. The Host screen's existing map chooser remains available.	Valitse tämän pelityypin mukainen asennettu kartta tai kirjoita asennettu karttanimi. Host-näytön nykyinen karttavalitsin on edelleen saatavilla.
+Choose an installed map for the current game type.	Valitse asennettu kartta nykyiseen pelityyppiin.
+Choose each style's ready pose separately in Stances.	Valitse kunkin tyylin valmis asento erikseen Stences.
+Choose named action	Valitse nimetty toiminto
+Choose or enter a preset name (1 to 40 letters, numbers, _ or -).	Valitse tai kirjoita ennalta asetettu nimi (1 - 40 kirjainta, numerot, _ tai -).
+Choose the appearance of the menus.	Valitse ruokalistojen ulkonäkö.
+Choose the chat display on this server.	Valitse tämän palvelimen chat-näyttö.
+Choose the combat display on this server.	Valitse tämän palvelimen taistelunäyttö.
+Choose the same squad number as your teammates.	Valitse sama joukkueen numero kuin joukkuetoverisi.
+Choose three different styles to complete your cycle.	Valitse kolme eri tyylejä loppuun sykli.
+Choose three different styles. Each style can fill only one slot.	Valitse kolme eri tyylejä. Jokainen tyyli voi täyttää vain yksi paikka.
+Choose your arena.	Valitse areenasi.
+Choose your host in the server browser or enter its address.	Valitse palvelin selaimesta tai anna sen osoite.
+Choose your saber hand, then select Apply Changes.	Valitse sapelikäsi ja valitse sitten Käytä muutoksia.
+Circle	Ympyrä
+Classic combat	Klassinen taistelu
+Clean Capture	Puhdasta sieppausta
+Clean Capture is on.	Siivous on päällä.
+Clear	Tyhjennä
+Clear assignment	Tyhjennä tehtävä
+Clear filters and search	Tyhjennä suodattimet ja etsi
+Clear slot	Tyhjennä korttipaikka
+Client command packets per second.	Asiakaskomentopaketit sekunnissa.
+Close	Sulje
+Color depth	Värisyvyys
+Combat	Taistelu
+Combat styles	Taistelutyylit
+Combat styles...	Taistelutyylit...
+Combat, Force, bots and server settings.	Taistelu, voima, botit ja palvelinasetukset.
+Comics	Sarjakuvat
+Communication	Viestintä
+Compat.	Yhteensopiva.
+Complete	Täydellinen
+Complete rules, map, rotation, server name and roster. Passwords are excluded. Loading replaces only this draft; gameplay changes after review.	Täydelliset säännöt, kartta, kierto, palvelimen nimi ja rosteri. Salasanat eivät sisälly. Lataaminen korvaa vain tämän luonnoksen; pelattavuus muuttuu tarkastelun jälkeen.
+Composition grid: 	Koostumusruudukko:
+Config applied.	Asetusta sovelletaan.
+Config loaded into editor. Review, then Apply.	Aseta muokkaimeen.
+Config write verification failed; existing config retained.	Asetusten kirjoitustarkistus epäonnistui; nykyinen konfigurointi säilyi.
+Confirm	Vahvista
+Connect	Yhdistä
+Connection	Yhteys
+Connection capacity: 	Yhteyskapasiteetti:
+Console	Konsoli
+Console keyboard	Konsolinäppäimistö
+Console opacity	Konsolin sameus
+Console overlay	Konsolin päällystys
+Controller	Kontrolleri
+Controller defaults staged; review before Apply	Ohjaimen oletukset lavastettu; uudelleentarkastelu ennen soveltamista
+Controller detection	Kontrollerin havaitseminen
+Controls	Ohjaus
+Controls this individual vote permission. Other vote permissions remain unchanged.	Tämä yksittäinen äänioikeus on hallinnassa. Muut äänioikeudet pysyvät ennallaan.
+Controls what you see when the server allows dismemberment.	Hallitsee sitä, mitä näet, kun serveri sallii paloittelun.
+Cosmetics	Kosmetiikka
+Could not confirm the display settings; recovery file could not be removed.	Näytön asetuksia ei voitu vahvistaa; palautustiedostoa ei voitu poistaa.
+Could not finish saving; existing config retained.	Tallennusta ei voitu lopettaa; nykyinen konfiguraatio säilytettiin.
+Could not load compatible renderer %s	Yhteensopivaa renderöintiä %s ei voitu ladata
+Could not open config for writing.	Ei voitu avata konfigia kirjoittamista varten.
+Could not read config	Konfigia ei voitu lukea
+Could not save display recovery.	Näytön palautusta ei voitu tallentaa.
+Could not save wheel	Pyörää ei voitu tallentaa
+Could not write this preset.	Tätä ei voitu kirjoittaa.
+Count up	Laske
+Cross	Risti
+Crosshair	Ristiinhius
+Crosshair and interface	Ristikko ja käyttöliittymä
+Crouch / swim downward	Crouch / ui alaspäin
+Crystal	Kristalli
+Cubemap bounces	Cubemap pomppii
+Cubemapping	Cubemaping
+Current bots plus additions leave no connection for players.	Nykyiset botit plus lisäykset eivät jätä yhteyttä pelaajille.
+Current custom character	Nykyinen custom-merkki
+Current dual/staff combat; variants are planned.	Nykyinen kaksin-/henkilöstötaistelu; variantit on suunniteltu.
+Current style	Nykyinen tyyli
+Curve subdivisions	Kaarin alajaot
+Custom	Oma
+Custom Force: maximum level 0 disables this power; 1 through 3 caps allocation and grants. Restricted keeps Jump, Speed, Saber Attack and Saber Defense.	Custom Force: maksimitaso 0 poistaa tämän vallan; 1 kautta 3 caps allokointi ja avustukset. Rajoitettu pitää Hyppää, Speed, Saber hyökkäys ja Saber puolustus.
+Custom cap preference saved; becomes active with Custom Force rules.	Custom cap -asetukset tallennettu; tulee aktiiviseksi Custom Force -säännöillä.
+Custom height	Oma korkeus
+Custom sounds	Omat äänet
+Custom weapons: checked means available. Melee and Lightsaber always remain available. Preferences are retained while another weapon preset is active.	Omat aseet: tarkastettuja keinoja käytettävissä. Melee ja Lightsaber pysyvät aina saatavilla. Asetukset säilytetään, kun toinen ase on käytössä.
+Custom width	Oma leveys
+Customize	Oma
+Cycle saber style	Syklin sapelityyli
+Cycle your selected combat loadout	Pyöritä valittua taistelukuormaa
+Cycle: %s > %s > %s > repeat	Sykli: %s > %s > %s > toistetaan
+D-pad down	D-levy alas
+D-pad left	D-levy vasemmalla
+D-pad moves the pointer  /  Bumpers scroll	D-pad siirtää osoitinta / Bumpers-kääröä
+D-pad right	Oikea D-levy
+D-pad up	D-levy ylös
+DISCARD PENDING EDITS?	- DISCARDIN EDIT?
+DISCONNECT?	Hämäystä?
+DUEL STANDINGS	DUEL-ASENNUKSET
+Damage reactions	Vahinkoreaktiot
+Default	Oletus
+Default movement speed.	Oletusliikenopeus.
+Default staged	Oletusvaihetettu
+Defaults selected. Click Apply Input to save.	Oletukset valittu. Napsauta Käytä syötettä tallentaaksesi.
+Defer player models	Viivästä pelaajamalleja
+Delete preset: 	Poista esiasetukset:
+Delete selected	Poista valittu
+Deluxe mapping	Deluxe-kartoitus
+Desktop	Työpöytä
+Desktop player	Työpöytäsoitin
+Det pack	Pakkaus
+Detailed shaders	Yksityiskohtaiset varjostimet
+Detect compatible gamepads as you connect them.	Tunnista yhteensopivat pelipadit, kun yhdistät ne.
+Detected	Havaittu
+Device preferences	Laiteasetukset
+Direct Connect	Suora yhteys
+Disable authenticated ghost mode	Poista todennettu aavetila käytöstä
+Disable warmup.	Lakkaa lämmittelemästä.
+Discard	Hävitä
+Discard and continue	Hävitä ja jatka
+Discard pending changes?	Hylkäätkö uudet muutokset?
+Discard pending controls changes and open Saved Configs?	Hylätäänkö olemassa olevat hallintamuutokset ja avataanko Tallennetut asetukset?
+Discard queue	Hylkää jono
+Discard the server's queued changes?	Hylkäätkö palvelimen jonotetut muutokset?
+Discard this Match Rules draft?	Hylkäätkö tämän ottelusääntöjen luonnoksen?
+Disconnect	Katkaise yhteys
+Dismemberment	Hajoaminen
+Display	Näyttö
+Display recovery could not be verified; settings were not changed.	Näytön palautusta ei voitu tarkistaa; asetuksia ei muutettu.
+Disruptor	Häiriö
+Distance	Etäisyys
+Distance behind the player. Walls can bring the camera closer.	Seinät voivat tuoda kameran lähemmäs.
+Dominant hand...	Määräävä käsi...
+Dominant hand:	Määräävä käsi:
+Done	Valmis
+Down	Alas
+Drag or right stick to orbit  /  Scroll or bumpers to zoom	Vedä tai oikea kiinni kiertoradalle / Vieritä tai puskurit zoomata
+Drag or type a value, then Apply. Size: 75-125%.	Vedä tai kirjoita arvo, sitten Käytä. Koko: 75-125%.
+Drag to orbit  /  Scroll to zoom	Vedä kiertoradalle / Siirrä zoomaukseen
+Driver info	Kuljettajan tiedot
+Driver information	Kuljettajan tiedot
+Dual sabers	Kaksisapelit
+Duel	Kaksintaistelu
+Duel ladder	Kaksintaistelutikkaat
+Duel limit	Kaksintaisteluraja
+Duel round: one kill	Kaksintaistelukierros: yksi tappo
+During a private duel, mute sound from players outside your duel.	Yksityisessä kaksintaistelussa, mykkä ääni pelaajilta ulkopuolella kaksintaistelu.
+During a private duel, show only you and your opponent.	Yksityisen kaksintaistelun aikana näytä vain sinä ja vastustajasi.
+Dutch	Hollanti
+Dynamic crosshair	Dynaaminen ristikko
+Dynamic glow	Dynaaminen hehku
+Dynamic lights	Dynaaminen valo
+EDIT ASSIGNED COMMAND	EDIT ASSOSID COMAND
+EXIT	UUTI
+EXIT SABER TRIALS	UUTI SABER TRIALS
+Edit	Muokkaa
+Edit a proposal, then call its vote. Limits apply to the current mode.	Muokkaa ehdotusta, soita sen jälkeen äänestys. Rajoituksia sovelletaan nykyiseen moodiin.
+Edit rotation order	Muokkaa pyörimisjärjestystä
+Edit up to 32 maps in order. The server uses this order when automatic map rotation is enabled.	Muokkaa jopa 32 karttaa järjestyksessä. Palvelin käyttää tätä järjestystä, kun automaattinen karttakierto on käytössä.
+Editing stages a binding; the command is never executed here.	Muokkausvaiheita sitova; komentoa ei koskaan suoriteta täällä.
+Effects	Vaikutukset
+Effects volume	Vaikutusten määrä
+Electric	Sähkö
+Electric 2	Sähkö 2
+Emote bound	Säikeen sitominen
+Emote library	Emote-kirjasto
+Emotes	Emotit
+Empty	Tyhjä
+Enable all Force powers, including Saber Throw.	Käytä kaikkia Voiman voimia, mukaan lukien Saber Heittää.
+Enable warmup.	Lämmittele.
+English	Finnish
+Enter 	Sisään
+Enter %s0 to %d.	Anna %s0 - %d.
+Enter 0 for any measured ping	Syötä 0 kaikille mitatuille pingeille
+Enter a finite number.	Syötä rajallinen määrä.
+Enter a map name such as mp/ffa3 using letters, numbers, /, _ or -.	Anna kartan nimi, kuten mp/ffa3 kirjaimilla, numeroilla, /, _ tai -.
+Enter a player name.	Anna pelaajan nimi.
+Enter a preset name	Anna esiasetettu nimi
+Enter a size from 48 to 144.	Syötä koko 48-144.
+Enter a whole number in the displayed range.	Syötä koko numero näytetylle alueelle.
+Enter map name	Anna kartan nimi
+Enter size 75-125 and panel opacity 0-100.	Anna koko 75-125 ja paneelin sameus 0-100.
+Enter to save. Esc to cancel.	Syötä tallentaa. Esc peruuttaa.
+Enter your name	Anna nimesi
+Esc  /  Back	Esc / Takaisin
+Existing voice-command menu; not proximity voice	Olemassa oleva ääni-komento- valikko; ei läheisyysääni
+Exit	Lopeta
+Exit Photo Mode	Poistu valokuvatilasta
+Experimental preview only. Apply keeps your regular selection.	Vain kokeellinen esikatselu. Käytä pitää säännöllisen valinnan.
+Explicitly removes existing bots before spawning this draft's roster. Human players are never removed. With this off, roster entries are additions only.	Nimenomaan poistaa olemassa olevat botit ennen kutu tämän luonnoksen rosteri. Ihmispelaajia ei koskaan poista. Tämän pois, roster merkinnät ovat vain lisäyksiä.
+Extra button	Lisäpainike
+FIRST TO TEN\nTwo players fight for ten duel-round wins. Everyone else waits. New arrivals enter at the bottom. An asterisk means a player has yet to finish a series.\n\nMOVING UP\nThe arena rotates through neighboring ranks. The first pass pairs 1 vs 2, 3 vs 4, and so on. The next pass starts at 2 vs 3. The lower-ranked player takes the higher spot by winning.\n\nLEAVING AND RETURNING\nA disconnect cancels an unfinished series. Players below the vacated spot move up. A returning player enters at the bottom.\n\nACCOUNT POINTS\nOn an enrolled server with account scoring, signed-in players earn one point for finishing a series they started, plus one for winning. Ladder position belongs to this server session.	ENSIMMÄINEN TEN-verkko\nKaksi pelaajaa taistelee kymmenen kaksintaistelun voittaa. Kaikki muut odottavat. Uudet saapumiset tulevat alareunaan. Tähdellä tarkoittaa, että pelaaja on vielä loppuun sarjan.\n\nSIIRTO\nAreena pyörii läpi naapurin rivit. Ensimmäinen pass paria 1 vs 2, 3 vs 4, ja niin edelleen. Seuraava syöttö alkaa 2 vs 3. Alempi-rankinged pelaaja vie korkeampi paikka voittamalla.\n\nLähteminen ja takaisin palaaminen\nKatkaisu peruu keskeneräisen sarjan. Pelaajat alla tyhjän paikan siirtyä ylös. Palaava pelaaja tulee alareunassa.\n\nTILINPÄÄTÖSPISTEET\nKirjautuneella palvelimella tilin pisteytys, allekirjoitettu-in pelaajat ansaitsevat yhden pisteen viimeistely sarjan he aloittivat, plus yksi voittaa. Tikas asema kuuluu tähän palvelimen istuntoon.
+FLAG	FLAGName
+FORCE POWERS	VOIMA
+FPS counter	FPS-laskuri
+FPS limit	FPS-järjestelmän raja
+Fantasy	Fantasia
+Favorites	Suosikit
+Field of view	Näkökenttä
+Find	Etsi
+Find a Server	Etsi palvelin
+Find a joinable server using your preferences	Löydä yhdistetty palvelin mieltymystesi avulla
+Find a server	Etsi palvelin
+Find results	Etsi tuloksia
+Fine-tune input settings without typing console commands.	Hienoa syöteasetuksia kirjoittamatta konsolikomentoja.
+Finnish	Suomi
+Flame	Liekki
+Flame 2	Liekki 2
+Footsteps	Askeleet
+Force	Voima
+Force / Weapons	Voima / aseet
+Force Training	Pakkokoulutus
+Force absorb	Voiman absorbointi
+Force cap: 	Pakokorkki:
+Force drain	Voimavuoto
+Force enabled in restricted gametype	Voima käytössä rajoitetussa pelityypissä
+Force enabled while all powers disabled	Voima käytössä, kun kaikki voimat on poistettu käytöstä
+Force grip	Voimanpito
+Force heal	Voiman paraneminen
+Force lightning	Pakota salama.
+Force player models	Voimasoitinmallit
+Force powers	Voimavaltuudet
+Force protect	Voimansuojaus
+Force pull	Voimaveto
+Force push	Työntövoima
+Force rage	Voimaa raivoa
+Force rules	Voimasäännöt
+Force rules, map rotation and team entry.	Voimasäännöt, kartan kierto ja joukkueen sisääntulo.
+Force sense	Voimaaisti
+Force speed	Voimanopeus
+Force team energize	Voimaryhmä, käynnistäkää.
+Force team heal	Voimatiimin parantuminen
+Force: restricted	Voima: rajoitettu
+Force: unrestricted	Voima: rajoittamaton
+Forward movement scale	Eteenpäin - liikeasteikko
+Forward, left, back, right, jump and crouch input.	Eteenpäin, vasemmalle, taakse, oikealle, hyppää ja kyyristy sisään.
+Frag Limit:	Frag- raja:
+Frag limit	Frag-raja
+Free Camera	Ilmainen kamera
+Free For All	Ilmainen kaikille
+Free mouse look	Vapaa hiiren ulkonäkö
+Freecam speed	Freecam- nopeus
+Freeze	Pysähdy.
+Freeze is available in local solo games, including bots.	Pakastin on saatavilla paikallisissa soolopeleissä, kuten boteissa.
+French	ranska
+Full Force	Täysi voima
+Fullscreen	Koko näyttö
+GAME RULES	PELIOTA KOSKEVAT SÄÄNNÖT
+GAME TYPE	Pelityyppi
+GAME TYPES	Pelityypit
+GENERAL	YLEISTÄ
+GLOBAL RANK: unavailable	MAAILMANLAAJUINEN RANNIKKO: Ei saatavilla
+GL_LINEAR_MIPMAP_NEAREST=Bilinear|GL_LINEAR_MIPMAP_LINEAR=Trilinear	GL_LINEAR_MIPMAP_NEAREST= Bilinear...GL_LINEAR_MIPMAP_LINEAR= Trilineaarinen
+Game Options	Pelin valinnat
+Game mode	Pelitila
+Game rules	Pelisäännöt
+Game sounds	Peliäänet
+Game type	Pelityyppi
+Game types	Pelityypit
+Generate normal maps	Luo normaalit kartat
+Generic	Tavallinen
+Geometry detail	Geometriaa koskevat tiedot
+German	Saksa
+Ghost off	Haamu pois.
+Ghost on	- Haamua.
+Go to the previous track	Siirry edelliseen kappaleeseen
+Green	Vihreä
+Group %d	Ryhmä %d
+Group name	Ryhmän nimi
+Guide	Opas
+HDR lightmaps	HDR-valokartat
+HUD appearance applied.	HUD:n ulkonäkö.
+HUD size (%)	HUD:n koko (%)
+HUD style	HUD- tyyli
+Have your say on the current vote,	Sanokaa sanottavanne nykyisestä äänestyksestä.
+Health / Movement	Terveys / liikkuvuus
+Health and ammo	Terveys ja ammukset
+Height	Korkeus
+Hide HUD, radar, chat and spectator overlays.	Piilota HUD, tutka, chat ja katsojat.
+Hide outside players	Piilota ulkopuoliset pelaajat
+Hide players in other private duels when you're outside a duel.	Piilota pelaajat muihin yksityisiin kaksintaisteluihin, kun olet kaksintaistelun ulkopuolella.
+Hide private duelists	Piilota yksityiset duelistit
+High	Korkea
+Hilt preview unavailable	Hilt- esikatselu ei saatavilla
+Hold for Drain when available	Pysäytä tyhjennys, kun käytettävissä.
+Hold for Grip when available	Odota, kun olet käytettävissä.
+Hold for Lightning when available	Pitäkää salama kun olette käytettävissä.
+Hold for legacy mouse/keyboard strafe	Pidä kiinni vanhasta hiirestä/näppäimistöstä
+Hold to change walking/running speed	Pidä kiinni kävelyn/ajon nopeuden muuttamisesta
+Hold to guard while moving and aiming. Tap Attack at impact to parry.	Pitäkää vartiota liikkuessanne ja tähtättäessä. Napauta Hyökkäys törmäyksessä estääksenne.
+Hold to show match scores	Odota näyttääksesi ottelun tulokset
+Holocron	Holokron
+Holster / draw saber	Holster / vedä sapeli
+Holster or draw your saber	Holster tai piirrä sapeli
+Horizontal look sensitivity	Vaakatason katseherkkyys
+Horizontal mouse scale	Vaakataso
+Horizontal scale	Vaaka
+Horizontal sensitivity	Vaakatason herkkyys
+Horizontal speed in game units per second.	Vaakasuuntainen nopeus peliyksiköissä sekunnissa.
+Horizontal turn speed	Vaakasuuntainen kääntymisnopeus
+Horizontal velocity rounding zones for your current movement step.	Vaakasuuntainen nopeus pyöristys vyöhykkeitä nykyisen liikkeen askeleeseen.
+Horror	Kauhu
+Host a match	Asenna tulitikku
+Host name	Päällikön nimi
+Host password	Asennussalasana
+Host password (never saved in presets)	Aseta salasana (ei koskaan tallennettu esiasetuksiin)
+Hosting process can only be selected before starting a new server.	Isäntäprosessi voidaan valita vain ennen uuden palvelimen aloittamista.
+Hosting process is start-only.	Isäntäprosessi on vain aloitusprosessi.
+ITEMS	ERÄT
+Ignore player	Älä välitä soittimesta
+Ignore small legacy axis movements.	Älä välitä pienistä perinteisistä akseliliikkeistä.
+Ignore small stick movements.	Älä välitä pienistä keppiliikkeistä.
+Input settings applied.	Syöttöasetukset käytössä.
+Inspect	Tutki
+Inspect off-hand	Tarkastaminen käsin
+Inspect primary	Tarkasta ensisijainen
+Installed map name	Asennetun kartan nimi
+Installed mods	Asennetut modit
+Installing the mod alone does not make a server official.	Modin asentaminen yksin ei tee palvelimesta virallista.
+Interact with usable world objects	Vuorovaikutus käyttökelpoisten maailman esineiden kanssa
+Interface	Käyttöliittymä
+Invalid QA key	Virheellinen QA-avain
+Invalid action	Virheellinen toiminto
+Invalid assignment	Virheellinen jako
+Invalid key	Virheellinen näppäin
+Invalid personal config filename	Virheellinen henkilökohtainen tiedostonimi
+Invalid setting	Virheellinen asetus
+Invert controller vertical look	Käännä ohjain pystysuunnassa
+Invert mouse	Käännä hiiri
+Invert vertical look	Käännä pystysuora katse
+Italian	italia
+Italiano	Italiao
+Items	Erät
+JA+ blade: %s	JA+-terä: %s
+JA+ wheel	JA+-pyörä
+JOIN	YHDISTYS
+JOIN THE MATCH	YHDISTYNEEN MATTIN
+Japanese	japani
+Jedi Master	Jedi-mestari
+Join	Liity
+Join Queue	Liity jonoon
+Join a tournament server	Liity turnauspalvelimeen
+Join game	Liity peliin
+Join match	Liity yhteen
+Join password: 	Liity salasanaan:
+Join squad	Liity joukkueeseen
+Jump	Hyppää
+Jump / swim upward	Hyppää / ui ylöspäin
+Jump sounds	Hyppyäänet
+KEY ALREADY ASSIGNED	AVAIN, JOKA ON ASENNETTU
+KICK	KIRK
+Keep / Back	Pidä / taakse
+Keep Jump and Speed; disable other general powers.	Pidä hyppy ja nopeus; poistaa muut yleiset valtuudet.
+Keep changes	Pidä muutokset
+Keep display changes?	Pidätkö näytössä muutoksia?
+Keep or revert the display change first.	Pidä tai peruuta näytön muutos ensin.
+Key Bindings	Avainsiteet
+Key change staged	Avainmuutos vaiheistettu
+Keyboard	Näppäimistö
+Keyboard horizontal turn speed	Näppäimistön vaakakääntönopeus
+Keyboard turning	Näppäimistön kääntäminen
+Keyboard vertical look	Näppäimistön pystysuora ilme
+Keyboard vertical look speed	Näppäimistön pystysuora katsenopeus
+Keys	Avaimet
+Kick by client number	Potki asiakasnumerolla
+Kick by name	Potkaise nimellä
+Kill feed	Tapa syöte
+Korean	korea
+LEAVE SABER TRIALS	LEEVE SABER TRIALS
+LEAVE THE MATCH?	Jätätkö maltin?
+LEAVE TOURNAMENT?	Jätä turnaus?
+LOAD SAVED SETTINGS?	Säästettyjä paikkoja?
+Labels do not change assignments.	Merkit eivät muuta tehtäviä.
+Ladder	Tikkaat
+Lagometer	Lagometri
+Language	Kieli
+Language pack unavailable; showing original chat	Kielipakkausta ei saatavilla; alkuperäisen chat-kieltä
+Leave	Poistu
+Leave Queue	Jätä jono
+Leave event	Lomatapahtuma
+Leave this server and return to the main menu?	Jätä tämä palvelin ja palata päävalikko?
+Leave this server and return to your desktop?	Jätä tämä palvelin ja palata työpöydälle?
+Left hand	Vasen käsi
+Left stick click	Vasen tikku napsahdus
+Legacy	Perintö
+Legacy joystick analog axes	Legacy joystick -analogiset akselit
+Legacy joystick input; restarts input	Legacy-joystick-syöttö; käynnistää syötteen uudelleen
+Legacy mouse forward-movement scale	Legacy-hiiren eteenpäin liikkeen asteikko
+Legacy mouse strafe scale	Legacy hiirtä strafe asteikko
+Legacy or power acceleration.	Perintö tai tehon kiihtyvyys.
+Letterbox	Kirjelaatikko
+Light flares	Valoraketit
+Lighting	Valaistus
+Limbs only	Ainoastaan raaputusaineet
+Limits affect the current mode.  0 = unlimited.	Rajat vaikuttavat nykyiseen tilaan. 0 = rajoittamaton.
+Lit preview	Lit- esikatselu
+Live	Elävät
+Live bot roster is still updating. Wait a moment and save again.	Livebottilistaa päivitetään yhä.
+Live preview	Live- esikatselu
+Load	Lataa
+Load into the editor for review, then Apply.	Lataa muokkaimeen uudelleentarkastelua varten, sitten Käytä.
+Load preset: 	Lataa esiasetettu:
+Load replacement draft	Kuormituksen korvaava luonnos
+Load selected	Lataa valittu
+Load the complete rules and roster as a bots-only replacement draft. Applying after review replaces existing bots; human players are never removed. Current gameplay and password remain unchanged until Apply.	Lataa täydelliset säännöt ja roster kuin bots-vain korvaava luonnos. Sovelltaminen tarkastelun jälkeen korvaa olemassa olevat botit; ihmisten pelaajat eivät koskaan poista. Nykyinen pelattavuus ja salasana pysyvät ennallaan kunnes soveltaa.
+Load the next map from the server rotation.	Lataa seuraava kartta palvelimelta.
+Loaded bot definitions; custom player models appear when they include a bot definition.	Ladatut bottimääritelmät; mukautetut pelimallit näkyvät, kun niihin sisältyy bottien määritelmä.
+Local	Paikallinen
+Local files	Paikallistiedostot
+Local host draft	Paikallinen isäntä luonnos
+Local library	Paikallinen kirjasto
+Local server	Paikallinen palvelin
+Local track name	Paikallinen kappaleen nimi
+Lock Teams	Lukitse tiimit
+Lock teams	Lukitkaa tiimit.
+Log in with Discord	Kirjaudu sisään discordilla
+Log out / Cancel	Kirjaudu ulos / Peruuta
+Logged in as %.100s.	Kirjautunut sisään %.100s.
+Logged out.	Kirjauduin ulos.
+Look and movement	Katso ja liiku
+Look down	Katso alas.
+Look up	Katso ylös.
+Looking with bound up / down keys.	Katson ylös / alas avaimia.
+Low	Alhainen
+Low health pulse	Alhainen terveyssyke
+Lower music volume by 5%	Pienempi musiikin äänenvoimakkuus 5%
+Lower values make curved surfaces smoother.	Pienemmät arvot tekevät kaarevammista pinnoista sileämpiä.
+MATCH RECORDINGS	MATKAKIRJAT
+MATCH RULES	LAATIKKOSÄÄNNÖT
+MATCH TOOLS	MATTOLIIKENTEET
+MULTIPLAYER	MONILIPPAJA
+Main menu	Päävalikko
+Manual	Käsikirja
+Manual combat	Manuaalinen taistelu
+Map	Kartta
+Map chooser / Back	Karttavalitsin / Takaisin
+Map preview unavailable	Kartta esikatselu ei saatavilla
+Maps for the current game type	Nykyisen pelityypin kartat
+Maps listed for the draft's game type. A custom installed map can be entered directly.	Luonnoksen pelityyppiin listatut kartat. Muokkaan asennettu kartta voidaan syöttää suoraan.
+Match	Täsmää
+Match Rules	Ottelusäännöt
+Match Rules (host)	Ottelun säännöt (isäntä)
+Match clock	Tulitikkukello
+Match scores are separate from global rank.	Ottelupisteet ovat erillään maailman listasta.
+Match timer	Ottelun ajastin
+Match tools	Täsmää työkalut
+Matches	Tulitikut
+Matching stance assets are missing. Choices were not saved.	Täsmäävät positiot puuttuvat, valintoja ei tallennettu.
+Matching style assets are missing. Blue, Yellow and Red remain available.	Vastaava tyyli omaisuus puuttuu. Sininen, keltainen ja punainen ovat edelleen käytettävissä.
+Matching style assets are missing. Your choices were not saved.	Täsmäävät tyylivarat puuttuvat. Valintojasi ei ole tallennettu.
+Max packets	Max-paketit
+Max players	Maksimipelaajat
+Maximum level 	Enimmäispitoisuus
+Medium	Keskisuuri
+Melee and Lightsaber always remain available.	Melee ja Lightsaber ovat aina käytettävissä.
+Menu	Valikko
+Menu Theme	Valikkoteema
+Menu buttons	Valikkopainikkeet
+Menu confirm and back buttons	Valikkovahvistus- ja takanappi
+Menu cursor speed	Valikkokursorin nopeus
+Menu language	Valikon kieli
+Menu motion	Valikkoliike
+Menu motion: Off	Valikkoliike: pois päältä
+Menu motion: On	Valikkoliike: päällä
+Message language	Viestin kieli
+Message the last player who attacked you	Viesti viimeinen pelaaja, joka hyökkäsi kimppuunne
+Message the player under your crosshair	Viesti pelaajalle tähtäimesi alla
+Min players	Minipelaajat
+Min. players	Min. pelaajat
+Mind trick	Mielitemppu
+Minimum human players. Enter 0 for any population.	Minimi ihmisen pelaajia. Syötä 0 kaikille väestön.
+Minutes, 0 to 1440. Zero means unlimited. Applies after passing; may end the round.	Nolla tarkoittaa rajatonta.
+Missing pack	Puuttuva pakkaus
+Mod  %s	Mod %s
+Mod switching is unavailable in this isolated test profile.	Mod-kytkintä ei ole saatavilla tässä erillisessä testiprofiilissa.
+Mode	Tila
+Model preview unavailable	Mallin esikatselu ei saatavilla
+Mods	Modit
+More teams	Lisää joukkueita
+Motion:	Esitys:
+Mouse	Hiiri
+Mouse buttons and wheel are supported. Escape cancels.	Hiiri painikkeet ja pyörä ovat tuettuja. Pako peruu.
+Mouse input mode	Hiiren syöttötila
+Mouse input: 0 off, 1 raw, 2 compatibility; restarts input	Hiiri syöte: 0 off, 1 raaka, 2 yhteensopivuus; käynnistää syötteen uudelleen
+Mouse movement when free look is off.	Hiiri liikkuu, kun vapaa ulkonäkö on pois päältä.
+Mouse movement while strafing.	Hiiren liikettä, kun strufataan.
+Mouse sensitivity	Hiiren herkkyys
+Mouse smoothing	Hiiren tasaus
+Move backward	Siirry taaksepäin
+Move forward	Siirry eteenpäin
+Move left without turning	Siirrä vasemmalle kääntymättä
+Move right without turning	Siirry oikealle kääntymättä
+Move the mouse to look around.	Siirrä hiirtä katsella ympärilleen.
+Movement	Liike
+Movement and legacy input	Liikkuvuus ja perintö
+Movement effects	Siirtovaikutukset
+Movement keys	Liikkeenäppäimet
+Movement training	Liikkumiskoulutus
+Moves	Liikkeet
+Multiplayer built around pro saber dueling.	Multiplayer rakennettu noin ammattisaber kaksintaistelu.
+Multiplier while walk / run is held.	Kerroin kun kävely / ajaa pidetään.
+Music player	Musiikkisoitin
+Music volume	Musiikkimäärä
+Music volume down	Musiikin äänenvoimakkuus alhaalla
+Music volume up	Musiikin äänenvoimakkuus ylöspäin
+Mute outside players	Mykätä ulkopuolisia pelaajia
+Mute player and combat sounds from private duels you're outside of.	Mykkä pelaaja ja taisteluäänet yksityisistä kaksintaisteluista.
+Mute private duels	Myöhäiset yksityiset kaksintaistelut
+Name	Nimi
+Names / scores	Nimet / tulokset
+Negative m_pitch inverts vertical look.	Negatiivinen m_pitch inverters pystysuora ilme.
+Negative shifts left. Positive shifts right. Zero centers the view.	Ei käännöksiä vasemmalle, positiivinen oikealle.
+Network	Verkko
+Network / FPS settings belong under Setup > Network.	Verkko/FPS-asetukset kuuluvat Setup > Networkiin.
+Network statistics	Verkkotilastot
+New match draft	Uusi otteluluonnos
+Next	Seuraava
+Next Force power	Seuraava voima
+Next Map	Seuraava kartta
+Next Player	Seuraava pelaaja
+Next item	Seuraava
+Next map	Seuraava kartta
+Next music track	Seuraava musiikkiraita
+Next weapon	Seuraava ase
+No active session	Ei aktiivista istuntoa
+No addition / choose bot	Ei lisäystä / valitse botti
+No files	Ei tiedostoja
+No matching entries.	Ei vastaavuuksia.
+No matching hilts	Ei osuvia hilttejä
+No matching settings.	Ei vastaavia asetuksia.
+No models match these filters.	Mikään malli ei vastaa näitä suodattimia.
+No official servers listed	Virallisia palvelimia ei ole listattu
+No pending changes	Ei vireillä olevia muutoksia
+No rotation / Edit order	Ei kiertoa / Muokkaa tilausta
+No saved personal configs.	Ei tallennettuja henkilökohtaisia konfiguraatioita.
+No saved presets.	Ei tallennettuja esiasetuksia.
+No standings available	Ei osumia saatavilla
+Non-ASCII command preserved. This text editor supports ASCII; use change-key or clear.	Ei- ASCII-komento säilytettiin. Tämä tekstieditori tukee ASCII:ää; käytä avainta tai tyhjennä.
+Normal	Normaali
+Not a personal setting: 	Ei henkilökohtainen:
+Not advertised	Ei mainostettu
+Not reported	Ei raportoitu
+Nudge %d  MaxPPS %d  Snaps req %d  Rate req %d  Dup %d  Sent/s %s	Nudge %d MaxPPS %d Snaps req %d Rate req %d Dup %d Sent/s %s
+OFFICIAL RANKED SERVERS	VIRALLISET PALKKAILIJAT
+Off	Pois päältä
+Official 1v1 matches on a Ranked Duel server.	Viralliset 1v1 vastaa Ranked Duel palvelimella.
+Offset used by the power curve.	Virtakäyrän käyttämä poikkeama.
+Older joystick path; restarts input.	Vanhempi joystick polku; käynnistää syötteen uudelleen.
+On-screen keyboard	Näppäimistö näytöllä
+One or more default keys have another command. Confirm to replace them.	Yksi tai useampi oletusnäppäin on toinen komento. Vahvista korvata ne.
+Online free camera uses your normal spectator movement.	Online vapaa kamera käyttää normaalia katsojan liikkuvuutta.
+Only official registered teams enter this ladder.	Vain viralliset tiimit tulevat tänne.
+Open 	Avaa
+Open / choose bot	Avaa / valitse botti
+Open / collapse chat	Avaa / romahduskeskustelu
+Open access	Avoin pääsy
+Open connection slot / Remove this bot	Avaa yhteyspaikka / Poista tämä botti
+Open or close the in-game menu	Avaa tai sulje pelin sisäinen valikko
+Open or close your music player	Avaa tai sulje musiikkisoitin
+Open server	Avaa palvelin
+Open the console	Avaa konsoli
+Opponent	Vastaväittäjä
+Optimization	Optimointi
+Optional join password, held only for this draft; never saved in a preset.	Valinnainen liitä salasana, joka pidetään vain tätä luonnosta varten; ei koskaan tallennettu esiasetettuna.
+Options	Valinnat
+Orange	Oranssi
+Orbit angle	Kiertoratakulma
+Order is preserved in presets. Enable automatic rotation in Match to use this list.	Tilaus säilytetään esiasetuksissa. Ota käyttöön automaattinen pyörintä Matchissa käyttääksesi tätä listaa.
+Ordered map rotation	Tilattu karttakierto
+Ordinary matches remain unranked.	Tavalliset ottelut pysyvät arvottomia.
+Original Blue style.	Alkuperäinen sininen tyyli.
+Original JKA	Alkuperäinen JKA
+Original JKA and Saber Trials Combat are supported.	Alkuperäiset JKA ja Saber Trials Combat tukevat.
+Original Red style.	Alkuperäinen punainen tyyli.
+Original Yellow style.	Alkuperäinen keltainen tyyli.
+Overall mouse response.	Hiirien kokonaisvaste.
+Overview	Yleiskatsaus
+PHOTO MODE	FOTO MODE
+PICKUP GAMES\nPlayers start as spectators. Open Pause > PUG Queue > Join Queue to play. The server fills the smallest teams first. Bots can hold places until a human is waiting.\n\nROUND ROTATION\nAt round end, a waiting player replaces a team's lowest scorer. Ties rotate the player who has held a spot longer. Benched players move to the back of the queue. With an empty queue, the teams stay in.\n\nINACTIVITY\nIdle players return to spectator after a warning. Waiting and watching preserve your queue position.\n\nACCOUNT POINTS\nOn an enrolled server with account scoring, signed-in players earn one point for finishing a round they started, plus one for winning.	PICKUP-PELIT\nPelaajat aloittavat katsojina. Avaa tauko > PUG-jono > Liity jonoon. Palvelin täyttää pienimmät joukkueet ensin. Botit voivat pitää paikkoja kunnes ihminen odottaa.\n\nREUN ROTATION\nPyöreässä lopussa, odottava pelaaja korvaa joukkueen alhaisimman maalintekijän. Solmiot pyörivät pelaajaa, joka on pitänyt paikan pidempään. Lyödyt pelaajat siirtyvät jonon takaosaan. Tyhjä jono, joukkueet pysyvät.\n\nTOIMIVALTA\nJoutopelaajat palaavat katsojalle varoituksen jälkeen. Odottaa ja katsella säilyttää jonossa sijainti.\n\nTILINPÄÄTÖSPISTEET\nKirjautuneella palvelimella tilin pisteytys, allekirjoitettu-in pelaajat ansaitsevat yhden pisteen viimeistely kierros he aloittivat, plus yksi voittaa.
+PLAY	Soita
+PLAYER	Soita
+PRESS A KEY OR CONTROLLER BUTTON	LEHDISTÖN AVAIN- TAI HALLINTA-AVAIN-BUTTON
+PUG Queue	PUG-jono
+Packet duplication	Pakkauksen päällekkäisyys
+Page %d	Sivu %d
+Pages rotate every 10s. Your row stays visible.	Sivut pyörivät joka 10. rivi pysyy näkyvissä.
+Panel opacity (%)	Paneelin sameus (%)
+Parallax mapping	Parallaksikartoitus
+Password	Salasana
+Password must be at most 64 characters and cannot contain quotes, backslashes, semicolons or control characters.	Salasanan on oltava enintään 64 merkkiä eikä se voi sisältää lainausmerkkejä, takaiskuja, puolipisteitä tai ohjausmerkkejä.
+Password required	Salasana vaaditaan
+Password unknown	Salasana tuntematon
+Pause	Keskeytä
+Pause menu	Keskeytä valikko
+Pause music	Keskeytä musiikki
+Pause the selected music source	Keskeytä valittu musiikkilähde
+Pending changes	Odottavat muutokset
+Pending edits discarded	Odota kunnes muokkaukset on hylätty
+Performance	Tulos
+Perspective	Perspektiivi
+Photo Mode	Valokuvatila
+Pick different styles. Your normal style-switch control follows this order.	Valitse eri tyylejä. Normaali tyylivaihteen ohjaus seuraa tätä järjestystä.
+Pistol	Pistooli
+Pitch	Piki
+Pitch guide	Pikiopas
+Pitch sway	Pitkitys
+Play	Pelaa
+Play recording	Soittoäänitys
+Play track	Soita kappale
+Playback	Toisto
+Player	Pelaaja
+Player labels	Soittoäänen etiketit
+Player name	Pelaajan nimi
+Player settings changed outside this menu. Reopen Profile to refresh.	Pelaajan asetukset vaihdettiin tämän valikon ulkopuolella. Avaa profiili uudelleen päivittääksesi.
+Players	Pelaajat
+Players and world	Pelaajat ja maailma
+Players per team	Pelaajat joukkuetta kohti
+Polish	Puola
+Portrait	Muotokuva
+Portrait size	Muotokuvan koko
+Portrait size applied.	Muotokuvan koko sovellettu.
+Portraits	Muotokuvat
+Portuguese	portugali
+Portuguese (Brazil)	Portugali (Brasilia)
+Power	Teho
+Power Duel	Power duel
+Power acceleration offset	Virtakiihtyvyyden kompensointi
+Precise crosshair trace	Täsmällinen ristikarvajälki
+Preset deleted.	Esiasetettu poistettu.
+Preset is missing, deleted or too large. Your draft is unchanged.	Esiasetukset puuttuvat, ne on poistettu tai ne ovat liian suuret.
+Preset loaded into draft. Password unchanged; review before applying.	Esiasetettu ladattu luonnokseen. Salasana ennallaan; tarkista ennen hakemista.
+Preset name (letters, numbers, _ and -)	Esiaseta nimi (kirjeet, numerot, _ ja -)
+Preset read was incomplete. Your draft is unchanged.	Esitys oli epätäydellinen.
+Preset saved. Password excluded.	Esiasetettu. Salasana pois lukien.
+Preset write was incomplete.	Esiasetettu kirjoitus oli keskeneräistä.
+Presets	Esiasetukset
+Press an unassigned key or button. Esc cancels.	Paina määrittelemätöntä avainta tai painiketta. Esc peruuttaa.
+Prev	Edellinen
+Preview hand:	Esikatselukäsi:
+Preview unavailable	Esikatselu ei ole käytettävissä
+Preview unavailable for this model	Esikatselu ei ole saatavilla tälle mallille
+Preview:	Esikatselu:
+Previous	Edellinen
+Previous Force power	Edellinen voimavoima
+Previous Player	Edellinen pelaaja
+Previous item	Edellinen kohde
+Previous music track	Edellinen kappale
+Previous weapon	Edellinen ase
+Primary	Ensisijainen
+Private chat with last attacker	Yksityinen keskustelu edellisen hyökkääjän kanssa
+Private chat with target	Yksityinen keskustelu kohteen kanssa
+Private duels	Yksityiset kaksintaistelut
+Private message	Yksityinen viesti
+Profile	Profiili
+Projected	Ennustettu
+Projectile trails	Projektipolut
+Public server name. Presets include this name.	Julkinen palvelimen nimi. Esiasetukset sisältävät tämän nimen.
+Purple	Violetti
+QUIT GAME?	- Lopeta?
+Quality	Laatu
+Queue Status	Jonon tila
+Quick Match	Pikaottelu
+Quick combinations; more weight than Blue.	Nopeat yhdistelmät; enemmän painoa kuin sininen.
+Quit game	Lopeta peli
+Quit the game and return to your desktop?	Lopetat pelin ja palaat työpöydälle?
+RANKED PLAY  /  DUEL LADDER	PUHEENJOHTAJA/DUEL LADDER
+RANKED PLAY  /  OVERVIEW	PELAUS / YLEISKATSAUS
+RANKED PLAY  /  SERVER DIRECTORY	NELJÄNNES PELAYS / PALVELINOHJAUS
+RANKED PLAY  /  TEAM LADDER	NELJÄNNESVUOROINEN PELAAJA/TEAM LADDER
+READY	Valmis
+READY STANCE	Valmiina.
+RECONNECTS AND RESERVES	VARAUKSET JA VARAUKSET
+RECORDINGS	TIEDONANTO
+RED	Punainen
+RED %d     /     BLUE %d	RED %d / BLUE %d
+REPLACE DEFAULT KEY ASSIGNMENTS?	Korvaavatko he avaimet?
+REPLACE SAVED CONFIG?	- Pelastaa Configin?
+RESPAWN?	- Respown?
+RGB sabers are disabled by this JA+ server.	RGB-sapelit on poistettu käytöstä tällä JA+-palvelimella.
+RT	NT1
+Radar	Tutka
+Raise music volume by 5%	Korota musiikin äänenvoimakkuutta 5%
+Raise or lower the camera target.	Nostakaa tai laskekaa kameran kohde.
+Rank	Sijoitus
+Ranked Duel	Kaksintaistelu
+Ranked Duel and Ranked Challenge Duel share this ladder.	Rankattu kaksintaistelu ja ranked Challenge Duel jakaa tämän tikkaat.
+Ranked connection: not configured	Arvotettu yhteys: ei määritetty
+Ranked mode	Arvotettu tila
+Ranked servers	Rankattu palvelin
+Ranked services are coming soon.	Rankattuja palveluita on tulossa pian.
+Rankings appear after verified official results are connected.	Arvot näkyvät sen jälkeen, kun todennetut viralliset tulokset on yhdistetty.
+Rate	Osuus
+Rating	Arvostelu
+Rating change: unavailable. No verified ranked result received.	Arvosanan muutos: ei saatavilla. Ei varmennettua ranking-tulos.
+Raven Software	Raven-ohjelmisto
+Raw	Raaka
+Ready - offline	Valmiina - offline
+Ready cleared.	Valmiina.
+Ready for chat - offline	Valmiina chattiin - offline
+Ready room	Valmista
+Ready selected.	Valmiina.
+Ready-pose choice only. Choose combat behavior in Combat styles.	Valitse taistelutapa taistelutyyliin.
+Record 1-6000 client frame-time samples	Tallenna 1-6000 asiakkaan kehysaika näytteitä
+Record match	Tallennus täsmää
+Recording	Tallentaminen
+Recordings	Tallenteet
+Red	Punainen
+Red team	Punainen ryhmä
+Refresh	Päivitä
+Region	Alue
+Region rule	Aluesääntö
+Registered teams compete on their own team ladder.	Rekisteröityneet joukkueet kilpailevat omilla tikapuullaan.
+Release capture in windowed mode.	Vapauta tallennus ikkunatilassa.
+Release mouse capture in windowed mode	Vapauta hiiren tallennus ikkunatilassa
+Release window capture	Vapauta ikkunan tallennus
+Remove	Poista
+Remove this preset from the saved list. This cannot be undone; you can save a new preset under the same name later.	Poista tämä esiasetettu tallennetusta luettelosta. Tätä ei voi poistaa; voit tallentaa uuden esiasetetun samannimellä myöhemmin.
+Remove your entry from this tournament?	Poistatko osallistumisesi tästä turnauksesta?
+Rename group	Nimeä ryhmä uudelleen
+Renderer	Renderöijä
+Repeat commands in outgoing packets.	Toista komentoja lähtevissä paketeissa.
+Repeater	Toisto
+Replace	Korvaa
+Replace 	Korvaa
+Replace all non-secret rules, map, rotation, name and bot roster in this draft. Current gameplay and password remain unchanged until you review and apply.	Korvaa kaikki ei-salaiset säännöt, kartta, kierto, nimi ja botti roster tässä luonnoksen. Nykyinen pelattavuus ja salasana pysyvät ennallaan, kunnes tarkistat ja soveltaa.
+Replace existing bots on apply	Korvaa nykyiset botit voimassa
+Replace existing bots; new roster: 	Korvaa nykyiset botit; uusi rosteri:
+Replace ordinary HUD	Korvaa tavallinen HUD
+Replace pending config edits?	Korvaako hän jonossa olevat konfiguraatiot?
+Replace pending edits with this config?	Korvaa odottavat muokkaukset tällä tiedostolla?
+Replace saved config?	Korvaako hän tallennetut tiedostot?
+Replace the controller's button assignments with defaults?	Korvaako ohjaimen painiketehtävät oletusarvoilla?
+Requested bytes per second; server limits apply.	Pyydetyt tavut sekunnissa; palvelinrajat ovat voimassa.
+Requested cancellation of the server's queued changes.	Pyydämme palvelimen jonossa olevien muutosten peruuttamista.
+Requested snapshots per second.	Pyydettiin kuvia sekunnissa.
+Requires Custom Force rules. 	Vaaditaan muokattuja sääntöjä.
+Requires Custom weapon rules; Melee and Lightsaber stay available. 	Vaatii räätälöityjä asesääntöjä; Melee ja Lightsaber pysyvät saatavilla.
+Requires Rend2.	Vaaditaan Rend2.
+Requires Saber Trials spectator or camera support.	Vaatii Saber Trials katsojan tai kameran tukea.
+Requires Streamer mode with Clean Capture off.	Vaatii streamperitilaa, jossa Clean Capture on pois päältä.
+Requires a Saber Trials server.	Vaaditaan a Saber Trials Palvelin.
+Requires authenticated server permission	Vaaditaan oikeaksi todistettu palvelimen lupa
+Requires server permission. Add a player argument using Edit command if needed.	Tarvitsee palvelimen käyttöoikeuden. Lisää soittimen argumentti Muokkaa komentoa tarvittaessa.
+Requires server permission. Use the server's target syntax.	Tarvitsee palvelimen luvan. Käytä palvelimen kohdesyntaksia.
+Reset	Nollaa
+Reset all to Stock	Nollaa kaikki varastoon
+Reset camera	Nollaa kamera
+Reset filters	Nollaa suodattimet
+Reset this tab	Nollaa tämä välilehti
+Reset this tab?	Nollaa tämä välilehti?
+Reset to originals	Nollaa alkuperäisiin
+Reset view	Nollaa näkymä
+Resolution	Päätöslauselma
+Respawn now	Nyt takaisin.
+Restart Map	Käynnistä kartta uudelleen
+Restart map	Käynnistä kartta uudelleen
+Restart the current map after the vote passes.	Käynnistä nykyinen kartta uudelleen äänestysten jälkeen.
+Restarts the renderer.	Aloittaa renderin uudelleen.
+Restore action defaults	Palauta toiminnon oletusarvot
+Restricted Force	Rajoitettu voima
+Resume	Jatka
+Resume  /  Esc	Jatka / Esc
+Return to editing to keep your pending changes.	Palaa editointiin, jotta voit pitää vireillä olevat muutokset.
+Reverse right-stick vertical look.	Käännä oikealle pystysuunnassa.
+Revert	Peru
+Reverting in %d seconds.	Perutaan %d sekunnissa.
+Review / Start	Uudelleentarkastelu / Aloitus
+Review before starting the match	Tarkista ennen ottelun aloittamista
+Review changes	Tarkistuksen muutokset
+Review changes to this local server	Tarkista muutokset tähän paikalliseen palvelimeen
+Review this change. Nothing changes until you confirm.	Tarkista tämä muutos. Mikään ei muutu ennen kuin vahvistat.
+Right hand	Oikea käsi
+Right stick click	Oikean kiinnityksen napsautus
+Right-stick horizontal look speed.	Oikeanpuoleinen vaakakulma.
+Right-stick vertical look speed.	Oikeanpuoleinen pystysuora katsenopeus.
+Rocket launcher	Raketinheitin
+Role: Jedi	Rooli: jedi
+Role: Non-Jedi	Rooli: ei-Jedi
+Roll	Rullaa
+Roll sway	Käännä suuntaa
+Rotate:	Kierrä:
+Rotation already has 32 maps.	Kierroksessa on jo 32 karttaa.
+Rotation exceeds the safe command length. Shorten or remove a map name.	Kierto ylittää turvallisen komentopituuden. Lyhennä tai poista kartan nimi.
+Rotation is empty.	Pyöriminen on tyhjää.
+Rotation map 	Pyörimiskartta
+Rotation map is not installed: 	Pyörimiskarttaa ei ole asennettu:
+Rotation: 	Pyöriminen:
+Run command	Suorita komento
+Run pitch	Suorita syöttö
+Run roll	Suorita rulla
+Russian	Venäjä
+SABER TRIALS  /  FIND A SERVER	SABER TRIALS / Löydä SERVER
+SABER TRIALS  /  HOST A MATCH	SABER TRIALS  -Minne menet?
+SABER TRIALS  /  MOVES	SABER TRIALS  / MOVES
+SABER TRIALS  /  SOLO MATCH	SABER TRIALS  / SOLO MATCH
+SABER TRIALS / ACCOUNT	SABER TRIALS / TILINPÄÄTÖS
+SABER TRIALS / COMBAT STYLES	SABER TRIALS / COMBAT TYLES
+SABER TRIALS / DOMINANT HAND	SABER TRIALS / DOMINANTTIKÄSI
+SABER TRIALS / STANCES	SABER TRIALS / OHJELMAT
+SERVER INFORMATION	PALVELINTIETOJA
+SINGLE SABER / CHOOSE THREE	YHTENÄINEN SABER / VALINTA KOLMAS
+ST_CONTROLS_FAIL binding mismatch	ST_CONTROLS_FAIL-sitova epäsuhtaisuus
+ST_CONTROLS_FAIL hit visibility	ST_CONTROLS_FAIL osuma näkyvyys
+ST_CONTROLS_FAIL menu closed	ST_CONTROLS_FAIL-valikko suljettu
+ST_CONTROLS_FAIL page mismatch	ST_CONTROLS_FAIL-sivun vastaavuus
+ST_CONTROLS_FAIL settings count	ST_CONTROLS_FAIL-asetusten määrä
+ST_CONTROLS_FAIL status mismatch	ST_CONTROLS_FAIL-statusero
+ST_CONTROLS_FAIL variable mismatch	ST_CONTROLS_FAIL muuttujan vastaavuus
+Saber Trials Server	Saber Trials -palvelin
+Saber Trials glyph count	Saber Trials glyph-luku
+Saber Trials wheel	Saber Trials pyörä
+Saber trail	Sapelipolku
+Saber workbench	Sapelityöpenkki
+Sabers	SabersName
+Save a PNG screenshot	Tallenna PNG kuvakaappaus
+Save current draft	Tallenna nykyinen luonnos
+Save current settings	Tallenna nykyiset asetukset
+Save preset: 	Tallenna esiasetukset:
+Save this complete match configuration and bot roster. An existing preset with this name will be replaced. The host password is excluded.	Tallenna tämä täydellinen ottelun asetukset ja bottilista. Olemassa oleva esiasetettu tällä nimellä korvataan.
+Saved	Tallennettu
+Saved 	Tallennettu
+Saved Configs	Tallennetut asetukset
+Saved choices take effect next spawn on supporting servers.	Tallennetut valinnat tulevat voimaan seuraavan sukupolven tukipalvelimissa.
+Saved config could not be verified.	Tallennettua konfigia ei voitu varmentaa.
+Saved match presets	Tallennetut ottelun esiasetukset
+Scale horizontal mouse movement.	Vaakasuunnassa hiiren liike.
+Scales the panel and text together.	Skaalaa paneelin ja tekstin yhdessä.
+Scene: 	Kohtaus:
+Sci-Fi	Sci-fi
+Score limit	Pisteraja
+Scoreboard	Tulostaulu
+Screenshot	Kuvakaappaus
+Search	Etsi
+Search Setup settings or console names...	Etsi Asetukset tai konsolin nimet...
+Search actions...	Etsi toimintoja...
+Search by artist, song or album	Etsi esittäjän, kappaleen tai albumin toimesta
+Search by server name, game type, map, or address	Etsi palvelimen nimen, pelityypin, kartan tai osoitteen mukaan
+Search current keys or commands...	Etsi nykyisiä avaimia tai komentoja...
+Search hilts	Etsi kohteita
+Search input settings or console names...	Etsi syöteasetuksia tai konsolin nimiä...
+Search models or outfits...	Etsintämalleja tai asuja...
+Search music	Etsi musiikkia
+Search the provider's catalog	Etsi palveluntarjoajan luettelo
+Secondary	Toissijainen
+Select DEMP2 when available	Valitse DEMP2, jos saatavilla
+Select a game type. Changing this choice does not change the match.	Valitse pelityyppi. Tämän valinnan muuttaminen ei muuta ottelua.
+Select a player or bot	Valitse pelaaja tai botti
+Select a rule for its description. Mouse wheel scrolls; arrows / controller move focus. Left / right adjusts a focused value; Enter edits numbers.	Valitse sääntö sen kuvaus. Hiiri pyörän rullat; nuolet / ohjain siirtää keskittyä. Vasen / oikea säätää kohdistettu arvo; Anna muokkausnumerot.
+Select a server	Valitse palvelin
+Select an available map for the current game type.	Valitse saatavilla oleva kartta nykyiselle pelityypille.
+Select blaster rifle when available	Valitse blaster kivääri, kun käytettävissä
+Select bowcaster when available	Valitse bowcaster, kun käytettävissä
+Select det packs	Valitse det-pakkaukset
+Select disruptor when available	Valitse haitta-aine, kun se on käytettävissä
+Select flechette when available	Valitse flechette, kun käytettävissä
+Select installed map	Valitse asennettu kartta
+Select next Force power	Valitse seuraava voimateho
+Select next available weapon	Valitse seuraava käytettävissä oleva ase
+Select next inventory item	Valitse seuraava varastoerä
+Select one of the six styles.	Valitse yksi kuudesta tyylista.
+Select pistol when available	Valitse pistooli, kun se on käytettävissä
+Select previous Force power	Valitse edellinen voimateho
+Select previous available weapon	Valitse edellinen saatavilla oleva ase
+Select previous inventory item	Valitse edellinen varastoerä
+Select repeater when available	Valitse toistin, kun käytettävissä
+Select rockets when available	Valitse raketit, kun käytettävissä
+Select saber or melee	Valitse sapeli tai melee
+Select thermal detonators	Valitse lämpösytyttimet
+Select trip mines	Valitse matkakaivokset
+Selected map	Valittu kartta
+Selected map is not installed: 	Valittua karttaa ei ole asennettu:
+Send message	Lähetä viesti
+Sensitivity	Herkkyys
+Sensitivity / settings	Herkkyys/asetukset
+Sent %s/s   Max %d   Snaps %d   Rate %d   Nudge %d   Dup %d	Lähetetty %s/s Maksimi %d Naps %d Rate %d Nudge %d Dup %d
+Server	Palvelin
+Server FPS	Palvelin FPS
+Server Management	Palvelimen hallinta
+Server information	Palvelimen tiedot
+Server location	Palvelimen sijainti
+Server name	Palvelimen nimi
+Server staff protection still applies.	Palvelinhenkilöstön suojelu on edelleen voimassa.
+Server state changed. Close and reopen Match Rules.	Palvelintila muuttui. Sulje ja avaa Match Rules.
+Server tournament verification is coming next.	Palvelinturnauksen varmistus on tulossa seuraavaksi.
+Server: 	Palvelin:
+Setting is protected: 	Asetus on suojattu:
+Setting staged	Aseta vaiheistettu
+Settings applied.	Asetukset sovellettu.
+Settings applied. Video/sound changes may require a restart.	Sovelletut asetukset. Video-/äänimuutokset saattavat vaatia uudelleenkäynnistystä.
+Settings changed outside the editor. Cancel and reopen before applying.	Asetukset muuttuivat muokkaimen ulkopuolella. Peruuta ja avaa uudelleen ennen hakemista.
+Setup	Asetukset
+Share / Create	Jaa / Luo
+Shift	Vuoro
+Shoulder offset	Olkapään ylitys
+Show controls: 	Näytä ohjaimet:
+Show current bracket	Näytä nykyinen tukiosa
+Show current tournament status	Näytä nykyinen turnauksen tila
+Show measured connection and current network settings	Näytä mitatut liitäntä- ja nykyiset verkkoasetukset
+Show original message	Näytä alkuperäinen viesti
+Show ping, jitter, incoming loss and live settings.	Näytä ping, hermostunut, saapuva menetys ja live-asetukset.
+Show score	Näytä pisteet
+Show the original above its marked translation. Originals remain in the console.	Näytä alkuperäinen edellä merkitty käännös. Alkuperäiset pysyvät konsolissa.
+Show weapon	Näytä ase
+Shows the weapon model in first person.	Näyttää asemallin ensimmäisenä persoonana.
+Siege	Piiritys
+Siege objectives	Piiritystavoitteet
+Siege voice commands	Piiritysäänikomennot
+Signed in with Discord.	- Allekirjoitettu Discordilla.
+Signed out.	Allekirjoitettu.
+Simple items	Yksinkertaiset kohteet
+Single	Yksinkertainen
+Size: 48-144. Drag or type a number, then Apply size.	Koko: 48-144. Vedä tai kirjoita numero, sitten Käytä kokoa.
+Skill 	Taito
+Skip to the next track	Siirry seuraavaan kappaleeseen
+Slot 	Slot
+Smooth follow	Pehmeä
+Smoothing	Pehmeneminen
+Smooths changes to camera position.	Smooths vaihtaa kameran asentoon.
+Smooths changes to the point the camera follows.	Smooths muuttuu kohtaan kamera seuraa.
+Snapshot timing offset; normally session-only.	Snapshot ajoitus offset; normaalisti vain istunto.
+Snapshots	kuvat
+Solo / replay speed	Solo/toistonopeus
+Solo match	Yksinottelu
+Solo, spectator and replay camera. Online matches stay live.	Solo, katsoja ja uusintakamera. Online-ottelut pysyvät suorana.
+Some weapons and modes choose the view automatically.	Jotkut aseet ja tilat valitsevat näkymän automaattisesti.
+Sort A-Z	Järjestä A-Z
+Sort Z-A	Järjestä Z-A
+Sort by region	Lajittele alueittain
+Sound	Ääni
+Sound quality	Äänenlaatu
+Sounds	Äänet
+Sounds + effects	Äänet + tehosteet
+Sounds + effects + marks	Äänet + tehosteet + merkit
+Source   	Lähde
+Space	Välilyönti
+Spanish	espanja
+Spectate	Silmämääräinen
+Spectator camera	Silmälasikamera
+Speed	Nopeus
+Speed trail	Nopeuspolku
+Speedometer	Nopeusmittari
+Squad 1	Ryhmä 1
+Squad 2	Ryhmä 2
+Squad 3	Ryhmä 3
+Squad 4	Ryhmä 4
+Squad 5	Ryhmä 5
+Squad 6	Ryhmä 6
+Squad 7	Ryhmä 7
+Squad 8	Ryhmä 8
+Square	Neliö
+Staff	Henkilöstö
+Stage controller defaults	Vaiheen ohjaimen oletusarvot
+Stage defaults	Vaiheen oletusarvot
+Stage edit	Vaihemuokkaus
+Stances	Stanssit
+Stances saved. Applies next spawn on a supporting server.	Stanssit tallennettu. Koskee seuraavaa jälkeläistä tukipalvelimella.
+Standard	Standardi
+Start / Resume	Käynnistä / Jatka
+Start match: 	Aloitusottelu:
+Start this match	Käynnistä tämä ottelu
+Starting rating: 1000   |   Results and opponent strength decide changes.	Aloitusarvosana: 1000 ... Tulokset ja vastustajan vahvuus päättävät muutoksista.
+Static	Staattinen
+Status notifications	Tilaa koskevat ilmoitukset
+Stay here	Pysy täällä.
+Stay registered	Pysy rekisteröitynä
+Stencil	Stensiili
+Stock	Kanta
+Stock action defaults staged (unassigned when no stock default exists)	Varaston toiminta oletukset vaiheittaiset (ei myönnetty, jos varaston oletusarvoa ei ole)
+Stock defaults unavailable	Osakkeiden laiminlyönnit eivät ole käytettävissä
+Strafe guide	Strafen opas
+Strafe left	Strafe vasemmalle
+Strafe modifier	Strafe-muokkain
+Strafe movement scale	Strafe-liikeasteikko
+Strafe right	Strafe oikealle.
+Streamer mode	Virtaustila
+Streamer presentation	Streamerin esitystapa
+Style:	Tyyli:
+Subject	Kohde
+Substitute	Varajäsen
+Supporting servers use this selection. Saber Offense requirements still apply.	Palvelimia tuetaan käyttämällä tätä valintaa. Saber-rikosvaatimukset ovat edelleen voimassa.
+Supports Ranked Duel, Ranked TFFA and FFA challenge servers.	Tukee Ranked Duel, Ranked TFFA ja FFA haaste palvelimet.
+Swap Confirm and Back for menus.	Vaihda vahvistusta ja takaisin ruokalistoihin.
+Swapped	Paritetut
+Swedish	Ruotsi
+Switch mod	Vaihda mod
+Switch mod?	Vaihda modia?
+Switch mods from the disconnected main menu.	Vaihda modeja irti kytketystä päävalikosta.
+Symbols	Symbolit
+TEAM STANDINGS	TEHTÄVÄN TEHTÄVÄ
+TEAM TOURNAMENT	TEAM-TUNNUS
+TFFA: lock or reopen joining and team switching.	TFFA: lukitse tai avaa uudelleen liittymä ja joukkueen vaihto.
+TIME	AIKA
+TOURNAMENT	TOUNNUS
+TOURNAMENT  /  BRACKET     1 / 4	TOURNAMENT / BRACKET 1 / 4
+TOURNAMENT  /  BRACKET     2 / 4	TOURNAMENT / BRACKET 2 / 4
+TOURNAMENT  /  BRACKET     3 / 4	TOURNAMENT / BRACKET 3 / 4
+TOURNAMENT  /  BRACKET     4 / 4	TOURNAMENT / BRACKET 4 / 4
+TOURNAMENT  /  CHOOSE YOUR SQUAD	TOURNAMENT / VALITSE KELLO
+TOURNAMENT  /  READY ROOM	TOURNAMENT / VALMIS huone
+TOURNAMENT  /  ROSTER     1 / 4	TOUNNUS / ROSTER 1 / 4
+TOURNAMENT  /  ROSTER     2 / 4	TOURNAMENT / ROSTER 2 / 4
+TOURNAMENT  /  ROSTER     3 / 4	TOURNAMENT / ROSTER 3 / 4
+TOURNAMENT  /  ROSTER     4 / 4	TOURNAMENT / ROSTER 4 / 4
+TOURNAMENT  /  SUBSTITUTES	TUNNUSTELU/TUTKIMUKSET
+Take photo	Ota valokuva
+Tap during wind-up to cancel. Hold Attack to follow up; release to stop.	Napauta aikana wind-up peruuttaa. Pidä hyökkäys seurata; julkaisu lopettaa.
+Tap just before impact to parry, with or without holding Block.	Napauta juuri ennen osumaa estääksesi sen, joko pitämällä Blockia tai pitämällä sitä paikallaan.
+Target angles for standard JKA ground and air acceleration.	JKA:n maa- ja ilmakiihtyvyyden tavoitekulmat.
+Target damping	Kohteen vaimennus
+Target names	Kohdenimet
+Team / tag	Joukkue / tag
+Team Free For All	Tiimi vapaa kaikille
+Team appearance	Joukkueen esiintyminen
+Team chat	Tiimikeskustelu
+Team chat only	Vain tiimikeskustelu
+Team color lightsabers	Joukkueen värivalosapelit
+Team color skins	Joukkueen värit
+Team ladder	Joukkueen tikkaat
+Team overlay	Joukkueen overlay
+Team skin: 	Tiimin iho:
+Team skin: Blue	Joukkueen iho: Sininen
+Team skin: Default	Joukkueen iho: Oletus
+Team skin: Red	Joukkueen iho: Punainen
+Team slots	Joukkueen lähtö- ja saapumisajat
+Teams	Joukkueet
+Teams / Bots	Joukkueet / Botit
+Text color	Tekstin väri
+Text language	Tekstikieli
+Texture compression	Tekstuurikompressio
+Texture depth	Tekstuurisyvyys
+Texture detail	Tekstuuri
+Texture filter	Tekstuurisuodatin
+Texture intensity	Tekstuuri-intensiteetti
+That key is already assigned. Choose another.	Avain on jo varattu.
+The connected mod supplies this HUD.	Yhdistetty mod toimittaa tämän HUD:n.
+The original style keeps its original combat behavior.	Alkuperäinen tyyli pitää alkuperäisen taistelukäyttäytymisensä.
+The previous display recovery has not been saved yet.	Edellisen näytön palautusta ei ole vielä tallennettu.
+The ranked server directory is not connected yet.	Palvelinhakemistoa ei ole vielä liitetty.
+The ranking service is not connected.	Ranking-palvelu ei ole yhteydessä.
+The ready room opens when you connect to a tournament.	Valmis huone avautuu, kun olet yhteydessä turnaukseen.
+The selected model files are no longer available.	Valitut mallitiedostot eivät ole enää saatavilla.
+The server checks that the map is installed and supports the current mode.	Palvelin tarkistaa, että kartta on asennettu ja tukee nykyistä tilaa.
+Themes	Aiheet
+Themes: 	Aiheet:
+Thermal detonator	Lämpösytytin
+These are the complete match rules. Starting applies this draft, loads the selected map and adds the chosen bots.	Nämä ovat täydelliset ottelusäännöt. Alkaen soveltaa tätä luonnosta, lataa valittu kartta ja lisää valitut botit.
+Third person	Kolmas henkilö
+Third-person framing	Kolmannen persoonan kehystys
+This character selection is unavailable.	Tätä hahmon valintaa ei ole saatavilla.
+This command is too long for the text editor; it is preserved. Use change-key or clear.	Tämä komento on liian pitkä tekstieditorille; se on säilynyt. Käytä avainta tai selkeä.
+This ends your current life.	Tämä päättää nykyisen elämäsi.
+This is your chat color.	Tämä on chat-värisi.
+This model does not support a mirrored preview	Tämä malli ei tue peilattua esikatselua
+This outfit has no matching team skin.	Tässä asussa ei ole vastaavaa joukkueen nahkaa.
+This restarts the game client.	Tämä käynnistää pelin asiakkaan uudelleen.
+This slot has no key to swap. Choose Replace or Cancel.	Tämä paikka ei ole avainta vaihtaa. Valitse Korvaa tai Peruuta.
+Three styles saved. Use your normal style-switch control to cycle them.	Kolme tyyliä tallennettu. Käytä normaalia tyyli-kytkin ohjaus pyörittää niitä.
+Three ways to compete	Kolme tapaa kilpailla
+Tilt the camera up or down.	Kallista kameraa ylös tai alas.
+Time Limit:	Aikarajoitus:
+Time Nudge	Aika Nudge
+Time limit	Määräaika
+Time remaining	Jäljellä oleva aika
+Timing and downloads	Ajoitus ja lataukset
+Toggle camera view	Vaihda kameran näkymää
+Toggle console	Vaihda konsolia
+Toggle existing match recording	Valitse nykyinen otteluntallenne
+Toggle supported first/third-person view	Valitse tuettu ensimmäisen/kolmannen henkilön näkymä
+Toggle the chat panel and recent messages	Vaihda chat-paneeli ja viimeaikaiset viestit
+Tonemapping	Tonemaping
+Top right	Yläoikea
+Tournament	Turnaus
+Tournament bracket	Turnausryhmä
+Tournament lobby	Turnauksen aula
+Tournament rules did not replace the previous description	Turnaussäännöt eivät korvanneet edellistä kuvausta
+Tournament rules did not scroll	Turnauksen säännöt eivät rullaa
+Tournament rules headings did not load as separate lines	Turnauksen sääntöjen otsikot eivät latautuneet erillisinä viivoina
+Tournament status	Turnauksen tila
+Translate into	Käännöksen kieli
+Translate received public, team and private chat offline.	Käännä vastaanotettu julkinen, tiimi ja yksityinen chat offline.
+Translating - offline	Kääntäminen - offline
+Translation	Käännös
+Translation - %s	Käännös - %s
+Translator unavailable; showing original chat	Kääntäjä ei saatavilla; näytetään alkuperäinen chat
+Triangle	Kolmio
+Trilinear	Trilineaarinen
+Trip mine	Matkakaivos
+Turkish	turkki
+Turn left	Käänny vasemmalle
+Turn right	Käänny oikealle
+Turn the camera around the player.	Käännä kamera pelaajalle.
+Turn-speed modifier	Kääntymisnopeuden säätölaite
+Turn-speed modifier while walk/run is held	Kääntymisnopeuden muunnin kävelyn/juoksun aikana
+Turning with bound left / right keys.	Kääntyminen sidottu vasemmalla / oikealla avaimilla.
+Two precise swings; vulnerable recovery.	Kaksi tarkkaa keinua: haavoittuva toipuminen.
+Type directly or use the controller keyboard. Enter confirms; Esc cancels this field.	Kirjoita suoraan tai käytä ohjaimen näppäimistöä. Anna vahvistus; Esc peruuttaa tämän kentän.
+Type:	Tyyppi:
+UNSAVED CONTROLS	SALLITUT TARKASTUKSET
+Ukrainian	Ukraina
+Unassigned	Määräämättä
+Unavailable in this client or server.	Ei saatavilla tällä asiakkaalla tai palvelimella.
+Unavailable on this server	Ei saatavilla tällä palvelimella
+Uncategorized	Luokittelematon
+Unfreeze	Pakastin
+Universal translator	Yleiskääntäjä
+Universe: 	Maailmankaikkeus:
+Unknown Setup operation	Tuntematon asetustoiminto
+Unknown quality preset	Tuntematon laatu asetettu
+Unknown setting	Tuntematon asetus
+Unlimited	Rajoittamaton
+Unlock Teams	Avaa tiimit
+Unready	Ei valmis
+Unsaved changes	Tallentamattomat muutokset
+Unsupported Controls operation	Tukematon hallintatoiminto
+Unsupported value for 	Tukematon arvo
+Up	Ylös
+Use 	Käyttö
+Use / interact	Käyttö / vuorovaikutus
+Use 1 to 40 letters, numbers, underscores or hyphens.	Käytä 1-40 kirjainta, numerot, alleviivaukset tai väliviivat.
+Use Absorb when available	Käytä Absorb- valmistetta, kun se on saatavilla
+Use FOV 20-120, tilt -45 to 45, speed 20-800.	Käytä FOV 20-120, kallistus -45-45, nopeus 20-800.
+Use Heal when available	Käytä Parannusta, kun se on saatavilla
+Use Mind Trick when available	Käytä Mind Trickiä, kun se on käytettävissä
+Use Protect when available	Käytä Suojaa, kun käytettävissä
+Use Pull when available	Käytä Vedä, kun käytettävissä
+Use Push when available	Käytä Työnnä, kun olet käytettävissä
+Use Rage when available	Käytä raivoa, jos saatavilla
+Use Sense when available	Käytä aistia, kun se on saatavilla
+Use Speed when available	Käytä nopeutta, jos käytettävissä
+Use a new personal config name (letters, numbers, spaces, _ or -).	Käytä uutta henkilökohtaista koodinimeä (kirjeitä, numeroita, välilyöntejä, _ tai -).
+Use analog axes on the legacy path.	Käytä analogisia akseleita vanhalla polulla.
+Use inventory item	Käytä varastoerää
+Use selected Force power	Käytä valittua voimavoimaa
+Use team Energize when available	Käytä tiimiä Käynnistä kun käytettävissä
+Use team Heal when available	Käytä tiimiä Paranna, kun käytettävissä
+Use team blade colors. Off shows chosen colors.	Käytä joukkueen terän värejä. Off näyttää valitut värit.
+Use team skins when available. Off shows chosen outfits.	Käytä joukkueen nahkoja, kun ne ovat käytettävissä.
+Use text without quotes, backslashes, semicolons or control characters.	Käytä tekstiä ilman lainausmerkkejä, takaiskuja, puolipisteitä tai ohjausmerkkejä.
+Use the selected available Force power	Käytä valittua voimatehoa
+Use the selected inventory item	Käytä valittua varastoerää
+Use this value	Käytä tätä arvoa
+Use turn speed 0-10000 and accel 0-100.	Käytä kääntymisnopeutta 0-10000 ja akcel 0-100.
+Used for Custom resolution.	Käytetään omaresoluutioon.
+Using %s: %s	Käytetään %s: %s
+VOTE	ÄÄNESTYS
+VOTING	ÄÄNESTYS
+Value outside the supported edit range.	Arvo tuetun muokkausalueen ulkopuolella.
+Vanilla	Vanilja
+Vehicle lead indicator	Ajoneuvon lyijyn merkkivalo
+Version	Versio
+Vertex lighting	Vertex-valaistus
+Vertical look sensitivity	Pystysuuntainen katseherkkyys
+Vertical look speed	Pystysuuntainen katsenopeus
+Vertical mouse scale	Hiirien asteikko pystysuunnassa
+Vertical mouse scale; negative means inverted	Pystysuunnassa hiiren asteikolla; negatiivinen tarkoittaa ylösalaisin
+Vertical sensitivity	Pystysuuntainen herkkyys
+Vertical sway	Pystysuunnassa
+Very high	Hyvin korkea
+View	Näytä
+View pitch in degrees and a level marker.	Näytä korkeus asteissa ja tasomerkki.
+Visual effects	Visuaaliset vaikutukset
+Voice commands	Äänikomennot
+Voice language	Äänen kieli
+Voice volume	Äänimäärä
+Volume	Määrä
+Vote 	Äänestys
+Vote / Call Vote	Äänestykset
+Vote to add a role supported by the current game type.	Äänestä lisätä rooli tukee nykyisen pelityypin.
+Vote to add this role. TFFA teams must be unlocked.	TFFA-tiimit on saatava auki.
+Vote to remove a player or bot.	Äänestä poistaa pelaaja tai botti.
+Vulkan initialization entry point unavailable	Vulkanin alustustulopiste ei ole käytettävissä
+WEAPONS	ASEET
+Waiting for the server's player list...	Odotetaan palvelimen soitinlistaa...
+Walk / run	Kävele / juokse
+Wall marks	Seinämerkit
+Warm-up	Lämmitys
+Warmup Off	Lämmitys pois
+Warmup On	Lämmitys
+Weapon FOV	Aseen FOV
+Weapon preference saved; becomes active with Custom weapon rules.	Aseet tallennettu; tulee aktiivinen Custom ase sääntöjä.
+Weapon's own ready pose overrides this preview in play.	Aseen oma asento ohittaa tämän esikatselun.
+Weapon:	Ase:
+Weapons	Aseet
+Weapons: restricted	Aseet: rajoitettu
+Weapons: unrestricted	Aseet: rajoittamaton
+Weightier attacks; less wind-up than Red.	Painoisemmat hyökkäykset, vähemmän vitsailua kuin Red.
+Wheel activation: Hold	Pyörän aktivointi: pidä
+Wheel activation: Toggle	Pyörän aktivointi: Vaihda
+Wheel slots	Pyörien raot
+White	Valkoinen
+White core: Off	Valkoinen ydin: pois päältä
+White core: On	Valkoinen ydin: On
+Whole number, 0 to 999. Zero means unlimited. Applies after passing; may end the round.	Koko numero, 0-999. Nolla tarkoittaa rajoittamaton. Sovelletaan jälkeen ohi; voi lopettaa kierroksen.
+YOU	Sinä.
+Yellow	Keltainen
+You can return to it from the pause menu during the event.	Voit palata siihen tauon valikosta tapahtuman aikana.
+Your character	Hahmosi
+Your preferred reading language. Requires the matching offline packs.	Luet mieluummin offline-paketteja.
+Your saved base color for public, team and private messages.	Tallennetut perusvärit julkisille, tiimi- ja yksityisille viesteille.
+Your selection is remembered while using dual sabers or a staff.	Valintasi muistetaan kaksoissapelien tai henkilökunnan käytön aikana.
+Your server chooses the combat rules.	Palvelijasi valitsee taistelusäännöt.
+Your server may deduct a point.	Palvelimesi voi vähentää pisteen.
+Zero disables acceleration.	Nolla sammuttaa kiihdytyksen.
+Zero disables this component of view swaying.	Nolla sammuttaa tämän näkökentän.
+Zero removes the client frame-rate limit.	Nolla poistaa asiakkaan kehysnopeus raja.
+Zero uses your field of view.	Nolla käyttää näkökenttääsi.
+[ ] Disabled	[ ] Ei käytössä
+[ ] Keep existing bots	[ ] Säilytä olemassa olevat botit
+[X] Allowed	[X] sallittu
+[X] Available	[X] Saatavilla
+[X] Replace bots only	[X] Korvaa vain botit
+\\g_gametype\\0\\g_forcePowerDisable\\262143	\\g_gametype\\0\\\\g_forcePowerDisable\\262143
+\\g_gametype\\0\\g_jediVmerc\\1	\\g_gametype\\0\\\\g_jediVmerc\\1
+\\translator	\\ translator
+\\translator\\fonts	\\ translator\\ fonts
+^3Saber Trials ^7Local Review	^3Tarkastukset sapattioikeudenkäynneissä ^7Paikallinen arviointi
+^7Akaza: ^2I'll be there soon.	^7Akaza: ^2Tulen pian.
+^7Akaza: ^2Ready when you are.	^7Akaza: ^2Valmis, kun olet.
+^7Hisoka: ^2Meet by the stairs.	^7Hisoka: ^2Tavataan portaiden luona.
+^7Hisoka: ^2See you there.	^7Histoka: ^2Nähdään siellä.
+^7Sousuke Aizen: ^2Just passing through.	^7Sousuke Aizen: ^2Ohjelma kulkee vain läpi.
+a whole number from 	koko määrä, josta alkaen
+alora/default	alora/oletusarvo
+animation instance missing	animaatioesiintyminen puuttuu
+applied.	sovelletaan.
+asdfghjkl-	Asdfghjkl-
+border lights ignore motion preference	rajavalot ohittavat liikkeen mieltymyksen
+browser refresh changed the host menu	selaimen päivitys muutti isäntävalikkoa
+browser refresh collision fixture missing	selaimen päivitystörmäyslaite puuttuu
+browser refresh did not reset its list	selaimen päivitys ei nollannut luetteloa
+cannot drag back to top	ei voi vetää takaisin huipulle
+cannot drag to bottom outside track	ei voi vetää pohjaan ulkoradalle
+click target missing	Napsauta kohdetta puuttuu
+configured (never included in presets)	konfiguroitu (ei koskaan sisällytetty esiasetuksiin)
+controller menu missing	ohjaimen valikko puuttuu
+dirty state	likainen tila
+english=English|francais=French|deutsch=German|espanol=Spanish	Suomi=Englanti...
+english=English|french=French|german=German|spanish=Spanish	Suomi=Englanti.french=ranska...german...
+exec st_music ;	exec st_music;
+expected %s got %s	Odotettu %s sai %s
+favorite selection missing	Suosikkivalinta puuttuu
+favorite state	Suosikkitila
+fixture has no overflow	Kiinnitys ei ole ylivuotoa
+fixture requires private Favorites view	kiinnitys vaatii yksityisen Suosikit näkymä
+force-rank	voima-arvo
+game/st_stance_runtime.h	peli/st_stance_runtime.h
+ghost off	aave pois
+ghost on	Aave
+hover does not light native button	Leijuu ei sytytä natiivi-painiketta
+keeps dragging after mouse release	jatkaa raahaamista hiiren julkaisun jälkeen
+keyboard menu missing	näppäimistövalikko puuttuu
+kyle/default	kyle/oletus
+layout context	ulkoasu
+legacy action missing	perintötoimet puuttuvat
+levelshots/%s	tasokuvia/%s
+live value mismatch	live-arvon epäsuhta
+local browser reply was not displayed	paikallista selaimen vastausta ei näkynyt
+luffy/missing_profile_fixture	Luffy/missing_profile_fixture
+main-menu alias missing	Main-menu alias puuttuu
+maps/	kartat/
+match-presets/	match- presets /
+menu destination	valikon kohde
+metadata display name mismatch	metadatanäytön nimi ei täsmää
+metadata franchise mismatch	metadatan franchising epäsuhtaisuus
+missing Speed rank picker	puuttuu nopeusrivin poimija
+missing selection	puuttuva valinta
+missing server list	puuttuu palvelinluettelo
+missing target %s	Kohde %s puuttuu
+missing_profile_fixture/default	missing_profile_fixture/Oletus
+motion state mismatch	liiketilan epäsuhtaisuus
+musicvolume +5	musiikkivolyymi +5
+musicvolume -5	musiikkivolyymi -5
+native Force rank purchase changed	Native Force rank -ostoksen muutos
+native Jedi role selector missing	natiivi Jedi roolivalitsin puuttuu
+native Jedi role transition failed	syntyperäinen jedi rooli siirtyminen epäonnistui
+native destination mismatch	Oman määräpaikan epäsuhtaisuus
+native scrollbar did not drag	natiivi vierityspalkki ei vetänyt
+native target missing	Oma kohde puuttuu
+not enough server fixtures	ei tarpeeksi palvelimen kalusteita
+open server	avaa palvelin
+or propose a change to this server.	tai ehdota muutosta tähän palvelimeen.
+ordinary Apply changed Jedi role	tavallinen Käytä vaihdettua jedi- roolia
+pending model mismatch	Odotettavissa oleva mallin epäsuhtaisuus
+play sound/interface/button1 ; uiScript setForce %s ; uiScript closeingame ;	soita ääntä/interface/nappia1; uiscript-settiForce %s; uiscript cloalingame;
+players/_humanoid/	pelaajat/_humanoid/
+preview unavailable	esikatselu ei saatavilla
+rd-vanilla=Vanilla|rd-rend2=Rend2|rd-vulkan=Vulkan	rd-vanilla=Vanilla...rd-rend2= Rend2...rd-vulkan=Vulkan
+result count	tulosluku
+scanning creates one cvar per model	Skannaus luo yhden cvar per malli
+scrolling changed active model	Vieritys muuttunut aktiivinen malli
+st_matchLive_bot%d_model	st_matchLive_bot%d_malli
+st_matchLive_bot%d_team	st_matchLive_bot%d_Ryhmä
+st_matchPending_bot%d_model	st_matchPending_bot%d_malli
+st_match_apply later	st_match_apply myöhemmin
+st_match_apply now	st_match_apply Nyt
+st_match_apply roster	st_match_apply työvuoro
+st_match_set st_weaponsActive 	st_match_set st_weaponsActive
+st_match_text hostname "	st_match_text- palvelinnimi "
+st_match_text map "	st_match_text-kartta "
+st_match_text password "	st_match_text salasana "
+st_match_text rotation "	st_match_text rotaatio "
+st_music/ui/record	st_music/ui/ennätys
+staged name	lavastettu nimi
+stale preview survived failed load	himmeä esikatselu selvisi epäonnistuneesta kuormasta
+status mismatch	statusero
+stock fallback mistaken for custom voice	osakevarauksen virhe mukautettua ääntä
+stock portrait fixture missing	varaston muotokuvalaite puuttuu
+theme did not paint %s	teema ei maalannut %s
+thumb grab jumps	peukalon tarttumishypyt
+tournament bracket	turnausryhmä
+tournament status	turnauksen tila
+track click does not scroll	kappaleiden napsautus ei rullaa
+unexpected connection state	odottamaton yhteyden tila
+unexpected cosmetic layout	odottamaton kosmeettinen ulkoasu
+unknown QA operation	tuntematon QA-toiminta
+unknown scrollbar fixture	tuntematon vierityspalkkiteline
+value%d	arvo%d
+virtual keyboard state	virtuaalinen näppäimistötila
+wait; wait	Odota.
+wait; wait; map 	Odota, odota, kartta
+weapon 1	Ase 1
+weapon 10	Ase 10
+weapon 11	Ase 11
+weapon 12	Ase 12
+weapon 2	Ase 2
+weapon 3	Ase 3
+weapon 4	Ase 4
+weapon 5	Ase 5
+weapon 6	Ase 6
+weapon 7	Ase 7
+weapon 8	Ase 8
+weapon 9	Ase 9

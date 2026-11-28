@@ -127,21 +127,7 @@ itemDef
 }
 
 		                                          
-		itemDef
-		{
-			name				secondary_background
-			group				none
-			style				WINDOW_STYLE_FILLED
-			rect				5 398 630 22
-			backcolor .008 .026 .044 .91
-			forecolor			1 1 1 1
-			border				1
-			bordercolor .22 .49 .64 .65
-			visible				1
-			decoration
 		
- bordersize .5
-}
 
 
 		itemDef
@@ -258,9 +244,9 @@ itemDef
 			                       
 			descText			@MENUS_CHOOSE_SOURCE_OF_SERVERS
 			ownerdraw			UI_NETSOURCE
-			rect				250 26 180 18
+			rect				250 29 180 17
 			font				4
-			textscale			1
+			textscale			.79
 			textalignx			0
 			textaligny			0
 			textalign			ITEM_ALIGN_LEFT
@@ -290,9 +276,9 @@ itemDef
 			                     
 			descText			@MENUS_SET_FILTER_FOR_SPECIFIC
 			ownerdraw			UI_NETFILTER
-			rect				250 44 180 18
+			rect				250 46 180 17
 			font				4
-			textscale .84
+			textscale .79
 			textalignx			0
 			textaligny			0
 			textalign			ITEM_ALIGN_LEFT
@@ -322,9 +308,9 @@ itemDef
 			text				@MENUS_GAME_TYPE
 			descText			@MENUS_FILTER_FOR_SPECIFIC_GAME
 			ownerdraw			UI_JOINGAMETYPE
-			rect				250 62 180 18
+			rect				250 63 180 17
 			font				4
-			textscale .84
+			textscale .79
 			textalignx			0
 			textaligny			0
 			textalign			ITEM_ALIGN_LEFT
@@ -355,8 +341,8 @@ itemDef
 			descText			@MENUS_INCLUDE_EMPTY_SERVERS
 			cvar				"ui_browserShowEmpty"
 			font				4
-			textscale .84
-			rect				430 26 180 18
+			textscale .79
+			rect				430 29 180 17
 			textalignx			0
 			textaligny			0
 			textalign			ITEM_ALIGN_LEFT
@@ -388,8 +374,8 @@ itemDef
 			descText			@MENUS_INCLUDE_FULL_SERVERS
 			cvar				"ui_browserShowFull"
 			font				4
-			textscale .84
-			rect				430 44 180 18
+			textscale .79
+			rect				430 46 180 17
 			textalignx			0
 			textaligny			0
 			textalign			ITEM_ALIGN_LEFT
@@ -426,8 +412,8 @@ itemDef
 				"@MENUS_ISDN" 5000
 				"@MENUS_LAN/CABLE" 25000
 			}
-			textscale .84
-			rect				430 62 180 18
+			textscale .79
+			rect				430 63 180 17
 			font				4
 			textalignx			0
 			textaligny			0
@@ -454,7 +440,7 @@ itemDef
         itemDef {
             name server_search rect 16 86 390 26 type ITEM_TYPE_EDITFIELD
             text "Search" cvar "ui_stServerSearch" maxchars 63 maxpaintchars 47
-            descText "Search by server name, map, or address"
+            descText "Search by server name, game type, map, or address"
             style WINDOW_STYLE_FILLED backcolor .008 .026 .044 .95
             border 1 bordersize .5 bordercolor .22 .49 .64 .65
             font 4 textscale .85 textalignx 7 textaligny 4 forecolor .76 .86 .93 1 visible 1
@@ -470,8 +456,20 @@ itemDef
             action { open st_directconnect }
         }
         itemDef {
-            name region_column rect 359 114 72 20 text "Region" decoration
+            name region_column group grpTabs rect 359 114 72 20 text "Region" type ITEM_TYPE_BUTTON
+            descText "Sort by region"
             font 4 textscale .72 textalignx 4 forecolor .76 .86 .93 1 visible 1
+            action {
+                play "sound/interface/button1.wav" ;
+                uiScript ServerSort 5 ;
+                setitemcolor grpTabs backcolor .06 .25 .37 .82 ;
+                setitemcolor region_column backcolor .06 .25 .37 .82 ;
+                setitemcolor grpTabs forecolor .76 .86 .93 1 ;
+                setitemcolor region_column forecolor 1 1 1 1 ;
+                setitemcolor grpColumn backcolor 0 0 0 0 ;
+            }
+            mouseEnter { show button_glow2 ; setitemrect button_glow2 359 112 72 23 }
+            mouseExit { hide button_glow2 }
         }
 
 		itemDef
@@ -780,7 +778,7 @@ itemDef
 			font				4
 			textscale .78
 			style				WINDOW_STYLE_FILLED
-			rect				10 402 120 20
+			rect				14 399 120 24
 			textalign			ITEM_ALIGN_CENTER
 			textalignx			60
 			textaligny			0
@@ -812,7 +810,7 @@ itemDef
 			font				4
 			textscale .78
 			style				WINDOW_STYLE_FILLED
-			rect				135 402 120 20
+			rect				137 399 120 24
 			textalign			ITEM_ALIGN_CENTER
 			textalignx			60
 			textaligny			0
@@ -845,7 +843,7 @@ itemDef
 			textscale .78
 			style				WINDOW_STYLE_FILLED
 			ownerdrawFlag			UI_SHOW_NOTFAVORITESERVERS
-			rect				260 402 120 20
+			rect				260 399 120 24
 			textalign			ITEM_ALIGN_CENTER
 			textalignx			60
 			textaligny			0
@@ -877,7 +875,7 @@ itemDef
 			textscale .78
 			style				WINDOW_STYLE_FILLED
 			ownerdrawFlag			UI_SHOW_FAVORITESERVERS
-			rect				260 402 120 20
+			rect				260 399 120 24
 			textalign			ITEM_ALIGN_CENTER
 			textalignx			60
 			textaligny			0
@@ -910,7 +908,7 @@ itemDef
 			font				4
 			textscale .78
 			style				WINDOW_STYLE_FILLED
-			rect				385 402 120 20
+			rect				383 399 120 24
 			textalign			ITEM_ALIGN_CENTER
 			textalignx			60
 			textaligny			0
@@ -942,7 +940,7 @@ itemDef
 			font				4
 			textscale .78
 			style				WINDOW_STYLE_FILLED
-			rect				510 402 120 20
+			rect				506 399 120 24
 			textalign			ITEM_ALIGN_CENTER
 			textalignx			60
 			textaligny			0
@@ -1084,7 +1082,7 @@ itemDef
         itemDef { name title rect 18 11 356 23 text "Quick Match" font 2 textscale .95 forecolor .30 .78 1 1 visible 1 decoration }
         itemDef {
             name game rect 18 48 352 21 text "Game mode" type ITEM_TYPE_MULTI
-            cvar "ui_stMatchGame" cvarFloatList { "Any" -1 "FFA" 0 "Holocron" 1 "Jedi Master" 2 "Duel" 3 "Power Duel" 4 "Team FFA" 6 "Siege" 7 "CTF" 8 "CTY" 9 }
+            cvar "ui_stMatchGame" cvarFloatList { "Any" -1 "FFA" 0 "Duel" 3 "Power Duel" 4 "Team FFA" 6 "Siege" 7 "CTF" 8 "PUG" 10 "Ladder" 11 }
             font 4 textscale .80 textaligny 3 forecolor .76 .86 .93 1 visible 1
         }
         itemDef {

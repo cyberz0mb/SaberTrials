@@ -49,6 +49,14 @@ class AccountStore:
                     instance TEXT NOT NULL, slot INTEGER NOT NULL, generation TEXT NOT NULL,
                     expires REAL NOT NULL, session TEXT NOT NULL REFERENCES account_sessions(hash) ON DELETE CASCADE)'''
             ]
+            statements.extend([
+                """CREATE TABLE IF NOT EXISTS format_results(
+                    server TEXT NOT NULL REFERENCES servers(id), event TEXT NOT NULL,
+                    format TEXT NOT NULL, fingerprint TEXT NOT NULL, PRIMARY KEY(server,event))""",
+                """CREATE TABLE IF NOT EXISTS format_points(
+                    player TEXT PRIMARY KEY REFERENCES accounts(player),
+                    points INTEGER NOT NULL DEFAULT 0)"""
+            ])
             for statement in statements:
                 self.db.execute(statement)
             self.db.execute('''CREATE TABLE IF NOT EXISTS account_server_endpoints(
@@ -168,7 +176,8 @@ class AccountStore:
             LEFT JOIN teams t ON t.id=m.team WHERE a.player=? AND a.enabled=1''', (player,)).fetchone()
         if not row:
             raise AccountError('Account is unavailable')
-        return dict(account=row['player'], name=native_name(row['name']),
+        points = self.db.execute('SELECT points FROM format_points WHERE player=?', (player,)).fetchone()
+        return dict(format_points=points['points'] if points else 0, account=row['player'], name=native_name(row['name']),
                     team=row['team'] or '', teamName=row['tag'] or '', verified=True)
 
     def _session(self, session_hash):
@@ -295,6 +304,45 @@ class AccountStore:
             self.db.execute('DELETE FROM account_challenges WHERE hash=?', (row['hash'],))
             return dict(lease_token=token, expires_at=expires, instance=instance, slot=slot,
                         generation=generation, profile=self._profile(session['player']))
+
+    def format_result(self, server_token, event, mode, participants):
+        if (not isinstance(event, str) or not re.fullmatch(r'[0-9a-f]{32}', event)
+                or mode not in ('pug', 'ladder') or not isinstance(participants, list)
+                or not 1 <= len(participants) <= (2 if mode == 'ladder' else 64)):
+            raise AccountError('Invalid format result')
+        proofs = {}
+        for entry in participants:
+            if (not isinstance(entry, dict) or set(entry) != {'lease', 'won'}
+                    or type(entry['won']) is not bool):
+                raise AccountError('Invalid participant')
+            proof = digest(entry['lease'])
+            if proof in proofs:
+                raise AccountError('Duplicate participant')
+            proofs[proof] = entry['won']
+        if mode == 'ladder' and sum(proofs.values()) > 1:
+            raise AccountError('Invalid ladder winner')
+        fingerprint = hashlib.sha256(repr(sorted(proofs.items())).encode('ascii')).hexdigest()
+        with self.ledger.transaction():
+            server = self._server(server_token)
+            previous = self.db.execute('SELECT * FROM format_results WHERE server=? AND event=?',
+                                       (server, event)).fetchone()
+            if previous:
+                if previous['fingerprint'] != fingerprint or previous['format'] != mode:
+                    raise AccountError('Conflicting format result')
+                return {'status': 'recorded'}
+            players = {}
+            for proof, won in proofs.items():
+                row = self.db.execute("""SELECT s.player FROM account_leases l
+                    JOIN account_sessions s ON l.session=s.hash JOIN accounts a ON a.player=s.player
+                    WHERE l.hash=? AND l.server=? AND l.expires>? AND s.expires>? AND a.enabled=1""",
+                    (proof, server, self.clock(), self.clock())).fetchone()
+                if not row or row['player'] in players:
+                    raise AccountError('Invalid participant identity')
+                players[row['player']] = 1 + int(won)
+            self.db.execute('INSERT INTO format_results VALUES(?,?,?,?)', (server,event,mode,fingerprint))
+            self.db.executemany("""INSERT INTO format_points(player,points) VALUES(?,?)
+                ON CONFLICT(player) DO UPDATE SET points=points+excluded.points""", players.items())
+            return {'status': 'recorded'}
 
     def renew(self, server_token, lease_token):
         with self.ledger.transaction():

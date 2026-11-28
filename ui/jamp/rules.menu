@@ -107,30 +107,9 @@ itemDef {
  visible 1
  decoration
 }
-itemDef {
- name "st_editor_nav"
- rect 20 77 600 29
- style 1
- backcolor .02 .075 .115 .8
- visible 1
- decoration
-}
-itemDef {
- name "st_editor_navline"
- rect 20 106 600 0.5
- style 1
- backcolor .22 .49 .64 .65
- visible 1
- decoration
-}
-itemDef {
- name "st_editor_active"
- rect 21 104 102 1
- style 1
- backcolor .30 .78 1 1
- visible 1
- decoration
-}
+
+
+
 itemDef {
  name "st_editor_rulescard"
  rect 218 150 204 267
@@ -385,7 +364,7 @@ itemDef
 
 			type				ITEM_TYPE_BUTTON
 
-			rect 7 78 130 27.8919
+			rect 28 77 140 27
 
 			text "Play"
 
@@ -460,7 +439,7 @@ itemDef
 
 			type				ITEM_TYPE_BUTTON
 
-			rect 170 78 130 27.8919
+			rect 176 77 140 27
 
 			textaligny			0
 
@@ -531,7 +510,7 @@ itemDef
 
 			style				WINDOW_STYLE_EMPTY
 
-			rect 340 78 130 27.8919
+			rect 324 77 140 27
 
 			font 2
 
@@ -604,7 +583,7 @@ itemDef
 
 			style				WINDOW_STYLE_EMPTY
 
-			rect 502 78 130 27.8919
+			rect 472 77 140 27
 
 			font 2
 
@@ -685,37 +664,7 @@ itemDef
 
 		
 
-		itemDef 
-
-		{
-
-			name				default_rulesheader
-
-			group				rulesheader
-
-			style				WINDOW_STYLE_EMPTY
-
-			text "GAME RULES"
-
-       			rect 100 122.162 440 18.5946
-
-			font 2
-
-			textscale 0.7
-
-			textalign			ITEM_ALIGN_CENTER		
-
-			textalignx			225
-
-			textaligny			-1
-
-			forecolor .30 .78 1 1
-
-      			visible				1 
-
-      			decoration 
-
-		}
+		
 
 
 

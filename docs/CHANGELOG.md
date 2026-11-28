@@ -1,6 +1,45 @@
 # Saber Trials changelog
 
-## November 2026
+## Beta 1.15 · November 28, 2026
+
+- Type in Polish, Dutch, Swedish or Finnish from the on-screen keyboard. Select the language button to switch mid-message or choose **Auto** to follow the menu language. The layout is remembered across player names, public chat, team chat, private messages and the console.
+- Choose any of the four languages in the menus and offline chat translator. Existing Polish chat support carries over. New Dutch, Swedish and Finnish models translate in both directions through English. [Language settings](Universal-Translator.md).
+- Windows and Linux hosts preserve accented letters in player names, including **Łukasz**, **Loïs**, **Åsa** and **Väinö**.
+- Returning 1.11 testers can apply the 25.47 MB Windows Fix. Full includes every chat model. Lite and updated installations can add individual packs. [Update instructions](Windows-ZIP-Updates.md).
+
+## November 28, 2026
+
+- Open the tournament lobby from Play or the pause menu to register, check
+  the bracket and confirm readiness. The Linux tournament host accepts
+  individual and team entries. [Tournament guide](Tournament-Playtest.md).
+- Use the aim-to-ignore binding or console commands to filter chat. Private
+  duels have visibility and sound controls. [Ignore commands](Player-Ignore.md).
+- Control local tracks and supported Windows media sessions from the pause
+  menu. [Music player guide](Music-Player.md).
+- Updated scoreboard statistics and in-game text, movement keycaps, bot
+  waypoint handling, and the Windows player and dedicated-server launchers.
+- Added the Windows installer definition and packaging tools for the Lite
+  and Full editions. [Build instructions](WINDOWS-BUILD-CHECKPOINT.md).
+
+## November 25, 2026
+
+- Added dedicated Block, Attack-timed parries, single-saber feints, and saved
+  Match Rules presets. Hosts can configure combat, Force, weapons, bots, and
+  map rotation.
+- Added PUG queues, Ladder series, and TFFA with up to eight teams. Account
+  points require an enrolled server and a matching account service.
+- Improved controller detection, menu navigation, chat and translation.
+  Added a Classic JKA menu theme and adaptive network settings.
+- Expanded compatibility with base JKA, OpenJK and JA+ servers. Added
+  player-facing HUD and cosmetic options and updated server-browser population
+  display. Rendering and availability depend on the connected server and
+  installed content.
+- Added Vulkan support for enhanced maps, high-detail character geometry, and
+  materials shared with Rend2.
+- Added optional anti-script monitoring and enforcement. Hosted verification
+  is still needed before using enforcement.
+
+## Earlier November 2026 changes
 
 - Added Worldwide server discovery, search, direct connect and Quick Match
   recommendations based on mode, ping and population.

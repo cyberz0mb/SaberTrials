@@ -35,6 +35,10 @@ Commands can be entered directly in the host/dedicated-server console. A remote 
 See [Combat modes](COMBAT_MODES.md) for server settings, independent options,
 paired client/server requirements and a short in-game check.
 
+## Optional anti-script enforcement
+
+The anti-script engine candidate adds `sv_stAntiScript` (0 Off, 1 Monitor, 2 Enforce) and the server-console `st_as` commands. Its default is Off. The [operator guide](Anti-Script.md) covers account verification, evidence review, strike history and ban overrides.
+
 ## Monitor-only anti-cheat commands
 
 | Command | Effect |
@@ -84,7 +88,7 @@ Tournament is a 4–32 player single-elimination competition layered on Duel. On
 | `st_tournament forfeit <player>` | Eliminate one of the two active competitors and advance the opponent. |
 | `st_tournament reset` | End Tournament and restore the normal Duel queue. |
 
-Players use Profile > Tournament or `/tournament join`, `/tournament leave`, `/tournament status`, and `/tournament bracket`. They can use `callvote tournament open` to select Tournament and `callvote tournament start` to begin early. Otherwise it auto-starts after five minutes once four players are registered. A disconnected active competitor has 60 seconds to return before forfeiting; if both disappear, Tournament pauses for an administrator.
+Players use Profile > Tournament or `/tournament join`, `/tournament leave`, `/tournament status`, and `/tournament bracket`. Administrators can open registration and start the bracket from the server console. Registration auto-starts after five minutes once four players are registered. A disconnected active competitor has 60 seconds to return before forfeiting; if both disappear, Tournament pauses for an administrator.
 
 ## Included game-mode presets
 
@@ -153,7 +157,7 @@ These are client settings and are normally changed through Setup > Streamer Mode
 | `seta st_voteCooldown "60"` | Set seconds between vote calls. |
 | `seta st_voteMaxCalls "3"` | Set how many votes each person may initiate per map. |
 | `seta st_staffGuids "GUID_ONE GUID_TWO"` | Protect listed administrators/moderators from kick votes. |
-| `seta g_allowVote "16383"` | Enable all supported menu votes, including limits, maps, warmup, Force Mode, Game Type, Tournament, Kick, Add Bot, and TFFA team locking. |
+| `seta g_allowVote "16383"` | Enable all supported menu votes, including limits, maps, warmup, Force Mode, Game Type, Kick, Add Bot, and TFFA team locking. |
 
 Do not publish real staff GUIDs or the RCON password in a public beta package.
 

@@ -3,7 +3,7 @@ from pathlib import Path
 import argparse,json,os,shutil,subprocess
 ROOT=Path(__file__).resolve().parents[1];OUT=ROOT/'dist/setup-candidate-01';MOD='SaberTrialsSetupTest'
 def main():
- p=argparse.ArgumentParser();p.add_argument('--tag',required=True);p.add_argument('--height',type=int,default=720);p.add_argument('--production',action='store_true');p.add_argument('--renderer',default='rd-vanilla');p.add_argument('--case',choices=['menu','display','timeout','keep','recovery','recovery-write','import','editing','pause'],default='menu');a=p.parse_args()
+ p=argparse.ArgumentParser();p.add_argument('--tag',required=True);p.add_argument('--height',type=int,default=720);p.add_argument('--production',action='store_true');p.add_argument('--renderer',default='rd-vanilla');p.add_argument('--case',choices=['menu','display','timeout','keep','recovery','recovery-write','import','editing','pause','quality'],default='menu');a=p.parse_args()
  run=OUT/'verification'/a.tag;assert not run.exists();mod=run/'home'/MOD;mod.mkdir(parents=True)
  for f in (OUT/'playable/home'/MOD).iterdir():
   if f.suffix in ('.pk3','.dll'):shutil.copy2(f,mod/f.name)
@@ -17,6 +17,18 @@ def main():
  def cmd(s):lines.extend(['st_setupqa '+s,'wait 3'])
  def shot(n):lines.extend(['wait 6','screenshot_png setup-'+n,'wait 3'])
  shot('video')
+ if not a.production and a.case=='quality':
+  for button, picmip, samples in ((2912,0,8),(2911,1,2),(2910,3,0)):
+   click(button)
+   click(2902)
+   lines+=['wait 45','ui_openmenu setup_menu','wait 10']
+   cmd(f'assertvar r_picmip {picmip}')
+   cmd(f'assertvar r_ext_multisample {samples}')
+   cmd(f'assertvar cl_renderer {a.renderer}')
+   cmd('assertvar r_mode -1')
+   if a.renderer=='rd-rend2':
+    for setting in ('r_ssao','r_parallaxMapping','r_cubeMapping','r_floatLightmap'):
+     cmd(f'assertvar {setting} {int(button==2912)}')
  if not a.production and a.case=='pause':
   cmd('pause');shot('pause-rail');cmd('pauseclick controls');cmd('assertmenu ingame_controls');shot('pause-controls');lines+=['st_controlsqa click 1300','wait 6'];cmd('assertmenu ingame');cmd('pauseclick setup');cmd('assertmenu ingame_setup');shot('pause-setup');click(2900);cmd('assertmenu ingame');shot('pause-back')
  if not a.production and a.case in ('recovery','recovery-write'):cmd('assertvar r_customwidth 1280')

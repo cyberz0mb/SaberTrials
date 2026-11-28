@@ -26,7 +26,7 @@ def evidence():
             logical={'engine':'bin/SaberTrials.x86_64.exe','vulkan':'bin/rd-vulkan_x86_64.dll','ui':'home/SaberTrials/uix86_64.dll'}[role]
             valid &= r['inputs'].get(logical)==receipt['sha256']
         if valid:chosen[key]={'path':str(p),'sha256':b.sha(p)}
-    required={r+'/'+s for r,s in import_module('Check-Vulkan-Suite').CASES}|{'dedicated-loopback'}
+    required={r+'/'+s for r,s in import_module('Check-Vulkan-Suite').CASES}|{'dedicated-loopback','rd-vulkan/materials'}
     assert required<=chosen.keys(),'Missing matching checks: '+str(sorted(required-chosen.keys()))
     return chosen
 
@@ -80,6 +80,7 @@ def stage():
     shutil.copyfile(b.ROOT/'docs/licenses/Khronos-Vulkan-MIT.txt',licenses/'Khronos-Vulkan-MIT.txt')
     shutil.copyfile(b.ROOT/'docs/Vulkan-Renderer.md',PLAY/'README.md')
     shutil.copyfile(b.ROOT/'docs/Vulkan-Validation.md',PLAY/'VALIDATION.md')
+    shutil.copyfile(b.ROOT/'docs/Vulkan-Material-Compatibility.md',PLAY/'Vulkan-Material-Compatibility.md')
     assert original==helper.settings()[1],'Original settings changed during staging'
     b.write(PLAY/'stage-receipt.json',dict(source=b.sha(b.OUT/'source-receipt.json'),checks=checks,
         files={name:b.sha(PLAY/name) for name in files()},copied_profile=copied,original_settings=original,

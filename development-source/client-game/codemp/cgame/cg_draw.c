@@ -5921,10 +5921,10 @@ CG_`Entity
 =================
 */
 #define MAX_XHAIR_DIST_ACCURACY	20000.0f
-static void CG_ScanForCrosshairEntity( void ) {
+static void CG_TraceCrosshairTarget( trace_t *result ) {
 	trace_t		trace;
 	vec3_t		start, end;
-	int			content;
+
 	int			ignore;
 	qboolean	bVehCheckTraceFromCamPos = qfalse;
 
@@ -6072,6 +6072,30 @@ static void CG_ScanForCrosshairEntity( void ) {
 		CG_Trace( &trace, start, vec3_origin, vec3_origin, end,
 			ignore, CONTENTS_SOLID|CONTENTS_BODY );
 	}
+	*result = trace;
+}
+
+int CG_CurrentAimPlayer( void ) {
+    trace_t trace;
+    entityState_t *state;
+    if (!cg.snap) return -1;
+    CG_TraceCrosshairTarget(&trace);
+    if (trace.allsolid || trace.startsolid || trace.fraction >= 1.0f ||
+        trace.entityNum < 0 || trace.entityNum >= MAX_CLIENTS ||
+        trace.entityNum == cg.snap->ps.clientNum || !cg_entities[trace.entityNum].currentValid)
+        return -1;
+    state = &cg_entities[trace.entityNum].currentState;
+    if (CG_IsMindTricked(state->trickedentindex, state->trickedentindex2,
+            state->trickedentindex3, state->trickedentindex4, cg.snap->ps.clientNum) ||
+        (CG_PointContents(trace.endpos, 0) & CONTENTS_FOG)) return -1;
+    return trace.entityNum;
+}
+
+static void CG_ScanForCrosshairEntity( void ) {
+    trace_t trace;
+    int content;
+    CG_TraceCrosshairTarget(&trace);
+
 
 	if (trace.entityNum < MAX_CLIENTS)
 	{

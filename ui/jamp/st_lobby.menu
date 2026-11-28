@@ -1,0 +1,196 @@
+{
+menuDef { name "st_tournament_ready" rect 0 0 640 480 visible 0 fullscreen 1 focusColor .25 .85 1 1 onOpen { exec "cmd st_lobby status" ; setfocus back ; } onESC { uiScript closeingame ; }
+itemDef { name panel rect 10 10 620 460 style 1 backcolor .012 .029 .040 .96 visible 1 decoration }
+itemDef { name brand rect 27 22 420 22 type 0 text "SABER TRIALS" font 2 textscale .96 forecolor .81 .91 .96 1 visible 1 decoration }
+itemDef { name heading rect 27 57 584 22 type 0 text "TOURNAMENT  /  READY ROOM" font 2 textscale .87 forecolor .81 .91 .96 1 visible 1 decoration }
+itemDef { name state0 rect 28 99 584 22 type 0 cvar "ui_ste0" font 2 textscale .87 forecolor .81 .91 .96 1 visible 1 decoration }
+itemDef { name state46 rect 28 126 584 22 type 0 cvar "ui_ste46" font 2 textscale .70 forecolor .81 .91 .96 1 visible 1 decoration }
+itemDef { name state45 rect 28 150 584 22 type 0 cvar "ui_ste45" font 2 textscale .66 forecolor .81 .91 .96 1 visible 1 decoration }
+itemDef { name state44 rect 28 348 584 22 type 0 cvar "ui_ste44" font 2 textscale .65 forecolor .81 .91 .96 1 visible 1 decoration }
+itemDef { name state55 rect 28 372 584 22 type 0 cvar "ui_ste55" font 2 textscale .62 forecolor .81 .91 .96 1 visible 1 decoration }
+itemDef { name side0s47 rect 28 186 278 22 type 0 cvar "ui_ste47" font 2 textscale .70 forecolor .81 .91 .96 1 visible 1 decoration }
+itemDef { name side0s49 rect 28 211 278 22 type 0 cvar "ui_ste49" font 2 textscale .70 forecolor .81 .91 .96 1 visible 1 decoration }
+itemDef { name side0s52 rect 28 326 278 22 type 0 cvar "ui_ste52" font 2 textscale .70 forecolor .81 .91 .96 1 visible 1 decoration }
+itemDef { name line0 rect 28 235 275 22 type 0 cvar "ui_ste1" font 2 textscale .68 forecolor .81 .91 .96 1 visible 1 decoration }
+itemDef { name line1 rect 28 253 275 22 type 0 cvar "ui_ste2" font 2 textscale .68 forecolor .81 .91 .96 1 visible 1 decoration }
+itemDef { name line2 rect 28 271 275 22 type 0 cvar "ui_ste3" font 2 textscale .68 forecolor .81 .91 .96 1 visible 1 decoration }
+itemDef { name line3 rect 28 289 275 22 type 0 cvar "ui_ste4" font 2 textscale .68 forecolor .81 .91 .96 1 visible 1 decoration }
+itemDef { name line4 rect 28 307 275 22 type 0 cvar "ui_ste5" font 2 textscale .68 forecolor .81 .91 .96 1 visible 1 decoration }
+itemDef { name side1s47 rect 330 186 278 22 type 0 cvar "ui_ste48" font 2 textscale .70 forecolor .81 .91 .96 1 visible 1 decoration }
+itemDef { name side1s49 rect 330 211 278 22 type 0 cvar "ui_ste50" font 2 textscale .70 forecolor .81 .91 .96 1 visible 1 decoration }
+itemDef { name side1s52 rect 330 326 278 22 type 0 cvar "ui_ste53" font 2 textscale .70 forecolor .81 .91 .96 1 visible 1 decoration }
+itemDef { name line5 rect 330 235 275 22 type 0 cvar "ui_ste6" font 2 textscale .68 forecolor .81 .91 .96 1 visible 1 decoration }
+itemDef { name line6 rect 330 253 275 22 type 0 cvar "ui_ste7" font 2 textscale .68 forecolor .81 .91 .96 1 visible 1 decoration }
+itemDef { name line7 rect 330 271 275 22 type 0 cvar "ui_ste8" font 2 textscale .68 forecolor .81 .91 .96 1 visible 1 decoration }
+itemDef { name line8 rect 330 289 275 22 type 0 cvar "ui_ste9" font 2 textscale .68 forecolor .81 .91 .96 1 visible 1 decoration }
+itemDef { name line9 rect 330 307 275 22 type 0 cvar "ui_ste10" font 2 textscale .68 forecolor .81 .91 .96 1 visible 1 decoration }
+itemDef { name score rect 30 397 280 22 type 0 cvar "ui_ste12" font 2 textscale .69 forecolor .81 .91 .96 1 visible 1 decoration }
+itemDef { name clock rect 330 397 278 22 type 0 cvar "ui_ste51" font 2 textscale .65 forecolor .81 .91 .96 1 visible 1 decoration }
+itemDef { name register rect 28 432 100 28 type 1 text "Join" font 2 textscale .73 textalignx 7 textaligny 4 forecolor .8 .92 1 1 style 1 backcolor .015 .055 .08 .96 border 1 bordersize .5 bordercolor .20 .65 .84 .9 visible 1 cvarTest "ui_stLobbySoloJoin" showCvar { "1" } action { play "sound/interface/button1.wav" ; exec "cmd st_lobby join" ; } }
+itemDef { name team rect 28 432 100 28 type 1 text "Join squad" font 2 textscale .73 textalignx 7 textaligny 4 forecolor .8 .92 1 1 style 1 backcolor .015 .055 .08 .96 border 1 bordersize .5 bordercolor .20 .65 .84 .9 visible 1 cvarTest "ui_stLobbySquadJoin" showCvar { "1" } action { play "sound/interface/button1.wav" ; close st_tournament_ready ; open st_lobby_squads ; } }
+itemDef { name leave rect 28 432 100 28 type 1 text "Leave" font 2 textscale .73 textalignx 7 textaligny 4 forecolor .8 .92 1 1 style 1 backcolor .015 .055 .08 .96 border 1 bordersize .5 bordercolor .20 .65 .84 .9 visible 1 cvarTest "ui_stEventCanLeave" showCvar { "1" } action { play "sound/interface/button1.wav" ; close st_tournament_ready ; open st_lobby_leave ; } }
+itemDef { name ready rect 28 432 100 28 type 1 cvar "ui_ste11" font 2 textscale .73 textalignx 7 textaligny 4 forecolor .8 .92 1 1 style 1 backcolor .015 .055 .08 .96 border 1 bordersize .5 bordercolor .20 .65 .84 .9 visible 1 cvarTest "ui_stEventCanReady" showCvar { "1" } action { play "sound/interface/button1.wav" ; exec "cmd st_lobby ready" ; } }
+itemDef { name entries rect 140 432 96 28 type 1 text "Roster" font 2 textscale .73 textalignx 7 textaligny 4 forecolor .8 .92 1 1 style 1 backcolor .015 .055 .08 .96 border 1 bordersize .5 bordercolor .20 .65 .84 .9 visible 1  action { play "sound/interface/button1.wav" ; close st_tournament_ready ; open st_lobby_roster0 ; } }
+itemDef { name bracket rect 248 432 96 28 type 1 text "Bracket" font 2 textscale .73 textalignx 7 textaligny 4 forecolor .8 .92 1 1 style 1 backcolor .015 .055 .08 .96 border 1 bordersize .5 bordercolor .20 .65 .84 .9 visible 1 cvarTest "ui_stEventHasBracket" showCvar { "1" } action { play "sound/interface/button1.wav" ; close st_tournament_ready ; open st_lobby_bracket0 ; } }
+itemDef { name subs rect 356 432 118 28 type 1 text "Substitute" font 2 textscale .73 textalignx 7 textaligny 4 forecolor .8 .92 1 1 style 1 backcolor .015 .055 .08 .96 border 1 bordersize .5 bordercolor .20 .65 .84 .9 visible 1 cvarTest "ui_stEventCanSubstitute" showCvar { "1" } action { play "sound/interface/button1.wav" ; close st_tournament_ready ; open st_lobby_subs ; } }
+itemDef { name back rect 494 432 118 28 type 1 text "Resume" font 2 textscale .73 textalignx 7 textaligny 4 forecolor .8 .92 1 1 style 1 backcolor .015 .055 .08 .96 border 1 bordersize .5 bordercolor .20 .65 .84 .9 visible 1  action { play "sound/interface/button1.wav" ; uiScript closeingame ; } }
+}
+menuDef { name "st_lobby_roster0" rect 0 0 640 480 visible 0 fullscreen 1 focusColor .25 .85 1 1 onOpen { setfocus back ; } onESC { close st_lobby_roster0 ; open st_tournament_ready ; }
+itemDef { name panel rect 10 10 620 460 style 1 backcolor .012 .029 .040 .96 visible 1 decoration }
+itemDef { name brand rect 27 22 420 22 type 0 text "SABER TRIALS" font 2 textscale .96 forecolor .81 .91 .96 1 visible 1 decoration }
+itemDef { name heading rect 27 57 584 22 type 0 text "TOURNAMENT  /  ROSTER     1 / 4" font 2 textscale .87 forecolor .81 .91 .96 1 visible 1 decoration }
+itemDef { name row0 rect 34 123 572 22 type 0 cvar "ui_stLobbyEntry0" font 2 textscale .77 forecolor .81 .91 .96 1 visible 1 decoration }
+itemDef { name row1 rect 34 154 572 22 type 0 cvar "ui_stLobbyEntry1" font 2 textscale .77 forecolor .81 .91 .96 1 visible 1 decoration }
+itemDef { name row2 rect 34 185 572 22 type 0 cvar "ui_stLobbyEntry2" font 2 textscale .77 forecolor .81 .91 .96 1 visible 1 decoration }
+itemDef { name row3 rect 34 216 572 22 type 0 cvar "ui_stLobbyEntry3" font 2 textscale .77 forecolor .81 .91 .96 1 visible 1 decoration }
+itemDef { name row4 rect 34 247 572 22 type 0 cvar "ui_stLobbyEntry4" font 2 textscale .77 forecolor .81 .91 .96 1 visible 1 decoration }
+itemDef { name row5 rect 34 278 572 22 type 0 cvar "ui_stLobbyEntry5" font 2 textscale .77 forecolor .81 .91 .96 1 visible 1 decoration }
+itemDef { name row6 rect 34 309 572 22 type 0 cvar "ui_stLobbyEntry6" font 2 textscale .77 forecolor .81 .91 .96 1 visible 1 decoration }
+itemDef { name row7 rect 34 340 572 22 type 0 cvar "ui_stLobbyEntry7" font 2 textscale .77 forecolor .81 .91 .96 1 visible 1 decoration }
+itemDef { name next rect 169 424 110 28 type 1 text "Next" font 2 textscale .73 textalignx 7 textaligny 4 forecolor .8 .92 1 1 style 1 backcolor .015 .055 .08 .96 border 1 bordersize .5 bordercolor .20 .65 .84 .9 visible 1  action { play "sound/interface/button1.wav" ; close st_lobby_roster0 ; open st_lobby_roster1 ; } }
+itemDef { name back rect 458 424 154 28 type 1 text "Ready room" font 2 textscale .73 textalignx 7 textaligny 4 forecolor .8 .92 1 1 style 1 backcolor .015 .055 .08 .96 border 1 bordersize .5 bordercolor .20 .65 .84 .9 visible 1  action { play "sound/interface/button1.wav" ; close st_lobby_roster0 ; open st_tournament_ready ; } }
+}
+menuDef { name "st_lobby_roster1" rect 0 0 640 480 visible 0 fullscreen 1 focusColor .25 .85 1 1 onOpen { setfocus back ; } onESC { close st_lobby_roster1 ; open st_tournament_ready ; }
+itemDef { name panel rect 10 10 620 460 style 1 backcolor .012 .029 .040 .96 visible 1 decoration }
+itemDef { name brand rect 27 22 420 22 type 0 text "SABER TRIALS" font 2 textscale .96 forecolor .81 .91 .96 1 visible 1 decoration }
+itemDef { name heading rect 27 57 584 22 type 0 text "TOURNAMENT  /  ROSTER     2 / 4" font 2 textscale .87 forecolor .81 .91 .96 1 visible 1 decoration }
+itemDef { name row8 rect 34 123 572 22 type 0 cvar "ui_stLobbyEntry8" font 2 textscale .77 forecolor .81 .91 .96 1 visible 1 decoration }
+itemDef { name row9 rect 34 154 572 22 type 0 cvar "ui_stLobbyEntry9" font 2 textscale .77 forecolor .81 .91 .96 1 visible 1 decoration }
+itemDef { name row10 rect 34 185 572 22 type 0 cvar "ui_stLobbyEntry10" font 2 textscale .77 forecolor .81 .91 .96 1 visible 1 decoration }
+itemDef { name row11 rect 34 216 572 22 type 0 cvar "ui_stLobbyEntry11" font 2 textscale .77 forecolor .81 .91 .96 1 visible 1 decoration }
+itemDef { name row12 rect 34 247 572 22 type 0 cvar "ui_stLobbyEntry12" font 2 textscale .77 forecolor .81 .91 .96 1 visible 1 decoration }
+itemDef { name row13 rect 34 278 572 22 type 0 cvar "ui_stLobbyEntry13" font 2 textscale .77 forecolor .81 .91 .96 1 visible 1 decoration }
+itemDef { name row14 rect 34 309 572 22 type 0 cvar "ui_stLobbyEntry14" font 2 textscale .77 forecolor .81 .91 .96 1 visible 1 decoration }
+itemDef { name row15 rect 34 340 572 22 type 0 cvar "ui_stLobbyEntry15" font 2 textscale .77 forecolor .81 .91 .96 1 visible 1 decoration }
+itemDef { name prev rect 28 424 130 28 type 1 text "Previous" font 2 textscale .73 textalignx 7 textaligny 4 forecolor .8 .92 1 1 style 1 backcolor .015 .055 .08 .96 border 1 bordersize .5 bordercolor .20 .65 .84 .9 visible 1  action { play "sound/interface/button1.wav" ; close st_lobby_roster1 ; open st_lobby_roster0 ; } }
+itemDef { name next rect 169 424 110 28 type 1 text "Next" font 2 textscale .73 textalignx 7 textaligny 4 forecolor .8 .92 1 1 style 1 backcolor .015 .055 .08 .96 border 1 bordersize .5 bordercolor .20 .65 .84 .9 visible 1  action { play "sound/interface/button1.wav" ; close st_lobby_roster1 ; open st_lobby_roster2 ; } }
+itemDef { name back rect 458 424 154 28 type 1 text "Ready room" font 2 textscale .73 textalignx 7 textaligny 4 forecolor .8 .92 1 1 style 1 backcolor .015 .055 .08 .96 border 1 bordersize .5 bordercolor .20 .65 .84 .9 visible 1  action { play "sound/interface/button1.wav" ; close st_lobby_roster1 ; open st_tournament_ready ; } }
+}
+menuDef { name "st_lobby_roster2" rect 0 0 640 480 visible 0 fullscreen 1 focusColor .25 .85 1 1 onOpen { setfocus back ; } onESC { close st_lobby_roster2 ; open st_tournament_ready ; }
+itemDef { name panel rect 10 10 620 460 style 1 backcolor .012 .029 .040 .96 visible 1 decoration }
+itemDef { name brand rect 27 22 420 22 type 0 text "SABER TRIALS" font 2 textscale .96 forecolor .81 .91 .96 1 visible 1 decoration }
+itemDef { name heading rect 27 57 584 22 type 0 text "TOURNAMENT  /  ROSTER     3 / 4" font 2 textscale .87 forecolor .81 .91 .96 1 visible 1 decoration }
+itemDef { name row16 rect 34 123 572 22 type 0 cvar "ui_stLobbyEntry16" font 2 textscale .77 forecolor .81 .91 .96 1 visible 1 decoration }
+itemDef { name row17 rect 34 154 572 22 type 0 cvar "ui_stLobbyEntry17" font 2 textscale .77 forecolor .81 .91 .96 1 visible 1 decoration }
+itemDef { name row18 rect 34 185 572 22 type 0 cvar "ui_stLobbyEntry18" font 2 textscale .77 forecolor .81 .91 .96 1 visible 1 decoration }
+itemDef { name row19 rect 34 216 572 22 type 0 cvar "ui_stLobbyEntry19" font 2 textscale .77 forecolor .81 .91 .96 1 visible 1 decoration }
+itemDef { name row20 rect 34 247 572 22 type 0 cvar "ui_stLobbyEntry20" font 2 textscale .77 forecolor .81 .91 .96 1 visible 1 decoration }
+itemDef { name row21 rect 34 278 572 22 type 0 cvar "ui_stLobbyEntry21" font 2 textscale .77 forecolor .81 .91 .96 1 visible 1 decoration }
+itemDef { name row22 rect 34 309 572 22 type 0 cvar "ui_stLobbyEntry22" font 2 textscale .77 forecolor .81 .91 .96 1 visible 1 decoration }
+itemDef { name row23 rect 34 340 572 22 type 0 cvar "ui_stLobbyEntry23" font 2 textscale .77 forecolor .81 .91 .96 1 visible 1 decoration }
+itemDef { name prev rect 28 424 130 28 type 1 text "Previous" font 2 textscale .73 textalignx 7 textaligny 4 forecolor .8 .92 1 1 style 1 backcolor .015 .055 .08 .96 border 1 bordersize .5 bordercolor .20 .65 .84 .9 visible 1  action { play "sound/interface/button1.wav" ; close st_lobby_roster2 ; open st_lobby_roster1 ; } }
+itemDef { name next rect 169 424 110 28 type 1 text "Next" font 2 textscale .73 textalignx 7 textaligny 4 forecolor .8 .92 1 1 style 1 backcolor .015 .055 .08 .96 border 1 bordersize .5 bordercolor .20 .65 .84 .9 visible 1  action { play "sound/interface/button1.wav" ; close st_lobby_roster2 ; open st_lobby_roster3 ; } }
+itemDef { name back rect 458 424 154 28 type 1 text "Ready room" font 2 textscale .73 textalignx 7 textaligny 4 forecolor .8 .92 1 1 style 1 backcolor .015 .055 .08 .96 border 1 bordersize .5 bordercolor .20 .65 .84 .9 visible 1  action { play "sound/interface/button1.wav" ; close st_lobby_roster2 ; open st_tournament_ready ; } }
+}
+menuDef { name "st_lobby_roster3" rect 0 0 640 480 visible 0 fullscreen 1 focusColor .25 .85 1 1 onOpen { setfocus back ; } onESC { close st_lobby_roster3 ; open st_tournament_ready ; }
+itemDef { name panel rect 10 10 620 460 style 1 backcolor .012 .029 .040 .96 visible 1 decoration }
+itemDef { name brand rect 27 22 420 22 type 0 text "SABER TRIALS" font 2 textscale .96 forecolor .81 .91 .96 1 visible 1 decoration }
+itemDef { name heading rect 27 57 584 22 type 0 text "TOURNAMENT  /  ROSTER     4 / 4" font 2 textscale .87 forecolor .81 .91 .96 1 visible 1 decoration }
+itemDef { name row24 rect 34 123 572 22 type 0 cvar "ui_stLobbyEntry24" font 2 textscale .77 forecolor .81 .91 .96 1 visible 1 decoration }
+itemDef { name row25 rect 34 154 572 22 type 0 cvar "ui_stLobbyEntry25" font 2 textscale .77 forecolor .81 .91 .96 1 visible 1 decoration }
+itemDef { name row26 rect 34 185 572 22 type 0 cvar "ui_stLobbyEntry26" font 2 textscale .77 forecolor .81 .91 .96 1 visible 1 decoration }
+itemDef { name row27 rect 34 216 572 22 type 0 cvar "ui_stLobbyEntry27" font 2 textscale .77 forecolor .81 .91 .96 1 visible 1 decoration }
+itemDef { name row28 rect 34 247 572 22 type 0 cvar "ui_stLobbyEntry28" font 2 textscale .77 forecolor .81 .91 .96 1 visible 1 decoration }
+itemDef { name row29 rect 34 278 572 22 type 0 cvar "ui_stLobbyEntry29" font 2 textscale .77 forecolor .81 .91 .96 1 visible 1 decoration }
+itemDef { name row30 rect 34 309 572 22 type 0 cvar "ui_stLobbyEntry30" font 2 textscale .77 forecolor .81 .91 .96 1 visible 1 decoration }
+itemDef { name row31 rect 34 340 572 22 type 0 cvar "ui_stLobbyEntry31" font 2 textscale .77 forecolor .81 .91 .96 1 visible 1 decoration }
+itemDef { name prev rect 28 424 130 28 type 1 text "Previous" font 2 textscale .73 textalignx 7 textaligny 4 forecolor .8 .92 1 1 style 1 backcolor .015 .055 .08 .96 border 1 bordersize .5 bordercolor .20 .65 .84 .9 visible 1  action { play "sound/interface/button1.wav" ; close st_lobby_roster3 ; open st_lobby_roster2 ; } }
+itemDef { name back rect 458 424 154 28 type 1 text "Ready room" font 2 textscale .73 textalignx 7 textaligny 4 forecolor .8 .92 1 1 style 1 backcolor .015 .055 .08 .96 border 1 bordersize .5 bordercolor .20 .65 .84 .9 visible 1  action { play "sound/interface/button1.wav" ; close st_lobby_roster3 ; open st_tournament_ready ; } }
+}
+menuDef { name "st_lobby_bracket0" rect 0 0 640 480 visible 0 fullscreen 1 focusColor .25 .85 1 1 onOpen { exec "cmd st_lobby bracket" ; setfocus back ; } onESC { close st_lobby_bracket0 ; open st_tournament_ready ; }
+itemDef { name panel rect 10 10 620 460 style 1 backcolor .012 .029 .040 .96 visible 1 decoration }
+itemDef { name brand rect 27 22 420 22 type 0 text "SABER TRIALS" font 2 textscale .96 forecolor .81 .91 .96 1 visible 1 decoration }
+itemDef { name heading rect 27 57 584 22 type 0 text "TOURNAMENT  /  BRACKET     1 / 4" font 2 textscale .87 forecolor .81 .91 .96 1 visible 1 decoration }
+itemDef { name row0 rect 34 123 572 22 type 0 cvar "ui_ste13" font 2 textscale .77 forecolor .81 .91 .96 1 visible 1 decoration }
+itemDef { name row1 rect 34 154 572 22 type 0 cvar "ui_ste14" font 2 textscale .77 forecolor .81 .91 .96 1 visible 1 decoration }
+itemDef { name row2 rect 34 185 572 22 type 0 cvar "ui_ste15" font 2 textscale .77 forecolor .81 .91 .96 1 visible 1 decoration }
+itemDef { name row3 rect 34 216 572 22 type 0 cvar "ui_ste16" font 2 textscale .77 forecolor .81 .91 .96 1 visible 1 decoration }
+itemDef { name row4 rect 34 247 572 22 type 0 cvar "ui_ste17" font 2 textscale .77 forecolor .81 .91 .96 1 visible 1 decoration }
+itemDef { name row5 rect 34 278 572 22 type 0 cvar "ui_ste18" font 2 textscale .77 forecolor .81 .91 .96 1 visible 1 decoration }
+itemDef { name row6 rect 34 309 572 22 type 0 cvar "ui_ste19" font 2 textscale .77 forecolor .81 .91 .96 1 visible 1 decoration }
+itemDef { name row7 rect 34 340 572 22 type 0 cvar "ui_ste20" font 2 textscale .77 forecolor .81 .91 .96 1 visible 1 decoration }
+itemDef { name next rect 169 424 110 28 type 1 text "Next" font 2 textscale .73 textalignx 7 textaligny 4 forecolor .8 .92 1 1 style 1 backcolor .015 .055 .08 .96 border 1 bordersize .5 bordercolor .20 .65 .84 .9 visible 1 cvarTest "ui_stEventBracketPage2" showCvar { "1" } action { play "sound/interface/button1.wav" ; close st_lobby_bracket0 ; open st_lobby_bracket1 ; } }
+itemDef { name back rect 458 424 154 28 type 1 text "Ready room" font 2 textscale .73 textalignx 7 textaligny 4 forecolor .8 .92 1 1 style 1 backcolor .015 .055 .08 .96 border 1 bordersize .5 bordercolor .20 .65 .84 .9 visible 1  action { play "sound/interface/button1.wav" ; close st_lobby_bracket0 ; open st_tournament_ready ; } }
+}
+menuDef { name "st_lobby_bracket1" rect 0 0 640 480 visible 0 fullscreen 1 focusColor .25 .85 1 1 onOpen { exec "cmd st_lobby bracket" ; setfocus back ; } onESC { close st_lobby_bracket1 ; open st_tournament_ready ; }
+itemDef { name panel rect 10 10 620 460 style 1 backcolor .012 .029 .040 .96 visible 1 decoration }
+itemDef { name brand rect 27 22 420 22 type 0 text "SABER TRIALS" font 2 textscale .96 forecolor .81 .91 .96 1 visible 1 decoration }
+itemDef { name heading rect 27 57 584 22 type 0 text "TOURNAMENT  /  BRACKET     2 / 4" font 2 textscale .87 forecolor .81 .91 .96 1 visible 1 decoration }
+itemDef { name row8 rect 34 123 572 22 type 0 cvar "ui_ste21" font 2 textscale .77 forecolor .81 .91 .96 1 visible 1 decoration }
+itemDef { name row9 rect 34 154 572 22 type 0 cvar "ui_ste22" font 2 textscale .77 forecolor .81 .91 .96 1 visible 1 decoration }
+itemDef { name row10 rect 34 185 572 22 type 0 cvar "ui_ste23" font 2 textscale .77 forecolor .81 .91 .96 1 visible 1 decoration }
+itemDef { name row11 rect 34 216 572 22 type 0 cvar "ui_ste24" font 2 textscale .77 forecolor .81 .91 .96 1 visible 1 decoration }
+itemDef { name row12 rect 34 247 572 22 type 0 cvar "ui_ste25" font 2 textscale .77 forecolor .81 .91 .96 1 visible 1 decoration }
+itemDef { name row13 rect 34 278 572 22 type 0 cvar "ui_ste26" font 2 textscale .77 forecolor .81 .91 .96 1 visible 1 decoration }
+itemDef { name row14 rect 34 309 572 22 type 0 cvar "ui_ste27" font 2 textscale .77 forecolor .81 .91 .96 1 visible 1 decoration }
+itemDef { name row15 rect 34 340 572 22 type 0 cvar "ui_ste28" font 2 textscale .77 forecolor .81 .91 .96 1 visible 1 decoration }
+itemDef { name prev rect 28 424 130 28 type 1 text "Previous" font 2 textscale .73 textalignx 7 textaligny 4 forecolor .8 .92 1 1 style 1 backcolor .015 .055 .08 .96 border 1 bordersize .5 bordercolor .20 .65 .84 .9 visible 1  action { play "sound/interface/button1.wav" ; close st_lobby_bracket1 ; open st_lobby_bracket0 ; } }
+itemDef { name next rect 169 424 110 28 type 1 text "Next" font 2 textscale .73 textalignx 7 textaligny 4 forecolor .8 .92 1 1 style 1 backcolor .015 .055 .08 .96 border 1 bordersize .5 bordercolor .20 .65 .84 .9 visible 1 cvarTest "ui_stEventBracketPage3" showCvar { "1" } action { play "sound/interface/button1.wav" ; close st_lobby_bracket1 ; open st_lobby_bracket2 ; } }
+itemDef { name back rect 458 424 154 28 type 1 text "Ready room" font 2 textscale .73 textalignx 7 textaligny 4 forecolor .8 .92 1 1 style 1 backcolor .015 .055 .08 .96 border 1 bordersize .5 bordercolor .20 .65 .84 .9 visible 1  action { play "sound/interface/button1.wav" ; close st_lobby_bracket1 ; open st_tournament_ready ; } }
+}
+menuDef { name "st_lobby_bracket2" rect 0 0 640 480 visible 0 fullscreen 1 focusColor .25 .85 1 1 onOpen { exec "cmd st_lobby bracket" ; setfocus back ; } onESC { close st_lobby_bracket2 ; open st_tournament_ready ; }
+itemDef { name panel rect 10 10 620 460 style 1 backcolor .012 .029 .040 .96 visible 1 decoration }
+itemDef { name brand rect 27 22 420 22 type 0 text "SABER TRIALS" font 2 textscale .96 forecolor .81 .91 .96 1 visible 1 decoration }
+itemDef { name heading rect 27 57 584 22 type 0 text "TOURNAMENT  /  BRACKET     3 / 4" font 2 textscale .87 forecolor .81 .91 .96 1 visible 1 decoration }
+itemDef { name row16 rect 34 123 572 22 type 0 cvar "ui_ste29" font 2 textscale .77 forecolor .81 .91 .96 1 visible 1 decoration }
+itemDef { name row17 rect 34 154 572 22 type 0 cvar "ui_ste30" font 2 textscale .77 forecolor .81 .91 .96 1 visible 1 decoration }
+itemDef { name row18 rect 34 185 572 22 type 0 cvar "ui_ste31" font 2 textscale .77 forecolor .81 .91 .96 1 visible 1 decoration }
+itemDef { name row19 rect 34 216 572 22 type 0 cvar "ui_ste32" font 2 textscale .77 forecolor .81 .91 .96 1 visible 1 decoration }
+itemDef { name row20 rect 34 247 572 22 type 0 cvar "ui_ste33" font 2 textscale .77 forecolor .81 .91 .96 1 visible 1 decoration }
+itemDef { name row21 rect 34 278 572 22 type 0 cvar "ui_ste34" font 2 textscale .77 forecolor .81 .91 .96 1 visible 1 decoration }
+itemDef { name row22 rect 34 309 572 22 type 0 cvar "ui_ste35" font 2 textscale .77 forecolor .81 .91 .96 1 visible 1 decoration }
+itemDef { name row23 rect 34 340 572 22 type 0 cvar "ui_ste36" font 2 textscale .77 forecolor .81 .91 .96 1 visible 1 decoration }
+itemDef { name prev rect 28 424 130 28 type 1 text "Previous" font 2 textscale .73 textalignx 7 textaligny 4 forecolor .8 .92 1 1 style 1 backcolor .015 .055 .08 .96 border 1 bordersize .5 bordercolor .20 .65 .84 .9 visible 1  action { play "sound/interface/button1.wav" ; close st_lobby_bracket2 ; open st_lobby_bracket1 ; } }
+itemDef { name next rect 169 424 110 28 type 1 text "Next" font 2 textscale .73 textalignx 7 textaligny 4 forecolor .8 .92 1 1 style 1 backcolor .015 .055 .08 .96 border 1 bordersize .5 bordercolor .20 .65 .84 .9 visible 1 cvarTest "ui_stEventBracketPage4" showCvar { "1" } action { play "sound/interface/button1.wav" ; close st_lobby_bracket2 ; open st_lobby_bracket3 ; } }
+itemDef { name back rect 458 424 154 28 type 1 text "Ready room" font 2 textscale .73 textalignx 7 textaligny 4 forecolor .8 .92 1 1 style 1 backcolor .015 .055 .08 .96 border 1 bordersize .5 bordercolor .20 .65 .84 .9 visible 1  action { play "sound/interface/button1.wav" ; close st_lobby_bracket2 ; open st_tournament_ready ; } }
+}
+menuDef { name "st_lobby_bracket3" rect 0 0 640 480 visible 0 fullscreen 1 focusColor .25 .85 1 1 onOpen { exec "cmd st_lobby bracket" ; setfocus back ; } onESC { close st_lobby_bracket3 ; open st_tournament_ready ; }
+itemDef { name panel rect 10 10 620 460 style 1 backcolor .012 .029 .040 .96 visible 1 decoration }
+itemDef { name brand rect 27 22 420 22 type 0 text "SABER TRIALS" font 2 textscale .96 forecolor .81 .91 .96 1 visible 1 decoration }
+itemDef { name heading rect 27 57 584 22 type 0 text "TOURNAMENT  /  BRACKET     4 / 4" font 2 textscale .87 forecolor .81 .91 .96 1 visible 1 decoration }
+itemDef { name row24 rect 34 123 572 22 type 0 cvar "ui_ste37" font 2 textscale .77 forecolor .81 .91 .96 1 visible 1 decoration }
+itemDef { name row25 rect 34 154 572 22 type 0 cvar "ui_ste38" font 2 textscale .77 forecolor .81 .91 .96 1 visible 1 decoration }
+itemDef { name row26 rect 34 185 572 22 type 0 cvar "ui_ste39" font 2 textscale .77 forecolor .81 .91 .96 1 visible 1 decoration }
+itemDef { name row27 rect 34 216 572 22 type 0 cvar "ui_ste40" font 2 textscale .77 forecolor .81 .91 .96 1 visible 1 decoration }
+itemDef { name row28 rect 34 247 572 22 type 0 cvar "ui_ste41" font 2 textscale .77 forecolor .81 .91 .96 1 visible 1 decoration }
+itemDef { name row29 rect 34 278 572 22 type 0 cvar "ui_ste42" font 2 textscale .77 forecolor .81 .91 .96 1 visible 1 decoration }
+itemDef { name row30 rect 34 309 572 22 type 0 cvar "ui_ste43" font 2 textscale .77 forecolor .81 .91 .96 1 visible 1 decoration }
+itemDef { name prev rect 28 424 130 28 type 1 text "Previous" font 2 textscale .73 textalignx 7 textaligny 4 forecolor .8 .92 1 1 style 1 backcolor .015 .055 .08 .96 border 1 bordersize .5 bordercolor .20 .65 .84 .9 visible 1  action { play "sound/interface/button1.wav" ; close st_lobby_bracket3 ; open st_lobby_bracket2 ; } }
+itemDef { name back rect 458 424 154 28 type 1 text "Ready room" font 2 textscale .73 textalignx 7 textaligny 4 forecolor .8 .92 1 1 style 1 backcolor .015 .055 .08 .96 border 1 bordersize .5 bordercolor .20 .65 .84 .9 visible 1  action { play "sound/interface/button1.wav" ; close st_lobby_bracket3 ; open st_tournament_ready ; } }
+}
+menuDef { name "st_lobby_squads" rect 0 0 640 480 visible 0 fullscreen 1 focusColor .25 .85 1 1 onOpen { setfocus back ; } onESC { close st_lobby_squads ; open st_tournament_ready ; }
+itemDef { name panel rect 10 10 620 460 style 1 backcolor .012 .029 .040 .96 visible 1 decoration }
+itemDef { name brand rect 27 22 420 22 type 0 text "SABER TRIALS" font 2 textscale .96 forecolor .81 .91 .96 1 visible 1 decoration }
+itemDef { name heading rect 27 57 584 22 type 0 text "TOURNAMENT  /  CHOOSE YOUR SQUAD" font 2 textscale .87 forecolor .81 .91 .96 1 visible 1 decoration }
+itemDef { name tip rect 30 112 580 22 type 0 text "Choose the same squad number as your teammates." font 2 textscale .74 forecolor .81 .91 .96 1 visible 1 decoration }
+itemDef { name squad1 rect 35 163 256 28 type 1 text "Squad 1" font 2 textscale .73 textalignx 7 textaligny 4 forecolor .8 .92 1 1 style 1 backcolor .015 .055 .08 .96 border 1 bordersize .5 bordercolor .20 .65 .84 .9 visible 1  action { play "sound/interface/button1.wav" ; exec "cmd st_lobby join 1" ; close st_lobby_squads ; open st_tournament_ready ; } }
+itemDef { name squad2 rect 327 163 256 28 type 1 text "Squad 2" font 2 textscale .73 textalignx 7 textaligny 4 forecolor .8 .92 1 1 style 1 backcolor .015 .055 .08 .96 border 1 bordersize .5 bordercolor .20 .65 .84 .9 visible 1  action { play "sound/interface/button1.wav" ; exec "cmd st_lobby join 2" ; close st_lobby_squads ; open st_tournament_ready ; } }
+itemDef { name squad3 rect 35 216 256 28 type 1 text "Squad 3" font 2 textscale .73 textalignx 7 textaligny 4 forecolor .8 .92 1 1 style 1 backcolor .015 .055 .08 .96 border 1 bordersize .5 bordercolor .20 .65 .84 .9 visible 1  action { play "sound/interface/button1.wav" ; exec "cmd st_lobby join 3" ; close st_lobby_squads ; open st_tournament_ready ; } }
+itemDef { name squad4 rect 327 216 256 28 type 1 text "Squad 4" font 2 textscale .73 textalignx 7 textaligny 4 forecolor .8 .92 1 1 style 1 backcolor .015 .055 .08 .96 border 1 bordersize .5 bordercolor .20 .65 .84 .9 visible 1  action { play "sound/interface/button1.wav" ; exec "cmd st_lobby join 4" ; close st_lobby_squads ; open st_tournament_ready ; } }
+itemDef { name squad5 rect 35 269 256 28 type 1 text "Squad 5" font 2 textscale .73 textalignx 7 textaligny 4 forecolor .8 .92 1 1 style 1 backcolor .015 .055 .08 .96 border 1 bordersize .5 bordercolor .20 .65 .84 .9 visible 1  action { play "sound/interface/button1.wav" ; exec "cmd st_lobby join 5" ; close st_lobby_squads ; open st_tournament_ready ; } }
+itemDef { name squad6 rect 327 269 256 28 type 1 text "Squad 6" font 2 textscale .73 textalignx 7 textaligny 4 forecolor .8 .92 1 1 style 1 backcolor .015 .055 .08 .96 border 1 bordersize .5 bordercolor .20 .65 .84 .9 visible 1  action { play "sound/interface/button1.wav" ; exec "cmd st_lobby join 6" ; close st_lobby_squads ; open st_tournament_ready ; } }
+itemDef { name squad7 rect 35 322 256 28 type 1 text "Squad 7" font 2 textscale .73 textalignx 7 textaligny 4 forecolor .8 .92 1 1 style 1 backcolor .015 .055 .08 .96 border 1 bordersize .5 bordercolor .20 .65 .84 .9 visible 1  action { play "sound/interface/button1.wav" ; exec "cmd st_lobby join 7" ; close st_lobby_squads ; open st_tournament_ready ; } }
+itemDef { name squad8 rect 327 322 256 28 type 1 text "Squad 8" font 2 textscale .73 textalignx 7 textaligny 4 forecolor .8 .92 1 1 style 1 backcolor .015 .055 .08 .96 border 1 bordersize .5 bordercolor .20 .65 .84 .9 visible 1  action { play "sound/interface/button1.wav" ; exec "cmd st_lobby join 8" ; close st_lobby_squads ; open st_tournament_ready ; } }
+itemDef { name back rect 458 424 154 28 type 1 text "Ready room" font 2 textscale .73 textalignx 7 textaligny 4 forecolor .8 .92 1 1 style 1 backcolor .015 .055 .08 .96 border 1 bordersize .5 bordercolor .20 .65 .84 .9 visible 1  action { play "sound/interface/button1.wav" ; close st_lobby_squads ; open st_tournament_ready ; } }
+}
+menuDef { name "st_lobby_subs" rect 0 0 640 480 visible 0 fullscreen 1 focusColor .25 .85 1 1 onOpen { setfocus back ; } onESC { close st_lobby_subs ; open st_tournament_ready ; }
+itemDef { name panel rect 10 10 620 460 style 1 backcolor .012 .029 .040 .96 visible 1 decoration }
+itemDef { name brand rect 27 22 420 22 type 0 text "SABER TRIALS" font 2 textscale .96 forecolor .81 .91 .96 1 visible 1 decoration }
+itemDef { name heading rect 27 57 584 22 type 0 text "TOURNAMENT  /  SUBSTITUTES" font 2 textscale .87 forecolor .81 .91 .96 1 visible 1 decoration }
+itemDef { name hint rect 32 116 576 22 type 0 cvar "ui_ste54" font 2 textscale .68 forecolor .81 .91 .96 1 visible 1 decoration }
+itemDef { name sub0 rect 35 162 570 28 type 1 cvar "ui_ste56" font 2 textscale .73 textalignx 7 textaligny 4 forecolor .8 .92 1 1 style 1 backcolor .015 .055 .08 .96 border 1 bordersize .5 bordercolor .20 .65 .84 .9 visible 1 cvarTest "ui_stEventSubAvailable0" showCvar { "1" } action { play "sound/interface/button1.wav" ; exec "st_event_substitute 0" ; close st_lobby_subs ; open st_tournament_ready ; } }
+itemDef { name sub1 rect 35 204 570 28 type 1 cvar "ui_ste57" font 2 textscale .73 textalignx 7 textaligny 4 forecolor .8 .92 1 1 style 1 backcolor .015 .055 .08 .96 border 1 bordersize .5 bordercolor .20 .65 .84 .9 visible 1 cvarTest "ui_stEventSubAvailable1" showCvar { "1" } action { play "sound/interface/button1.wav" ; exec "st_event_substitute 1" ; close st_lobby_subs ; open st_tournament_ready ; } }
+itemDef { name sub2 rect 35 246 570 28 type 1 cvar "ui_ste58" font 2 textscale .73 textalignx 7 textaligny 4 forecolor .8 .92 1 1 style 1 backcolor .015 .055 .08 .96 border 1 bordersize .5 bordercolor .20 .65 .84 .9 visible 1 cvarTest "ui_stEventSubAvailable2" showCvar { "1" } action { play "sound/interface/button1.wav" ; exec "st_event_substitute 2" ; close st_lobby_subs ; open st_tournament_ready ; } }
+itemDef { name sub3 rect 35 288 570 28 type 1 cvar "ui_ste59" font 2 textscale .73 textalignx 7 textaligny 4 forecolor .8 .92 1 1 style 1 backcolor .015 .055 .08 .96 border 1 bordersize .5 bordercolor .20 .65 .84 .9 visible 1 cvarTest "ui_stEventSubAvailable3" showCvar { "1" } action { play "sound/interface/button1.wav" ; exec "st_event_substitute 3" ; close st_lobby_subs ; open st_tournament_ready ; } }
+itemDef { name sub4 rect 35 330 570 28 type 1 cvar "ui_ste60" font 2 textscale .73 textalignx 7 textaligny 4 forecolor .8 .92 1 1 style 1 backcolor .015 .055 .08 .96 border 1 bordersize .5 bordercolor .20 .65 .84 .9 visible 1 cvarTest "ui_stEventSubAvailable4" showCvar { "1" } action { play "sound/interface/button1.wav" ; exec "st_event_substitute 4" ; close st_lobby_subs ; open st_tournament_ready ; } }
+itemDef { name back rect 458 424 154 28 type 1 text "Ready room" font 2 textscale .73 textalignx 7 textaligny 4 forecolor .8 .92 1 1 style 1 backcolor .015 .055 .08 .96 border 1 bordersize .5 bordercolor .20 .65 .84 .9 visible 1  action { play "sound/interface/button1.wav" ; close st_lobby_subs ; open st_tournament_ready ; } }
+}
+menuDef { name "st_lobby_leave" rect 0 0 640 480 visible 0 fullscreen 1 focusColor .25 .85 1 1 onOpen { setfocus back ; } onESC { close st_lobby_leave ; open st_tournament_ready ; }
+itemDef { name panel rect 10 10 620 460 style 1 backcolor .012 .029 .040 .96 visible 1 decoration }
+itemDef { name brand rect 27 22 420 22 type 0 text "SABER TRIALS" font 2 textscale .96 forecolor .81 .91 .96 1 visible 1 decoration }
+itemDef { name heading rect 27 57 584 22 type 0 text "LEAVE TOURNAMENT?" font 2 textscale .87 forecolor .81 .91 .96 1 visible 1 decoration }
+itemDef { name confirm rect 32 163 570 22 type 0 text "Remove your entry from this tournament?" font 2 textscale .80 forecolor .81 .91 .96 1 visible 1 decoration }
+itemDef { name leave rect 32 276 190 28 type 1 text "Leave event" font 2 textscale .73 textalignx 7 textaligny 4 forecolor .8 .92 1 1 style 1 backcolor .015 .055 .08 .96 border 1 bordersize .5 bordercolor .20 .65 .84 .9 visible 1  action { play "sound/interface/button1.wav" ; exec "cmd st_lobby leave" ; close st_lobby_leave ; open st_tournament_ready ; } }
+itemDef { name back rect 260 276 204 28 type 1 text "Stay registered" font 2 textscale .73 textalignx 7 textaligny 4 forecolor .8 .92 1 1 style 1 backcolor .015 .055 .08 .96 border 1 bordersize .5 bordercolor .20 .65 .84 .9 visible 1  action { play "sound/interface/button1.wav" ; close st_lobby_leave ; open st_tournament_ready ; } }
+}
+}

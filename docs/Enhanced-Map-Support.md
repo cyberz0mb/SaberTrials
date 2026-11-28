@@ -1,6 +1,6 @@
 # Enhanced Map Support
 
-The Windows x64 development candidate adds an opt-in map format to Saber Trials multiplayer. It uses the existing OpenJK-based Saber Trials engine, the Vanilla and Rend2 renderers, and the existing native game, cgame, and UI module interfaces.
+Saber Trials multiplayer supports the opt-in enhanced map format in the Windows x64 Vanilla, Rend2 and Vulkan renderers. They use the same compiled BSP, collision data and native game interfaces.
 
 | Map type | Format | Client requirement |
 | --- | --- | --- |
@@ -79,7 +79,7 @@ ctest --test-dir dist/hybrid-native-tests -C Release --output-on-failure
 
 The runtime runner stages stock assets and copies the installed Saber Trials PK3s into isolated profiles. It uses an IPv4 loopback-only dedicated server and two separate client processes. Reports, sample counters, and raw logs are written under `dist/enhanced-maps/runtime`. The test checks the previous client's classic connection, its rejection on enhanced map rotation and fresh connect, both updated clients on the far map, curved-patch and wall collision, travel to the negative sector, map reloads, and malformed BSP recovery.
 
-Both renderers passed the Windows multiplayer suite. The dense fixture contained 33,862 brushes, 203,137 surfaces, 812,548 vertices, and 1,218,822 stored indices. Las Noches loaded as Classic RBSP with 3,649 surfaces and 100,590 vertices. The boundary map reached both X extents at ±131,072. The server stopped the player against the far wall near X 131,040 and both clients continued through map rotation. A separate Vanilla probe recorded a server-confirmed saber kill at approximately X 130,760 and Z 130,844.
+Both renderers passed the Windows multiplayer suite. The dense fixture contained 33,862 brushes, 203,137 surfaces, 812,548 vertices, and 1,218,822 stored indices. a separately supplied classic map loaded as Classic RBSP with 3,649 surfaces and 100,590 vertices. The boundary map reached both X extents at ±131,072. The server stopped the player against the far wall near X 131,040 and both clients continued through map rotation. A separate Vanilla probe recorded a server-confirmed saber kill at approximately X 130,760 and Z 130,844.
 
 | Renderer | Stock `mp/duel1` p95, before → after | Dense median / p95 | Dense client peak working set | Dense reload with two clients |
 | --- | ---: | ---: | ---: | ---: |
@@ -88,7 +88,7 @@ Both renderers passed the Windows multiplayer suite. The dense fixture contained
 
 The client timings are short, single-client `com_speeds` samples at 960 × 540 on an RTX 4070 Laptop GPU. They measure engine frame work at the sampled viewpoints. The dedicated server peaked near 175 MiB across the two-client rotation. The raw reports record individual samples, baseline timings, and process memory.
 
-The stock archive and Las Noches validation covered 62 BSP files. Eighteen malformed or oversized fixtures were rejected. The patched compiler also rejected an out-of-bounds brush in an otherwise valid room fixture. The combat and hybrid suites passed nine checks, including the accepted damage ramp and snapshot parity. The gameplay damage source is identical to the pinned baseline. The Windows x64 candidate is staged for review. Linux packaging, WAN play, populated-server measurements, and full far-coordinate combat coverage remain open.
+The stock archive and a separately supplied classic map validation covered 62 BSP files. Eighteen malformed or oversized fixtures were rejected. The patched compiler also rejected an out-of-bounds brush in an otherwise valid room fixture. The combat and hybrid suites passed nine checks, including the accepted damage ramp and snapshot parity. The gameplay damage source is identical to the pinned baseline. The Windows x64 candidate is staged for review. Linux packaging, WAN play, populated-server measurements, and full far-coordinate combat coverage remain open.
 
 ## Windows installation
 

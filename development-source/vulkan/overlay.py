@@ -1,5 +1,6 @@
 """Adapt the pinned OpenJK Vulkan proposal to Saber Trials' current client ABI."""
 from pathlib import Path
+import runpy
 import re
 import shutil
 import subprocess
@@ -51,6 +52,14 @@ def apply(engine, frontend):
          '        return;\n    }\n\tR_ShutdownWorldEffects();')
     edit(rd/'tr_init.cpp','\t\tvk_shutdown();','\t\tvk_shutdown();\n        ri.WIN_Shutdown();\n        Com_Memset(&glConfig,0,sizeof(glConfig));')
     shader = rd/'tr_shader.cpp'
+    shutil.copyfile(HERE/'tr_st_material_compat.inc',rd/'tr_st_material_compat.inc')
+    edit(shader,'static qboolean ParseStage(shaderStage_t *stage, const char **text)',
+         '#include "tr_st_material_compat.inc"\nstatic qboolean ParseStage(shaderStage_t *stage, const char **text)')
+    edit(shader,'\t\t\tvk_debug("WARNING: unknown parameter \'%s\' in shader \'%s\'\\n", token, shader.name);',
+         '            int compatible=ST_VulkanMaterialCompat(token,text);\n'
+         '            if(compatible>0) continue;\n'
+         '            ri.Printf(PRINT_WARNING,"WARNING: %s parameter \'%s\' in shader \'%s\'\\n",\n'
+         '                compatible<0?"invalid Rend2":"unknown",token,shader.name);')
     edit(shader,'void R_InitShaders( qboolean server )\n{',
          '#include "tr_st_chat.inc"\nvoid R_InitShaders( qboolean server )\n{\n    ST_ChatResetImages();')
     # Use the stable-paged Ghoul2 surface pool already exercised by Rend2.
@@ -153,3 +162,4 @@ def apply(engine, frontend):
     edit(images,'\t\tvk_destroy_image_resources( &img->handle, &img->view );',
          '\t\tvk_destroy_image_resources( &img->handle, &img->view );\n'
          '        if(img->stDynamicMemory) { qvkFreeMemory(vk.device,img->stDynamicMemory,NULL); img->stDynamicMemory=VK_NULL_HANDLE; }')
+    runpy.run_path(str(HERE / 'enhanced_content.py'))['apply'](engine)

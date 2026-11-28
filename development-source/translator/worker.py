@@ -27,6 +27,31 @@ MAX_OUTPUT = 1536
 COLOR = re.compile(r'\^[0-9]')
 ADDRESS = r'(?:https?://|www\.)[^\s]+|[\w.+-]+@[\w.-]+\.[a-zA-Z]{2,}|\b(?:\d{1,3}\.){3}\d{1,3}(?::\d+)?\b|\b(?:[a-zA-Z0-9-]+\.)+[a-zA-Z]{2,}(?::\d+)?(?:/[^\s]*)?'
 
+# Distinctive everyday chat words supplement the full language identifier on
+# terse messages. Values identify a source; the translation still uses its model.
+CHAT_WORDS = {
+    'en': 'hello hey thanks please sorry where anyone ready everyone',
+    'es': 'hola gracias buenas dónde donde ayuda necesito estás juegas vamos perdón',
+    'fr': 'bonjour bonsoir merci coucou désolé salutations reviens pourquoi rejoins',
+    'de': 'hallo danke dankeschön guten bitte tschüss zusammen spielen',
+    'it': 'ciao buongiorno buonasera grazie ragazzi scusa giochiamo',
+    'pt': 'olá obrigado obrigada valeu vocês você voce cadê desculpa',
+    'pl': 'cześć czesc dzięki dzieki dziękuję dziekuje witaj gramy rozgrzewkę rozgrzewke chcesz',
+    'nl': 'bedankt dankjewel alsjeblieft hoi doei goedemorgen',
+    'sv': 'hejsan tack tackar snälla förlåt lagkamrater godmorgon',
+    'fi': 'terve moi kiitos kiitoksia anteeksi joukkueeni pelataanko huomenta',
+    'tr': 'merhaba selam teşekkürler tesekkurler sağol nasılsın nasilsin',
+    'ru': 'привет спасибо здравствуйте пожалуйста ребята играем',
+    'uk': 'привіт дякую вітаю хлопці граємо',
+    'ja': 'こんにちは こんばんは ありがとう おはよう 助けて',
+    'zh': '你好 大家好 谢谢 帮忙 晚上好',
+    'zt': '謝謝 幫忙 請問 晚安嗎',
+    'ko': '안녕 안녕하세요 감사합니다 고마워 같이',
+    'hi': 'नमस्ते धन्यवाद शुक्रिया खेलें',
+    'ar': 'مرحبا مرحباً شكرا شكراً أهلا العبوا',
+}
+CHAT_SOURCE = {word: code for code, words in CHAT_WORDS.items() for word in words.split()}
+
 
 def decode_chat(raw):
     # New clients send UTF-8. Legacy Western names/chat can coexist in the same line.
@@ -158,6 +183,14 @@ class Translator:
         self.models[self.pair] = (self.model, self.tokenizer, self.encode, self.decode)
 
     def detect(self, text):
+        # Keep accents and combining marks (including Devanagari vowel signs).
+        words = ''.join(c if c.isalpha() or unicodedata.category(c).startswith('M') else ' '
+                        for c in text.casefold()).split()
+        if not words:
+            return None
+        hints = {CHAT_SOURCE[w] for w in words if w in CHAT_SOURCE}
+        if len(words) <= 4 and len(hints) == 1 and all(w in CHAT_SOURCE for w in words):
+            return hints.pop()
         if self.identifier is None:
             import py3langid
             from py3langid.langid import LanguageIdentifier
@@ -165,9 +198,15 @@ class Translator:
             self.identifier = LanguageIdentifier.from_modelpath(model, norm_probs=True)
         ranked = self.identifier.rank(text)
         language, confidence = ranked[0]
-        # Short chat has close language/dialect candidates. Require a clear lead,
-        # retaining all detector languages so unrelated input is never forced into our set.
-        return language if confidence >= .5 and confidence-ranked[1][1] >= .2 else None
+        runner_up = ranked[1][1]
+        if confidence >= .5 and confidence-runner_up >= .2:
+            return language
+        if len(words) <= 5:
+            if len(hints) == 1:
+                return hints.pop()
+            if language in LANGUAGES.values() and confidence >= .15 and confidence >= 2 * runner_up:
+                return language
+        return None
 
     def neural(self, text):
         sentences = re.split(r'(?<=[。！？])(?=\S)|(?<=[.!?؟।])(\s+)', text)
@@ -204,7 +243,13 @@ class Translator:
         for (src, dst, original), translated in self.phrases.items():
             if dst == destination and original == text.casefold() and (source == 0 or LANGUAGES[source] == src):
                 return 'ok', translated
-        origin = LANGUAGES.get(source) if source else self.detect(text)
+        words = sorted(set(self.preserve + protected), key=len, reverse=True)
+        patterns = [ADDRESS] + [r'(?<!\w)' + re.escape(word) + r'(?!\w)' for word in words if 0 < len(word) <= 64]
+        pattern = re.compile('|'.join(patterns))
+        language_text = pattern.sub(' ', text).strip()
+        if not any(c.isalpha() for c in language_text):
+            return 'same', ''
+        origin = LANGUAGES.get(source) if source else self.detect(language_text)
         if origin is None:
             return 'uncertain', ''
         if origin not in LANGUAGES.values():
@@ -216,12 +261,6 @@ class Translator:
             self.cache.move_to_end(key)
             return 'ok', self.cache[key]
         # Protected spans never enter the model and are copied byte-for-byte.
-        words = sorted(set(self.preserve + protected), key=len, reverse=True)
-        patterns = [ADDRESS]
-        for word in words:
-            if 0 < len(word) <= 64:
-                patterns.append(r'(?<!\w)' + re.escape(word) + r'(?!\w)')
-        pattern = re.compile('|'.join(patterns))
         pieces, end = [], 0
         for match in pattern.finditer(text):
             pieces.append((False, text[end:match.start()]))

@@ -1,0 +1,555 @@
+--- a/codemp/cgame/cg_draw.c
++++ b/codemp/cgame/cg_draw.c
+@@ -6228,6 +6228,12 @@
+ 	}
+ 
+ 	name = cgs.clientinfo[ cg.crosshairClientNum ].cleanname;
++    if (st_streamerMode.integer && !st_streamerPlayerNames.integer) {
++        const char *player = CG_ConfigString(CS_PLAYERS + cg.crosshairClientNum);
++        int rank = cgs.gametype == GT_DUEL && atoi(Info_ValueForKey(CG_ConfigString(CS_SERVERINFO),"st_gameFormat")) == 2
++            ? atoi(Info_ValueForKey(player,"lr")) : 0;
++        name = rank > 0 && rank <= MAX_CLIENTS ? va("Player %d (%d)",cg.crosshairClientNum+1,rank) : va("Player %d",cg.crosshairClientNum+1);
++    }
+ 
+ 	if (cgs.gametype >= GT_TEAM)
+ 	{
+@@ -6387,8 +6393,11 @@
+ 	}
+ 	else //if ( cgs.gametype >= GT_TEAM )
+ 	{
+-		//s = "press ESC and use the JOIN menu to play";
+-		s = CG_GetStringEdString("MP_INGAME", "SPEC_CHOOSEJOIN");
++        if (cgs.gametype == GT_TEAM && atoi(Info_ValueForKey(CG_ConfigString(CS_SERVERINFO), "st_gameFormat")) == 1) {
++            s = "Open PUG Queue in the pause menu to play";
++        } else {
++            s = CG_GetStringEdString("MP_INGAME", "SPEC_CHOOSEJOIN");
++        }
+ 		CG_Text_Paint ( 320 - CG_Text_Width ( s, 1.0f, 3 ) / 2, 440, 1.0f, colorWhite, s, 0, 0, 0, 3 );
+ 	}
+ }
+--- a/codemp/cgame/cg_players.c
++++ b/codemp/cgame/cg_players.c
+@@ -1600,7 +1600,16 @@
+ 	// isolate the player's name
+ 	v = Info_ValueForKey(configstring, "n");
+ 	Q_strncpyz( newInfo.name, v, sizeof( newInfo.name ) );
+-	Q_strncpyz( newInfo.cleanname, v, sizeof( newInfo.cleanname ) );
++    if (cgs.gametype == GT_DUEL && atoi(Info_ValueForKey(CG_ConfigString(CS_SERVERINFO), "st_gameFormat")) == 2) {
++        int rank = atoi(Info_ValueForKey(configstring, "lr"));
++        if (rank > 0 && rank <= MAX_CLIENTS) {
++            char suffix[16];
++            Com_sprintf(suffix, sizeof(suffix), " (%d)", rank);
++            newInfo.name[sizeof(newInfo.name) - strlen(suffix) - 1] = 0;
++            Q_strcat(newInfo.name, sizeof(newInfo.name), suffix);
++        }
++    }
++	Q_strncpyz( newInfo.cleanname, newInfo.name, sizeof( newInfo.cleanname ) );
+ 	Q_StripColor( newInfo.cleanname );
+ 
+ 	// colors
+--- a/codemp/cgame/cg_sabertrials_presentation.inc
++++ b/codemp/cgame/cg_sabertrials_presentation.inc
+@@ -39,7 +39,9 @@
+  b->result=cg.predictedPlayerState.pm_type==PM_INTERMISSION;
+  trap->Cvar_VariableStringBuffer("ui_ste0",event,sizeof(event));
+  Q_strncpyz(b->title,b->result?"MATCH RESULTS":"SCOREBOARD",sizeof(b->title));
+- Com_sprintf(b->subtitle,sizeof(b->subtitle),"%s  /  %s",STP_Mode(b->mode,event[0]!=0,0),b->result?"Final server scores":"Live server scores");
++ int displayMode=ST_DisplayMode(b->mode,atoi(Info_ValueForKey(CG_ConfigString(CS_SERVERINFO),"st_gameFormat")));
++ Com_sprintf(b->subtitle,sizeof(b->subtitle),"%s  /  %s",STP_Mode(displayMode,event[0]!=0,0),b->result?"Final server scores":"Live server scores");
++ qboolean provisionalShown=qfalse;
+  for(i=0;i<cg.numScores&&i<MAX_CLIENTS&&b->count<STP_MAX_ROWS;i++){
+   score_t*s=&cg.scores[i];clientInfo_t*ci;STPRow*r;
+   if(s->client<0||s->client>=cgs.maxclients||s->client>=MAX_CLIENTS)continue;
+@@ -54,7 +56,16 @@
+   r->ready=b->result&&s->client<32&&((unsigned int)cg.snap->ps.stats[STAT_CLIENTS_READY]&(1u<<s->client));
+   r->flag=(ci->powerups&(1<<PW_REDFLAG))?1:(ci->powerups&(1<<PW_BLUEFLAG))?2:(ci->powerups&(1<<PW_NEUTRALFLAG))?3:0;
+   Q_strncpyz(r->name,st_streamerMode.integer&&!st_streamerPlayerNames.integer?va("Player %d",s->client+1):ci->name,sizeof(r->name));
++  if(displayMode==ST_FORMAT_LADDER_ID) {
++   const char* player=CG_ConfigString(CS_PLAYERS+s->client);
++   if(st_streamerMode.integer&&!st_streamerPlayerNames.integer) {
++    int rank=atoi(Info_ValueForKey(player,"lr"));
++    if(rank>0&&rank<=MAX_CLIENTS)Q_strcat(r->name,sizeof(r->name),va(" (%d)",rank));
++   }
++   if(atoi(Info_ValueForKey(player,"lp"))==1){Q_strcat(r->name,sizeof(r->name),"*");provisionalShown=qtrue;}
++  }
+  }
++ if(provisionalShown)Q_strcat(b->subtitle,sizeof(b->subtitle),"  /  * Provisional rank");
+  if(b->result){
+   if((b->mode==GT_DUEL||b->mode==GT_POWERDUEL)&&cgs.duelWinner>=0&&cgs.duelWinner<cgs.maxclients&&cgs.duelWinner<MAX_CLIENTS){
+    Com_sprintf(b->outcome,sizeof(b->outcome),"Winner: %s",st_streamerMode.integer&&!st_streamerPlayerNames.integer?va("Player %d",cgs.duelWinner+1):cgs.clientinfo[cgs.duelWinner].name);
+--- a/codemp/cgame/cg_scoreboard.c
++++ b/codemp/cgame/cg_scoreboard.c
+@@ -25,6 +25,7 @@
+ #include "cg_local.h"
+ #include "ui/ui_shared.h"
+ #include "game/bg_saga.h"
++#include "ui/st_game_format.h"
+ #include "ui/st_presentation_policy.inc"
+ #include "ui/st_score_stats.h"
+ 
+--- a/codemp/ui/st_browser_ui.inc
++++ b/codemp/ui/st_browser_ui.inc
+@@ -88,7 +88,7 @@
+ static stb_filter UI_BrowserFilter(void)
+ {
+     stb_filter filter;
+-    filter.game = UI_BrowserInt("ui_stMatchGame", -1, GT_MAX_GAME_TYPE - 1, -1);
++    filter.game = UI_BrowserInt("ui_stMatchGame", -1, ST_FORMAT_LADDER_ID, -1);
+     filter.region = UI_BrowserInt("ui_stMatchRegion", 0, STB_REGION_COUNT - 1, 0);
+     filter.max_ping = UI_BrowserInt("ui_stMatchMaxPing", 0, 9999, 0);
+     filter.min_humans = UI_BrowserInt("ui_stMatchHumans", 0, 9999, 0);
+@@ -128,7 +128,9 @@
+             host[len++] = *name;
+     }
+     host[len] = 0;
+-    return Q_stristr(host, stServerSearch) ||
++    int mode = stb_number(Info_ValueForKey(info, "gametype"), ST_FORMAT_LADDER_ID);
++    return (mode >= 0 && Q_stristr(gameTypes[mode], stServerSearch)) ||
++        (mode == GT_TEAM && Q_stristr("TFFA", stServerSearch)) || Q_stristr(host, stServerSearch) ||
+         Q_stristr(Info_ValueForKey(info, "mapname"), stServerSearch) ||
+         Q_stristr(Info_ValueForKey(info, "addr"), stServerSearch);
+ }
+--- /dev/null
++++ b/codemp/ui/st_game_format.h
+@@ -0,0 +1,15 @@
++#ifndef ST_GAME_FORMAT_H
++#define ST_GAME_FORMAT_H
++enum { ST_FORMAT_PUG_ID = 10, ST_FORMAT_LADDER_ID = 11 };
++static inline int ST_DisplayMode(int base, int format) {
++    if (base == GT_TEAM && format == 1) return ST_FORMAT_PUG_ID;
++    if (base == GT_DUEL && format == 2) return ST_FORMAT_LADDER_ID;
++    return base;
++}
++static inline int ST_ModeFormat(int mode) {
++    return mode == ST_FORMAT_PUG_ID ? 1 : mode == ST_FORMAT_LADDER_ID ? 2 : 0;
++}
++static inline int ST_BaseMode(int mode) {
++    return mode == ST_FORMAT_PUG_ID ? GT_TEAM : mode == ST_FORMAT_LADDER_ID ? GT_DUEL : mode;
++}
++#endif
+--- a/codemp/ui/st_match_rules.h
++++ b/codemp/ui/st_match_rules.h
+@@ -48,6 +48,7 @@
+  MR("bot_minplayers","Automatic bot population","","0 disables filling. Uses normal mode-aware bot population behavior.",Teams,0,0,31,1,0,false),
+  MR("st_botSkill","Default bot skill","","Skill for role bots; individual roster slots can override it.",Teams,4,1,5,1,0,false),
+  MR("sv_maxclients","Connection slots","","Includes humans, bots and spectators. Leave spare slots for yourself and future additions.",Teams,16,2,32,1,0,true),
++ MR("st_gameFormat","Game format","0=Standard|1=PUG|2=Ladder","Queue and rotation format.",Match,0,0,2,1,0,true),
+  MR("g_gametype","Game type","0=FFA|3=Duel|4=Power Duel|6=Team FFA|7=Siege|8=CTF","Choose a compatible map. Mode-specific controls update automatically.",Match,0,0,8,1,0,true),
+  MR("fraglimit","Score limit","","0 is unlimited. Duel rounds always end after one kill; use best-of for the series.",Match,10,0,1000,5,0,true),
+  MR("timelimit","Time limit (minutes)","","0 is unlimited.",Match,0,0,180,1,0,true),
+@@ -146,6 +147,8 @@
+  return "";
+ }
+ inline bool validate(const Preset& p,std::string& error) {
++ const int format=p.get("st_gameFormat"),base=p.get("g_gametype");
++ if((format==1&&base!=6)||(format==2&&base!=3)){error="PUG requires Team FFA and Ladder requires Duel.";return false;}
+  for(int i=0;i<RuleCount;++i)if(!valid(i,p.values[i])){error=std::string("Invalid ")+rules[i].label;return false;}
+  if(p.get("g_gametype")==4&&p.get("sv_maxclients")<3){error="Power Duel requires at least three connection slots.";return false;}
+  for(int n:p.force)if(n<0||n>3){error="Force caps must be 0 through 3.";return false;}
+@@ -195,6 +198,8 @@
+    if(op=="weapons"){if(!integer(a,p.weaponDisable))break;}else if(op=="map")p.map=a;else if(!unhex(a,op=="host"?p.hostname:p.rotation))break;
+   }else break;
+  }
++ // Version-one presets written before PUG and Ladder use standard rules.
++ seen[find("st_gameFormat")]=true;
+  if(!end||extras!=15||std::find(seen.begin(),seen.end(),false)!=seen.end()||std::find(forces.begin(),forces.end(),false)!=forces.end()){
+   error="Incomplete, duplicate or unrecognized preset data.";return false;}
+  while(std::getline(in,line))if(!line.empty()){error="Unexpected data after preset end.";return false;}
+--- a/codemp/ui/st_presentation_policy.inc
++++ b/codemp/ui/st_presentation_policy.inc
+@@ -66,7 +66,7 @@
+  if(verifiedRanked&&mode==6)return "Ranked TFFA";
+  switch(mode){case 0:return "FFA";case 1:return "Holocron";case 2:return "Jedi Master";
+  case 3:return "Duel";case 4:return "Power Duel";case 6:return "TFFA";case 7:return "Siege";
+- case 8:return "CTF";case 9:return "CTY";default:return "Custom";}
++ case 8:return "CTF";case 9:return "CTY";case 10:return "PUG";case 11:return "Ladder";default:return "Custom";}
+ }
+ static int STP_NoticePush(STPNotice*n,const char*text,int kind,int now) {
+  if(!text||!*text)return 0;
+--- a/codemp/ui/ui_local.h
++++ b/codemp/ui/ui_local.h
+@@ -168,6 +168,7 @@
+ typedef struct gameTypeInfo_s {
+ 	const char *gameType;
+ 	int gtEnum;
++	int format;
+ } gameTypeInfo_t;
+ 
+ typedef struct mapInfo_s {
+--- a/codemp/ui/ui_main.c
++++ b/codemp/ui/ui_main.c
+@@ -507,7 +507,9 @@
+ };
+ static const size_t numSkillLevels = ARRAY_LEN( skillLevels );
+ 
+-static const char *gameTypes[GT_MAX_GAME_TYPE] = {
++#include "st_game_format.h"
++
++static const char *gameTypes[] = {
+ 	"FFA",
+ 	"Holocron",
+ 	"JediMaster",
+@@ -518,6 +520,8 @@
+ 	"Siege",
+ 	"CTF",
+ 	"CTY",
++	"PUG",
++	"Ladder",
+ };
+ static const int numGameTypes = ARRAY_LEN( gameTypes );
+ 
+@@ -1560,6 +1564,8 @@
+ {
+ 	switch ( gtEnum )
+ 	{
++	case ST_FORMAT_PUG_ID: return "PUG";
++	case ST_FORMAT_LADDER_ID: return "Ladder";
+ 	case GT_FFA:
+ 		return UI_GetStringEdString("MENUS", "FREE_FOR_ALL");//"Free For All";
+ 	case GT_HOLOCRON:
+@@ -1589,7 +1595,7 @@
+ // ui_gameType assumes gametype 0 is -1 ALL and will not show
+ static void UI_DrawGameType(rectDef_t *rect, float scale, vec4_t color, int textStyle, int iMenuFont)
+ {
+-	Text_Paint(rect->x, rect->y, scale, color, UI_GetGameTypeName(uiInfo.gameTypes[ui_gametype.integer].gtEnum), 0, 0, textStyle, iMenuFont);
++	Text_Paint(rect->x, rect->y, scale, color, UI_GetGameTypeName(ST_DisplayMode(uiInfo.gameTypes[ui_gametype.integer].gtEnum, uiInfo.gameTypes[ui_gametype.integer].format)), 0, 0, textStyle, iMenuFont);
+ }
+ 
+ static void UI_DrawNetGameType(rectDef_t *rect, float scale, vec4_t color, int textStyle, int iMenuFont)
+@@ -1601,7 +1607,7 @@
+ 		trap->Cvar_Set("ui_actualNetGametype", "0");
+ 		trap->Cvar_Update(&ui_actualNetGametype);
+ 	}
+-	Text_Paint(rect->x, rect->y, scale, color, UI_GetGameTypeName(uiInfo.gameTypes[ui_netGametype.integer].gtEnum) , 0, 0, textStyle, iMenuFont);
++	Text_Paint(rect->x, rect->y, scale, color, UI_GetGameTypeName(ST_DisplayMode(uiInfo.gameTypes[ui_netGametype.integer].gtEnum, uiInfo.gameTypes[ui_netGametype.integer].format)) , 0, 0, textStyle, iMenuFont);
+ }
+ 
+ static void UI_DrawAutoSwitch(rectDef_t *rect, float scale, vec4_t color, int textStyle, int iMenuFont) {
+@@ -1993,6 +1999,11 @@
+ {
+     int current = (int)trap->Cvar_VariableValue("sv_maxClients");
+     int slots = UI_HostTeamSlots();
++    // A fixed-size PUG roster needs spectator capacity for the next round.
++    if (slots && uiInfo.gameTypes[ui_netGametype.integer].format == 1) {
++        int teams = ST_TffaCount((int)trap->Cvar_VariableValue("ui_stHostTeams"));
++        slots = Com_Clampi(1, MAX_CLIENTS, slots + teams);
++    }
+     return current > slots ? current : slots;
+ }
+ 
+@@ -3786,22 +3797,8 @@
+ 		int oldCount = UI_MapCountByGameType(qtrue);
+ 		int value = ui_gametype.integer;
+ 
+-		// hard coded mess here
+-		if (key == A_MOUSE2) {
+-			value--;
+-			if (value == 2) {
+-				value = 1;
+-			} else if (value < 2) {
+-				value = uiInfo.numGameTypes - 1;
+-			}
+-		} else {
+-			value++;
+-			if (value >= uiInfo.numGameTypes) {
+-				value = 1;
+-			} else if (value == 2) {
+-				value = 3;
+-			}
+-		}
++        if (!uiInfo.numGameTypes) return qfalse;
++        value = (value + (key == A_MOUSE2 ? -1 : 1) + uiInfo.numGameTypes) % uiInfo.numGameTypes;
+ 
+ 		trap->Cvar_Set("ui_gametype", va("%d", value));
+ 		trap->Cvar_Update(&ui_gametype);
+@@ -3816,66 +3813,14 @@
+ 	return qfalse;
+ }
+ 
+-// If we're in the solo menu, don't let them see siege maps.
+-static qboolean UI_InSoloMenu( void )
+-{
+-	menuDef_t *menu;
+-	itemDef_t *item;
+-	char *name = "solo_gametypefield";
+-
+-	menu = Menu_GetFocused();	// Get current menu (either video or ingame video, I would assume)
+-
+-	if (!menu)
+-	{
+-		return (qfalse);
+-	}
+-
+-	item = Menu_FindItemByName(menu, name);
+-	if (item)
+-	{
+-		return qtrue;
+-	}
+-
+-	return (qfalse);
+-}
+-
+ static qboolean UI_NetGameType_HandleKey(int flags, float *special, int key)
+ {
+ 	if (key == A_MOUSE1 || key == A_MOUSE2 || key == A_ENTER || key == A_KP_ENTER)
+ 	{
+ 		int value = ui_netGametype.integer;
+ 
+-		if (key == A_MOUSE2)
+-		{
+-			value--;
+-			if (UI_InSoloMenu())
+-			{
+-				if (uiInfo.gameTypes[value].gtEnum == GT_SIEGE)
+-				{
+-					value--;
+-				}
+-			}
+-		}
+-		else
+-		{
+-			value++;
+-			if (UI_InSoloMenu())
+-			{
+-				if (uiInfo.gameTypes[value].gtEnum == GT_SIEGE)
+-				{
+-					value++;
+-				}
+-			}
+-		}
+-
+-		if (value < 0)
+-		{
+-			value = uiInfo.numGameTypes - 1;
+-		}
+-		else if (value >= uiInfo.numGameTypes)
+-		{
+-			value = 0;
+-		}
++        if (!uiInfo.numGameTypes) return qfalse;
++        value = (value + (key == A_MOUSE2 ? -1 : 1) + uiInfo.numGameTypes) % uiInfo.numGameTypes;
+ 
+ 		trap->Cvar_Set( "ui_netGametype", va("%d", value));
+ 		trap->Cvar_Update(&ui_netGametype);
+@@ -4637,8 +4582,7 @@
+ 	float skill;
+ 	char buff[MAX_STRING_CHARS];
+ 
+-	temp = trap->Cvar_VariableValue( "g_gametype" );
+-	trap->Cvar_Set("ui_gameType", va("%i", temp));
++	// ui_gametype is a menu index. Native gametype IDs do not index this list.
+ 
+ 	if (next) {
+ 		int actual;
+@@ -4654,6 +4598,7 @@
+ 	}
+ 
+ 	g = uiInfo.gameTypes[ui_gametype.integer].gtEnum;
++	trap->Cvar_SetValue( "st_gameFormat", uiInfo.gameTypes[ui_gametype.integer].format );
+ 	trap->Cvar_SetValue( "g_gametype", g );
+ 	trap->Cmd_ExecuteText( EXEC_APPEND, va( "wait ; wait ; map %s\n", uiInfo.mapList[ui_currentMap.integer].mapLoadName) );
+ 	skill = trap->Cvar_VariableValue( "g_spSkill" );
+@@ -6004,6 +5949,17 @@
+         if (!Q_stricmp(name, "tffaHostSlots")) { UI_TffaHostSlots(); return; }
+ 		if (Q_stricmp(name, "StartServer") == 0)
+ 		{
++            int selectedMap = ui_currentNetMap.integer;
++            if (ui_netGametype.integer < 0 || ui_netGametype.integer >= uiInfo.numGameTypes ||
++                !UI_MapCountByGameType(qfalse)) {
++                trap->Cvar_Set("com_errorMessage", "No maps are available for the selected game type.");
++                Menus_ActivateByName("error_popmenu");
++                return;
++            }
++            if (selectedMap < 0 || selectedMap >= uiInfo.mapCount || !uiInfo.mapList[selectedMap].active) {
++                UI_SelectedMap(0, &selectedMap);
++                trap->Cvar_SetValue("ui_currentNetMap", selectedMap);
++            }
+ 			int i, added = 0;
+ 			float skill;
+ 			int warmupTime = 0;
+@@ -6024,6 +5980,7 @@
+ 			{
+ 				trap->Cvar_SetValue( "dedicated", Com_Clamp( 0, 2, ui_dedicated.integer ) );
+ 			}
++			trap->Cvar_SetValue( "st_gameFormat", uiInfo.gameTypes[ui_netGametype.integer].format );
+ 			trap->Cvar_SetValue( "g_gametype", Com_Clamp( 0, GT_MAX_GAME_TYPE, uiInfo.gameTypes[ui_netGametype.integer].gtEnum ) );
+             if (uiInfo.gameTypes[ui_netGametype.integer].gtEnum == GT_TEAM) {
+                 int count = ST_TffaCount((int)trap->Cvar_VariableValue("ui_stHostTeams"));
+@@ -6031,11 +5988,12 @@
+                 size = size ? Com_Clampi(2, 4, size) : 0;
+                 trap->Cvar_SetValue("g_tffaTeams", count);
+                 trap->Cvar_SetValue("g_tffaTeamSize", size);
+-                trap->Cvar_SetValue("sv_maxClients", size ? UI_HostMaxClients() : UI_TffaPlayableSlots());
++                int connections = size ? UI_HostMaxClients() : UI_TffaPlayableSlots();
++                trap->Cvar_SetValue("sv_maxClients", connections);
+             }
+ 			//trap->Cvar_Set("g_redTeam", UI_Cvar_VariableString("ui_teamName"));
+ 			//trap->Cvar_Set("g_blueTeam", UI_Cvar_VariableString("ui_opponentName"));
+-			trap->Cmd_ExecuteText( EXEC_APPEND, va( "wait ; wait ; map %s\n", uiInfo.mapList[ui_currentNetMap.integer].mapLoadName ) );
++			trap->Cmd_ExecuteText( EXEC_APPEND, va( "wait ; wait ; map %s\n", uiInfo.mapList[selectedMap].mapLoadName ) );
+ 			skill = trap->Cvar_VariableValue( "g_spSkill" );
+ 
+ 			//Cap the warmup values in case the user tries a dumb setting.
+@@ -6271,16 +6229,11 @@
+ 		{
+ 			WP_SaberGetHiltInfo(saberSingleHiltInfo, saberStaffHiltInfo);
+ 		}
+-		// On the solo game creation screen, we can't see siege maps
+-		else if (Q_stricmp(name, "checkforsiege") == 0)
+-		{
+-			if (uiInfo.gameTypes[ui_netGametype.integer].gtEnum == GT_SIEGE)
+-			{
+-				// fake out the handler to advance to the next game type
+-				UI_NetGameType_HandleKey(0, NULL, A_MOUSE1);
+-			}
+-		}
+-		else if (Q_stricmp(name, "updatevideosetup") == 0)
++		// Older solo menus call this on open. Keep the remembered mode, including Siege.
++        else if (!Q_stricmp(name, "checkforsiege")) {
++            return;
++        }
++        else if (Q_stricmp(name, "updatevideosetup") == 0)
+ 		{
+ 			UI_UpdateVideoSetup ( );
+ 		}
+@@ -6318,7 +6271,7 @@
+ 			}
+ 		} else if (Q_stricmp(name, "voteGame") == 0) {
+ 			if (ui_netGametype.integer >= 0 && ui_netGametype.integer < uiInfo.numGameTypes) {
+-				trap->Cmd_ExecuteText( EXEC_APPEND, va("callvote g_gametype %i\n",uiInfo.gameTypes[ui_netGametype.integer].gtEnum) );
++				trap->Cmd_ExecuteText( EXEC_APPEND, va("callvote g_gametype %i\n",ST_DisplayMode(uiInfo.gameTypes[ui_netGametype.integer].gtEnum,uiInfo.gameTypes[ui_netGametype.integer].format)) );
+ 			}
+ 		} else if (Q_stricmp(name, "voteLeader") == 0) {
+ 			if (uiInfo.teamIndex >= 0 && uiInfo.teamIndex < uiInfo.myTeamCount) {
+@@ -9221,7 +9174,17 @@
+ 		token = COM_ParseExt((const char **)p, qtrue);
+ 
+ 		if (Q_stricmp(token, "}") == 0) {
+-			return qtrue;
++			gameTypeInfo_t *list = join ? uiInfo.joinGameTypes : uiInfo.gameTypes;
++            int *count = join ? &uiInfo.numJoinGameTypes : &uiInfo.numGameTypes;
++            if (*count <= MAX_GAMETYPES - 2) {
++                for (int display = ST_FORMAT_PUG_ID; display <= ST_FORMAT_LADDER_ID; ++display) {
++                    gameTypeInfo_t *item = &list[(*count)++];
++                    item->gameType = display == ST_FORMAT_PUG_ID ? "PUG" : "Ladder";
++                    item->gtEnum = join ? display : ST_BaseMode(display);
++                    item->format = ST_ModeFormat(display);
++                }
++            }
++            return qtrue;
+ 		}
+ 
+ 		if ( !token || token[0] == 0 ) {
+@@ -9229,6 +9192,8 @@
+ 		}
+ 
+ 		if (token[0] == '{') {
++            if ((join ? uiInfo.numJoinGameTypes : uiInfo.numGameTypes) >= MAX_GAMETYPES) return qfalse;
++            if (!join) uiInfo.gameTypes[uiInfo.numGameTypes].format = 0;
+ 			// two tokens per line, character name and sex
+ 			if (join) {
+ 				if (!String_Parse(p, &uiInfo.joinGameTypes[uiInfo.numJoinGameTypes].gameType) || !Int_Parse(p, &uiInfo.joinGameTypes[uiInfo.numJoinGameTypes].gtEnum)) {
+--- a/codemp/ui/ui_sabertrials_menu.inc
++++ b/codemp/ui/ui_sabertrials_menu.inc
+@@ -6,7 +6,7 @@
+ 	trap->GetConfigString( CS_SERVERINFO, info, sizeof( info ) );
+ 	gt = atoi( Info_ValueForKey( info, "g_gametype" ) );
+ 	trap->Cvar_Set( "st_uiCurrentGametype", va( "%d", gt ) );
+-	trap->Cvar_Set( "st_uiVoteGametype", va( "%d", gt ) );
++	trap->Cvar_Set( "st_uiVoteGametype", va( "%d", ST_DisplayMode(gt, atoi(Info_ValueForKey(info, "st_gameFormat"))) ) );
+ 	trap->Cvar_Set( "st_uiVoteTime", Info_ValueForKey( info, "timelimit" ) );
+ 	trap->Cvar_Set( "st_uiVoteFrags", Info_ValueForKey( info, "fraglimit" ) );
+ 	trap->Cvar_Set( "st_uiVoteCaptures", Info_ValueForKey( info, "capturelimit" ) );
+@@ -175,6 +175,11 @@
+ 		Menus_ActivateByName( root );
+ 		return qtrue;
+ 	} else if ( !Q_stricmp( name, "stPauseInit" ) ) {
++        char info[MAX_INFO_STRING];
++        trap->GetConfigString(CS_SERVERINFO,info,sizeof(info));
++        int base=atoi(Info_ValueForKey(info,"g_gametype"));
++        int format=atoi(Info_ValueForKey(info,"st_gameFormat"));
++        trap->Cvar_Set("st_uiPugQueue",ST_DisplayMode(base,format)==ST_FORMAT_PUG_ID?"1":"0");
+ 		trap->Cvar_Set( "cl_paused", "0" );
+ 		return qtrue;
+ 	} else if ( !Q_stricmp( name, "stStreamerSettings" ) || !Q_stricmp( name, "stInputSettings" ) ) {
+@@ -232,7 +237,7 @@
+ 		sent = ST_UIVoteNumber( "st_uiVoteCaptures", "capturelimit", 999, qfalse );
+ 	} else if ( !Q_stricmp( name, "stVoteGametype" ) ) {
+ 		int gt = (int)trap->Cvar_VariableValue( "st_uiVoteGametype" );
+-		if ( gt == GT_FFA || gt == GT_DUEL || gt == GT_TEAM || gt == GT_CTF ) {
++		if ( gt == GT_FFA || gt == GT_DUEL || gt == GT_TEAM || gt == GT_CTF || gt == GT_SIEGE || gt == GT_POWERDUEL || ST_ModeFormat(gt) ) {
+ 			trap->Cmd_ExecuteText( EXEC_APPEND, va( "callvote g_gametype %d\n", gt ) );
+ 			sent = qtrue;
+ 		} else if ( gt == -1 ) {
+--- a/codemp/ui/ui_st_about_server.inc
++++ b/codemp/ui/ui_st_about_server.inc
+@@ -12,7 +12,8 @@
+  const auto serverValue=[&](const char* key){return Info_ValueForKey(info,key);};
+  const float left=r.x+22,right=r.x+292,top=r.y+60,step=29;
+  const char* mode=serverValue("g_gametype");
+- const int gt=mode[0]?atoi(mode):-1;
++ const int base=mode[0]?atoi(mode):-1;
++ const int gt=ST_DisplayMode(base,atoi(serverValue("st_gameFormat")));
+  char value[128];
+ 
+  SCUI_Fit(left,r.y+17,r.w-44,.88f,"SERVER INFORMATION",ruCyan);
+--- a/codemp/ui/ui_st_match_rules.inc
++++ b/codemp/ui/ui_st_match_rules.inc
+@@ -59,7 +59,7 @@
+ static void MRUI_BuildRows(){
+  mrui.rows.clear();auto add=[](int a,int i,const std::string& label,const std::string& help){mrui.rows.push_back({a,i,label,help});};
+  if(mrui.tab==stmatch::Server){add(MR_HOSTNAME,0,"Server name","Public server name. Presets include this name.");add(MR_PASSWORD,0,"Host password","Optional join password, held only for this draft; never saved in a preset.");}
+- for(int i=0;i<stmatch::RuleCount;++i){const auto& r=stmatch::rules[i];int type=mrui.draft.get("g_gametype");if(r.tab!=mrui.tab||!stmatch::visible(r,mrui.draft)||!Q_stricmp(r.cvar,"g_allowVote")||((type==3||type==4)&&!Q_stricmp(r.cvar,"fraglimit")))continue;add(MR_RULE,i,r.label,r.help);}
++ for(int i=0;i<stmatch::RuleCount;++i){const auto& r=stmatch::rules[i];int type=mrui.draft.get("g_gametype");if(!Q_stricmp(r.cvar,"st_gameFormat")||r.tab!=mrui.tab||!stmatch::visible(r,mrui.draft)||!Q_stricmp(r.cvar,"g_allowVote")||((type==3||type==4)&&!Q_stricmp(r.cvar,"fraglimit")))continue;add(MR_RULE,i,r.label,r.help);}
+  if(mrui.tab==stmatch::Force){
+   for(int i=0;i<stmatch::ForceCount;++i)add(MR_FORCE,i,std::string("Force cap: ")+stmatch::forceNames[i],"Custom Force: maximum level 0 disables this power; 1 through 3 caps allocation and grants. Restricted keeps Jump, Speed, Saber Attack and Saber Defense.");
+   for(int i=1;i<stmatch::WeaponCount;++i)add(MR_WEAPON,i,stmatch::weaponNames[i],"Custom weapons: checked means available. Melee and Lightsaber always remain available. Preferences are retained while another weapon preset is active.");
+@@ -89,7 +89,7 @@
+  int index=int(trap->Cvar_VariableValue("ui_netGametype"));int type=index>=0&&index<uiInfo.numGameTypes?uiInfo.gameTypes[index].gtEnum:0;
+  int teams=int(trap->Cvar_VariableValue("ui_stHostTeams")),size=int(trap->Cvar_VariableValue("ui_stHostTeamSize")),openSlots=int(trap->Cvar_VariableValue("ui_stTffaOpenSlots")),maxPlayers=int(trap->Cvar_VariableValue("sv_maxclients"));
+  bool modeChanged=first||index!=mrui.hostMode,teamsChanged=first||teams!=mrui.hostTeams,sizeChanged=first||size!=mrui.hostSize,openChanged=first||openSlots!=mrui.hostOpenSlots,maxChanged=first||maxPlayers!=mrui.hostMaxPlayers;
+- if(modeChanged&&stmatch::valid(stmatch::find("g_gametype"),type))mrui.draft.set("g_gametype",type);
++ if(modeChanged&&stmatch::valid(stmatch::find("g_gametype"),type)){mrui.draft.set("g_gametype",type);mrui.draft.set("st_gameFormat",index>=0&&index<uiInfo.numGameTypes?uiInfo.gameTypes[index].format:0);}
+  if(type==6){
+   if(modeChanged||teamsChanged)mrui.draft.set("g_tffaTeams",ST_TffaCount(teams));
+   if((modeChanged||sizeChanged)&&size>=0&&size<=16)mrui.draft.set("st_matchTeamCap",size);
+@@ -138,7 +138,7 @@
+ static void MRUI_Close(bool keep){
+  if(mrui.routing){trap->Cvar_Set("st_uiNameKeyboard",mrui.previousKeyboardRoute.empty()?"0":mrui.previousKeyboardRoute.c_str());mrui.routing=false;}
+  if(keep&&!mrui.local){
+-  int type=mrui.draft.get("g_gametype");for(int i=0;i<uiInfo.numGameTypes;++i)if(uiInfo.gameTypes[i].gtEnum==type){trap->Cvar_SetValue("ui_netGametype",i);trap->Cvar_Update(&ui_netGametype);mrui.hostMode=i;break;}
++  int type=mrui.draft.get("g_gametype");for(int i=0;i<uiInfo.numGameTypes;++i)if(uiInfo.gameTypes[i].gtEnum==type&&uiInfo.gameTypes[i].format==mrui.draft.get("st_gameFormat")){trap->Cvar_SetValue("ui_netGametype",i);trap->Cvar_Update(&ui_netGametype);mrui.hostMode=i;break;}
+   trap->Cvar_SetValue("ui_actualNetGametype",type);trap->Cvar_Update(&ui_actualNetGametype);trap->Cvar_SetValue("ui_stHostTeams",mrui.draft.get("g_tffaTeams"));UI_MapCountByGameType(qfalse);
+   for(int i=0,selection=0;i<uiInfo.mapCount;++i){if(mrui.draft.map==uiInfo.mapList[i].mapLoadName){trap->Cvar_SetValue("ui_currentNetMap",i);trap->Cvar_Update(&ui_currentNetMap);mrui.hostMap=i;Menu_SetFeederSelection(NULL,FEEDER_ALLMAPS,selection,"createserver");break;}if(uiInfo.mapList[i].active)++selection;}
+   MRUI_RememberHost();
+@@ -172,6 +172,21 @@
+ }
+ static void MRUI_ChangeRule(int id,int delta){
+  const auto& r=stmatch::rules[id];std::string inactive=stmatch::inactive(r,mrui.draft);if(!inactive.empty())mrui.status=inactive;if(mrui.local&&!Q_stricmp(r.cvar,"ui_dedicated")){mrui.status="Hosting process can only be selected before starting a new server.";return;}
++ if(!Q_stricmp(r.cvar,"g_gametype")){
++  static const int modes[]={GT_FFA,GT_DUEL,GT_POWERDUEL,GT_TEAM,GT_SIEGE,GT_CTF,ST_FORMAT_PUG_ID,ST_FORMAT_LADDER_ID};
++  const int current=ST_DisplayMode(mrui.draft.get("g_gametype"),mrui.draft.get("st_gameFormat"));
++  int index=0;while(index<7&&modes[index]!=current)++index;
++  const int next=modes[(index+delta+8)%8];
++  mrui.draft.set("g_gametype",ST_BaseMode(next));mrui.draft.set("st_gameFormat",ST_ModeFormat(next));
++  const int mapType=ST_BaseMode(next)==GT_TEAM?GT_FFA:ST_BaseMode(next);
++  const char* firstMap=NULL;bool currentCompatible=false;
++  for(int i=0;i<uiInfo.mapCount;++i){const auto& map=uiInfo.mapList[i];if(!map.mapLoadName||!(map.typeBits&(1<<mapType)))continue;
++   if(!firstMap)firstMap=map.mapLoadName;
++   if(mrui.draft.map==map.mapLoadName)currentCompatible=true;
++  }
++  if(!currentCompatible&&firstMap)mrui.draft.map=firstMap;
++  MRUI_NormalizeBots();return;
++ }
+  int value=mrui.draft.values[id];if(*r.choices){for(int n=0;n<=r.high-r.low;++n){value+=delta;if(value>r.high)value=r.low;if(value<r.low)value=r.high;if(stmatch::valid(id,value))break;}}else value=std::max(r.low,std::min(r.high,value+delta*r.step));mrui.draft.values[id]=value;MRUI_NormalizeBots();
+ }
+ static void MRUI_Review(){
+@@ -301,7 +316,7 @@
+ }
+ static void MRUI_DrawRow(const MRRow& row,float y){
+  const float* ink=scuText;bool enabled=true;std::string value;
+- if(row.action==MR_RULE){const auto& r=stmatch::rules[row.index];enabled=stmatch::inactive(r,mrui.draft).empty()&&!(mrui.local&&!Q_stricmp(r.cvar,"ui_dedicated"));value=stmatch::label(row.index,mrui.draft.values[row.index]);if(!enabled)ink=scuMuted;
++ if(row.action==MR_RULE){const auto& r=stmatch::rules[row.index];enabled=stmatch::inactive(r,mrui.draft).empty()&&!(mrui.local&&!Q_stricmp(r.cvar,"ui_dedicated"));value=stmatch::label(row.index,mrui.draft.values[row.index]);if(!Q_stricmp(r.cvar,"g_gametype")&&mrui.draft.get("st_gameFormat"))value=UI_GetGameTypeName(ST_DisplayMode(mrui.draft.get("g_gametype"),mrui.draft.get("st_gameFormat")));if(!enabled)ink=scuMuted;
+   SCUI_Fit(29,y+6,267,.63f,row.label.c_str(),ink);
+   if(*r.choices)MRUI_Button(308,y,289,24,value,MR_RULE,row.index,0,false,enabled);
+   else{float fraction=float(mrui.draft.values[row.index]-r.low)/std::max(1,r.high-r.low);UI_FillRect(315,y+11,175,3,scuLine);UI_FillRect(315,y+11,175*fraction,3,enabled?scuCyan:scuMuted);RUI_Control(311+175*fraction,y+6,9,14,"field",false,false);MRUI_Hit(308,y,189,24,MR_SLIDER,row.index);MRUI_Button(505,y,92,24,value,MR_NUMBER,row.index,0,false,enabled);}

@@ -1,0 +1,18 @@
+cmake_minimum_required(VERSION 3.15)
+project(SaberTrialsLaunchers LANGUAGES CXX RC)
+if(NOT MSVC OR NOT CMAKE_SIZEOF_VOID_P EQUAL 8)
+    message(FATAL_ERROR "Build the Windows x64 launchers with MSVC")
+endif()
+
+set(CMAKE_MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>")
+foreach(target IN ITEMS SaberTrials SaberTrialsDed)
+    add_executable(${target} WIN32 launcher.cpp launcher.rc)
+    target_compile_features(${target} PRIVATE cxx_std_17)
+    target_compile_definitions(${target} PRIVATE UNICODE _UNICODE WIN32_LEAN_AND_MEAN NOMINMAX)
+    target_include_directories(${target} PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}/../../assets/branding")
+    set_target_properties(${target} PROPERTIES OUTPUT_NAME "${target}.x86_64")
+endforeach()
+# A host started from a terminal shares its console and redirected streams.
+set_target_properties(SaberTrialsDed PROPERTIES WIN32_EXECUTABLE FALSE)
+target_compile_definitions(SaberTrialsDed PRIVATE ST_HOST_LAUNCHER)
+target_link_options(SaberTrialsDed PRIVATE "/ENTRY:wWinMainCRTStartup")

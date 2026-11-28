@@ -20,13 +20,15 @@ if [ ! -f "$deps/sodium-linux/lib/libsodium.a" ]; then
  (cd "$deps/libsodium-stable" && ./configure --prefix="$deps/sodium-linux" --disable-shared --enable-static --with-pic && make -j3 && make install) > "$logs/sodium-build.log" 2>&1
 fi
 python3 -c 'import zipfile; zipfile.ZipFile("dist/staff-deps/sqlite.zip").extractall("dist/staff-deps")'
-for suite in linux accounts staff tournament server-browser; do
- cmake -S "tests/$suite" -B "dist/linux-tests-$suite" -G Ninja -DCMAKE_BUILD_TYPE=Release > "$logs/$suite-configure.log" 2>&1
+source="$root/dist/staff-work/OpenJK-1a6a643427aa347553e9073dac5570b33337c4d9"
+for suite in linux accounts staff tournament server-browser anti-script; do
+ set --
+ if [ "$suite" = anti-script ]; then set -- "-DOPENJK_SOURCE=$source"; fi
+ cmake -S "tests/$suite" "$@" -B "dist/linux-tests-$suite" -G Ninja -DCMAKE_BUILD_TYPE=Release > "$logs/$suite-configure.log" 2>&1
  cmake --build "dist/linux-tests-$suite" --parallel 3 > "$logs/$suite-build.log" 2>&1
  ctest --test-dir "dist/linux-tests-$suite" --output-on-failure > "$logs/$suite-test.log" 2>&1
  echo "$suite tests passed"
 done
-source="$root/dist/staff-work/OpenJK-1a6a643427aa347553e9073dac5570b33337c4d9"
 cmake -S tests/guard-native -B dist/linux-tests-guard -G Ninja -DCMAKE_BUILD_TYPE=Release \
  -DOPENJK_SOURCE="$source" > "$logs/guard-configure.log" 2>&1
 cmake --build dist/linux-tests-guard > "$logs/guard-build.log" 2>&1

@@ -15,5 +15,8 @@
   {"id":14,"code":"hi","name":"Hindi","locale":"hi-IN"},
   {"id":15,"code":"pl","name":"Polish","locale":"pl-PL"},
   {"id":16,"code":"tr","name":"Turkish","locale":"tr-TR"},
-  {"id":17,"code":"uk","name":"Ukrainian","locale":"uk-UA"}
+  {"id":17,"code":"uk","name":"Ukrainian","locale":"uk-UA"},
+  {"id":18,"code":"nl","name":"Dutch","locale":"nl-NL"},
+  {"id":19,"code":"sv","name":"Swedish","locale":"sv-SE"},
+  {"id":20,"code":"fi","name":"Finnish","locale":"fi-FI"}
 ]

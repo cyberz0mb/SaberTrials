@@ -83,11 +83,11 @@ int STE_Leave(STEvent*e,const char*account) {
  }
  return 1;
 }
-int STE_Start(STEvent*e,uint32_t seed,uint64_t now) {
+static int startBracket(STEvent*e,uint32_t seed,uint64_t now,int minimum) {
  int i,n,order[STE_ENTRIES],shuffle[STE_ENTRIES];
  if(e->phase!=STE_REGISTRATION)return 0;
  if(e->teamSize) {if(e->count<2||e->count>8)return 0;}
- else if(e->count<8||e->count>32||(e->count&1))return 0;
+ else if(e->count<minimum||e->count>32||(e->count&1))return 0;
  for(i=0;i<e->count;i++) {if(starters(e,i,0)!=(e->teamSize?e->teamSize:1))return 0;shuffle[i]=i;}
  if(!seed)seed=1;
  for(i=e->count-1;i>0;i--) {int pick,tmp;seed^=seed<<13;seed^=seed>>17;seed^=seed<<5;pick=(int)(seed%(uint32_t)(i+1));tmp=shuffle[i];shuffle[i]=shuffle[pick];shuffle[pick]=tmp;}
@@ -96,6 +96,8 @@ int STE_Start(STEvent*e,uint32_t seed,uint64_t now) {
  for(i=0;i<e->bracketSize;i++)e->seeds[i]=e->slots[i]=order[i]<e->count?shuffle[order[i]]:-1;
  nextMatch(e);return 1;
 }
+int STE_Start(STEvent*e,uint32_t seed,uint64_t now) {return startBracket(e,seed,now,8);}
+int STE_StartPractice(STEvent*e,uint32_t seed,uint64_t now) {return startBracket(e,seed,now,2);}
 void STE_Tick(STEvent*e,uint64_t now) {
  uint64_t dt;int m0,m1,expired0,expired1;
  if(now<e->lastTick)return;dt=now-e->lastTick;e->lastTick=now;if(!active(e))return;

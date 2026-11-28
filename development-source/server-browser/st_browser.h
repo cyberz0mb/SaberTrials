@@ -10,6 +10,26 @@ enum {
     STB_RUSSIA, STB_ASIA, STB_OCEANIA, STB_AFRICA, STB_REGION_COUNT
 };
 
+enum { STB_SORT_REGION = 5 };
+
+static inline const char *stb_region_name(int region)
+{
+    static const char *const names[] = {
+        "?", "N. America", "S. America", "Europe", "Russia", "Asia", "Oceania", "Africa"
+    };
+    return names[region >= 0 && region < STB_REGION_COUNT ? region : STB_WORLDWIDE];
+}
+
+static inline int stb_compare_regions(int left, int right, int descending)
+{
+    if (left == right)
+        return 0;
+    if (!left || !right)
+        return left ? -1 : 1;
+    int order = strcmp(stb_region_name(left), stb_region_name(right));
+    return (order > 0) != !!descending ? 1 : -1;
+}
+
 typedef struct { unsigned char bytes[6]; } stb_address;
 typedef struct {
     int ping, humans, occupied, capacity, game, password, combat, region;
@@ -39,6 +59,79 @@ static inline int stb_humans(int occupied, const char *value)
     if (occupied <= 0)
         return occupied;
     return stb_number(value, occupied);
+}
+
+static inline int stb_humans_from_counts(int occupied, const char *humans, const char *bots)
+{
+    int count = stb_humans(occupied, humans);
+    if (count >= 0 || occupied < 0)
+        return count;
+    count = stb_number(bots, occupied);
+    return count < 0 ? -1 : occupied - count;
+}
+
+static inline int stb_valid_occupancy(int occupied, int capacity)
+{
+    return occupied >= 0 && capacity > 0 && occupied <= capacity;
+}
+
+/* getinfo counts public slots. getstatus can also list occupants in
+ * reserved slots, whose type is ambiguous in a mixed roster. */
+static inline int stb_status_humans(const char *data, size_t length, int occupied, int reserved)
+{
+    int rows = 0, humans = 0;
+    if (occupied < 0)
+        return -1;
+    if (length && !data[length - 1])
+        --length;
+    while (length) {
+        const char *line = data;
+        const char *newline = (const char *)memchr(line, '\n', length);
+        const char *value, *end;
+        int ping = 0;
+        if (!newline)
+            return -1;
+        end = newline;
+        if (end > line && end[-1] == '\r')
+            --end;
+        if (end == line && (size_t)(newline - line + 1) == length)
+            break;
+
+        if (line < end && *line == '-')
+            ++line;
+        value = line;
+        while (line < end && *line >= '0' && *line <= '9')
+            ++line;
+        if (line == value || line - value > 10 || line == end || (*line != ' ' && *line != '\t'))
+            return -1;
+        while (line < end && (*line == ' ' || *line == '\t'))
+            ++line;
+
+        value = line;
+        while (line < end && *line >= '0' && *line <= '9') {
+            if (ping > 9999)
+                return -1;
+            ping = 10 * ping + (*line++ - '0');
+        }
+        if (line == value || line == end || (*line != ' ' && *line != '\t'))
+            return -1;
+        while (line < end && (*line == ' ' || *line == '\t'))
+            ++line;
+        if (end - line < 2 || *line++ != '"' || end[-1] != '"' || ++rows - occupied > reserved)
+            return -1;
+        for (; line < end - 1; ++line) {
+            if ((unsigned char)*line < ' ')
+                return -1;
+        }
+        humans += ping > 0;
+        length -= (size_t)(newline + 1 - data);
+        data = newline + 1;
+    }
+    if (rows < occupied)
+        return -1;
+    if (rows == occupied || !humans)
+        return humans;
+    return humans == rows ? occupied : -1;
 }
 
 /* The engine's connect command accepts a hostname or IPv4 with optional port. */

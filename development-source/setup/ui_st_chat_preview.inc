@@ -14,6 +14,9 @@ static void SSUI_ChatPic(float x,float y,float w,float h,float u,float v,float u
 
 static void SSUI_ChatPreview(){
  float values[4]={};
+ int chatColor=-1;
+ for(int i=0;i<SS_COUNT;++i)
+  if(!strcmp(ssSettings[i].name,"st_chatColor"))chatColor=(int)SSUI_Call(101,i).number;
  int next=0;
  for(int i=0;i<SS_COUNT&&next<4;++i)
   if(SSUI_ChatSetting(i))values[next++]=SSUI_Call(101,i).number;
@@ -42,12 +45,14 @@ static void SSUI_ChatPreview(){
   Text_Paint(left,textY+1,timeScale,timeColor,i<2?"[21:37]":"[21:38]",0,0,ITEM_TEXTSTYLE_OUTLINED,FONT_SMALL2);
   UI_FillRect(textX-4*aspect*s,textY,.4f,8*s,timeColor);
   std::string message=messages[i];
+  if(i==0)message=std::string("^7You: ^")+char('0'+(chatColor>=0&&chatColor<=9?chatColor:2))+"This is your chat color.";
   const float available=x+w-7*s-textX;
   if(Text_Width(message.c_str(),messageScale,FONT_SMALL2)>available){
    while(message.size()>18&&Text_Width((message+"...").c_str(),messageScale,FONT_SMALL2)>available)message.pop_back();
    if(message.back()=='^')message.pop_back();
    message+="...";
   }
-  Text_Paint(textX,textY,messageScale,textColor,message.c_str(),0,0,ITEM_TEXTSTYLE_OUTLINED,FONT_SMALL2);
+  Text_Paint(textX,textY,messageScale,textColor,message.c_str(),0,0,
+   i==0&&chatColor==0?ITEM_TEXTSTYLE_NORMAL:ITEM_TEXTSTYLE_OUTLINED,FONT_SMALL2);
  }
 }

@@ -29,6 +29,8 @@ public:
     void Tick(double monotonic);
     ServerWork Next(double wall,double monotonic);
     void Complete(const ServerWork&,const Response&,double wall,double monotonic);
+    std::string AwardLease(int i) const { return i>=0 && i<64 && slots_[i].phase==Phase::Verified ? slots_[i].lease : std::string(); }
+    const std::string& Credential() const { return credential_; }
     RankProfile Profile(int slot)const;
     std::string Challenge(int slot)const;
     std::string Nonce(int slot)const;

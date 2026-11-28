@@ -134,7 +134,7 @@ st_tournament add 3
 st_tournament start
 ```
 
-Humans may register from Profile > Tournament or with `/tournament join` while registration is open. They may call `callvote tournament start` once four players are registered. Otherwise, registration starts automatically after five minutes when the minimum is met. They can inspect progress using `/tournament status` or `/tournament bracket`. Use `st_tournament status` and `st_tournament bracket` from the server console for the administrator view.
+Humans may register from Profile > Tournament or with `/tournament join` while registration is open. The bracket starts automatically after five minutes when the minimum is met. Administrators can start it earlier from the server console. They can inspect progress using `/tournament status` or `/tournament bracket`. Use `st_tournament status` and `st_tournament bracket` from the server console for the administrator view.
 
 Ordinary matches default to best-of-three and the final to best-of-five. Configure these with `st_tournament format 3|5` and `st_tournament finalformat 3|5`. The default rotation is `mp/duel1 mp/duel2 mp/duel3 mp/duel4`; replace it with `st_tournament arenas <maps...>`.
 

@@ -3,9 +3,6 @@
 #define ST_BROWSER_MAX_REGION_BYTES (4 * 1024 * 1024)
 #define ST_BROWSER_REUSE_MS 30000
 
-static const char *const stRegionNames[] = {
-    "?", "N. America", "S. America", "Europe", "Russia", "Asia", "Oceania", "Africa"
-};
 static unsigned char *stRegionData;
 static int stRegionRows;
 static qboolean stRegionLoaded;
@@ -61,6 +58,22 @@ static int UI_BrowserRegion(const char *address)
     return stb_region(stRegionData, stRegionRows, stb_ipv4(ip));
 }
 
+static int UI_BrowserCompareServers(int source, int column, int descending, int left, int right)
+{
+    char address[MAX_ADDRESSLENGTH];
+    int leftRegion, rightRegion, order;
+    if (column != STB_SORT_REGION)
+        return trap->LAN_CompareServers(source, column, descending, left, right);
+    trap->LAN_GetServerAddressString(source, left, address, sizeof(address));
+    leftRegion = UI_BrowserRegion(address);
+    trap->LAN_GetServerAddressString(source, right, address, sizeof(address));
+    rightRegion = UI_BrowserRegion(address);
+    order = stb_compare_regions(leftRegion, rightRegion, descending);
+    if (!order)
+        order = trap->LAN_CompareServers(source, SORT_HOST, 0, left, right);
+    return (order > 0) - (order < 0);
+}
+
 static int UI_BrowserInt(const char *key, int low, int high, int fallback)
 {
     char value[24];
@@ -91,7 +104,9 @@ static stb_server UI_BrowserServer(const char *info, int ping)
     server.ping = ping;
     server.occupied = stb_number(Info_ValueForKey(info, "clients"), 1024);
     server.capacity = stb_number(Info_ValueForKey(info, "sv_maxclients"), 1024);
-    server.humans = ping > 0 ? stb_humans(server.occupied, Info_ValueForKey(info, "g_humanplayers")) : -1;
+    server.humans = ping > 0 && stb_valid_occupancy(server.occupied, server.capacity)
+        ? stb_humans_from_counts(server.occupied, Info_ValueForKey(info, "g_humanplayers"),
+            Info_ValueForKey(info, "bots")) : -1;
     server.game = stb_number(Info_ValueForKey(info, "gametype"), 255);
     server.password = stb_number(Info_ValueForKey(info, "needpass"), 1);
     server.combat = stb_number(Info_ValueForKey(info, "st_combatMode"), 1);
@@ -99,6 +114,29 @@ static stb_server UI_BrowserServer(const char *info, int ping)
     server.min_server_ping = Q_max(0, stb_number(Info_ValueForKey(info, "minping"), 99999));
     server.max_server_ping = Q_max(0, stb_number(Info_ValueForKey(info, "maxping"), 99999));
     return server;
+}
+
+static void UI_BrowserFinishPopulationRefresh(void)
+{
+    int i, selected = -1;
+    if (!trap->Cvar_VariableValue("cl_browserPopulationDirty")) {
+        UI_BuildServerDisplayList(2);
+        return;
+    }
+
+    i = uiInfo.serverStatus.currentServer;
+    if (i >= 0 && i < uiInfo.serverStatus.numDisplayServers)
+        selected = uiInfo.serverStatus.displayServers[i];
+
+    // A row may have been displayed or filtered out before its status arrived.
+    // Reapply filters, sorting, and the total once for the completed refresh.
+    UI_BuildServerDisplayList(qtrue);
+    for (i = 0; i < uiInfo.serverStatus.numDisplayServers; ++i) {
+        if (uiInfo.serverStatus.displayServers[i] == selected) {
+            Menu_SetFeederSelection(NULL, FEEDER_SERVERS, i, "joinserver");
+            break;
+        }
+    }
 }
 
 static qboolean UI_BrowserSearchMatches(const char *info)
@@ -208,7 +246,7 @@ static void UI_QuickRecommend(void)
     trap->LAN_GetServerInfo(AS_GLOBAL, best, info, sizeof(info));
     UI_QuickStatus("3", va("Recommended: %.48s", Info_ValueForKey(info, "hostname")));
     trap->Cvar_Set("ui_stMatchDetails", va("%d ms  |  %s%s%s",
-        winner.ping, winner.region ? stRegionNames[winner.region] : "Unknown region",
+        winner.ping, winner.region ? stb_region_name(winner.region) : "Unknown region",
         winner.password ? "  |  Password required" : "",
         stQuickFilter.region && winner.region != stQuickFilter.region ? "  |  Worldwide result" : ""));
 }

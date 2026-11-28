@@ -1,0 +1,534 @@
+--- a/codemp/game/g_active.c
++++ b/codemp/game/g_active.c
+@@ -857,6 +857,7 @@
+ =================
+ */
+ qboolean ClientInactivityTimer( gclient_t *client ) {
++	if (ST_FormatMode()==1) { ST_FormatInput(client); return qtrue; }
+ 	if ( ! g_inactivity.integer ) {
+ 		// give everyone some time, so if the operator sets g_inactivity during
+ 		// gameplay, everyone isn't kicked
+--- a/codemp/game/g_client.c
++++ b/codemp/game/g_client.c
+@@ -2542,6 +2542,12 @@
+ 	// print scoreboards, display models, and play custom sounds
+ 	buf[0] = '\0';
+ 	Q_strcat( buf, sizeof( buf ), va( "n\\%s\\", client->pers.netname ) );
++    if (ST_FormatMode() == 2 && client->sess.stLadderRank > 0) {
++        // Player configstrings use a trailing separator after every field.
++        Q_strcat(buf, sizeof(buf), va("lr\\%d\\", client->sess.stLadderRank));
++        if (!client->sess.stLadderPlayed)
++            Q_strcat(buf, sizeof(buf), "lp\\1\\");
++    }
+ 	Q_strcat( buf, sizeof( buf ), va( "t\\%i\\", client->sess.sessionTeam ) );
+ 	Q_strcat( buf, sizeof( buf ), va( "model\\%s\\", model ) );
+ 	if ( gender == GENDER_FEMALE )	Q_strcat( buf, sizeof( buf ), va( "ds\\%c\\", 'f' ) );
+@@ -2764,6 +2770,7 @@
+ 		G_InitSessionData( client, userinfo, isBot );
+ 	}
+ 	G_ReadSessionData( client );
++    ST_FormatConnect(clientNum);
+     if ((level.gametype == GT_TEAM || level.gametype == GT_CTF) && client->sess.sessionTeam != TEAM_SPECTATOR &&
+         !G_TffaHasRoom(client->sess.sessionTeam, clientNum))
+         client->sess.sessionTeam = PickTeam(clientNum);
+@@ -4306,7 +4313,8 @@
+ 
+ 	G_LogPrintf( "ClientDisconnect: %i [%s] (%s) \"%s^7\"\n", clientNum, ent->client->sess.IP, ent->client->pers.guid, ent->client->pers.netname );
+ 
+-	qboolean stMvpLeaving=ST_MvpDuelDisconnect(clientNum);
++	ST_FormatDisconnect(clientNum);
++	qboolean stMvpLeaving=ST_FormatMode()==2 ? qtrue : ST_MvpDuelDisconnect(clientNum);
+ 	// if we are playing in tourney mode, give a win to the other player and clear his frags for this round
+ 	if ( !stMvpLeaving && level.gametype == GT_DUEL && !level.intermissiontime && !level.warmupTime ) {
+ 		if ( level.sortedClients[1] == clientNum ) {
+@@ -4321,7 +4329,7 @@
+ 		}
+ 	}
+ 
+-	if ( level.gametype == GT_DUEL && ent->client->sess.sessionTeam == TEAM_FREE && level.intermissiontime && !ST_MvpHoldIntermission() ) {
++	if ( ST_FormatMode()!=2 && level.gametype == GT_DUEL && ent->client->sess.sessionTeam == TEAM_FREE && level.intermissiontime && !ST_MvpHoldIntermission() ) {
+ 		trap->SendConsoleCommand( EXEC_APPEND, "map_restart 0\n" );
+ 		level.restarted = qtrue;
+ 		level.changemap = NULL;
+--- a/codemp/game/g_cmds.c
++++ b/codemp/game/g_cmds.c
+@@ -819,6 +819,7 @@
+ 		return;
+ 	}
+ 
++	if (ST_FormatBlockTeam(clientNum,team)) return;
+ 	oldTeam = client->sess.sessionTeam;
+     if (!ST_MatchJoinAllowed(clientNum,team)) {
+         trap->SendServerCommand(clientNum,"print \"Team entry is locked, switching is disabled, or this team is full.\n\"");
+@@ -923,7 +924,9 @@
+ 
+ 	// he starts at 'base'
+ 	client->pers.teamState.state = TEAM_BEGIN;
+-	if ( oldTeam != TEAM_SPECTATOR ) {
++	if (oldTeam != TEAM_SPECTATOR && ST_FormatAssigning()) {
++		TossClientItems(ent);
++	} else if ( oldTeam != TEAM_SPECTATOR ) {
+ 		// Kill him (makes sure he loses flags, etc)
+ 		ent->flags &= ~FL_GODMODE;
+ 		ent->client->ps.stats[STAT_HEALTH] = ent->health = 0;
+@@ -942,6 +945,7 @@
+ 	if (team != oldTeam)
+ 		G_ClearTffaDamageContributions(clientNum);
+ 
++	if (team!=oldTeam) ST_FormatLeaving(clientNum);
+ 	client->sess.sessionTeam = (team_t)team;
+ 	client->sess.spectatorState = specState;
+ 	client->sess.spectatorClient = specClient;
+@@ -1986,14 +1990,16 @@
+ 	return ST_VoteLimit( ent, numArgs, arg2, "fraglimit", "Frag Limit", 999, qfalse );
+ }
+ 
++#include "st_game_format.h"
++
+ qboolean G_VoteGametype( gentity_t *ent, int numArgs, const char *arg1, const char *arg2 ) {
+ 	int gt = ST_ParseGametype( arg2 );
+ 
+ 	if ( gt == -1 ) {
+-		trap->SendServerCommand( ent-g_entities, "print \"Saber Trials supports Duel, FFA, TFFA, and CTF.\n\"" );
++		trap->SendServerCommand( ent-g_entities, "print \"Choose PUG, Ladder, FFA, TFFA, CTF, Siege, Duel or Power Duel.\n\"" );
+ 		return qfalse;
+ 	}
+-	if ( gt == level.gametype && level.stPendingGametype == -1 ) {
++	if ( gt == ST_DisplayMode(level.gametype, trap->Cvar_VariableIntegerValue("st_gameFormat")) && level.stPendingGametype == -1 ) {
+ 		trap->SendServerCommand( ent-g_entities, "print \"That game type is already active.\n\"" );
+ 		return qfalse;
+ 	}
+@@ -3639,6 +3645,7 @@
+         trap->SendServerCommand(clientNum,"print \"Command unavailable while frozen or in ghost mode.\n\"");
+         return;
+     }
++	if (!Q_stricmp(cmd,"pug")) { ST_PugCommand(clientNum); return; }
+ 	//rww - redirect bot commands
+ 	if ( strstr( cmd, "bot_" ) && AcceptBotCommand( cmd, ent ) )
+ 		return;
+--- a/codemp/game/g_local.h
++++ b/codemp/game/g_local.h
+@@ -477,6 +477,7 @@
+ 	int			stTournamentMatchWins;
+ 	int			stTournamentMatchLosses;
+ 	int			stSaberStyle;
++	int stQueueTicket, stServiceTicket, stLadderRank, stLadderPlayed;
+ 
+ 	char		IP[NET_ADDRSTRMAXLEN];
+ } clientSession_t;
+@@ -1395,6 +1396,18 @@
+ //
+ int TeamCount( int ignoreClientNum, team_t team );
+ int TeamLeader( int team );
++int ST_FormatMode(void);
++void ST_FormatInit(qboolean restart);
++void ST_FormatConnect(int slot);
++void ST_FormatFrame(void);
++void ST_FormatInput(gclient_t *client);
++void ST_FormatDisconnect(int slot);
++void ST_FormatLeaving(int slot);
++void ST_PugCommand(int slot);
++void ST_PugEnd(void);
++void ST_PugSaveRotation(void);
++qboolean ST_FormatAssigning(void);
++qboolean ST_FormatBlockTeam(int slot,int team);
+ int G_TffaTeams(void);
+ qboolean G_TffaHasRoom(int team, int ignoreClient);
+ team_t G_TffaNamedTeam(const char *name);
+--- a/codemp/game/g_main.c
++++ b/codemp/game/g_main.c
+@@ -226,6 +226,7 @@
+ 	level.startTime = levelTime;
+ 	G_CacheGametype();
+ 	ST_Init();
++	ST_FormatInit(restart ? qtrue : qfalse);
+ 	ST_DLCGameInit();
+ 
+ 	level.follow1 = level.follow2 = -1;
+@@ -520,6 +521,7 @@
+ 	}
+ 
+ 	// write all the client session data so we can get it back
++	ST_PugSaveRotation();
+ 	G_WriteSessionData();
+ 
+ 	trap->ROFF_Clean();
+@@ -548,6 +550,7 @@
+ =============
+ */
+ void AddTournamentPlayer( void ) {
++	if (ST_FormatMode()==2) return;
+ 	int			i;
+ 	gclient_t	*client;
+ 	gclient_t	*nextInLine;
+@@ -1402,6 +1405,7 @@
+ 	ST_MvpDuelResult();
+ 	if (ST_MvpPendingForfeit()) gDuelExit=qfalse;
+ 	level.intermissiontime = level.time;
++	ST_PugEnd();
+ 
+ 	// move all clients to the intermission point
+ 	for (i=0 ; i< level.maxclients ; i++) {
+@@ -1426,6 +1430,7 @@
+ 
+ qboolean DuelLimitHit(void)
+ {
++	if (ST_FormatMode()==2) return qfalse;
+ 	int i;
+ 	gclient_t *cl;
+ 
+@@ -1530,6 +1535,7 @@
+ 	}
+ 
+ 	// we need to do this here before chaning to CON_CONNECTING
++	ST_PugSaveRotation();
+ 	G_WriteSessionData();
+ 
+ 	// change all client states to connecting, so the early players into the
+@@ -1987,7 +1993,7 @@
+ 	gclient_t	*cl;
+ 	char *sKillLimit;
+ 	qboolean printLimit = qtrue;
+-	int stKillLimit = ST_TournamentControlsDuel() ? 1 : fraglimit.integer;
++	int stKillLimit = (ST_FormatMode()==2 || ST_TournamentControlsDuel()) ? 1 : fraglimit.integer;
+ 	// if at the intermission, wait for all non-bots to
+ 	// signal ready, then go to next level
+ 	if ( level.intermissiontime ) {
+@@ -2261,7 +2267,7 @@
+ 				continue;
+ 			}
+ 
+-			if ( !ST_TournamentControlsDuel() &&
++			if ( ST_FormatMode()!=2 && !ST_TournamentControlsDuel() &&
+ 				(level.gametype == GT_DUEL || level.gametype == GT_POWERDUEL) &&
+ 				duel_fraglimit.integer && cl->sess.wins >= duel_fraglimit.integer )
+ 			{
+@@ -3484,6 +3490,7 @@
+ 	ST_MvpCapture();
+ 	ST_MvpNetworkFrame();
+ 	// see if it is time to do a tournament restart
++	ST_FormatFrame();
+ 	CheckTournament();
+ 
+ 	// see if it is time to end the level
+--- a/codemp/game/g_sabertrials.c
++++ b/codemp/game/g_sabertrials.c
+@@ -8,6 +8,7 @@
+ */
+ 
+ #include "g_local.h"
++#include "g_st_formats.inc"
+ 
+ #define ST_RESTRICTED_FORCE_DISABLE_MASK 163833
+ #define ST_SABER_ONLY_WEAPON_DISABLE_MASK 524278
+@@ -245,9 +246,12 @@
+     return (gametype == GT_TEAM || gametype == GT_CTF) && mode == ST_WEAPONS_OFF ? ST_SABER_ONLY_WEAPON_DISABLE_MASK : 0;
+ }
+ 
++#include "st_game_format.h"
++
+ qboolean ST_IsSupportedGametype( int gametype ) {
+ 	return gametype == GT_DUEL || gametype == GT_FFA ||
+-		gametype == GT_TEAM || gametype == GT_CTF;
++		gametype == GT_TEAM || gametype == GT_CTF || gametype == GT_POWERDUEL ||
++        gametype == GT_SIEGE || ST_ModeFormat(gametype);
+ }
+ 
+ int ST_ParseGametype( const char *value ) {
+@@ -271,12 +275,22 @@
+ 		return GT_CTF;
+ 	}
+ 
++	if (!Q_stricmp(value,"pug")) return ST_FORMAT_PUG_ID;
++    if (!Q_stricmp(value,"ladder")) return ST_FORMAT_LADDER_ID;
++    if (!Q_stricmp(value,"siege")) return GT_SIEGE;
++    if (!Q_stricmp(value,"powerduel") || !Q_stricmp(value,"power duel")) return GT_POWERDUEL;
++    for (const char *p=value; *p; ++p) if (*p<'0' || *p>'9') return -1;
++    if (strlen(value)>2) return -1;
+ 	gametype = atoi( value );
+ 	return ST_IsSupportedGametype( gametype ) ? gametype : -1;
+ }
+ 
+ const char *ST_GametypeName( int gametype ) {
+ 	switch ( gametype ) {
++	case ST_FORMAT_PUG_ID: return "PUG";
++    case ST_FORMAT_LADDER_ID: return "Ladder";
++    case GT_SIEGE: return "Siege";
++    case GT_POWERDUEL: return "Power Duel";
+ 	case GT_DUEL:
+ 		return "Duel";
+ 	case GT_FFA:
+@@ -506,6 +520,7 @@
+ 		return ST_TournamentCurrentBestOf();
+ 	}
+ 
++	if (ST_FormatMode()==2) return 19;
+ 	bestOf = Com_Clampi( 1, 9, st_duelBestOf.integer );
+ 	if ( !(bestOf & 1) ) {
+ 		bestOf++;
+@@ -883,7 +898,12 @@
+ 	}
+ 
+ 	ST_EnsureDuelSeriesPair( first, second );
+-	if ( level.stTournamentPhase == ST_TOURNAMENT_RUNNING ) {
++    if (ST_FormatMode()==2) {
++        Com_sprintf(message,sizeof(message),"Ladder FT10: #%d %s ^7%d - %d ^7%s (#%d)",
++            level.clients[first].sess.stLadderRank,level.clients[first].pers.netname,
++            level.clients[first].sess.stDuelSeriesWins,level.clients[second].sess.stDuelSeriesWins,
++            level.clients[second].pers.netname,level.clients[second].sess.stLadderRank);
++    } else if ( level.stTournamentPhase == ST_TOURNAMENT_RUNNING ) {
+ 		Com_sprintf( message, sizeof( message ),
+ 			"Tournament %s - Best of %i: %s ^7vs %s",
+ 			ST_TournamentStageName(), ST_DuelBestOf(),
+@@ -955,6 +975,7 @@
+ 		level.stDuelSeriesComplete = qtrue;
+ 		level.stDuelSeriesWinner = winner;
+ 		level.stDuelSeriesLoser = loser;
++		if (ST_FormatMode()==2) ST_LadderResult(winner,loser);
+ 		level.clients[winner].sess.wins++;
+ 		level.clients[loser].sess.losses++;
+ 		ClientUserinfoChanged( winner );
+@@ -1001,9 +1022,11 @@
+ 
+ 	ST_ResetDuelSeriesClient( winner );
+ 	ST_ResetDuelSeriesClient( loser );
++	if (ST_FormatMode()==2 && winner>=0 && ST_OnServer(winner)) ST_Assign(winner,TEAM_SPECTATOR);
+ 	if ( loser >= 0 && loser < level.maxclients &&
+ 		level.clients[loser].pers.connected == CON_CONNECTED ) {
+-		SetTeam( &g_entities[loser], "s" );
++		if (ST_FormatMode()==2) ST_Assign(loser,TEAM_SPECTATOR);
++		else SetTeam( &g_entities[loser], "s" );
+ 	}
+ 	level.stDuelSeriesComplete = qfalse;
+ 	level.stDuelSeriesWinner = -1;
+@@ -1065,7 +1088,7 @@
+ 	qboolean hasGametypeChange = level.stPendingGametype != -1;
+ 	qboolean hasWeaponsChange = level.stPendingWeaponsMode != -1;
+ 	qboolean hasMasterChange = level.stPendingMasterMode != -1;
+-	int targetGametype = hasGametypeChange ? level.stPendingGametype : level.gametype;
++	int targetGametype = hasGametypeChange ? ST_BaseMode(level.stPendingGametype) : level.gametype;
+ 	int targetWeaponsMode = hasWeaponsChange ? level.stPendingWeaponsMode : st_weaponsActive.integer;
+ 
+ 	if ( !hasForceChange && !hasGametypeChange && !hasWeaponsChange && !hasMasterChange && !ST_CombatPending() && !matchRestart ) {
+@@ -1081,11 +1104,12 @@
+ 	if ( hasGametypeChange ) {
+ 		const char *selectedMap = G_RefreshNextMap( targetGametype, qtrue );
+ 		ST_ResetAllDuelSeries();
++        trap->Cvar_Set("st_gameFormat",va("%i",ST_ModeFormat(level.stPendingGametype)));
+ 		trap->Cvar_Set( "g_gametype", va( "%i", targetGametype ) );
+ 		if ( !nextMap[0] && selectedMap && selectedMap[0] ) {
+ 			Q_strncpyz( nextMap, selectedMap, sizeof( nextMap ) );
+ 		}
+-		trap->SendServerCommand( -1, va( "print \"Saber Trials: %s is now active.\n\"", ST_GametypeName( targetGametype ) ) );
++		trap->SendServerCommand( -1, va( "print \"Saber Trials: %s is now active.\n\"", ST_GametypeName( level.stPendingGametype ) ) );
+ 	}
+ 
+ 	if ( hasWeaponsChange ) {
+@@ -1176,7 +1200,7 @@
+ 	trap->Argv( 1, value, sizeof( value ) );
+ 	gametype = ST_ParseGametype( value );
+ 	if ( gametype == -1 ) {
+-		trap->Print( "Usage: st_gametype <duel|ffa|tffa|ctf>\n" );
++		trap->Print( "Usage: st_gametype <pug|ladder|ffa|tffa|ctf|siege|duel|powerduel>\n" );
+ 		return;
+ 	}
+ 	ST_QueueGametype( gametype );
+@@ -1562,6 +1586,10 @@
+ 		return;
+ 	}
+ 	if ( !Q_stricmp( action, "open" ) ) {
++		const qboolean leavingFormat = st_gameFormat.integer != 0;
++		if ( leavingFormat ) {
++			trap->Cvar_Set( "st_gameFormat", "0" );
++		}
+ 		ST_TournamentResetAllClients();
+ 		ST_TournamentClearLevelState();
+ 		level.stTournamentPhase = ST_TOURNAMENT_REGISTRATION;
+@@ -1572,7 +1600,7 @@
+ 		ST_TournamentSaveState();
+ 		trap->SendServerCommand( -1,
+ 			"print \"Tournament registration is open for 5 minutes. Use the Player menu or /tournament join.\\n\"" );
+-		if ( level.gametype != GT_DUEL ) {
++		if ( level.gametype != GT_DUEL || leavingFormat ) {
+ 			trap->Cvar_Set( "g_gametype", va( "%i", GT_DUEL ) );
+ 			ST_TournamentLoadCurrentArena();
+ 		}
+--- a/codemp/game/g_session.c
++++ b/codemp/game/g_session.c
+@@ -88,7 +88,9 @@
+ 	Q_strcat( s, sizeof( s ), va( "%i ", client->sess.stTournamentMatchWins ) );
+ 	Q_strcat( s, sizeof( s ), va( "%i %i", client->sess.stTournamentMatchLosses, client->sess.stSaberStyle ) );
+ 
+-	var = va( "session%i", client - level.clients );
++	trap->Cvar_Set(va("st_formatSession%d",(int)(client-level.clients)), va("%d %d %d %d %d", ST_FormatMode(),
++        client->sess.stQueueTicket, client->sess.stServiceTicket, client->sess.stLadderRank, client->sess.stLadderPlayed));
++    var = va( "session%i", client - level.clients );
+ 
+ 	trap->Cvar_Set( var, s );
+ }
+@@ -109,7 +111,15 @@
+ 	var = va( "session%i", client - level.clients );
+ 	trap->Cvar_VariableStringBuffer( var, s, sizeof(s) );
+ 
+-	fieldsRead = sscanf( s, "%i %i %i %i %i %i %i %i %i %i %i %i %s %s %i %i %i %i %i %i %i",
++	char formatData[96];
++    int format=0;
++    qboolean formatChanged=qfalse;
++    trap->Cvar_VariableStringBuffer(va("st_formatSession%d",(int)(client-level.clients)),formatData,sizeof(formatData));
++    if (sscanf(formatData,"%d %d %d %d %d",&format,&client->sess.stQueueTicket,&client->sess.stServiceTicket,&client->sess.stLadderRank,&client->sess.stLadderPlayed)!=5 || format!=ST_FormatMode()) {
++        formatChanged=qtrue;
++        client->sess.stQueueTicket=client->sess.stServiceTicket=client->sess.stLadderRank=client->sess.stLadderPlayed=0;
++    }
++    fieldsRead = sscanf( s, "%i %i %i %i %i %i %i %i %i %i %i %i %s %s %i %i %i %i %i %i %i",
+ 		&tempSessionTeam, //&client->sess.sessionTeam,
+ 		&client->sess.spectatorNum,
+ 		&tempSpectatorState, //&client->sess.spectatorState,
+@@ -145,7 +155,13 @@
+ 		client->sess.stTournamentMatchLosses = 0;
+ 	}
+ 
+-	client->sess.sessionTeam	= (team_t)tempSessionTeam;
++	if (formatChanged && ST_FormatMode()) {
++        tempSessionTeam=TEAM_SPECTATOR;
++        tempSpectatorState=SPECTATOR_FREE;
++        client->sess.stDuelSeriesWins=0;
++        client->sess.stDuelSeriesOpponent=-1;
++    }
++    client->sess.sessionTeam	= (team_t)tempSessionTeam;
+     if (tempSessionTeam >= TEAM_GREEN &&
+         (level.gametype != GT_TEAM || !ST_TffaEnabled(tempSessionTeam, G_TffaTeams()))) {
+         client->sess.sessionTeam = TEAM_SPECTATOR;
+@@ -278,6 +294,7 @@
+ 		}
+ 	}
+ 
++	if (ST_FormatMode()==2 || (ST_FormatMode()==1 && !isBot)) sess->sessionTeam=TEAM_SPECTATOR;
+ 	sess->spectatorState = SPECTATOR_FREE;
+ 	AddTournamentQueue(client);
+ 
+--- a/codemp/game/g_st_match_rules.inc
++++ b/codemp/game/g_st_match_rules.inc
+@@ -105,6 +105,8 @@
+   for(const auto& name:maps)if(!ST_MatchBsp(name)){trap->Print("Match Rules: rotation BSP missing: %s\n",name.c_str());return false;}
+  }
+  int type=ST_MatchTarget("g_gametype"),counts[10]={0},slots=ST_MatchTarget("sv_maxclients"),cap=ST_MatchTargetCap(type);
++ int format=ST_MatchTarget("st_gameFormat");
++ if((format==1&&type!=GT_TEAM)||(format==2&&type!=GT_DUEL)){trap->Print("Match Rules: PUG requires Team FFA and Ladder requires Duel.\n");return false;}
+  if(type==GT_POWERDUEL&&slots<3){trap->Print("Match Rules: Power Duel requires at least three connection slots.\n");return false;}
+  bool explicitUnlock=stMatchDraft.edits.count("st_matchLockTeams")&&ST_MatchTarget("st_matchLockTeams")==0;
+  if(!stMatchBots.empty()&&type==GT_TEAM&&level.stTeamsLocked&&!explicitUnlock){
+--- a/codemp/game/g_staff.c
++++ b/codemp/game/g_staff.c
+@@ -151,3 +151,31 @@
+  static const STGameAPI api={ST_STAFF_API_VERSION,sizeof(STGameAPI),Execute,Resolve,Revoke,ST_StaffResetAll};
+  if(!imports||imports->version!=ST_STAFF_API_VERSION||imports->size!=sizeof(STStaffImports)||!imports->RoleForClient||!imports->GenerationForClient)return NULL;engine=imports;return &api;
+ }
++
++#include "st_format_award.h"
++typedef void (*FormatSignal)(int,int,int,int);
++static FormatSignal formatSignal;
++Q_EXPORT void ST_BindFormatAwards(FormatSignal signal) { formatSignal = signal; }
++static int AwardSide(int mode,int slot) {
++    gentity_t *ent = &g_entities[slot];
++    if (!Player(ent) || (ent->r.svFlags & SVF_BOT)) return -1;
++    int side = ent->client->sess.sessionTeam;
++    if (mode == 2) return side == TEAM_FREE ? side : -1;
++    return ST_TffaEnabled(side,G_TffaTeams()) ? side : -1;
++}
++void ST_FormatAwardBegin(int mode) {
++    if (!formatSignal) return;
++    formatSignal(0,mode,0,0);
++    for (int i=0;i<level.maxclients;i++) {
++        int side = AwardSide(mode,i);
++        if (side >= 0) formatSignal(1,mode,i,side);
++    }
++}
++void ST_FormatAwardLeave(int slot) {
++    if (formatSignal) formatSignal(2,0,slot,0);
++}
++void ST_FormatAward(int mode,int winner,int loser) {
++    if (!formatSignal) return;
++    for (int i=0;i<level.maxclients;i++) formatSignal(3,mode,i,AwardSide(mode,i));
++    formatSignal(4,mode,winner,loser);
++}
+--- a/codemp/game/g_team.c
++++ b/codemp/game/g_team.c
+@@ -67,6 +67,8 @@
+ }
+ 
+ qboolean G_TffaHasRoom(int team, int ignoreClient) {
++    if (ST_FormatMode()==1 && !ST_MatchEffectiveTeamCap() && TeamCount(ignoreClient,(team_t)team)>=4)
++        return qfalse;
+     return ST_MatchHasRoom(team,ignoreClient);
+ }
+ 
+--- a/codemp/game/g_xcvar.h
++++ b/codemp/game/g_xcvar.h
+@@ -211,6 +211,8 @@
+ XCVAR_DEF( st_tournamentFinalBestOf,	"5",			NULL,						CVAR_ARCHIVE,							qfalse )
+ XCVAR_DEF( st_tournamentArenas,			"mp/duel1 mp/duel2 mp/duel3 mp/duel4", NULL,				CVAR_ARCHIVE,						qfalse )
+ XCVAR_DEF( st_tournamentAutoStart,		"300",		NULL,						CVAR_ARCHIVE,							qfalse )
++XCVAR_DEF( st_gameFormat, "0", NULL, CVAR_ARCHIVE|CVAR_SERVERINFO|CVAR_LATCH, qfalse )
++XCVAR_DEF( st_pugAfkSeconds, "90", NULL, CVAR_ARCHIVE, qfalse )
+ XCVAR_DEF( st_duelBestOf,				"3",			NULL,						CVAR_SERVERINFO|CVAR_ARCHIVE,				qfalse )
+ XCVAR_DEF( st_dismemberChance,			"100",			CVU_STDismemberChance,		CVAR_ARCHIVE,				qtrue )
+ XCVAR_DEF( st_staffGuids,				"",				NULL,						CVAR_ARCHIVE,									qfalse )
+--- /dev/null
++++ b/codemp/game/st_format_award.h
+@@ -0,0 +1,10 @@
++#pragma once
++#ifdef __cplusplus
++extern "C" {
++#endif
++void ST_FormatAwardBegin(int mode);
++void ST_FormatAwardLeave(int slot);
++void ST_FormatAward(int mode,int winner,int loser);
++#ifdef __cplusplus
++}
++#endif
+--- /dev/null
++++ b/codemp/game/st_game_format.h
+@@ -0,0 +1,15 @@
++#ifndef ST_GAME_FORMAT_H
++#define ST_GAME_FORMAT_H
++enum { ST_FORMAT_PUG_ID = 10, ST_FORMAT_LADDER_ID = 11 };
++static inline int ST_DisplayMode(int base, int format) {
++    if (base == GT_TEAM && format == 1) return ST_FORMAT_PUG_ID;
++    if (base == GT_DUEL && format == 2) return ST_FORMAT_LADDER_ID;
++    return base;
++}
++static inline int ST_ModeFormat(int mode) {
++    return mode == ST_FORMAT_PUG_ID ? 1 : mode == ST_FORMAT_LADDER_ID ? 2 : 0;
++}
++static inline int ST_BaseMode(int mode) {
++    return mode == ST_FORMAT_PUG_ID ? GT_TEAM : mode == ST_FORMAT_LADDER_ID ? GT_DUEL : mode;
++}
++#endif
+--- a/codemp/game/st_match_rules.h
++++ b/codemp/game/st_match_rules.h
+@@ -48,6 +48,7 @@
+  MR("bot_minplayers","Automatic bot population","","0 disables filling. Uses normal mode-aware bot population behavior.",Teams,0,0,31,1,0,false),
+  MR("st_botSkill","Default bot skill","","Skill for role bots; individual roster slots can override it.",Teams,4,1,5,1,0,false),
+  MR("sv_maxclients","Connection slots","","Includes humans, bots and spectators. Leave spare slots for yourself and future additions.",Teams,16,2,32,1,0,true),
++ MR("st_gameFormat","Game format","0=Standard|1=PUG|2=Ladder","Queue and rotation format.",Match,0,0,2,1,0,true),
+  MR("g_gametype","Game type","0=FFA|3=Duel|4=Power Duel|6=Team FFA|7=Siege|8=CTF","Choose a compatible map. Mode-specific controls update automatically.",Match,0,0,8,1,0,true),
+  MR("fraglimit","Score limit","","0 is unlimited. Duel rounds always end after one kill; use best-of for the series.",Match,10,0,1000,5,0,true),
+  MR("timelimit","Time limit (minutes)","","0 is unlimited.",Match,0,0,180,1,0,true),
+@@ -146,6 +147,8 @@
+  return "";
+ }
+ inline bool validate(const Preset& p,std::string& error) {
++ const int format=p.get("st_gameFormat"),base=p.get("g_gametype");
++ if((format==1&&base!=6)||(format==2&&base!=3)){error="PUG requires Team FFA and Ladder requires Duel.";return false;}
+  for(int i=0;i<RuleCount;++i)if(!valid(i,p.values[i])){error=std::string("Invalid ")+rules[i].label;return false;}
+  if(p.get("g_gametype")==4&&p.get("sv_maxclients")<3){error="Power Duel requires at least three connection slots.";return false;}
+  for(int n:p.force)if(n<0||n>3){error="Force caps must be 0 through 3.";return false;}
+@@ -195,6 +198,8 @@
+    if(op=="weapons"){if(!integer(a,p.weaponDisable))break;}else if(op=="map")p.map=a;else if(!unhex(a,op=="host"?p.hostname:p.rotation))break;
+   }else break;
+  }
++ // Version-one presets written before PUG and Ladder use standard rules.
++ seen[find("st_gameFormat")]=true;
+  if(!end||extras!=15||std::find(seen.begin(),seen.end(),false)!=seen.end()||std::find(forces.begin(),forces.end(),false)!=forces.end()){
+   error="Incomplete, duplicate or unrecognized preset data.";return false;}
+  while(std::getline(in,line))if(!line.empty()){error="Unexpected data after preset end.";return false;}

@@ -1,0 +1,1853 @@
+ (includes humans, bots and spectators)	(met inbegrip van mensen, botten en toeschouwers)
+ (stored preference)	(opgeslagen voorkeur)
+ / skill 	/ vaardigheden
+ / team 	/ team
+ [restart / next boundary]	[herstarten / volgende grens]
+ is assigned to: 	is toegewezen aan:
+ maximum: 	maximum:
+ pending, not armed	in behandeling, niet gewapend
+ queued for next round/map	wachtrij voor volgende ronde/kaart
+ | password change queued	Wachtwoordverandering in de wachtrij
+%d B/s max	max. %d B/s
+%d models	%d modellen
+%s   Ping %s ms   Jitter %s ms   Loss %s%%	%s Ping %s ms Jitter %s ms Verlies %s%%
+%s  Ping %s ms  Jitter %s ms  In loss %s%%	%s Ping %s ms Jitter %s ms In verlies %s%%
+%s | default %s | edit range %.4g to %.4g	%s Standaard %s Bewerkbereik %.4g tot %.4g
+(empty)	(leeg)
++  Advanced video	+ Geavanceerde video
+-  Advanced video	- Geavanceerde video
+-1=Default|1=Red|2=Green|3=Yellow|4=Blue|5=Cyan|6=Magenta|7=White|8=Orange|9=Gray|0=Black	-1=Standaard
+-2=Desktop|-1=Custom	-2=Desktop
+-2=Desktop|-1=Custom|4=800 x 600|6=1024 x 768|10=1600 x 1200	-2=Desktop
+.skin	.huid
+0 - Disabled	0 - Uitgeschakeld
+0=Default|16=16 bit|32=32 bit	0=Standaard
+0=Desktop|16=16 bit|32=32 bit	0=Desktop
+0=Leader|1=Your character|2=Opponent	0=Leider
+0=Off|1=Blob|2=Stencil|3=Projected	0=Uitgewezen1=Blob
+0=Off|1=Count up|2=Time remaining	0=Uitgave1=Toetelling2=Tijd resterend
+0=Off|1=Limbs only|2=On	0=Uitgebroken 1=Limbes alleen 2=Aan
+0=Off|1=Live|2=Static	0=Uitgevaren1=Levendleven2= Statisch
+0=Off|1=On|-1=Adaptive	0=Uitgeschakeld1=Aan de start-1=Aanpassend
+0=Off|1=Standard|2=Stencil	0=Uitgebreid1=Stencil
+0=Off|1=Top right|2=Bottom right|3=Bottom left	0=Uitgeschakeld1= rechtsboven2= rechtsonder3= linksonder
+22=22 kHz|44=44 kHz	22=22 kHz
+2=Auto (recommended)|1=Manual|0=Off	2=Auto (aanbevolen)
+2=Low|1=Medium|0=High	2=Laag... 1=Medium
+3=Low|2=Medium|1=High|0=Very high	3=Laag...2=Middel...1=High...0=Heel hoog.
+: unsupported value.	: niet ondersteunde waarde.
+; engine directory limit reached	; limiet voor motormap bereikt
+; engine range 	; motorbereik
+< Profile	< Profiel
+@MENUS_ABSORB	ABSOrb
+@MENUS_ACROBATICS	Acrobatiek
+@MENUS_ADD_BOT	Bot toevoegen
+@MENUS_ADD_FAVORITE	Favoriet toevoegen
+@MENUS_ADD_SELECTED_SERVER_TO	Geselecteerde server toevoegen aan favorieten.
+@MENUS_ADJUSTS_THE_DIFFICULTY	Past de moeilijkheidsgraad van de kunstmatig intelligente bots in het spel.
+@MENUS_ALL	Alles
+@MENUS_ALLOWS_YOU_TO_SELECT	Hiermee kunt u het type spel selecteren voor de server die u wilt spelen.
+@MENUS_AN_ATTACK_DRONE_SIMILAR	Zoekerdrone\nEen aanval drone vergelijkbaar met de training drones gebruikt door Jedi om hun lichtzwaard vaardigheden te oefenen, de Zoeker zweeft rond zijn gebruiker en valt elke vijand waarop de gebruiker vuurt op. De drone werkt automatisch voor een beperkte tijd en vervolgens zelfvernietigt wanneer zijn macht is uitgeput.
+@MENUS_AN_ELEGANT_WEAPON_FOR	Lichtzwaard\nEen elegant wapen voor een beschaafder tijdperk, het lichtzwaard is het favoriete wapen van de Jedi Ridder. Het lichtzwaard is een energiemes van grote kracht dat door de wieleraar kan worden gebruikt voor zowel aanval als verdediging.\n\nPrimaire brand - Slashing en swingende aanvallen\nSecondary Fire - Force powered sabel worp\nDefensive Aability - Deflects blaster en energie wapen vuur, pareert vijandelijke lichtzwaard aanvallen\nType munitie - n.v.t.
+@MENUS_APPEARANCE	KLEURING
+@MENUS_APPLY	Toepassen
+@MENUS_APPLY_CHANGES	TOEPASSELIJKE VERANDERINGEN
+@MENUS_APPLY_CHANGES_AND_JOIN	Wijzigingen toepassen en deelnemen aan het spel in uitvoering.
+@MENUS_APPLY_CHANGES_AND_THEN	Wijzigingen toepassen en dan naar het hoofdmenu gaan.
+@MENUS_APPLY_PLAYER_SABER	Pas wijzigingen toe op de speler en ga naar de sabel selectie.
+@MENUS_APPLY_POWERS	Toepassen van bevoegdheden
+@MENUS_APPLY_SABER_CHANGES	Pas sabel wijzigingen toe en keer terug naar het hoofdmenu.
+@MENUS_APPLY_THESE_CHANGES_OR	Deze wijzigingen toepassen of verwerpen?
+@MENUS_ASSIST_ME	Help me.
+@MENUS_ATTACK_THE_ENEMY_S_BASE	Val de vijand aan.
+@MENUS_ATTACK_TITLE	Aanvallen
+@MENUS_AUTO_JOIN_DESC	Laat de server uw team en klasse kiezen.
+@MENUS_AWAITING_CHALLENGE	In afwachting van uitdaging... %i
+@MENUS_AWAITING_CONNECTION	Wacht op verbinding...%i
+@MENUS_AWAITING_GAMESTATE	In afwachting van de gamestate...
+@MENUS_A_DETONATION_PACK_IS	Detonatiepakketten\nEen detonatiepakket is in wezen een klein explosief met een externe detonatie-aanjager. De verpakking wordt geplaatst of gegooid en kan naar believen door de gebruiker worden ontploft. Ontploffingspakketten worden gewoonlijk gebruikt om vijanden te overvallen of gesloten deuren te openen.\n\nPrimaire Vuur - Gooit lading aan de voeten van de gebruiker\nSecundaire brand - explodeert alle ingestelde ladingen
+@MENUS_BACKTOMAIN	Terug naar het hoofdmenu.
+@MENUS_BACKTORULES	Terug naar de regels Menu
+@MENUS_BACKUP_ONE_MENU	Eén menu achteruit.
+@MENUS_BACK_2_PROFILE	Terug naar het profielmenu.
+@MENUS_BACTA_CANISTERS_ARE_PORTABLE	BioTech Bacta Canisters\nBacta bussen zijn draagbaar, wegwerp verpakkingen van bacta zalven en noodhulp hulpmiddelen. Ontworpen voor gebruik in het veld, bacta bussen kunnen worden gebruikt om wonden te genezen en herstellen vitaliteit tijdens medisch herstel. Geen veld arts moet zonder hen.
+@MENUS_BECOME_A_NEARLY_UNSTOPPABLE	Word een bijna onstopbare juggernaut.
+@MENUS_BEGIN_PLAYING_THE_DEMO	Begin met het afspelen van de demo van het geselecteerde bestand.
+@MENUS_BLADE_COLOR	Bladekleur
+@MENUS_BLADE_COLOR_DESC	Selecteer de kleur voor uw lichtzwaardblad.
+@MENUS_BLASTER_PISTOL_DESC	DL-44 zwaar Blasterpistool\nEen van de meest voorkomende wapens in de melkweg, de DL-44 Heavy Blaster pistool heeft een trage snelheid van vuur, maar is zeer nauwkeurig.\n\nPrimaire brand - Langzaam, enkel schot met grote nauwkeurigheid en schade\nSecundaire brand - Opgeladen energieopbouw voor verhoogde schadeblast\nType munitie - Blaster Pack
+@MENUS_CALL_FOR_VOTES	Oproep tot het indienen van stemmen
+@MENUS_CANCEL	Annuleren
+@MENUS_CANCEL_DESC	Terug naar het spel zonder teams te veranderen.
+@MENUS_CAPTURE_LIMIT	Limiet van de vangst:
+@MENUS_CAP_AUTO_JOIN	Automatisch opstarten
+@MENUS_CHANNEL_THE_FORCE_TO	Channel de Force om je bondgenoten te genezen.
+@MENUS_CHARACTER_CREATION	CHARACTER CREATIE
+@MENUS_CHOOSE_A_PRE_MADE_ALLOCATION	Kies een vooraf gemaakte allocatie van Force Powers.
+@MENUS_CHOOSE_CLASS	Kies een klasse
+@MENUS_CHOOSE_MOVE_DESC	Kies een bewegend type.
+@MENUS_CHOOSE_RULES	Spelregels kiezen
+@MENUS_CHOOSE_SOURCE_OF_SERVERS	Kies bron van servers.
+@MENUS_CHOOSE_SPECIES	Kies een soort.
+@MENUS_CHOOSE_THE_PATH_OF_THE	Kies het pad van de Lichtzijde of de Duistere Zijde.
+@MENUS_CHOOSE_YOUR_FORCE_TRAINING	Kies uw Force Training
+@MENUS_CHOOSE_YOUR_GAME	Kies je spel.
+@MENUS_CLASS_CHOICE_DESC	Selecteer een klas.
+@MENUS_CLASS_FORCEPOWERS	Krachtkracht voor deze klas.
+@MENUS_CLASS_INVENTORY	Inventaris voor deze klasse
+@MENUS_CLASS_WEAPONS	Wapens voor deze klas.
+@MENUS_CLICK_FOR_HUMAN_BOTS	Klik voor menselijke, bots of gesloten slots.
+@MENUS_CLOAK_CAPS	KLEDINGSHIELD
+@MENUS_CLOAK_DESC	Cloaking Shield\nHet camouflageschild maakt de drager onzichtbaar voor anderen, waardoor de beweging onzichtbaar is. Echter, vanwege de immense energie die nodig is om het apparaat van stroom te voorzien, duurt de mantel kort.\n\nEen directe klap van een DEMP 2 pistool zal het schild tijdelijk uitschakelen. Bovendien zal een klap van de secundaire brand van de DEMP 2 het schild permanent uitschakelen.\n\nHet camouflageschild is alleen bruikbaar in het Siege speltype.
+@MENUS_COLOR	KLEUR
+@MENUS_COLOR1_DESC	Selecteer een bladkleur.
+@MENUS_COLOR2	KLEUR 2
+@MENUS_COLOR2_DESC	Selecteer een tweede bladkleur.
+@MENUS_COMMONLY_REFERRED_TO	Destructieve elektromagnetische pulse 2 pistool\nGewoonlijk aangeduid als de DEMP 2, dit pulsgeweer wordt voornamelijk gebruikt tegen droids en elektrische apparaten. De DEMP 2 vuurt hoog aangedreven ionenuitbarstingen die elektrische systemen verstoren, en zijn het meest effectief tegen persoonlijke schilden. In tegenstelling tot eerdere incarnaties van het wapen, de ionenladingen van DEMP 2 zijn in staat om levende materialen te beschadigen.\n\nPrimaire brand - Enkel schot, doet wat schade aan mensen, extra schade aan schilden\nSecondary Fire - Een geladen schot dat een bijna onmiddellijke schokgolf loslaat die vijanden terug kan slaan\nMunitietype - Powercel
+@MENUS_COMPLETE_THE_CURRENT	Voltooi de huidige doelstelling.
+@MENUS_CONC_RIFLE	CONCUSSIE RIFL
+@MENUS_CONC_RIFLE_DESC	Stouker Concussiegeweer\nDe Stouker vuurt een schokgolf af die een explosie veroorzaakt die ongeveer 4 meter in diameter verspreidt.\n\nPrimaire brand - Enkel schot, groot explosief effect dat alles beschadigt, langzame vuursnelheid\nSecundaire brand - Vuurt een kleiner projectiel schot dat een kleinere explosieve straal heeft, maar veel meer schade in die straal en heeft een ernstiger terugslag\nType munitie - metalen bolts
+@MENUS_CONFIGURE_GAME_CONTROLS	Configureer de spelregels.
+@MENUS_CONFIGURE_GAME_SETTINGS	Spelinstellingen instellen.
+@MENUS_CONNECTING_TO	Verbinden met %s
+@MENUS_CREATE_AN_AURA_THAT_PROTECTS	Creëer een aura die beschermt tegen fysieke aanvallen.
+@MENUS_CTF_CAPS	CAPTUUR DE VLAG
+@MENUS_CUSTOM_CHARACTER	Aangepast teken
+@MENUS_DARK_RAGE	Donkere woede:
+@MENUS_DATA_RATE	Gegevenspercentage:
+@MENUS_DATA_RATE_DESC	De snelheid van de informatieoverdracht via internet.
+@MENUS_DEFAULT	Standaard
+@MENUS_DEFEND_OUR_BASE	Verdedig onze basis.
+@MENUS_DEFEND_TITLE	Verdedigen
+@MENUS_DELETE_SELECTED_SERVER	Verwijder de geselecteerde server uit favorieten.
+@MENUS_DEL_FAVORITE	Del. Favoriet
+@MENUS_DESCRIPTION_OF_A_FORCE	Beschrijving van een krachtkracht.
+@MENUS_DESCRIPTION_OF_A_WEAPON	Beschrijving van een wapentype.
+@MENUS_DESCRIPTION_OF_ITEM_TYPE	Beschrijving van het type product.
+@MENUS_DETPACK	DEPACK
+@MENUS_DISABLE_FORCE	Force uitschakelen:
+@MENUS_DISABLE_FORCE_INFO	Laat het gebruik van kracht tijdens het spelen.
+@MENUS_DISCARD	Weggooien
+@MENUS_DISPLAY_SERVER_INFORMATION	Serverinformatie weergeven.
+@MENUS_DONE	Klaar
+@MENUS_DONE_CAPS	KLAAR
+@MENUS_DONE_DESC	Terug naar Server Finder.
+@MENUS_DO_NOT_APPLY_CHANGES	Geen wijzigingen toepassen en terugkeren naar het videomenu.
+@MENUS_DO_NOT_LEAVE_JEDI_KNIGHT	Verlaat Jedi Academy niet.
+@MENUS_DRAIN_THE_FORCE_POWER	Druppel de kracht van tegenstanders om toe te voegen aan uw gezondheid.
+@MENUS_DUALSABERS_DESC	Gebruik 2 eenhandige sabels, slechts één vechtstijl.
+@MENUS_DUEL_LIMIT	Duellimiet:
+@MENUS_DURATION_5_SECONDS_NAREA	Dwangsnelheid\nDuur: Variabele (10 - 20 seconden)\nEffectgebied: Jedi\nEffect: Jedi versnelt.\n\nRang 1 - De Jedi beweegt 25% sneller dan normaal gedurende 10 seconden\nRang 2 - De Jedi beweegt 50% sneller dan normaal gedurende 15 seconden\nRang 3 - De Jedi beweegt 75% sneller dan normaal gedurende 20 seconden
+@MENUS_DURATION_CONTINUOUS_NAREA	Geforceerde absorptie\nDuur: Continu\nEffectgebied: Alleen Jedi\nEffect: Beschermt tegen elke directe kracht.\n\nAbsorbeert schade door krachtvermogens gericht op de wielder en verandert die energie in bruikbare krachtkracht.\n\nRang 1 - Nullifieert rang 1 Force aanvallen, vermindert het effect van hogere rang Force aanvallen.\nRang 2 - Nullifieert rang 2 Force aanvallen, sterk vermindert het effect van hogere rang Force aanvallen. Geeft grotere kracht.\nRang 3 - Nullificeert alle Force aanvallen.
+@MENUS_DURATION_IMMEDIATE_NAREA	Springen forceren\nDuur: Onmiddellijk\nEffectgebied: alleen Jedi\nEffect: Hiermee kan Jedi een enorme verticale sprong maken.\n\nRang 1 - Jedi kan tot twee keer hun normale spronghoogte springen.\nRang 2 - Jedi kan tot vier keer hun normale spronghoogte springen.\nKlasse 3 - Jedi kan tot acht keer hun normale spronghoogte springen.
+@MENUS_DURATION_INSTANTANEOUS	Duwkracht\nDuur: Instantan effect\nEffectgebied: objecten of personen\nEffect: Hiermee kan Jedi objecten van zichzelf wegduwen, raketten afbuigen en zich verdedigen tegen Force Grip en Force Push aanvallen.\n\nRang 1 - Jedi gebruikt de Force om een specifieke vijand of object gefocust op te duwen.\nRang 2 - Jedi gebruikt de Force om meerdere vijanden of objecten terug te duwen in een beperkte boog.\nRang 3 - Jedi kan meerdere vijanden terugduwen met genoeg kracht om schade te doen door de vijanden in vaste oppervlakken of uit richels te duwen.
+@MENUS_DURATION_INSTANTANEOUS_NAREA	Krachtgrip\nDuur: Directaans\nEffectgebied: Alleen levende personen\nEffect: Hiermee kan Jedi de organen van een levend wezen verstikken of beperken.\n\nRang 1 - Getroffen vijand wordt vastgepakt en onbeschadigd gehouden, maar ongevoelig voor 5 seconden. Jedi moet stil blijven staan.\nRang 2 - Vijand wordt beïnvloed op dezelfde manier als rang 1, maar de grip kan schade en til vijanden met een langdurige focus van de grip. Jedi moet stil blijven staan.\nRang 3 - Vijand wordt beïnvloed op dezelfde manier als rang 2, maar de Jedi kunnen vrij bewegen en de vijand in muren en andere obstakels slaan of gebruik maken van de vijand als een schild terwijl nog steeds het doen van stikken schade.
+@MENUS_DURATION_VARIABLE_10	Woede forceren\nDuur: Variabele (10 - 30 seconden)\nEffectgebied: Alleen donkere Jedi\nEffect: Jedi gaat in een razernij van snelheid voor een bepaalde duur, maar moet daarna herstellen. Drains gezondheid tijdens actief, en verloopt na de duur of wanneer gezondheid raakt 1.\n\nDark Rage: Brand 33% sneller, Beweeg 100% sneller, verlies schade genomen met 50%, wielder kan niet sterven (gezondheid blijft op 1).\nDonkere woede herstel: Vuur 50% langzamer, beweging op 75% snelheid\n\nRang 1 - Woede gedurende 10 seconden, 10 seconden herstel\nRang 2 - Woede voor 20 seconden, 10 seconden herstel\nRang 3 - Woede gedurende 30 seconden, 10 seconden herstel
+@MENUS_DURATION_VARIABLE_20	Mind Trick\nDuur: Variabele (5 - 15 seconden)\nEffectgebied: andere spelers\nEffect: Hiermee kan Jedi zich onzichtbaar maken voor andere spelers.\n\nRang 1 - Een Jedi is onzichtbaar voor een enkele vijand gedurende 5 seconden.\nRang 2 - Een Jedi is onzichtbaar voor vijanden in een voorboog van matige afstand gedurende 10 seconden.\nRang 3 - Een Jedi is onzichtbaar voor alle vijanden in een matige afstand gedurende 15 seconden.
+@MENUS_DURATION_VARIABLE_NAREA	Bescherming tegen geweld\nDuur: Variabele\nEffectgebied: Alleen Jedi\nEffect: Beschermt tegen fysieke aanvallen.\n\nDe schade aan Jedi door fysieke aanvallen is afkomstig van Force Power pool in plaats van van de gezondheid score.\n\nKlasse 1 - 50% Schade geblokkeerd, 100% verwijderd uit Force pool, max 100 Schade\nKlasse 2 - 75% Schade geblokkeerd, 50% verwijderd uit Force pool, max 200 Schade\nKlasse 3 - 87,5% Schade geblokkeerd, 25% verwijderd uit Force pool, max 400 Schade
+@MENUS_EFFECT_JEDI_ALLIES_NEFFECT	Team activeren\nDuur: Instantan effect\nEffectgebied: Jedi-geallieerden\nEffect: De Jedi heeft het vermogen om bondgenoten te doordringen met krachtenergie.\n\nForce Team Energize stelt de Jedi in staat om binnen een bepaalde straal van zijn lichaam een bepaalde hoeveelheid krachtenergie aan zijn bondgenoten terug te geven. Jedi kan 50 Krachtpunten herstellen naar één bondgenoot, 33 Kracht wijst naar twee bondgenoten of 25 Kracht wijst naar 3 of meer bondgenoten.\n\nKlasse 1 - Normaal bereik\nKlasse 2 - Anderhalve keer normaal bereik\nRang 3 - Dubbel normaal bereik
+@MENUS_EFFECT_NAREA_OF_EFFECT	Gevoel forceren\nDuur: Instantan effect\nEffectgebied: Jedi-veld\nEffect: Hiermee Jedi groot en breed zicht.\n\nMet het zien van kracht kan de Jedi alle vijanden duidelijk zien, ongeacht de lichtomstandigheden, door ze te omringen met een lichtgevende aura die gemakkelijk te zien is. Met het zien van kracht kan Jedi ook de Jedi Mind Trick Force kracht tegenwerken. Op het hoogste niveau van Force Seeing the Jedi ontwikkelt zich een zesde zintuig dat hem in staat stelt om sluipschuttersvuur te ontwijken.\n\nRang 1 - Zie de aura's van spelers gemarkeerd in het zicht met normale duur.\nRang 2 - Zie spelers' aura's in het zicht en door muren met dubbele tijd.\nRang 3 - Zie spelers' aura's in het zicht en door muren op elk bereik met drie keer de tijd. Spelers kunnen automatisch ontwijken sluipschutters shots op dit niveau.
+@MENUS_ENDGAME_RULES	EINDE SPELREGELS
+@MENUS_ENTER_IP_ADDRESS	IP-adres invoeren:
+@MENUS_ENTER_IP_ADDRESS_OF_FAVORITE	Voer IP-adres van favoriete server in.
+@MENUS_ENTER_PASSWORD	ENTER PASSORD
+@MENUS_ENTER_THE_NAME_FOR_YOUR	Voer de naam in voor uw server.
+@MENUS_ENTER_THE_TITLE_FOR_YOUR	Voer de titel in voor uw krachtsjabloon (alleen Alfanumeric).
+@MENUS_ERROR	Fout:
+@MENUS_ESTABLISH_THE_NUMBER	Het aantal doden dat nodig is om de wedstrijd te winnen.
+@MENUS_EVEN_TEAMS	Zelfs Teams:
+@MENUS_EWEB_DESC	E-Web\nHet E-Web is een power statief laserkanon. Het kan ingezet worden op het slagveld om een sterke verdedigingspositie te creëren.\n\nHet E-Web is alleen bruikbaar in het Siege speltype.
+@MENUS_EXIT_TO_MAIN_MENU	Afsluiten naar hoofdmenu.
+@MENUS_FAVORITE_SERVER_INFO	Favorite server INFO
+@MENUS_FFA_CAPS	GRATIS VOOR ALLEN
+@MENUS_FILENAME	Bestandsnaam:
+@MENUS_FILTER_FOR_SPECIFIC_GAME	Filter instellen voor specifieke speltypen.
+@MENUS_FIND_PLAYER	Speler zoeken
+@MENUS_FINISHED_INPUTTING_INFO	Info is klaar.
+@MENUS_FOLLOW_ME	Volg mij.
+@MENUS_FORCEDESC_DARK	Donker
+@MENUS_FORCEDESC_LIGHT	Licht
+@MENUS_FORCE_DRAIN	Afvoeren:
+@MENUS_FORCE_HEAL	Genees:
+@MENUS_FORCE_JUMP	Spring:
+@MENUS_FORCE_LIGHTNING	Bliksem:
+@MENUS_FORCE_MASTERY	Forceer meesterschap:
+@MENUS_FORCE_MASTERY_INFO	Bepaalt het aantal punten dat kan worden toegewezen aan machten.
+@MENUS_FORCE_PROTECT	Beschermen:
+@MENUS_FORCE_PULL	Trek:
+@MENUS_FORCE_PUSH	Persen:
+@MENUS_FORCE_SIDE	Krachtkant:
+@MENUS_FORCE_SIGHT	Zien:
+@MENUS_FORCE_SPEED	Snelheid:
+@MENUS_FORCE_TEAM_HEAL	Team Genezing:
+@MENUS_FORCE_TEMPLATES	Sjablonen forceren
+@MENUS_GAME	Spel:
+@MENUS_GAME_RULES	Spelregels.
+@MENUS_GENERAL_RULES	ALGEMENE REGELS
+@MENUS_GET_ENEMY_FLAG_BACK_TO	Breng de vijandelijke vlag terug naar de basis.
+@MENUS_GET_OUR_FLAG_BACK	Haal onze vlag terug.
+@MENUS_GET_SERVER_INFO	Serverinformatie
+@MENUS_GET_UPDATED_SERVER_LIST	Bijgewerkte Serverlijst opvragen.
+@MENUS_GO_TO_MAIN_MENU	Naar het hoofdmenu gaan?
+@MENUS_GUARD_OUR_FLAG_CARRIER	Bewaak onze vlaggenschip.
+@MENUS_HEAD	DIEREN
+@MENUS_HEAL_YOUR_BODY_WITH_THE	Genees je lichaam met de Force.
+@MENUS_HILT1_DESC	Selecteer een handvat.
+@MENUS_HILT2_DESC	Selecteer een tweede handvat.
+@MENUS_IMMOBILIZE_OPPONENTS	Immobiliseer tegenstanders in een pijnlijke greep van de dood.
+@MENUS_INCLUDE_EMPTY_SERVERS	Lege servers in de lijst opnemen.
+@MENUS_INCLUDE_FULL_SERVERS	Volledige servers in de lijst opnemen.
+@MENUS_INPUT_IP_ADDRESS_OF_SERVER	IP-adres van de server invoeren.
+@MENUS_INPUT_PASSWORD	Wachtwoord invoeren.
+@MENUS_INPUT_PASSWORD_1	Invoerwachtwoord
+@MENUS_INPUT_PLAYER_NAME	Naam invoerspeler.
+@MENUS_INSTANTANEOUS_EFFECT_NAREA	Trekkracht\nDuur: Instantan effect\nEffectgebied: objecten of personen\nEffect: Hiermee kan Jedi vijanden naar zichzelf toe trekken met een kans om de tegenstander te ontwapenen. Het verdedigt ook tegen Force Pull aanvallen.\n\nRang 1 - Jedi gebruikt de Force om een specifieke vijand op te richten.\nRang 2 - Jedi gebruikt de Force om meerdere vijanden in een beperkte boog te trekken.\nKlasse 3 - Jedi kan meerdere vijanden met genoeg kracht te trekken om doelen neer te slaan van dichtbij.
+@MENUS_IN_CAPTURE_THE_FLAG_CTF	In Capture The Flag (CTF) strijden twee teams om de vlag van het tegenovergestelde team vast te leggen en terug te brengen naar hun thuisbasis. Elk lid van een team kan de vlag van het tegenovergestelde team ophalen. Wanneer de vlag wordt genomen, worden alle spelers op de kaart gewaarschuwd voor het evenement. De vlagdrager moet dan ontsnappen uit het grondgebied van de vijand en met de vlag terugkeren naar hun eigen basis om te scoren.\n\nAls de vlagdrager wordt uitgeschakeld, wordt de vlag op het punt van eliminatie gedumpt. Als een lid van het team van de vlageigenaar de vlag aanraakt, wordt deze automatisch teruggestuurd naar hun basis. Als een lid van het team van de uitgeschakelde speler het oppakt, kunnen ze blijven proberen om het terug te brengen naar hun thuisbasis. De vlag van de vlagdrager moet 'thuis' zijn op zijn basispositie om te scoren met de vlag van het tegengestelde team.\n\nSCOURING VAN TEAM\nHet vangen van de vlag van de vijand: +1 punt\n\nINDIVIDUELE SCHORING\nDe vlag van de vijand oppakken: +10 punten\nDe vlag van de vijand vangen: +100 punten\nUw team vangt vijandelijke vlag: +25 punten\nHerstellen van uw vlag: +10 punten\n- onmiddellijke vangst voor team: +10 punten\nElimineren vijandelijke vlag vervoerder: +20 punten\n- onmiddellijke vangst voor team: +10 punten\nBescherming van uw vlagdrager: +5 punten\nBeschermen van uw vlaggenbasis: +10 punten\n\nHet team met de hoogste score aan het eind van de wedstrijd wint het spel.
+@MENUS_JEDI_KNIGHT_II	Verlaat Jedi Academy.
+@MENUS_JETPACK_DESC	Jetpack\nDe jetpack laat de gebruiker toe om korte tijd te vliegen, waardoor ze een tactisch voordeel hebben ten opzichte van anderen. Als de gebruiker de raketten niet afvuurt, zullen ze langzaam hoogte verliezen.\n\nDe jetpack is alleen bruikbaar in de Siege gametype.\n\n(Opmerking: Om de jetpack te activeren, springt u en drukt u op 'gebruik' terwijl u in de lucht zit. Met 'springen' kan de gebruiker hoogte bereiken, terwijl de 'kruk' de hoogte zal verlagen.)
+@MENUS_JOIN	Sluit je aan
+@MENUS_JOIN_A_TEAM	JOIN EEN TEAM
+@MENUS_JOIN_CHOSEN_SERVER	Sluit je aan bij de gekozen server.
+@MENUS_JOIN_GAME	Spel bijvoegen
+@MENUS_JOIN_PLAYER_DESC	Sluit je aan bij de server met deze speler.
+@MENUS_JOIN_TEAM_DESC	Kom bij dit team.
+@MENUS_KILL_LIMIT	Afsluitlimiet:
+@MENUS_LEAP_TO_AMAZING_HEIGHTS	Spring naar geweldige hoogten door de Jump-knop vast te houden.
+@MENUS_LEAVE_JEDI_KNIGHT_II	Verlaat Jedi Academy Multiplayer spel.
+@MENUS_LIGHTNING	LIGGING
+@MENUS_LIGHTSABER_CAPS	LIGHSABER
+@MENUS_LIGHTSABER_CREATION	LIGHSABER CREATIE
+@MENUS_LIGHTSABER_ONLY	Alleen lichtzwaard:
+@MENUS_LOADING_MAPNAME	Laden... %s
+@MENUS_MAIN_MENU	Hoofdmenu
+@MENUS_MAKE_THESE_CHANGES_TO	Maak deze wijzigingen aan je personage's Force Aabilitys.
+@MENUS_MAP_LISTING	KAARTLIJST
+@MENUS_MATCH	De wedstrijd opnieuw opstarten?
+@MENUS_MATCHING_NAMES	Bijpassende namen worden overschreven.
+@MENUS_MAXIMUM_PLAYERS	Maximale spelers:
+@MENUS_MISSION	Missie:
+@MENUS_MISSION_OBJECTIVES	DOELSTELLINGEN VAN DE COMMISSIE
+@MENUS_MOVE_AT_AN_ACCELERATED	Beweeg met een versnelde snelheid.
+@MENUS_MOVE_DESC2	Klik om een verplaatsingsbeschrijving te bekijken.
+@MENUS_MOVE_RULES	Bewegingsregels.
+@MENUS_MOVE_TYPES	TYPEN VAN DE VERPLAATSING
+@MENUS_MUST_ACQUIRE_A_MINIMUM	Moet een minimum rang van 1 in Saber Attack te krijgen lichtzwaard.
+@MENUS_NAME	Naam
+@MENUS_NAME1	Naam:
+@MENUS_NAME_TITLE	Naam:
+@MENUS_NEW_FAVORITE	Nieuwe favoriet
+@MENUS_NO	Nee
+@MENUS_NO_LIGHTSABER	Geen lichtzwaard
+@MENUS_OBJECTIVE_1	Doelstelling #1
+@MENUS_OBJECTIVE_2	Doelstelling #2
+@MENUS_OBJECTIVE_3	Doelstelling #3
+@MENUS_OBJECTIVE_4	Doelstelling #4
+@MENUS_OBJECTIVE_5	Doelstelling #5
+@MENUS_OBJECTIVE_6	Doelstelling #6
+@MENUS_OBJECTIVE_7	Doelstelling #7
+@MENUS_OBJECTIVE_8	Doelstelling 8
+@MENUS_OBJECTIVE_COMPLETED	Voltooid.
+@MENUS_OF_EFFECT_JEDI_ALLIES_NEFFECT	Genees Overig\nDuur: Instantan effect\nEffectgebied: Jedi bondgenoten\nEffect: De Jedi heeft de mogelijkheid om bondgenoten te genezen na een blessure.\n\nForce Heal Anders staat Jedi toe om een bepaalde hoeveelheid gezondheid te herstellen aan hun bondgenoten binnen een bepaalde straal van hun lichaam. Jedi kan 50 gezondheid herstellen aan één bondgenoot,\n33 gezondheid aan twee bondgenoten of 25 gezondheid tot 3 of meer bondgenoten.\n\nKlasse 1 - Normaal bereik\nKlasse 2 - Anderhalve keer normaal bereik\nRang 3 - Dubbel normaal bereik
+@MENUS_OF_EFFECT_JEDI_ONLY_NEFFECT	Gedwongen genezen\nDuur: Instantan effect\nEffectgebied: alleen Jedi\nEffect: De Jedi geneest na verwonding.\n\nRang 1 - Jedi herwint tot 5 gezondheid direct.\nRang 2 - Jedi herwint tot 10 gezondheid direct.\nRang 3 - Jedi herwint tot 25 gezondheid direct.
+@MENUS_OF_EFFECT_LIVING_PERSONS	Bliksem forceren\nDuur: Variabele\nEffectgebied: Alleen levende personen\nEffect: Hiermee kan Jedi een verwoestende elektrische aanval tegen vijanden werpen.\n\nRang 1 - Jedi lanceert een enkele bout die naar voren schiet, direct schade aanrichtend.\nRang 2 - Jedi kan de Force Lightning handhaven voor een aanhoudende aanval vooruit.\nKlasse 3 - Jedi straalt een duurzame ventilator van elektriciteit uit in een grote voorboog, die alles voor hen schaadt.
+@MENUS_OKAY	Oké.
+@MENUS_ONLY_HUMANS	Alleen mensen zijn toegestaan in belegering
+@MENUS_PASSWORD	Wachtwoord
+@MENUS_PERSONAL_SHIELD_ARMOR	PERSOONLIJKE SHIELD (ARMOR)
+@MENUS_PLAYERS	Minimum bots/spelers:
+@MENUS_PLAYERS_INFO	Voeg bots toe als de server minder dan dit aantal actieve menselijke spelers heeft.
+@MENUS_POINTS_REMAINING	Overblijvende punten:
+@MENUS_POWER	Vermogen:
+@MENUS_POWERDUEL_CAPS	DUIL
+@MENUS_PREVENT_THE_ENEMY_FROM	Voorkom dat de vijand zijn huidige doelstelling voltooit.
+@MENUS_PRIMARY_OBJECTIVES	Doelstelling primaire missie
+@MENUS_PROFILE_DESC	Tekeninstellingen instellen.
+@MENUS_PROGRAM	Programma beëindigen?
+@MENUS_PROTECT	BESCHERMEN
+@MENUS_PROTECT_AGAINST_FORCE	Beschermen tegen geweldaanvallen en krijg kracht van hen.
+@MENUS_PULL_YOUR_FOES_TO_YOU	Trek je vijanden naar je toe.
+@MENUS_PUSH_YOUR_FOES_AWAY_AND	Duw je vijanden weg en stoten projectielen af.
+@MENUS_QUIT_PROGRAM	Programma afsluiten
+@MENUS_RAGE_1	RAG
+@MENUS_REFRESH_LIST	Lijst vernieuwen
+@MENUS_REFRESH_SERVER_LIST	Serverlijst vernieuwen.
+@MENUS_REGROUP	Hergroeperen.
+@MENUS_RENDER_YOURSELF_INVISIBLE	Jezelf onzichtbaar maken voor geselecteerde doelen.
+@MENUS_REPEATER	HERHALING
+@MENUS_REPLY_TITLE	Antwoord
+@MENUS_REQUEST_TITLE	Verzoek
+@MENUS_RESTART_MATCH	Match herstarten
+@MENUS_RETURN_PREVIOUS	Terug naar het vorige menu.
+@MENUS_SABERSTAFF	Saber met twee handen
+@MENUS_SABERSTAFF_DESC	Gebruik één tweehandige sabel, maar één vechtstijl.
+@MENUS_SABER_HILTS_DESC	Kies uw sabel hilt(s).
+@MENUS_SABER_ONLY_INFO	Alle spelers hanteren lichtzwaarden, en alle wapens zijn verwijderd.
+@MENUS_SABER_STAFF	Saber-staf
+@MENUS_SABER_THROW	Saber Gooi:
+@MENUS_SABER_TYPE	TYPE SABER
+@MENUS_SABER_TYPE_DESC	Selecteer uw sabel type.
+@MENUS_SAVE_CURRENT_FORCE_SETUP	Huidige kracht instellen opslaan als een apart sjabloon.
+@MENUS_SAVE_FILE	Bestand opslaan
+@MENUS_SEARCHING	zoeken naar %d/%d...
+@MENUS_SEARCH_CAPS	ZOEK
+@MENUS_SEARCH_CURRENT_SERVER	De huidige serverlijst voor vrienden doorzoeken.
+@MENUS_SEARCH_DESC	Zoek alle servers voor deze speler.
+@MENUS_SECONDARY_OBJECTIVES	Secundaire doelstellingen
+@MENUS_SEE_ENEMIES_AT_ALL_TIMES	Zie vijanden te allen tijde, en zelfs sluipschutter schoten ontwijken.
+@MENUS_SELECT_BOTS	Bots selecteren
+@MENUS_SELECT_BOTS_DESC	Kies aangepaste bots om tegen te spelen
+@MENUS_SELECT_HEAD	Selecteer een hoofdstijl.
+@MENUS_SELECT_LEGS	Selecteer een benenstijl.
+@MENUS_SELECT_TORSO	Selecteer een torso stijl.
+@MENUS_SENTRY_CAPS	VERZENDING
+@MENUS_SERVERS_FOUNDWITH	%d server%s gevonden met speler %s
+@MENUS_SERVER_INFORMATION	Serverinformatie
+@MENUS_SERVER_NAME_1	Servernaam:
+@MENUS_SETS_THE_MAXIMUM_NUMBER	Stelt het maximum aantal spelers in dat zich bij uw server mag aansluiten.
+@MENUS_SET_FILTER_FOR_SPECIFIC	Filter instellen voor specifieke spelmods.
+@MENUS_SHOW_GAME_CREDITS	Toon spel credits.
+@MENUS_SIEGE_ASSAULT	AANSPRAKELIJK
+@MENUS_SIEGE_DEMOLITIONS	DEMOLITIES
+@MENUS_SIEGE_GAME_RULES_DESC	Siege zet twee teams tegen elkaar in in een getimede wedstrijd waarbij het ene team op aanval is en het andere op verdediging. Beide teams hebben doelstellingen, maar het aanvalsteam moet hun primaire doelen om te winnen voltooien.\n\nElk team bestaat uit een aantal personages, elk met hun eigen specialiteit. Elk personage kan bijdragen met zijn eigen unieke vaardigheden.\n\nEen optionele server regel maakt het mogelijk om te schakelen. Met deze optie ingeschakeld, teams schakelen na de eerste wedstrijd. Als het aanvalsteam had gewonnen de eerste wedstrijd, het nieuwe aanvalsteam heeft een tijdslimiet gelijk aan de tijd die het eerste team om te winnen. Als het aanvalsteam voltooit alle doelstellingen in de kortere termijn, ze winnen het spel.\n\nWIN VOORWAARDEN - OFFENSE\nVoltooi alle primaire doelstellingen voordat de tijd op is.\n\nWIN VOORWAARDEN - DEFENSE\nVoorkom dat de aanval alle primaire doelen bereikt voordat de tijd op is.\nComplete doelstellingen die het offensiefteam kunnen verhinderen om een van hun primaire doelstellingen te verwezenlijken.
+@MENUS_SIGHT	ZIEN
+@MENUS_SINGLESABER	Standaard Saber
+@MENUS_SINGLESABER_DESC	Gebruik een eenhandige sabel, keuze uit 3 vechtstijlen.
+@MENUS_SKILL	Vaardigheid
+@MENUS_SKILL1	Vaardigheid:
+@MENUS_SORT_BY_GAME_TYPE	Sorteer op speltype.
+@MENUS_SORT_BY_MAP_NAME	Sorteer op kaartnaam.
+@MENUS_SORT_BY_NUMBER_OF_PLAYERS	Sorteer op aantal spelers.
+@MENUS_SORT_BY_PING_TIME	Sorteer op pingtijd.
+@MENUS_SORT_BY_SERVER_NAME	Sorteer op Servernaam.
+@MENUS_SOURCE	Bron:
+@MENUS_SPECIES	Diersoort
+@MENUS_SPECTATE	Spectaat
+@MENUS_SPEED	SNELHEID
+@MENUS_SPEND_YOUR_POINTS_BY	Geef uw punten door door te klikken op de Force Powers hieronder.
+@MENUS_SPOTTED_TITLE	Gevlekt
+@MENUS_STARTING_UP	Opstarten...
+@MENUS_START_PLAYING_NOW	Begin nu te spelen!
+@MENUS_STATIONARY_SHIELD_CAPS	STATIONAIRE SHIELD
+@MENUS_TACTICS_TITLE	Tactieken
+@MENUS_TEAM_HEAL	TEAMGEHEEL
+@MENUS_TEAM_SWITCHING	Team wisselen:
+@MENUS_TEAM_SWITCHING_DESC	Schakel de spelmodus in waar teams concurreren om de kaart in de minste tijd af te maken.
+@MENUS_THERMAL_DETONATOR	THERMISCHE DETONATOR
+@MENUS_THE_FORCE_TO_BOOST_THE	Kanal de Force om de kracht van je bondgenoten te versterken.
+@MENUS_THE_GAME_OF_DUEL_IS_ALSO	Duel put twee strijders in een kleine omsloten arena om te strijden met lichtzwaarden. Beide concurrenten beginnen een ronde met volledige gezondheid, hun sabels, en een blaster pistool (server optie), en moeten tegen elkaar aankijken.\n\nElk aantal spelers kan deelnemen aan Duel, maar slechts twee zijn in de arena op een bepaald moment. Resterende spelers observeren totdat een wedstrijd is voltooid. Wanneer een speler wordt uitgeschakeld, wordt de verliezer aan het einde van de wachtrij van de waarnemer, en de volgende persoon in de rij wordt gebracht om de winnaar te bestrijden.\n\nNogmaals, beide concurrenten zijn volledig aangevuld met gezondheid. De winnaar blijft concurreren tegen nieuwe tegenstanders, punten scoren totdat hij of zij is uitgeschakeld of de wedstrijd limiet is bereikt.\n\nSCHORING\nEen vijand elimineren: +1 punt\nJezelf elimineren: +1 aan je tegenstander\n\nDe speler met de hoogste score aan het eind van de wedstrijd wint.
+@MENUS_THE_MEDPAC_IS_A_SMALL	Medpac\nDe medpac is een kleine standaard veld medische kit. Wanneer verworven, de medpac onmiddellijk herwint verloren gezondheid en geneest beschadigd weefsel.
+@MENUS_THE_PERSONAL_SHIELD_IS	Persoonlijk schild (Armor)\nHet persoonlijke schild is een aan de riem bevestigd apparaat dat een beschermend krachtveld rond de drager projecteert. Als het schild schade oploopt, wordt de beschermingsgraad verminderd. Zodra het schild schade heeft opgelopen die gelijk is aan zijn beoordeling, deactiveert het schild totdat het kan worden opgeladen. Schilden absorberen de meeste aanvalsschade types maar beschermen de drager niet tegen vallen of verpletteren schade. Persoonlijke schilden worden aangevuld met schild batterijen.
+@MENUS_THE_PLX_2M_IS_AN_EXTREMELY	Merr-Sonn PLX-2M Portable Raketsysteem\nDe PLX-2M is een extreem krachtig wapen dat Arakyd 3T3 raketten afvuurt. De pure explosieve kracht van de PLX-2M maakt het gevaarlijk om blind in de buurt te schieten, maar is uiterst effectief wanneer het wordt gebruikt als 'slimme' tracking wapen.\n\nPrimaire brand - Vuurt een enkele, voorwaartse explosieve raket af\nSecondary Fire - Vuurt een enkele 'slimme' raket die verworven en vergrendelde doelen volgt\nType munitie - Raketten
+@MENUS_THE_PRIMARY_WEAPON_OF	E-11 Blaster Rifle\nHet primaire wapen van de Keizerlijke krachten, de E-11 is een stevige en dodelijke blaster geweer in staat om grote schade toe te brengen ondanks zijn kleine omvang. De compacte ontwerp van de E-11 maakt het gemakkelijk te dragen en te verbergen.\n\nPrimaire brand - Langzaam, enkel schot met matige nauwkeurigheid en grote schade\nSecundaire brand - snel, brandbrand met lage nauwkeurigheid en uitgebreid vuurgebied\nType munitie - Blaster Pack
+@MENUS_THE_THERMAL_DETONATOR	Thermische detonator\nDe thermische ontsteker is een radius-schadegranaat die een spervuur van thermische energie vrijgeeft die alle materie eromheen kan desintegreren.\n\nPrimaire brand - granaat explodeert na korte duur\nSecundaire brand - Granaat ontploft bij contact
+@MENUS_THIS_ARCHAIC_LOOKING	Wookiee Bowcaster\nDit archaïsch ogende wapen vuurt krachtige bouten van metaal omhuld in zakken van energie. In staat om ongelooflijke schade toe te brengen, de boegschutter vereist enorme fysieke kracht om te schieten. De meeste boegschutters verkocht buiten de Wookiee thuiswereld komen uitgerust met zelf-cocking acties die fysiek zwakkere wezens om ze te ontslaan.\n\nPrimaire brand - Opgeladen energie opbouw voor meerdere opnamen\nSecundaire brand - Extreem nauwkeurig, afketsbaar enkel schot\nMunitietype - Powercel
+@MENUS_THIS_DEADLY_WEAPON_IS	Portable Assault Sentry\nDit dodelijke wapen is ongeveer de grootte van een grote rugzak, maar laat zijn grootte je niet voor de gek houden. Eenmaal geactiveerd, het wapen ontvouwt en is ingesteld om elke vijandelijke dreiging auto-target. De Sentry afvoert de levensduur van de batterij in een versneld tempo en, zodra het is ingezet, kan niet worden hersteld in zijn oorspronkelijke draagbare conditie.
+@MENUS_THIS_DESTRUCTIVE_PROJECTILE	Imperial Heavy Repeater met Concussion Launcher\nDit destructieve projectiel wapen is extreem dodelijk, het afvuren van snelle stromen van metalen kogels. Keizerlijke krachten gebruiken de Heavy Repeater's dodelijk onderdrukkende vuur en hersenschudding lanceerder voor de controle van de menigte en om zwaar vuur over te verspreiden\ngrote gebieden.\n\nPrimaire brand - Volledig automatisch projectielvuur\nSecundaire brand - Enkel schot, hersenschudding explosieve ronde\nType munitie - Metallic bouten
+@MENUS_THIS_GAME_IS_BEST_SUMMED	Free For All kan het best worden samengevat als ieder persoon voor zichzelf. Spelers scoren punten door het elimineren van andere spelers en niemand kan worden beschouwd als een bondgenoot.\n\nWapens en apparatuur worden in het veld verworven, tenzij anders aangegeven op de server. Sommige opties zijn het al dan niet toestaan van Force powers en het maximale Force Level beschikbaar.\n\nSCHORING\nEen vijand elimineren: +1 punt\nJezelf elimineren: -1 punt\n\nDe speler met de hoogste score aan het einde van de wedstrijd wint het spel.
+@MENUS_THIS_GAME_PITS_TWO_JEDI	Team Free For All pit twee Jedi-teams tegen elkaar in een strijd om suprematie. Elke speler scoort punten voor het elimineren van tegenstanders, maar spelers in hetzelfde team kunnen samenwerken om hardere vijanden te elimineren. Alle spelers in een team combineren hun scores voor één teamscore.\n\nWapens en apparatuur worden in het veld verworven, tenzij anders aangegeven op de server. Sommige opties zijn het al dan niet toestaan van Force powers en het maximale Force Level beschikbaar.\n\nSCHORING\nEen lid van het vijandelijke team elimineren: +1 punt\nElimineren van jezelf of een teamlid: -1 punt\n\nHet team met de hoogste score aan het eind van de ronde wint de wedstrijd.
+@MENUS_THIS_IS_THE_NUMBER_OF	Dit is het aantal keren dat een vlag moet worden gevangen om het spel te winnen.
+@MENUS_THIS_NEFARIOUS_WEAPON	Tenloss DXR-6 disruptor geweer\nDit wapen beïnvloedt materie op moleculair niveau en scheurt levend materiaal gemakkelijk uit elkaar. Vanwege de onmenselijke aard van het wapen is de DXR-6 in het hele sterrenstelsel verboden en wordt de DXR-6 over het algemeen alleen gebruikt door verspreide droids en Remnant-krachten.\n\nPrimaire brand - Enkel schot met trage brandsnelheid, en onmiddellijke aanval\nSecundaire brand - Scoped mode: Single shot die eerst moet worden opgeladen, veroorzaakt meer schade en heeft een hoog energieverbruik\nMunitietype - Powercel
+@MENUS_THIS_OPTION_RE_BALANCES	Deze optie voorkomt dat een speler lid wordt van een team als het de teams uit balans zal brengen.
+@MENUS_THIS_STATIONARY_ENERGY	Stationair schild\nDit stationaire energieveld kan op elke locatie worden neergezet, op welk moment het een groot plat schild inzet dat vijandelijk vuur kan blokkeren. Geallieerden kunnen door het schild gaan, maar vijanden kunnen dat niet. Het deflectorschild zal verdwijnen na het verlaten van de stroomvoorziening of na een bepaalde hoeveelheid schade.
+@MENUS_THIS_VALUE_ADJUSTS_THE	Het aantal minuten dat een wedstrijd zal duren.
+@MENUS_THROW_YOUR_LIGHTSABER	Gooi je lichtzwaard om verre doelen te beschadigen.
+@MENUS_TIME_LIMIT	Tijdlimiet:
+@MENUS_TRIP_MINE	RIP MIJN
+@MENUS_TRIP_MINES_CONSIST_OF	Tripmijnen\nTripmijnen bestaan uit een straalprojector aangebracht op een vormige explosieve behuizing. De laser activeert wanneer de mijn wordt geplaatst en breidt een straal uit van de lading naar het dichtstbijzijnde oppervlak dat zijn pad snijdt. Als de balk wordt gebroken of de lading wordt afgevuurd, de mijn ontploft en veroorzaakt radius schade aan alles binnen bereik.\n\nPrimaire Vuur - Eenmaal geplaatst, ontploft het als de straal wordt gebroken of de mijn wordt vernietigd\nSecondary Fire - Eenmaal geplaatst, het ontploft als iemand in de nabijheid of de mijn wordt vernietigd. Er is geen straal en het zal niet ontploffen voor de gebruiker
+@MENUS_UNAPPLIED_VIDEO_CHANGES	Niet-toegepaste video-wijzigingen
+@MENUS_UNLEASH_DEADLY_ELECTRICAL	Laat dodelijke elektrische aanvallen tegen je vijanden los.
+@MENUS_USE_MORE_POWERFUL_LIGHTSABER	Gebruik meer krachtige lichtzwaard aanvallen. (Vereist om sabel te bezitten)
+@MENUS_USE_THE_LIGHTSABER_TO	Gebruik de lichtzwaard om inkomende sabelaanvallen en projectielen af te weren.
+@MENUS_VALUE_ADJUSTS_THE_TOTAL	Het aantal succesvolle rondes (duels) die nodig zijn om de wedstrijd te winnen.
+@MENUS_VARIABLE_NAREA_OF_EFFECT	Afvoeren forceren\nDuur: Variabele\nEffectgebied: Alleen levende personen\nEffect: Drains Force Power en gebruikt het om het leven aan te vullen.\n\nRang 1 - lanceert een enkele bout die naar voren schiet, 10 krachtpunten per seconde leegt en die hoeveelheid geneest.\nRang 2 - Een on-gerichte, continue aanval, die 15 Krachtpunten per seconde leegzuigt.\nRang 3 - Emaneert een duurzame ventilator in een grote voorboog, waardoor elk doelwit voor hem van 20 Krachtpunten per seconde.
+@MENUS_VC_ATT	1. Aanvallen
+@MENUS_VC_ATT_POSITION	3. Aanval positie
+@MENUS_VC_ATT_PRIMARY	1. Aanvallen Primaire doelstelling
+@MENUS_VC_ATT_SECONDARY	2. Aanvallen Secundaire doelstelling
+@MENUS_VC_CANCEL	Annuleren
+@MENUS_VC_DEF	2. Verdedigen
+@MENUS_VC_DEF_GUNS	4. Wapenposities
+@MENUS_VC_DEF_POSITION	3. Positie verdedigen
+@MENUS_VC_DEF_PRIMARY	1. Verdedigen Primaire doelstelling
+@MENUS_VC_DEF_SECONDARY	2. Secundaire doelstelling verdedigen
+@MENUS_VC_REPLY	4. Antwoord
+@MENUS_VC_REPLY_COMING	3. Ik kom eraan
+@MENUS_VC_REPLY_GO	4. Aanranding
+@MENUS_VC_REPLY_NO	2. Negatief
+@MENUS_VC_REPLY_STAY	5. Verdediging
+@MENUS_VC_REPLY_YES	1. Begrepen.
+@MENUS_VC_REQ	3. Verzoek
+@MENUS_VC_REQ_ASSIST	1. Bijstand
+@MENUS_VC_REQ_DEMO	6. Slopen
+@MENUS_VC_REQ_HVY	5. Zware wapens
+@MENUS_VC_REQ_MEDIC	2. Hospik
+@MENUS_VC_REQ_SUPPLY	3. Leveringen
+@MENUS_VC_REQ_TECH	4. Technologie
+@MENUS_VC_SPOT	5. Gespot
+@MENUS_VC_SPOT_DEF	1. Verdedigingen
+@MENUS_VC_SPOT_EMPLACED	4. Geplaatste wapens
+@MENUS_VC_SPOT_SNIPER	3. Sluipschutter
+@MENUS_VC_SPOT_TROOP	2. Troepen
+@MENUS_VC_TACTIC	6. Tactieken
+@MENUS_VC_TAC_COVER	1. Deksel
+@MENUS_VC_TAC_FALLBACK	4. Terugtrekken
+@MENUS_VC_TAC_FOLLOW	3. Volg
+@MENUS_VC_TAC_HOLD	2. Wacht
+@MENUS_VC_TAC_SPLIT	6. Opsplitsen
+@MENUS_VC_TAC_TOGETHER	5. Blijf bij elkaar
+@MENUS_VC_TITLE	STEM CHAT
+@MENUS_VIEW_EMPTY	Beeld Leeg:
+@MENUS_VIEW_FULL	Beeld Volledig:
+@MENUS_WATCH_DESC	Let op de missie.
+@MENUS_WEAPON_RULES	Wapenregels.
+@MENUS_WIDELY_USED_BY_THE_CORPORATE	Golan Arms FC1 Flechette wapen\nDe FC1 vuurt metalen scherven in een wijdverspreid patroon. Het wapen is ontworpen om meerdere doelen te raken in de buurt, maar er moet veel zorg worden genomen om te voorkomen dat ketsen schade.\n\nPrimaire brand - Enkel schot, verspreid vuur\nSecundaire brand - dubbele explosieven\nType munitie - metalen bolts
+@MENUS_YES	Ja.
+@MENUS_YOU_DECIDE	Jij beslist.
+@MENUS_YOU_HAVE_MADE_CHANGES	U heeft wijzigingen aangebracht in de video-instellingen
+@MENUS__REQUIRES_SABER_ATTACK	(vereist Saber Attack 1)
+@MP_INGAME_GETTINGINFOFORSERVERS	Info voor servers ophalen...
+@MP_INGAME_JOIN_SINGLE	ENGEL
+@MP_INGAME_SERVER_REFRESHTIME	Server verversen
+@MP_SVGAME_CANCEL_PASSWORD	Menu sluiten, geen poging om verbinding te maken
+A / Cross confirms, B / Circle goes back	A / Cross bevestigt, B / Cirkel gaat terug
+A live bot cannot be represented safely. Your preset and draft are unchanged.	Een levende bot kan niet veilig worden vertegenwoordigd. Uw preset en ontwerp zijn ongewijzigd.
+A live bot's original definition cannot be recovered. Choose Replace existing bots with a complete roster before saving.	De oorspronkelijke definitie van een live bot kan niet worden hersteld. Kies Bestaande bots vervangen door een compleet rooster voordat u opslaat.
+A passed game-type vote is queued for the next round boundary.	Een geslaagde game-type stemming wordt in de wachtrij voor de volgende ronde grens.
+A setting or binding changed outside the editor. Cancel and reopen to refresh; nothing applied.	Een instelling of binding veranderd buiten de editor. Annuleren en heropenen om te vernieuwen; niets toegepast.
+ACTION DETAILS / RESET	ACTIEDETAILS / RESET
+ASSISTS	ASSISTEN
+About	Info
+Acceleration	Versnelling
+Acceleration amount; zero disables it	Acceleratie bedrag; nul schakelt het uit
+Acceleration curve	Versnellingscurve
+Acceleration curve: 0 legacy, 1 power	Versnellingscurve: 0 nalatenschap, 1 vermogen
+Acceleration offset	Versnellingscompensatie
+Accepted 1v1 challenges inside FFA. Shares the Duel ladder.	Geaccepteerde 1v1 uitdagingen binnen FFA. De Duel ladder deelt.
+Account / Log in	Account / Aanmelden
+Accounts and match reporting are not connected yet.	Accounts en match reporting zijn nog niet verbonden.
+Action	Actie
+Adaptive	Adaptief
+Add Berserker	Berserker toevoegen
+Add Defender	Verdediger toevoegen
+Add Duelist	Duelist toevoegen
+Add Flag Catcher	Vlagvanger toevoegen
+Add Saber Master	Saber Master toevoegen
+Add Sentinel	Sentinel toevoegen
+Add Trickster	Trickster toevoegen
+Add bot	Bot toevoegen
+Add bots	Bots toevoegen
+Add local files	Lokale bestanden toevoegen
+Add roster without removing existing players: 	Roster toevoegen zonder bestaande spelers te verwijderen:
+Add slot 	Sleuf toevoegen
+Address	Adres
+Adjust framing for a live preview. Apply camera saves it.	Pas het inkaderen aan voor een live preview. Pas de camera toe slaat het op.
+Adjust how fast the left stick moves the menu pointer.	Pas aan hoe snel de linker stick de menu pointer beweegt.
+Adjusts how many chat lines fit.	Past aan hoeveel chatlijnen er passen.
+Adjusts the width across the screen.	Past de breedte aan over het scherm.
+Advanced	Geavanceerd
+Advanced Input	Geavanceerde invoer
+Advanced settings	Geavanceerde instellingen
+Advanced video	Geavanceerde video
+Aim at a player and press to ignore or unignore their chat	Doel bij een speler en druk op om hun chat te negeren of te verwijderen
+All	Alles
+All edits in this draft will be discarded. Existing server settings and any already queued server changes remain as they were.	Alle bewerkingen in dit ontwerp zullen worden weggegooid. Bestaande serverinstellingen en eventuele wijzigingen in de wachtrij blijven ongewijzigd.
+Allow downloads	Downloads toestaan
+Allow vote: 	Stem toestaan:
+Alternate attack	Alternatieve aanval
+Alternate weapon action / saber throw	Alternatief wapen actie / sabel gooien
+Always	Altijd
+Always run	Altijd draaien
+Analog joystick axes	Analoge joystickassen
+Angle	Hoek
+Animation pack unavailable	Animatiepakket niet beschikbaar
+Anisotropic filtering	Anisotroop filteren
+Anisotropic filtering unavailable.	Anisotroop filteren niet beschikbaar.
+Antialiasing	Anti-aliasing
+Appearance	Uiterlijk
+Append a map	Een kaart toevoegen
+Append map to rotation	Kaart aan rotatie toevoegen
+Applies next spawn on supported Saber Trials servers.	Appliceert volgende spawn op ondersteunde Saber Trials servers.
+Applies on next spawn.	Geldt voor de volgende paai.
+Apply	Toepassen
+Apply and continue	Toepassen en voortzetten
+Apply and return	Toepassen en retourneren
+Apply camera	Camera toepassen
+Apply changes	Wijzigingen toepassen
+Apply next round / map	Volgende ronde toepassen / kaart
+Apply now (restarts if needed)	Nu toepassen (herstart indien nodig)
+Apply now applies live changes and restarts only if needed, or loads a changed selected map. Apply next round/map leaves the current match running and queues changes. Roster commands are held for that apply.	Pas nu live wijzigingen toe en herstart alleen indien nodig, of laadt een gewijzigde geselecteerde kaart. Pas volgende ronde/kaart toe laat de huidige match draaien en wachtrij wijzigingen. Roster commando's worden gehouden voor dat van toepassing.
+Apply or cancel pending edits before switching mods.	In afwachting van wijzigingen toepassen of annuleren voordat u overstapt naar een mod.
+Apply or discard before leaving?	Aanbrengen of weggooien voordat u vertrekt?
+Apply these filters to browser	Deze filters toepassen op browser
+Apply to local server: 	Toepassen op lokale server:
+Apply your controls before leaving?	Uw bediening toepassen voordat u vertrekt?
+Arabic	Arabisch
+Assets missing or overridden. Showing Stock; Apply cannot save.	Activa ontbreken of worden overschreven. Bestand tonen; Toepassen kan niet opslaan.
+Assign to slot	Toewijzen aan slot
+Assignment staged	Opdracht gefaseerd
+Attack	Aanvallen
+Auto	Automatisch
+Auto (%s)	Automatisch (%s)
+Auto (loopback)	Automatisch (terugloop)
+Auto (restored)	Automatisch (herplaatst)
+Auto (sampling)	Automatisch (ampling)
+Auto (trial)	Automatisch (trial)
+Auto adapts after measuring the connection.	Auto past zich aan na het meten van de verbinding.
+Autoexposure	Automatische blootstelling
+Automatic	Automatisch
+Automatic controller detection	Automatische detectie van de controller
+Automatic opens for gamepad when no keyboard is detected.	Automatisch opent voor gamepad wanneer geen toetsenbord wordt gedetecteerd.
+Available display modes are added automatically.	Beschikbare weergavemodi worden automatisch toegevoegd.
+Average mouse movement between frames.	Gemiddelde muisbeweging tussen frames.
+Awaiting reply	In afwachting van antwoord
+B / Circle confirms, A / Cross goes back	B / Cirkel bevestigt, A / Cross gaat terug
+BLUE	BLAUW
+BLUE %d     /     RED %d	BLUE %d / ROOD %d
+BRACKET\nA random draw sets the single-elimination bracket. Byes advance unpaired entrants. Both full lineups must be connected, in the arena and ready before play starts.\n\n1v1 TOURNAMENT\nAn even field of 8 to 32 verified players enters. Play all 10 scored rounds. Each elimination wins a round. Simultaneous deaths replay the round. At 5-5, play one deciding round.\n\nTEAM TOURNAMENT\n2 to 8 teams enter at a fixed size, from 2v2 to 5v5. Players respawn. The first team to 20, 30, 40 or 50 kills respectively wins. After 10 minutes of play, the leader wins. If tied, play until one team takes the lead.\n\nRECONNECTS AND RESERVES\nA missing player pauses play. Each player has 5 minutes to reconnect in 1v1. Each team has 10 minutes to reconnect or fill the slot with a registered reserve from its own team. Repeat drops use the remaining time. Everyone readies again when the lineup is complete. Time expiry forfeits the match. If both sides expire, both are eliminated.	BRAKET\nEen willekeurige trekking stelt de enkele-eliminatie beugel. Byes vooruit ongepaarde deelnemers. Beide volledige line-ups moeten worden aangesloten, in de arena en klaar voor het spelen begint.\n\n1v1 TOURNAMENT\nEen even veld van 8 tot 32 geverifieerde spelers komt. Speel alle 10 gescoorde rondes. Elke eliminatie wint een ronde. Gelijktijdige doden spelen de ronde. Op 5-5, speel een beslissende ronde.\n\nTOURNAMENT VAN HET TEAM\n2 tot 8 teams komen binnen op een vaste grootte, van 2v2 tot 5v5. Spelers respawn. De eerste ploeg tot 20, 30, 40 of 50 doden respectievelijk wint. Na 10 minuten van het spel, de leider wint. Als gebonden, spelen totdat een team neemt de leiding.\n\nHERKONINGEN EN RESERVES\nEen ontbrekende speler pauzeert spelen. Elke speler heeft 5 minuten om opnieuw verbinding te maken in 1v1. Elk team heeft 10 minuten om de sleuf opnieuw aan te sluiten of te vullen met een geregistreerde reserve van zijn eigen team. Herhaal druppels gebruiken de resterende tijd. Iedereen opnieuw klaar wanneer de line-up is voltooid. Tijd verlopen verliest de match. Als beide zijden vervallen, worden beide geëlimineerd.
+Back	Terug
+Back / discard draft	Terug / ontwerp weggooien
+Back to Play	Terug naar afspelen
+Back to draft	Terug naar ontwerp
+Backspace	Wissen
+Balanced	Gebalanceerd
+Base	Basis
+Base JKA	Basis JKA
+Basic Settings	Basisinstellingen
+Begin match	Begin overeenkomst
+Bilinear	Bilineair
+Bind key	Bindsleutel
+Binding staged; command was not executed	Bindende staged; opdracht is niet uitgevoerd
+Bindlist	Bindlijst
+Black	Zwart
+Blade on	Blade aan
+Blaster rifle	Blastergeweer
+Block	Blok
+Blue	Blauw
+Blue team	Blauw team
+Blue, Yellow and Red selected. Apply to save.	Blauw, Geel en Rood geselecteerd. Solliciteer om op te slaan.
+Bot definition is not installed: 	Botdefinitie is niet geïnstalleerd:
+Bot model for slot 	Bot model voor slot
+Bot roster: 	Botrooster:
+Bottom left	Linksonder
+Bottom right	Rechtsonder
+Brightness	Helderheid
+Browse unranked servers	Blader door ongerankte servers
+Bumpers move the caret	Bumpers bewegen de kast
+Bumpers: history	Bumpers: geschiedenis
+Button labels	Knoppenlabels
+Button labels: 0 Xbox, 1 PlayStation, 2 generic	Knoplabels: 0 Xbox, 1 PlayStation, 2 generische
+Button mapping	Knop in kaart brengen
+CALL GAME TYPE VOTE	STEMMING VAN HET SPELTYPE
+CALL KICK VOTE	Bel Kick Vote.
+CALL MAP VOTE	CALL MAP STEM
+CAST YOUR VOTE	WELKOM UW STEMMING
+CHOOSE AN ACTION	Kies een actie
+CONTROLLER DEFAULTS?	Controleurs?
+Call a vote	Stem uit
+Camera damping	Camera demping
+Camera settings applied.	Camera-instellingen toegepast.
+Camera smoothing	Camera gladmaken
+Camera tilt	Camera kantelen
+Cancel	Annuleren
+Cancel all Match Rules changes waiting for the next round/map. Current active match rules remain in effect.	Annuleer alle wijzigingen in de Match Rules die wachten op de volgende ronde/map. De huidige actieve matchregels blijven van kracht.
+Cancel changes	Wijzigingen annuleren
+Cancel edits	Bewerken annuleren
+Cancel field	Veld annuleren
+Cannot preserve the current custom renderer safely.	Kan de huidige aangepaste render niet veilig bewaren.
+Capture	Opname
+Capture Limit:	Limiet van de vangst:
+Capture limit	Opnamelimiet
+Cast your vote	Stem maar.
+Center view	Middenaanzicht
+Center your view	Uw weergave centreren
+Changes the chat background. Text stays readable.	Verandert de achtergrond van de chat. Tekst blijft leesbaar.
+Changes the language of menus.	Verandert de taal van de menu's.
+Changing this restarts mouse input.	Dit herstart de muisinvoer.
+Character shadows	Tekenschaduwen
+Chat	Gesprek
+Chat box	Chatbox
+Chat box height (%)	Hoogte chatbox (%)
+Chat box opacity (%)	Opaciteit van chatbox (%)
+Chat box size (%)	Grootte chatbox (%)
+Chat box width (%)	Breedte van chatbox (%)
+Chat sound	Gespreksgeluid
+Chat text color	Kleur van chattekst
+Chat with the current audience	Chat met het huidige publiek
+Chat with your team	Chat met je team
+Chinese (Simplified)	Chinees (vereenvoudigd)
+Chinese (Traditional)	Chinees (Traditioneel)
+Choose Custom resolution.	Kies aangepaste resolutie.
+Choose Manual to edit connection values.	Kies Handleiding om verbindingswaarden te bewerken.
+Choose a language if short messages or regional variants are misidentified.	Kies een taal als korte berichten of regionale varianten verkeerd worden geïdentificeerd.
+Choose a loaded bot definition, role, skill and team. During a match these are additions unless Replace existing bots is selected. Presets also include the current live bots. Always reserve a connection beyond your bots.	Kies een geladen bot-definitie, rol, vaardigheid en team. Tijdens een wedstrijd zijn dit toevoegingen tenzij bestaande bots worden vervangen. Voorinstellingen omvatten ook de huidige live bots. Reserveer altijd een verbinding buiten je bots.
+Choose a style	Kies een stijl
+Choose a style for each of the three slots.	Kies een stijl voor elk van de drie slots.
+Choose a team	Kies een team
+Choose a whole-number option.	Kies een hele-nummer optie.
+Choose an installed map compatible with this game type, or enter an installed map name. The Host screen's existing map chooser remains available.	Kies een geïnstalleerde kaart die compatibel is met dit speltype, of voer een geïnstalleerde kaartnaam in. De bestaande kaartkiezer van het Host-scherm blijft beschikbaar.
+Choose an installed map for the current game type.	Kies een geïnstalleerde kaart voor het huidige speltype.
+Choose each style's ready pose separately in Stances.	Kies elke stijl's klaar pose apart in Stances.
+Choose named action	Kies de genoemde actie
+Choose or enter a preset name (1 to 40 letters, numbers, _ or -).	Kies of voer een vooraf ingestelde naam in (1 tot 40 letters, getallen, _ of -).
+Choose the appearance of the menus.	Kies het uiterlijk van de menu's.
+Choose the chat display on this server.	Kies het chatscherm op deze server.
+Choose the combat display on this server.	Kies het gevechtsscherm op deze server.
+Choose the same squad number as your teammates.	Kies hetzelfde teamnummer als je teamgenoten.
+Choose three different styles to complete your cycle.	Kies drie verschillende stijlen om uw cyclus te voltooien.
+Choose three different styles. Each style can fill only one slot.	Kies drie verschillende stijlen. Elke stijl kan slechts één slot vullen.
+Choose your arena.	Kies je arena.
+Choose your host in the server browser or enter its address.	Kies uw host in de browser van de server of voer het adres in.
+Choose your saber hand, then select Apply Changes.	Kies je sabelhand en selecteer vervolgens Wijzigingen toepassen.
+Circle	Cirkel
+Classic combat	Klassiek gevecht
+Clean Capture	Schone opname
+Clean Capture is on.	Clean Capture is aan.
+Clear	Wissen
+Clear assignment	Opdracht wissen
+Clear filters and search	Filters wissen en zoeken
+Clear slot	Sleuf wissen
+Client command packets per second.	Client commando pakketten per seconde.
+Close	Sluiten
+Color depth	Kleurdiepte
+Combat	Bestrijding
+Combat styles	Strijdstijlen
+Combat styles...	Strijdstijlen...
+Combat, Force, bots and server settings.	Combat, Force, bots en serverinstellingen.
+Communication	Mededeling
+Complete	Voltooid
+Complete rules, map, rotation, server name and roster. Passwords are excluded. Loading replaces only this draft; gameplay changes after review.	Complete regels, kaart, rotatie, servernaam en rooster. Wachtwoorden zijn uitgesloten. Laden vervangt alleen dit concept; gameplay verandert na herziening.
+Composition grid: 	Samenstellingsrooster:
+Config applied.	Configuratie toegepast.
+Config loaded into editor. Review, then Apply.	Configureren geladen in de editor. Beoordelen en vervolgens toepassen.
+Config write verification failed; existing config retained.	Schrijfverificatie instellen is mislukt; bestaande configuratie is behouden.
+Confirm	Bevestigen
+Connect	Verbinden
+Connection	Verbinding
+Connection capacity: 	Verbindingscapaciteit:
+Console keyboard	Console-toetsenbord
+Console opacity	Console-opaciteit
+Console overlay	Console-overlay
+Controller defaults staged; review before Apply	Controller defaults staged; review before Solliciteer
+Controller detection	Detectie controller
+Controls	Besturing
+Controls this individual vote permission. Other vote permissions remain unchanged.	Controleert deze individuele stemvergunning. Andere stemmachtigingen blijven ongewijzigd.
+Controls what you see when the server allows dismemberment.	Bepaalt wat je ziet als de server het mogelijk maakt om te ontleden.
+Cosmetics	Cosmetica
+Could not confirm the display settings; recovery file could not be removed.	Kon de weergave-instellingen niet bevestigen; herstelbestand kon niet worden verwijderd.
+Could not finish saving; existing config retained.	Kon opslaan niet afmaken; bestaande configuratie behouden.
+Could not load compatible renderer %s	Kon compatibele renderer %s niet laden
+Could not open config for writing.	Kon configuratie voor schrijven niet openen.
+Could not read config	Kon configuratie niet lezen
+Could not save display recovery.	Kon schermherstel niet opslaan.
+Could not save wheel	Kon wiel niet opslaan
+Could not write this preset.	Kon deze voorinstelling niet schrijven.
+Count up	Tel op
+Cross	Kruis
+Crosshair	Kruisdraad
+Crosshair and interface	Kruisdraad en interface
+Crouch	CrouchCity in Italy
+Crouch / swim downward	Krouch / zwemmen naar beneden
+Crystal	Kristal
+Cubemap bounces	Cubemap stuitert
+Current bots plus additions leave no connection for players.	Huidige bots plus toevoegingen laten geen verbinding voor spelers.
+Current custom character	Huidig eigen karakter
+Current dual/staff combat; variants are planned.	Huidige duaal/personeelsgevechten; varianten zijn gepland.
+Current style	Huidige stijl
+Curve subdivisions	Curve onderverdelingen
+Custom	Aangepast
+Custom Force: maximum level 0 disables this power; 1 through 3 caps allocation and grants. Restricted keeps Jump, Speed, Saber Attack and Saber Defense.	Custom Force: maximale niveau 0 schakelt deze macht uit; 1 tot 3 caps allocatie en subsidies. Beperkt houdt Jump, Speed, Saber Attack en Saber Defense.
+Custom cap preference saved; becomes active with Custom Force rules.	Aangepaste cap voorkeur opgeslagen; wordt actief met aangepaste Force regels.
+Custom height	Aangepaste hoogte
+Custom sounds	Aangepaste geluiden
+Custom weapons: checked means available. Melee and Lightsaber always remain available. Preferences are retained while another weapon preset is active.	Aangepaste wapens: gecontroleerd betekent beschikbaar. Melee en Lightsaber blijven altijd beschikbaar. Voorkeuren worden behouden terwijl een andere wapenvoorinstelling actief is.
+Custom width	Aangepaste breedte
+Customize	Aanpassen
+Cycle saber style	Cyclussabelstijl
+Cycle your selected combat loadout	Fiets uw geselecteerde gevecht loadout
+Cycle: %s > %s > %s > repeat	Cyclus: %s > %s > %s > herhalen
+D-pad down	D-pad naar beneden
+D-pad left	D-pad links
+D-pad moves the pointer  /  Bumpers scroll	D-pad beweegt de pointer / Bumpers scroll
+D-pad right	D-pad rechts
+D-pad up	D-pad omhoog
+DISCARD PENDING EDITS?	Discard Edits?
+DISCONNECT?	Ontsnappen?
+DUEL STANDINGS	DUELSTANDINGEN
+Damage reactions	Schadereacties
+Default	Standaard
+Default movement speed.	Standaard bewegingssnelheid.
+Default staged	Standaard gefaseerd
+Defaults selected. Click Apply Input to save.	Standaardinstellingen geselecteerd. Klik op Invoer toepassen om op te slaan.
+Defer player models	Uitstelspelermodellen
+Delete preset: 	Voorinstelling verwijderen:
+Delete selected	Geselecteerd verwijderen
+Deluxe specular	Deluxe seculier
+Desktop	Bureaublad
+Desktop player	Bureaubladspeler
+Detailed shaders	Gedetailleerde shaders
+Detect compatible gamepads as you connect them.	Detecteer compatibele gamepads als u ze verbindt.
+Detected	Gedetecteerd
+Device preferences	Apparaatvoorkeuren
+Direct Connect	Direct verbinden
+Disable authenticated ghost mode	Geauthentificeerde spookmodus uitschakelen
+Disable warmup.	Opwarmen uitschakelen.
+Discard	Weggooien
+Discard and continue	Gooi het weg en ga verder
+Discard pending changes?	In afwachting van wijzigingen verwerpen?
+Discard pending controls changes and open Saved Configs?	Wachtend wijzigen van de besturingen verwerpen en Opgeslagen configuraties openen?
+Discard queue	Wachtrij verwerpen
+Discard the server's queued changes?	Wijzigingen in de wachtrij van de server verwerpen?
+Discard this Match Rules draft?	Dit Match Rules ontwerp verwerpen?
+Disconnect	Verbinding verbreken
+Dismemberment	Vernietiging
+Display	Weergeven
+Display recovery could not be verified; settings were not changed.	Het herstel van de weergave kon niet worden geverifieerd; de instellingen zijn niet gewijzigd.
+Distance	Afstand
+Distance behind the player. Walls can bring the camera closer.	Afstand achter de speler. Muren kunnen de camera dichterbij brengen.
+Done	Klaar
+Down	Omlaag
+Drag or right stick to orbit  /  Scroll or bumpers to zoom	Sleep of rechts kleven aan baan / Scroll of bumpers om in te zoomen
+Drag or type a value, then Apply. Size: 75-125%.	Sleep of type een waarde, dan Toepassen. Grootte: 75-125%.
+Drag to orbit  /  Scroll to zoom	Sleep naar baan / Scroll naar zoom
+Driver info	Info van de bestuurder
+Driver information	Informatie over de bestuurder
+Dual sabers	dubbelsabels
+Duel ladder	Duellerladder
+Duel limit	Duellimiet
+Duel round: one kill	Duelronde: één kill
+During a private duel, mute sound from players outside your duel.	Tijdens een privé duel, stom geluid van spelers buiten je duel.
+During a private duel, show only you and your opponent.	Tijdens een privé duel, toon alleen u en uw tegenstander.
+Dutch	Nederlands
+Dynamic crosshair	Dynamisch kruisdraad
+Dynamic glow	Dynamische gloed
+Dynamic lights	Dynamische lichten
+EDIT ASSIGNED COMMAND	OPDRACHT VAN HET EDIT
+Edit	Bewerken
+Edit a proposal, then call its vote. Limits apply to the current mode.	Bewerk een voorstel en roep vervolgens de stemming op. Grenzen zijn van toepassing op de huidige modus.
+Edit rotation order	Rotatievolgorde bewerken
+Edit up to 32 maps in order. The server uses this order when automatic map rotation is enabled.	Bewerk tot 32 kaarten in volgorde. De server gebruikt deze volgorde wanneer automatische kaartrotatie is ingeschakeld.
+Editing stages a binding; the command is never executed here.	Het bewerken van een binding; het commando wordt hier nooit uitgevoerd.
+Effects	Effecten
+Effects volume	Effecten volume
+Electric	Elektriciteit
+Electric 2	Elektrische 2
+Emote bound	Emotiegrens
+Emote library	Bibliotheek emoteren
+Emotes	Emoten
+Empty	Leeg
+Enable all Force powers, including Saber Throw.	Activeer alle krachtkrachten, inclusief Saber Throw.
+Enable warmup.	Opwarmen inschakelen.
+English	Engels
+Enter 	Enter
+Enter %s0 to %d.	Voer %s0 in op %d.
+Enter 0 for any measured ping	Geef 0 voor elke gemeten ping
+Enter a finite number.	Voer een eindig getal in.
+Enter a map name such as mp/ffa3 using letters, numbers, /, _ or -.	Voer een kaartnaam in zoals mp/ffa3 met letters, cijfers, /, _ of -.
+Enter a player name.	Voer een spelernaam in.
+Enter a preset name	Voer een voorinstellingsnaam in
+Enter a size from 48 to 144.	Voer een maat in van 48 tot 144.
+Enter a whole number in the displayed range.	Voer een heel getal in in het weergegeven bereik.
+Enter map name	Kaartnaam invoeren
+Enter size 75-125 and panel opacity 0-100.	Voer de grootte 75-125 in en de dekking van het paneel 0-100.
+Enter to save. Esc to cancel.	Enter om op te slaan. Esc om te annuleren.
+Enter your name	Voer uw naam in
+Esc  /  Back	Esc / Terug
+Existing voice-command menu; not proximity voice	Bestaand spraakcommandomenu; geen nabijheidsstem
+Exit	Afsluiten
+Exit Photo Mode	Foto-modus afsluiten
+Experimental preview only. Apply keeps your regular selection.	Uitsluitend een experimenteel voorbeeld. Toepassen houdt uw reguliere selectie.
+Explicitly removes existing bots before spawning this draft's roster. Human players are never removed. With this off, roster entries are additions only.	Expliciet verwijdert bestaande bots voordat paaien van dit ontwerp rooster. Menselijke spelers worden nooit verwijderd. Met dit uit, rooster items zijn alleen toevoegingen.
+Extra button	Extra knop
+FIRST TO TEN\nTwo players fight for ten duel-round wins. Everyone else waits. New arrivals enter at the bottom. An asterisk means a player has yet to finish a series.\n\nMOVING UP\nThe arena rotates through neighboring ranks. The first pass pairs 1 vs 2, 3 vs 4, and so on. The next pass starts at 2 vs 3. The lower-ranked player takes the higher spot by winning.\n\nLEAVING AND RETURNING\nA disconnect cancels an unfinished series. Players below the vacated spot move up. A returning player enters at the bottom.\n\nACCOUNT POINTS\nOn an enrolled server with account scoring, signed-in players earn one point for finishing a series they started, plus one for winning. Ladder position belongs to this server session.	EERSTE NAAR TEN\nTwee spelers vechten voor tien duel-ronde wint. Iedereen wacht. Nieuwe aankomst komt onderaan. Een asterisk betekent dat een speler nog een serie moet afmaken.\n\nMOVING OP\nDe arena draait door naburige gelederen. De eerste pas paren 1 vs 2, 3 vs 4, enzovoort. De volgende pas begint bij 2 vs 3. De lagere speler neemt de hogere plek door te winnen.\n\nVERLIEZEN EN TERUGBETALINGEN\nEen loskoppeling annuleert een onvoltooide serie. Spelers onder de lege plek gaan omhoog. Een terugkerende speler komt onderaan binnen.\n\nREKENINGSPUNTEN\nOp een ingeschreven server met account scoren verdienen ingelogde spelers één punt voor het afronden van een serie die ze begonnen zijn, plus één voor het winnen. Ladderpositie behoort tot deze serversessie.
+FLAG	VLAG
+FORCE POWERS	BEVOEGDHEDEN
+FPS counter	FPS-teller
+FPS limit	FPS-limiet
+Fantasy	Fantasie
+Favorites	Favorieten
+Field of view	Zichtveld
+Find	Zoeken
+Find a Server	Zoek een server
+Find a joinable server using your preferences	Zoek een joinable server met uw voorkeuren
+Find a server	Server zoeken
+Find results	Resultaten zoeken
+Fine-tune input settings without typing console commands.	Fine-tune invoerinstellingen zonder console commando's te typen.
+Finnish	Fins
+Flame	Vlam
+Flame 2	Vlam 2
+Footsteps	Voetstappen
+Force	Dwingen
+Force / Weapons	Gevechtskracht/wapens
+Force absorb	Geforceerd absorberen
+Force cap: 	Krachtdop:
+Force drain	Afvoeren forceren
+Force enabled in restricted gametype	Forceren ingeschakeld in beperkt speltype
+Force enabled while all powers disabled	Forceren ingeschakeld terwijl alle krachten uitgeschakeld zijn
+Force grip	Krachtvastheid
+Force heal	Krachtgenezen
+Force lightning	Dwing bliksem
+Force player models	Playermodellen forceren
+Force powers	Machtskrachten
+Force protect	Beschermen forceren
+Force pull	Trekkracht
+Force push	Duwkracht
+Force rage	Razernij forceren
+Force rules	Dwangregels
+Force rules, map rotation and team entry.	Krachtregels, kaartrotatie en teamingang.
+Force sense	Krachtzin
+Force speed	Snelheid
+Force team energize	Forceer team activeren
+Force team heal	Force team genezen
+Force: restricted	Kracht: beperkt
+Force: unrestricted	Kracht: onbeperkt
+Forward movement scale	Voorwaartse bewegingsschaal
+Forward, left, back, right, jump and crouch input.	Voorwaarts, links, terug, rechts, springen en hurken input.
+Frag Limit:	Fraglimiet:
+Frag limit	Frag-limiet
+Free Camera	Gratis camera
+Free For All	Gratis voor iedereen
+Free mouse look	Vrije muis look
+Freecam speed	Freecam-snelheid
+Freeze	Halt.
+Freeze is available in local solo games, including bots.	Freeze is beschikbaar in lokale solospellen, waaronder bots.
+French	Frans
+Full Force	Volle kracht
+Fullscreen	Volledig scherm
+GAME RULES	SPEELREGELS
+GAME TYPE	SPELTYPE
+GAME TYPES	SPELTYPEN
+GENERAL	ALGEMEEN
+GLOBAL RANK: unavailable	GLOBAL RANK: niet beschikbaar
+Game Options	Spelopties
+Game mode	Spelmodus
+Game rules	Spelregels
+Game sounds	Spelgeluiden
+Game type	Speltype
+Game types	Speltypen
+Generate normal maps	Normale kaarten genereren
+Generic	Algemeen
+Geometry detail	Geometrie- detail
+German	Duits
+Ghost off	Spook uit
+Ghost on	Ghost op
+Go to the previous track	Ga naar het vorige nummer
+Green	Groen
+Group %d	Groep %d
+Group name	Groep
+Guide	Gids
+HDR lightmaps	HDR lichtkaarten
+HUD appearance applied.	HUD uiterlijk toegepast.
+HUD size (%)	HUD-grootte (%)
+HUD style	HUD-stijl
+Have your say on the current vote,	Spreek uw mening uit over de huidige stemming,
+Health / Movement	Gezondheid/Beweging
+Health and ammo	Gezondheid en munitie
+Height	Hoogte
+Hide HUD, radar, chat and spectator overlays.	Verberg HUD, radar, chat en toeschouwers.
+Hide outside players	Verbergen buitenspelers
+Hide players in other private duels when you're outside a duel.	Verberg spelers in andere privé duels als je buiten een duel bent.
+Hide private duelists	Privéduelists verbergen
+High	Hoog
+Hilt preview unavailable	Hilt-voorbeeld is niet beschikbaar
+Hold for Drain when available	Houden voor Drain indien beschikbaar
+Hold for Grip when available	Houden voor Grip indien beschikbaar
+Hold for Lightning when available	Houden voor Lightning indien beschikbaar
+Hold for legacy mouse/keyboard strafe	Wacht voor legacy muis/toetsenbord strafe
+Hold to change walking/running speed	Wandel-/loopsnelheid wijzigen
+Hold to guard while moving and aiming. Tap Attack at impact to parry.	Hou je vast terwijl je beweegt en richt.
+Hold to show match scores	Houden om matchscores te tonen
+Holster / draw saber	Holster / tekensabel
+Holster or draw your saber	Holster of teken je sabel
+Horizontal look sensitivity	Horizontale look gevoeligheid
+Horizontal mouse scale	Horizontale muisschaal
+Horizontal scale	Horizontale schaal
+Horizontal sensitivity	Horizontale gevoeligheid
+Horizontal speed in game units per second.	Horizontale snelheid in speleenheden per seconde.
+Horizontal turn speed	Horizontale draaisnelheid
+Horizontal velocity rounding zones for your current movement step.	Horizontale snelheidsrondingszones voor uw huidige bewegingsstap.
+Host a match	Host een overeenkomst
+Host name	Hostnaam
+Host password	Host-wachtwoord
+Host password (never saved in presets)	Hostwachtwoord (nooit opgeslagen in presets)
+Hosting process can only be selected before starting a new server.	Hosting proces kan alleen worden geselecteerd voordat een nieuwe server wordt gestart.
+Hosting process is start-only.	Hosting proces is alleen start-only.
+ITEMS	PUNTEN
+Ignore player	Speler negeren
+Ignore small legacy axis movements.	Negeer kleine nalatenschapsasbewegingen.
+Ignore small stick movements.	Negeer kleine stokbewegingen.
+Input settings applied.	Invoerinstellingen toegepast.
+Inspect	Inspecteren
+Inspect off-hand	Inspecteer off-hand
+Inspect primary	Primaire controleren
+Installed map name	Geïnstalleerde kaartnaam
+Installed mods	Geïnstalleerde wijzigingen
+Installing the mod alone does not make a server official.	Het installeren van de mod alleen maakt een server niet officieel.
+Interact with usable world objects	Interact met bruikbare wereldobjecten
+Invalid QA key	Ongeldige QA-sleutel
+Invalid action	Ongeldige actie
+Invalid assignment	Ongeldige toewijzing
+Invalid key	Ongeldige sleutel
+Invalid personal config filename	Ongeldige persoonlijke configuratiebestandsnaam
+Invalid setting	Ongeldige instelling
+Invert controller vertical look	Omkeren controller verticale look
+Invert mouse	Omkeren muis
+Invert vertical look	Verticaal omkeren
+Italian	Italiaans
+JA+ blade: %s	JA+ mes: %s
+JA+ wheel	JA+ wiel
+JOIN THE MATCH	JOIN DE MATCH
+Japanese	Japans
+Jedi Master	Jedi Meester
+Join	Sluit je aan
+Join Queue	Wachtrij invoegen
+Join a tournament server	Word lid van een toernooiserver
+Join game	Doe mee aan het spel
+Join match	Doe mee aan de wedstrijd
+Join password: 	Wachtwoord opgeven:
+Join squad	Sluit je aan bij een team
+Jump	Spring
+Jump / swim upward	Spring / zwem omhoog
+Jump sounds	Springgeluiden
+KEY ALREADY ASSIGNED	OORSPRONKELIJK TOEGESTAN
+Keep / Back	Achter / achter
+Keep Jump and Speed; disable other general powers.	Houd Jump and Speed; schakel andere algemene krachten uit.
+Keep changes	Wijzigingen behouden
+Keep display changes?	Veranderingen in de weergave behouden?
+Keep or revert the display change first.	Eerst de verandering van het scherm bewaren of terugzetten.
+Key Bindings	Sleutelbindingen
+Key change staged	Key change gefaseerd
+Keyboard	Toetsenbord
+Keyboard horizontal turn speed	Horizontale draaisnelheid toetsenbord
+Keyboard turning	Keyboard draaien
+Keyboard vertical look	Toetsenbord verticale look
+Keyboard vertical look speed	Toetsenbord verticale look snelheid
+Keys	Sleutels
+Kick by client number	Kick op clientnummer
+Kick by name	Op naam schoppen
+Kill feed	Afsluiten
+Korean	Koreaans
+LEAVE THE MATCH?	Laat het bord achter?
+LEAVE TOURNAMENT?	Verlaten?
+LOAD SAVED SETTINGS?	Laadred Settings?
+Labels do not change assignments.	Labels veranderen geen opdrachten.
+Language	Taal
+Language pack unavailable; showing original chat	Taalpakket niet beschikbaar; originele chat tonen
+Leader	Leider
+Leave	Vertrek
+Leave Queue	Wachtrij verlaten
+Leave event	Gebeurtenis verlaten
+Leave this server and return to the main menu?	Deze server verlaten en terugkeren naar het hoofdmenu?
+Leave this server and return to your desktop?	Deze server verlaten en terugkeren naar uw bureaublad?
+Left hand	Linkerhand
+Left stick click	Klik links
+Legacy joystick analog axes	Legacy joystick analoge assen
+Legacy joystick input; restarts input	Legacy joystick input; herstart invoer
+Legacy mouse forward-movement scale	Legacy muis vooruit-beweging schaal
+Legacy mouse strafe scale	Legacy muis strafe schaal
+Legacy or power acceleration.	Legacy of stroomversnelling.
+Light flares	Lichte fakkels
+Lighting	Verlichting
+Limbs only	Uitsluitend ledemaat
+Limits affect the current mode.  0 = unlimited.	Limieten hebben invloed op de huidige modus. 0 = onbeperkt.
+Lit preview	Litvoorbeeld
+Live	Levend
+Live bot roster is still updating. Wait a moment and save again.	Live bot rooster is nog aan het updaten. Wacht even en bespaar opnieuw.
+Load	Laden
+Load into the editor for review, then Apply.	Inladen in de editor voor herziening, vervolgens toepassen.
+Load preset: 	Voorinstelling laden:
+Load replacement draft	Laadvervangingsontwerp
+Load selected	Geselecteerd laden
+Load the complete rules and roster as a bots-only replacement draft. Applying after review replaces existing bots; human players are never removed. Current gameplay and password remain unchanged until Apply.	Laad de volledige regels en rooster als een bots-only vervanging concept. Toepassen na beoordeling vervangt bestaande bots; menselijke spelers worden nooit verwijderd. Huidige gameplay en wachtwoord blijven ongewijzigd totdat Toepassen.
+Load the next map from the server rotation.	Laad de volgende kaart van de serverrotatie.
+Loaded bot definitions; custom player models appear when they include a bot definition.	Geladen bot definities; aangepaste speler modellen verschijnen wanneer ze een bot definitie bevatten.
+Local	Lokaal
+Local files	Lokale bestanden
+Local host draft	Lokaal host concept
+Local library	Lokale bibliotheek
+Local server	Lokale server
+Local track name	Lokale tracknaam
+Lock Teams	Teams vergrendelen
+Lock teams	Slotteams
+Log in with Discord	Aanmelden met Discord
+Log out / Cancel	Afmelden / Annuleren
+Logged in as %.100s.	Aangemeld als %.100s.
+Logged out.	Ik ben uitgelogd.
+Look and movement	Kijken en bewegen
+Look down	Kijk omlaag.
+Look up	Kijk omhoog.
+Looking with bound up / down keys.	Kijken met gebonden op / neer sleutels.
+Low	Laag
+Low health pulse	Lage hartslag in de gezondheid
+Lower music volume by 5%	Muziekvolume met 5% verlagen
+Lower values make curved surfaces smoother.	Lagere waarden maken gebogen oppervlakken gladder.
+MAP	KAART
+MATCH RECORDINGS	MATCH-RecORDINGEN
+MATCH RULES	REGELINGEN VOOR DE MATCH
+Main menu	Hoofdmenu
+Manual	Handmatig
+Manual combat	Handgevechten
+Map	Kaart
+Map chooser / Back	Kaartkiezer / Terug
+Map preview unavailable	Kaartvoorbeeld niet beschikbaar
+Maps for the current game type	Kaarten voor het huidige speltype
+Maps listed for the draft's game type. A custom installed map can be entered directly.	Kaarten voor het speltype van het concept. Een aangepaste geïnstalleerde kaart kan direct worden ingevoerd.
+Match Rules	Overeenkomende regels
+Match Rules (host)	Overeenkomende regels (host)
+Match clock	Match klok
+Match scores are separate from global rank.	De scores zijn gescheiden van de wereldranglijst.
+Matches	Lucifers
+Matching stance assets are missing. Choices were not saved.	Er ontbreken overeenkomstige posities. De keuzes zijn niet opgeslagen.
+Matching style assets are missing. Blue, Yellow and Red remain available.	De stijl van de activa ontbreekt, blauw, geel en rood blijven beschikbaar.
+Matching style assets are missing. Your choices were not saved.	De stijl van de activa ontbreekt.
+Max packets	Max. pakketten
+Max ping (ms)	Max. ping (ms)
+Max players	Max. spelers
+Maximum level 	Maximumgehalte
+Medium	Middel
+Melee and Lightsaber always remain available.	Melee en Lightsaber blijven altijd beschikbaar.
+Menu Theme	Menuthema
+Menu buttons	Menuknoppen
+Menu confirm and back buttons	Menu bevestigen en terugknopen
+Menu cursor speed	Menu-cursorsnelheid
+Menu language	Menutaal
+Menu motion	Menubeweging
+Menu motion: Off	Menubeweging: uit
+Menu motion: On	Menubeweging: Aan
+Message language	Berichttaal
+Message the last player who attacked you	Bericht de laatste speler die je aanviel
+Message the player under your crosshair	Bericht de speler onder je vizier
+Min players	Minspelers
+Min. players	Min. spelers
+Mind trick	Mind truc
+Minimum human players. Enter 0 for any population.	Minimale menselijke spelers. Voer 0 in voor elke populatie.
+Minutes, 0 to 1440. Zero means unlimited. Applies after passing; may end the round.	Minuten, 0 tot 1440. Nul betekent onbeperkt. Geldt na het passeren; kan de ronde eindigen.
+Missing pack	Ontbrekende verpakking
+Mod  %s	Mod %s
+Mod switching is unavailable in this isolated test profile.	Mod switching is niet beschikbaar in dit geïsoleerde testprofiel.
+Mode	Modus
+Model preview unavailable	Modelvoorbeeld niet beschikbaar
+Mods	Modden
+More teams	Meer teams
+Motion:	Beweging:
+Mouse	Muis
+Mouse buttons and wheel are supported. Escape cancels.	Muisknoppen en wiel worden ondersteund. Ontsnappen annuleert.
+Mouse input mode	Muisinvoermodus
+Mouse input: 0 off, 1 raw, 2 compatibility; restarts input	Muisinvoer: 0 uit, 1 rauw, 2 compatibiliteit; herstart invoer
+Mouse movement when free look is off.	Muisbeweging als de vrije blik eraf is.
+Mouse movement while strafing.	Muisbeweging tijdens het lopen.
+Mouse sensitivity	Muisgevoeligheid
+Mouse smoothing	Muis gladmaken
+Move backward	Achteruit
+Move forward	Voorwaarts
+Move left without turning	Links verplaatsen zonder te draaien
+Move right without turning	Naar rechts zonder te draaien
+Move the mouse to look around.	Beweeg de muis om rond te kijken.
+Movement	Beweging
+Movement and legacy input	Beweging en legacy input
+Movement effects	Bewegingseffecten
+Movement keys	Bewegingstoetsen
+Movement training	Bewegingsopleiding
+Moves	Verplaatst
+Multiplayer built around pro saber dueling.	Multiplayer gebouwd rond pro saber dueling.
+Multiplier while walk / run is held.	Vermenigvuldiger tijdens wandelen / lopen wordt gehouden.
+Music player	Muziekspeler
+Music volume	Muziekvolume
+Music volume down	Muziek volume naar beneden
+Music volume up	Muziek volume omhoog
+Mute outside players	Dempen buiten spelers
+Mute player and combat sounds from private duels you're outside of.	Dempen speler en gevecht geluiden van privé duels die je buiten.
+Mute private duels	Privé-duels dempen
+Name	Naam
+Names / scores	Namen / scores
+Negative m_pitch inverts vertical look.	Negatieve m_pitch draait verticale look om.
+Negative shifts left. Positive shifts right. Zero centers the view.	Negatieve verschuivingen links, positieve verschuivingen rechts, nul centrum.
+Network	Netwerk
+Network / FPS settings belong under Setup > Network.	Netwerk / FPS-instellingen behoren onder Setup > Network.
+Network statistics	Netwerkstatistieken
+New match draft	Nieuwe match concept
+Next	Volgende
+Next Force power	Volgende kracht
+Next Map	Volgende kaart
+Next Player	Volgende speler
+Next item	Volgende item
+Next map	Volgende kaart
+Next music track	Volgende muziektrack
+Next weapon	Volgend wapen
+No active session	Geen actieve sessie
+No addition / choose bot	Geen toevoeging / kies bot
+No files	Geen bestanden
+No matching entries.	Geen overeenkomstige inzendingen.
+No matching hilts	Geen bijpassende handgrepen
+No matching settings.	Geen overeenkomende instellingen.
+No models match these filters.	Geen modellen die overeenkomen met deze filters.
+No official servers listed	Geen officiële servers vermeld
+No pending changes	Geen wijzigingen in behandeling
+No rotation / Edit order	Geen rotatie / Bewerk volgorde
+No saved personal configs.	Geen opgeslagen persoonlijke configuraties.
+No saved presets.	Geen opgeslagen voorinstellingen.
+No standings available	Geen standen beschikbaar
+Non-ASCII command preserved. This text editor supports ASCII; use change-key or clear.	Niet-ASCII-opdracht behouden. Deze teksteditor ondersteunt ASCII; gebruik change-key of clear.
+Normal	Normaal
+Not a personal setting: 	Geen persoonlijke setting:
+Not advertised	Niet bekendgemaakt
+Not reported	Niet gerapporteerd
+Nudge %d  MaxPPS %d  Snaps req %d  Rate req %d  Dup %d  Sent/s %s	Nudge %d MaxPPS %d Snaps req %d Rate req %d Dup %d Verzonden/s %s
+OFFICIAL RANKED SERVERS	OFFICIËLE RANKEDDERS
+Off	Uit
+Official 1v1 matches on a Ranked Duel server.	Officiële 1v1 wedstrijden op een Ranged Duel server.
+Offset used by the power curve.	Verschuiving gebruikt door de krachtcurve.
+Older joystick path; restarts input.	Ouder joystick pad; herstart invoer.
+On	Aan
+On-screen keyboard	Schermtoetsenbord
+One or more default keys have another command. Confirm to replace them.	Een of meer standaardtoetsen hebben een ander commando. Bevestig om ze te vervangen.
+Online free camera uses your normal spectator movement.	Online gratis camera maakt gebruik van uw normale toeschouwer beweging.
+Only official registered teams enter this ladder.	Alleen officieel geregistreerde teams komen deze ladder binnen.
+Open 	Open
+Open / choose bot	Openen / kiezen bot
+Open / collapse chat	Openen/instorten chat
+Open access	Open toegang
+Open connection slot / Remove this bot	Open verbindingsslot / Verwijder deze bot
+Open or close the in-game menu	Open of sluit het in-game menu
+Open or close your music player	Open of sluit je muziekspeler
+Open server	Server openen
+Open the console	De console openen
+Opponent	Tegenstander
+Optimization	Optimalisatie
+Optional join password, held only for this draft; never saved in a preset.	Facultatief wachtwoord toevoegen, alleen voor dit concept; nooit opgeslagen in een preset.
+Options	Opties
+Orange	sinaasappel
+Orbit angle	Omloophoek
+Order is preserved in presets. Enable automatic rotation in Match to use this list.	Order wordt bewaard in presets. Schakel automatische rotatie in Match in om deze lijst te gebruiken.
+Ordered map rotation	Geordende kaartrotatie
+Ordinary matches remain unranked.	Gewone lucifers blijven ongerankt.
+Original Blue style.	Original Blue stijl.
+Original JKA	Oorspronkelijk JKA
+Original JKA and Saber Trials Combat are supported.	Originele JKA en Saber Trials Combat worden ondersteund.
+Original Red style.	Originele rode stijl.
+Original Yellow style.	Original Yellow stijl.
+Overall mouse response.	Totale muisrespons.
+Overview	Overzicht
+PHOTO MODE	FOTO MODE
+PICKUP GAMES\nPlayers start as spectators. Open Pause > PUG Queue > Join Queue to play. The server fills the smallest teams first. Bots can hold places until a human is waiting.\n\nROUND ROTATION\nAt round end, a waiting player replaces a team's lowest scorer. Ties rotate the player who has held a spot longer. Benched players move to the back of the queue. With an empty queue, the teams stay in.\n\nINACTIVITY\nIdle players return to spectator after a warning. Waiting and watching preserve your queue position.\n\nACCOUNT POINTS\nOn an enrolled server with account scoring, signed-in players earn one point for finishing a round they started, plus one for winning.	PICKUP SPELS\nSpelers starten als toeschouwers. Open Pause > PUG-wachtrij > Word in de wachtrij geplaatst. De server vult eerst de kleinste teams. Bots kan plaatsen vasthouden totdat een mens wacht.\n\nROUNDROTATIE\nAan het einde van de ronde vervangt een wachtspeler de laagste scorer van een team. Ties draaien de speler die een plek langer heeft gehouden. Bunged spelers verplaatsen zich naar de achterkant van de wachtrij. Met een lege wachtrij blijven de teams binnen.\n\nONACTIVITEIT\nStationair spelers terug naar de toeschouwer na een waarschuwing. Wachten en kijken behouden uw wachtrij positie.\n\nREKENINGSPUNTEN\nOp een ingeschreven server met account scoren, ingetekende spelers verdienen een punt voor het afronden van een ronde die ze begonnen, plus een voor het winnen.
+PLAY	SPEEL
+PLAYER	SPEELER
+PRESS A KEY OR CONTROLLER BUTTON	PRIJS EEN KERN OF CONTROLER BUTTON
+PUG QUEUE	POGQUEUE
+PUG Queue	PUG-wachtrij
+Packet duplication	Verdubbeling pakket
+Page %d	Pagina %d
+Pages rotate every 10s. Your row stays visible.	Pagina's draaien om de tienen. Uw rij blijft zichtbaar.
+Panel opacity (%)	Paneelopaciteit (%)
+Parallax mapping	Parallax-kartering
+Password	Wachtwoord
+Password must be at most 64 characters and cannot contain quotes, backslashes, semicolons or control characters.	Wachtwoord moet ten hoogste 64 tekens zijn en mag geen citaten, backslashes, puntkomma's of controletekens bevatten.
+Password required	Wachtwoord vereist
+Password unknown	Wachtwoord onbekend
+Pause	Pauze
+Pause menu	Menu Pauze
+Pause music	Muziek pauzeren
+Pause the selected music source	De geselecteerde muziekbron pauzeren
+Pending changes	In afwachting van wijzigingen
+Pending edits discarded	In afwachting van bewerkingen afgewezen
+Performance	Prestaties
+Perspective	Perspectief
+Photo Mode	Fotomodus
+Pick different styles. Your normal style-switch control follows this order.	Kies verschillende stijlen. Uw normale stijl-schakelaar controle volgt deze volgorde.
+Pistol	Pistool
+Pitch guide	Pitch-guide
+Play	Spelen
+Play recording	Opname afspelen
+Play track	Nummer afspelen
+Playback	Afspelen
+Player	Speler
+Player labels	Spelerlabels
+Player name	Spelersnaam
+Player settings changed outside this menu. Reopen Profile to refresh.	Spelerinstellingen zijn buiten dit menu veranderd. Profiel opnieuw openen om te vernieuwen.
+Players	Spelers
+Players and world	Spelers en wereld
+Players per team	Spelers per team
+Polish	Pools
+Portrait	Portret
+Portrait size	Portretgrootte
+Portrait size applied.	Portretgrootte toegepast.
+Portraits	Portretten
+Portuguese	Portugees
+Portuguese (Brazil)	Portugees (Brazilië)
+Power	Vermogen
+Power acceleration offset	Stroomversnellingsverschuiving
+Precise crosshair trace	Nauwkeurig kruishaarspoor
+Preset deleted.	Voorinstelling verwijderd.
+Preset is missing, deleted or too large. Your draft is unchanged.	Voorinstelling ontbreekt, verwijderd of te groot. Uw ontwerp is ongewijzigd.
+Preset loaded into draft. Password unchanged; review before applying.	Voorinstelling geladen in concept. Wachtwoord ongewijzigd; herziening voor toepassing.
+Preset name (letters, numbers, _ and -)	Voorinstellingsnaam (letters, nummers, _ en -)
+Preset read was incomplete. Your draft is unchanged.	De voorinstelling was onvolledig, je ontwerp is ongewijzigd.
+Preset saved. Password excluded.	Opgeslagen wachtwoord is uitgesloten.
+Preset write was incomplete.	Het vooraf ingestelde schrijven was onvolledig.
+Presets	Voorinstellingen
+Press an unassigned key or button. Esc cancels.	Druk op een niet toegewezen sleutel of knop. Esc annuleert.
+Prev	Terug
+Preview hand:	Voorbeeldhand:
+Preview unavailable	Voorbeeld is niet beschikbaar
+Preview unavailable for this model	Voorbeeld niet beschikbaar voor dit model
+Preview:	Voorbeeld:
+Previous	Vorige
+Previous Force power	Vorige kracht
+Previous Player	Vorige speler
+Previous item	Vorige punt
+Previous music track	Vorig muzieknummer
+Previous weapon	Vorig wapen
+Primary	Primair
+Private chat with last attacker	Privégesprek met de laatste aanvaller
+Private chat with target	Privé-chat met doel
+Private duels	Privé duels
+Private message	Privébericht
+Profile	Profiel
+Projected	Geprojecteerd
+Public server name. Presets include this name.	Publieke servernaam. Voorinstellingen bevatten deze naam.
+Purple	Paars
+QUIT GAME?	Stoppen met spelen?
+Quality	Kwaliteit
+Queue Status	Wachtrijstatus
+Quick Match	Snelle overeenkomst
+Quick combinations; more weight than Blue.	Snelle combinaties; meer gewicht dan blauw.
+Quit game	Spel afsluiten
+Quit the game and return to your desktop?	Het spel afsluiten en terug naar je bureaublad?
+RANKED PLAY  /  DUEL LADDER	RANKED SPEEL / DUELLADDER
+RANKED PLAY  /  OVERVIEW	GERANKD SPEEL / OVERZICHT
+RANKED PLAY  /  SERVER DIRECTORY	RANKED SPEEL / SERVER DIRECTEUR
+RANKED PLAY  /  TEAM LADDER	RANKED SPEEL / TEAM LADDER
+READY	Klaar
+READY STANCE	Klaar voor gebruik
+RECONNECTS AND RESERVES	HERKONINGEN EN RESERVES
+RECORDINGS	BOEKHOUDINGEN
+RED	ROOD
+RED %d     /     BLUE %d	ROOD %d / BLUE %d
+RED FLAG	ROOD FLAG
+REPLACE DEFAULT KEY ASSIGNMENTS?	Vervangen van de meest belangrijke opdrachten?
+REPLACE SAVED CONFIG?	Vervangen we gerede confituur?
+RGB sabers are disabled by this JA+ server.	RGB sabels zijn uitgeschakeld door deze JA+ server.
+RT	NT1
+Raise music volume by 5%	Muziekvolume met 5% verhogen
+Raise or lower the camera target.	Verhoog of verlaag het cameradoel.
+Rank	Rang
+Ranked Challenge Duel	Gerangschikte Challenge Duel
+Ranked Duel	Gerangeerd duel
+Ranked Duel and Ranked Challenge Duel share this ladder.	Ranged Duel en Ranged Challenge Duel delen deze ladder.
+Ranked Play	Gerangeerd afspelen
+Ranked TFFA	Gerangschikt TFFA
+Ranked connection: not configured	Gerangschikte verbinding: niet geconfigureerd
+Ranked mode	Gerangschikt
+Ranked servers	Gerangeerde servers
+Ranked services are coming soon.	Gerangschikte diensten komen binnenkort.
+Rankings appear after verified official results are connected.	Ranglijsten verschijnen nadat geverifieerde officiële resultaten zijn verbonden.
+Rate	Percentage
+Rating	Waardering
+Rating change: unavailable. No verified ranked result received.	Waarderingsverandering: niet beschikbaar. Geen geverifieerd gerangschikt resultaat ontvangen.
+Raw	ruw
+Ready - offline	Klaar - offline
+Ready cleared.	Klaar.
+Ready for chat - offline	Klaar voor chat - offline
+Ready room	Klaar voor gebruik
+Ready selected.	Geselecteerd.
+Ready-pose choice only. Choose combat behavior in Combat styles.	Kies alleen de keuze om te vechten in Combat-stijlen.
+Record 1-6000 client frame-time samples	Registreer 1-6000 klant frame-time monsters
+Record match	Recordmatch
+Recording	Opname
+Recordings	Opnames
+Red	Rood
+Red team	Rood team
+Refresh	Verversen
+Region	Gebieden
+Region rule	Regioregel
+Registered teams compete on their own team ladder.	Geregistreerde teams concurreren op hun eigen teamladder.
+Release mouse capture in windowed mode	Vrijgeven muisvangst in windowed modus
+Release window capture	Vensteropname vrijgeven
+Remove	Verwijderen
+Remove this preset from the saved list. This cannot be undone; you can save a new preset under the same name later.	Verwijder deze preset uit de opgeslagen lijst. Dit kan niet ongedaan worden gemaakt; u kunt later een nieuwe preset opslaan onder dezelfde naam.
+Remove your entry from this tournament?	Uw deelname uit dit toernooi verwijderen?
+Rename group	Groep hernoemen
+Renderer	Render
+Repeat commands in outgoing packets.	Herhaal commando's in uitgaande pakketten.
+Repeater	Herhaalder
+Replace	Vervang
+Replace 	Vervang
+Replace all non-secret rules, map, rotation, name and bot roster in this draft. Current gameplay and password remain unchanged until you review and apply.	Vervang alle niet-geheime regels, kaart, rotatie, naam en robotrooster in deze ontwerpversie. Huidige gameplay en wachtwoord blijven ongewijzigd totdat u deze opnieuw bekijkt en toepast.
+Replace existing bots on apply	Bestaande bots vervangen op aanvraag
+Replace existing bots; new roster: 	Bestaande bots vervangen; nieuw rooster:
+Replace ordinary HUD	Gewone HUD vervangen
+Replace pending config edits?	In behandeling zijnde configuratiebewerkingen vervangen?
+Replace pending edits with this config?	In behandeling zijnde bewerkingen vervangen door deze configuratie?
+Replace saved config?	Opgeslagen configuratie vervangen?
+Replace the controller's button assignments with defaults?	De knopopdrachten van de controller vervangen door standaardopdrachten?
+Requested bytes per second; server limits apply.	Opgevraagde bytes per seconde; serverlimieten zijn van toepassing.
+Requested cancellation of the server's queued changes.	Verzoek tot annulering van de wijzigingen in de wachtrij van de server.
+Requested snapshots per second.	Ik heb snapshots per seconde gevraagd.
+Requires Custom Force rules. 	Vereist aangepaste kracht regels.
+Requires Custom weapon rules; Melee and Lightsaber stay available. 	Vereist aangepaste wapenregels; Melee en Lightsaber blijven beschikbaar.
+Requires Rend2.	Vereist Rend2.
+Requires Saber Trials spectator or camera support.	Vereist Saber Trials toeschouwer of camera ondersteuning.
+Requires Streamer mode with Clean Capture off.	Vereist Streamer-modus met Clean Capture off.
+Requires a Saber Trials server.	Vereist een Saber Trials server.
+Requires authenticated server permission	Vereist geverifieerde servermachtiging
+Requires server permission. Add a player argument using Edit command if needed.	Vereist servermachtiging. Voeg indien nodig een spelerargument toe met het commando Bewerken.
+Requires server permission. Use the server's target syntax.	Vereist servermachtiging. Gebruik de doelsyntax van de server.
+Reset	Terugzetten
+Reset all to Stock	Alles terugzetten naar bestand
+Reset camera	Camera resetten
+Reset filters	Filters resetten
+Reset this tab	Dit tabblad opnieuw instellen
+Reset this tab?	Dit tabblad resetten?
+Reset to originals	Op originelen terugzetten
+Reset view	Beeld resetten
+Resolution	Resolutie
+Respawn now	Nu respawn
+Restart Map	Kaart herstarten
+Restart map	Kaart herstarten
+Restart the current map after the vote passes.	Herstart de huidige kaart na de stemming.
+Restarts the renderer.	Herstart de renderer.
+Restore action defaults	Defaults van actie herstellen
+Restricted Force	Beperkte kracht
+Resume	Hervatten
+Resume  /  Esc	Hervatten / Esc
+Return to editing to keep your pending changes.	Terug naar bewerken om uw wijzigingen in afwachting te houden.
+Reverse right-stick vertical look.	Rechtse verticale look.
+Revert	Terugdraaien
+Reverting in %d seconds.	Terugdraaien in %d seconden.
+Review / Start	Evaluatie / Start
+Review before starting the match	Beoordeling voordat de wedstrijd wordt gestart
+Review changes	Wijzigingen evalueren
+Review changes to this local server	Wijzigingen aan deze lokale server bekijken
+Review this change. Nothing changes until you confirm.	Bekijk deze wijziging. Er verandert niets totdat je het bevestigt.
+Right hand	Rechterhand
+Right stick click	Klik met de rechtermuisknop
+Right-stick horizontal look speed.	Rechtse horizontale look snelheid.
+Right-stick vertical look speed.	Rechtse verticale look snelheid.
+Rocket launcher	Raketwerper
+Role: Jedi	Rol: Jedi
+Role: Non-Jedi	Rol: Niet-Jedi
+Roll	Rollen
+Rotate:	Draaien:
+Rotation already has 32 maps.	Rotatie heeft al 32 kaarten.
+Rotation exceeds the safe command length. Shorten or remove a map name.	Rotatie overschrijdt de veilige opdrachtlengte. Verkort of verwijder een kaartnaam.
+Rotation is empty.	Rotatie is leeg.
+Rotation map 	Rotatiekaart
+Rotation map is not installed: 	Rotatiekaart is niet geïnstalleerd:
+Rotation: 	Rotatie:
+Run command	Opdracht uitvoeren
+Run pitch	Pitch uitvoeren
+Run roll	Draaien
+Russian	Russisch
+SABER TRIALS  /  	SABER TRIALS /
+SABER TRIALS  /  FIND A SERVER	SABER TRIALS / VIND EEN SERVER
+SABER TRIALS  /  HOST A MATCH	SABER TRIALS / HOST A MATCH
+SABER TRIALS  /  MOVES	SABER TRIALS / MOVES
+SABER TRIALS  /  SOLO MATCH	SABER TRIALS  SOLO MATCH
+SABER TRIALS / 	SABER TRIALS /
+SABER TRIALS / ACCOUNT	SABER TRIALS / REKENING
+SABER TRIALS / COMBAT STYLES	SABER TRIALS / STYLES BESTRIJDING
+SABERTRIALS	SABERTRIALEN
+SERVER INFORMATION	INFORMATIE OVER DE SERVEUR
+SINGLE SABER / CHOOSE THREE	SINGLE SABER / KEUZE 3
+ST_CONTROLS_FAIL hit visibility	ST_CONTROLS_FAIL zicht geraakt
+ST_CONTROLS_FAIL menu closed	ST_CONTROLS_FAIL menu gesloten
+ST_CONTROLS_FAIL page mismatch	ST_CONTROLS_FAIL-pagina is niet gelijk
+ST_CONTROLS_FAIL settings count	Aantal ST_CONTROLS_FAIL-instellingen
+ST_CONTROLS_FAIL status mismatch	ST_CONTROLS_FAIL-status mismatch
+ST_CONTROLS_FAIL variable mismatch	ST_CONTROLS_FAIL variabele mismatch
+Saber Trials wheel	Saber Trials wiel
+Saber trail	Saber-spoor
+Saber workbench	Saberwerkbank
+SaberTrials	Sabertrials
+Save a PNG screenshot	Een PNG-screenshot opslaan
+Save current draft	Huidige concept opslaan
+Save current settings	Huidige instellingen opslaan
+Save preset: 	Voorinstelling opslaan:
+Save this complete match configuration and bot roster. An existing preset with this name will be replaced. The host password is excluded.	Sla deze volledige matchconfiguratie en botrooster op. Een bestaande preset met deze naam zal worden vervangen. Het host-wachtwoord is uitgesloten.
+Saved	Opgeslagen
+Saved 	Opgeslagen
+Saved Configs	Opgeslagen configuraties
+Saved choices take effect next spawn on supporting servers.	Opgeslagen keuzes worden de volgende paai op ondersteunende servers.
+Saved config could not be verified.	Opgeslagen configuratie kon niet worden geverifieerd.
+Saved match presets	Opgeslagen match-voorinstellingen
+Scale horizontal mouse movement.	Schaal horizontale muisbeweging.
+Scales the panel and text together.	Schaalt het paneel en tekst samen.
+Scene: 	Scène:
+Score limit	Scorelimiet
+Scoreboard	Scorebord
+Screenshot	Schermafdruk
+Search	Zoeken
+Search Setup settings or console names...	Zoeken naar instellingen of consolenamen...
+Search actions...	Zoekacties...
+Search by artist, song or album	Zoeken op artiest, nummer of album
+Search by server name, game type, map, or address	Zoeken op servernaam, speltype, kaart of adres
+Search current keys or commands...	Huidige sleutels of commando's doorzoeken...
+Search hilts	Zoeken handgrepen
+Search input settings or console names...	Invoerinstellingen of consolenamen zoeken...
+Search models or outfits...	Zoek modellen of outfits...
+Search music	Muziek zoeken
+Search the provider's catalog	De catalogus van de provider doorzoeken
+Secondary	Secundair
+Select DEMP2 when available	Selecteer DEMP2 indien beschikbaar
+Select a game type. Changing this choice does not change the match.	Selecteer een speltype. Deze keuze wijzigen verandert de wedstrijd niet.
+Select a player or bot	Selecteer een speler of bot
+Select a rule for its description. Mouse wheel scrolls; arrows / controller move focus. Left / right adjusts a focused value; Enter edits numbers.	Selecteer een regel voor de beschrijving. Muiswiel scrollen; pijlen / controller verplaatsen focus. Links / rechts past een gerichte waarde aan; Voer het aantal wijzigingen in.
+Select a server	Selecteer een server
+Select an available map for the current game type.	Selecteer een beschikbare kaart voor het huidige speltype.
+Select blaster rifle when available	Selecteer blaster geweer indien beschikbaar
+Select bowcaster when available	Bowcaster selecteren indien beschikbaar
+Select det packs	Selecteer det packs
+Select disruptor when available	Selecteer disruptor indien beschikbaar
+Select flechette when available	Selecteer flechette indien beschikbaar
+Select installed map	Geïnstalleerde kaart selecteren
+Select next Force power	Selecteer volgende kracht
+Select next available weapon	Selecteer het volgende beschikbare wapen
+Select next inventory item	Selecteer het volgende inventaris item
+Select one of the six styles.	Selecteer een van de zes stijlen.
+Select pistol when available	Selecteer pistool indien beschikbaar
+Select previous Force power	Selecteer vorige kracht
+Select previous available weapon	Selecteer het vorige beschikbare wapen
+Select previous inventory item	Selecteer vorige inventarisitem
+Select repeater when available	Selecteer repeater indien beschikbaar
+Select rockets when available	Selecteer raketten indien beschikbaar
+Select saber or melee	Selecteer sabel of melee
+Select thermal detonators	Kies thermische ontstekers
+Select trip mines	Selecteer struikelmijnen
+Selected map	Geselecteerde kaart
+Selected map is not installed: 	Geselecteerde kaart is niet geïnstalleerd:
+Send message	Bericht versturen
+Sensitivity	Gevoeligheid
+Sensitivity / settings	Gevoeligheid / instellingen
+Sent %s/s   Max %d   Snaps %d   Rate %d   Nudge %d   Dup %d	Verzonden %s/s Max %d Snaps %d Rate %d Nudge %d Dup %d
+Server Management	Serverbeheer
+Server information	Serverinformatie
+Server location	Serverlocatie
+Server name	Servernaam
+Server staff protection still applies.	Server personeel bescherming is nog steeds van toepassing.
+Server state changed. Close and reopen Match Rules.	Serverstatus is veranderd. Sluit en heropen Match Rules.
+Server tournament verification is coming next.	Server toernooi verificatie komt eraan.
+Server: 	Server:
+Setting is protected: 	De instelling is beveiligd:
+Setting staged	Gefaseerd instellen
+Settings applied.	Instellingen toegepast.
+Settings applied. Video/sound changes may require a restart.	Instellingen toegepast. Video/geluidsveranderingen kunnen een herstart vereisen.
+Settings changed outside the editor. Cancel and reopen before applying.	Instellingen veranderd buiten de editor. Annuleren en heropenen voordat u solliciteert.
+Setup	Instellingen
+Share / Create	Delen / aanmaken
+Shoulder offset	Schouderverschuiving
+Show controls: 	Controles tonen:
+Show current bracket	Huidige steun tonen
+Show current tournament status	Huidige toernooistatus tonen
+Show measured connection and current network settings	Gemeten verbinding en huidige netwerkinstellingen tonen
+Show original message	Originele bericht tonen
+Show ping, jitter, incoming loss and live settings.	Toon ping, jitter, inkomend verlies en live-instellingen.
+Show score	Score tonen
+Show the original above its marked translation. Originals remain in the console.	Toon het origineel boven de gemarkeerde vertaling. Originelen blijven in de console.
+Show weapon	Wapen tonen
+Shows the weapon model in first person.	Laat het wapenmodel zien in eerste persoon.
+Siege	Belegering
+Siege objectives	Belegeringsdoelstellingen
+Siege voice commands	Belegeringsstemopdrachten
+Signed in with Discord.	Aangemeld bij Discord.
+Signed out.	Uitgeschreven.
+Simple items	Eenvoudige items
+Single	Enkelvoudig
+Size: 48-144. Drag or type a number, then Apply size.	Grootte: 48-144. Sleep of type een nummer, dan pas grootte.
+Skill 	Vaardigheid
+Skip to the next track	Skip to the volgende track
+Slot 	Slot
+Smooth follow	Glad volgen
+Smoothing	Gladmaken
+Smooths changes to camera position.	Verandert de camerapositie.
+Smooths changes to the point the camera follows.	Verandert het punt dat de camera volgt.
+Snapshot timing offset; normally session-only.	Snapshot timing offset; normaal gesproken alleen sessie.
+Solo / replay speed	Solo / herhalingssnelheid
+Solo match	Solo-match
+Solo, spectator and replay camera. Online matches stay live.	Solo, toeschouwer en replay camera. Online wedstrijden blijven live.
+Some weapons and modes choose the view automatically.	Sommige wapens en modi kiezen automatisch de weergave.
+Sort A-Z	A-Z sorteren
+Sort Z-A	Z-A sorteren
+Sort by region	Sorteren op regio
+Sound	Geluid
+Sound quality	Geluidskwaliteit
+Sounds	Geluiden
+Sounds + effects	Geluiden + effecten
+Sounds + effects + marks	Geluiden + effecten + markeringen
+Source   	Bron
+Space	Spatie
+Spanish	Spaans
+Spectate	Spectaat
+Spectator camera	Spectatorcamera
+Speed	Snelheid
+Speed trail	Snelheidsspoor
+Speedometer	Snelheidsmeter
+Squad 1	Team 1
+Squad 2	Team 2
+Squad 3	Team 3
+Squad 4	Team 4
+Squad 5	Team 5
+Squad 6	Team 6
+Squad 7	Team 7
+Squad 8	Team 8
+Square	Vierkant
+Staff	Personeel
+Stage controller defaults	Stage controller standaard
+Stage defaults	Stadiumstandaarden
+Stage edit	Bewerken van fase
+Stances	Stans
+Stances saved. Applies next spawn on a supporting server.	Stances opgeslagen. Geldt voor volgende paaien op een ondersteunende server.
+Stances...	Stans...
+Standard	Standaard
+Start / Resume	Starten / hervatten
+Start match: 	Begin overeenkomst:
+Start this match	Start deze match
+Starting rating: 1000   |   Results and opponent strength decide changes.	Startcijfer: 1000 . . Resultaten en tegenstander kracht beslissen veranderingen.
+Static	Statisch
+Status notifications	Statusmeldingen
+Stay here	Blijf hier.
+Stay registered	Blijf geregistreerd
+Stock	Bestand
+Stock action defaults staged (unassigned when no stock default exists)	Voorraadactie defaults geënsceneerd (ontoegewezen als er geen voorraadstandaard bestaat)
+Stock defaults unavailable	Bestandsstandaarden zijn niet beschikbaar
+Strafe guide	Strafe-gids
+Strafe left	Strafe links
+Strafe modifier	Strafe-modifier
+Strafe movement scale	Strafe-bewegingsschaal
+Strafe right	Rechts
+Streamer mode	Streamermodus
+Streamer presentation	Presentatie van streamer
+Style:	Stijl:
+Subject	Onderwerp
+Substitute	Plaatsvervanger
+Supporting servers use this selection. Saber Offense requirements still apply.	Ondersteuningsservers gebruiken deze selectie. Saber Offense eisen zijn nog steeds van toepassing.
+Supports Ranked Duel, Ranked TFFA and FFA challenge servers.	Ondersteunt Ranged Duel, Ranged TFFA en FFA challenge servers.
+Swap	Wisselen
+Swap Confirm and Back for menus.	Verwissel Bevestig en Terug voor menu's.
+Swapped	Verwisseld
+Swedish	Zweeds
+Switch mod?	Van mod wisselen?
+Switch mods from the disconnected main menu.	Schakelt de mods van het losgekoppelde hoofdmenu.
+Symbols	Symbolen
+TEAM STANDINGS	TEAMSTANDINGEN
+TEAM TOURNAMENT	TOURNAMENT VAN HET TEAM
+TFFA: lock or reopen joining and team switching.	TFFA: Sluit of heropenen toetreding en team wisselen.
+TIME	TIJD
+TOURNAMENT  /  BRACKET     1 / 4	TOURNAMENT / BRAKKEN 1/4
+TOURNAMENT  /  BRACKET     2 / 4	TOURNAMENT / BRAKKEN 2/4
+TOURNAMENT  /  BRACKET     3 / 4	TOURNAMENT / BRAKKEN 3/4
+TOURNAMENT  /  BRACKET     4 / 4	TOURNAMENT / BRAKKEN 4/4
+TOURNAMENT  /  CHOOSE YOUR SQUAD	TOURNAMENT / KEUZE UW SQUAD
+TOURNAMENT  /  READY ROOM	TOURNAMENT / KLAARKAMER
+TOURNAMENT  /  ROSTER     1 / 4	TOURNAMENT / ROSTER 1 / 4
+TOURNAMENT  /  ROSTER     2 / 4	TOURNAMENT / ROSTER 2 / 4
+TOURNAMENT  /  ROSTER     3 / 4	TOURNAMENT / ROSTER 3/4
+TOURNAMENT  /  ROSTER     4 / 4	TOURNAMENT / ROSTER 4 / 4
+TOURNAMENT  /  SUBSTITUTES	TOURNAMENT / SUBSTITUTES
+Take photo	Foto maken
+Tap during wind-up to cancel. Hold Attack to follow up; release to stop.	Tik tijdens wind-up om te annuleren. Houd Aanval om te volgen; loslaten om te stoppen.
+Tap just before impact to parry, with or without holding Block.	Tik vlak voor de inslag om te pareren, met of zonder het vasthouden van Block.
+Target angles for standard JKA ground and air acceleration.	Doelhoeken voor standaard JKA grond en luchtversnelling.
+Target damping	Doeldemping
+Target names	Doelnamen
+Team Free For All	Team gratis voor iedereen
+Team appearance	Teamoptreden
+Team chat	Teamchat
+Team chat only	Alleen teamchat
+Team chat sound	Teamchatgeluid
+Team color lightsabers	Teamkleur lichtzwaarden
+Team color skins	Teamkleurenhuiden
+Team ladder	Teamladder
+Team overlay	Teamoverlay
+Team skin: 	Team huid:
+Team skin: Blue	Team huid: Blauw
+Team skin: Default	Team huid: Standaard
+Team skin: Red	Teamhuid: Rood
+Team slots	Teamslots
+Teams	Team
+Text color	Tekstkleur
+Text language	Teksttaal
+Texture compression	Textuurcompressie
+Texture depth	Textuurdiepte
+Texture detail	Textuur detail
+Texture filter	Textuurfilter
+Texture intensity	Textuurintensiteit
+That key is already assigned. Choose another.	Die sleutel is al toegewezen. Kies een andere.
+The connected mod supplies this HUD.	De aangesloten mod levert deze HUD.
+The original style keeps its original combat behavior.	De originele stijl behoudt zijn originele gevechtsgedrag.
+The previous display recovery has not been saved yet.	Het vorige schermherstel is nog niet opgeslagen.
+The ranked server directory is not connected yet.	De gerankte servermap is nog niet verbonden.
+The ranking service is not connected.	De ranking service is niet verbonden.
+The ready room opens when you connect to a tournament.	De gereedruimte opent wanneer u verbinding maakt met een toernooi.
+The selected model files are no longer available.	De geselecteerde modelbestanden zijn niet meer beschikbaar.
+The server checks that the map is installed and supports the current mode.	De server controleert of de kaart is geïnstalleerd en ondersteunt de huidige modus.
+Themes	Thema's
+Themes: 	Thema's
+Thermal detonator	Thermische ontsteker
+These are the complete match rules. Starting applies this draft, loads the selected map and adds the chosen bots.	Dit zijn de complete matchregels. Het starten van deze ontwerpversie, laadt de geselecteerde kaart en voegt de gekozen bots toe.
+Third person	Derde persoon
+Third-person framing	Framing van derde personen
+This character selection is unavailable.	Deze tekenselectie is niet beschikbaar.
+This command is too long for the text editor; it is preserved. Use change-key or clear.	Dit commando is te lang voor de teksteditor; het wordt bewaard. Gebruik change-key of clear.
+This ends your current life.	Dit eindigt je huidige leven.
+This is your chat color.	Dit is je chatkleur.
+This model does not support a mirrored preview	Dit model ondersteunt geen gespiegelde preview
+This outfit has no matching team skin.	Deze outfit heeft geen bijpassende team huid.
+This restarts the game client.	Dit herstart de spelclient.
+This slot has no key to swap. Choose Replace or Cancel.	Deze sleuf heeft geen sleutel om te ruilen. Kies Vervangen of Annuleren.
+Three styles saved. Use your normal style-switch control to cycle them.	Drie stijlen opgeslagen. Gebruik uw normale stijl-schakelaar control om ze te fietsen.
+Three ways to compete	Drie manieren om te concurreren
+Tilt the camera up or down.	Kantel de camera omhoog of omlaag.
+Time Limit:	Tijdlimiet:
+Time Nudge	Tijdsnoei
+Time limit	Termijn
+Time remaining	Resterende tijd
+Timing and downloads	Timing en downloads
+Toggle camera view	Cameraweergave aan/uit
+Toggle console	Schakel de console in
+Toggle existing match recording	Bestaande match-opname aan/uit
+Toggle supported first/third-person view	Schakel de eerste/derde-persoonsweergave aan/uit
+Toggle the chat panel and recent messages	Het chatpaneel en recente berichten aan/uitzetten
+Tonemapping	Toonmapping
+Top right	Rechtsboven
+Tournament	Toernooi
+Tournament bracket	Toernooibeugel
+Tournament lobby	Toernooilobby
+Tournament rules did not replace the previous description	Toernooiregels zijn niet in de plaats gekomen van de vorige beschrijving
+Tournament rules did not scroll	Toernooiregels scrollen niet
+Tournament rules headings did not load as separate lines	Toernooi regels rubrieken niet geladen als aparte lijnen
+Tournament status	Toernooistatus
+Translate into	Vertalen naar
+Translate received public, team and private chat offline.	Vertalen ontvangen publiek, team en privé chat offline.
+Translating - offline	Vertalen - offline
+Translation	Vertaling
+Translation - %s	Vertaling - %s
+Translator unavailable; showing original chat	Vertaler is niet beschikbaar; originele chat tonen
+Triangle	Driehoek
+Trilinear	Trilineair
+Trip mine	Trip de mijne
+Turkish	Turks
+Turn left	Linksaf
+Turn right	Rechtsaf
+Turn the camera around the player.	Draai de camera om de speler.
+Turn-speed modifier	Draaisnelheidsmodifier
+Turn-speed modifier while walk/run is held	Draaisnelheidsmodifier tijdens het lopen/lopen wordt gehouden
+Turning with bound left / right keys.	Draaien met gebonden links / rechts sleutels.
+Two precise swings; vulnerable recovery.	Twee precieze schommels; kwetsbaar herstel.
+Type directly or use the controller keyboard. Enter confirms; Esc cancels this field.	Typ direct of gebruik het controller toetsenbord. Enter bevestigt; Esc annuleert dit veld.
+UNSAVED CONTROLS	NIET-GEVERDE CONTROLES
+Ukrainian	Oekraïense
+Unassigned	Niet toegewezen
+Unavailable in this client or server.	Niet beschikbaar in deze client of server.
+Unavailable on this server	Niet beschikbaar op deze server
+Uncategorized	Niet-gecategoriseerd
+Unfreeze	Niet bevroren
+Universal translator	Universele vertaler
+Universe: 	Universum:
+Unknown Setup operation	Onbekende instelling
+Unknown quality preset	Onbekende voorinstelling voor kwaliteit
+Unknown setting	Onbekende instelling
+Unlimited	Onbeperkt
+Unlock Teams	Teams ontgrendelen
+Unready	Onklaar
+Unsaved changes	Niet-opgeslagen wijzigingen
+Unsupported Controls operation	Niet-ondersteunde bediening van de besturing
+Unsupported value for 	Niet ondersteunde waarde voor
+Up	Omhoog
+Use 	Gebruik
+Use / interact	Gebruik / interactie
+Use 1 to 40 letters, numbers, underscores or hyphens.	Gebruik 1 tot 40 letters, cijfers, onderstrepingen of koppeltekens.
+Use Absorb when available	Absorb gebruiken indien beschikbaar
+Use FOV 20-120, tilt -45 to 45, speed 20-800.	Gebruik FOV 20-120, kantel -45 tot 45, snelheid 20-800.
+Use Heal when available	Genezing gebruiken indien beschikbaar
+Use Mind Trick when available	Gebruik Mind Trick indien beschikbaar
+Use Protect when available	Gebruik Beschermen indien beschikbaar
+Use Pull when available	Pull gebruiken indien beschikbaar
+Use Push when available	Push gebruiken indien beschikbaar
+Use Rage when available	Rage gebruiken indien beschikbaar
+Use Sense when available	Sense gebruiken indien beschikbaar
+Use Speed when available	Snelheid gebruiken indien beschikbaar
+Use a new personal config name (letters, numbers, spaces, _ or -).	Gebruik een nieuwe persoonlijke configuratienaam (letters, cijfers, spaties, _ of -).
+Use analog axes on the legacy path.	Gebruik analoge assen op het legacy pad.
+Use inventory item	Inventarisitem gebruiken
+Use selected Force power	Geselecteerd krachtvermogen gebruiken
+Use team Energize when available	Team Energize gebruiken indien beschikbaar
+Use team Heal when available	Team Genezing gebruiken indien beschikbaar
+Use team blade colors. Off shows chosen colors.	Gebruik teambladkleuren. Off toont gekozen kleuren.
+Use team skins when available. Off shows chosen outfits.	Gebruik team skins indien beschikbaar. Off shows gekozen outfits.
+Use text without quotes, backslashes, semicolons or control characters.	Gebruik tekst zonder citaten, backslashes, puntkomma's of controle tekens.
+Use the selected available Force power	Gebruik de geselecteerde beschikbare kracht
+Use the selected inventory item	Gebruik het geselecteerde inventarisitem
+Use this value	Gebruik deze waarde
+Use turn speed 0-10000 and accel 0-100.	Gebruik draaisnelheid 0-10000 en accel 0-100.
+Used for Custom resolution.	Gebruikt voor aangepaste resolutie.
+Using %s: %s	%s wordt gebruikt: %s
+VOTE	Stemming
+VOTING	Stemming
+Value outside the supported edit range.	Waarde buiten het ondersteunde bewerkingsbereik.
+Vanilla	Vanille
+Vehicle lead indicator	Voertuigloodindicator
+Version	Versie
+Vertex lighting	Vertexverlichting
+Vertical look sensitivity	Verticale look gevoeligheid
+Vertical look speed	Verticale looksnelheid
+Vertical mouse scale	Verticale muisschaal
+Vertical mouse scale; negative means inverted	Verticale muisschaal; negatief betekent omgekeerd
+Vertical sensitivity	Verticale gevoeligheid
+Vertical sway	Verticaal draaien
+Very high	Zeer hoog
+View	Beeld
+View pitch in degrees and a level marker.	Bekijk de toonhoogte in graden en een niveaumarkering.
+Visual effects	Visuele effecten
+Voice commands	Spraakopdrachten
+Voice language	Spraaktaal
+Voice volume	Spraakvolume
+Vote 	Stemming
+Vote / Call Vote	Stemming / Call Vote
+Vote to add a role supported by the current game type.	Stem om een rol toe te voegen die wordt ondersteund door het huidige speltype.
+Vote to add this role. TFFA teams must be unlocked.	Stem om deze rol toe te voegen. TFFA teams moeten worden ontgrendeld.
+Vote to remove a player or bot.	Stem om een speler of bot te verwijderen.
+Vulkan initialization entry point unavailable	Vulkan-initialisatiepunt is niet beschikbaar
+WEAPONS	Wapens
+Waiting for the server's player list...	Wachten op de spelerslijst van de server...
+Walk / run	Loop/loop
+Wall marks	Wandmarkeringen
+Warm-up	Opwarmen
+Warmup Off	Opwarmen uit
+Warmup On	Opwarmen aan
+Weapon FOV	Wapen FOV
+Weapon preference saved; becomes active with Custom weapon rules.	Wapenvoorkeur opgeslagen; wordt actief met aangepaste wapenregels.
+Weapon's own ready pose overrides this preview in play.	De eigen klaar pose van het wapen overschrijft deze preview in het spel.
+Weapon:	Wapen:
+Weapons	Wapens
+Weapons: restricted	Wapens: beperkt
+Weapons: unrestricted	Wapens: onbeperkt
+Weightier attacks; less wind-up than Red.	Gewichtsaanval; minder wind-up dan Red.
+Wheel activation: Toggle	Wielactivering: Schakelen
+Wheel slots	Wielslots
+White	Wit
+White core: Off	Witte kern: Uit
+White core: On	Witte kern: Aan
+Whole number, 0 to 999. Zero means unlimited. Applies after passing; may end the round.	Het hele getal, 0 tot 999. Nul betekent onbeperkt. Geldt na het passeren; kan de ronde eindigen.
+YOU	JIJ
+Yellow	Geel
+You can return to it from the pause menu during the event.	U kunt er tijdens het evenement naar terugkeren vanuit het pauzemenu.
+Your character	Uw karakter
+Your preferred reading language. Requires the matching offline packs.	Uw voorkeur taal te lezen. Vereist de bijbehorende offline packs.
+Your saved base color for public, team and private messages.	Uw bewaarde basiskleur voor publieke, team- en privéberichten.
+Your selection is remembered while using dual sabers or a staff.	Uw selectie wordt onthouden tijdens het gebruik van dubbele sabels of een staf.
+Your server chooses the combat rules.	Jouw server kiest de gevechtsregels.
+Your server may deduct a point.	Uw server kan een punt aftrekken.
+Zero disables acceleration.	Nul schakelt versnelling uit.
+Zero disables this component of view swaying.	Nul schakelt dit deel van het zicht uit.
+Zero removes the client frame-rate limit.	Zero verwijdert de frame-rate limiet van de client.
+Zero uses your field of view.	Zero gebruikt jouw gezichtsveld.
+[ ] Disabled	Uitgeschakeld
+[ ] Keep existing bots	[ ] Bestaande bots behouden
+[X] Allowed	[X] Toegestaan
+[X] Available	[X] Beschikbaar
+[X] Replace bots only	[X] Alleen bots vervangen
+^3Saber Trials ^7Local Review	^3Saber-proeven ^7Lokale evaluatie
+^5Practice ^7Server %02d	^5Oefening ^7Server %02d
+^7Akaza: ^2I'll be there soon.	^7Akaza: ^2Ik ben er zo.
+^7Akaza: ^2Ready when you are.	^7Akaza: ^2Klaar als je dat bent.
+^7Hisoka: ^2Meet by the stairs.	^7Hisoka: ^2Meet bij de trap.
+^7Hisoka: ^2See you there.	^7Hisoka: ^2Ik zie je daar.
+^7Sousuke Aizen: ^2Just passing through.	^7Sousuke Aizen: ^2Gewoon op doorreis.
+^7You: ^	^7U: ^
+a whole number from 	een heel getal van
+alora/default	alora/standaard
+animation instance missing	animatie-instantie ontbreekt
+applied.	toegepast.
+asdfghjkl-	Asdfghjkl-
+border lights ignore motion preference	grenslichten de bewegingsvoorkeur negeren
+browser refresh changed the host menu	browser verversen het hostmenu gewijzigd
+browser refresh collision fixture missing	browser verversen aanvaring armatuur ontbreekt
+browser refresh did not reset its list	browservernieuwing heeft de lijst niet opnieuw ingesteld
+cannot drag back to top	kan niet terugslepen naar boven
+cannot drag to bottom outside track	kan niet naar de onderkant slepen buiten spoor
+click target missing	klik doel ontbreekt
+configured (never included in presets)	geconfigureerd (nooit opgenomen in voorinstellingen)
+controller menu missing	controllermenu ontbreekt
+dirty state	vuile toestand
+english=English|francais=French|deutsch=German|espanol=Spanish	Engels=Engelse francais=In het Engels=In het Engels
+english=English|french=French|german=German|spanish=Spanish	Engels=Engelse french=Franse krater=Duits spaans
+expected %s got %s	verwachte %s kreeg %s
+favorite selection missing	favoriete selectie ontbreekt
+favorite state	favoriete staat
+fixture has no overflow	armatuur heeft geen overloop
+fixture requires private Favorites view	armatuur vereist privé Favorietenweergave
+ghost off	spook uit
+ghost on	spook op
+hover does not light native button	zweven licht niet op de native knop
+keeps dragging after mouse release	blijft slepen na muis release
+keyboard menu missing	toetsenbordmenu ontbreekt
+kyle/default	Kyle/standaard
+layout context	lay-out context
+legacy action missing	nalatenschapsactie ontbreekt
+live value mismatch	Live value matched
+local browser reply was not displayed	lokale browser antwoord werd niet weergegeven
+main-menu alias missing	hoofdmenu alias ontbreekt
+maps/	kaarten/
+menu destination	menubestemming
+metadata display name mismatch	Metadatanaam komt niet overeen
+metadata franchise mismatch	metadata-franchise-mismatch
+missing Speed rank picker	ontbrekende snelheidsrankpicker
+missing selection	selectie ontbreekt
+missing server list	ontbrekende serverlijst
+missing target %s	ontbrekend doel %s
+missing_profile_fixture/default	missing_profile_fixture/standaard
+motion state mismatch	bewegingstoestand komt niet overeen
+musicvolume +5	muziekvolume +5
+musicvolume -5	muziekvolume -5
+native Force rank purchase changed	native Force rang aankoop gewijzigd
+native Jedi role selector missing	native Jedi role selector ontbreekt
+native Jedi role transition failed	oorspronkelijke Jedi rolovergang mislukt
+native destination mismatch	oorspronkelijke bestemming klopt niet
+native scrollbar did not drag	oorspronkelijke schuifbalk sleepte niet
+native target missing	native doel ontbreekt
+not enough server fixtures	niet genoeg serverinstellingen
+or propose a change to this server.	of stel een wijziging in deze server voor.
+ordinary Apply changed Jedi role	gewoon Toepassen veranderde Jedi rol
+pending model mismatch	in behandeling zijnde model mismatch
+play sound/interface/button1 ; uiScript setForce %s ; uiScript closeingame ;	geluid/interface/knop1 afspelen; uiScript setForce %s; uiScript closingame;
+players/_humanoid/	spelers/_humanoid/
+preview unavailable	voorbeeld niet beschikbaar
+rd-vanilla	rd-vanille
+result count	aantal resultaten
+scanning creates one cvar per model	scannen creëert een cvar per model
+scrolling changed active model	Schuivend gewijzigd actief model
+st_matchLive_bot%d_unresolved	st_matchLive_bot%d_onopgeloste
+st_match_apply now	st_match_apply nu
+st_match_apply roster	st_match_apply rooster
+st_match_set st_weaponsActive 	st_match_set st_weaponsActive
+st_match_text password "	st_match_text wachtwoord "
+st_match_text rotation "	st_match_text rotatie "
+staged name	geënsceneerde naam
+stale preview survived failed load	oude voorbeeld overleefde mislukte lading
+status mismatch	status-ongelijkheid
+stock fallback mistaken for custom voice	stock terugval verward met aangepaste stem
+stock portrait fixture missing	voorraadportret armatuur ontbreekt
+theme did not paint %s	thema heeft %s niet geschilderd
+thumb grab jumps	duim grijpen sprongen
+tournament bracket	toernooibeugel
+tournament status	toernooistatus
+track click does not scroll	trackclick scroll niet
+unexpected connection state	onverwachte verbindingsstatus
+unexpected cosmetic layout	onverwachte cosmetische indeling
+unknown QA operation	onbekende QA-bewerking
+unknown scrollbar fixture	onbekende scrollbar-bevestiging
+value%d	waarde%d
+virtual keyboard state	virtuele toetsenbordstatus
+wait; wait	wacht;wacht
+wait; wait; map 	wacht;wacht;map
+weapon 1	wapen 1
+weapon 10	wapen 10
+weapon 11	wapen 11
+weapon 12	wapen 12
+weapon 2	wapen 2
+weapon 3	wapen 3
+weapon 4	wapen 4
+weapon 5	wapen 5
+weapon 6	wapen 6
+weapon 7	wapen 7
+weapon 8	wapen 8
+weapon 9	wapen 9

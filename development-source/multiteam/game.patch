@@ -1,0 +1,517 @@
+--- a/codemp/game/bg_public.h
++++ b/codemp/game/bg_public.h
+@@ -1081,8 +1081,16 @@
+ 	TEAM_BLUE,
+ 	TEAM_SPECTATOR,
+ 
+-	TEAM_NUM_TEAMS
++	TEAM_NUM_TEAMS,  // stock NPC tables use this bound
++	TEAM_GREEN = TEAM_NUM_TEAMS, TEAM_YELLOW, TEAM_WHITE, TEAM_BLACK, TEAM_ORANGE, TEAM_PURPLE
+ } team_t;
++
++#include "st_tffa_teams.h"
++// The emote catalog and its MAX_CLIENTS entries occupy the preceding slots.
++#define CS_TFFA_TEAMS (CS_MAX + 1 + MAX_CLIENTS)
++#if CS_TFFA_TEAMS >= MAX_CONFIGSTRINGS
++#error no configstring available for TFFA standings
++#endif
+ 
+ typedef enum {
+ 	DUELTEAM_FREE,
+--- a/codemp/game/g_bot.c
++++ b/codemp/game/g_bot.c
+@@ -960,6 +960,19 @@
+ 	if ( stRole == ST_BOT_ROLE_SABER_MASTER )
+ 		skill = 5.0f;
+ 
++    if (G_TffaNamedTeam(team) >= TEAM_GREEN && !ST_TffaEnabled(G_TffaNamedTeam(team),G_TffaTeams())) {
++        trap->Print("That team is unavailable in this match.\n");
++        return;
++    }
++    if (level.gametype == GT_TEAM && (G_TffaTeams() > 2 || g_tffaTeamSize.integer)) {
++        team_t requested = G_TffaNamedTeam(team);
++        if (!requested) requested = PickTeam(-1);
++        if (requested == TEAM_SPECTATOR || !G_TffaHasRoom(requested, -1)) {
++            trap->Print("This team is full.\n");
++            return;
++        }
++        team = ST_TffaName(requested);
++    }
+ 	// have the server allocate a client slot
+ 	clientNum = trap->BotAllocateClient();
+ 	if ( clientNum == -1 ) {
+@@ -1087,7 +1100,9 @@
+ 
+ 	if ( level.gametype >= GT_TEAM )
+ 	{
+-		if ( team && !Q_stricmp( team, "red" ) )
++		if ( G_TffaTeams() > 2 && ST_TffaEnabled(G_TffaNamedTeam(team), G_TffaTeams()) )
++            bot->client->sess.sessionTeam = G_TffaNamedTeam(team);
++        else if ( team && !Q_stricmp( team, "red" ) )
+ 			bot->client->sess.sessionTeam = TEAM_RED;
+ 		else if ( team && !Q_stricmp( team, "blue" ) )
+ 			bot->client->sess.sessionTeam = TEAM_BLUE;
+@@ -1122,7 +1137,9 @@
+ 		if ( bot->client->sess.sessionTeam == TEAM_SPECTATOR )
+ 			bot->client->sess.sessionTeam = preTeam;
+ 
+-		if ( bot->client->sess.sessionTeam == TEAM_RED )
++		if (G_TffaTeams() > 2 && ST_TffaEnabled(bot->client->sess.sessionTeam, G_TffaTeams()))
++            team = ST_TffaName(bot->client->sess.sessionTeam);
++        else if ( bot->client->sess.sessionTeam == TEAM_RED )
+ 			team = "Red";
+ 		else
+ 		{
+@@ -1260,8 +1277,8 @@
+ 	}
+ 
+ 	trap->Argv( 2, team, sizeof( team ) );
+-	if ( team[0] && Q_stricmp( team, "red" ) && Q_stricmp( team, "blue" ) ) {
+-		trap->Print( "Usage: st_addbot <role> [red|blue] [skill 1-5]\n" );
++	if ( team[0] && !ST_TffaEnabled(G_TffaNamedTeam(team), G_TffaTeams()) ) {
++		trap->Print( "Usage: st_addbot <role> [enabled team color] [skill 1-5]\n" );
+ 		return;
+ 	}
+ 	if ( level.gametype == GT_FFA )
+@@ -1313,7 +1330,8 @@
+ 		if ( !bot->inuse || !bot->client || bot->client->pers.connected != CON_CONNECTED ||
+ 			!(bot->r.svFlags & SVF_BOT) )
+ 			continue;
+-		if ( bot->client->sess.sessionTeam == TEAM_RED ) team = "red";
++		if (G_TffaTeams() > 2 && ST_TffaEnabled(bot->client->sess.sessionTeam, G_TffaTeams())) team = ST_TffaName(bot->client->sess.sessionTeam);
++        else if ( bot->client->sess.sessionTeam == TEAM_RED ) team = "red";
+ 		else if ( bot->client->sess.sessionTeam == TEAM_BLUE ) team = "blue";
+ 		else if ( bot->client->sess.sessionTeam == TEAM_SPECTATOR ) team = "spectator";
+ 		trap->Print( "  %2i %-16s role=%-20s team=%s\n", i,
+--- a/codemp/game/g_client.c
++++ b/codemp/game/g_client.c
+@@ -698,8 +698,7 @@
+ 
+ 	//in Team DM, look for a team start spot first, if any
+ 	if ( level.gametype == GT_TEAM
+-		&& team != TEAM_FREE
+-		&& team != TEAM_SPECTATOR )
++		&& (team == TEAM_RED || team == TEAM_BLUE) )
+ 	{
+ 		const char *classname = NULL;
+ 		if ( team == TEAM_RED )
+@@ -1342,6 +1341,19 @@
+ ================
+ */
+ team_t PickTeam( int ignoreClientNum ) {
++    if (G_TffaTeams() > 2 || (level.gametype == GT_TEAM && g_tffaTeamSize.integer)) {
++        team_t best = TEAM_RED;
++        int smallest = TeamCount(ignoreClientNum, best);
++        for (int slot = 1; slot < G_TffaTeams(); ++slot) {
++            team_t team = (team_t)ST_TffaTeamAt(slot);
++            int players = TeamCount(ignoreClientNum, team);
++            if (players < smallest || (players == smallest && level.teamScores[team] < level.teamScores[best])) {
++                best = team;
++                smallest = players;
++            }
++        }
++        return G_TffaHasRoom(best, ignoreClientNum) ? best : TEAM_SPECTATOR;
++    }
+ 	int		counts[TEAM_NUM_TEAMS];
+ 
+ 	counts[TEAM_BLUE] = TeamCount( ignoreClientNum, TEAM_BLUE );
+@@ -2743,6 +2755,11 @@
+ 		G_InitSessionData( client, userinfo, isBot );
+ 	}
+ 	G_ReadSessionData( client );
++    if (level.gametype == GT_TEAM && client->sess.sessionTeam != TEAM_SPECTATOR &&
++        !G_TffaHasRoom(client->sess.sessionTeam, clientNum))
++        client->sess.sessionTeam = PickTeam(clientNum);
++    if (client->sess.sessionTeam == TEAM_SPECTATOR && client->sess.spectatorState == SPECTATOR_NOT)
++        client->sess.spectatorState = SPECTATOR_FREE;
+ 	// A fresh connection cannot inherit a locked team's slot or auto-join.
+ 	level.stLockedTeam[clientNum] = TEAM_SPECTATOR;
+ 	if ( level.gametype == GT_TEAM && level.stTeamsLocked ) {
+@@ -2863,7 +2880,11 @@
+ 
+ 			trap->GetUserinfo(clientNum, userinfo, MAX_INFO_STRING);
+ 			requestedTeam = Info_ValueForKey( userinfo, "team" );
+-			if ( ent->client->pers.stBotRole != ST_BOT_ROLE_NONE &&
++            if (G_TffaTeams() > 2 || (level.gametype == GT_TEAM && g_tffaTeamSize.integer)) {
++                team_t requested = G_TffaNamedTeam(requestedTeam);
++                ent->client->sess.sessionTeam = ST_TffaEnabled(requested, G_TffaTeams()) && G_TffaHasRoom(requested,clientNum) ? requested : PickTeam(clientNum);
++            }
++			else if ( ent->client->pers.stBotRole != ST_BOT_ROLE_NONE &&
+ 				(!Q_stricmp( requestedTeam, "red" ) || !Q_stricmp( requestedTeam, "r" )) )
+ 				ent->client->sess.sessionTeam = TEAM_RED;
+ 			else if ( ent->client->pers.stBotRole != ST_BOT_ROLE_NONE &&
+@@ -2872,12 +2893,16 @@
+ 			else
+ 				ent->client->sess.sessionTeam = PickTeam(-1);
+ 
+-			if (ent->client->sess.sessionTeam == TEAM_SPECTATOR)
++			if (ent->client->sess.sessionTeam == TEAM_SPECTATOR && level.gametype != GT_TEAM)
+ 			{
+ 				ent->client->sess.sessionTeam = TEAM_RED;
+ 			}
+ 
+-			if (ent->client->sess.sessionTeam == TEAM_RED)
++			if (ent->client->sess.sessionTeam == TEAM_SPECTATOR)
++                team = "s";
++            else if (G_TffaTeams() > 2)
++                team = ST_TffaName(ent->client->sess.sessionTeam);
++            else if (ent->client->sess.sessionTeam == TEAM_RED)
+ 			{
+ 				team = "Red";
+ 			}
+@@ -3684,7 +3709,7 @@
+ 		&& !AllForceDisabled( g_forcePowerDisable.integer )
+ 		&& g_jediVmerc.integer )
+ 	{
+-		if ( level.gametype >= GT_TEAM && (client->sess.sessionTeam == TEAM_BLUE || client->sess.sessionTeam == TEAM_RED) )
++		if ( G_TffaTeams() == 2 && level.gametype >= GT_TEAM && (client->sess.sessionTeam == TEAM_BLUE || client->sess.sessionTeam == TEAM_RED) )
+ 		{//In Team games, force one side to be merc and other to be jedi
+ 			if ( level.numPlayingClients > 0 )
+ 			{//already someone in the game
+--- a/codemp/game/g_cmds.c
++++ b/codemp/game/g_cmds.c
+@@ -48,6 +48,8 @@
+ 	char		string[MAX_STRING_CHARS-1];
+ 	int			stringlength, prefix;
+ 	int			i, j, sentScores;
++    int first = 0;
++    const qboolean extended = G_TffaTeams() > 2;
+ 	gclient_t	*cl;
+ 	int			numSorted, scoreFlags, accuracy, perfect;
+ 
+@@ -60,7 +62,7 @@
+ 	numSorted = level.numConnectedClients;
+ 
+ 	// This is dumb that we are capping to 20 clients but support 32 in server
+-	if (numSorted > MAX_CLIENT_SCORE_SEND)
++	if (!extended && numSorted > MAX_CLIENT_SCORE_SEND)
+ 	{
+ 		numSorted = MAX_CLIENT_SCORE_SEND;
+ 	}
+@@ -103,16 +105,23 @@
+ 			cl->pers.stPrivateDuelWins,
+ 			cl->pers.stPrivateDuelLosses);
+ 
+-		if (stringlength + j + prefix >= sizeof(string))
+-			break;
++		if (stringlength + j + prefix + (extended ? 12 : 0) >= sizeof(string) || (extended && sentScores >= 12)) {
++            if (!extended) break;
++            trap->SendServerCommand(ent-g_entities, va("%s %d %d %d%s",
++                first ? "scoresmore" : "scores", sentScores,
++                first ? first : level.teamScores[TEAM_RED], level.teamScores[TEAM_BLUE], string));
++            first += sentScores;
++            sentScores = stringlength = 0;
++            string[0] = '\0';
++        }
+ 
+ 		strcpy( string + stringlength, entry );
+ 		stringlength += j;
+ 		sentScores++;
+ 	}
+ 
+-	trap->SendServerCommand( ent-g_entities, va("scores %i %i %i%s", sentScores,
+-		level.teamScores[TEAM_RED], level.teamScores[TEAM_BLUE],
++	trap->SendServerCommand( ent-g_entities, va("%s %i %i %i%s", first ? "scoresmore" : "scores", sentScores,
++		first ? first : level.teamScores[TEAM_RED], level.teamScores[TEAM_BLUE],
+ 		string ) );
+ }
+ 
+@@ -593,7 +602,9 @@
+ 		return;
+ 	}
+ 
+-	if ( client->sess.sessionTeam == TEAM_RED ) {
++    if (client->sess.sessionTeam >= TEAM_GREEN && client->sess.sessionTeam <= TEAM_PURPLE) {
++        trap->SendServerCommand(-1, va("cp \"%s^7 joined the %s team.\n\"", client->pers.netname, ST_TffaName(client->sess.sessionTeam)));
++    } else if ( client->sess.sessionTeam == TEAM_RED ) {
+ 		trap->SendServerCommand( -1, va("cp \"%s" S_COLOR_WHITE " %s\n\"",
+ 			client->pers.netname, G_GetStringEdString("MP_SVGAME", "JOINEDTHEREDTEAM")) );
+ 	} else if ( client->sess.sessionTeam == TEAM_BLUE ) {
+@@ -695,6 +706,12 @@
+ 			team = TEAM_RED;
+ 		} else if ( !Q_stricmp( s, "blue" ) || !Q_stricmp( s, "b" ) ) {
+ 			team = TEAM_BLUE;
++        } else if (G_TffaNamedTeam(s) != TEAM_FREE) {
++            team = G_TffaNamedTeam(s);
++            if (!ST_TffaEnabled(team, G_TffaTeams())) {
++                trap->SendServerCommand(clientNum, "print \"That team is unavailable in this match.\n\"");
++                return;
++            }
+ 		} else {
+ 			// pick the team with the least number of players
+ 			//For now, don't do this. The legalize function will set powers properly now.
+@@ -717,7 +734,17 @@
+ 			//}
+ 		}
+ 
+-		if ( g_teamForceBalance.integer && !g_jediVmerc.integer ) {
++        if (level.gametype == GT_TEAM && (team == TEAM_SPECTATOR || !G_TffaHasRoom(team, clientNum))) {
++            trap->SendServerCommand(clientNum, "print \"This team is full.\n\"");
++            return;
++        }
++		if (g_teamForceBalance.integer && !g_jediVmerc.integer && G_TffaTeams() > 2) {
++            team_t smallest = PickTeam(clientNum);
++            if (TeamCount(clientNum, (team_t)team) - TeamCount(clientNum, smallest) > 1) {
++                trap->SendServerCommand(clientNum, "print \"That team already has too many players.\n\"");
++                return;
++            }
++        } else if ( g_teamForceBalance.integer && !g_jediVmerc.integer ) {
+ 			int		counts[TEAM_NUM_TEAMS];
+ 
+ 			//JAC: Invalid clientNum was being used
+@@ -916,7 +943,7 @@
+ 	client->sess.spectatorClient = specClient;
+ 
+ 	client->sess.teamLeader = qfalse;
+-	if ( team == TEAM_RED || team == TEAM_BLUE ) {
++	if ( ST_TffaEnabled(team, G_TffaTeams()) ) {
+ 		teamLeader = TeamLeader( team );
+ 		// if there is no team leader or the team leader is a bot and this client is not a bot
+ 		if ( teamLeader == -1 || ( !(g_entities[clientNum].r.svFlags & SVF_BOT) && (g_entities[teamLeader].r.svFlags & SVF_BOT) ) ) {
+@@ -924,7 +951,7 @@
+ 		}
+ 	}
+ 	// make sure there is a team leader on the team the player came from
+-	if ( oldTeam == TEAM_RED || oldTeam == TEAM_BLUE ) {
++	if ( ST_TffaEnabled(oldTeam, G_TffaTeams()) ) {
+ 		CheckTeamLeader( oldTeam );
+ 	}
+ 
+@@ -1003,6 +1030,10 @@
+ 	oldTeam = ent->client->sess.sessionTeam;
+ 
+ 	if ( trap->Argc() != 2 ) {
++        if (G_TffaTeams() > 2) {
++            trap->SendServerCommand(ent-g_entities, va("print \"Team: %s\n\"", TeamName(oldTeam)));
++            return;
++        }
+ 		switch ( oldTeam ) {
+ 		case TEAM_BLUE:
+ 			trap->SendServerCommand( ent-g_entities, va("print \"%s\n\"", G_GetStringEdString("MP_SVGAME", "PRINTBLUETEAM")) );
+--- a/codemp/game/g_combat.c
++++ b/codemp/game/g_combat.c
+@@ -473,7 +473,8 @@
+ 	//ScorePlum(ent, origin, score);
+ 	//
+ 	ent->client->ps.persistant[PERS_SCORE] += score;
+-	if ( level.gametype == GT_TEAM && !g_dontPenalizeTeam )
++	if (level.gametype == GT_TEAM && G_TffaTeams() == 2 && !g_dontPenalizeTeam &&
++		ST_TffaEnabled(ent->client->ps.persistant[PERS_TEAM], 2))
+ 		level.teamScores[ ent->client->ps.persistant[PERS_TEAM] ] += score;
+ 	CalculateRanks();
+ }
+@@ -2095,7 +2096,7 @@
+ {
+ 	return ent && ent->inuse && ent->client && ent->s.number < MAX_CLIENTS &&
+ 		ent->client->pers.connected == CON_CONNECTED &&
+-		(ent->client->sess.sessionTeam == TEAM_RED || ent->client->sess.sessionTeam == TEAM_BLUE);
++		ST_TffaEnabled(ent->client->sess.sessionTeam, G_TffaTeams());
+ }
+ 
+ static qboolean G_TffaEnemyHit(const gentity_t *victim, const gentity_t *attacker)
+@@ -2579,8 +2580,11 @@
+ 		const qboolean enemyKill = playerAttacker && !OnSameTeam(self, attacker);
+ 		if (!playerAttacker || attacker == self || enemyKill)
+ 			++self->client->pers.stTffaDeaths;
+-		if (enemyKill)
++		if (enemyKill) {
+ 			++attacker->client->pers.stTffaKills;
++			if (G_TffaTeams() > 2)
++				++level.teamScores[attacker->client->sess.sessionTeam];
++		}
+ 	}
+ 
+ 	// Challenge duels have their own W/L record and must not also inflate FFA K/D.
+--- a/codemp/game/g_local.h
++++ b/codemp/game/g_local.h
+@@ -982,7 +982,7 @@
+ 
+ 	int			startTime;				// level.time the map was started
+ 
+-	int			teamScores[TEAM_NUM_TEAMS];
++	int			teamScores[ST_TFFA_TEAM_IDS];
+ 	int			lastTeamLocationTime;		// last time of client team location update
+ 
+ 	qboolean	newSession;				// don't use any old session data, because
+@@ -1393,6 +1393,9 @@
+ //
+ int TeamCount( int ignoreClientNum, team_t team );
+ int TeamLeader( int team );
++int G_TffaTeams(void);
++qboolean G_TffaHasRoom(int team, int ignoreClient);
++team_t G_TffaNamedTeam(const char *name);
+ team_t PickTeam( int ignoreClientNum );
+ void SetClientViewAngle( gentity_t *ent, vec3_t angle );
+ gentity_t *SelectSpawnPoint ( vec3_t avoidPoint, vec3_t origin, vec3_t angles, team_t team, qboolean isbot );
+--- a/codemp/game/g_main.c
++++ b/codemp/game/g_main.c
+@@ -1138,6 +1138,19 @@
+ 
+ 	// set the rank value for all clients that are connected and not spectators
+ 	if ( level.gametype >= GT_TEAM ) {
++        if (G_TffaTeams() > 2) {
++            for (i = 0; i < level.numConnectedClients; ++i) {
++                cl = &level.clients[level.sortedClients[i]];
++                int team = cl->sess.sessionTeam, place = 0, tied = 0;
++                if (!ST_TffaEnabled(team, G_TffaTeams())) continue;
++                for (int slot = 0; slot < G_TffaTeams(); ++slot) {
++                    int other = ST_TffaTeamAt(slot);
++                    if (level.teamScores[other] > level.teamScores[team]) ++place;
++                    if (other != team && level.teamScores[other] == level.teamScores[team]) tied = 1;
++                }
++                cl->ps.persistant[PERS_RANK] = place | (tied ? RANK_TIED_FLAG : 0);
++            }
++        } else
+ 		// in team games, rank is just the order of the teams, 0=red, 1=blue, 2=tied
+ 		for ( i = 0;  i < level.numConnectedClients; i++ ) {
+ 			cl = &level.clients[ level.sortedClients[i] ];
+@@ -1171,6 +1184,15 @@
+ 		}
+ 	}
+ 
++    if (G_TffaTeams() > 2) {
++        char standings[160];
++        Com_sprintf(standings, sizeof(standings), "%d", G_TffaTeams());
++        for (int slot = 0; slot < G_TffaTeams(); ++slot)
++            Q_strcat(standings, sizeof(standings), va(" %d", level.teamScores[ST_TffaTeamAt(slot)]));
++        trap->SetConfigstring(CS_TFFA_TEAMS, standings);
++    } else {
++        trap->SetConfigstring(CS_TFFA_TEAMS, "");
++    }
+ 	// set the CS_SCORES1/2 configstrings, which will be visible to everyone
+ 	if ( level.gametype >= GT_TEAM ) {
+ 		trap->SetConfigstring( CS_SCORES1, va("%i", level.teamScores[TEAM_RED] ) );
+@@ -1497,8 +1519,7 @@
+ 	}
+ 
+ 	// reset all the scores so we don't enter the intermission again
+-	level.teamScores[TEAM_RED] = 0;
+-	level.teamScores[TEAM_BLUE] = 0;
++	memset(level.teamScores, 0, sizeof(level.teamScores));
+ 	for ( i=0 ; i< sv_maxclients.integer ; i++ ) {
+ 		cl = level.clients + i;
+ 		if ( cl->pers.connected != CON_CONNECTED ) {
+@@ -1611,7 +1632,12 @@
+ 		numSorted = 32;
+ 	}
+ 
+-	if ( level.gametype >= GT_TEAM ) {
++	if (G_TffaTeams() > 2) {
++        for (int slot = 0; slot < G_TffaTeams(); ++slot) {
++            int team = ST_TffaTeamAt(slot);
++            G_LogPrintf("%s: %d\n", ST_TffaName(team), level.teamScores[team]);
++        }
++    } else if ( level.gametype >= GT_TEAM ) {
+ 		G_LogPrintf( "red:%i  blue:%i\n",
+ 			level.teamScores[TEAM_RED], level.teamScores[TEAM_BLUE] );
+ 	}
+@@ -1936,7 +1962,7 @@
+ 	}
+ 
+ 	if ( level.gametype >= GT_TEAM ) {
+-		return level.teamScores[TEAM_RED] == level.teamScores[TEAM_BLUE];
++		return !ST_TffaLeader(level.teamScores, G_TffaTeams());
+ 	}
+ 
+ 	a = level.clients[level.sortedClients[0]].ps.persistant[PERS_SCORE];
+@@ -2197,6 +2223,14 @@
+ 		sKillLimit = "Kill limit hit.";
+ 	}
+ 	if ( level.gametype < GT_SIEGE && stKillLimit ) {
++        if (G_TffaTeams() > 2) {
++            int leader = ST_TffaLeader(level.teamScores, G_TffaTeams());
++            if (leader && level.teamScores[leader] >= stKillLimit) {
++                trap->SendServerCommand(-1, va("print \"%s hit the kill limit.\n\"", ST_TffaName(leader)));
++                LogExit(sKillLimit);
++            }
++            return;
++        }
+ 		if ( level.teamScores[TEAM_RED] >= stKillLimit ) {
+ 			trap->SendServerCommand( -1, va("print \"Red %s\n\"", G_GetStringEdString("MP_SVGAME", "HIT_THE_KILL_LIMIT")) );
+ 			if (d_powerDuelPrint.integer)
+--- a/codemp/game/g_session.c
++++ b/codemp/game/g_session.c
+@@ -146,6 +146,11 @@
+ 	}
+ 
+ 	client->sess.sessionTeam	= (team_t)tempSessionTeam;
++    if (tempSessionTeam >= TEAM_GREEN &&
++        (level.gametype != GT_TEAM || !ST_TffaEnabled(tempSessionTeam, G_TffaTeams()))) {
++        client->sess.sessionTeam = TEAM_SPECTATOR;
++        tempSpectatorState = SPECTATOR_FREE;
++    }
+ 	client->sess.spectatorState	= (spectatorState_t)tempSpectatorState;
+ 	client->sess.teamLeader		= (qboolean)tempTeamLeader;
+ 
+@@ -204,7 +209,11 @@
+ 			else
+ 			{ //Bots choose their team on creation
+ 				value = Info_ValueForKey( userinfo, "team" );
+-				if (value[0] == 'r' || value[0] == 'R')
++				if (G_TffaTeams() > 2) {
++                    team_t requested = G_TffaNamedTeam(value);
++                    sess->sessionTeam = ST_TffaEnabled(requested, G_TffaTeams()) ? requested : PickTeam(client-level.clients);
++                }
++                else if (value[0] == 'r' || value[0] == 'R')
+ 				{
+ 					sess->sessionTeam = TEAM_RED;
+ 				}
+--- a/codemp/game/g_team.c
++++ b/codemp/game/g_team.c
+@@ -62,7 +62,27 @@
+ 	return team;
+ }
+ 
++int G_TffaTeams(void) {
++    return level.gametype == GT_TEAM ? ST_TffaCount(g_tffaTeams.integer) : 2;
++}
++
++qboolean G_TffaHasRoom(int team, int ignoreClient) {
++    if (level.gametype != GT_TEAM || !g_tffaTeamSize.integer) return qtrue;
++    return TeamCount(ignoreClient, (team_t)team) < Com_Clampi(2, 4, g_tffaTeamSize.integer);
++}
++
++team_t G_TffaNamedTeam(const char *name) {
++    if (name && *name) {
++        for (int slot = 0; slot < ST_TFFA_MAX_TEAMS; ++slot) {
++            team_t team = (team_t)ST_TffaTeamAt(slot);
++            if (!Q_stricmp(name, ST_TffaName(team))) return team;
++        }
++    }
++    return TEAM_FREE;
++}
++
+ const char *TeamName(int team)  {
++    if (team >= TEAM_GREEN && team <= TEAM_PURPLE) return ST_TffaName(team);
+ 	if (team==TEAM_RED)
+ 		return "RED";
+ 	else if (team==TEAM_BLUE)
+@@ -1213,7 +1233,7 @@
+ 		team = ent->client->sess.sessionTeam;
+ 	}
+ 
+-	if (team != TEAM_RED && team != TEAM_BLUE) {
++	if (!ST_TffaEnabled(team, G_TffaTeams())) {
+ 		return;
+ 	}
+ 
+@@ -1289,7 +1309,7 @@
+ 				continue;
+ 			}
+ 
+-			if (ent->inuse && (ent->client->sess.sessionTeam == TEAM_RED ||	ent->client->sess.sessionTeam == TEAM_BLUE)) {
++			if (ent->inuse && ST_TffaEnabled(ent->client->sess.sessionTeam, G_TffaTeams())) {
+ 				loc = Team_GetLocation( ent );
+ 				if (loc)
+ 					ent->client->pers.teamState.location = loc->cs_index;
+--- a/codemp/game/g_xcvar.h
++++ b/codemp/game/g_xcvar.h
+@@ -165,6 +165,8 @@
+ XCVAR_DEF( g_statLogFile,				"statlog.log",	NULL,						CVAR_ARCHIVE,									qfalse )
+ XCVAR_DEF( g_stepSlideFix,				"1",			NULL,						CVAR_SERVERINFO,								qtrue )
+ XCVAR_DEF( g_synchronousClients,		"0",			NULL,						CVAR_SYSTEMINFO,								qfalse )
++XCVAR_DEF( g_tffaTeamSize, "0", NULL, CVAR_ARCHIVE | CVAR_LATCH, qfalse )
++XCVAR_DEF( g_tffaTeams, "2", NULL, CVAR_ARCHIVE | CVAR_LATCH, qfalse )
+ XCVAR_DEF( g_teamAutoJoin,				"0",			NULL,						CVAR_ARCHIVE,									qfalse )
+ XCVAR_DEF( g_teamForceBalance,			"0",			NULL,						CVAR_ARCHIVE,									qfalse )
+ XCVAR_DEF( g_timeouttospec,				"70",			NULL,						CVAR_ARCHIVE,									qfalse )

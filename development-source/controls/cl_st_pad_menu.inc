@@ -22,6 +22,9 @@ static void CL_GamepadButton(int button,qboolean down,unsigned time) {
   return;
  }
  const int accept=Cvar_VariableIntegerValue("st_controllerMenuLayout")==1?1:0;
+ // Gameplay shortcuts must leave both menu face buttons available even when
+ // a player has bound one of them to the console or pause menu.
+ const bool menuFaceButton=menu&&(button==accept||button==1-accept);
  const char* binding=Key_GetBinding(raw);
  if(!STC_IsCapturing()&&binding&&!(Key_GetCatcher()&(KEYCATCH_CONSOLE|KEYCATCH_UI|KEYCATCH_CGAME))&&cls.state==CA_ACTIVE){
   const char* chatBindings[]={"messagemode","messagemode2","messagemode3","messagemode4"};
@@ -34,13 +37,13 @@ static void CL_GamepadButton(int button,qboolean down,unsigned time) {
    return;
   }
  }
- if(!STC_IsCapturing()&&binding&&!Q_stricmp(binding,"toggleconsole")) {
+ if(!menuFaceButton&&!STC_IsCapturing()&&binding&&!Q_stricmp(binding,"toggleconsole")) {
   const bool opening=!(Key_GetCatcher()&KEYCATCH_CONSOLE);
   Con_ToggleConsole_f();
   if(opening&&(Key_GetCatcher()&KEYCATCH_CONSOLE)&&Con_AutoKeyboard(true))Con_OpenPadKeyboard();
   return;
  }
- if(!STC_IsCapturing()&&binding&&!Q_stricmp(binding,"togglemenu")&&
+ if(!menuFaceButton&&!STC_IsCapturing()&&binding&&!Q_stricmp(binding,"togglemenu")&&
     !(Key_GetCatcher()&KEYCATCH_CONSOLE)&&cls.state==CA_ACTIVE&&!clc.demoplaying){
   if(Key_GetCatcher()&KEYCATCH_MESSAGE)Message_Key(A_ESCAPE);
   if(!(Key_GetCatcher()&KEYCATCH_UI)||menu)Cmd_ExecuteString("togglemenu");

@@ -1926,16 +1926,19 @@ void CheckForShorterRoutes(bot_state_t *bs, int newwpindex)
 	bestindex = newwpindex;
 	bestlen = TotalTrailDistance(newwpindex, bs->wpDestination->index, bs);
 
-	while (i < gWPArray[newwpindex]->neighbornum)
-	{ //now go through the neighbors and check the distance to the desired point from each neighbor
-		checklen = TotalTrailDistance(gWPArray[newwpindex]->neighbors[i].num, bs->wpDestination->index, bs);
+	for (i = 0; i < gWPArray[newwpindex]->neighbornum; i++)
+	{
+		int neighbor = gWPArray[newwpindex]->neighbors[i].num;
+		if (neighbor < 0 || neighbor >= gWPNum || !gWPArray[neighbor] || !gWPArray[neighbor]->inuse)
+			continue;
+		checklen = TotalTrailDistance(neighbor, bs->wpDestination->index, bs);
 
-		if (checklen < bestlen-64 || bestlen == -1)
+		if (checklen >= 0 && (checklen < bestlen-64 || bestlen == -1))
 		{ //this path covers less distance, let's take it instead
 			if (bs->cur_ps.fd.forcePowerLevel[FP_LEVITATION] >= gWPArray[newwpindex]->neighbors[i].forceJumpTo)
 			{
 				bestlen = checklen;
-				bestindex = gWPArray[newwpindex]->neighbors[i].num;
+				bestindex = neighbor;
 
 				if (gWPArray[newwpindex]->neighbors[i].forceJumpTo)
 				{
@@ -1948,10 +1951,9 @@ void CheckForShorterRoutes(bot_state_t *bs, int newwpindex)
 			}
 		}
 
-		i++;
 	}
 
-	if (bestindex != newwpindex && bestindex != -1)
+	if (bestindex != newwpindex)
 	{ //we found a path we want to switch to, let's do it
 		bs->wpCurrent = gWPArray[bestindex];
 		bs->wpSwitchTime = level.time + 3000;
@@ -2108,7 +2110,7 @@ void WPTouchRoutine(bot_state_t *bs)
 			lastNum = bs->wpCurrent->index-1;
 		}
 
-		if (gWPArray[lastNum] && gWPArray[lastNum]->inuse && gWPArray[lastNum]->index && bs->isCamping < level.time)
+		if (lastNum >= 0 && lastNum < gWPNum && gWPArray[lastNum] && gWPArray[lastNum]->inuse && gWPArray[lastNum]->index && bs->isCamping < level.time)
 		{
 			bs->isCamping = level.time + rand()%15000 + 30000;
 			bs->wpCamping = bs->wpCurrent;
@@ -7322,7 +7324,7 @@ void StandardBotAI(bot_state_t *bs, float thinktime)
 				}
 			}
 		}
-		else if (gWPArray[goalWPIndex] && gWPArray[goalWPIndex]->inuse &&
+		else if (goalWPIndex >= 0 && goalWPIndex < gWPNum && gWPArray[goalWPIndex] && gWPArray[goalWPIndex]->inuse &&
 			!(gLevelFlags & LEVELFLAG_NOPOINTPREDICTION))
 		{
 			VectorSubtract(gWPArray[goalWPIndex]->origin, bs->origin, a);
@@ -7364,6 +7366,9 @@ void StandardBotAI(bot_state_t *bs, float thinktime)
 		if (bs->frame_Waypoint_Len < wpTouchDist || (RMG.integer && bs->frame_Waypoint_Len < wpTouchDist*2))
 		{
 			WPTouchRoutine(bs);
+			// Goal selection may have dropped the current route this frame.
+			if (!bs->wpCurrent)
+				return;
 
 			if (!bs->wpDirection)
 			{
@@ -7374,10 +7379,8 @@ void StandardBotAI(bot_state_t *bs, float thinktime)
 				desiredIndex = bs->wpCurrent->index-1;
 			}
 
-			if (gWPArray[desiredIndex] &&
-				gWPArray[desiredIndex]->inuse &&
-				desiredIndex < gWPNum &&
-				desiredIndex >= 0 &&
+			if (desiredIndex >= 0 && desiredIndex < gWPNum &&
+				gWPArray[desiredIndex] && gWPArray[desiredIndex]->inuse &&
 				PassWayCheck(bs, desiredIndex))
 			{
 				bs->wpCurrent = gWPArray[desiredIndex];
