@@ -86,7 +86,6 @@ def split(full):
             "Both editions require Jedi Academy.",
             f"Windows installer: run SaberTrials-Windows-{beta_release.VERSION}-Setup.exe and choose Lite or Full.",
             "Manual install: extract one edition's ZIP into GameData.",
-            beta_fixes.DOWNLOAD_HINT,
             "Double-click SaberTrials.x86_64.exe to play or SaberTrialsDed.x86_64.exe to host.",
             "", GAME_GUIDE, "",
             "Optional language downloads for Lite", "",
@@ -96,8 +95,11 @@ def split(full):
             pack = stage / "Language-Packs" / pack_name(label)
             write_zip(source, packs[code], pack)
             guide.append(f"{label} - {pack.stat().st_size / 1e6:.0f} MB")
-        (stage / "Patreon-Download-Guide.txt").write_text("\n".join(guide) + "\n", encoding="utf-8")
         current = beta_fixes.prepare_next(full, stage)
+        if (stage / "Fixes" / beta_fixes.FIX_NAME).is_file():
+            guide.insert(guide.index("Manual install: extract one edition's ZIP into GameData.") + 1,
+                         beta_fixes.DOWNLOAD_HINT)
+        (stage / "Patreon-Download-Guide.txt").write_text("\n".join(guide) + "\n", encoding="utf-8")
         (output / "Language-Packs").mkdir(exist_ok=True)
         for path in sorted(stage.rglob("*")):
             if path.is_file():

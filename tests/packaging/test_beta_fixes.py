@@ -20,6 +20,12 @@ class BetaFixTests(unittest.TestCase):
                 z.writestr(fixes.ENGINE, f"Saber Trials Windows {version}\n")
                 z.writestr("SaberTrials/content.pk3", game)
                 z.writestr("SaberTrials/server/host.cfg", "default")
+                if version != "beta-1.11":
+                    z.writestr("SaberTrials/tournament-test.cfg", "public tournament preset")
+                if version == "beta-1.12":
+                    z.writestr("SaberTrials/menu.txt", "intermediate")
+                else:
+                    z.writestr("SaberTrials/menu.txt", "current")
                 if edition == "Full":
                     z.writestr("SaberTrials/client/translator/models/optional", "language")
 
@@ -27,7 +33,8 @@ class BetaFixTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as tmp:
             release = Path(tmp) / "release"
             stage = Path(tmp) / "stage"
-            for version, content in (("beta-1.1", "new"), ("beta-1.1", "old"), ("beta-1.2", "new")):
+            for version, content in (("beta-1.11", "old"), ("beta-1.11", "new"),
+                                     ("beta-1.12", "new"), ("beta-1.13", "new"), ("beta-1.14", "new")):
                 full = f"SaberTrials-Full-{version}.zip"
                 lite = f"SaberTrials-Lite-{version}.zip"
                 self.archives(release, version, content)
@@ -38,8 +45,10 @@ class BetaFixTests(unittest.TestCase):
                     current = fixes.prepare_next(release / full, stage)
                     fixes.record(release, current)
             update, = (stage / "Fixes").glob("*.zip")
+            self.assertEqual(update.name, "SaberTrials-Windows-Fix.zip")
             with ZipFile(update) as z:
-                self.assertEqual(set(z.namelist()), {fixes.ENGINE, "SaberTrials/content.pk3", fixes.NOTE})
+                self.assertEqual(set(z.namelist()), {fixes.ENGINE, "SaberTrials/content.pk3", fixes.NOTE,
+                                                     "SaberTrials/menu.txt", "SaberTrials/tournament-test.cfg"})
                 self.assertEqual(z.read("SaberTrials/content.pk3"), b"new")
 
     def test_extraction_cannot_remove_files(self):
@@ -50,11 +59,11 @@ class BetaFixTests(unittest.TestCase):
         previous = {ed: [{"host.cfg": [1, 1]}] for ed in fixes.EDITIONS}
         current = {ed: {"host.cfg": [2, 2]} for ed in fixes.EDITIONS}
         with self.assertRaisesRegex(ValueError, "configuration migration"):
-            fixes.make_fix(Path(), current, "beta-0.1", previous)
+            fixes.make_fix(Path(), current, previous)
         current = {ed: {"host.cfg": [1, 1]} for ed in fixes.EDITIONS}
         current["Full"]["language"] = [5, 6]
         with self.assertRaisesRegex(ValueError, "edition-specific"):
-            fixes.make_fix(Path(), current, "beta-0.1", previous)
+            fixes.make_fix(Path(), current, previous)
 
 
 if __name__ == "__main__":

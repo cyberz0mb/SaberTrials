@@ -13,13 +13,15 @@ import beta_release
 
 
 EDITIONS = ("Full", "Lite")
+FIRST_BETA = "beta-1.11"
+FIX_NAME = "SaberTrials-Windows-Fix.zip"
 ARCHIVE = re.compile(r"SaberTrials-(Full|Lite)-(beta-\d+(?:\.\d+)+)\.zip")
 ENGINE = "SaberTrials/client/SaberTrials.x86_64.exe"
 LAUNCHERS = {"SaberTrials.x86_64.exe", "SaberTrialsDed.x86_64.exe"}
 NOTE = "SaberTrials/docs/ZIP-update.txt"
-DOWNLOAD_HINT = ("Returning Windows testers: in Fixes, choose the ZIP named for your installed beta. "
-                 "Close Saber Trials and extract directly into Jedi Academy's GameData folder. "
-                 "Use the complete edition for a first install.")
+DOWNLOAD_HINT = (f"Windows Full or Lite, {FIRST_BETA} or later: if your copy is older than "
+                 f"{beta_release.VERSION}, close Saber Trials and extract Fixes/{FIX_NAME} into GameData. "
+                 "Already on the current beta? No download is needed.")
 
 
 def version_number(version):
@@ -77,31 +79,31 @@ def changed_files(previous, current):
     return {name for name, fingerprint in current.items() if previous.get(name) != fingerprint}
 
 
-def make_fix(release, current, version, baselines):
+def make_fix(release, current, baselines):
     target = beta_release.VERSION
-    if version_number(version) >= version_number(target):
-        raise ValueError(f"Expected a beta older than {target}: {version}")
     changed = set()
     for ed in EDITIONS:
         if not baselines.get(ed):
-            raise ValueError(f"Missing {ed} baseline for {version}")
+            raise ValueError(f"Missing {ed} baseline")
         for previous in baselines[ed]:
             changed.update(changed_files(previous, current[ed]))
-    # A ZIP for both editions must neither install Full-only models on Lite nor
-    # overwrite editable settings already shipped by any supported baseline.
+    # Unchanged presets introduced after 1.11 also belong in the cumulative ZIP.
+    # An actual change to an existing default requires a separate migration.
     for name in sorted(changed):
         if name not in current["Full"] or current["Full"][name] != current["Lite"].get(name):
             raise ValueError(f"{name} needs edition-specific delivery")
-        if name.lower().endswith(".cfg") and any(name in old for group in baselines.values() for old in group):
+        if name.lower().endswith(".cfg") and any(
+            name in old and old[name] != current[ed][name]
+            for ed in EDITIONS for old in baselines[ed]
+        ):
             raise ValueError(f"{name} needs a configuration migration")
     folder = release / "Fixes"
     folder.mkdir(exist_ok=True)
-    output = folder / f"SaberTrials-Windows-Fix-{version}-to-{target}.zip"
-    note = (f"Saber Trials Windows update | {version} to {target}\r\n\r\n"
-            "For an existing Windows Full or Lite installation of the starting version.\r\n"
+    output = folder / FIX_NAME
+    note = (f"Saber Trials Windows update | {FIRST_BETA} through {target}\r\n\r\n"
+            "Apply once to an existing Full or Lite installation in this range.\r\n"
             "Close the game and dedicated server. Extract the ZIP into Jedi Academy's GameData\r\n"
-            "folder and replace the matching files. If you created a custom config using the\r\n"
-            "same name as a new bundled preset, keep your own copy.\r\n"
+            "folder and replace matching game files. Keep any tournament presets you edited.\r\n"
             f"Start SaberTrials.x86_64.exe in GameData. The startup label should show {target}.\r\n"
             "Keep your installed language packs. A first install requires a complete edition.\r\n")
     with tempfile.TemporaryDirectory(dir=folder) as tmp:
@@ -124,9 +126,9 @@ def make_fix(release, current, version, baselines):
     return output
 
 
-def record(release, current):
+def record(release, current, version=None):
     history = release.parent / "beta-zip-history"
-    folder = history / beta_release.VERSION
+    folder = history / (version or beta_release.VERSION)
     folder.mkdir(parents=True, exist_ok=True)
     # A beta label may have multiple distributed revisions. Retain each index.
     data = json.dumps(current, sort_keys=True, separators=(",", ":")).encode("utf-8")
@@ -137,27 +139,43 @@ def record(release, current):
         os.replace(pending, target)
 
 
+def cumulative_baselines(release):
+    history = release.parent / "beta-zip-history"
+    groups = {ed: [] for ed in EDITIONS}
+    if not (history / FIRST_BETA).is_dir():
+        raise ValueError(f"Import the {FIRST_BETA} Full and Lite indexes before building the cumulative Fix")
+    for folder in sorted(history.glob("beta-*")):
+        if not folder.is_dir() or not version_number(FIRST_BETA) <= version_number(folder.name) <= version_number(beta_release.VERSION):
+            continue
+        copies = [json.loads(p.read_text(encoding="utf-8")) for p in sorted(folder.glob("*.json"))]
+        for ed in EDITIONS:
+            indexes = [rev[ed] for rev in copies if ed in rev]
+            if not indexes:
+                raise ValueError(f"Missing {ed} index for {folder.name}")
+            groups[ed].extend(indexes)
+    return groups
+
+
 def prepare_next(full, stage):
     current = current_indexes(full, stage / beta_release.LITE)
-    history = full.parent.parent / "beta-zip-history"
-    older = [p for p in history.glob("beta-*") if p.is_dir() and version_number(p.name) < version_number(beta_release.VERSION)]
-    if older:
-        last = max(older, key=lambda p: version_number(p.name))
-        previous = [json.loads(p.read_text(encoding="utf-8")) for p in sorted(last.glob("*.json"))]
-        make_fix(stage, current, last.name, {ed: [rev[ed] for rev in previous] for ed in EDITIONS})
+    if version_number(beta_release.VERSION) > version_number(FIRST_BETA):
+        if (full.parent.parent / "beta-zip-history" / FIRST_BETA).is_dir():
+            make_fix(stage, current, cumulative_baselines(full.parent))
+        else:
+            print(f"Full and Lite are ready. Import the {FIRST_BETA} and later indexes to generate the cumulative Fix.")
     return current
 
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--release", type=Path, default=beta_release.ROOT / "dist/private-beta")
-    parser.add_argument("previous", type=Path, nargs="+", help="Earlier Full and Lite ZIPs, including any revisions")
+    parser.add_argument("previous", type=Path, nargs="*", help="Full and Lite ZIPs to index, starting at beta 1.11")
     args = parser.parse_args()
     current = current_indexes(args.release / beta_release.FULL, args.release / beta_release.LITE)
-    history = {}
     for path in args.previous:
         version, edition, index = read_index(path)
-        history.setdefault(version, {}).setdefault(edition, []).append(index)
-    for version, baselines in sorted(history.items(), key=lambda item: version_number(item[0])):
-        make_fix(args.release, current, version, baselines)
+        if not version_number(FIRST_BETA) <= version_number(version) < version_number(beta_release.VERSION):
+            parser.error(f"Source {version} is outside the supported update range")
+        record(args.release, {edition: index}, version)
+    make_fix(args.release, current, cumulative_baselines(args.release))
     record(args.release, current)
