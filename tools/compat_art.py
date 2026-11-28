@@ -26,6 +26,7 @@ def stage_art(root, engine):
         with ZipFile(package) as archive:
             for name in names:
                 assets[name + ".png"] = archive.read(prefix + "/" + name + ".png")
+    assets["movement_keycaps.png"] = (root / "assets/runtime-packages/training-hud/movement_keycaps.png").read_bytes()
     ids, rc = [], []
     for i, (filename, data) in enumerate(assets.items(), 4200):
         (folder / filename).write_bytes(data)

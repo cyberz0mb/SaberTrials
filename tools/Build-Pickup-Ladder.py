@@ -4,6 +4,7 @@ from pathlib import Path
 import shutil
 import subprocess
 from zipfile import ZipFile, ZIP_DEFLATED
+import duel_privacy
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -35,6 +36,10 @@ def prepare(output, role):
     extra = SOURCE / role
     if extra.is_dir():
         shutil.copytree(extra, tree, dirs_exist_ok=True)
+    if role == "game":
+        duel_privacy.stage_server(tree)
+    elif role == "frontend":
+        duel_privacy.stage_client(tree)
 
 
 def build(output, role):

@@ -1674,6 +1674,7 @@ void CG_StartMusic( qboolean bForceStart );
 
 void CG_UpdateCvars( void );
 
+int CG_CurrentAimPlayer( void );
 int CG_CrosshairPlayer( void );
 int CG_LastAttacker( void );
 void CG_LoadMenus(const char *menuFile);

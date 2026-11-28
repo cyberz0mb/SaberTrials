@@ -30,6 +30,7 @@ int STE_Leave(STEvent*,const char* account);
 int STE_Start(STEvent*,uint32_t randomSeed,uint64_t now);
 int STE_Member(const STEvent*,const char* account);
 int STE_Side(const STEvent*,int member);
+int STE_StartPractice(STEvent*,uint32_t randomSeed,uint64_t now);
 int STE_Ready(STEvent*,const char* account,uint64_t now);
 void STE_Connected(STEvent*,const char* account,int connected,uint64_t now);
 void STE_Tick(STEvent*,uint64_t now);

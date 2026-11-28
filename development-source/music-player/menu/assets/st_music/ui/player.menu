@@ -1,0 +1,25 @@
+{
+ menuDef {
+  name st_music_player rect 146 106 348 268 popup visible 0 fullscreen 0
+  focusColor .12 .87 1 1 disableColor .30 .38 .42 1
+  onOpen { setCvar st_musicVisible 1 ; exec "st_musiccmd refresh" ; setFocus source ; }
+  onClose { setCvar st_musicVisible 0 ; uiScript stMusicEnd ; }
+  onESC { uiScript stMusicClose ; }
+  itemDef { name source rect 185 111 149 27 type 1 visible 1
+   action { exec "st_musiccmd source" ; } }
+  itemDef { name previous rect 14 111 36 27 type 1 visible 1
+   cvarTest st_musicCanPrevious enableCvar { "1" } action { exec "st_musiccmd previous" ; } }
+  itemDef { name toggle rect 53 111 77 27 type 1 visible 1
+   cvarTest st_musicCanToggle enableCvar { "1" } action { exec "st_musiccmd toggle" ; } }
+  itemDef { name next rect 133 111 36 27 type 1 visible 1
+   cvarTest st_musicCanNext enableCvar { "1" } action { exec "st_musiccmd next" ; } }
+  itemDef { name query rect 14 148 230 24 type 4 cvar st_musicQuery
+   maxChars 160 maxPaintChars 36 visible 1 }
+  itemDef { name search rect 249 148 85 24 type 1 visible 1 action { exec "st_musiccmd search" ; } }
+  itemDef { name quieter rect 95 178 26 21 type 1 visible 1 cvarTest st_musicCanVolume enableCvar { "1" } action { exec "musicvolume -5" ; } }
+  itemDef { name louder rect 308 178 26 21 type 1 visible 1 cvarTest st_musicCanVolume enableCvar { "1" } action { exec "musicvolume +5" ; } }
+  itemDef { name open rect 14 235 144 22 type 1 visible 1 action { exec "st_musiccmd open" ; } }
+  itemDef { name desktop rect 168 235 166 22 type 1 visible 1 action { exec "st_musiccmd desktop" ; } }
+  itemDef { name close_player rect 310 4 26 26 type 1 visible 1 action { uiScript stMusicClose ; } }
+ }
+}

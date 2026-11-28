@@ -1,4 +1,9 @@
 /* Native adapter for the account-keyed tournament controller. */
+#ifdef _WIN32
+#ifndef _CRT_RAND_S
+#define _CRT_RAND_S
+#endif
+#endif
 #include "g_local.h"
 #include "g_event.h"
 #include "g_staff.h"
@@ -8,7 +13,60 @@ static STEvent event;
 static STEProfile profiles[MAX_CLIENTS];
 static unsigned char generations[MAX_CLIENTS][16];
 static int memberSlots[STE_MEMBERS],lastSerial,lastReset,lastHistory,nextPublish,roundResetAt;
-static qboolean placing;
+static qboolean placing,practice;
+static int welcomed[MAX_CLIENTS],compatible[MAX_CLIENTS],guestSerial;
+static char rosterCache[MAX_CLIENTS][32][100];
+static char resumeKeys[STE_MEMBERS][33],resumeAccounts[STE_MEMBERS][65];
+static qboolean newResumeKey(char key[33]) {
+ unsigned char bytes[16]; int i;
+#ifdef _WIN32
+ unsigned int words[4];
+ for(i=0;i<4;i++)if(rand_s(&words[i]))return qfalse;
+ memcpy(bytes,words,sizeof(bytes));
+#else
+ FILE *file=fopen("/dev/urandom","rb");
+ if(!file)return qfalse;
+ i=(int)fread(bytes,1,sizeof(bytes),file);fclose(file);
+ if(i!=sizeof(bytes))return qfalse;
+#endif
+ for(i=0;i<16;i++)Com_sprintf(key+2*i,3,"%02x",bytes[i]);
+ return qtrue;
+}
+static int resumeIndex(const char*account) {
+ int i;for(i=0;i<STE_MEMBERS;i++)if(resumeAccounts[i][0]&&!strcmp(resumeAccounts[i],account))return i;
+ return -1;
+}
+static void forgetKey(const char*account) {
+ int i=resumeIndex(account);if(i>=0){resumeKeys[i][0]=0;resumeAccounts[i][0]=0;}
+}
+static void issueKey(int slot) {
+ int i;for(i=0;i<STE_MEMBERS;i++)if(!resumeAccounts[i][0]){
+  if(newResumeKey(resumeKeys[i])){
+   Q_strncpyz(resumeAccounts[i],profiles[slot].account,sizeof(resumeAccounts[i]));
+   trap->SendServerCommand(slot,va("stlobbyticket %s",resumeKeys[i]));
+  }return;
+ }
+}
+static void practiceIdentity(int slot) {
+ STEProfile*p=&profiles[slot];int i;
+ if(p->account[0]||!ST_StaffGenerationForClient(slot,generations[slot]))return;
+ Com_sprintf(p->account,sizeof(p->account),"practice-%d",++guestSerial);
+ Q_strncpyz(p->name,level.clients[slot].pers.netname,sizeof(p->name));Q_CleanStr(p->name);
+ for(i=0;p->name[i];i++)if((unsigned char)p->name[i]<32||(p->name[i]==34||p->name[i]==92||p->name[i]==59))p->name[i]=' ';
+ if(!p->name[0])Q_strncpyz(p->name,"Player",sizeof(p->name));
+ p->connected=1;p->verified=1; /* Accepted for this local event only. */
+}
+static void tryResume(int slot,const char*key) {
+ int i,m;
+ if(strlen(key)!=32||STE_Member(&event,profiles[slot].account)>=0)return;
+ for(i=0;i<STE_MEMBERS;i++)if(resumeKeys[i][0]&&!strcmp(resumeKeys[i],key)){
+  m=STE_Member(&event,resumeAccounts[i]);
+  if(m<0||event.members[m].profile.connected)return;
+  profiles[slot]=event.members[m].profile;profiles[slot].connected=1;
+  STE_Connected(&event,profiles[slot].account,1,level.time);
+  nextPublish=0;return;
+ }
+}
 static int nextRequest[MAX_CLIENTS],nextBracket[MAX_CLIENTS],nextView[MAX_CLIENTS];
 static char sentUI[MAX_CLIENTS][STE_UI_LINES][256];
 static char sentActions[MAX_CLIENTS][128];
@@ -95,6 +153,7 @@ static void restoreCombat(int slot,int m) {
 }
 void ST_EventDisconnect(int slot) {
  if(slot<0||slot>=MAX_CLIENTS)return;
+ memset(rosterCache[slot],0,sizeof(rosterCache[slot]));compatible[slot]=welcomed[slot]=0;nextRequest[slot]=nextBracket[slot]=nextView[slot]=0;
  saveCombat(slot,slotMember(slot));
  STE_Connected(&event,profiles[slot].account,0,(uint64_t)level.time);
  memset(&profiles[slot],0,sizeof(profiles[slot]));memset(generations[slot],0,16);held[slot].held=qfalse;nextPublish=0;
@@ -106,7 +165,7 @@ static qboolean validText(const char*s,int length,qboolean identifier) {
 }
 static int setAccount(int slot,const unsigned char generation[16],const STEProfile*p) {
  unsigned char current[16];int i;
- if(slot<0||slot>=level.maxclients||!generation||!p||!p->verified||level.clients[slot].pers.connected!=CON_CONNECTED||
+ if(practice||slot<0||slot>=level.maxclients||!generation||!p||!p->verified||level.clients[slot].pers.connected!=CON_CONNECTED||
  (g_entities[slot].r.svFlags&SVF_BOT)||!ST_StaffGenerationForClient(slot,current)||memcmp(current,generation,16)||
  !validText(p->account,sizeof(p->account),qtrue)||!validText(p->name,sizeof(p->name),qfalse)||
  (p->team[0]&&(!validText(p->team,sizeof(p->team),qtrue)||!validText(p->teamName,sizeof(p->teamName),qfalse))))return 0;
@@ -121,17 +180,22 @@ static int setAccount(int slot,const unsigned char generation[16],const STEProfi
 static void clearAccount(int slot) {
  if(slot<0||slot>=MAX_CLIENTS)return;ST_EventDisconnect(slot);trap->SendServerCommand(slot,"steaccount 0 \"Signed out\"");
 }
-static int getSnapshot(STEvent*out,unsigned int size) {if(!out||size!=sizeof(event))return 0;*out=event;return 1;}
+static int getSnapshot(STEvent*out,unsigned int size) {if(practice||!out||size!=sizeof(event))return 0;*out=event;return 1;}
 Q_EXPORT const STEventAccountAPI* GetSaberTrialsEventAccountAPI(void) {
  static const STEventAccountAPI api={1,sizeof(STEventAccountAPI),setAccount,clearAccount,getSnapshot};return &api;
 }
 void ST_EventInit(void) {
  int mode=trap->Cvar_VariableIntegerValue("st_tournamentMode");
  memset(&event,0,sizeof(event));memset(profiles,0,sizeof(profiles));memset(held,0,sizeof(held));memset(saved,0,sizeof(saved));
+ practice=qfalse;
+ memset(rosterCache,0,sizeof(rosterCache));memset(compatible,0,sizeof(compatible));memset(welcomed,0,sizeof(welcomed));memset(resumeAccounts,0,sizeof(resumeAccounts));memset(resumeKeys,0,sizeof(resumeKeys));guestSerial=0;
  memset(generations,0,sizeof(generations));lastSerial=lastReset=lastHistory=nextPublish=roundResetAt=0;
  memset(nextRequest,0,sizeof(nextRequest));memset(nextBracket,0,sizeof(nextBracket));memset(nextView,0,sizeof(nextView));placing=qfalse;
  memset(sentUI,0,sizeof(sentUI));memset(sentActions,0,sizeof(sentActions));
- if(mode>=1&&mode<=5&&level.gametype==(mode==1?GT_DUEL:GT_TEAM))STE_Open(&event,mode==1?0:mode,(uint64_t)level.time);
+ if(!trap->Cvar_VariableIntegerValue("st_gameFormat")&&mode>=1&&mode<=5&&level.gametype==(mode==1?GT_DUEL:GT_TEAM)){
+  STE_Open(&event,mode==1?0:mode,(uint64_t)level.time);
+  practice=trap->Cvar_VariableIntegerValue("st_tournamentRequireDiscord")==0;
+ }
 }
 qboolean ST_EventCanJoin(int slot,int team) {
  int member,side;if(!ST_EventActive()||placing)return qtrue;
@@ -214,6 +278,14 @@ static qboolean arenaReady(void) {
 }
 void ST_EventFrame(void) {
  int i,m,dead[2]={0,0};unsigned char current[16];if(!ST_EventActive())return;
+ for(i=0;i<level.maxclients;i++)if(level.clients[i].pers.connected==CON_CONNECTED && !(g_entities[i].r.svFlags&SVF_BOT)){
+  if(practice)practiceIdentity(i);
+  if(!welcomed[i]){
+   trap->SendServerCommand(i,va("stlobby %d %d",event.teamSize?event.teamSize:1,practice?1:0));
+   if(event.bracketSize)publishBracket(i);
+   welcomed[i]=1;nextPublish=0;
+  }
+ }
  for(i=0;i<STE_MEMBERS;i++)memberSlots[i]=-1;
  for(i=0;i<level.maxclients;i++)if(profiles[i].account[0]){
   if(level.clients[i].pers.connected!=CON_CONNECTED||!ST_StaffGenerationForClient(i,current)||memcmp(current,generations[i],16)){ST_EventDisconnect(i);continue;}
@@ -252,29 +324,49 @@ int ST_EventStaff(const STVerifiedAction*a,STGameResult*r) {
 qboolean ST_EventClientCommand(gentity_t*ent) {
  char op[32],target[65];int slot=ent->s.number,m,ok=0;trap->Argv(1,op,sizeof(op));
  if(!ST_EventActive()&&Q_stricmp(op,"logout"))return qfalse;
+ if(!Q_stricmp(op,"hello")){
+  trap->Argv(2,target,sizeof(target));
+  if(!compatible[slot]&&!strcmp(target,"1")){compatible[slot]=1;nextPublish=0;}
+  return qtrue;
+ }
  /* Bound every visitor request before producing any reliable messages. */
+ if(practice&&!Q_stricmp(op,"resume")){
+  if(level.time<nextRequest[slot])return qtrue;
+  nextRequest[slot]=level.time+500;trap->Argv(2,target,sizeof(target));tryResume(slot,target);return qtrue;
+ }
  if(!Q_stricmp(op,"bracket")){
   if(level.time<nextBracket[slot])return qtrue;nextBracket[slot]=level.time+750;
  }else if(!Q_stricmp(op,"status")||!op[0]){
   if(level.time<nextView[slot])return qtrue;nextView[slot]=level.time+750;
  }else{if(level.time<nextRequest[slot])return qtrue;nextRequest[slot]=level.time+750;}
- if(!Q_stricmp(op,"logout")){clearAccount(slot);return qtrue;}
+ if(!Q_stricmp(op,"logout")){if(!practice)clearAccount(slot);return qtrue;}
  if(!ST_EventActive()){say(slot,"No account tournament is open. The operator can select Tournament Individual or Team.");return qtrue;}
  if(!Q_stricmp(op,"bracket")){int i;for(i=13;i<44;i++)sentUI[slot][i][0]=1;publishBracket(slot);return qtrue;}
  if(!Q_stricmp(op,"status")||!op[0]){
   int i;for(i=0;i<STE_UI_LINES;i++)if(i<13||i>=44)sentUI[slot][i][0]=1;
   sentActions[slot][0]=0;publish(slot);return qtrue;
  }
+ if(!compatible[slot]){feedback(slot,"Update to the current Saber Trials client to participate.");return qtrue;}
  if(!profiles[slot].verified){feedback(slot,"Account not verified on this server. Open Account and check sign-in.");publish(slot);return qtrue;}
- if(!Q_stricmp(op,"join")&&!ST_StaffBlocked(ent))ok=STE_Join(&event,&profiles[slot]);
- else if(!Q_stricmp(op,"leave"))ok=STE_Leave(&event,profiles[slot].account);
+ if(!Q_stricmp(op,"join")&&!ST_StaffBlocked(ent)){
+  STEProfile candidate=profiles[slot];
+  if(practice&&event.teamSize){
+   trap->Argv(2,target,sizeof(target));
+   if(strlen(target)!=1||target[0]<'1'||target[0]>'8'){feedback(slot,"Choose a squad from 1 through 8.");return qtrue;}
+   Com_sprintf(candidate.team,sizeof(candidate.team),"squad-%s",target);
+   Com_sprintf(candidate.teamName,sizeof(candidate.teamName),"Squad %s",target);
+  }
+  ok=STE_Join(&event,&candidate);
+  if(ok){profiles[slot]=candidate;if(practice)issueKey(slot);}
+ }
+ else if(!Q_stricmp(op,"leave")){ok=STE_Leave(&event,profiles[slot].account);if(ok&&practice)forgetKey(profiles[slot].account);}
  else if(!Q_stricmp(op,"ready")){
   placePlayers(qfalse);
   /* Allow unready anytime, but no ready transition until placement succeeds. */
   m=slotMember(slot);
   if((m>=0&&event.members[m].ready)||arenaReady())ok=STE_Ready(&event,profiles[slot].account,(uint64_t)level.time);
  }
- else if(!Q_stricmp(op,"substitute")){
+ else if(!Q_stricmp(op,"substitute")&&!ST_StaffBlocked(ent)){
   /* A short roster number identifies even an absent starter; no account hash. */
   char*end;long number;trap->Argv(2,target,sizeof(target));number=strtol(target,&end,10);
   m=target[0]&&!*end&&number>=1&&number<=event.memberCount?(int)number-1:-1;
@@ -296,8 +388,8 @@ void ST_EventConsole(void) {
   trap->Cvar_Set("st_tournamentMode",va("%d",size));trap->Cvar_Set("g_gametype",va("%d",size==1?GT_DUEL:GT_TEAM));
   trap->SendConsoleCommand(EXEC_APPEND,"map_restart 0\n");return;
  }
- if(!Q_stricmp(op,"close")){say(-1,"Event closed by operator");memset(&event,0,sizeof(event));trap->Cvar_Set("st_tournamentMode","0");for(size=0;size<MAX_CLIENTS;size++)release(size);clearUI();return;}
- if(!Q_stricmp(op,"start")){say(-1,STE_Start(&event,(uint32_t)Q_irand(1,2147483646),(uint64_t)level.time)?"Bracket locked; active players must select Ready":"Need even 8-32 individuals, or 2-8 full registered teams");return;}
+ if(!Q_stricmp(op,"close")){say(-1,"Event closed by operator");if(practice)memset(profiles,0,sizeof(profiles));memset(&event,0,sizeof(event));practice=qfalse;trap->Cvar_Set("st_tournamentMode","0");for(size=0;size<MAX_CLIENTS;size++)release(size);clearUI();return;}
+ if(!Q_stricmp(op,"start")){say(-1,(practice?STE_StartPractice:STE_Start)(&event,(uint32_t)Q_irand(1,2147483646),(uint64_t)level.time)?"Bracket locked; active players must select Ready":(practice?"Need an even 2-32 individuals or 2-8 full squads":"Need even 8-32 individuals, or 2-8 full registered teams"));return;}
  if(!Q_stricmp(op,"status")||!Q_stricmp(op,"bracket")){int i;status(-1);for(i=0;i<event.count;i++)trap->Print("Entry %d: %s\n",i+1,event.entries[i].name);return;}
  if(!control(op,kind,ConcatArgs(!Q_stricmp(op,"disqualify")?3:2)))trap->Print("Tournament: open individual|2|3|4|5, start, status, bracket, pause/resume/restart <reason>, disqualify <entry> <reason>, close\n");
 }

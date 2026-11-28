@@ -7,12 +7,13 @@ from zipfile import ZipFile
 ROOT = Path(__file__).resolve().parents[1]
 
 
-def stage_engine(tree):
+def stage_font_resources(tree):
     win = tree / "codemp/win32"
     folder = win / "hud-fonts"
     folder.mkdir(exist_ok=True)
-    font_names = sorted(f"{family}_sharp{level}.{ext}" for family in ("arialnb", "ergoec")
+    font_names = sorted(f"{family}_sharp{level}.{ext}" for family in ("arialnb", "ergoec", "ocr_a")
                         for level in (1, 2) for ext in ("fontdat", "png"))
+    font_names += ["st_game_chars.png", "st_game_digits.png"]
     resources, table = [], []
     for index, name in enumerate(font_names, 6200):
         copyfile(ROOT / "assets/hud-fonts" / name, folder / name)
@@ -20,10 +21,15 @@ def stage_engine(tree):
         table.append(f'{{"fonts/{name}",{index}}},')
     (tree / "codemp/client/hud_font_resources.inc").write_text("\n".join(table))
     rc = win / "openjk.rc"
-    if resources[0] not in rc.read_text():
+    existing = rc.read_text().splitlines()
+    missing = [line for line in resources if line not in existing]
+    if missing:
         with rc.open("a") as f:
-            f.write("\n" + "\n".join(resources) + "\n")
+            f.write("\n" + "\n".join(missing) + "\n")
 
+
+def stage_engine(tree):
+    stage_font_resources(tree)
     files = tree / "codemp/qcommon/files.cpp"
     source = files.read_text()
     anchor = '\tCom_DPrintf ("Can\'t find %s\\n", filename);'
@@ -51,6 +57,8 @@ def stage_module(tree, archive):
     ui = tree / "codemp/ui"
     for name in ("st_presentation_draw.inc", "st_presentation_policy.inc"):
         copyfile(ROOT / "development-source/bot-roles/codemp/ui" / name, ui / name)
+    copyfile(ROOT / "development-source/bot-roles/codemp/ui/st_score_stats.h", ui / "st_score_stats.h")
+    stage_score_rows(cg)
     native = (ROOT / "development-source/client-game/codemp/cgame/cg_sabertrials_presentation.inc").read_text()
     painter = native[native.index("static void STP_CGFill"):native.index("void ST_ScorePage_f")]
     (cg / "st_classic_scoreboard.inc").write_text(
@@ -83,6 +91,58 @@ def stage_module(tree, archive):
 
 """ + draw)
     (cg / "cg_scoreboard.c").write_text(before + '#include "st_classic_scoreboard.inc"\n' + entry + body)
+
+
+def stage_score_rows(cg):
+    local = cg / "cg_local.h"
+    fields = local.read_text()
+    if "stTffaScoreStats" not in fields:
+        anchor = "} score_t;"
+        if fields.count(anchor) != 1:
+            raise ValueError("Unexpected compatibility score structure")
+        local.write_text(fields.replace(anchor, "\tint stMatchKills, stMatchDeaths;\n"
+                                               "\tqboolean stTffaScoreStats;\n" + anchor))
+
+    path = cg / "cg_servercmds.c"
+    source = path.read_text()
+    if "ST_TffaScoreStride" in source:
+        return
+    start = source.index("#define SCORE_OFFSET (14)")
+    end = source.index("\n/*", start)
+    original = source[start:end]
+    header_end = original.index("\tcg.teamScores[0]")
+    body = original[header_end:].replace("i*SCORE_OFFSET", "i*stride")
+    tail = "\n\t\tif ( cg.scores[i].client < 0"
+    if body.count(tail) != 1:
+        raise ValueError("Unexpected compatibility scores parser")
+    body = body.replace(tail, """
+		if ( stride == 18 ) {
+			cg.scores[i].stMatchKills = atoi( CG_Argv( i*stride + 18 ) );
+			cg.scores[i].stMatchDeaths = atoi( CG_Argv( i*stride + 19 ) );
+			cg.scores[i].stTffaScoreStats = qtrue;
+		}
+""" + tail)
+    header = '''#include "ui/st_score_stats.h"
+
+static int ST_TffaScoreStride(int rows) {
+    // A normal OpenJK row has 14 fields. The Saber Trials team stat layout
+    // has 18 fields and explicitly advertises team stats on every row.
+    if (cgs.gametype != GT_TEAM || rows < 1 || rows > MAX_CLIENT_SCORE_SEND ||
+        trap->Cmd_Argc() != 4 + rows * 18) return 14;
+    for (int i = 0; i < rows; ++i)
+        if (atoi(CG_Argv(i * 18 + 8)) != ST_SCORE_TFFA_KD) return 14;
+    return 18;
+}
+
+static void CG_ParseScores( void ) {
+    const int rows = atoi(CG_Argv(1));
+    const int stride = ST_TffaScoreStride(rows);
+    int readScores = Com_Clampi(0, MAX_CLIENT_SCORE_SEND, rows);
+    int i, powerups;
+    readScores = Com_Clampi(0, readScores, (trap->Cmd_Argc() - 4) / stride);
+    cg.numScores = readScores;
+'''
+    path.write_text(source[:start] + header + body + source[end:])
 
 
 def prefer_bundled_base(source):

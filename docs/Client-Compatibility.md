@@ -1,6 +1,8 @@
 # Multiplayer client compatibility
 
-Launch **Saber Trials.lnk** as usual. It starts `client/SaberTrials.x86_64.exe` with the correct GameData path. Join through the server browser or enter `/connect host:port` in the console.
+Open **SaberTrials.x86_64.exe** in **GameData** to play. The launcher uses that folder as the installation path, so the Mods menu can discover sibling mod folders. Selecting a mod loads it in the current client. For a mod that requires its own engine, open that mod's executable directly. Join through the server browser or enter `/connect host:port` in the console.
+
+The updated Windows client creates a `screenshots` folder on your first in-game capture. Look inside `GameData/base` for Base JKA, `GameData/japlus` for JA+, or `GameData/SaberTrials` for Saber Trials. Windows must allow writes to that game folder.
 
 Install personal map retextures in `GameData/base`. On a pure server, the
 server chooses the permitted PK3s and their order. Use `/path` while connected

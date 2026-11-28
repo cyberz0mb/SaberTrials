@@ -21,6 +21,8 @@ CGAME_DLL = "cgamex86_64.dll"
 SOURCE = ROOT / "development-source/menu-polish/interface_audit.py"
 sys.path.insert(0, str(SOURCE.parent))
 import interface_audit as layout
+import duel_privacy
+import ingame_typography
 
 
 def sha(path):
@@ -69,6 +71,10 @@ def prepare():
     layout.patch_cgame(OUT / "cgame")
     import_module("cosmetic_outfits").stage_cgame(OUT / "cgame")
     import_module("community_huds").stage_cgame(OUT / "cgame")
+    duel_privacy.stage_client(OUT / "cgame")
+    ingame_typography.stage_cgame(OUT / "cgame")
+    import_module("player_ignore").cgame(OUT / "cgame/codemp/cgame")
+    duel_privacy.stage_server(OUT / "game")
     layout.menus(ROOT, OUT / "menus")
     package_entries = {prefix + name: (OUT / "menus" / name).read_bytes()
                        for name in layout.MENUS for prefix in ("", "st_interface_audit/")}

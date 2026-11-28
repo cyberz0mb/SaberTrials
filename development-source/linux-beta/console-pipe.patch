@@ -1,0 +1,74 @@
+--- a/shared/sys/con_tty.cpp
++++ b/shared/sys/con_tty.cpp
+@@ -467,29 +467,48 @@
+ 	}
+ 	else if (stdin_active)
+ 	{
+-		int     len;
+-		fd_set  fdset;
+-		struct timeval timeout;
+-
+-		FD_ZERO(&fdset);
+-		FD_SET(STDIN_FILENO, &fdset); // stdin
+-		timeout.tv_sec = 0;
+-		timeout.tv_usec = 0;
+-		if(select (STDIN_FILENO + 1, &fdset, NULL, NULL, &timeout) == -1 || !FD_ISSET(STDIN_FILENO, &fdset))
+-			return NULL;
+-
+-		len = read(STDIN_FILENO, text, sizeof(text));
+-		if (len == 0)
+-		{ // eof!
+-			stdin_active = qfalse;
+-			return NULL;
+-		}
+-
+-		if (len < 1)
+-			return NULL;
+-		text[len-1] = 0;    // rip off the /n and terminate
+-
+-		return text;
++		// A hosting panel may deliver several lines per read, or split a line
++		// between reads. Emit only complete commands and preserve the remainder.
++		static char input[1024];
++		static size_t next, available, length;
++		static bool overlong;
++		if (next == available) {
++			fd_set ready;
++			FD_ZERO(&ready);
++			FD_SET(STDIN_FILENO, &ready);
++			struct timeval timeout = {0, 0};
++			if (select(STDIN_FILENO + 1, &ready, NULL, NULL, &timeout) <= 0)
++				return NULL;
++			const ssize_t received = read(STDIN_FILENO, input, sizeof(input));
++			if (received < 0)
++				return NULL;
++			if (received == 0) {
++				stdin_active = qfalse;
++				text[length] = '\0';
++				return length && !overlong ? text : NULL;
++			}
++			available = static_cast<size_t>(received);
++			next = 0;
++		}
++		while (next < available) {
++			const char c = input[next++];
++			if (c == '\n' || c == '\r') {
++				const bool complete = length && !overlong;
++				text[length] = '\0';
++				length = 0;
++				overlong = false;
++				if (complete)
++					return text;
++			} else if (!overlong) {
++				if (length < sizeof(text) - 1) {
++					text[length++] = c;
++				} else {
++					overlong = true;
++					CON_Print("Console command too long; skipped.\n");
++				}
++			}
++		}
++		return NULL;
+ 	}
+ 	return NULL;
+ }

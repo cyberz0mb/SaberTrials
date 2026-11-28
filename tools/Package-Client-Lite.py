@@ -82,7 +82,11 @@ def split(full):
             f"Saber Trials | Windows x64 multiplayer downloads | {beta_release.VERSION}", "",
             f"Full ({full.stat().st_size / 1e9:.2f} GB) includes the client and all offline chat language packs.",
             f"Lite ({(stage / LITE).stat().st_size / 1e9:.2f} GB) {included_text}",
-            "Both editions require Jedi Academy. Choose one edition.", "", GAME_GUIDE, "",
+            "Both editions require Jedi Academy.",
+            f"Windows installer: run SaberTrials-Windows-{beta_release.VERSION}-Setup.exe and choose Lite or Full.",
+            "Manual install: extract one edition's ZIP into GameData.",
+            "Double-click SaberTrials.x86_64.exe to play or SaberTrialsDed.x86_64.exe to host.",
+            "", GAME_GUIDE, "",
             "Optional language downloads for Lite", "",
         ]
         for code in sorted(packs.keys() - set(LITE_LANGUAGES), key=labels.get):

@@ -1,0 +1,424 @@
+{
+assetGlobalDef {
+ font "ergoec" 18 smallFont "ocr_a" 18 bigFont "anewhope" 20 small2Font "arialnb" 14
+ cursor "ui/assets/sabertrials/cursor" gradientBar "ui/assets/gradientbar2.tga"
+ itemFocusSound "sound/interface/menuroam.wav"
+ fadeClamp 1 fadeCycle 1 fadeAmount 0.1 shadowColor 0 0 0 .6
+}menuDef { name "ingame" rect 0 0 640 480 visible 0 fullscreen 0
+ focusColor 1 1 1 1 disableColor .35 .42 .47 1
+ onOpen { uiScript stPauseInit ; setfocus resume ; } onESC { uiScript closeingame ; }
+itemDef { name "rail" rect 18 54 230 340 style 3 background "ui/assets/sabertrials/pause_rail" forecolor 1 1 1 1 visible 1 decoration cvarTest "st_uiPauseShell" showCvar { "1" }  }
+itemDef { name "rail_edge" rect 18 54 1 340 style 3 background "ui/assets/sabertrials/pause_edge" forecolor 1 1 1 1 visible 1 decoration cvarTest "st_uiPauseShell" showCvar { "1" }  }
+itemDef { name "brand" type 0 rect 33 64 168 22 text "SABER TRIALS" font 3 textscale 0.59 textalign 0 textalignx 0 textaligny 0 forecolor .30 .78 1 1 visible 1 decoration cvarTest "st_uiPauseShell" showCvar { "1" }  }
+itemDef { name "focus_glow" rect 0 0 1 1 style 3 background "ui/assets/sabertrials/pause_focus" forecolor 1 1 1 1 visible 0 decoration group focus cvarTest "st_uiPauseShell" showCvar { "1" } }
+itemDef { name "about_line" rect 20 117 210 0.5 style 3 background "ui/assets/sabertrials/pause_line" forecolor 1 1 1 1 visible 1 decoration cvarTest "st_uiPauseShell" showCvar { "1" }  }
+
+itemDef { name "about_icon" rect 32 95.5 18 18 style 3 background "ui/assets/sabertrials/info" forecolor 1 1 1 1 visible 1 decoration cvarTest "st_uiPauseShell" showCvar { "1" }  }
+
+itemDef { name "about" rect 20 91 210 27 type 1 style 0 text "About"
+ font 2 textscale .78 textalignx 42 textaligny 3.5
+ forecolor .76 .86 .93 1 visible 1 cvarTest "st_uiPauseShell" showCvar { "1" }
+ onFocus { show focus_glow ; setitemrect focus_glow 20 91 210 27 ; }
+ leaveFocus { hide focus_glow ; }
+ action { play "sound/interface/button1.wav" ; open st_pause_about ; }  }
+itemDef { name "join_line" rect 20 145 210 0.5 style 3 background "ui/assets/sabertrials/pause_line" forecolor 1 1 1 1 visible 1 decoration cvarTest "st_uiPauseShell" showCvar { "1" }  }
+
+itemDef { name "join_icon" rect 32 123.5 18 18 style 3 background "ui/assets/sabertrials/join" forecolor 1 1 1 1 visible 1 decoration cvarTest "st_uiPauseShell" showCvar { "1" }  }
+
+itemDef { name "join" rect 20 119 210 27 type 1 style 0 text "Join"
+ font 2 textscale .78 textalignx 42 textaligny 3.5
+ forecolor .76 .86 .93 1 visible 1 cvarTest "st_uiPauseShell" showCvar { "1" }
+ onFocus { show focus_glow ; setitemrect focus_glow 20 119 210 27 ; }
+ leaveFocus { hide focus_glow ; }
+ action { play "sound/interface/button1.wav" ; open ingame_join ; }  }
+itemDef { name "player_line" rect 20 173 210 0.5 style 3 background "ui/assets/sabertrials/pause_line" forecolor 1 1 1 1 visible 1 decoration cvarTest "st_uiPauseShell" showCvar { "1" }  }
+
+itemDef { name "player_icon" rect 32 151.5 18 18 style 3 background "ui/assets/sabertrials/player" forecolor 1 1 1 1 visible 1 decoration cvarTest "st_uiPauseShell" showCvar { "1" }  }
+
+itemDef { name "player" rect 20 147 210 27 type 1 style 0 text "Player"
+ font 2 textscale .78 textalignx 42 textaligny 3.5
+ forecolor .76 .86 .93 1 visible 1 cvarTest "st_uiPauseShell" showCvar { "1" }
+ onFocus { show focus_glow ; setitemrect focus_glow 20 147 210 27 ; }
+ leaveFocus { hide focus_glow ; }
+ action { play "sound/interface/button1.wav" ; open ingame_player ; }  }
+itemDef { name "vote_line" rect 20 201 210 0.5 style 3 background "ui/assets/sabertrials/pause_line" forecolor 1 1 1 1 visible 1 decoration cvarTest "st_uiPauseShell" showCvar { "1" }  }
+
+itemDef { name "vote_icon" rect 32 179.5 18 18 style 3 background "ui/assets/sabertrials/vote" forecolor 1 1 1 1 visible 1 decoration cvarTest "st_uiPauseShell" showCvar { "1" }  }
+
+itemDef { name "vote" rect 20 175 210 27 type 1 style 0 text "Vote / Call Vote"
+ font 2 textscale .78 textalignx 42 textaligny 3.5
+ forecolor .76 .86 .93 1 visible 1 cvarTest "st_uiPauseShell" showCvar { "1" }
+ onFocus { show focus_glow ; setitemrect focus_glow 20 175 210 27 ; }
+ leaveFocus { hide focus_glow ; }
+ action { play "sound/interface/button1.wav" ; open st_pause_vote ; }  }
+itemDef { name "controls_line" rect 20 229 210 0.5 style 3 background "ui/assets/sabertrials/pause_line" forecolor 1 1 1 1 visible 1 decoration cvarTest "st_uiPauseShell" showCvar { "1" } }
+itemDef { name "controls_icon" rect 32 207.5 18 18 style 3 background "ui/assets/sabertrials/controls" forecolor 1 1 1 1 visible 1 decoration cvarTest "st_uiPauseShell" showCvar { "1" } }
+itemDef { name "controls" rect 20 203 210 27 type 1 style 0 text "Controls"
+ font 2 textscale .78 textalignx 42 textaligny 3.5
+ forecolor .76 .86 .93 1 visible 1 cvarTest "st_uiPauseShell" showCvar { "1" }
+ onFocus { show focus_glow ; setitemrect focus_glow 20 203 210 27 ; }
+ leaveFocus { hide focus_glow ; }
+ action { play "sound/interface/button1.wav" ; open ingame_controls ; } }
+itemDef { name "setup_line" rect 20 257 210 0.5 style 3 background "ui/assets/sabertrials/pause_line" forecolor 1 1 1 1 visible 1 decoration cvarTest "st_uiPauseShell" showCvar { "1" } }
+itemDef { name "setup_icon" rect 32 235.5 18 18 style 3 background "ui/assets/sabertrials/settings" forecolor 1 1 1 1 visible 1 decoration cvarTest "st_uiPauseShell" showCvar { "1" } }
+itemDef { name "setup" rect 20 231 210 27 type 1 style 0 text "Setup"
+ font 2 textscale .78 textalignx 42 textaligny 3.5
+ forecolor .76 .86 .93 1 visible 1 cvarTest "st_uiPauseShell" showCvar { "1" }
+ onFocus { show focus_glow ; setitemrect focus_glow 20 231 210 27 ; }
+ leaveFocus { hide focus_glow ; }
+ action { play "sound/interface/button1.wav" ; open ingame_setup ; } }
+itemDef { name "photo_line" rect 20 285 210 0.5 style 3 background "ui/assets/sabertrials/pause_line" forecolor 1 1 1 1 visible 1 decoration cvarTest "st_uiPauseShell" showCvar { "1" }  }
+
+itemDef { name "photo_icon" rect 32 263.5 18 18 style 3 background "ui/assets/sabertrials/camera" forecolor 1 1 1 1 visible 1 decoration cvarTest "st_uiPauseShell" showCvar { "1" }  }
+
+itemDef { name "photo" rect 20 259 210 27 type 1 style 0 text "Photo Mode"
+ font 2 textscale .78 textalignx 42 textaligny 3.5
+ forecolor .76 .86 .93 1 visible 1 cvarTest "st_uiPauseShell" showCvar { "1" }
+ onFocus { show focus_glow ; setitemrect focus_glow 20 259 210 27 ; }
+ leaveFocus { hide focus_glow ; }
+ action { play "sound/interface/button1.wav" ; open st_photo ; }  }
+itemDef { name "respawn_line" rect 20 313 210 0.5 style 3 background "ui/assets/sabertrials/pause_line" forecolor 1 1 1 1 visible 1 decoration cvarTest "st_uiPauseShell" showCvar { "1" }  }
+
+itemDef { name "respawn_icon" rect 32 291.5 18 18 style 3 background "ui/assets/sabertrials/refresh" forecolor 1 1 1 1 visible 1 decoration cvarTest "st_uiPauseShell" showCvar { "1" }  }
+
+itemDef { name "respawn" rect 20 287 210 27 type 1 style 0 text "Respawn"
+ font 2 textscale .78 textalignx 42 textaligny 3.5
+ forecolor .76 .86 .93 1 visible 1 cvarTest "st_uiPauseShell" showCvar { "1" }
+ onFocus { show focus_glow ; setitemrect focus_glow 20 287 210 27 ; }
+ leaveFocus { hide focus_glow ; }
+ action { play "sound/interface/button1.wav" ; open st_pause_respawn ; }  }
+itemDef { name "exit_line" rect 20 341 210 0.5 style 3 background "ui/assets/sabertrials/pause_line" forecolor 1 1 1 1 visible 1 decoration cvarTest "st_uiPauseShell" showCvar { "1" }  }
+
+itemDef { name "exit_icon" rect 32 319.5 18 18 style 3 background "ui/assets/sabertrials/exit" forecolor 1 1 1 1 visible 1 decoration cvarTest "st_uiPauseShell" showCvar { "1" }  }
+
+itemDef { name "exit" rect 20 315 210 27 type 1 style 0 text "Exit"
+ font 2 textscale .78 textalignx 42 textaligny 3.5
+ forecolor .76 .86 .93 1 visible 1 cvarTest "st_uiPauseShell" showCvar { "1" }
+ onFocus { show focus_glow ; setitemrect focus_glow 20 315 210 27 ; }
+ leaveFocus { hide focus_glow ; }
+ action { play "sound/interface/button1.wav" ; open st_pause_exit ; }  }
+
+itemDef { name tournament rect 254 354 166 28 type 1 text "Tournament lobby" font 2 textscale .73 textalignx 7 textaligny 4 forecolor .8 .92 1 1 style 1 backcolor .015 .055 .08 .96 border 1 bordersize .5 bordercolor .20 .65 .84 .9 visible 1 cvarTest "ui_stLobbyActive" showCvar { "1" } action { play "sound/interface/button1.wav" ; open st_tournament_ready ; } }
+itemDef { name "resume" rect 20 354 210 24 type 1 style 0 text "Resume  /  Esc"
+ font 2 textscale .85 textalignx 14 textaligny 2.0
+ forecolor .76 .86 .93 1 visible 1 cvarTest "st_uiPauseShell" showCvar { "1" }
+ onFocus { show focus_glow ; setitemrect focus_glow 20 354 210 24 ; }
+ leaveFocus { hide focus_glow ; }
+ action { play "sound/interface/button1.wav" ; uiScript closeingame ; } textscale .70 }
+
+itemDef { name account_link rect 34 400 148 26 type 1 text "Account / Log in" font 2 textscale .72
+ forecolor .76 .86 .93 1 visible 1 cvarTest "st_uiPauseShell" showCvar { "1" }
+ action { play "sound/interface/button1.wav" ; open st_pause_account ; } }
+itemDef { name pugqueue rect 250 353 160 25 type 1 cvarTest "st_uiPugQueue" showCvar { "1" } text "PUG Queue" font 2 textscale .78 forecolor .76 .86 .93 1 visible 1 action { open st_pause_pug_queue ; } }
+}
+
+menuDef { name st_pause_pug_queue rect 236 70 380 224 popup visible 0 fullscreen 0
+ focusColor 1 1 1 1 onESC { close st_pause_pug_queue ; } onOpen { setfocus join ; }
+ itemDef { name panel rect 0 0 380 224 style 1 backcolor .008 .026 .044 .97 border 1 bordercolor .30 .78 1 1 visible 1 decoration }
+ itemDef { name title rect 16 14 340 24 type 0 text "PUG QUEUE" font 2 textscale .9 visible 1 decoration }
+ itemDef { name join rect 18 51 344 30 type 1 text "Join Queue" textaligny 4 font 2 textscale .8 forecolor .76 .86 .93 1 visible 1 action { exec "cmd pug join" ; uiScript closeingame ; } }
+ itemDef { name leave rect 18 87 344 30 type 1 text "Leave Queue" textaligny 4 font 2 textscale .8 forecolor .76 .86 .93 1 visible 1 action { exec "cmd pug leave" ; uiScript closeingame ; } }
+ itemDef { name status rect 18 123 344 30 type 1 text "Queue Status" textaligny 4 font 2 textscale .8 forecolor .76 .86 .93 1 visible 1 action { exec "cmd pug status" ; uiScript closeingame ; } }
+ itemDef { name back rect 18 159 344 30 type 1 text "Back" textaligny 4 font 2 textscale .8 forecolor .76 .86 .93 1 visible 1 action { close st_pause_pug_queue ; } }
+}
+menuDef { name "st_pause_about" rect 0 0 640 480 visible 0 fullscreen 0
+ popup
+ focusColor 1 1 1 1 disableColor .35 .42 .47 1
+ onOpen { setfocus back ; } onESC { close st_pause_about ; }
+itemDef { name "panel" rect 236 62 380 275 style 1 backcolor .008 .026 .044 .94 visible 1 decoration cvarTest "st_uiPauseShell" showCvar { "1" } border 1 borderSize 1 bordercolor .30 .78 1 1  }
+itemDef { name "heading" type 0 rect 256 80 340 22 text "SABER TRIALS" font 4 textscale 1.02 textalign 0 textalignx 0 textaligny 0 forecolor .30 .78 1 1 visible 1 decoration cvarTest "st_uiPauseShell" showCvar { "1" }  }
+itemDef { name "copy0" type 0 rect 256 113 340 22 text "Multiplayer built around pro saber dueling." font 2 textscale 0.77 textalign 0 textalignx 0 textaligny 0 forecolor .76 .86 .93 1 visible 1 decoration cvarTest "st_uiPauseShell" showCvar { "1" }  }
+itemDef { name "copy1" type 0 rect 256 133 340 22 text "Your server chooses the combat rules." font 2 textscale 0.77 textalign 0 textalignx 0 textaligny 0 forecolor .76 .86 .93 1 visible 1 decoration cvarTest "st_uiPauseShell" showCvar { "1" }  }
+itemDef { name "copy2" type 0 rect 256 153 340 22 text "Original JKA and Saber Trials Combat are supported." font 2 textscale 0.77 textalign 0 textalignx 0 textaligny 0 forecolor .76 .86 .93 1 visible 1 decoration cvarTest "st_uiPauseShell" showCvar { "1" }  }
+itemDef { name "focus_glow" rect 0 0 1 1 style 3 background "ui/assets/sabertrials/focus" forecolor 1 1 1 1 visible 0 decoration group focus cvarTest "st_uiPauseShell" showCvar { "1" } }
+itemDef { name "details_line" rect 250 216 352 0.5 style 1 backcolor .38 .64 .78 .28 visible 1 decoration cvarTest "st_uiPauseShell" showCvar { "1" }  }
+itemDef { name "details" rect 250 185 352 32 type 1 style 0 text "Server information"
+ font 2 textscale .85 textalignx 14 textaligny 6.0
+ forecolor .76 .86 .93 1 visible 1 cvarTest "st_uiPauseShell" showCvar { "1" }
+ onFocus { show focus_glow ; setitemrect focus_glow 250 185 352 32 ; }
+ leaveFocus { hide focus_glow ; }
+ action { play "sound/interface/button1.wav" ; open ingame_about ; }  }
+itemDef { name "match_line" rect 250 250 352 0.5 style 1 backcolor .38 .64 .78 .28 visible 1 decoration cvarTest "st_uiPauseShell" showCvar { "1" }  }
+itemDef { name "match" rect 250 219 352 32 type 1 style 0 text "Match tools"
+ font 2 textscale .85 textalignx 14 textaligny 6.0
+ forecolor .76 .86 .93 1 visible 1 cvarTest "st_uiPauseShell" showCvar { "1" }
+ onFocus { show focus_glow ; setitemrect focus_glow 250 219 352 32 ; }
+ leaveFocus { hide focus_glow ; }
+ action { play "sound/interface/button1.wav" ; open st_pause_tools ; }  }
+itemDef { name "back_line" rect 250 326 352 0.5 style 1 backcolor .38 .64 .78 .28 visible 1 decoration cvarTest "st_uiPauseShell" showCvar { "1" }  }
+itemDef { name "back" rect 250 299 352 28 type 1 style 0 text "Back"
+ font 2 textscale .85 textalignx 14 textaligny 4.0
+ forecolor .76 .86 .93 1 visible 1 cvarTest "st_uiPauseShell" showCvar { "1" }
+ onFocus { show focus_glow ; setitemrect focus_glow 250 299 352 28 ; }
+ leaveFocus { hide focus_glow ; }
+ action { play "sound/interface/button1.wav" ; close st_pause_about ; } textscale .8 }
+
+}
+menuDef { name "st_pause_tools" rect 0 0 640 480 visible 0 fullscreen 0
+ popup
+ focusColor 1 1 1 1 disableColor .35 .42 .47 1
+ onOpen { setfocus back ; } onESC { close st_pause_tools ; }
+itemDef { name "panel" rect 236 62 380 275 style 1 backcolor .008 .026 .044 .94 visible 1 decoration cvarTest "st_uiPauseShell" showCvar { "1" } border 1 borderSize 1 bordercolor .30 .78 1 1  }
+itemDef { name "heading" type 0 rect 256 80 340 22 text "MATCH TOOLS" font 4 textscale 1.02 textalign 0 textalignx 0 textaligny 0 forecolor .30 .78 1 1 visible 1 decoration cvarTest "st_uiPauseShell" showCvar { "1" }  }
+itemDef { name "focus_glow" rect 0 0 1 1 style 3 background "ui/assets/sabertrials/focus" forecolor 1 1 1 1 visible 0 decoration group focus cvarTest "st_uiPauseShell" showCvar { "1" } }
+itemDef { name "bots_line" rect 250 209 352 0.5 style 1 backcolor .38 .64 .78 .28 visible 1 decoration cvarTest "st_uiPauseShell" showCvar { "1" }  }
+itemDef { name "bots" rect 250 178 352 32 type 1 style 0 text "Add bots"
+ font 2 textscale .85 textalignx 14 textaligny 6.0
+ forecolor .76 .86 .93 1 visible 1 cvarTest "st_uiPauseShell" showCvar { "1" }
+ onFocus { show focus_glow ; setitemrect focus_glow 250 178 352 32 ; }
+ leaveFocus { hide focus_glow ; }
+ action { play "sound/interface/button1.wav" ; open ingame_addbot ; }  }
+itemDef { name "objectives_line" rect 250 243 352 0.5 style 1 backcolor .38 .64 .78 .28 visible 1 decoration cvarTest "st_uiPauseShell" showCvar { "1" }  }
+itemDef { name "objectives" rect 250 212 352 32 type 1 style 0 text "Siege objectives"
+ font 2 textscale .85 textalignx 14 textaligny 6.0
+ forecolor .76 .86 .93 1 visible 1 cvarTest "st_uiPauseShell" showCvar { "1" }
+ onFocus { show focus_glow ; setitemrect focus_glow 250 212 352 32 ; }
+ leaveFocus { hide focus_glow ; }
+ action { play "sound/interface/button1.wav" ; open ingame_objectives ; }  }
+itemDef { name "voice_line" rect 250 277 352 0.5 style 1 backcolor .38 .64 .78 .28 visible 1 decoration cvarTest "st_uiPauseShell" showCvar { "1" }  }
+itemDef { name "voice" rect 250 246 352 32 type 1 style 0 text "Siege voice commands"
+ font 2 textscale .85 textalignx 14 textaligny 6.0
+ forecolor .76 .86 .93 1 visible 1 cvarTest "st_uiPauseShell" showCvar { "1" }
+ onFocus { show focus_glow ; setitemrect focus_glow 250 246 352 32 ; }
+ leaveFocus { hide focus_glow ; }
+ action { play "sound/interface/button1.wav" ; open ingame_voicechat ; }  }
+itemDef { name "match_rules" rect 250 110 352 32 type 1 text "Match Rules (host)"
+ font 2 textscale .85 textalignx 14 textaligny 6 forecolor .76 .86 .93 1 visible 1
+ cvarTest "sv_running" showCvar { "1" }
+ onFocus { show focus_glow ; setitemrect focus_glow 250 110 352 32 ; }
+ leaveFocus { hide focus_glow ; }
+ action { play "sound/interface/button1.wav" ; open advancedcreateserver ; }
+}
+itemDef { name "back_line" rect 250 326 352 0.5 style 1 backcolor .38 .64 .78 .28 visible 1 decoration cvarTest "st_uiPauseShell" showCvar { "1" }  }
+itemDef { name "back" rect 250 299 352 28 type 1 style 0 text "Back"
+ font 2 textscale .85 textalignx 14 textaligny 4.0
+ forecolor .76 .86 .93 1 visible 1 cvarTest "st_uiPauseShell" showCvar { "1" }
+ onFocus { show focus_glow ; setitemrect focus_glow 250 299 352 28 ; }
+ leaveFocus { hide focus_glow ; }
+ action { play "sound/interface/button1.wav" ; close st_pause_tools ; } textscale .8 }
+
+}
+menuDef { name "st_pause_vote" rect 0 0 640 480 visible 0 fullscreen 0
+ popup
+ focusColor 1 1 1 1 disableColor .35 .42 .47 1
+ onOpen { setfocus back ; } onESC { close st_pause_vote ; }
+itemDef { name "panel" rect 236 62 380 275 style 1 backcolor .008 .026 .044 .94 visible 1 decoration cvarTest "st_uiPauseShell" showCvar { "1" } border 1 borderSize 1 bordercolor .30 .78 1 1  }
+itemDef { name "heading" type 0 rect 256 80 340 22 text "VOTING" font 4 textscale 1.02 textalign 0 textalignx 0 textaligny 0 forecolor .30 .78 1 1 visible 1 decoration cvarTest "st_uiPauseShell" showCvar { "1" }  }
+itemDef { name "copy0" type 0 rect 256 113 340 22 text "Have your say on the current vote," font 2 textscale 0.77 textalign 0 textalignx 0 textaligny 0 forecolor .76 .86 .93 1 visible 1 decoration cvarTest "st_uiPauseShell" showCvar { "1" }  }
+itemDef { name "copy1" type 0 rect 256 133 340 22 text "or propose a change to this server." font 2 textscale 0.77 textalign 0 textalignx 0 textaligny 0 forecolor .76 .86 .93 1 visible 1 decoration cvarTest "st_uiPauseShell" showCvar { "1" }  }
+itemDef { name "focus_glow" rect 0 0 1 1 style 3 background "ui/assets/sabertrials/focus" forecolor 1 1 1 1 visible 0 decoration group focus cvarTest "st_uiPauseShell" showCvar { "1" } }
+itemDef { name "cast_line" rect 250 209 352 0.5 style 1 backcolor .38 .64 .78 .28 visible 1 decoration cvarTest "st_uiPauseShell" showCvar { "1" }  }
+itemDef { name "cast" rect 250 178 352 32 type 1 style 0 text "Cast your vote"
+ font 2 textscale .85 textalignx 14 textaligny 6.0
+ forecolor .76 .86 .93 1 visible 1 cvarTest "st_uiPauseShell" showCvar { "1" }
+ onFocus { show focus_glow ; setitemrect focus_glow 250 178 352 32 ; }
+ leaveFocus { hide focus_glow ; }
+ action { play "sound/interface/button1.wav" ; open ingame_vote ; }  }
+itemDef { name "call_line" rect 250 243 352 0.5 style 1 backcolor .38 .64 .78 .28 visible 1 decoration cvarTest "st_uiPauseShell" showCvar { "1" }  }
+itemDef { name "call" rect 250 212 352 32 type 1 style 0 text "Call a vote"
+ font 2 textscale .85 textalignx 14 textaligny 6.0
+ forecolor .76 .86 .93 1 visible 1 cvarTest "st_uiPauseShell" showCvar { "1" }
+ onFocus { show focus_glow ; setitemrect focus_glow 250 212 352 32 ; }
+ leaveFocus { hide focus_glow ; }
+ action { play "sound/interface/button1.wav" ; open ingame_callvote ; }  }
+itemDef { name "back_line" rect 250 326 352 0.5 style 1 backcolor .38 .64 .78 .28 visible 1 decoration cvarTest "st_uiPauseShell" showCvar { "1" }  }
+itemDef { name "back" rect 250 299 352 28 type 1 style 0 text "Back"
+ font 2 textscale .85 textalignx 14 textaligny 4.0
+ forecolor .76 .86 .93 1 visible 1 cvarTest "st_uiPauseShell" showCvar { "1" }
+ onFocus { show focus_glow ; setitemrect focus_glow 250 299 352 28 ; }
+ leaveFocus { hide focus_glow ; }
+ action { play "sound/interface/button1.wav" ; close st_pause_vote ; } textscale .8 }
+
+}
+menuDef { name "st_photo" rect 0 0 640 480 visible 0 fullscreen 0 popup
+ focusColor 1 1 1 1 disableColor .35 .42 .47 1
+ onOpen { uiScript stPhotoInit ; setfocus start ; }
+ onESC { close st_photo ; }
+ itemDef { name panel rect 88 28 464 424 style 1 backcolor .008 .026 .044 .96
+  border 1 borderSize 1 bordercolor .30 .78 1 .65 visible 1 decoration }
+ itemDef { name heading rect 110 45 420 24 type 0 text "PHOTO MODE" font 4 textscale 1
+  forecolor .30 .78 1 1 visible 1 decoration }
+ itemDef { name note rect 110 73 420 18 type 0 text "Solo, spectator and replay camera. Online matches stay live."
+  font 2 textscale .66 forecolor .76 .86 .93 1 visible 1 decoration }
+itemDef { name label0 rect 110 100 420 20 type 0 text "Field of view" font 2 textscale .76 forecolor .76 .86 .93 1 visible 1 decoration }
+itemDef { name slider0 rect 280 100 150 22 type 10
+ cvarFloat "st_uiPhotoFov" 90 20 120 font 2 textscale .75
+ forecolor .76 .86 .93 1 visible 1 }
+itemDef { name value0 rect 442 100 80 22 type 4 text ""
+ cvar "st_uiPhotoFov" maxChars 8 maxPaintChars 8 font 2 textscale .8
+ textalignx 5 textaligny 2 forecolor .76 .86 .93 1 style 1 backcolor .02 .07 .10 1
+ border 1 bordercolor .30 .78 1 .6 visible 1 }
+itemDef { name label1 rect 110 138 420 20 type 0 text "Camera tilt" font 2 textscale .76 forecolor .76 .86 .93 1 visible 1 decoration }
+itemDef { name slider1 rect 280 138 150 22 type 10
+ cvarFloat "st_uiPhotoRoll" 0 -45 45 font 2 textscale .75
+ forecolor .76 .86 .93 1 visible 1 }
+itemDef { name value1 rect 442 138 80 22 type 4 text ""
+ cvar "st_uiPhotoRoll" maxChars 8 maxPaintChars 8 font 2 textscale .8
+ textalignx 5 textaligny 2 forecolor .76 .86 .93 1 style 1 backcolor .02 .07 .10 1
+ border 1 bordercolor .30 .78 1 .6 visible 1 }
+itemDef { name label2 rect 110 176 420 20 type 0 text "Solo / replay speed" font 2 textscale .76 forecolor .76 .86 .93 1 visible 1 decoration }
+itemDef { name slider2 rect 280 176 150 22 type 10
+ cvarFloat "st_uiPhotoSpeed" 200 20 800 font 2 textscale .75
+ forecolor .76 .86 .93 1 visible 1 }
+itemDef { name value2 rect 442 176 80 22 type 4 text ""
+ cvar "st_uiPhotoSpeed" maxChars 8 maxPaintChars 8 font 2 textscale .8
+ textalignx 5 textaligny 2 forecolor .76 .86 .93 1 style 1 backcolor .02 .07 .10 1
+ border 1 bordercolor .30 .78 1 .6 visible 1 }
+itemDef { name scene rect 110 242 420 23 type 12 text "Scene: " cvar "st_photoFreeze"
+ cvarFloatList { "Live" 0 "Freeze" 1 } font 2 textscale .82 forecolor .76 .86 .93 1 visible 1
+ cvarTest "st_photoSolo" enableCvar { "1" } }
+itemDef { name guides rect 110 271 205 22 type 11 text "Composition grid: " cvar "st_photoGuides"
+ font 2 textscale .76 forecolor .76 .86 .93 1 visible 1 }
+itemDef { name help rect 330 271 195 22 type 11 text "Show controls: " cvar "st_photoHelp"
+ font 2 textscale .76 forecolor .76 .86 .93 1 visible 1 }
+itemDef { name freeze_note rect 110 300 420 20 type 0 text "Freeze is available in local solo games, including bots." font 2 textscale .67 forecolor .76 .86 .93 1 visible 1 decoration }
+itemDef { name speed_note rect 110 317 420 20 type 0 text "Online free camera uses your normal spectator movement." font 2 textscale .67 forecolor .76 .86 .93 1 visible 1 decoration }
+itemDef { name status rect 110 335 420 20 type 0 cvar "st_uiPhotoStatus"
+ font 2 textscale .67 forecolor .30 .78 1 1 visible 1 decoration }
+itemDef { name apply rect 110 205 200 30 type 1 text "Apply camera"
+ font 2 textscale .85 textalignx 10 textaligny 5 forecolor .76 .86 .93 1 visible 1
+ style 1 backcolor .02 .07 .11 .9 border 1 bordercolor .30 .78 1 .45
+ action { play "sound/interface/button1.wav" ; uiScript stPhotoApply ; } }
+itemDef { name reset rect 330 205 200 30 type 1 text "Reset camera"
+ font 2 textscale .85 textalignx 10 textaligny 5 forecolor .76 .86 .93 1 visible 1
+ style 1 backcolor .02 .07 .11 .9 border 1 bordercolor .30 .78 1 .45
+ action { play "sound/interface/button1.wav" ; uiScript stPhotoReset ; } }
+itemDef { name start rect 110 361 200 30 type 1 text "Start / Resume"
+ font 2 textscale .85 textalignx 10 textaligny 5 forecolor .76 .86 .93 1 visible 1
+ style 1 backcolor .02 .07 .11 .9 border 1 bordercolor .30 .78 1 .45
+ action { play "sound/interface/button1.wav" ; uiScript stPhotoStart ; } }
+itemDef { name capture rect 330 361 200 30 type 1 text "Take photo"
+ font 2 textscale .85 textalignx 10 textaligny 5 forecolor .76 .86 .93 1 visible 1
+ style 1 backcolor .02 .07 .11 .9 border 1 bordercolor .30 .78 1 .45
+ action { play "sound/interface/button1.wav" ; uiScript stPhotoCapture ; } }
+itemDef { name exit rect 110 405 200 30 type 1 text "Exit Photo Mode"
+ font 2 textscale .85 textalignx 10 textaligny 5 forecolor .76 .86 .93 1 visible 1
+ style 1 backcolor .02 .07 .11 .9 border 1 bordercolor .30 .78 1 .45
+ action { play "sound/interface/button1.wav" ; uiScript stPhotoExit ; } }
+itemDef { name back rect 330 405 200 30 type 1 text "Back"
+ font 2 textscale .85 textalignx 10 textaligny 5 forecolor .76 .86 .93 1 visible 1
+ style 1 backcolor .02 .07 .11 .9 border 1 bordercolor .30 .78 1 .45
+ action { play "sound/interface/button1.wav" ; close st_photo ; } }
+}
+menuDef { name "st_pause_respawn" rect 0 0 640 480 visible 0 fullscreen 0
+ popup
+ focusColor 1 1 1 1 disableColor .35 .42 .47 1
+ onOpen { setfocus back ; } onESC { close st_pause_respawn ; }
+itemDef { name "panel" rect 236 62 380 275 style 1 backcolor .008 .026 .044 .94 visible 1 decoration cvarTest "st_uiPauseShell" showCvar { "1" } border 1 borderSize 1 bordercolor .30 .78 1 1  }
+itemDef { name "heading" type 0 rect 256 80 340 22 text "RESPAWN?" font 4 textscale 1.02 textalign 0 textalignx 0 textaligny 0 forecolor .30 .78 1 1 visible 1 decoration cvarTest "st_uiPauseShell" showCvar { "1" }  }
+itemDef { name "copy0" type 0 rect 256 113 340 22 text "This ends your current life." font 2 textscale 0.77 textalign 0 textalignx 0 textaligny 0 forecolor .76 .86 .93 1 visible 1 decoration cvarTest "st_uiPauseShell" showCvar { "1" }  }
+itemDef { name "copy1" type 0 rect 256 133 340 22 text "Your server may deduct a point." font 2 textscale 0.77 textalign 0 textalignx 0 textaligny 0 forecolor .76 .86 .93 1 visible 1 decoration cvarTest "st_uiPauseShell" showCvar { "1" }  }
+itemDef { name "focus_glow" rect 0 0 1 1 style 3 background "ui/assets/sabertrials/focus" forecolor 1 1 1 1 visible 0 decoration group focus cvarTest "st_uiPauseShell" showCvar { "1" } }
+itemDef { name "confirm_line" rect 250 209 352 0.5 style 1 backcolor .38 .64 .78 .28 visible 1 decoration cvarTest "st_uiPauseShell" showCvar { "1" }  }
+itemDef { name "confirm" rect 250 178 352 32 type 1 style 0 text "Respawn now"
+ font 2 textscale .85 textalignx 14 textaligny 6.0
+ forecolor .76 .86 .93 1 visible 1 cvarTest "st_uiPauseShell" showCvar { "1" }
+ onFocus { show focus_glow ; setitemrect focus_glow 250 178 352 32 ; }
+ leaveFocus { hide focus_glow ; }
+ action { play "sound/interface/button1.wav" ; exec "kill" ; uiScript closeingame ; }  }
+itemDef { name "back_line" rect 250 326 352 0.5 style 1 backcolor .38 .64 .78 .28 visible 1 decoration cvarTest "st_uiPauseShell" showCvar { "1" }  }
+itemDef { name "back" rect 250 299 352 28 type 1 style 0 text "Back"
+ font 2 textscale .85 textalignx 14 textaligny 4.0
+ forecolor .76 .86 .93 1 visible 1 cvarTest "st_uiPauseShell" showCvar { "1" }
+ onFocus { show focus_glow ; setitemrect focus_glow 250 299 352 28 ; }
+ leaveFocus { hide focus_glow ; }
+ action { play "sound/interface/button1.wav" ; close st_pause_respawn ; } textscale .8 }
+
+}
+menuDef { name "st_pause_exit" rect 0 0 640 480 visible 0 fullscreen 0
+ popup
+ focusColor 1 1 1 1 disableColor .35 .42 .47 1
+ onOpen { setfocus back ; } onESC { close st_pause_exit ; }
+itemDef { name "panel" rect 236 62 380 275 style 1 backcolor .008 .026 .044 .94 visible 1 decoration cvarTest "st_uiPauseShell" showCvar { "1" } border 1 borderSize 1 bordercolor .30 .78 1 1  }
+itemDef { name "heading" type 0 rect 256 80 340 22 text "LEAVE THE MATCH?" font 4 textscale 1.02 textalign 0 textalignx 0 textaligny 0 forecolor .30 .78 1 1 visible 1 decoration cvarTest "st_uiPauseShell" showCvar { "1" }  }
+itemDef { name "focus_glow" rect 0 0 1 1 style 3 background "ui/assets/sabertrials/focus" forecolor 1 1 1 1 visible 0 decoration group focus cvarTest "st_uiPauseShell" showCvar { "1" } }
+itemDef { name "disconnect_line" rect 250 209 352 0.5 style 1 backcolor .38 .64 .78 .28 visible 1 decoration cvarTest "st_uiPauseShell" showCvar { "1" }  }
+itemDef { name "disconnect" rect 250 178 352 32 type 1 style 0 text "Disconnect"
+ font 2 textscale .85 textalignx 14 textaligny 6.0
+ forecolor .76 .86 .93 1 visible 1 cvarTest "st_uiPauseShell" showCvar { "1" }
+ onFocus { show focus_glow ; setitemrect focus_glow 250 178 352 32 ; }
+ leaveFocus { hide focus_glow ; }
+ action { play "sound/interface/button1.wav" ; open st_pause_disconnect ; }  }
+itemDef { name "quit_line" rect 250 243 352 0.5 style 1 backcolor .38 .64 .78 .28 visible 1 decoration cvarTest "st_uiPauseShell" showCvar { "1" }  }
+itemDef { name "quit" rect 250 212 352 32 type 1 style 0 text "Quit game"
+ font 2 textscale .85 textalignx 14 textaligny 6.0
+ forecolor .76 .86 .93 1 visible 1 cvarTest "st_uiPauseShell" showCvar { "1" }
+ onFocus { show focus_glow ; setitemrect focus_glow 250 212 352 32 ; }
+ leaveFocus { hide focus_glow ; }
+ action { play "sound/interface/button1.wav" ; open st_pause_quit ; }  }
+itemDef { name "back_line" rect 250 326 352 0.5 style 1 backcolor .38 .64 .78 .28 visible 1 decoration cvarTest "st_uiPauseShell" showCvar { "1" }  }
+itemDef { name "back" rect 250 299 352 28 type 1 style 0 text "Back"
+ font 2 textscale .85 textalignx 14 textaligny 4.0
+ forecolor .76 .86 .93 1 visible 1 cvarTest "st_uiPauseShell" showCvar { "1" }
+ onFocus { show focus_glow ; setitemrect focus_glow 250 299 352 28 ; }
+ leaveFocus { hide focus_glow ; }
+ action { play "sound/interface/button1.wav" ; close st_pause_exit ; } textscale .8 }
+
+}
+menuDef { name "st_pause_disconnect" rect 0 0 640 480 visible 0 fullscreen 0
+ popup
+ focusColor 1 1 1 1 disableColor .35 .42 .47 1
+ onOpen { setfocus back ; } onESC { close st_pause_disconnect ; }
+itemDef { name "panel" rect 236 62 380 275 style 1 backcolor .008 .026 .044 .94 visible 1 decoration cvarTest "st_uiPauseShell" showCvar { "1" } border 1 borderSize 1 bordercolor .30 .78 1 1  }
+itemDef { name "heading" type 0 rect 256 80 340 22 text "DISCONNECT?" font 4 textscale 1.02 textalign 0 textalignx 0 textaligny 0 forecolor .30 .78 1 1 visible 1 decoration cvarTest "st_uiPauseShell" showCvar { "1" }  }
+itemDef { name "copy0" type 0 rect 256 113 340 22 text "Leave this server and return to the main menu?" font 2 textscale 0.77 textalign 0 textalignx 0 textaligny 0 forecolor .76 .86 .93 1 visible 1 decoration cvarTest "st_uiPauseShell" showCvar { "1" }  }
+itemDef { name "focus_glow" rect 0 0 1 1 style 3 background "ui/assets/sabertrials/focus" forecolor 1 1 1 1 visible 0 decoration group focus cvarTest "st_uiPauseShell" showCvar { "1" } }
+itemDef { name "confirm_line" rect 250 209 352 0.5 style 1 backcolor .38 .64 .78 .28 visible 1 decoration cvarTest "st_uiPauseShell" showCvar { "1" }  }
+itemDef { name "confirm" rect 250 178 352 32 type 1 style 0 text "Disconnect"
+ font 2 textscale .85 textalignx 14 textaligny 6.0
+ forecolor .76 .86 .93 1 visible 1 cvarTest "st_uiPauseShell" showCvar { "1" }
+ onFocus { show focus_glow ; setitemrect focus_glow 250 178 352 32 ; }
+ leaveFocus { hide focus_glow ; }
+ action { play "sound/interface/button1.wav" ; uiScript leave ; }  }
+itemDef { name "back_line" rect 250 326 352 0.5 style 1 backcolor .38 .64 .78 .28 visible 1 decoration cvarTest "st_uiPauseShell" showCvar { "1" }  }
+itemDef { name "back" rect 250 299 352 28 type 1 style 0 text "Back"
+ font 2 textscale .85 textalignx 14 textaligny 4.0
+ forecolor .76 .86 .93 1 visible 1 cvarTest "st_uiPauseShell" showCvar { "1" }
+ onFocus { show focus_glow ; setitemrect focus_glow 250 299 352 28 ; }
+ leaveFocus { hide focus_glow ; }
+ action { play "sound/interface/button1.wav" ; close st_pause_disconnect ; } textscale .8 }
+
+}
+menuDef { name "st_pause_quit" rect 0 0 640 480 visible 0 fullscreen 0
+ popup
+ focusColor 1 1 1 1 disableColor .35 .42 .47 1
+ onOpen { setfocus back ; } onESC { close st_pause_quit ; }
+itemDef { name "panel" rect 236 62 380 275 style 1 backcolor .008 .026 .044 .94 visible 1 decoration cvarTest "st_uiPauseShell" showCvar { "1" } border 1 borderSize 1 bordercolor .30 .78 1 1  }
+itemDef { name "heading" type 0 rect 256 80 340 22 text "QUIT GAME?" font 4 textscale 1.02 textalign 0 textalignx 0 textaligny 0 forecolor .30 .78 1 1 visible 1 decoration cvarTest "st_uiPauseShell" showCvar { "1" }  }
+itemDef { name "copy0" type 0 rect 256 113 340 22 text "Leave this server and return to your desktop?" font 2 textscale 0.77 textalign 0 textalignx 0 textaligny 0 forecolor .76 .86 .93 1 visible 1 decoration cvarTest "st_uiPauseShell" showCvar { "1" }  }
+itemDef { name "focus_glow" rect 0 0 1 1 style 3 background "ui/assets/sabertrials/focus" forecolor 1 1 1 1 visible 0 decoration group focus cvarTest "st_uiPauseShell" showCvar { "1" } }
+itemDef { name "confirm_line" rect 250 209 352 0.5 style 1 backcolor .38 .64 .78 .28 visible 1 decoration cvarTest "st_uiPauseShell" showCvar { "1" }  }
+itemDef { name "confirm" rect 250 178 352 32 type 1 style 0 text "Quit game"
+ font 2 textscale .85 textalignx 14 textaligny 6.0
+ forecolor .76 .86 .93 1 visible 1 cvarTest "st_uiPauseShell" showCvar { "1" }
+ onFocus { show focus_glow ; setitemrect focus_glow 250 178 352 32 ; }
+ leaveFocus { hide focus_glow ; }
+ action { play "sound/interface/button1.wav" ; uiScript quit ; }  }
+itemDef { name "back_line" rect 250 326 352 0.5 style 1 backcolor .38 .64 .78 .28 visible 1 decoration cvarTest "st_uiPauseShell" showCvar { "1" }  }
+itemDef { name "back" rect 250 299 352 28 type 1 style 0 text "Back"
+ font 2 textscale .85 textalignx 14 textaligny 4.0
+ forecolor .76 .86 .93 1 visible 1 cvarTest "st_uiPauseShell" showCvar { "1" }
+ onFocus { show focus_glow ; setitemrect focus_glow 250 299 352 28 ; }
+ leaveFocus { hide focus_glow ; }
+ action { play "sound/interface/button1.wav" ; close st_pause_quit ; } textscale .8 }
+
+}
+menuDef { name "st_pause_account" rect 80 115 480 230 visible 0 fullscreen 0 popup
+ focusColor 1 1 1 1 onESC { close st_pause_account ; } onOpen { setfocus back ; }
+ itemDef { name panel rect 0 0 480 230 style 1 backcolor .008 .026 .044 .97 border 1 bordercolor .22 .49 .64 .8 visible 1 decoration }
+itemDef { name title rect 18 12 550 20 type 0 text "SABER TRIALS / ACCOUNT" font 2 textscale .95 forecolor .76 .86 .93 1 visible 1 decoration }
+itemDef { name name rect 20 48 440 20 type 0 cvar "ui_stAccountName" font 2 textscale .92 forecolor .76 .86 .93 1 visible 1 decoration }
+itemDef { name team rect 20 77 440 20 type 0 cvar "ui_stAccountTeam" font 2 textscale .68 forecolor .76 .86 .93 1 visible 1 decoration }
+itemDef { name status rect 20 106 440 20 type 0 cvar "ui_stAccountStatus" font 2 textscale .68 forecolor .76 .86 .93 1 visible 1 decoration }
+itemDef { name notice rect 20 136 440 20 type 0 text "Server tournament verification is coming next." font 2 textscale .65 forecolor .76 .86 .93 1 visible 1 decoration }
+itemDef { name login rect 20 181 205 26 type 1 text "Log in with Discord" font 2 textscale .72
+ forecolor .76 .86 .93 1 visible 1 cvarTest "ui_stAccountCanLogin" showCvar { "1" }
+ action { play "sound/interface/button1.wav" ; exec "login" ; } }
+itemDef { name logout rect 235 181 145 26 type 1 text "Log out / Cancel" font 2 textscale .72
+ forecolor .76 .86 .93 1 visible 1 cvarTest "ui_stAccountCanLogout" showCvar { "1" }
+ action { play "sound/interface/button1.wav" ; exec "logout" ; } }
+itemDef { name back rect 390 181 70 26 type 1 text "Back" font 2 textscale .72
+ forecolor .76 .86 .93 1 visible 1
+ action { play "sound/interface/button1.wav" ; close st_pause_account ; } }
+}
+}

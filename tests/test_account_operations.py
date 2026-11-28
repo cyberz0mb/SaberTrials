@@ -75,7 +75,12 @@ class OperationsTests(unittest.TestCase):
         db = self.root / 'accounts.sqlite'
         old = AccountStore(db)
         old.ledger.register_verified_player('saved-player', 'Saved Player')
-        old.db.execute('ALTER TABLE account_challenges DROP COLUMN client_nonce')
+        # Recreate the original empty challenge table on every supported SQLite version.
+        old.db.execute('DROP TABLE account_challenges')
+        old.db.execute('''CREATE TABLE account_challenges(
+            hash TEXT PRIMARY KEY, server TEXT NOT NULL REFERENCES servers(id),
+            instance TEXT NOT NULL, slot INTEGER NOT NULL, generation TEXT NOT NULL,
+            expires REAL NOT NULL, session TEXT REFERENCES account_sessions(hash) ON DELETE CASCADE)''')
         old.db.execute('DROP TABLE account_server_endpoints')
         old.close()
         prepare(db)

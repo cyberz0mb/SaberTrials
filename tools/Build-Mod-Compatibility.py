@@ -11,6 +11,7 @@ import subprocess
 import sys
 import zipfile
 from mod_compatibility import apply_compatibility, apply_profile
+import player_ignore
 from compat_art import stage_art
 from full_client_ui import patch_engine, patch_frontend
 import ja_client
@@ -20,6 +21,9 @@ import compat_scoreboard
 import cosmetic_outfits
 import training_hud
 import community_huds
+import duel_privacy
+import ingame_typography
+import music_player
 
 ROOT = Path(__file__).resolve().parents[1]
 DIST = ROOT / "dist"
@@ -74,6 +78,8 @@ def build_stock():
     compat_scoreboard.stage_module(source, archive)
     cosmetic_outfits.stage_cgame(source)
     community_huds.stage_cgame(source)
+    duel_privacy.stage_client(source)
+    ingame_typography.stage_cgame(source)
     flags = import_module("Build-Adaptive-Network").FLAGS
     subprocess.run(["cmake", "-S", source, "-B", OUT / "stock-build", "-G", "Visual Studio 18 2026",
                     "-A", "x64", *[f"-D{f}={'ON' if f in ('BuildMPUI','BuildMPCGame') else 'OFF'}" for f in flags]], check=True)
@@ -84,6 +90,8 @@ def build_stock():
     compat_scoreboard.stage_module(ja_source, archive)
     cosmetic_outfits.stage_cgame(ja_source)
     community_huds.stage_cgame(ja_source)
+    duel_privacy.stage_client(ja_source)
+    ingame_typography.stage_cgame(ja_source)
     subprocess.run(["cmake","-S",ja_source,"-B",OUT/"ja-build","-G","Visual Studio 18 2026",
                     "-A","x64",*[f"-D{f}={'ON' if f=='BuildMPCGame' else 'OFF'}" for f in flags]],check=True)
     subprocess.run(["cmake","--build",OUT/"ja-build","--config","Release","--parallel","1",
@@ -119,6 +127,43 @@ def stage_pause_browser(frontend):
     cosmetic_outfits.stage_ui(frontend)
     training_hud.stage_menu(frontend)
     community_huds.stage_menu(frontend)
+    duel_privacy.stage_menu(frontend)
+    music_player.stage_frontend(frontend)
+
+
+def stage_screenshot_paths(tree):
+    path = tree / "codemp/qcommon/files.cpp"
+    source = path.read_text()
+    marker = "qboolean FS_FileExists( const char *file )"
+    helper = r'''static const char *FS_CaptureRoot(const char *path) {
+#if defined(_WIN32) && !defined(DEDICATED)
+    if (path && !Q_stricmpn(path, "screenshots/", 12)) {
+        const char *name = path + 12;
+        const char *ext = strrchr(name, '.');
+        if (ext && ext != name && !strpbrk(name, "/\\:") &&
+            (!Q_stricmp(ext, ".png") || !Q_stricmp(ext, ".jpg") || !Q_stricmp(ext, ".tga"))) {
+            return fs_basepath->string;
+        }
+    }
+#endif
+    return fs_homepath->string;
+}
+
+'''
+    if source.count(marker) != 1:
+        raise ValueError("Missing screenshot filename lookup")
+    source = source.replace(marker, helper + marker)
+    for function, old, new in (
+        (marker, "fs_homepath->string", "FS_CaptureRoot(file)"),
+        ("fileHandle_t FS_FOpenFileWrite(", "fs_homepath->string", "FS_CaptureRoot(filename)"),
+    ):
+        start = source.index(function)
+        end = source.index("\n}", start)
+        body = source[start:end]
+        if body.count(old) != 1:
+            raise ValueError(f"Unexpected write root in {function}")
+        source = source[:start] + body.replace(old, new) + source[end:]
+    path.write_text(source)
 
 
 def build():
@@ -131,16 +176,22 @@ def build():
     stage_art(ROOT, tree)
     patch_engine(ROOT, tree)
     compat_scoreboard.stage_engine(tree)
+    ingame_typography.stage_engine(tree)
     runpy.run_path(str(ROOT / "development-source/compatibility/base_assets.py"))["stage"](tree)
     stage_video_presets(tree)
     ja_client.patch_engine(tree)
     compat_renderers.patch(tree)
     menu_theme.engine(tree)
+    player_ignore.engine(tree / "codemp/client")
     runpy.run_path(str(ROOT / "development-source/network/live_settings.py"))["stage"](tree)
     cosmetic_outfits.stage_engine(tree)
     training_hud.stage_engine(tree)
     compat_renderers.stage_material_overrides(tree)
     community_huds.stage_engine(tree)
+    duel_privacy.stage_menu(tree)
+    music_player.stage_engine(tree)
+    stage_screenshot_paths(tree)
+    music_player.build_desktop()
     # After the mod's native library and the installed base library, try the
     # bundled OpenJK pair. Keep the original pure/unpacking checks above this.
     loader = tree / "shared/sys/sys_main.cpp"
@@ -182,6 +233,7 @@ def build():
     shutil.copytree(BASE / "frontend",frontend,dirs_exist_ok=True)
     browser["population_frontend"](frontend)
     apply_profile(frontend / "codemp/ui",BASE / "frontend/codemp/ui")
+    player_ignore.catalog(frontend / "codemp/ui/st_controls_catalog.h")
     patch_frontend(frontend)
     ja_client.patch_frontend(frontend)
     menu_theme.frontend(frontend)
@@ -200,6 +252,7 @@ def install():
              "client/SaberTrialsUI.x86_64.dll": OUT / "ui-build/Release" / ui,
              **{"client/stock/" + n: OUT / "stock-build/Release" / n for n in STOCK_DLLS}}
     files[cosmetic_outfits.PACK.name] = cosmetic_outfits.PACK
+    files["client/" + music_player.PLAYER.name] = music_player.PLAYER
     after = {n: sha(p) for n,p in files.items()}
     before = {n: sha(ROOT / n) for n in files}
     if before == after:

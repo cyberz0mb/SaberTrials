@@ -1,5 +1,19 @@
 # Saber Trials changelog
 
+## November 28, 2026
+
+- Open the tournament lobby from Play or the pause menu to register, check
+  the bracket and confirm readiness. The Linux tournament host accepts
+  individual and team entries. [Tournament guide](Tournament-Playtest.md).
+- Use the aim-to-ignore binding or console commands to filter chat. Private
+  duels have visibility and sound controls. [Ignore commands](Player-Ignore.md).
+- Control local tracks and supported Windows media sessions from the pause
+  menu. [Music player guide](Music-Player.md).
+- Updated scoreboard statistics and in-game text, movement keycaps, bot
+  waypoint handling, and the Windows player and dedicated-server launchers.
+- Added the Windows installer definition and packaging tools for the Lite
+  and Full editions. [Build instructions](WINDOWS-BUILD-CHECKPOINT.md).
+
 ## November 25, 2026
 
 - Added dedicated Block, Attack-timed parries, single-saber feints, and saved

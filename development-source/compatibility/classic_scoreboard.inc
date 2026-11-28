@@ -1,5 +1,4 @@
-/* Renderer and painter callbacks are shared with the native Saber Trials board.
- * Only consume scoreboard fields defined by the classic multiplayer protocol. */
+/* Renderer and painter callbacks are shared with the native Saber Trials board. */
 qboolean ST_UsePersonalScoreboard(void) {
     char preference[16];
     trap->Cvar_VariableStringBuffer("st_personalHud", preference, sizeof(preference));
@@ -40,6 +39,12 @@ static qboolean ST_DrawClassicConnectionBoard(float fade) {
         row->icon = player->modelIcon;
         row->wins = player->wins;
         row->losses = player->losses;
+        if (score->stTffaScoreStats) {
+            row->hasTffaKd = 1;
+            row->kills = score->stMatchKills;
+            row->deaths = score->stMatchDeaths;
+            row->assists = score->assistCount;
+        }
         row->ready = board.result && score->client < 32 &&
             ((unsigned)cg.snap->ps.stats[STAT_CLIENTS_READY] & (1u << score->client));
         row->flag = (player->powerups & (1 << PW_REDFLAG)) ? 1 :

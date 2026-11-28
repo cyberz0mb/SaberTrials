@@ -23,6 +23,8 @@ Use a legal Jedi Academy installation and keep Saber Trials separate from
 
 | What you need | Where to start |
 | --- | --- |
+| Play in a tournament | [Host and player instructions](docs/Tournament-Playtest.md) |
+| Manage chat and music | [Ignore players](docs/Player-Ignore.md), [Windows music player](docs/Music-Player.md) |
 | Launch or play | [Windows launcher](tools/launchers/README.md), [server browser](docs/Worldwide-Server-Browser.md) |
 | Build or contribute | [Windows source checkpoint](docs/WINDOWS-BUILD-CHECKPOINT.md), [contribution guide](CONTRIBUTING.md) |
 | Host | [Server administration](docs/ADMIN_GUIDE.md), [Linux build guide](docs/Linux-Server-Upload.md) |

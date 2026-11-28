@@ -1,5 +1,43 @@
 // Optional JKA movement readouts, inspired by TaystJK's movement HUD.
 // Use the local player's observed motion. Nothing here writes user commands.
+static void ST_DrawMovementKeys(const usercmd_t &cmd) {
+    constexpr float keySize = 25.f;
+    constexpr float pitch = 24.f;
+    constexpr float top = 415.f;
+    constexpr float idleOpacity = .72f;
+    const float aspect = cls.glconfig.vidWidth > 0 && cls.glconfig.vidHeight > 0
+        ? (640.f * cls.glconfig.vidHeight) / (480.f * cls.glconfig.vidWidth) : 1.f;
+    const bool pressed[] = {
+        cmd.upmove > 0, cmd.forwardmove > 0, cmd.upmove < 0,
+        cmd.rightmove < 0, cmd.forwardmove < 0, cmd.rightmove > 0,
+    };
+    const auto art = CL_PersonalArt("movement_keycaps");
+    const vec4_t idleTint = {1.f, 1.f, 1.f, idleOpacity};
+    for (int i = 0; i < ARRAY_LEN(pressed); ++i) {
+        const float x = 320.f + ((i % 3 - 1) * pitch - keySize * .5f) * aspect;
+        const float y = top + i / 3 * pitch;
+        if (art) {
+            // The first row of the atlas is idle, the second is pressed.
+            const float u = i / 8.f;
+            const float v = pressed[i] ? .5f : 0.f;
+            re->SetColor(pressed[i] ? nullptr : idleTint);
+            re->DrawStretchPic(x, y, keySize * aspect, keySize,
+                               u, v, u + .125f, v + .5f, art);
+        } else {
+            vec4_t dark = {.09f, .14f, .18f, pressed[i] ? .8f : .8f * idleOpacity};
+            vec4_t light = {.9f, .98f, 1.f, pressed[i] ? 1.f : idleOpacity};
+            const char *symbols[] = {"^_", "^", "v_", "<", "v", ">"};
+            const auto *label = symbols[i];
+            SCR_FillRect(x + 2.f * aspect, y + 2.f, (keySize - 4.f) * aspect, keySize - 4.f,
+                         pressed[i] ? light : dark);
+            SCR_DrawStringExt(static_cast<int>(x + (keySize - strlen(label) * 7.f) * .5f * aspect),
+                              static_cast<int>(y + (keySize - 7.f) * .5f), 7, label,
+                              pressed[i] ? dark : light, qtrue, qfalse);
+        }
+    }
+    re->SetColor(nullptr);
+}
+
 static void ST_DrawTrainingHud() {
     static cvar_t *strafe=Cvar_Get("st_trainStrafe","0",CVAR_ARCHIVE);
     static cvar_t *snap=Cvar_Get("st_trainSnap","0",CVAR_ARCHIVE);
@@ -25,12 +63,8 @@ static void ST_DrawTrainingHud() {
         const char *s=va("%d u/s",(int)(pace+.5f));
         SCR_DrawStringExt(320-(int)strlen(s)*4,405,8,s,cyan,qtrue,qtrue);
     }
-    if (keys->integer) {
-        const char *labels[]={"F","L","B","R","UP","DN"};
-        const bool pressed[]={cmd.forwardmove>0,cmd.rightmove<0,cmd.forwardmove<0,cmd.rightmove>0,cmd.upmove>0,cmd.upmove<0};
-        for(int i=0;i<6;++i)
-            SCR_DrawStringExt(264+i*20,422,8,labels[i],pressed[i]?cyan:muted,qtrue,qtrue);
-    }
+    if (keys->integer)
+        ST_DrawMovementKeys(cmd);
     if (pitch->integer) {
         SCR_FillRect(366,239,10,1,muted);
         SCR_FillRect(370,239+Com_Clamp(-40.f,40.f,viewPitch),8,2,gold);

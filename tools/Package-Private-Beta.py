@@ -6,6 +6,7 @@ import stat
 import tempfile
 import zipfile
 import beta_release
+import windows_launchers
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -17,7 +18,13 @@ WINDOWS_CLIENT_README = f"""Saber Trials | Windows x64 multiplayer client | {bet
 1. Open the GameData folder inside your Jedi Academy installation.
    In Steam, right-click Jedi Academy and choose Manage > Browse local files.
 2. Extract the ZIP into GameData. The SaberTrials folder should be next to base.
-3. Open SaberTrials and double-click SaberTrials.cmd.
+3. In GameData, double-click SaberTrials.x86_64.exe to play.
+
+To host a dedicated server, double-click SaberTrialsDed.x86_64.exe in GameData.
+It starts Free For All on mp/ffa3. Edit SaberTrials/server/sabertrials-host.cfg to customize it.
+
+For tournament play, choose Play > Tournament and join the host. See
+SaberTrials/docs/Tournament-Playtest.md for registration and ready checks.
 
 Returning testers can close the game and extract the same edition over their
 existing installation. Setup > Network > Auto uses the full packet range.
@@ -38,6 +45,8 @@ DarthNormaN. The Quake-style layout builds on their menu and comes through
 TaystJK. See CREDITS.txt for sources.
 
 Settings and logs are saved under %LOCALAPPDATA%\\SaberTrials.
+In-game screenshots are saved in the active game's screenshots folder under
+GameData (base, japlus, or SaberTrials). The first capture creates the folder.
 """
 
 
@@ -68,6 +77,12 @@ def package(platform, linux, vc_crt=None):
                 continue
             add_mod(path)
     if client_only:
+        add_mod(ROOT/"docs/Tournament-Playtest.md")
+        add_mod(ROOT/"docs/Player-Ignore.md")
+        for config in ("tournament-test.cfg", "tournament-teams-test.cfg"):
+            files["SaberTrials/"+config] = ROOT/"templates/linux"/config
+        for path in sorted((ROOT/"server").glob("sabertrials-*.cfg")):
+            add_mod(path)
         files["SaberTrials/SaberTrials-Cosmetics.pk3"] = ROOT/"assets/cosmetics/SaberTrials-Cosmetics.pk3"
         add_mod(ROOT/"z_st_match_formats.pk3")
         for path in sorted((ROOT/"dlc/emotes").glob("*.pk3")):
@@ -76,11 +91,14 @@ def package(platform, linux, vc_crt=None):
         for path in sorted((ROOT/"server").glob("sabertrials-*.cfg")):
             add_mod(path)
     if platform in ("windows", "windows-client"):
+        files.update(windows_launchers.build())
+        add_mod(ROOT/"SaberTrialsDed.x86_64.exe")
         if client_only:
             files["SaberTrials/SaberTrials.cmd"] = ROOT/"templates/windows/SaberTrials.cmd"
         else:
             add_mod(ROOT/"docs/Client-Compatibility.md")
-        for name in ("SaberTrials.x86_64.exe", "SaberTrialsUI.x86_64.dll", "SDL2.dll", "OpenAL32.dll",
+        add_mod(ROOT/"docs/Music-Player.md")
+        for name in ("SaberTrials.x86_64.exe", "SaberTrials Music.exe", "SaberTrialsUI.x86_64.dll", "SDL2.dll", "OpenAL32.dll",
                      "rd-vanilla_x86_64.dll", "rd-rend2_x86_64.dll", "rd-vulkan_x86_64.dll"):
             add_mod(ROOT/"client"/name)
         for folder in ("translator", "licenses", "stock", "ja-compat"):
@@ -96,7 +114,7 @@ def package(platform, linux, vc_crt=None):
         instructions = """Saber Trials private Windows beta candidate
 
 Extract this archive into the GameData directory of your installed Jedi Academy.
-Start SaberTrials/tools/launchers/SaberTrials.cmd or use your existing Saber Trials shortcut.
+Double-click SaberTrials.x86_64.exe in GameData to play, or SaberTrialsDed.x86_64.exe to host.
 The offline text translation models are included. An existing Jedi Academy base game is required.
 When testing opens, join the US or Europe server designated by the organizer.
 For feedback, include the server, map, approximate time, what you did and what happened.
@@ -108,6 +126,7 @@ For feedback, include the server, map, approximate time, what you did and what h
             if vc_crt:
                 for dll in ("msvcp140.dll", "vcruntime140.dll", "vcruntime140_1.dll"):
                     files["SaberTrials/client/"+dll] = vc_crt/dll
+                    files["SaberTrials/"+dll] = vc_crt/dll
             else:
                 instructions += "\nRequires the Microsoft Visual C++ v14 x64 runtime.\n"
     else:

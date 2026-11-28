@@ -18,6 +18,13 @@ def loaded_menus(text):
     while i < len(tokens):
         if tokens[i] == '}':
             break
+        if tokens[i] == 'assetGlobalDef':
+            i += 2
+            depth = 1
+            while depth:
+                depth += (tokens[i] == '{') - (tokens[i] == '}')
+                i += 1
+            continue
         if tokens[i] != 'menuDef':
             i += 1
             continue
@@ -37,30 +44,28 @@ class TournamentFrontend(unittest.TestCase):
     def test_loader_stops_at_file_wrapper(self):
         self.assertEqual(set(loaded_menus('{ menuDef { name first } } { menuDef { name lost } }')), {'first'})
 
-    def test_play_menu_route_reaches_loaded_selection_and_lobby(self):
+    def test_live_lobby_routes_and_actions(self):
         menus = loaded_menus((TARGET/'ui/jamp/multiplayer.menu').read_text())
         self.assertIn('open st_main_tournament', menus['multiplayermenu'])
-        self.assertIn('st_main_tournament', menus)
-        self.assertIn('st_tournament_ready', menus)
-        self.assertIn('open st_tournament_ready', menus['st_main_tournament'])
+        self.assertIn('open joinserver', menus['st_main_tournament'])
+        self.assertNotIn('preview-', menus['st_main_tournament'])
+        menu_list = (TARGET/'ui/jampingame.txt').read_text()
+        for entry in ('st_lobby', 'st_lobby_pause'):
+            path = f'ui/jamp/{entry}.menu'
+            self.assertIn(path, menu_list)
+            menus.update(loaded_menus((TARGET/path).read_text()))
+        self.assertIn('open st_tournament_ready', menus['ingame'])
+        self.assertIn('ui_stLobbyActive', menus['ingame'])
+        room = menus['st_tournament_ready']
+        for action in ('join', 'ready', 'status'):
+            self.assertIn(f'cmd st_lobby {action}', room)
+        self.assertIn('cmd st_lobby leave', menus['st_lobby_leave'])
+        for squad in range(1, 9):
+            self.assertIn(f'cmd st_lobby join {squad}', menus['st_lobby_squads'])
         for name, block in menus.items():
-            if name.startswith('st_'):
-                for dest in re.findall(r'open (st_\w+)', block):
-                    self.assertIn(dest, menus, (name, dest))
-                self.assertNotRegex(block, r'exec "(?:tournament |login|logout|connect |map |devmap )')
-
-    def test_no_pause_tournament_entry(self):
-        player = (TARGET/'ui/jamp/ingame_player.menu').read_text()
-        self.assertNotIn('sabertrialsTournament', player)
-        self.assertNotIn('ingame_tournament', player)
-
-    def test_sample_cfgs_only_change_preview_cvars(self):
-        cfgs = list(TARGET.glob('st-tournament-preview-*.cfg'))
-        self.assertEqual(len(cfgs), 5)
-        for cfg in cfgs:
-            for line in cfg.read_text().splitlines():
-                # Bracket cards use their own preview-only cvars.
-                self.assertRegex(line, r'^set ui_st(?:Front\w+|Card(?:Title|A|B)\d+) "[^";\r\n]*"$')
+            if name.startswith('st_lobby_') or name == 'st_tournament_ready':
+                for link in re.findall(r'open (st_\w+)', block):
+                    self.assertIn(link, menus, (name, link))
 
 
 if __name__ == '__main__':

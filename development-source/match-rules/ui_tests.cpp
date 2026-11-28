@@ -4,6 +4,9 @@
 #include <cstdarg>
 #include <cstdio>
 #include <cstring>
+#ifndef _WIN32
+#include <strings.h>
+#endif
 #include <cmath>
 #include <map>
 #include <string>
@@ -39,7 +42,13 @@ struct MockTrap {
  int Key_GetCatcher(){return 2;}void Key_SetCatcher(int){}
 } mockTrap;static MockTrap* trap=&mockTrap;
 static const char* va(const char* fmt,...){static char buffers[16][2048];static int at=0;char* s=buffers[(at++)%16];va_list a;va_start(a,fmt);std::vsnprintf(s,2048,fmt,a);va_end(a);return s;}
-static int Q_stricmp(const char* a,const char* b){return _stricmp(a,b);}
+static int Q_stricmp(const char* a,const char* b){
+#ifdef _WIN32
+ return _stricmp(a,b);
+#else
+ return strcasecmp(a,b);
+#endif
+}
 static float Com_Clamp(float a,float b,float v){return std::max(a,std::min(b,v));}
 static int UI_GetNumBots(){return 2;}static const char* UI_GetBotNameByNumber(int i){return i==0?"Luke":"Desann";}
 static int ST_TffaCount(int n){return std::max(2,std::min(8,n));}static int UI_TffaPlayableSlots(){int size=std::atoi(cvars["ui_stHostTeamSize"].c_str());int value=size?ST_TffaCount(std::atoi(cvars["ui_stHostTeams"].c_str()))*std::max(2,std::min(4,size)):std::atoi(cvars["ui_stTffaOpenSlots"].c_str());return std::max(1,std::min(32,value));}static int UI_TffaSlotTeam(int s){return s%2?1:2;}

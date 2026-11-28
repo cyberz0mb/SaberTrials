@@ -7,6 +7,7 @@ from PIL import Image, ImageDraw, ImageFont
 
 
 ROOT = Path(__file__).resolve().parents[1]
+FACE = ROOT / "client/translator/fonts/NotoSans-Regular.ttf"
 GLYPH = Struct("<hhhhiffff")
 HEADER = Struct("<hhhhhh")
 
@@ -18,7 +19,7 @@ def build_variant(data, name, level, factor, output):
         height = point
         descent = int(point / 10 + 2.5)
         ascent = height - descent
-    font = ImageFont.truetype(str(ROOT / "client/translator/fonts/NotoSans-Regular.ttf"), point * factor * 2)
+    font = ImageFont.truetype(str(FACE), point * factor * 2)
     atlas = Image.new("L", (512 if factor == 2 else 2048, 2048))
     metrics = bytearray()
     x = y = 2
@@ -67,10 +68,46 @@ def build_variant(data, name, level, factor, output):
     stem.with_suffix(".fontdat").write_bytes(metrics)
 
 
+def save_atlas(alpha, target):
+    rgba = Image.new("RGBA", alpha.size, (255, 255, 255, 0))
+    rgba.putalpha(alpha)
+    rgba.save(target, optimize=True)
+
+
+def build_gameplay_atlases(output):
+    font = ImageFont.truetype(str(FACE), 54)
+    alpha = Image.new("L", (1024, 1024))
+    for code in range(33, 256):
+        char = bytes([code]).decode("cp1252", errors="replace")
+        if not char.isprintable():
+            continue
+        left, top, right, bottom = font.getbbox(char, anchor="ls")
+        glyph = Image.new("L", (max(1, right - left), max(1, bottom - top)))
+        ImageDraw.Draw(glyph).text((-left, -top), char, font=font, fill=255, anchor="ls")
+        # Keep accents and descenders inside the cell with a one-pixel gutter.
+        cell_top, cell_bottom = max(-48, top), min(14, bottom)
+        fitted = (min(28, glyph.width), max(1, cell_bottom - cell_top))
+        if glyph.size != fitted:
+            glyph = glyph.resize(fitted, Image.Resampling.LANCZOS)
+        cell_x, cell_y = (code % 16) * 64, (code // 16) * 64
+        alpha.paste(glyph, (cell_x + (32 - glyph.width) // 2, cell_y + 49 + cell_top))
+    save_atlas(alpha, output / "st_game_chars.png")
+
+    digits = Image.new("L", (1024, 64))
+    for index, char in enumerate("0123456789-"):
+        left, top, right, bottom = font.getbbox(char)
+        glyph = Image.new("L", (right - left, bottom - top))
+        ImageDraw.Draw(glyph).text((-left, -top), char, font=font, fill=255)
+        glyph = glyph.crop(glyph.getbbox()).resize((48, 7 if char == "-" else 56), Image.Resampling.LANCZOS)
+        digits.paste(glyph, (index * 64 + 8, (64 - glyph.height) // 2))
+    save_atlas(digits, output / "st_game_digits.png")
+
+
 if __name__ == "__main__":
     output = ROOT / "assets/hud-fonts"
     output.mkdir(exist_ok=True)
     with ZipFile(ROOT.parent / "base/assets1.pk3") as retail:
-        for name in ("ergoec", "arialnb"):
+        for name in ("ergoec", "arialnb", "ocr_a"):
             for level, factor in enumerate((2, 6), 1):
                 build_variant(retail.read(f"fonts/{name}.fontdat"), name, level, factor, output)
+    build_gameplay_atlases(output)

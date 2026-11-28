@@ -378,6 +378,8 @@ weaponInfo_t		cg_weapons[MAX_WEAPONS];
 itemInfo_t			cg_items[MAX_ITEMS];
 
 int CG_CrosshairPlayer( void ) {
+	const char *command = CG_Argv(0);
+	if (!Q_stricmp(command, "ignore") || !Q_stricmp(command, "unignore")) return CG_CurrentAimPlayer();
 	if ( cg.time > (cg.crosshairClientTime + 1000) )
 		return -1;
 

@@ -1,5 +1,11 @@
 # Windows source checkpoint
 
+Build the offline installer after generating the matching Full and Lite beta ZIPs
+in `dist/private-beta`. Run `python tools/Package-Windows-Installer.py` with
+Inno Setup 7's `ISCC.exe` on PATH, or pass its path with `--compiler`. Use
+`--work` to stage large builds on another drive. The installer takes its version
+from the same file as the client and derives its edition contents from the ZIPs.
+
 This checkpoint preserves the source used for the November 12, 2026 Windows
 installation. The normal client, UI, game/cgame, renderers and dedicated
 executable came from different source trees. Keep these roles separate when

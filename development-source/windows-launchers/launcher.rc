@@ -1,0 +1,25 @@
+#include <windows.h>
+1 ICON "SaberTrials.ico"
+1 VERSIONINFO
+ FILEVERSION 1,0,0,0
+ PRODUCTVERSION 1,0,0,0
+ FILEOS VOS_NT_WINDOWS32
+ FILETYPE VFT_APP
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "ProductName", "Saber Trials\0"
+#ifdef ST_HOST_LAUNCHER
+            VALUE "FileDescription", "Saber Trials Dedicated Server\0"
+#else
+            VALUE "FileDescription", "Play Saber Trials\0"
+#endif
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x0409, 1200
+    END
+END

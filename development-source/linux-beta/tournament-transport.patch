@@ -1,0 +1,5 @@
+--- a/codemp/server/sv_client.cpp
++++ b/codemp/server/sv_client.cpp
+@@ -1290,1 +1290,1 @@
+-	if ( Q_strncmp(s,"st_mvp_ack ",11) && Q_strncmp(s,"st_mvp_done ",12) &&
++	if ( Q_strncmp(s,"st_lobby ",9) && Q_strncmp(s,"st_mvp_ack ",11) && Q_strncmp(s,"st_mvp_done ",12) &&

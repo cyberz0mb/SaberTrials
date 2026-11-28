@@ -52,9 +52,17 @@ static const stcAction_t stcActions[]={
  {"Open / collapse chat","st_togglechat","Communication","Toggle the chat panel and recent messages",0},
  {"Scoreboard","+scores","Camera / UI","Hold to show match scores",0},{"Record match","st_record","Camera / UI","Toggle existing match recording",0},{"Screenshot","screenshot_png","Camera / UI","Save a PNG screenshot",0},{"Toggle camera view","cg_thirdperson !","Camera / UI","Toggle supported first/third-person view",0},{"Toggle console","toggleconsole","Camera / UI","Open the console",0},
  {"Freeze","freeze","Server Management","Requires server permission. Add a player argument using Edit command if needed.",1},{"Unfreeze","unfreeze","Server Management","Requires server permission. Use the server's target syntax.",1},{"Ghost on","ghost on","Server Management","Requires authenticated server permission",1},{"Ghost off","ghost off","Server Management","Disable authenticated ghost mode",1},{"Tournament status","tournament status","Server Management","Show current tournament status",1},{"Tournament bracket","tournament bracket","Server Management","Show current bracket",1},
+ {"Ignore player","ignore","Communication","Aim at a player and press to ignore or unignore their chat",0},
  {"Private chat with target","messagemode3","Communication","Message the player under your crosshair",0},
  {"Private chat with last attacker","messagemode4","Communication","Message the last player who attacked you",0},
- {"Pause menu","togglemenu","Camera / UI","Open or close the in-game menu",0}
+ {"Pause menu","togglemenu","Camera / UI","Open or close the in-game menu",0},
+ {"Music player","st_music","Camera / UI","Open or close your music player",0},
+ {"Next music track","playnext","Camera / UI","Skip to the next track",0},
+ {"Previous music track","playprev","Camera / UI","Go to the previous track",0},
+ {"Pause music","pausemusic","Camera / UI","Pause the selected music source",0},
+ {"Search music","search","Camera / UI","Search by artist, song or album",0},
+ {"Music volume down","musicvolume -5","Camera / UI","Lower music volume by 5%",0},
+ {"Music volume up","musicvolume +5","Camera / UI","Raise music volume by 5%",0}
 };
 #define STC_SETTING_COUNT ((int)(sizeof(stcSettings)/sizeof(stcSettings[0])))
 #define STC_ACTION_COUNT ((int)(sizeof(stcActions)/sizeof(stcActions[0])))

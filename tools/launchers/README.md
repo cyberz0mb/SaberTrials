@@ -1,8 +1,8 @@
 # Launching Saber Trials
 
-On Windows, open the **Saber Trials** shortcut or run
-[SaberTrials.cmd](SaberTrials.cmd). The launcher expects the matching client
-executable and multiplayer modules in the Saber Trials installation.
+On Windows, open the Jedi Academy **GameData** folder. Double-click
+**SaberTrials.x86_64.exe** to play or **SaberTrialsDed.x86_64.exe** to host.
+The [command launcher](SaberTrials.cmd) also starts the client.
 
 Keep `z_sabertrials_studio_intro.pk3` in `GameData/SaberTrials/`. On a normal
 launch, the client plays the four-second MOTU Interactive intro before the

@@ -15,6 +15,11 @@ static const float stpGold[4]={1,.77f,.39f,1};
 static const float stpFfaStatX[]={324,365,414,464};
 static const float stpFfaStatWidth[]={34,42,43,36};
 static const char *const stpFfaStatLabel[]={"SCORE","K/D","W/L","RATIO"};
+static const float stpCompatTeamX[]={334,380,432,478,526,562};
+static const float stpCompatTeamWidth[]={38,45,40,44,34,28};
+static const float stpNativeTeamX[]={0,334,400,466};
+static const float stpNativeTeamWidth[]={0,56,56,56};
+static const char *const stpCompatTeamLabel[]={"SCORE","K/D","RATIO","ASSISTS","PING","TIME"};
 static void STP_Box(const STPPainter*p,float x,float y,float w,float h,const float*c) {
  p->fill(x,y,w,h,c);
  p->fill(x,y,w,.5f,stpMuted);
@@ -31,25 +36,33 @@ static void STP_DrawRow(const STPPainter*p,const STPBoard*b,int index,float y) {
  p->text(74,y,200,.69f,r->name,stpText,0);
  /* Local position and readiness are independent of global rank. */
  p->text(278,y,55,.58f,r->ready?"READY":r->flag==1?"RED FLAG":r->flag==2?"BLUE FLAG":r->flag==3?"FLAG":you?"YOU":r->team==3?"SPEC":r->team==1?"RED":r->team==2?"BLUE":"",accent,0);
- if(b->classicStats){
+ if(b->mode==6){
+  const float*x=b->classicStats?stpCompatTeamX:stpNativeTeamX;
+  const float*width=b->classicStats?stpCompatTeamWidth:stpNativeTeamWidth;
+  int active=r->team!=3 && r->ping>=0;
+  int hasKd=r->hasTffaKd && active;
+  if(b->classicStats){
+   snprintf(value,sizeof(value),"%d",r->score);
+   p->text(x[0],y,width[0],.66f,active?value:"--",stpText,1);
+  }
+  snprintf(value,sizeof(value),"%d / %d",r->kills,r->deaths);
+  p->text(x[1],y,width[1],.66f,hasKd?value:"--",stpText,1);
+  STP_FormatRatio(value,sizeof(value),r->kills,r->deaths);
+  p->text(x[2],y,width[2],.63f,hasKd?value:"--",stpText,1);
+  snprintf(value,sizeof(value),"%d",r->assists);
+  p->text(x[3],y,width[3],.63f,active&&(!b->classicStats||hasKd)?value:"--",stpText,1);
+ }else if(b->classicStats && b->mode!=0){
   snprintf(value,sizeof(value),"%d",r->score);
   p->text(334,y,56,.66f,r->team==3?"--":value,stpText,1);
   if(b->mode==3||b->mode==4){
    snprintf(value,sizeof(value),"%d / %d",r->wins,r->losses);
    p->text(405,y,80,.63f,r->team==3?"--":value,stpMuted,1);
   }
- }else if(b->mode==6){
-  int hasKd=r->hasTffaKd && r->team!=3 && r->ping>=0;
-  snprintf(value,sizeof(value),"%d / %d",r->kills,r->deaths);
-  p->text(334,y,56,.66f,hasKd?value:"--",stpText,1);
-  STP_FormatRatio(value,sizeof(value),r->kills,r->deaths);
-  p->text(400,y,56,.63f,hasKd?value:"--",stpText,1);
-  snprintf(value,sizeof(value),"%d",r->assists);
-  p->text(466,y,56,.63f,r->team==3?"--":value,stpText,1);
  }else if(b->mode==0){
-  const int hasStats=r->team!=3 && r->ping>=0;
+  const int active=r->team!=3 && r->ping>=0;
+  const int hasStats=active && !b->classicStats;
   snprintf(value,sizeof(value),"%d",r->score);
-  p->text(stpFfaStatX[0],y,stpFfaStatWidth[0],.66f,hasStats?value:"--",stpText,1);
+  p->text(stpFfaStatX[0],y,stpFfaStatWidth[0],.66f,active?value:"--",stpText,1);
   snprintf(value,sizeof(value),"%d / %d",r->kills,r->deaths);
   p->text(stpFfaStatX[1],y,stpFfaStatWidth[1],.63f,hasStats?value:"--",stpText,1);
   snprintf(value,sizeof(value),"%d / %d",r->wins,r->losses);
@@ -66,10 +79,11 @@ static void STP_DrawRow(const STPPainter*p,const STPBoard*b,int index,float y) {
  }
  snprintf(value,sizeof(value),"%d",r->ping);
  const int teamStats=b->mode==6&&!b->classicStats;
- p->text(teamStats?535:510,y,teamStats?55:43,.63f,r->bot?"BOT":r->ping<0?"JOIN":value,r->ping>150?stpGold:stpText,1);
+ const int compatTeam=b->mode==6&&b->classicStats;
+ p->text(compatTeam?stpCompatTeamX[4]:teamStats?535:510,y,compatTeam?stpCompatTeamWidth[4]:teamStats?55:43,.63f,r->bot?"BOT":r->ping<0?"JOIN":value,r->ping>150?stpGold:stpText,1);
  if(!teamStats){
   snprintf(value,sizeof(value),"%dm",r->minutes);
-  p->text(560,y,30,.60f,value,stpMuted,1);
+  p->text(compatTeam?stpCompatTeamX[5]:560,y,compatTeam?stpCompatTeamWidth[5]:30,.60f,value,stpMuted,1);
  }
 }
 static void STP_DrawBoard(const STPPainter*p,const STPBoard*b) {
@@ -94,16 +108,18 @@ static void STP_DrawBoard(const STPPainter*p,const STPBoard*b) {
  p->text(48,88,544,.76f,b->result?b->outcome:"GLOBAL RANK: unavailable",b->result?stpGold:stpMuted,0);
  p->fill(48,112,544,.5f,stpCyan);
  p->text(74,115,200,.53f,"PLAYER",stpMuted,0);
- if(b->classicStats){
-  p->text(334,115,56,.53f,"SCORE",stpMuted,1);
-  if(b->mode==3||b->mode==4)p->text(405,115,80,.53f,"DUEL W/L",stpMuted,1);
-  p->text(510,115,43,.53f,"PING",stpMuted,1);
-  p->text(560,115,30,.53f,"TIME",stpMuted,1);
+ if(b->mode==6 && b->classicStats){
+  for(i=0;i<6;i++)p->text(stpCompatTeamX[i],115,stpCompatTeamWidth[i],.53f,stpCompatTeamLabel[i],stpMuted,1);
  }else if(b->mode==6){
   p->text(334,115,56,.53f,"K/D",stpMuted,1);
   p->text(400,115,56,.53f,"RATIO",stpMuted,1);
   p->text(466,115,56,.53f,"ASSISTS",stpMuted,1);
   p->text(535,115,55,.53f,"PING",stpMuted,1);
+ }else if(b->classicStats && b->mode!=0){
+  p->text(334,115,56,.53f,"SCORE",stpMuted,1);
+  if(b->mode==3||b->mode==4)p->text(405,115,80,.53f,"DUEL W/L",stpMuted,1);
+  p->text(510,115,43,.53f,"PING",stpMuted,1);
+  p->text(560,115,30,.53f,"TIME",stpMuted,1);
  }else{
   if(b->mode==0){
    for(i=0;i<4;i++)p->text(stpFfaStatX[i],115,stpFfaStatWidth[i],.53f,stpFfaStatLabel[i],stpMuted,1);
@@ -124,6 +140,7 @@ static void STP_DrawBoard(const STPPainter*p,const STPBoard*b) {
  if(!shown&&local>=0){p->fill(48,402,544,.5f,stpMuted);STP_DrawRow(p,b,local,405);}
  if(p->art)p->fill(48,425,544,.45f,stpGold);
  if(b->event[0])p->text(48,429,420,.57f,b->event,stpCyan,0);
+ else if(b->classicStats && (b->mode==0||b->mode==6))p->text(48,429,420,.57f,"Dashes indicate unavailable stats.",stpMuted,0);
  else p->text(48,429,420,.57f,b->result?"Rating change: unavailable. No verified ranked result received.":pages>1?"Pages rotate every 10s. Your row stays visible.":"Match scores are separate from global rank.",stpMuted,0);
  snprintf(text,sizeof(text),"%d / %d",page+1,pages);p->text(535,429,57,.6f,text,stpCyan,1);
 }

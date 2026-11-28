@@ -13,7 +13,7 @@ static int placementFails;
 static char ui[MAX_CLIENTS][61][256];
 static int actions[MAX_CLIENTS][10],messages[MAX_CLIENTS];
 static void Argv(int n,char*out,int len){Q_strncpyz(out,n==0?"tournament":n==1?arg:n==2?arg2:"",len);}
-static int Mode(const char*name){(void)name;return 2;}
+static int Mode(const char*name){return !strcmp(name,"st_tournamentMode")?2:!strcmp(name,"st_tournamentRequireDiscord")?1:0;}
 static void Link(sharedEntity_t*e){(void)e;}
 static void Send(int slot,const char*text){
  int first=slot<0?0:slot,last=slot<0?level.maxclients:slot+1,s,line,used;
@@ -42,7 +42,9 @@ void SetTeam(gentity_t*e,char*team){if(placementFails&&e->s.number==0)return;e->
 qboolean ST_StaffBlocked(const gentity_t*e){(void)e;return qfalse;}
 void G_FreeEntity(gentity_t*e){e->inuse=qfalse;}
 void CalculateRanks(void){}
-static void Player(int slot){gentity_t*e=&g_entities[slot];memset(e,0,sizeof(*e));e->s.number=slot;e->inuse=qtrue;e->client=&g_clients[slot];memset(e->client,0,sizeof(*e->client));e->client->pers.connected=CON_CONNECTED;e->client->sess.sessionTeam=TEAM_SPECTATOR;ClientSpawn(e);}
+static void Player(int slot){gentity_t*e=&g_entities[slot];memset(e,0,sizeof(*e));e->s.number=slot;e->inuse=qtrue;e->client=&g_clients[slot];memset(e->client,0,sizeof(*e->client));e->client->pers.connected=CON_CONNECTED;e->client->sess.sessionTeam=TEAM_SPECTATOR;ClientSpawn(e); const char*oldArg=arg,*oldArg2=arg2;
+ arg="hello";arg2="1";ST_EventClientCommand(&g_entities[slot]);arg=oldArg;arg2=oldArg2;
+}
 static STEProfile Profile(int slot){STEProfile p;memset(&p,0,sizeof(p));Com_sprintf(p.account,sizeof(p.account),"account%d",slot);Com_sprintf(p.name,sizeof(p.name),"Player %d",slot);Com_sprintf(p.team,sizeof(p.team),"team%d",slot/2);Com_sprintf(p.teamName,sizeof(p.teamName),"[Team %d]",slot/2);p.verified=1;return p;}
 extern const STEventAccountAPI* GetSaberTrialsEventAccountAPI(void);
 static void request(int slot,const char*op){level.time+=1000;arg=op;CHECK(ST_EventClientCommand(&g_entities[slot]));}

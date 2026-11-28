@@ -25,6 +25,15 @@ static struct {int active=0;} in_speed;
 static cvar_t run={1,1};static cvar_t* cl_run=&run;
 #include "../../development-source/client-runtime/st_controller_move.inc"
 using SDL_GameController=int;using SDL_GameControllerButton=int;using SDL_GameControllerAxis=int;
+using SDL_JoystickID=int;
+enum {SDL_CONTROLLERDEVICEADDED, SDL_CONTROLLERDEVICEREMOVED, SDL_CONTROLLERAXISMOTION, SDL_CONTROLLERBUTTONDOWN};
+struct SDL_Event {
+ int type;
+ struct { int which; } cdevice;
+ struct { int which, axis, value; } caxis;
+ struct { int which, button; } cbutton;
+};
+constexpr int SDL_CONTROLLER_AXIS_MAX=6, SDL_CONTROLLER_BUTTON_MAX=15;
 constexpr int CVAR_ROM=2,CVAR_TEMP=4,SE_GAMEPAD_BUTTON=1,SE_JOYSTICK_AXIS=2,SE_GAMEPAD_POINTER=3,qfalse=0;
 constexpr int SDL_INIT_GAMECONTROLLER=1,SDL_CONTROLLER_AXIS_TRIGGERLEFT=4,SDL_CONTROLLER_AXIS_TRIGGERRIGHT=5;
 constexpr int SDL_CONTROLLER_BUTTON_DPAD_UP=11,SDL_CONTROLLER_BUTTON_DPAD_DOWN=12,SDL_CONTROLLER_BUTTON_DPAD_LEFT=13,SDL_CONTROLLER_BUTTON_DPAD_RIGHT=14;
@@ -38,6 +47,8 @@ static int Sys_Milliseconds(){static int now=0;return now+=16;}
 static bool Con_PadKeyboardActive(){return false;}
 static int SDL_WasInit(int flags){return flags;}
 static int SDL_InitSubSystem(int){return 0;}
+static void SDL_QuitSubSystem(int){}
+static SDL_JoystickID SDL_JoystickGetDeviceInstanceID(int index){return index;}
 static bool SDL_GameControllerGetAttached(SDL_GameController*){return true;}
 static int SDL_NumJoysticks(){return 1;}
 static bool SDL_IsGameController(int){return true;}
@@ -48,6 +59,7 @@ static void SDL_GameControllerUpdate(){}
 static int SDL_GameControllerGetButton(SDL_GameController*,int){return 0;}
 static int SDL_GameControllerGetAxis(SDL_GameController*,int axis){return axis<4?deviceAxis:0;}
 #include "../../development-source/controls/st_controller.inc"
+static bool pollController(){STPadBeginFrame();return STPadFrame(true);}
 static void require(bool ok,const char* what){if(!ok){std::fprintf(stderr,"FAIL: %s\n",what);std::exit(1);}}
 int main(){
  usercmd_t cmd;
@@ -55,7 +67,7 @@ int main(){
  archiveDirty=false;
  for(int i=0;i<1000;++i)require(!STPadMove(&cmd),"disabled frame");
  require(!archiveDirty&&registrations==0,"idle frames do not rewrite settings");
- STPadFrame(true);
+ pollController();
  cl.joystickAxis[AXIS_YAW]=cl.joystickAxis[AXIS_PITCH]=32767;
  require(STPadMove(&cmd),"enable change takes effect without restart");
  require(std::fabs(cl.viewangles[YAW]+2.4f)<.001f,"original horizontal sensitivity");
@@ -70,16 +82,16 @@ int main(){
  require(std::fabs(cl.viewangles[YAW]+14.4f)<.001f&&std::fabs(cl.viewangles[PITCH]+14.4f)<.001f,"expanded look range and upper clamp");
  catcher=KEYCATCH_UI;cl.viewangles[YAW]=0;STPadMove(&cmd);
  require(cl.viewangles[YAW]==0,"menu blocks controller look");
- vars.at("st_controllerEnabled").integer=2;STPadFrame(true);archiveDirty=false;
+ vars.at("st_controllerEnabled").integer=2;pollController();archiveDirty=false;
  int before=registrations;
- for(int i=0;i<1000;++i)require(!STPadFrame(true),"disabled SDL input falls through");
+ for(int i=0;i<1000;++i)require(!pollController(),"disabled SDL input falls through");
  require(!archiveDirty&&registrations==before,"SDL polling does not save idle config");
- vars.at("st_controllerEnabled").integer=1;STPadFrame(true);archiveDirty=false;before=registrations;
- for(int i=0;i<1000;++i)STPadFrame(true);
+ vars.at("st_controllerEnabled").integer=1;pollController();archiveDirty=false;before=registrations;
+ for(int i=0;i<1000;++i)pollController();
  require(!archiveDirty&&registrations==before&&axisEvent>0,"active SDL polling reuses live cvars");
- vars.at("st_controllerDeadzone").value=.75f;STPadFrame(true);
+ vars.at("st_controllerDeadzone").value=.75f;pollController();
  require(axisEvent==0,"deadzone changes take effect live");
- vars.at("st_controllerEnabled").integer=2;STPadFrame(true);
+ vars.at("st_controllerEnabled").integer=2;pollController();
  require(closed==2&&axisEvent==0,"disable releases input and closes controller");
  std::puts("Controller config lifecycle passed");
 }
