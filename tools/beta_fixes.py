@@ -13,15 +13,16 @@ import beta_release
 
 
 EDITIONS = ("Full", "Lite")
-FIRST_BETA = "beta-1.11"
+# Windows betas actually distributed to testers. Building a ZIP does not add it here.
+RELEASED_BASELINES = ("beta-1.11",)
+FIRST_BETA = RELEASED_BASELINES[0]
 FIX_NAME = "SaberTrials-Windows-Fix.zip"
 ARCHIVE = re.compile(r"SaberTrials-(Full|Lite)-(beta-\d+(?:\.\d+)+)\.zip")
 ENGINE = "SaberTrials/client/SaberTrials.x86_64.exe"
 LAUNCHERS = {"SaberTrials.x86_64.exe", "SaberTrialsDed.x86_64.exe"}
 NOTE = "SaberTrials/docs/ZIP-update.txt"
-DOWNLOAD_HINT = (f"Windows Full or Lite, {FIRST_BETA} or later: if your copy is older than "
-                 f"{beta_release.VERSION}, close Saber Trials and extract Fixes/{FIX_NAME} into GameData. "
-                 "Already on the current beta? No download is needed.")
+DOWNLOAD_HINT = (f"Updating from {', '.join(RELEASED_BASELINES)} (Windows Full or Lite): close Saber Trials "
+                 f"and extract Fixes/{FIX_NAME} into GameData to update directly to {beta_release.VERSION}.")
 
 
 def version_number(version):
@@ -100,8 +101,8 @@ def make_fix(release, current, baselines):
     folder = release / "Fixes"
     folder.mkdir(exist_ok=True)
     output = folder / FIX_NAME
-    note = (f"Saber Trials Windows update | {FIRST_BETA} through {target}\r\n\r\n"
-            "Apply once to an existing Full or Lite installation in this range.\r\n"
+    note = (f"Saber Trials Windows update to {target}\r\n\r\n"
+            f"Apply once to an existing Windows Full or Lite installation of {', '.join(RELEASED_BASELINES)}.\r\n"
             "Close the game and dedicated server. Extract the ZIP into Jedi Academy's GameData\r\n"
             "folder and replace matching game files. Keep any tournament presets you edited.\r\n"
             f"Start SaberTrials.x86_64.exe in GameData. The startup label should show {target}.\r\n"
@@ -142,11 +143,10 @@ def record(release, current, version=None):
 def cumulative_baselines(release):
     history = release.parent / "beta-zip-history"
     groups = {ed: [] for ed in EDITIONS}
-    if not (history / FIRST_BETA).is_dir():
-        raise ValueError(f"Import the {FIRST_BETA} Full and Lite indexes before building the cumulative Fix")
-    for folder in sorted(history.glob("beta-*")):
-        if not folder.is_dir() or not version_number(FIRST_BETA) <= version_number(folder.name) <= version_number(beta_release.VERSION):
+    for version in RELEASED_BASELINES:
+        if version_number(version) >= version_number(beta_release.VERSION):
             continue
+        folder = history / version
         copies = [json.loads(p.read_text(encoding="utf-8")) for p in sorted(folder.glob("*.json"))]
         for ed in EDITIONS:
             indexes = [rev[ed] for rev in copies if ed in rev]
@@ -174,8 +174,8 @@ if __name__ == "__main__":
     current = current_indexes(args.release / beta_release.FULL, args.release / beta_release.LITE)
     for path in args.previous:
         version, edition, index = read_index(path)
-        if not version_number(FIRST_BETA) <= version_number(version) < version_number(beta_release.VERSION):
-            parser.error(f"Source {version} is outside the supported update range")
+        if version not in RELEASED_BASELINES or version_number(version) >= version_number(beta_release.VERSION):
+            parser.error(f"{version} is not a released starting version for this Fix")
         record(args.release, {edition: index}, version)
     make_fix(args.release, current, cumulative_baselines(args.release))
     record(args.release, current)

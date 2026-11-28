@@ -29,7 +29,7 @@ class BetaFixTests(unittest.TestCase):
                 if edition == "Full":
                     z.writestr("SaberTrials/client/translator/models/optional", "language")
 
-    def test_automatic_fix_includes_every_revision_and_skips_languages_and_configs(self):
+    def test_fix_uses_released_revisions_and_skips_internal_builds(self):
         with tempfile.TemporaryDirectory() as tmp:
             release = Path(tmp) / "release"
             stage = Path(tmp) / "stage"
@@ -48,8 +48,13 @@ class BetaFixTests(unittest.TestCase):
             self.assertEqual(update.name, "SaberTrials-Windows-Fix.zip")
             with ZipFile(update) as z:
                 self.assertEqual(set(z.namelist()), {fixes.ENGINE, "SaberTrials/content.pk3", fixes.NOTE,
-                                                     "SaberTrials/menu.txt", "SaberTrials/tournament-test.cfg"})
+                                                     "SaberTrials/tournament-test.cfg"})
                 self.assertEqual(z.read("SaberTrials/content.pk3"), b"new")
+                self.assertIn("beta-1.11", z.read(fixes.NOTE).decode())
+            with patch.object(fixes, "RELEASED_BASELINES", ("beta-1.11", "beta-1.12")):
+                copies = fixes.cumulative_baselines(release)
+                self.assertTrue(any("SaberTrials/menu.txt" in fixes.changed_files(old, current["Full"])
+                                    for old in copies["Full"]))
 
     def test_extraction_cannot_remove_files(self):
         with self.assertRaisesRegex(ValueError, "obsolete"):

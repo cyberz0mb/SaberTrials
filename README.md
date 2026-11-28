@@ -18,7 +18,7 @@ The current source also includes [Match Rules](docs/Match-Rules.md),
 and [client compatibility options](docs/Client-Compatibility.md). On Windows,
 [Vulkan](docs/Vulkan-Renderer.md) is available alongside Vanilla and Rend2.
 
-Windows testers with beta 1.11 or later can update directly with the [latest Fix ZIP](docs/Windows-ZIP-Updates.md).
+Windows testers on beta 1.11 can update directly to 1.14 with the [Fix ZIP](docs/Windows-ZIP-Updates.md). New testers should download Full or Lite 1.14.
 
 Use a legal Jedi Academy installation and keep Saber Trials separate from
 `GameData/base`. Online play requires compatible client and server builds.

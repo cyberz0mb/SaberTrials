@@ -1,10 +1,9 @@
 # Windows beta update
 
-If your installed Windows beta is 1.11 or later and a newer beta is available,
-download **SaberTrials-Windows-Fix.zip**. This one download brings both Full and
-Lite up to date in a single step. If you're already on the current beta, you're
-up to date. For a first install or a version before 1.11, use the latest Full or
-Lite edition.
+**Already have Windows beta 1.11?** Download **SaberTrials-Windows-Fix.zip** to
+update directly to **1.14**. The same ZIP works for Full and Lite.
+
+**First install?** Download the complete **1.14 Full** or **1.14 Lite** ZIP.
 
 1. Close Saber Trials and any local Saber Trials dedicated server.
 2. Open your Jedi Academy installation. In Steam, use **Manage → Browse local files**.
@@ -21,8 +20,10 @@ Windows asks about those files. The update notes are in `SaberTrials/docs/ZIP-up
 
 `tools/Package-Client-Lite.py` records a compact file index for each edition in
 `dist/beta-zip-history`. Keep that folder on the packaging machine. When the next
-version is packaged, the script compares both editions with all recorded
-revisions from 1.11 onward. It replaces `dist/private-beta/Fixes/SaberTrials-Windows-Fix.zip`
+version is packaged, the script compares both editions against the versions in
+`RELEASED_BASELINES` in `tools/beta_fixes.py`. Add a version there once it has
+actually gone out to testers. Internal builds can have local indexes without
+becoming update baselines. The script replaces `dist/private-beta/Fixes/SaberTrials-Windows-Fix.zip`
 after verifying the patch against those file lists.
 
 On a fresh packaging machine, import the Full and Lite archives for each
